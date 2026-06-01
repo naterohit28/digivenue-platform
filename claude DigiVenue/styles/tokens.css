@@ -115,15 +115,15 @@
   --space-4:   24px;    /* Medium — paragraph spacing */
   --space-5:   32px;    /* Standard — component gaps */
   --space-6:   48px;    /* Generous — card padding */
-  --space-7:   56px;    /* Large — section sub-gaps (was 64px) */
-  --space-8:   60px;    /* XL — between sections (tightened from 72px) */
-  --space-9:   80px;    /* XXL — desktop section padding (tightened from 96px) */
-  --space-10:  92px;    /* Cinematic section spacing (tightened from 110px) */
-  --space-11: 110px;    /* Maximum — key editorial sections (tightened from 140px) */
+  --space-7:   40px;    /* Large — section sub-gaps (compacted) */
+  --space-8:   44px;    /* XL — between sections (compacted) */
+  --space-9:   56px;    /* XXL — desktop section padding (compacted) */
+  --space-10:  64px;    /* Cinematic section spacing (compacted) */
+  --space-11:  76px;    /* Maximum — key editorial sections (compacted) */
 
   /* Named semantic spacing (P3: tightened) */
-  --section-padding-desktop:  100px;  /* was 140px */
-  --section-padding-mobile:    60px;  /* was 80px */
+  --section-padding-desktop:   72px;  /* compacted */
+  --section-padding-mobile:    44px;  /* compacted */
   --container-max:           1280px;
   --container-editorial:      960px;  /* Reading-optimized column width */
   --container-narrow:         720px;  /* Stillness sections */
@@ -218,23 +218,23 @@
    ────────────────────────────────────────── */
 @media (max-width: 768px) {
   :root {
-    --space-7:    44px;
-    --space-8:    56px;
-    --space-9:    68px;
-    --space-10:   78px;
-    --space-11:   90px;
-    --section-padding-desktop: 72px;
-    --section-padding-mobile:  56px;
+    --space-7:    32px;
+    --space-8:    38px;
+    --space-9:    48px;
+    --space-10:   54px;
+    --space-11:   62px;
+    --section-padding-desktop: 52px;
+    --section-padding-mobile:  40px;
   }
 }
 @media (max-width: 480px) {
   :root {
-    --space-7:    34px;
-    --space-8:    40px;
-    --space-9:    48px;
-    --space-10:   54px;
-    --space-11:   60px;
-    --section-padding-mobile:  44px;
+    --space-7:    26px;
+    --space-8:    30px;
+    --space-9:    36px;
+    --space-10:   40px;
+    --space-11:   44px;
+    --section-padding-mobile:  34px;
   }
 }
 

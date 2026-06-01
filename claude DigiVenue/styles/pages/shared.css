@@ -5,7 +5,7 @@
 
 /* ── Page hero (text-only, no image bg) ── */
 .page-hero {
-  padding: calc(var(--space-7) + 48px) 0 var(--space-8);
+  padding: calc(var(--space-7) + 28px) 0 var(--space-8);
   background-color: var(--color-bg-deep);
   border-bottom: 1px solid var(--color-border);
   position: relative;
