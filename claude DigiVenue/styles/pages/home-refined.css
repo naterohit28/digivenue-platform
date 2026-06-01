@@ -1067,6 +1067,90 @@
 }
 
 /* ──────────────────────────────────────────
+   VISUAL POLISH — micro-interactions & depth
+   Tasteful flourishes that keep the minimal
+   editorial feel but add life and premium depth.
+   ────────────────────────────────────────── */
+
+/* 1 · Eyebrow — signature gold tick before the label */
+.home .eyebrow::before {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 1px;
+  background: var(--color-gold);
+  vertical-align: middle;
+  margin-right: 14px;
+  transform: translateY(-2px);
+}
+
+/* 2 · "What We Do" rows — interactive on hover */
+.home .what__item {
+  transition: transform 380ms var(--ease-out);
+}
+.home .what__item__num,
+.home .what__item__title {
+  transition: color 320ms var(--ease-out);
+}
+@media (hover: hover) {
+  .home .what__item:hover { transform: translateX(8px); }
+  .home .what__item:hover .what__item__num { color: var(--color-gold-text); }
+  .home .what__item:hover .what__item__title { color: var(--color-accent); }
+}
+
+/* 3 · Nav links — animated underline reveal */
+.home .nav-link { position: relative; }
+.home .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: -5px;
+  height: 1px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 300ms var(--ease-out);
+}
+.home .nav-link:hover::after,
+.home .nav-link.is-active::after { transform: scaleX(1); }
+
+/* 4 · Depth — whisper of warm gold glow on key sections */
+.home .proof,
+.home .invitation { position: relative; overflow: hidden; }
+.home .proof::before,
+.home .invitation::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: radial-gradient(ellipse 62% 52% at 50% 0%, rgba(197,160,89,0.08), transparent 72%);
+}
+.home .proof__inner,
+.home .invitation > * { position: relative; z-index: 1; }
+
+/* 5 · WhatsApp / inline links — underline grows on hover */
+.home .invitation__wa {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-size: 0% 1px;
+  background-position: left bottom;
+  background-repeat: no-repeat;
+  border-bottom: none;
+  transition: background-size 300ms var(--ease-out);
+}
+.home .invitation__wa:hover { background-size: 100% 1px; opacity: 1; }
+
+/* 6 · Stat numbers — gentle gold rule between number and label */
+.home .stats-row__label::before {
+  content: "";
+  display: block;
+  width: 28px;
+  height: 2px;
+  margin: 0 auto 16px;
+  background: var(--color-gold);
+  opacity: 0.55;
+}
+
+/* ──────────────────────────────────────────
    REDUCED MOTION — new homepage elements
    Stop continuous/looping motion cleanly.
    ────────────────────────────────────────── */
@@ -1074,4 +1158,5 @@
   .activity-ticker__track { animation: none; transform: none; }
   .discovery__node__dot--pulse { animation: none; }
   .gv-line--after { stroke-dashoffset: 0 !important; transition: none; }
+  .home .what__item:hover { transform: none; }
 }
