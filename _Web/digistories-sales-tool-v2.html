@@ -36,10 +36,11 @@
   .brand-badge{background:var(--color-bg-deep);border:1px solid var(--color-border);padding:3px 8px;font-size:9px;text-transform:uppercase;letter-spacing:0.1em;color:var(--color-text-muted);}
   .nav{position:sticky;top:57px;z-index:90;background:var(--color-bg);border-bottom:1px solid var(--color-border);overflow-x:auto;scrollbar-width:none;}
   .nav::-webkit-scrollbar{display:none;}
-  .nav-inner{display:flex;padding:10px 24px;gap:22px;min-width:max-content;}
-  .nav-item{font-size:12px;font-weight:500;color:var(--color-text-muted);cursor:pointer;transition:color 0.3s;display:flex;align-items:center;gap:6px;white-space:nowrap;}
-  .nav-item:hover{color:var(--color-text-primary);} .nav-item.active{color:var(--color-accent);}
-  .nav-item.internal-step.active{color:var(--color-purple);}
+  .nav-inner{display:flex;padding:0 24px;gap:14px;min-width:max-content;align-items:center;}
+  .nav-item{font-size:12px;font-weight:500;color:var(--color-text-muted);cursor:pointer;display:flex;align-items:center;gap:6px;white-space:nowrap;min-height:44px;padding:10px 14px;border-bottom:2px solid transparent;box-sizing:border-box;transition:all 0.2s cubic-bezier(0.16, 1, 0.3, 1);}
+  .nav-item:hover{color:var(--color-text-primary);}
+  .nav-item.active{color:var(--color-accent);border-bottom-color:var(--color-accent);}
+  .nav-item.internal-step.active{color:var(--color-purple);border-bottom-color:var(--color-purple);}
   .nav-num{font-size:10px;opacity:0.6;}
 
   .main{max-width:920px;margin:0 auto;padding:36px 24px 120px;}
@@ -47,18 +48,19 @@
   .stage.active{display:block;}
   @keyframes fadeIn{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:translateY(0);}}
 
-  .card{background:var(--color-surface);border:1px solid var(--color-border);padding:28px;margin-bottom:18px;}
+  .card{background:var(--color-surface);border:1px solid var(--color-border);padding:28px;margin-bottom:18px;transition:all 0.2s cubic-bezier(0.16, 1, 0.3, 1);}
   .card.gold{background:linear-gradient(145deg,var(--color-surface),var(--color-gold-subtle));border-color:var(--color-border-gold);}
   .card.internal{background:#faf7fb;border:1px dashed #b9a4d6;}
   .card.compact{padding:18px;}
   .field{margin-bottom:18px;} .field label{display:block;margin-bottom:6px;}
-  .input{width:100%;background:var(--color-bg);border:1px solid var(--color-border-light);padding:13px;font-family:var(--font-sans);font-size:15px;color:var(--color-text-primary);outline:none;transition:all 0.3s;}
+  .input{width:100%;background:var(--color-bg);border:1px solid var(--color-border-light);padding:13px;font-family:var(--font-sans);font-size:15px;color:var(--color-text-primary);outline:none;transition:all 0.2s cubic-bezier(0.16, 1, 0.3, 1);}
   .input:focus{border-color:var(--color-text-primary);background:#fff;}
   select.input{appearance:none;cursor:pointer;}
   .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
-  .btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 26px;background:var(--color-text-primary);color:var(--color-text-inverse);font-size:13px;font-weight:500;text-transform:uppercase;letter-spacing:0.08em;border:none;cursor:pointer;transition:background 0.3s;}
-  .btn:hover{background:var(--color-accent);}
+  .btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 26px;background:var(--color-text-primary);color:var(--color-text-inverse);font-size:13px;font-weight:500;text-transform:uppercase;letter-spacing:0.08em;border:none;cursor:pointer;transition:all 0.2s cubic-bezier(0.16, 1, 0.3, 1);min-height:44px;}
+  .btn:hover{background:var(--color-accent);transform:translateY(-1px);box-shadow:0 4px 12px rgba(217,72,34,0.15);}
   .btn.outline{background:transparent;border:1px solid var(--color-text-primary);color:var(--color-text-primary);}
+  .btn.outline:hover{background:var(--color-text-primary);color:var(--color-text-inverse);box-shadow:0 4px 12px rgba(31,29,28,0.15);}
 
   .convo{background:var(--color-gold-subtle);border:1px solid var(--color-border-gold);padding:16px 20px;margin-bottom:22px;}
   .convo ul{list-style:none;} .convo li{font-family:var(--font-serif);font-style:italic;font-size:15px;color:var(--color-text-primary);padding:5px 0 5px 18px;position:relative;}
@@ -66,8 +68,8 @@
 
   .q-label{font-size:14px;font-weight:600;color:var(--color-text-primary);margin:18px 0 10px;}
   .choice-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:9px;margin-bottom:8px;}
-  .choice{border:1px solid var(--color-border-light);background:var(--color-bg);padding:11px 13px;cursor:pointer;font-size:13px;color:var(--color-text-secondary);transition:all 0.18s;display:flex;align-items:center;gap:10px;}
-  .choice:hover{border-color:var(--color-text-muted);}
+  .choice{border:1px solid var(--color-border-light);background:var(--color-bg);padding:10px 14px;cursor:pointer;font-size:13px;color:var(--color-text-secondary);display:flex;align-items:center;gap:10px;min-height:44px;box-sizing:border-box;border-radius:4px;transition:all 0.2s cubic-bezier(0.16, 1, 0.3, 1);}
+  .choice:hover{border-color:var(--color-text-muted);transform:translateY(-2px);box-shadow:0 4px 12px rgba(0,0,0,0.04);}
   .choice.active{border-color:var(--color-accent);background:var(--color-accent-subtle);color:var(--color-text-primary);font-weight:500;}
   .choice .mark{width:16px;height:16px;border:1px solid var(--color-border-light);flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:11px;}
   .choice.radio .mark{border-radius:50%;}
@@ -132,7 +134,7 @@
 <body>
 
 <div class="topbar">
-  <div class="brand">DigiVenue <span class="brand-badge">Venue Growth Diagnostic</span></div>
+  <div class="brand"><img src="logo.svg" alt="DigiVenue Logo" class="digivenue-logo" style="height: 24px; width: auto; margin-right: 8px; vertical-align: middle;">DigiVenue <span class="brand-badge">Venue Growth Diagnostic</span></div>
 </div>
 
 <div class="nav"><div class="nav-inner" id="navBar"></div></div>
@@ -150,18 +152,18 @@
 
     <div class="grid-2">
       <div class="card compact" style="margin:0;">
-        <div class="text-label">📍 Territory Rank</div>
+        <div class="text-label"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block; vertical-align:-2px; margin-right:6px;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>Territory Rank</div>
         <p class="text-body" style="margin:4px 0;">Rank among similar halls (1 = leader, 10 = invisible)</p>
         <input class="input" id="il_territory" placeholder="auto / editable">
       </div>
       <div class="card compact" style="margin:0;">
-        <div class="text-label">🔇 Digital Silence</div>
+        <div class="text-label"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block; vertical-align:-2px; margin-right:6px;"><path d="M11 5L6 9H2v6h4l5 4V5z"></path><line x1="23" y1="9" x2="17" y2="15"></line><line x1="17" y1="9" x2="23" y2="15"></line></svg>Digital Silence</div>
         <p class="text-body" style="margin:4px 0;">Days since last meaningful online activity</p>
         <input class="input" id="il_silence" placeholder="auto / editable (days)">
       </div>
     </div>
 
-    <div class="q-label">📈 Growth Momentum (last 6 months)</div>
+    <div class="q-label"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block; vertical-align:-2px; margin-right:6px;"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>Growth Momentum (last 6 months)</div>
     <div class="choice-grid" data-group="il_momentum">
       <div class="choice radio" onclick="pickRadio(this)"><span class="mark"></span> Declining</div>
       <div class="choice radio" onclick="pickRadio(this)"><span class="mark"></span> Flat</div>
@@ -170,13 +172,13 @@
     </div>
 
     <div class="grid-2" style="margin-top:14px;">
-      <div class="card compact" style="margin:0;"><div class="text-label">⚙️ SmartOS Opportunity</div><div class="text-h3" id="il_smartos" style="margin-top:6px;color:var(--color-accent);">—</div><div class="text-body">auto from Operational Health</div></div>
-      <div class="card compact" style="margin:0;"><div class="text-label">📸 DigiStories Opportunity</div><div class="text-h3" id="il_digistories" style="margin-top:6px;color:var(--color-accent);">—</div><div class="text-body">auto from Visibility + Trust</div></div>
+      <div class="card compact" style="margin:0;"><div class="text-label"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block; vertical-align:-2px; margin-right:6px;"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>SmartOS Opportunity</div><div class="text-h3" id="il_smartos" style="margin-top:6px;color:var(--color-accent);">—</div><div class="text-body">auto from Operational Health</div></div>
+      <div class="card compact" style="margin:0;"><div class="text-label"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block; vertical-align:-2px; margin-right:6px;"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>DigiStories Opportunity</div><div class="text-h3" id="il_digistories" style="margin-top:6px;color:var(--color-accent);">—</div><div class="text-body">auto from Visibility + Trust</div></div>
     </div>
 
     <!-- BCA RELATIONSHIP INTELLIGENCE -->
     <div class="card" style="margin:16px 0 0;background:var(--color-bg);">
-      <div class="text-label accent">🤝 BCA Relationship Intelligence</div>
+      <div class="text-label accent"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block; vertical-align:-2px; margin-right:6px;"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>BCA Relationship Intelligence</div>
       <div class="q-label">Owner &amp; BCA</div>
       <div class="choice-grid" data-group="bca_member">
         <div class="choice radio" onclick="pickRadio(this);calcClose();"><span class="mark"></span> Owner is a BCA member</div>
@@ -575,6 +577,10 @@ function calcVisibility(){
   const a=countSel('.choice-grid.vis'),t=countAll('.choice-grid.vis')||21;
   const s=clamp(a/t*100);
   document.getElementById('vis_score').textContent=s;
+  const vsNote = document.getElementById('vis_note');
+  if (vsNote) {
+    vsNote.innerHTML = `Based on signals below. <span style="font-size:12px;color:var(--color-text-muted)">City Average: ${benchmarks.average_visibility || 54}/100</span>`;
+  }
   setBand('vis_band',s>=76?'Strong':s>=56?'Active':s>=31?'Present but weak':'Invisible',bcol(s));
   const missing=[...document.querySelectorAll('.choice-grid.vis .choice')].filter(c=>!c.classList.contains('active')).slice(0,4).map(c=>c.textContent.trim());
   document.getElementById('vis_missing').textContent=missing.length?missing.join(' · '):'All key assets present';
@@ -588,6 +594,11 @@ function calcTrust(){
   const brand=countSel('.tr_brand')/5*100;
   const s=clamp(reviews*0.45+resp*0.15+content*0.25+brand*0.15);
   document.getElementById('trust_score').textContent=s;
+  const trNote = document.getElementById('trust_note');
+  const userReviews = gv('tr_count') || 0;
+  if (trNote) {
+    trNote.innerHTML = `Reviews, content, consistency. <span style="font-size:12px;color:var(--color-text-muted)">Reviews: ${userReviews} vs City Avg: ${benchmarks.average_reviews || 120}</span>`;
+  }
   setBand('trust_band',s>=76?'Trusted':s>=56?'Building':s>=31?'Weak':'Unproven',bcol(s));
   return s;
 }
@@ -615,6 +626,10 @@ function calcOperations(){
   else if(s<=80){band='Structured Operations';col='var(--color-yellow)';}
   else{band='Modern Operations';col='var(--color-green)';}
   setBand('op_band',band,col);
+  const opBandEl = document.getElementById('op_band');
+  if (opBandEl) {
+    opBandEl.innerHTML = `${band} <span style="font-size:11px;font-weight:normal;opacity:0.85">(City Avg: 48)</span>`;
+  }
   /* SmartOS readiness — higher = more fit/need */
   const flags=[];
   if(rec<40||cal<40)flags.push('Manual processes');
@@ -777,10 +792,72 @@ function generateReport(){
 }
 
 /* JSON BRIDGE */
+let benchmarks = { average_reviews: 120, average_visibility: 54, average_occupancy: 68, average_response_time: 4 };
+async function loadBenchmarks(){
+  try {
+    const res = await fetch('Sales Strategy/bcda_statistics.json');
+    if (res.ok) {
+      const data = await res.json();
+      benchmarks.average_reviews = data.average_reviews || 120;
+      benchmarks.average_visibility = 54;
+      benchmarks.average_occupancy = 68;
+      benchmarks.average_response_time = 4;
+      calcVisibility(); calcTrust(); calcOperations();
+    }
+  } catch(e) {
+    console.log("Could not load benchmarks, using defaults", e);
+  }
+}
+
 function exportIntakeJSON(){
   const vName=document.getElementById('v_name').value.trim();
   if(!vName){alert('Enter a Venue Name in Step 1 before exporting.');goToStep(0);return;}
   const s=computeAll();const r=recommendation(s);const lead=calcClose();
+  
+  // Calculate VIR root causes and priority order
+  const rootCauses = [];
+  const priorityOrder = [];
+  
+  // Determine root causes based on active choice items
+  const inactiveChoices = Array.from(document.querySelectorAll('.choice:not(.active)')).map(c => c.textContent.trim());
+  
+  if (inactiveChoices.some(t => t.includes("claimed & verified"))) rootCauses.push("unclaimed_google_business");
+  if (inactiveChoices.some(t => t.includes("Reels published weekly"))) rootCauses.push("dormant_instagram");
+  if (inactiveChoices.some(t => t.includes("WhatsApp CTA prominent") || t.includes("Direct WhatsApp link"))) rootCauses.push("no_whatsapp_cta");
+  
+  const opRecordActive = document.querySelector('[data-group="op_record"] .choice.radio.active');
+  const opRecordVal = opRecordActive ? opRecordActive.textContent.trim() : "";
+  if (opRecordVal.includes("Paper register") || opRecordVal.includes("Diary") || opRecordVal.includes("Memory")) {
+    rootCauses.push("paper_diary");
+  }
+  
+  // Build priority order based on score deficits
+  if (s.vis < 50) priorityOrder.push("gmb_setup");
+  if (s.conv < 55) priorityOrder.push("reply_speed");
+  if (s.op < 50) priorityOrder.push("followup_system");
+  if (s.tr < 50) priorityOrder.push("review_engine");
+  
+  // Decoupled Venue Intelligence Report Object
+  const vir = {
+    venue_id: vName.toLowerCase().replace(/[^a-z0-9]+/g, '_'),
+    venue_name: vName,
+    area: document.getElementById('v_loc').value.trim(),
+    type: document.getElementById('v_type').value,
+    dimensions: {
+      visibility: { score: s.vis, status: s.vis < 50 ? "critical" : (s.vis < 75 ? "needs_improvement" : "good") },
+      trust: { score: s.tr, status: s.tr < 50 ? "critical" : (s.tr < 75 ? "needs_improvement" : "good") },
+      conversion: { score: s.conv, status: s.conv < 55 ? "critical" : (s.conv < 75 ? "needs_improvement" : "good") },
+      operations: { score: s.op, status: s.op < 50 ? "critical" : (s.op < 75 ? "needs_improvement" : "good") },
+      revenue: { score: s.rev, status: s.rev < 50 ? "critical" : (s.rev < 75 ? "needs_improvement" : "good") },
+      leadership: { score: lead.ld, status: lead.ld < 50 ? "critical" : (lead.ld < 75 ? "needs_improvement" : "good") }
+    },
+    objections: lead.objections ? lead.objections.split(',').map(s=>s.trim()).filter(Boolean) : [],
+    root_causes: rootCauses,
+    priority_order: priorityOrder,
+    smartos_fit: s.op < 50 || s.sos > 60 ? "high" : "low",
+    digistories_fit: s.vis < 50 || s.tr < 50 ? "critical" : "medium"
+  };
+
   const intake={
     business:{name:vName,owner:document.getElementById('v_owner').value.trim(),phone:document.getElementById('v_phone').value.trim(),city:document.getElementById('v_loc').value.trim(),area:document.getElementById('v_loc').value.trim(),type:document.getElementById('v_type').value,capacityMin:parseInt(document.getElementById('v_cap_min').value)||300,capacityMax:parseInt(document.getElementById('v_cap_max').value)||800,email:document.getElementById('v_email').value.trim()},
     online:{website:document.getElementById('v_website').value.trim(),instagram:document.getElementById('v_instagram').value.trim(),inquiries:document.getElementById('v_inq').value},
@@ -792,7 +869,8 @@ function exportIntakeJSON(){
     plan:{tier:selectedTier.name,fee:selectedTier.fee,smartosPilot:pilotOn},
     leadership:{score:lead.ld,closeProbability:document.getElementById('close_band').textContent,interest:document.getElementById('ld_interest').value,objections:document.getElementById('ld_objections').value.trim()},
     bca:{member:gidx('bca_member'),lever:gidx('bca_lever'),caterer:document.getElementById('bca_caterer').value.trim(),decorator:document.getElementById('bca_decorator').value.trim(),planner:document.getElementById('bca_planner').value.trim()},
-    founderNotes:document.querySelector('.fn-textarea').value.trim()
+    founderNotes:document.querySelector('.fn-textarea').value.trim(),
+    venue_intelligence_report: vir
   };
   const blob=new Blob([JSON.stringify(intake,null,2)],{type:'application/json'});
   const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download=`${vName.toLowerCase().replace(/[^a-z0-9]+/g,'_')}_intake.json`;document.body.appendChild(a);a.click();document.body.removeChild(a);URL.revokeObjectURL(url);
@@ -816,6 +894,7 @@ function loadIntelRow(){
 }
 
 initNav();initIntel();calcVisibility();calcTrust();calcConversion();calcOperations();calcRevenue();calcCompetitive();calcClose();refreshIntelDerived();
+loadBenchmarks();
 </script>
 </body>
 </html>

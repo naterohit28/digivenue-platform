@@ -13,7 +13,9 @@ venv/
 
 # ── Local databases & generated runtime data ──
 *.db
+*.log
 **/logs/*.log
+chrome_debug.log
 
 # ── OS / editor junk ──
 Thumbs.db

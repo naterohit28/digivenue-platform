@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DigiVenue Command Center</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #FAF7F2;
+      --surface: #FFFFFF;
+      --surface-2: #F3EFE9;
+      --border: #E8E2D9;
+      --border-bright: #D5CBB9;
+      --text: #1C1917;
+      --text-muted: #78716C;
+      --accent: #D94822;
+      --accent-glow: #E85E39;
+      --maroon: #B83615;
+      --green: #10B981;
+      --gold: #D97706;
+      
+      --font-sans: 'Inter', sans-serif;
+      --font-serif: 'Instrument Serif', serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+    
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: var(--font-sans);
+      line-height: 1.5;
+      padding: 40px 24px;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      border-bottom: 2px solid var(--text);
+      padding-bottom: 24px;
+      margin-bottom: 32px;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    
+    .logo-area {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    
+    .logo-mark {
+      width: 36px;
+      height: 36px;
+      background: linear-gradient(135deg, var(--accent), var(--maroon));
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-serif);
+      font-weight: 700;
+      font-size: 18px;
+      color: #fff;
+    }
+    
+    h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(32px, 5vw, 48px);
+      font-weight: 400;
+      line-height: 1;
+      letter-spacing: -0.02em;
+    }
+    
+    h1 em {
+      font-style: italic;
+      color: var(--accent);
+    }
+    
+    .subhead {
+      font-size: 15px;
+      color: var(--text-muted);
+      margin-top: 6px;
+    }
+    
+    .btn {
+      background-color: var(--accent);
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 13px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+      text-decoration: none;
+    }
+    
+    .btn:hover {
+      background-color: var(--accent-glow);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(217, 72, 34, 0.2);
+    }
+    
+    .btn.outline {
+      background: transparent;
+      border: 1px solid var(--border-bright);
+      color: var(--text);
+    }
+    
+    .btn.outline:hover {
+      background: var(--surface-2);
+      transform: none;
+      box-shadow: none;
+    }
+    
+    /* Layout */
+    .cc-layout {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 24px;
+      margin-bottom: 32px;
+    }
+    
+    @media (max-width: 900px) {
+      .cc-layout { grid-template-columns: 1fr; }
+    }
+    
+    .panel {
+      background-color: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+      margin-bottom: 24px;
+    }
+    
+    .panel-title {
+      font-family: var(--font-serif);
+      font-size: 22px;
+      font-weight: 500;
+      margin-bottom: 20px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    select.input-select {
+      background-color: var(--surface);
+      border: 1px solid var(--border-bright);
+      padding: 10px 14px;
+      border-radius: 8px;
+      font-family: var(--font-sans);
+      font-size: 14px;
+      color: var(--text);
+      outline: none;
+      width: 100%;
+      cursor: pointer;
+      margin-bottom: 20px;
+    }
+    
+    /* Dimension Adjusters */
+    .slider-row {
+      margin-bottom: 18px;
+    }
+    
+    .slider-label {
+      display: flex;
+      justify-content: space-between;
+      font-size: 13.5px;
+      font-weight: 500;
+      margin-bottom: 6px;
+    }
+    
+    .slider-container {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+    
+    .slider-container input[type="range"] {
+      flex: 1;
+      height: 6px;
+      border-radius: 3px;
+      outline: none;
+      accent-color: var(--accent);
+      cursor: pointer;
+    }
+    
+    .score-badge {
+      font-family: var(--font-mono);
+      font-size: 13px;
+      font-weight: 600;
+      width: 32px;
+      text-align: right;
+    }
+    
+    /* Segmented Controls */
+    .segmented-control {
+      display: flex;
+      background-color: var(--surface-2);
+      padding: 3px;
+      border-radius: 8px;
+      margin-bottom: 16px;
+    }
+    
+    .segmented-btn {
+      flex: 1;
+      background: transparent;
+      border: none;
+      padding: 8px 12px;
+      font-size: 12px;
+      font-weight: 600;
+      border-radius: 6px;
+      cursor: pointer;
+      color: var(--text-muted);
+      transition: all 0.15s ease;
+      text-align: center;
+    }
+    
+    .segmented-btn.active {
+      background-color: var(--surface);
+      color: var(--text);
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    }
+    
+    /* Rules Override Grid */
+    .rule-override-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    
+    .rule-override-card {
+      background-color: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 14px;
+    }
+    
+    .rule-override-desc {
+      flex: 1;
+    }
+    
+    .rule-override-name {
+      font-size: 13.5px;
+      font-weight: 600;
+    }
+    
+    .rule-override-sub {
+      font-size: 11.5px;
+      color: var(--text-muted);
+    }
+    
+    .rule-controls {
+      display: flex;
+      gap: 4px;
+      background-color: var(--surface);
+      border: 1px solid var(--border-bright);
+      padding: 2px;
+      border-radius: 6px;
+    }
+    
+    .rule-ctrl-btn {
+      padding: 4px 8px;
+      font-size: 10.5px;
+      font-weight: 600;
+      border-radius: 4px;
+      cursor: pointer;
+      border: none;
+      background: transparent;
+      color: var(--text-muted);
+    }
+    
+    .rule-ctrl-btn.active.normal { background-color: var(--surface-2); color: var(--text); }
+    .rule-ctrl-btn.active.force { background-color: var(--maroon); color: #fff; }
+    .rule-ctrl-btn.active.mute { background-color: var(--text); color: #fff; }
+    
+    /* Live Preview Section */
+    .preview-card {
+      border-left: 4px solid var(--border-bright);
+      padding-left: 12px;
+      margin-bottom: 14px;
+    }
+    
+    .preview-card.accented {
+      border-left-color: var(--accent);
+      background-color: rgba(249, 115, 22, 0.02);
+      padding: 10px;
+      border-radius: 0 8px 8px 0;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <div>
+      <div class="logo-area">
+        <div class="logo-mark">CC</div>
+        <div style="font-family: var(--font-serif); font-size: 16px; font-weight: 600; letter-spacing: 0.05em;">DIGIVENUE</div>
+      </div>
+      <h1 style="margin-top: 10px;">Strategic <em>Command Center</em></h1>
+      <div class="subhead">Manage diagnostics overrides and lock custom tactical playbooks.</div>
+    </div>
+    <div>
+      <button class="btn" onclick="exportLockedConfig()">Lock &amp; Export Config</button>
+    </div>
+  </header>
+
+  <!-- Venue Selector -->
+  <div class="panel" style="padding: 18px 24px;">
+    <div style="font-size: 12px; font-family: var(--font-mono); text-transform: uppercase; color: var(--text-muted); margin-bottom: 6px;">Active Target Selector</div>
+    <select id="venueSelector" class="input-select" onchange="loadPilotVenue(this.value)" style="margin-bottom: 0;">
+      <option value="swayambhu_ganesh_sabhagruh">Swayambhu Ganesh Sabhagruh (Nerul)</option>
+      <option value="swagat_banquet_hall">Swagat Banquet Hall (Chembur)</option>
+      <option value="savarkar_sabhagriha">Swatantryaveer Savarkar Sabhagriha (Dadar)</option>
+      <option value="kohinoor_hall">Kohinoor Hall (Prabhadevi)</option>
+      <option value="mayfair_banquets">Mayfair Banquets (Worli)</option>
+      <option value="jewel_of_india">Jewel of India (Jade Ballroom) (Shivaji Park)</option>
+      <option value="dadar_gymkhana">Dadar Gymkhana Banquets (Dadar)</option>
+      <option value="ahilyadevi_sabhagruh">Ahilyadevi Sabhagruh (Chembur)</option>
+      <option value="ramee_guestline">Ramee Guestline Banquets (Dadar)</option>
+      <option value="lala_lajpatrai">Lala Lajpatrai Hall (South Mumbai)</option>
+      <option value="royal_symphony">Royal Symphony Banquet (Prabhadevi)</option>
+    </select>
+  </div>
+
+  <div class="cc-layout">
+    <!-- Left Column: Dimension Overrides & Core Recommendation Toggles -->
+    <div>
+      <!-- Dimension Overrides -->
+      <div class="panel">
+        <div class="panel-title">
+          <span>Decision Point 1: Dimension Overrides</span>
+          <span style="font-size: 11px; font-family: var(--font-mono); color: var(--accent);">DMI Live: <span id="liveDmi">0</span>/100</span>
+        </div>
+        <div id="slidersContainer">
+          <!-- Live inputs populated here -->
+        </div>
+      </div>
+
+      <!-- Strategy Fit Selector -->
+      <div class="panel">
+        <div class="panel-title">Decision Point 2: Package Override</div>
+        <div style="font-size: 12px; color: var(--text-muted); margin-bottom: 12px;">Override the recommended tier for this client:</div>
+        <div class="segmented-control" id="packageControl">
+          <button class="segmented-btn" id="pkg_unified" onclick="selectPackage('unified')">Unified Focus</button>
+          <button class="segmented-btn" id="pkg_content" onclick="selectPackage('content')">Content First</button>
+          <button class="segmented-btn" id="pkg_ops" onclick="selectPackage('ops')">Operations First</button>
+        </div>
+
+        <div style="font-size: 12px; color: var(--text-muted); margin-bottom: 12px; margin-top: 18px;">Pipeline Status Lifecycle Stage:</div>
+        <div class="segmented-control" id="statusControl">
+          <button class="segmented-btn" id="st_audited" onclick="selectStatus('Audited')">Audited</button>
+          <button class="segmented-btn" id="st_proposal" onclick="selectStatus('Proposal Sent')">Proposed</button>
+          <button class="segmented-btn" id="st_active" onclick="selectStatus('Active Pilot')">Active Pilot</button>
+          <button class="segmented-btn" id="st_completed" onclick="selectStatus('Completed')">Completed</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Column: Recommendation Rule Elevator -->
+    <div>
+      <div class="panel">
+        <div class="panel-title">Decision Point 3: Rule Overrides &amp; Week 1 Elevation</div>
+        <div class="rule-override-list" id="ruleOverrideContainer">
+          <!-- Recommendation rules will load here -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // 10 pilot venues configuration
+  const PILOT_VENUES = {
+    swayambhu_ganesh_sabhagruh: {
+      venue_id: "swayambhu_ganesh_sabhagruh",
+      venue_name: "Swayambhu Ganesh Sabhagruh",
+      area: "Nerul",
+      type: "hall",
+      dimensions: { visibility: 45, trust: 30, conversion: 50, operations: 30, revenue: 40, leadership: 65 },
+      objections: ["price", "references"],
+      root_causes: ["unclaimed_google_business", "dormant_instagram", "paper_diary", "no_whatsapp_cta"],
+      smartos_fit: "medium",
+      digistories_fit: "critical",
+      leadership_mindset: "Curious",
+      days_to_close: 22,
+      status: "Audited"
+    },
+    swagat_banquet_hall: {
+      venue_id: "swagat_banquet_hall",
+      venue_name: "Swagat Banquet Hall",
+      area: "Chembur",
+      type: "banquet",
+      dimensions: { visibility: 35, trust: 42, conversion: 48, operations: 32, revenue: 38, leadership: 70 },
+      objections: ["price", "timeline"],
+      root_causes: ["unclaimed_google_business", "paper_diary", "no_whatsapp_cta"],
+      smartos_fit: "high",
+      digistories_fit: "critical",
+      leadership_mindset: "Curious",
+      days_to_close: 18,
+      status: "Closed"
+    },
+    savarkar_sabhagriha: {
+      venue_id: "savarkar_sabhagriha",
+      venue_name: "Swatantryaveer Savarkar Sabhagriha",
+      area: "Dadar",
+      type: "hall",
+      dimensions: { visibility: 65, trust: 60, conversion: 40, operations: 20, revenue: 70, leadership: 80 },
+      objections: ["word_of_mouth", "family_committee"],
+      root_causes: ["paper_diary", "missed_followups", "no_reels"],
+      smartos_fit: "critical",
+      digistories_fit: "medium",
+      leadership_mindset: "Growth-focused",
+      days_to_close: 12,
+      status: "Closed"
+    },
+    kohinoor_hall: {
+      venue_id: "kohinoor_hall",
+      venue_name: "Kohinoor Hall",
+      area: "Prabhadevi",
+      type: "banquet",
+      dimensions: { visibility: 50, trust: 55, conversion: 60, operations: 45, revenue: 50, leadership: 75 },
+      objections: ["price"],
+      root_causes: ["paper_diary", "dormant_instagram"],
+      smartos_fit: "high",
+      digistories_fit: "medium",
+      leadership_mindset: "Curious",
+      days_to_close: 25,
+      status: "Closed"
+    },
+    mayfair_banquets: {
+      venue_id: "mayfair_banquets",
+      venue_name: "Mayfair Banquets",
+      area: "Worli",
+      type: "banquet",
+      dimensions: { visibility: 85, trust: 80, conversion: 45, operations: 25, revenue: 90, leadership: 85 },
+      objections: ["timeline", "pricing"],
+      root_causes: ["paper_diary", "missed_followups", "no_whatsapp_cta"],
+      smartos_fit: "critical",
+      digistories_fit: "medium",
+      leadership_mindset: "Aggressive",
+      days_to_close: 8,
+      status: "Closed"
+    },
+    jewel_of_india: {
+      venue_id: "jewel_of_india",
+      venue_name: "Jewel of India (Jade Ballroom)",
+      area: "Shivaji Park",
+      type: "banquet",
+      dimensions: { visibility: 70, trust: 65, conversion: 50, operations: 35, revenue: 75, leadership: 50 },
+      objections: ["family_committee", "references"],
+      root_causes: ["paper_diary", "dormant_instagram"],
+      smartos_fit: "high",
+      digistories_fit: "medium",
+      leadership_mindset: "Resistant",
+      days_to_close: 42,
+      status: "Nurturing"
+    },
+    dadar_gymkhana: {
+      venue_id: "dadar_gymkhana",
+      venue_name: "Dadar Gymkhana Banquets",
+      area: "Dadar",
+      type: "lawn",
+      dimensions: { visibility: 40, trust: 35, conversion: 55, operations: 70, revenue: 40, leadership: 75 },
+      objections: ["word_of_mouth"],
+      root_causes: ["unclaimed_google_business", "no_reels", "no_whatsapp_cta"],
+      smartos_fit: "low",
+      digistories_fit: "critical",
+      leadership_mindset: "Growth-focused",
+      days_to_close: 14,
+      status: "Closed"
+    },
+    ahilyadevi_sabhagruh: {
+      venue_id: "ahilyadevi_sabhagruh",
+      venue_name: "Ahilyadevi Sabhagruh",
+      area: "Chembur",
+      type: "banquet",
+      dimensions: { visibility: 30, trust: 38, conversion: 65, operations: 75, revenue: 35, leadership: 60 },
+      objections: ["price"],
+      root_causes: ["unclaimed_google_business", "no_reels"],
+      smartos_fit: "low",
+      digistories_fit: "critical",
+      leadership_mindset: "Curious",
+      days_to_close: 20,
+      status: "Closed"
+    },
+    ramee_guestline: {
+      venue_id: "ramee_guestline",
+      venue_name: "Ramee Guestline Banquets",
+      area: "Dadar",
+      type: "hotel",
+      dimensions: { visibility: 75, trust: 70, conversion: 55, operations: 50, revenue: 80, leadership: 65 },
+      objections: ["no_understanding"],
+      root_causes: ["missed_followups", "dormant_instagram"],
+      smartos_fit: "high",
+      digistories_fit: "medium",
+      leadership_mindset: "Curious",
+      days_to_close: 21,
+      status: "Lost"
+    },
+    lala_lajpatrai: {
+      venue_id: "lala_lajpatrai",
+      venue_name: "Lala Lajpatrai Hall",
+      area: "South Mumbai",
+      type: "hall",
+      dimensions: { visibility: 55, trust: 50, conversion: 40, operations: 30, revenue: 60, leadership: 70 },
+      objections: ["timeline"],
+      root_causes: ["paper_diary", "no_whatsapp_cta"],
+      smartos_fit: "high",
+      digistories_fit: "medium",
+      leadership_mindset: "Growth-focused",
+      days_to_close: 15,
+      status: "Closed"
+    },
+    royal_symphony: {
+      venue_id: "royal_symphony",
+      venue_name: "Royal Symphony Banquet",
+      area: "Prabhadevi",
+      type: "banquet",
+      dimensions: { visibility: 60, trust: 58, conversion: 45, operations: 40, revenue: 65, leadership: 72 },
+      objections: ["price", "word_of_mouth"],
+      root_causes: ["paper_diary", "dormant_instagram", "no_whatsapp_cta"],
+      smartos_fit: "high",
+      digistories_fit: "medium",
+      leadership_mindset: "Curious",
+      days_to_close: 30,
+      status: "Nurturing"
+    }
+  };
+
+  const RULES_DATA = [
+    { id: "gmb_setup", name: "GMB Setup", sub: "Create Google Business listing" },
+    { id: "reply_speed", name: "Reply Speed", sub: "Instant Whatsapp auto-reply set up" },
+    { id: "followup_system", name: "Follow-up Sequence", sub: "Log every lead and perform follow-up" },
+    { id: "review_engine", name: "Review Generation", sub: "Message past clients requesting review" },
+    { id: "gmb_optimize", name: "GMB Optimisation", sub: "30+ photos and active map settings" },
+    { id: "content_shoot", name: "Content Shooting", sub: "Professional photography & reel walkthroughs" },
+    { id: "posting_rhythm", name: "Posting Frequency", sub: "Commit to 3 posts/week + 1 reel" },
+    { id: "instagram_start", name: "Instagram Account", sub: "Set up grid, bio link and messaging buttons" },
+    { id: "referral_network", name: "Referral Deals", sub: "Partnerships with 3 local catering/decor vendors" },
+    { id: "tracking_start", name: "Lead Tracking", sub: "Register all inquiries and channels" },
+    { id: "paid_ready", name: "Lead Gen Ad Trial", sub: "Launch meta lead generation campaigns" }
+  ];
+
+  let currentVenue = null;
+  let activeOverrides = {};
+  let currentPackage = "unified";
+  let currentStatus = "Audited";
+
+  function loadPilotVenue(id) {
+    const data = JSON.parse(JSON.stringify(PILOT_VENUES[id]));
+    currentVenue = data;
+    
+    // Reset overrides
+    activeOverrides = {};
+    RULES_DATA.forEach(r => { activeOverrides[r.id] = "normal"; });
+    
+    // Read status and package fit
+    currentStatus = data.status === "Closed" ? "Active Pilot" : (data.status === "Lost" ? "Completed" : "Audited");
+    if (data.digistories_fit === "critical" && data.smartos_fit === "low") currentPackage = "content";
+    else if (data.digistories_fit === "medium" && data.smartos_fit === "critical") currentPackage = "ops";
+    else currentPackage = "unified";
+    
+    renderSliders();
+    renderRules();
+    updateUIControls();
+    recalculateDmi();
+  }
+
+  function renderSliders() {
+    const container = document.getElementById("slidersContainer");
+    const dims = ["visibility", "trust", "conversion", "operations", "revenue"];
+    
+    container.innerHTML = dims.map(d => {
+      const val = currentVenue.dimensions[d];
+      return `
+        <div class="slider-row">
+          <div class="slider-label">
+            <span style="text-transform: capitalize;">${d} score</span>
+            <span class="score-badge" id="badge_${d}">${val}</span>
+          </div>
+          <div class="slider-container">
+            <input type="range" min="0" max="100" value="${val}" oninput="updateDimension('${d}', this.value)">
+          </div>
+        </div>
+      `;
+    }).join('');
+  }
+
+  function updateDimension(dim, val) {
+    currentVenue.dimensions[dim] = parseInt(val);
+    document.getElementById(`badge_${dim}`).textContent = val;
+    recalculateDmi();
+  }
+
+  function recalculateDmi() {
+    const d = currentVenue.dimensions;
+    const score = Math.round(
+      (d.visibility || 0) * 0.25 + 
+      (d.trust || 0) * 0.20 + 
+      (d.conversion || 0) * 0.25 + 
+      (d.operations || 0) * 0.20 + 
+      (d.revenue || 0) * 0.10
+    );
+    document.getElementById("liveDmi").textContent = score;
+  }
+
+  function renderRules() {
+    const container = document.getElementById("ruleOverrideContainer");
+    container.innerHTML = RULES_DATA.map(r => {
+      const activeState = activeOverrides[r.id] || "normal";
+      return `
+        <div class="rule-override-card">
+          <div class="rule-override-desc">
+            <div class="rule-override-name">${r.name}</div>
+            <div class="rule-override-sub">${r.sub}</div>
+          </div>
+          <div class="rule-controls">
+            <button class="rule-ctrl-btn ${activeState === 'normal' ? 'active normal' : ''}" onclick="toggleRuleOverride('${r.id}', 'normal')">Normal</button>
+            <button class="rule-ctrl-btn ${activeState === 'force' ? 'active force' : ''}" onclick="toggleRuleOverride('${r.id}', 'force')">Force W1</button>
+            <button class="rule-ctrl-btn ${activeState === 'mute' ? 'active mute' : ''}" onclick="toggleRuleOverride('${r.id}', 'mute')">Mute</button>
+          </div>
+        </div>
+      `;
+    }).join('');
+  }
+
+  function toggleRuleOverride(ruleId, state) {
+    activeOverrides[ruleId] = state;
+    renderRules();
+  }
+
+  function selectPackage(pkg) {
+    currentPackage = pkg;
+    updateUIControls();
+  }
+
+  function selectStatus(status) {
+    currentStatus = status;
+    updateUIControls();
+  }
+
+  function updateUIControls() {
+    // Package buttons
+    ["unified", "content", "ops"].forEach(p => {
+      const el = document.getElementById(`pkg_${p}`);
+      if (currentPackage === p) el.classList.add("active");
+      else el.classList.remove("active");
+    });
+    
+    // Status buttons
+    ["audited", "proposal", "active", "completed"].forEach(s => {
+      const el = document.getElementById(`st_${s}`);
+      const btnStatus = s === "audited" ? "Audited" : (s === "proposal" ? "Proposal Sent" : (s === "active" ? "Active Pilot" : "Completed"));
+      if (currentStatus === btnStatus) el.classList.add("active");
+      else el.classList.remove("active");
+    });
+  }
+
+  function exportLockedConfig() {
+    // Compile locked configuration file
+    const exportData = {
+      business: {
+        name: currentVenue.venue_name,
+        area: currentVenue.area,
+        type: currentVenue.type
+      },
+      online: {
+        google_rating: currentVenue.dimensions.trust / 20, // map back to 0-5 scale
+        google_reviews_count: currentVenue.dimensions.trust >= 50 ? 55 : 5
+      },
+      venue_intelligence_report: {
+        venue_id: currentVenue.venue_id,
+        venue_name: currentVenue.venue_name,
+        area: currentVenue.area,
+        dimensions: {
+          visibility: { score: currentVenue.dimensions.visibility },
+          consistency: { score: currentVenue.dimensions.trust }, // consistency is trust metric in GB
+          conversion: { score: currentVenue.dimensions.conversion },
+          trust: { score: currentVenue.dimensions.trust },
+          operations: { score: currentVenue.dimensions.operations },
+          revenue: { score: currentVenue.dimensions.revenue }
+        },
+        rule_overrides: activeOverrides,
+        package_override: currentPackage,
+        lifecycle_status: currentStatus
+      }
+    };
+
+    const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(exportData, null, 2));
+    const downloadAnchor = document.createElement('a');
+    downloadAnchor.setAttribute("href", dataStr);
+    downloadAnchor.setAttribute("download", `approved_growth_config_${currentVenue.venue_id}.json`);
+    document.body.appendChild(downloadAnchor);
+    downloadAnchor.click();
+    downloadAnchor.remove();
+  }
+
+  // Initial Seed Load
+  loadPilotVenue("swayambhu_ganesh_sabhagruh");
+</script>
+</body>
+</html>

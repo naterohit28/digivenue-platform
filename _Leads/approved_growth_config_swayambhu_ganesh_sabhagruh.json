@@ -1,0 +1,40 @@
+{
+  "business": {
+    "name": "Swayambhu Ganesh Sabhagruh",
+    "area": "Nerul",
+    "type": "hall"
+  },
+  "online": {
+    "google_rating": 3.8,
+    "google_reviews_count": 34,
+    "instagram": "banquet_swayambhuganesh"
+  },
+  "venue_intelligence_report": {
+    "venue_id": "swayambhu_ganesh_sabhagruh",
+    "venue_name": "Swayambhu Ganesh Sabhagruh",
+    "area": "Nerul",
+    "dimensions": {
+      "visibility": { "score": 45 },
+      "trust": { "score": 30 },
+      "conversion": { "score": 50 },
+      "operations": { "score": 30 },
+      "revenue": { "score": 40 },
+      "leadership": { "score": 65 }
+    },
+    "rule_overrides": {
+      "gmb_setup": "normal",
+      "reply_speed": "force",
+      "followup_system": "normal",
+      "review_engine": "force",
+      "gmb_optimize": "force",
+      "content_shoot": "normal",
+      "posting_rhythm": "normal",
+      "instagram_start": "normal",
+      "referral_network": "normal",
+      "tracking_start": "normal",
+      "paid_ready": "normal"
+    },
+    "package_override": "content",
+    "lifecycle_status": "Audited"
+  }
+}

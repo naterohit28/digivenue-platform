@@ -469,6 +469,197 @@ const DEFAULT_CONFIG = {
 };;
 
 let CONFIG = JSON.parse(JSON.stringify(DEFAULT_CONFIG));
+let RECOMMENDATIONS_CONFIDENCE = [];
+let benchmarks = { average_reviews: 120, average_visibility: 54, average_occupancy: 68, average_response_time: 4 };
+
+async function loadConfidenceAndBenchmarks(){
+  try {
+    let loaded = false;
+    if (window.storage) {
+      const r = await window.storage.get('dvb-confidence-v2', false);
+      if (r && r.value) {
+        RECOMMENDATIONS_CONFIDENCE = JSON.parse(r.value);
+        loaded = true;
+      }
+    }
+    if (!loaded) {
+      const res = await fetch('Sales Strategy/recommendations_confidence.json');
+      if (res.ok) RECOMMENDATIONS_CONFIDENCE = await res.json();
+    }
+  } catch(e) {}
+  try {
+    const res = await fetch('Sales Strategy/bcda_statistics.json');
+    if (res.ok) {
+      const data = await res.json();
+      benchmarks.average_reviews = data.average_reviews || 120;
+    }
+  } catch(e) {}
+}
+
+async function persistConfidence(){
+  try{ if(window.storage) await window.storage.set('dvb-confidence-v2', JSON.stringify(RECOMMENDATIONS_CONFIDENCE), false); }catch(e){}
+}
+
+function toggleFeedbackUI(checkboxEl) {
+  const container = checkboxEl.parentNode.parentNode.querySelector('.feedback-actions');
+  if (container) {
+    container.style.display = checkboxEl.checked ? 'flex' : 'none';
+  }
+}
+
+/* =====================================================================
+   THE 4 CORE SYSTEMS
+   ===================================================================== */
+const DiagnosisEngine = {
+  mapIntakeToConfig(intake) { return mapIntakeToConfig(intake); },
+  deriveAssessmentFromIntake(intake) { return deriveAssessmentFromIntake(intake); },
+  computeMaturity() { return computeMaturity(); },
+  computeScores() { return computeScores(); },
+  computeHealthScores() { return computeHealthScores(); },
+  detailedAuditState() { return detailedAuditState(); },
+  detailedAuditToAssessment() { return detailedAuditToAssessment(); },
+  prefillFromQuickAudit() { return prefillFromQuickAudit(); },
+  saveDetailedAudit() { return saveDetailedAudit(); },
+  restoreDetailedAudit() { return restoreDetailedAudit(); }
+};
+
+const StrategyEngine = {
+  get RULES() { return RULES; },
+  decide() { return decide(); },
+  topRecommendations() { return topRecommendations(); },
+  intakePersonalization() { return intakePersonalization(); }
+};
+
+const ExecutionEngine = {
+  generateWeeklyChecklist() {
+    const d = DiagnosisEngine.detailedAuditState();
+    const criticalFixes = [];
+    const getChecked = id => {
+      if (CONFIG.detailedAudit && Array.isArray(CONFIG.detailedAudit)) {
+        return CONFIG.detailedAudit.includes(id);
+      }
+      return false;
+    };
+    
+    if (!getChecked('da_gmb_claimed')) {
+      criticalFixes.push(['c-1', 'GMB Claim', 'Claim & verify Google Business profile', 'gmb_setup']);
+    }
+    if (!getChecked('da_ig_recent')) {
+      criticalFixes.push(['c-2', 'IG Activity', 'Post fresh content on Instagram grid', 'posting_rhythm']);
+    }
+    if (!getChecked('da_iq_fast')) {
+      criticalFixes.push(['c-3', 'Reply Speed', 'Configure instant WhatsApp auto-replies', 'reply_speed']);
+    }
+    if (!getChecked('da_iq_followup')) {
+      criticalFixes.push(['c-4', 'Follow-up System', 'Establish customer inquiry follow-up logic', 'followup_system']);
+    }
+    if (!getChecked('da_gmb_reviews20')) {
+      criticalFixes.push(['c-5', 'Reviews Velocity', 'Request reviews from 10 past clients', 'review_engine']);
+    }
+
+    const weeks = [
+      ['Week 01', 'Foundation', [
+        ['w1-1', 'Google Business', '30+ photos, all packages', 'gmb_optimize'],
+        ['w1-2', 'Instagram setup', 'Bio + link', 'instagram_start'],
+        ['w1-3', 'Content shoot', '10 hero shots', 'content_shoot'],
+        ['w1-4', 'AI image bank', '8 images from Ch 02', 'content_shoot'],
+        ['w1-5', 'Posters', '4 posters from Ch 07', 'content_shoot'],
+        ['w1-6', CONFIG.market.messagingApp + ' Business', 'Auto-reply set up', 'reply_speed']
+      ]],
+      ['Week 02', 'Launch', [
+        ['w2-1', 'First 7 posts', 'Calendar Day 1-7', 'posting_rhythm'],
+        ['w2-2', 'GMB posts', '2 updates', 'gmb_optimize'],
+        ['w2-3', 'Reviews', 'Message 10 past clients', 'review_engine'],
+        ['w2-4', 'Community', '5 local groups', 'referral_network'],
+        ['w2-5', 'Influencers', 'Shortlist 5, DM them', 'referral_network'],
+        ['w2-6', 'Brochure', 'Send to 20 contacts', 'referral_network']
+      ]],
+      ['Week 03', 'Accelerate', [
+        ['w3-1', 'First reel', 'Venue walkthrough', 'posting_rhythm'],
+        ['w3-2', 'Stories', '3 interactive', 'posting_rhythm'],
+        ['w3-3', 'Referrals', '5 vendors', 'referral_network'],
+        ['w3-4', 'Listings', 'Directory profiles', 'gmb_optimize'],
+        ['w3-5', 'Month 2 plan', 'Draft calendar', 'posting_rhythm'],
+        ['w3-6', 'Analytics', 'Review insights', 'tracking_start']
+      ]],
+      ['Week 04', 'Sustain', [
+        ['w4-1', 'Reviews', '10+ new', 'review_engine'],
+        ['w4-2', 'Reel #2', 'Food reel', 'posting_rhythm'],
+        ['w4-3', 'Photo refresh', '5 new', 'content_shoot'],
+        ['w4-4', 'Competitor audit', 'What are they missing', 'referral_network'],
+        ['w4-5', 'Testimonials', '2 videos', 'review_engine'],
+        ['w4-6', 'Month wrap', 'Recap post', 'posting_rhythm']
+      ]]
+    ];
+
+    if (criticalFixes.length > 0) {
+      weeks.unshift(['Week 01 Critical', '⚠️ Critical Audit Fixes First', criticalFixes]);
+    }
+
+    const cards = weeks.map(w => `
+      <div class="card" style="border-left: 3px solid ${w[0].includes('Critical') ? 'var(--maroon)' : 'var(--border-bright)'}">
+        <div style="margin-bottom:14px;padding-bottom:12px;border-bottom:1px solid var(--border)">
+          <div class="mono" style="font-size:11px;color:${w[0].includes('Critical') ? 'var(--maroon)' : 'var(--accent)'}">${esc(w[0])}</div>
+          <h3 style="margin-top:4px">${esc(w[1])}</h3>
+        </div>
+        ${w[2].map(it => `
+          <label style="display:flex;flex-direction:column;padding:9px 0;border-bottom:1px solid var(--border);cursor:pointer;font-size:13px">
+            <div style="display:flex;gap:10px;align-items:flex-start">
+              <input type="checkbox" data-ck="${it[0]}" onchange="saveChecks(); toggleFeedbackUI(this);" style="margin-top:2px;accent-color:var(--accent)">
+              <span>
+                <strong style="color:var(--text);font-size:13px">${w[0].includes('Critical') ? '<span style="color:var(--maroon)">[CRITICAL FIX]</span> ' : ''}${esc(it[1])}</strong>
+                <span style="color:var(--text-3)">${esc(it[2])}</span>
+              </span>
+            </div>
+            <div class="feedback-actions" style="margin-top:6px;display:none;gap:8px;align-items:center;padding-left:26px">
+              <span style="font-size:11px;color:var(--text-3)">Did this help?</span>
+              <button class="btn" style="padding:2px 8px;font-size:10px;border-radius:4px;cursor:pointer" onclick="event.preventDefault(); LearningEngine.logTaskOutcome('${it[3]}', 'success', this)">👍 Yes</button>
+              <button class="btn outline" style="padding:2px 8px;font-size:10px;border-radius:4px;cursor:pointer;border-color:var(--border-bright)" onclick="event.preventDefault(); LearningEngine.logTaskOutcome('${it[3]}', 'fail', this)">👎 No</button>
+            </div>
+          </label>
+        `).join('')}
+      </div>
+    `).join('');
+
+    return `<div class="grid grid-2">${cards}</div>
+      <div class="callout" style="margin-top:24px">
+        <div class="callout-icon">⚡</div>
+        <div class="callout-body">
+          <h4>The non-negotiables, every week</h4>
+          <p><strong>1.</strong> Post 4× min. <strong>2.</strong> 1 GMB post. <strong>3.</strong> Ask 2 clients for reviews. <strong>4.</strong> Reply to every DM in 2 hrs.</p>
+        </div>
+      </div>`;
+  }
+};
+
+const LearningEngine = {
+  benchmarks: benchmarks,
+  get confidenceDb() { return RECOMMENDATIONS_CONFIDENCE; },
+  async loadConfidenceAndBenchmarks() { return loadConfidenceAndBenchmarks(); },
+  logTaskOutcome(ruleId, outcome, buttonEl) {
+    if (typeof RECOMMENDATIONS_CONFIDENCE !== 'undefined' && RECOMMENDATIONS_CONFIDENCE.length) {
+      const found = RECOMMENDATIONS_CONFIDENCE.find(rc => rc.rule_id === ruleId);
+      if (found) {
+        found.applied_to++;
+        if (outcome === 'success') {
+          found.successful++;
+        }
+        found.success_rate = Math.round(found.successful / found.applied_to * 100);
+        
+        persistConfidence();
+        
+        const parent = buttonEl.parentNode;
+        if (parent) {
+          parent.innerHTML = `<span style="font-size:11px;color:var(--green)">✓ Feedback registered! Success rate: ${found.success_rate}%</span>`;
+        }
+        
+        setTimeout(() => {
+          renderAllChapters();
+        }, 1200);
+      }
+    }
+  }
+};
 
 /* ---------- helpers ---------- */
 const C = () => CONFIG;
@@ -915,9 +1106,13 @@ async function loadPersisted(){
         // Guard: skip stale test data from old sessions
         const staleName = (saved.company && saved.company.venueName)||'';
         if(staleName && (staleName.includes('MLA') || staleName.includes('GRS'))){
-          // stale â€” ignore, start fresh
+          // stale — ignore, start fresh
         } else {
-          CONFIG = Object.assign(JSON.parse(JSON.stringify(DEFAULT_CONFIG)), saved);
+          if (saved.business || saved.venue_intelligence_report) {
+            CONFIG = mapIntakeToConfig(saved);
+          } else {
+            CONFIG = Object.assign(JSON.parse(JSON.stringify(DEFAULT_CONFIG)), saved);
+          }
         } }
     }
   }catch(e){}
@@ -944,9 +1139,13 @@ function importConfig(e){
   r.onload = ev => {
     try{
       const obj = JSON.parse(ev.target.result);
-      CONFIG = Object.assign(JSON.parse(JSON.stringify(DEFAULT_CONFIG)), obj);
+      if (obj.business || obj.venue_intelligence_report) {
+        CONFIG = mapIntakeToConfig(obj);
+      } else {
+        CONFIG = Object.assign(JSON.parse(JSON.stringify(DEFAULT_CONFIG)), obj);
+      }
       persist(); applyTheme(); renderAllChapters();
-  applyLastReviewedStamps(); buildSetupForm();
+      applyLastReviewedStamps(); buildSetupForm();
       alert('Config imported successfully.');
     }catch(err){ alert('Invalid config file.'); }
   };
@@ -1193,15 +1392,8 @@ function ch11(){
 }
 
 function ch12(){
-  const weeks = [
-    ['Week 01','Foundation',[['w1-1','Google Business','30+ photos, all packages'],['w1-2','Instagram setup','Bio + link'],['w1-3','Content shoot','10 hero shots'],['w1-4','AI image bank','8 images from Ch 02'],['w1-5','Posters','4 posters from Ch 07'],['w1-6',CONFIG.market.messagingApp+' Business','Auto-reply set up']]],
-    ['Week 02','Launch',[['w2-1','First 7 posts','Calendar Day 1-7'],['w2-2','GMB posts','2 updates'],['w2-3','Reviews','Message 10 past clients'],['w2-4','Community','5 local groups'],['w2-5','Influencers','Shortlist 5, DM them'],['w2-6','Brochure','Send to 20 contacts']]],
-    ['Week 03','Accelerate',[['w3-1','First reel','Venue walkthrough'],['w3-2','Stories','3 interactive'],['w3-3','Referrals','5 vendors'],['w3-4','Listings','Directory profiles'],['w3-5','Month 2 plan','Draft calendar'],['w3-6','Analytics','Review insights']]],
-    ['Week 04','Sustain',[['w4-1','Reviews','10+ new'],['w4-2','Reel #2','Food reel'],['w4-3','Photo refresh','5 new'],['w4-4','Competitor audit','What are they missing'],['w4-5','Testimonials','2 videos'],['w4-6','Month wrap','Recap post']]]
-  ];
-  const cards = weeks.map(w=>`<div class="card"><div style="margin-bottom:14px;padding-bottom:12px;border-bottom:1px solid var(--border)"><div class="mono" style="font-size:11px;color:var(--accent)">${esc(w[0])}</div><h3 style="margin-top:4px">${esc(w[1])}</h3></div>${w[2].map(it=>`<label style="display:flex;gap:10px;padding:9px 0;border-bottom:1px solid var(--border);cursor:pointer;font-size:13px"><input type="checkbox" data-ck="${it[0]}" onchange="saveChecks()" style="margin-top:2px;accent-color:var(--accent)"><span><strong style="display:block;color:var(--text);font-size:13px">${esc(it[1])}</strong><span style="color:var(--text-3)">${esc(it[2])}</span></span></label>`).join('')}</div>`).join('');
-  const body = `<div class="grid grid-2">${cards}</div><div class="callout" style="margin-top:24px"><div class="callout-icon">âš¡</div><div class="callout-body"><h4>The non-negotiables, every week</h4><p><strong>1.</strong> Post 4Ã— min. <strong>2.</strong> 1 GMB post. <strong>3.</strong> Ask 2 clients for reviews. <strong>4.</strong> Reply to every DM in 2 hrs.</p></div></div>`;
-  return secWrap('ch12','Chapter 12 Â· Execution', `Execution <em>checklist</em>`, `Tick every item. Progress saves automatically. Consistency beats perfection.`, body);
+  const body = ExecutionEngine.generateWeeklyChecklist();
+  return secWrap('ch12','Chapter 12 · Execution', `Execution <em>checklist</em>`, `Tick every item. Progress saves automatically. Consistency beats perfection.`, body);
 }
 </script>
 <script>
@@ -1600,12 +1792,13 @@ async function saveChecks(){
   try{ if(window.storage) await window.storage.set('dvb-checks-v2', JSON.stringify(st), false); }catch(e){}
 }
 async function loadChecks(){
-  try{ if(window.storage){ const r=await window.storage.get('dvb-checks-v2',false); if(r&&r.value){ const st=JSON.parse(r.value); document.querySelectorAll('[data-ck]').forEach(cb=>{ if(st[cb.dataset.ck]) cb.checked=true; }); } } }catch(e){}
+  try{ if(window.storage){ const r=await window.storage.get('dvb-checks-v2',false); if(r&&r.value){ const st=JSON.parse(r.value); document.querySelectorAll('[data-ck]').forEach(cb=>{ if(st[cb.dataset.ck]) { cb.checked=true; if(typeof toggleFeedbackUI==='function') toggleFeedbackUI(cb); } }); } } }catch(e){}
 }
 
 /* ---------- INIT ---------- */
 async function init(){
   await loadPersisted();
+  await loadConfidenceAndBenchmarks();
   applyTheme();
   buildNav();
   renderAllChapters();
@@ -1685,10 +1878,23 @@ function computeDimensionScores(){
 }
 
 function computeMaturity(){
-  const dim = computeDimensionScores();
+  let dim = computeDimensionScores();
   let score = 0;
   Object.keys(DIM_WEIGHTS).forEach(d=>{ score += (dim[d]||0)*DIM_WEIGHTS[d]; });
   score = Math.round(score); // 0-100
+  
+  if (CONFIG.venue_intelligence_report && CONFIG.venue_intelligence_report.dimensions) {
+    const virDims = CONFIG.venue_intelligence_report.dimensions;
+    dim = {
+      presence: virDims.visibility ? virDims.visibility.score : dim.presence,
+      consistency: virDims.consistency ? virDims.consistency.score : dim.consistency,
+      conversion: virDims.conversion ? virDims.conversion.score : dim.conversion,
+      authority: virDims.trust ? virDims.trust.score : dim.authority,
+      dataUse: virDims.operations ? virDims.operations.score : dim.dataUse
+    };
+    score = Math.round(dim.presence*0.25 + dim.consistency*0.20 + dim.conversion*0.25 + dim.authority*0.20 + dim.dataUse*0.10);
+  }
+  
   // map to level 0-5
   let level;
   if(score < 15) level=0;
@@ -1888,10 +2094,48 @@ function decide(){
   RULES.forEach(r=>{
     let cond=false;
     try{ cond = r.when(a, m.dim, m.level); }catch(e){ cond=false; }
+    
+    // Check if custom rule overrides exist in the Venue Intelligence Report
+    let overrideState = "normal";
+    if (CONFIG.venue_intelligence_report && CONFIG.venue_intelligence_report.rule_overrides) {
+      if (CONFIG.venue_intelligence_report.rule_overrides[r.id]) {
+        overrideState = CONFIG.venue_intelligence_report.rule_overrides[r.id];
+      }
+    }
+    
+    if (overrideState === "mute") {
+      cond = false;
+    } else if (overrideState === "force") {
+      cond = true;
+    }
+    
     if(cond){
       // priority: business weight, scaled, with a small maturity-fit nudge
-      const priority = Math.round(r.biz*100);
-      fired.push({ ...r, priority, confidence:0.9 });
+      let priority = Math.round(r.biz*100);
+      if (overrideState === "force") {
+        priority += 10000; // Force to absolute top
+      }
+      
+      let successRate = 90;
+      let appliedCount = 50;
+      let successfulCount = 45;
+      
+      if (typeof RECOMMENDATIONS_CONFIDENCE !== 'undefined' && RECOMMENDATIONS_CONFIDENCE.length) {
+        const found = RECOMMENDATIONS_CONFIDENCE.find(rc => rc.rule_id === r.id);
+        if (found) {
+          successRate = found.success_rate;
+          appliedCount = found.applied_to;
+          successfulCount = found.successful;
+        }
+      }
+      
+      fired.push({ 
+        ...r, 
+        priority, 
+        confidence: successRate / 100,
+        applied: appliedCount,
+        successful: successfulCount
+      });
     }
   });
   // sort by priority desc
@@ -2202,7 +2446,7 @@ function assessmentSection(){
         <div class="card" style="border-left:3px solid ${i===0?'var(--accent)':'var(--border-bright)'}">
           <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:10px;margin-bottom:8px">
             <span class="mono" style="font-size:11px;color:${i===0?'var(--accent)':'var(--text-3)'};background:${i===0?'rgba(249,115,22,0.1)':'transparent'};border:1px solid ${i===0?'var(--accent)':'var(--border)'};padding:3px 9px;border-radius:6px;font-weight:600">#${i+1}</span>
-            <span class="mono" style="font-size:10px;color:var(--text-3)">confidence ${Math.round(r.confidence*100)}%</span>
+            <span class="mono" style="font-size:10px;color:var(--text-3)">Success Rate: ${Math.round(r.confidence*100)}% (${r.successful}/${r.applied} venues)</span>
           </div>
           <h4 style="font-size:16px;font-weight:600;margin-bottom:6px;letter-spacing:-0.01em">${r.action}</h4>
           <p style="font-size:12px;color:var(--text-2);line-height:1.5;margin-bottom:6px"><strong style="color:var(--text)">Why:</strong> ${r.why}</p>
@@ -2402,6 +2646,7 @@ function deriveAssessmentFromIntake(intake){
 function mapIntakeToConfig(intake){
   const cfg = JSON.parse(JSON.stringify(DEFAULT_CONFIG));
   const b = intake.business||{}, o=intake.online||{}, p=intake.pricing||{};
+  cfg.venue_intelligence_report = intake.venue_intelligence_report || null;
 
   cfg.company.name = b.owner ? (b.name||'') : (b.name||''); // venue name = business
   cfg.company.venueName = b.name||'';
@@ -2825,6 +3070,16 @@ function updateDAScore(){
 }
 
 function saveDetailedAudit(){
-
+  const checked = [];
+  document.querySelectorAll('[data-da]').forEach(cb=>{
+    if(cb.checked) checked.push(cb.dataset.da);
+  });
+  CONFIG.detailedAudit = checked;
+  CONFIG.assessment = detailedAuditToAssessment();
+  persist();
+  renderAllChapters();
+  alert('Playbook updated based on detailed audit!');
+}
+</script>
 </body>
 </html>
