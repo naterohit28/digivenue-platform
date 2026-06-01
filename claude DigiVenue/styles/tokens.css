@@ -35,7 +35,8 @@
   --color-accent:         #D94822; /* Restrained Vermillion */
   --color-accent-hover:   #B83615; /* Vermillion hover */
   --color-accent-subtle:  rgba(217, 72, 34, 0.08);
-  --color-gold:           #C5A059; /* Muted Champagne Gold */
+  --color-gold:           #C5A059; /* Muted Champagne Gold — decorative (borders, accents, large/dark-bg text) */
+  --color-gold-text:      #8C6B28; /* AA-safe gold for small text on light bg (4.6:1) */
   --color-gold-hover:     #D4B06A;
   --color-gold-subtle:    rgba(197, 160, 89, 0.06);
   --color-gold-border:    rgba(197, 160, 89, 0.18);

@@ -215,24 +215,27 @@
 .home .hero__cta {
   display: inline-flex;
   align-items: center;
-  gap: 14px;
+  gap: 12px;
   font-family: var(--font-sans);
   font-size: 14px;
-  font-weight: 500;
-  letter-spacing: 0.06em;
+  font-weight: 600;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: #F5F2EE;
   text-decoration: none;
-  padding: 4px 0 10px;
-  border-bottom: 1px solid rgba(245,242,238,0.5);
-  transition: border-color 280ms var(--ease-out), color 280ms var(--ease-out);
+  padding: 15px 28px;
+  border: 1px solid rgba(245,242,238,0.65);
+  background: rgba(10,9,8,0.25);
+  backdrop-filter: blur(2px);
+  transition: background 280ms var(--ease-out), color 280ms var(--ease-out), border-color 280ms var(--ease-out);
   white-space: nowrap;
-  min-height: 44px;       /* thumb-reachable tap target */
+  min-height: 52px;       /* thumb-reachable tap target */
   align-self: end;
 }
 .home .hero__cta:hover {
-  color: #E6B873;
-  border-bottom-color: #E6B873;
+  background: #F5F2EE;
+  color: #1F1D1C;
+  border-color: #F5F2EE;
 }
 
 /* Clarity anchor — what we actually do, in one line (P4: lifted) */
@@ -580,16 +583,22 @@
   gap: 14px;
   font-family: var(--font-sans);
   font-size: 15px;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--color-text-primary);
+  color: var(--color-text-inverse);
   text-decoration: none;
-  padding-bottom: 10px;
-  border-bottom: 1px solid var(--color-text-primary);
-  transition: opacity 280ms var(--ease-out);
+  padding: 18px 40px;
+  min-height: 56px;
+  background: var(--color-text-primary);
+  border: 1px solid var(--color-text-primary);
+  transition: background 280ms var(--ease-out), color 280ms var(--ease-out);
 }
-.home .invitation__cta:hover { opacity: 0.5; }
+.home .invitation__cta:hover {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  color: #FFFFFF;
+}
 .home .invitation__note {
   display: block;
   margin-top: 28px;
@@ -600,12 +609,12 @@
   color: var(--color-text-muted);
 }
 .home .invitation__wa {
-  color: var(--color-gold);
+  color: var(--color-gold-text);
   text-decoration: none;
-  border-bottom: 1px solid var(--color-gold-border);
-  transition: border-color var(--duration-base) var(--ease-out);
+  border-bottom: 1px solid var(--color-gold-text);
+  transition: opacity var(--duration-base) var(--ease-out);
 }
-.home .invitation__wa:hover { border-bottom-color: var(--color-gold); }
+.home .invitation__wa:hover { opacity: 0.7; }
 
 /* ---------- Footer — collapsed to a single quiet bar ---------- */
 .home .site-footer {
@@ -1055,4 +1064,14 @@
 /* Never let the nav slide away on the home page — always frozen */
 .home .site-nav.is-hidden {
   transform: translateY(0) !important;
+}
+
+/* ──────────────────────────────────────────
+   REDUCED MOTION — new homepage elements
+   Stop continuous/looping motion cleanly.
+   ────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .activity-ticker__track { animation: none; transform: none; }
+  .discovery__node__dot--pulse { animation: none; }
+  .gv-line--after { stroke-dashoffset: 0 !important; transition: none; }
 }
