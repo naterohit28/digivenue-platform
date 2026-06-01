@@ -1,0 +1,5519 @@
+[
+  {
+    "business_name": "Swagat Banquet Hall",
+    "suburb": "Dadar",
+    "radius_km": 3.0,
+    "competitor_count": 8,
+    "competitors": [
+      {
+        "business_name": "Swatantryaveer Savarkar Sabhagriha",
+        "suburb": "Dadar",
+        "distance_km": 0.0,
+        "dmi_score": 57.84,
+        "dmi_category": "Visibility Weak"
+      },
+      {
+        "business_name": "Kohinoor Hall",
+        "suburb": "Dadar",
+        "distance_km": 0.0,
+        "dmi_score": 28.67,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Ramee Guestline Banquets",
+        "suburb": "Dadar",
+        "distance_km": 0.0,
+        "dmi_score": 55.13,
+        "dmi_category": "Visibility Weak"
+      },
+      {
+        "business_name": "Ahilyadevi Sabhagruh",
+        "suburb": "Dadar",
+        "distance_km": 0.0,
+        "dmi_score": 40.17,
+        "dmi_category": "Operationally Chaotic"
+      },
+      {
+        "business_name": "Royal Symphony Banquet",
+        "suburb": "Dadar",
+        "distance_km": 0.0,
+        "dmi_score": 27.59,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Dadar Gymkhana Banquets",
+        "suburb": "Dadar",
+        "distance_km": 0.0,
+        "dmi_score": 39.98,
+        "dmi_category": "Operationally Chaotic"
+      },
+      {
+        "business_name": "Sharda Sabhagriha",
+        "suburb": "Dadar",
+        "distance_km": 0.0,
+        "dmi_score": 36.51,
+        "dmi_category": "Operationally Chaotic"
+      },
+      {
+        "business_name": "Royal Garden Banquet",
+        "suburb": "Dadar",
+        "distance_km": 0.0,
+        "dmi_score": 27.09,
+        "dmi_category": "Digitally Invisible"
+      }
+    ],
+    "sales_angle": "8 nearby competitors within 3.0 km are competing for the same inquiry pool."
+  },
+  {
+    "business_name": "Swatantryaveer Savarkar Sabhagriha",
+    "suburb": "Dadar",
+    "radius_km": 3.0,
+    "competitor_count": 8,
+    "competitors": [
+      {
+        "business_name": "Swagat Banquet Hall",
+        "suburb": "Dadar",
+        "distance_km": 0.0,
+        "dmi_score": 17.56,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Kohinoor Hall",
+        "suburb": "Dadar",
+        "distance_km": 0.0,
+        "dmi_score": 28.67,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Ramee Guestline Banquets",
+        "suburb": "Dadar",
+        "distance_km": 0.0,
+        "dmi_score": 55.13,
+        "dmi_category": "Visibility Weak"
+      },
+      {
+        "business_name": "Ahilyadevi Sabhagruh",
+        "suburb": "Dadar",
+        "distance_km": 0.0,
+        "dmi_score": 40.17,
+        "dmi_category": "Operationally Chaotic"
+      },
+      {
+        "business_name": "Royal Symphony Banquet",
+        "suburb": "Dadar",
+        "distance_km": 0.0,
+        "dmi_score": 27.59,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Dadar Gymkhana Banquets",
+        "suburb": "Dadar",
+        "distance_km": 0.0,
+        "dmi_score": 39.98,
+        "dmi_category": "Operationally Chaotic"
+      },
+      {
+        "business_name": "Sharda Sabhagriha",
+        "suburb": "Dadar",
+        "distance_km": 0.0,
+        "dmi_score": 36.51,
+        "dmi_category": "Operationally Chaotic"
+      },
+      {
+        "business_name": "Royal Garden Banquet",
+        "suburb": "Dadar",
+        "distance_km": 0.0,
+        "dmi_score": 27.09,
+        "dmi_category": "Digitally Invisible"
+      }
+    ],
+    "sales_angle": "8 nearby competitors within 3.0 km are competing for the same inquiry pool."
+  },
+  {
+    "business_name": "Kohinoor Hall",
+    "suburb": "Dadar",
+    "radius_km": 3.0,
+    "competitor_count": 8,
+    "competitors": [
+      {
+        "business_name": "Swagat Banquet Hall",
+        "suburb": "Dadar",
+        "distance_km": 0.0,
+        "dmi_score": 17.56,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Swatantryaveer Savarkar Sabhagriha",
+        "suburb": "Dadar",
+        "distance_km": 0.0,
+        "dmi_score": 57.84,
+        "dmi_category": "Visibility Weak"
+      },
+      {
+        "business_name": "Ramee Guestline Banquets",
+        "suburb": "Dadar",
+        "distance_km": 0.0,
+        "dmi_score": 55.13,
+        "dmi_category": "Visibility Weak"
+      },
+      {
+        "business_name": "Ahilyadevi Sabhagruh",
+        "suburb": "Dadar",
+        "distance_km": 0.0,
+        "dmi_score": 40.17,
+        "dmi_category": "Operationally Chaotic"
+      },
+      {
+        "business_name": "Royal Symphony Banquet",
+        "suburb": "Dadar",
+        "distance_km": 0.0,
+        "dmi_score": 27.59,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Dadar Gymkhana Banquets",
+        "suburb": "Dadar",
+        "distance_km": 0.0,
+        "dmi_score": 39.98,
+        "dmi_category": "Operationally Chaotic"
+      },
+      {
+        "business_name": "Sharda Sabhagriha",
+        "suburb": "Dadar",
+        "distance_km": 0.0,
+        "dmi_score": 36.51,
+        "dmi_category": "Operationally Chaotic"
+      },
+      {
+        "business_name": "Royal Garden Banquet",
+        "suburb": "Dadar",
+        "distance_km": 0.0,
+        "dmi_score": 27.09,
+        "dmi_category": "Digitally Invisible"
+      }
+    ],
+    "sales_angle": "8 nearby competitors within 3.0 km are competing for the same inquiry pool."
+  },
+  {
+    "business_name": "Mayfair Banquets",
+    "suburb": "South Mumbai",
+    "radius_km": 3.0,
+    "competitor_count": 8,
+    "competitors": [
+      {
+        "business_name": "Jewel of India (Jade Ballroom)",
+        "suburb": "South Mumbai",
+        "distance_km": 0.0,
+        "dmi_score": 21.47,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Lala Lajpatrai Hall",
+        "suburb": "South Mumbai",
+        "distance_km": 0.0,
+        "dmi_score": 29.95,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "P. L. Deshpande Mini Hall",
+        "suburb": "South Mumbai",
+        "distance_km": 0.0,
+        "dmi_score": 65.34,
+        "dmi_category": "Growth Ready"
+      },
+      {
+        "business_name": "Maharashtra College Hall",
+        "suburb": "South Mumbai",
+        "distance_km": 0.0,
+        "dmi_score": 48.08,
+        "dmi_category": "Visibility Weak"
+      },
+      {
+        "business_name": "Bombay Y.M.C.A. Banquets",
+        "suburb": "South Mumbai",
+        "distance_km": 0.0,
+        "dmi_score": 39.41,
+        "dmi_category": "Operationally Chaotic"
+      },
+      {
+        "business_name": "Hindu Gymkhana Grounds",
+        "suburb": "South Mumbai",
+        "distance_km": 0.0,
+        "dmi_score": 29.94,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Parsi Gymkhana Grounds",
+        "suburb": "South Mumbai",
+        "distance_km": 0.0,
+        "dmi_score": 23.91,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Wodehouse Gymkhana Banquets",
+        "suburb": "South Mumbai",
+        "distance_km": 0.0,
+        "dmi_score": 69.56,
+        "dmi_category": "Growth Ready"
+      }
+    ],
+    "sales_angle": "8 nearby competitors within 3.0 km are competing for the same inquiry pool."
+  },
+  {
+    "business_name": "Jewel of India (Jade Ballroom)",
+    "suburb": "South Mumbai",
+    "radius_km": 3.0,
+    "competitor_count": 8,
+    "competitors": [
+      {
+        "business_name": "Mayfair Banquets",
+        "suburb": "South Mumbai",
+        "distance_km": 0.0,
+        "dmi_score": 23.18,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Lala Lajpatrai Hall",
+        "suburb": "South Mumbai",
+        "distance_km": 0.0,
+        "dmi_score": 29.95,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "P. L. Deshpande Mini Hall",
+        "suburb": "South Mumbai",
+        "distance_km": 0.0,
+        "dmi_score": 65.34,
+        "dmi_category": "Growth Ready"
+      },
+      {
+        "business_name": "Maharashtra College Hall",
+        "suburb": "South Mumbai",
+        "distance_km": 0.0,
+        "dmi_score": 48.08,
+        "dmi_category": "Visibility Weak"
+      },
+      {
+        "business_name": "Bombay Y.M.C.A. Banquets",
+        "suburb": "South Mumbai",
+        "distance_km": 0.0,
+        "dmi_score": 39.41,
+        "dmi_category": "Operationally Chaotic"
+      },
+      {
+        "business_name": "Hindu Gymkhana Grounds",
+        "suburb": "South Mumbai",
+        "distance_km": 0.0,
+        "dmi_score": 29.94,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Parsi Gymkhana Grounds",
+        "suburb": "South Mumbai",
+        "distance_km": 0.0,
+        "dmi_score": 23.91,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Wodehouse Gymkhana Banquets",
+        "suburb": "South Mumbai",
+        "distance_km": 0.0,
+        "dmi_score": 69.56,
+        "dmi_category": "Growth Ready"
+      }
+    ],
+    "sales_angle": "8 nearby competitors within 3.0 km are competing for the same inquiry pool."
+  },
+  {
+    "business_name": "Ramee Guestline Banquets",
+    "suburb": "Dadar",
+    "radius_km": 3.0,
+    "competitor_count": 8,
+    "competitors": [
+      {
+        "business_name": "Swagat Banquet Hall",
+        "suburb": "Dadar",
+        "distance_km": 0.0,
+        "dmi_score": 17.56,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Swatantryaveer Savarkar Sabhagriha",
+        "suburb": "Dadar",
+        "distance_km": 0.0,
+        "dmi_score": 57.84,
+        "dmi_category": "Visibility Weak"
+      },
+      {
+        "business_name": "Kohinoor Hall",
+        "suburb": "Dadar",
+        "distance_km": 0.0,
+        "dmi_score": 28.67,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Ahilyadevi Sabhagruh",
+        "suburb": "Dadar",
+        "distance_km": 0.0,
+        "dmi_score": 40.17,
+        "dmi_category": "Operationally Chaotic"
+      },
+      {
+        "business_name": "Royal Symphony Banquet",
+        "suburb": "Dadar",
+        "distance_km": 0.0,
+        "dmi_score": 27.59,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Dadar Gymkhana Banquets",
+        "suburb": "Dadar",
+        "distance_km": 0.0,
+        "dmi_score": 39.98,
+        "dmi_category": "Operationally Chaotic"
+      },
+      {
+        "business_name": "Sharda Sabhagriha",
+        "suburb": "Dadar",
+        "distance_km": 0.0,
+        "dmi_score": 36.51,
+        "dmi_category": "Operationally Chaotic"
+      },
+      {
+        "business_name": "Royal Garden Banquet",
+        "suburb": "Dadar",
+        "distance_km": 0.0,
+        "dmi_score": 27.09,
+        "dmi_category": "Digitally Invisible"
+      }
+    ],
+    "sales_angle": "8 nearby competitors within 3.0 km are competing for the same inquiry pool."
+  },
+  {
+    "business_name": "Ahilyadevi Sabhagruh",
+    "suburb": "Dadar",
+    "radius_km": 3.0,
+    "competitor_count": 8,
+    "competitors": [
+      {
+        "business_name": "Swagat Banquet Hall",
+        "suburb": "Dadar",
+        "distance_km": 0.0,
+        "dmi_score": 17.56,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Swatantryaveer Savarkar Sabhagriha",
+        "suburb": "Dadar",
+        "distance_km": 0.0,
+        "dmi_score": 57.84,
+        "dmi_category": "Visibility Weak"
+      },
+      {
+        "business_name": "Kohinoor Hall",
+        "suburb": "Dadar",
+        "distance_km": 0.0,
+        "dmi_score": 28.67,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Ramee Guestline Banquets",
+        "suburb": "Dadar",
+        "distance_km": 0.0,
+        "dmi_score": 55.13,
+        "dmi_category": "Visibility Weak"
+      },
+      {
+        "business_name": "Royal Symphony Banquet",
+        "suburb": "Dadar",
+        "distance_km": 0.0,
+        "dmi_score": 27.59,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Dadar Gymkhana Banquets",
+        "suburb": "Dadar",
+        "distance_km": 0.0,
+        "dmi_score": 39.98,
+        "dmi_category": "Operationally Chaotic"
+      },
+      {
+        "business_name": "Sharda Sabhagriha",
+        "suburb": "Dadar",
+        "distance_km": 0.0,
+        "dmi_score": 36.51,
+        "dmi_category": "Operationally Chaotic"
+      },
+      {
+        "business_name": "Royal Garden Banquet",
+        "suburb": "Dadar",
+        "distance_km": 0.0,
+        "dmi_score": 27.09,
+        "dmi_category": "Digitally Invisible"
+      }
+    ],
+    "sales_angle": "8 nearby competitors within 3.0 km are competing for the same inquiry pool."
+  },
+  {
+    "business_name": "Lala Lajpatrai Hall",
+    "suburb": "South Mumbai",
+    "radius_km": 3.0,
+    "competitor_count": 8,
+    "competitors": [
+      {
+        "business_name": "Mayfair Banquets",
+        "suburb": "South Mumbai",
+        "distance_km": 0.0,
+        "dmi_score": 23.18,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Jewel of India (Jade Ballroom)",
+        "suburb": "South Mumbai",
+        "distance_km": 0.0,
+        "dmi_score": 21.47,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "P. L. Deshpande Mini Hall",
+        "suburb": "South Mumbai",
+        "distance_km": 0.0,
+        "dmi_score": 65.34,
+        "dmi_category": "Growth Ready"
+      },
+      {
+        "business_name": "Maharashtra College Hall",
+        "suburb": "South Mumbai",
+        "distance_km": 0.0,
+        "dmi_score": 48.08,
+        "dmi_category": "Visibility Weak"
+      },
+      {
+        "business_name": "Bombay Y.M.C.A. Banquets",
+        "suburb": "South Mumbai",
+        "distance_km": 0.0,
+        "dmi_score": 39.41,
+        "dmi_category": "Operationally Chaotic"
+      },
+      {
+        "business_name": "Hindu Gymkhana Grounds",
+        "suburb": "South Mumbai",
+        "distance_km": 0.0,
+        "dmi_score": 29.94,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Parsi Gymkhana Grounds",
+        "suburb": "South Mumbai",
+        "distance_km": 0.0,
+        "dmi_score": 23.91,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Wodehouse Gymkhana Banquets",
+        "suburb": "South Mumbai",
+        "distance_km": 0.0,
+        "dmi_score": 69.56,
+        "dmi_category": "Growth Ready"
+      }
+    ],
+    "sales_angle": "8 nearby competitors within 3.0 km are competing for the same inquiry pool."
+  },
+  {
+    "business_name": "Royal Symphony Banquet",
+    "suburb": "Dadar",
+    "radius_km": 3.0,
+    "competitor_count": 8,
+    "competitors": [
+      {
+        "business_name": "Swagat Banquet Hall",
+        "suburb": "Dadar",
+        "distance_km": 0.0,
+        "dmi_score": 17.56,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Swatantryaveer Savarkar Sabhagriha",
+        "suburb": "Dadar",
+        "distance_km": 0.0,
+        "dmi_score": 57.84,
+        "dmi_category": "Visibility Weak"
+      },
+      {
+        "business_name": "Kohinoor Hall",
+        "suburb": "Dadar",
+        "distance_km": 0.0,
+        "dmi_score": 28.67,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Ramee Guestline Banquets",
+        "suburb": "Dadar",
+        "distance_km": 0.0,
+        "dmi_score": 55.13,
+        "dmi_category": "Visibility Weak"
+      },
+      {
+        "business_name": "Ahilyadevi Sabhagruh",
+        "suburb": "Dadar",
+        "distance_km": 0.0,
+        "dmi_score": 40.17,
+        "dmi_category": "Operationally Chaotic"
+      },
+      {
+        "business_name": "Dadar Gymkhana Banquets",
+        "suburb": "Dadar",
+        "distance_km": 0.0,
+        "dmi_score": 39.98,
+        "dmi_category": "Operationally Chaotic"
+      },
+      {
+        "business_name": "Sharda Sabhagriha",
+        "suburb": "Dadar",
+        "distance_km": 0.0,
+        "dmi_score": 36.51,
+        "dmi_category": "Operationally Chaotic"
+      },
+      {
+        "business_name": "Royal Garden Banquet",
+        "suburb": "Dadar",
+        "distance_km": 0.0,
+        "dmi_score": 27.09,
+        "dmi_category": "Digitally Invisible"
+      }
+    ],
+    "sales_angle": "8 nearby competitors within 3.0 km are competing for the same inquiry pool."
+  },
+  {
+    "business_name": "Dadar Gymkhana Banquets",
+    "suburb": "Dadar",
+    "radius_km": 3.0,
+    "competitor_count": 8,
+    "competitors": [
+      {
+        "business_name": "Swagat Banquet Hall",
+        "suburb": "Dadar",
+        "distance_km": 0.0,
+        "dmi_score": 17.56,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Swatantryaveer Savarkar Sabhagriha",
+        "suburb": "Dadar",
+        "distance_km": 0.0,
+        "dmi_score": 57.84,
+        "dmi_category": "Visibility Weak"
+      },
+      {
+        "business_name": "Kohinoor Hall",
+        "suburb": "Dadar",
+        "distance_km": 0.0,
+        "dmi_score": 28.67,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Ramee Guestline Banquets",
+        "suburb": "Dadar",
+        "distance_km": 0.0,
+        "dmi_score": 55.13,
+        "dmi_category": "Visibility Weak"
+      },
+      {
+        "business_name": "Ahilyadevi Sabhagruh",
+        "suburb": "Dadar",
+        "distance_km": 0.0,
+        "dmi_score": 40.17,
+        "dmi_category": "Operationally Chaotic"
+      },
+      {
+        "business_name": "Royal Symphony Banquet",
+        "suburb": "Dadar",
+        "distance_km": 0.0,
+        "dmi_score": 27.59,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Sharda Sabhagriha",
+        "suburb": "Dadar",
+        "distance_km": 0.0,
+        "dmi_score": 36.51,
+        "dmi_category": "Operationally Chaotic"
+      },
+      {
+        "business_name": "Royal Garden Banquet",
+        "suburb": "Dadar",
+        "distance_km": 0.0,
+        "dmi_score": 27.09,
+        "dmi_category": "Digitally Invisible"
+      }
+    ],
+    "sales_angle": "8 nearby competitors within 3.0 km are competing for the same inquiry pool."
+  },
+  {
+    "business_name": "Sharda Sabhagriha",
+    "suburb": "Dadar",
+    "radius_km": 3.0,
+    "competitor_count": 8,
+    "competitors": [
+      {
+        "business_name": "Swagat Banquet Hall",
+        "suburb": "Dadar",
+        "distance_km": 0.0,
+        "dmi_score": 17.56,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Swatantryaveer Savarkar Sabhagriha",
+        "suburb": "Dadar",
+        "distance_km": 0.0,
+        "dmi_score": 57.84,
+        "dmi_category": "Visibility Weak"
+      },
+      {
+        "business_name": "Kohinoor Hall",
+        "suburb": "Dadar",
+        "distance_km": 0.0,
+        "dmi_score": 28.67,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Ramee Guestline Banquets",
+        "suburb": "Dadar",
+        "distance_km": 0.0,
+        "dmi_score": 55.13,
+        "dmi_category": "Visibility Weak"
+      },
+      {
+        "business_name": "Ahilyadevi Sabhagruh",
+        "suburb": "Dadar",
+        "distance_km": 0.0,
+        "dmi_score": 40.17,
+        "dmi_category": "Operationally Chaotic"
+      },
+      {
+        "business_name": "Royal Symphony Banquet",
+        "suburb": "Dadar",
+        "distance_km": 0.0,
+        "dmi_score": 27.59,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Dadar Gymkhana Banquets",
+        "suburb": "Dadar",
+        "distance_km": 0.0,
+        "dmi_score": 39.98,
+        "dmi_category": "Operationally Chaotic"
+      },
+      {
+        "business_name": "Royal Garden Banquet",
+        "suburb": "Dadar",
+        "distance_km": 0.0,
+        "dmi_score": 27.09,
+        "dmi_category": "Digitally Invisible"
+      }
+    ],
+    "sales_angle": "8 nearby competitors within 3.0 km are competing for the same inquiry pool."
+  },
+  {
+    "business_name": "P. L. Deshpande Mini Hall",
+    "suburb": "South Mumbai",
+    "radius_km": 3.0,
+    "competitor_count": 8,
+    "competitors": [
+      {
+        "business_name": "Mayfair Banquets",
+        "suburb": "South Mumbai",
+        "distance_km": 0.0,
+        "dmi_score": 23.18,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Jewel of India (Jade Ballroom)",
+        "suburb": "South Mumbai",
+        "distance_km": 0.0,
+        "dmi_score": 21.47,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Lala Lajpatrai Hall",
+        "suburb": "South Mumbai",
+        "distance_km": 0.0,
+        "dmi_score": 29.95,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Maharashtra College Hall",
+        "suburb": "South Mumbai",
+        "distance_km": 0.0,
+        "dmi_score": 48.08,
+        "dmi_category": "Visibility Weak"
+      },
+      {
+        "business_name": "Bombay Y.M.C.A. Banquets",
+        "suburb": "South Mumbai",
+        "distance_km": 0.0,
+        "dmi_score": 39.41,
+        "dmi_category": "Operationally Chaotic"
+      },
+      {
+        "business_name": "Hindu Gymkhana Grounds",
+        "suburb": "South Mumbai",
+        "distance_km": 0.0,
+        "dmi_score": 29.94,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Parsi Gymkhana Grounds",
+        "suburb": "South Mumbai",
+        "distance_km": 0.0,
+        "dmi_score": 23.91,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Wodehouse Gymkhana Banquets",
+        "suburb": "South Mumbai",
+        "distance_km": 0.0,
+        "dmi_score": 69.56,
+        "dmi_category": "Growth Ready"
+      }
+    ],
+    "sales_angle": "8 nearby competitors within 3.0 km are competing for the same inquiry pool."
+  },
+  {
+    "business_name": "Maharashtra College Hall",
+    "suburb": "South Mumbai",
+    "radius_km": 3.0,
+    "competitor_count": 8,
+    "competitors": [
+      {
+        "business_name": "Mayfair Banquets",
+        "suburb": "South Mumbai",
+        "distance_km": 0.0,
+        "dmi_score": 23.18,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Jewel of India (Jade Ballroom)",
+        "suburb": "South Mumbai",
+        "distance_km": 0.0,
+        "dmi_score": 21.47,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Lala Lajpatrai Hall",
+        "suburb": "South Mumbai",
+        "distance_km": 0.0,
+        "dmi_score": 29.95,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "P. L. Deshpande Mini Hall",
+        "suburb": "South Mumbai",
+        "distance_km": 0.0,
+        "dmi_score": 65.34,
+        "dmi_category": "Growth Ready"
+      },
+      {
+        "business_name": "Bombay Y.M.C.A. Banquets",
+        "suburb": "South Mumbai",
+        "distance_km": 0.0,
+        "dmi_score": 39.41,
+        "dmi_category": "Operationally Chaotic"
+      },
+      {
+        "business_name": "Hindu Gymkhana Grounds",
+        "suburb": "South Mumbai",
+        "distance_km": 0.0,
+        "dmi_score": 29.94,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Parsi Gymkhana Grounds",
+        "suburb": "South Mumbai",
+        "distance_km": 0.0,
+        "dmi_score": 23.91,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Wodehouse Gymkhana Banquets",
+        "suburb": "South Mumbai",
+        "distance_km": 0.0,
+        "dmi_score": 69.56,
+        "dmi_category": "Growth Ready"
+      }
+    ],
+    "sales_angle": "8 nearby competitors within 3.0 km are competing for the same inquiry pool."
+  },
+  {
+    "business_name": "Bombay Y.M.C.A. Banquets",
+    "suburb": "South Mumbai",
+    "radius_km": 3.0,
+    "competitor_count": 8,
+    "competitors": [
+      {
+        "business_name": "Mayfair Banquets",
+        "suburb": "South Mumbai",
+        "distance_km": 0.0,
+        "dmi_score": 23.18,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Jewel of India (Jade Ballroom)",
+        "suburb": "South Mumbai",
+        "distance_km": 0.0,
+        "dmi_score": 21.47,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Lala Lajpatrai Hall",
+        "suburb": "South Mumbai",
+        "distance_km": 0.0,
+        "dmi_score": 29.95,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "P. L. Deshpande Mini Hall",
+        "suburb": "South Mumbai",
+        "distance_km": 0.0,
+        "dmi_score": 65.34,
+        "dmi_category": "Growth Ready"
+      },
+      {
+        "business_name": "Maharashtra College Hall",
+        "suburb": "South Mumbai",
+        "distance_km": 0.0,
+        "dmi_score": 48.08,
+        "dmi_category": "Visibility Weak"
+      },
+      {
+        "business_name": "Hindu Gymkhana Grounds",
+        "suburb": "South Mumbai",
+        "distance_km": 0.0,
+        "dmi_score": 29.94,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Parsi Gymkhana Grounds",
+        "suburb": "South Mumbai",
+        "distance_km": 0.0,
+        "dmi_score": 23.91,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Wodehouse Gymkhana Banquets",
+        "suburb": "South Mumbai",
+        "distance_km": 0.0,
+        "dmi_score": 69.56,
+        "dmi_category": "Growth Ready"
+      }
+    ],
+    "sales_angle": "8 nearby competitors within 3.0 km are competing for the same inquiry pool."
+  },
+  {
+    "business_name": "Royal Garden Banquet",
+    "suburb": "Dadar",
+    "radius_km": 3.0,
+    "competitor_count": 8,
+    "competitors": [
+      {
+        "business_name": "Swagat Banquet Hall",
+        "suburb": "Dadar",
+        "distance_km": 0.0,
+        "dmi_score": 17.56,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Swatantryaveer Savarkar Sabhagriha",
+        "suburb": "Dadar",
+        "distance_km": 0.0,
+        "dmi_score": 57.84,
+        "dmi_category": "Visibility Weak"
+      },
+      {
+        "business_name": "Kohinoor Hall",
+        "suburb": "Dadar",
+        "distance_km": 0.0,
+        "dmi_score": 28.67,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Ramee Guestline Banquets",
+        "suburb": "Dadar",
+        "distance_km": 0.0,
+        "dmi_score": 55.13,
+        "dmi_category": "Visibility Weak"
+      },
+      {
+        "business_name": "Ahilyadevi Sabhagruh",
+        "suburb": "Dadar",
+        "distance_km": 0.0,
+        "dmi_score": 40.17,
+        "dmi_category": "Operationally Chaotic"
+      },
+      {
+        "business_name": "Royal Symphony Banquet",
+        "suburb": "Dadar",
+        "distance_km": 0.0,
+        "dmi_score": 27.59,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Dadar Gymkhana Banquets",
+        "suburb": "Dadar",
+        "distance_km": 0.0,
+        "dmi_score": 39.98,
+        "dmi_category": "Operationally Chaotic"
+      },
+      {
+        "business_name": "Sharda Sabhagriha",
+        "suburb": "Dadar",
+        "distance_km": 0.0,
+        "dmi_score": 36.51,
+        "dmi_category": "Operationally Chaotic"
+      }
+    ],
+    "sales_angle": "8 nearby competitors within 3.0 km are competing for the same inquiry pool."
+  },
+  {
+    "business_name": "Hindu Gymkhana Grounds",
+    "suburb": "South Mumbai",
+    "radius_km": 3.0,
+    "competitor_count": 8,
+    "competitors": [
+      {
+        "business_name": "Mayfair Banquets",
+        "suburb": "South Mumbai",
+        "distance_km": 0.0,
+        "dmi_score": 23.18,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Jewel of India (Jade Ballroom)",
+        "suburb": "South Mumbai",
+        "distance_km": 0.0,
+        "dmi_score": 21.47,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Lala Lajpatrai Hall",
+        "suburb": "South Mumbai",
+        "distance_km": 0.0,
+        "dmi_score": 29.95,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "P. L. Deshpande Mini Hall",
+        "suburb": "South Mumbai",
+        "distance_km": 0.0,
+        "dmi_score": 65.34,
+        "dmi_category": "Growth Ready"
+      },
+      {
+        "business_name": "Maharashtra College Hall",
+        "suburb": "South Mumbai",
+        "distance_km": 0.0,
+        "dmi_score": 48.08,
+        "dmi_category": "Visibility Weak"
+      },
+      {
+        "business_name": "Bombay Y.M.C.A. Banquets",
+        "suburb": "South Mumbai",
+        "distance_km": 0.0,
+        "dmi_score": 39.41,
+        "dmi_category": "Operationally Chaotic"
+      },
+      {
+        "business_name": "Parsi Gymkhana Grounds",
+        "suburb": "South Mumbai",
+        "distance_km": 0.0,
+        "dmi_score": 23.91,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Wodehouse Gymkhana Banquets",
+        "suburb": "South Mumbai",
+        "distance_km": 0.0,
+        "dmi_score": 69.56,
+        "dmi_category": "Growth Ready"
+      }
+    ],
+    "sales_angle": "8 nearby competitors within 3.0 km are competing for the same inquiry pool."
+  },
+  {
+    "business_name": "Parsi Gymkhana Grounds",
+    "suburb": "South Mumbai",
+    "radius_km": 3.0,
+    "competitor_count": 8,
+    "competitors": [
+      {
+        "business_name": "Mayfair Banquets",
+        "suburb": "South Mumbai",
+        "distance_km": 0.0,
+        "dmi_score": 23.18,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Jewel of India (Jade Ballroom)",
+        "suburb": "South Mumbai",
+        "distance_km": 0.0,
+        "dmi_score": 21.47,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Lala Lajpatrai Hall",
+        "suburb": "South Mumbai",
+        "distance_km": 0.0,
+        "dmi_score": 29.95,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "P. L. Deshpande Mini Hall",
+        "suburb": "South Mumbai",
+        "distance_km": 0.0,
+        "dmi_score": 65.34,
+        "dmi_category": "Growth Ready"
+      },
+      {
+        "business_name": "Maharashtra College Hall",
+        "suburb": "South Mumbai",
+        "distance_km": 0.0,
+        "dmi_score": 48.08,
+        "dmi_category": "Visibility Weak"
+      },
+      {
+        "business_name": "Bombay Y.M.C.A. Banquets",
+        "suburb": "South Mumbai",
+        "distance_km": 0.0,
+        "dmi_score": 39.41,
+        "dmi_category": "Operationally Chaotic"
+      },
+      {
+        "business_name": "Hindu Gymkhana Grounds",
+        "suburb": "South Mumbai",
+        "distance_km": 0.0,
+        "dmi_score": 29.94,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Wodehouse Gymkhana Banquets",
+        "suburb": "South Mumbai",
+        "distance_km": 0.0,
+        "dmi_score": 69.56,
+        "dmi_category": "Growth Ready"
+      }
+    ],
+    "sales_angle": "8 nearby competitors within 3.0 km are competing for the same inquiry pool."
+  },
+  {
+    "business_name": "Wodehouse Gymkhana Banquets",
+    "suburb": "South Mumbai",
+    "radius_km": 3.0,
+    "competitor_count": 8,
+    "competitors": [
+      {
+        "business_name": "Mayfair Banquets",
+        "suburb": "South Mumbai",
+        "distance_km": 0.0,
+        "dmi_score": 23.18,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Jewel of India (Jade Ballroom)",
+        "suburb": "South Mumbai",
+        "distance_km": 0.0,
+        "dmi_score": 21.47,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Lala Lajpatrai Hall",
+        "suburb": "South Mumbai",
+        "distance_km": 0.0,
+        "dmi_score": 29.95,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "P. L. Deshpande Mini Hall",
+        "suburb": "South Mumbai",
+        "distance_km": 0.0,
+        "dmi_score": 65.34,
+        "dmi_category": "Growth Ready"
+      },
+      {
+        "business_name": "Maharashtra College Hall",
+        "suburb": "South Mumbai",
+        "distance_km": 0.0,
+        "dmi_score": 48.08,
+        "dmi_category": "Visibility Weak"
+      },
+      {
+        "business_name": "Bombay Y.M.C.A. Banquets",
+        "suburb": "South Mumbai",
+        "distance_km": 0.0,
+        "dmi_score": 39.41,
+        "dmi_category": "Operationally Chaotic"
+      },
+      {
+        "business_name": "Hindu Gymkhana Grounds",
+        "suburb": "South Mumbai",
+        "distance_km": 0.0,
+        "dmi_score": 29.94,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Parsi Gymkhana Grounds",
+        "suburb": "South Mumbai",
+        "distance_km": 0.0,
+        "dmi_score": 23.91,
+        "dmi_category": "Digitally Invisible"
+      }
+    ],
+    "sales_angle": "8 nearby competitors within 3.0 km are competing for the same inquiry pool."
+  },
+  {
+    "business_name": "Vivette Luxury Banquets",
+    "suburb": "Malad",
+    "radius_km": 3.0,
+    "competitor_count": 5,
+    "competitors": [
+      {
+        "business_name": "Evershine Banquets",
+        "suburb": "Malad",
+        "distance_km": 0.0,
+        "dmi_score": 18.44,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Merchant Banquet Hall",
+        "suburb": "Malad",
+        "distance_km": 0.0,
+        "dmi_score": 40.16,
+        "dmi_category": "Operationally Chaotic"
+      },
+      {
+        "business_name": "Golden Leaf Banquet",
+        "suburb": "Malad",
+        "distance_km": 0.0,
+        "dmi_score": 28.32,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Royal Symphony Banquet Malad",
+        "suburb": "Malad",
+        "distance_km": 0.0,
+        "dmi_score": 39.81,
+        "dmi_category": "Operationally Chaotic"
+      },
+      {
+        "business_name": "Swagat Banquet Hall Goregaon",
+        "suburb": "Goregaon",
+        "distance_km": 2.35,
+        "dmi_score": 27.95,
+        "dmi_category": "Digitally Invisible"
+      }
+    ],
+    "sales_angle": "5 nearby competitors within 3.0 km are competing for the same inquiry pool."
+  },
+  {
+    "business_name": "Evershine Banquets",
+    "suburb": "Malad",
+    "radius_km": 3.0,
+    "competitor_count": 5,
+    "competitors": [
+      {
+        "business_name": "Vivette Luxury Banquets",
+        "suburb": "Malad",
+        "distance_km": 0.0,
+        "dmi_score": 28.71,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Merchant Banquet Hall",
+        "suburb": "Malad",
+        "distance_km": 0.0,
+        "dmi_score": 40.16,
+        "dmi_category": "Operationally Chaotic"
+      },
+      {
+        "business_name": "Golden Leaf Banquet",
+        "suburb": "Malad",
+        "distance_km": 0.0,
+        "dmi_score": 28.32,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Royal Symphony Banquet Malad",
+        "suburb": "Malad",
+        "distance_km": 0.0,
+        "dmi_score": 39.81,
+        "dmi_category": "Operationally Chaotic"
+      },
+      {
+        "business_name": "Swagat Banquet Hall Goregaon",
+        "suburb": "Goregaon",
+        "distance_km": 2.35,
+        "dmi_score": 27.95,
+        "dmi_category": "Digitally Invisible"
+      }
+    ],
+    "sales_angle": "5 nearby competitors within 3.0 km are competing for the same inquiry pool."
+  },
+  {
+    "business_name": "Merchant Banquet Hall",
+    "suburb": "Malad",
+    "radius_km": 3.0,
+    "competitor_count": 5,
+    "competitors": [
+      {
+        "business_name": "Vivette Luxury Banquets",
+        "suburb": "Malad",
+        "distance_km": 0.0,
+        "dmi_score": 28.71,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Evershine Banquets",
+        "suburb": "Malad",
+        "distance_km": 0.0,
+        "dmi_score": 18.44,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Golden Leaf Banquet",
+        "suburb": "Malad",
+        "distance_km": 0.0,
+        "dmi_score": 28.32,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Royal Symphony Banquet Malad",
+        "suburb": "Malad",
+        "distance_km": 0.0,
+        "dmi_score": 39.81,
+        "dmi_category": "Operationally Chaotic"
+      },
+      {
+        "business_name": "Swagat Banquet Hall Goregaon",
+        "suburb": "Goregaon",
+        "distance_km": 2.35,
+        "dmi_score": 27.95,
+        "dmi_category": "Digitally Invisible"
+      }
+    ],
+    "sales_angle": "5 nearby competitors within 3.0 km are competing for the same inquiry pool."
+  },
+  {
+    "business_name": "Golden Leaf Banquet",
+    "suburb": "Malad",
+    "radius_km": 3.0,
+    "competitor_count": 5,
+    "competitors": [
+      {
+        "business_name": "Vivette Luxury Banquets",
+        "suburb": "Malad",
+        "distance_km": 0.0,
+        "dmi_score": 28.71,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Evershine Banquets",
+        "suburb": "Malad",
+        "distance_km": 0.0,
+        "dmi_score": 18.44,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Merchant Banquet Hall",
+        "suburb": "Malad",
+        "distance_km": 0.0,
+        "dmi_score": 40.16,
+        "dmi_category": "Operationally Chaotic"
+      },
+      {
+        "business_name": "Royal Symphony Banquet Malad",
+        "suburb": "Malad",
+        "distance_km": 0.0,
+        "dmi_score": 39.81,
+        "dmi_category": "Operationally Chaotic"
+      },
+      {
+        "business_name": "Swagat Banquet Hall Goregaon",
+        "suburb": "Goregaon",
+        "distance_km": 2.35,
+        "dmi_score": 27.95,
+        "dmi_category": "Digitally Invisible"
+      }
+    ],
+    "sales_angle": "5 nearby competitors within 3.0 km are competing for the same inquiry pool."
+  },
+  {
+    "business_name": "Royal Orchid Banquets",
+    "suburb": "Chembur",
+    "radius_km": 3.0,
+    "competitor_count": 5,
+    "competitors": [
+      {
+        "business_name": "The Acres Club",
+        "suburb": "Chembur",
+        "distance_km": 0.0,
+        "dmi_score": 40.76,
+        "dmi_category": "Operationally Chaotic"
+      },
+      {
+        "business_name": "Imperial Hall",
+        "suburb": "Chembur",
+        "distance_km": 0.0,
+        "dmi_score": 20.19,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Sumati Hall",
+        "suburb": "Chembur",
+        "distance_km": 0.0,
+        "dmi_score": 63.03,
+        "dmi_category": "Visibility Weak"
+      },
+      {
+        "business_name": "Club Emerald Banquets",
+        "suburb": "Chembur",
+        "distance_km": 0.0,
+        "dmi_score": 57.84,
+        "dmi_category": "Visibility Weak"
+      },
+      {
+        "business_name": "Blossom Banquet Hall",
+        "suburb": "Kurla",
+        "distance_km": 2.94,
+        "dmi_score": 46.71,
+        "dmi_category": "Visibility Weak"
+      }
+    ],
+    "sales_angle": "5 nearby competitors within 3.0 km are competing for the same inquiry pool."
+  },
+  {
+    "business_name": "The Acres Club",
+    "suburb": "Chembur",
+    "radius_km": 3.0,
+    "competitor_count": 5,
+    "competitors": [
+      {
+        "business_name": "Royal Orchid Banquets",
+        "suburb": "Chembur",
+        "distance_km": 0.0,
+        "dmi_score": 22.69,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Imperial Hall",
+        "suburb": "Chembur",
+        "distance_km": 0.0,
+        "dmi_score": 20.19,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Sumati Hall",
+        "suburb": "Chembur",
+        "distance_km": 0.0,
+        "dmi_score": 63.03,
+        "dmi_category": "Visibility Weak"
+      },
+      {
+        "business_name": "Club Emerald Banquets",
+        "suburb": "Chembur",
+        "distance_km": 0.0,
+        "dmi_score": 57.84,
+        "dmi_category": "Visibility Weak"
+      },
+      {
+        "business_name": "Blossom Banquet Hall",
+        "suburb": "Kurla",
+        "distance_km": 2.94,
+        "dmi_score": 46.71,
+        "dmi_category": "Visibility Weak"
+      }
+    ],
+    "sales_angle": "5 nearby competitors within 3.0 km are competing for the same inquiry pool."
+  },
+  {
+    "business_name": "GCC Hotel and Club",
+    "suburb": "Mira Road",
+    "radius_km": 3.0,
+    "competitor_count": 1,
+    "competitors": [
+      {
+        "business_name": "GCC Club Lawn",
+        "suburb": "Mira Road",
+        "distance_km": 0.0,
+        "dmi_score": 26.92,
+        "dmi_category": "Digitally Invisible"
+      }
+    ],
+    "sales_angle": "1 nearby competitors within 3.0 km are competing for the same inquiry pool."
+  },
+  {
+    "business_name": "Juhu Club Millennium",
+    "suburb": "Andheri",
+    "radius_km": 3.0,
+    "competitor_count": 6,
+    "competitors": [
+      {
+        "business_name": "Goldfinch Banquets",
+        "suburb": "Andheri",
+        "distance_km": 0.0,
+        "dmi_score": 41.52,
+        "dmi_category": "Operationally Chaotic"
+      },
+      {
+        "business_name": "Tunga Paradise Banquet",
+        "suburb": "Andheri",
+        "distance_km": 0.0,
+        "dmi_score": 65.91,
+        "dmi_category": "Growth Ready"
+      },
+      {
+        "business_name": "VITS Hotel Banquets",
+        "suburb": "Andheri",
+        "distance_km": 0.0,
+        "dmi_score": 55.89,
+        "dmi_category": "Visibility Weak"
+      },
+      {
+        "business_name": "Peninsula Grand Banquets",
+        "suburb": "Andheri",
+        "distance_km": 0.0,
+        "dmi_score": 26.18,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Kohinoor Continental Banquets",
+        "suburb": "Andheri",
+        "distance_km": 0.0,
+        "dmi_score": 37.86,
+        "dmi_category": "Operationally Chaotic"
+      },
+      {
+        "business_name": "Grand Banquet at The Club",
+        "suburb": "Andheri",
+        "distance_km": 0.0,
+        "dmi_score": 68.8,
+        "dmi_category": "Growth Ready"
+      }
+    ],
+    "sales_angle": "6 nearby competitors within 3.0 km are competing for the same inquiry pool."
+  },
+  {
+    "business_name": "Goldfinch Banquets",
+    "suburb": "Andheri",
+    "radius_km": 3.0,
+    "competitor_count": 6,
+    "competitors": [
+      {
+        "business_name": "Juhu Club Millennium",
+        "suburb": "Andheri",
+        "distance_km": 0.0,
+        "dmi_score": 63.98,
+        "dmi_category": "Visibility Weak"
+      },
+      {
+        "business_name": "Tunga Paradise Banquet",
+        "suburb": "Andheri",
+        "distance_km": 0.0,
+        "dmi_score": 65.91,
+        "dmi_category": "Growth Ready"
+      },
+      {
+        "business_name": "VITS Hotel Banquets",
+        "suburb": "Andheri",
+        "distance_km": 0.0,
+        "dmi_score": 55.89,
+        "dmi_category": "Visibility Weak"
+      },
+      {
+        "business_name": "Peninsula Grand Banquets",
+        "suburb": "Andheri",
+        "distance_km": 0.0,
+        "dmi_score": 26.18,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Kohinoor Continental Banquets",
+        "suburb": "Andheri",
+        "distance_km": 0.0,
+        "dmi_score": 37.86,
+        "dmi_category": "Operationally Chaotic"
+      },
+      {
+        "business_name": "Grand Banquet at The Club",
+        "suburb": "Andheri",
+        "distance_km": 0.0,
+        "dmi_score": 68.8,
+        "dmi_category": "Growth Ready"
+      }
+    ],
+    "sales_angle": "6 nearby competitors within 3.0 km are competing for the same inquiry pool."
+  },
+  {
+    "business_name": "Tunga Paradise Banquet",
+    "suburb": "Andheri",
+    "radius_km": 3.0,
+    "competitor_count": 6,
+    "competitors": [
+      {
+        "business_name": "Juhu Club Millennium",
+        "suburb": "Andheri",
+        "distance_km": 0.0,
+        "dmi_score": 63.98,
+        "dmi_category": "Visibility Weak"
+      },
+      {
+        "business_name": "Goldfinch Banquets",
+        "suburb": "Andheri",
+        "distance_km": 0.0,
+        "dmi_score": 41.52,
+        "dmi_category": "Operationally Chaotic"
+      },
+      {
+        "business_name": "VITS Hotel Banquets",
+        "suburb": "Andheri",
+        "distance_km": 0.0,
+        "dmi_score": 55.89,
+        "dmi_category": "Visibility Weak"
+      },
+      {
+        "business_name": "Peninsula Grand Banquets",
+        "suburb": "Andheri",
+        "distance_km": 0.0,
+        "dmi_score": 26.18,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Kohinoor Continental Banquets",
+        "suburb": "Andheri",
+        "distance_km": 0.0,
+        "dmi_score": 37.86,
+        "dmi_category": "Operationally Chaotic"
+      },
+      {
+        "business_name": "Grand Banquet at The Club",
+        "suburb": "Andheri",
+        "distance_km": 0.0,
+        "dmi_score": 68.8,
+        "dmi_category": "Growth Ready"
+      }
+    ],
+    "sales_angle": "6 nearby competitors within 3.0 km are competing for the same inquiry pool."
+  },
+  {
+    "business_name": "VITS Hotel Banquets",
+    "suburb": "Andheri",
+    "radius_km": 3.0,
+    "competitor_count": 6,
+    "competitors": [
+      {
+        "business_name": "Juhu Club Millennium",
+        "suburb": "Andheri",
+        "distance_km": 0.0,
+        "dmi_score": 63.98,
+        "dmi_category": "Visibility Weak"
+      },
+      {
+        "business_name": "Goldfinch Banquets",
+        "suburb": "Andheri",
+        "distance_km": 0.0,
+        "dmi_score": 41.52,
+        "dmi_category": "Operationally Chaotic"
+      },
+      {
+        "business_name": "Tunga Paradise Banquet",
+        "suburb": "Andheri",
+        "distance_km": 0.0,
+        "dmi_score": 65.91,
+        "dmi_category": "Growth Ready"
+      },
+      {
+        "business_name": "Peninsula Grand Banquets",
+        "suburb": "Andheri",
+        "distance_km": 0.0,
+        "dmi_score": 26.18,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Kohinoor Continental Banquets",
+        "suburb": "Andheri",
+        "distance_km": 0.0,
+        "dmi_score": 37.86,
+        "dmi_category": "Operationally Chaotic"
+      },
+      {
+        "business_name": "Grand Banquet at The Club",
+        "suburb": "Andheri",
+        "distance_km": 0.0,
+        "dmi_score": 68.8,
+        "dmi_category": "Growth Ready"
+      }
+    ],
+    "sales_angle": "6 nearby competitors within 3.0 km are competing for the same inquiry pool."
+  },
+  {
+    "business_name": "Peninsula Grand Banquets",
+    "suburb": "Andheri",
+    "radius_km": 3.0,
+    "competitor_count": 6,
+    "competitors": [
+      {
+        "business_name": "Juhu Club Millennium",
+        "suburb": "Andheri",
+        "distance_km": 0.0,
+        "dmi_score": 63.98,
+        "dmi_category": "Visibility Weak"
+      },
+      {
+        "business_name": "Goldfinch Banquets",
+        "suburb": "Andheri",
+        "distance_km": 0.0,
+        "dmi_score": 41.52,
+        "dmi_category": "Operationally Chaotic"
+      },
+      {
+        "business_name": "Tunga Paradise Banquet",
+        "suburb": "Andheri",
+        "distance_km": 0.0,
+        "dmi_score": 65.91,
+        "dmi_category": "Growth Ready"
+      },
+      {
+        "business_name": "VITS Hotel Banquets",
+        "suburb": "Andheri",
+        "distance_km": 0.0,
+        "dmi_score": 55.89,
+        "dmi_category": "Visibility Weak"
+      },
+      {
+        "business_name": "Kohinoor Continental Banquets",
+        "suburb": "Andheri",
+        "distance_km": 0.0,
+        "dmi_score": 37.86,
+        "dmi_category": "Operationally Chaotic"
+      },
+      {
+        "business_name": "Grand Banquet at The Club",
+        "suburb": "Andheri",
+        "distance_km": 0.0,
+        "dmi_score": 68.8,
+        "dmi_category": "Growth Ready"
+      }
+    ],
+    "sales_angle": "6 nearby competitors within 3.0 km are competing for the same inquiry pool."
+  },
+  {
+    "business_name": "Kohinoor Continental Banquets",
+    "suburb": "Andheri",
+    "radius_km": 3.0,
+    "competitor_count": 6,
+    "competitors": [
+      {
+        "business_name": "Juhu Club Millennium",
+        "suburb": "Andheri",
+        "distance_km": 0.0,
+        "dmi_score": 63.98,
+        "dmi_category": "Visibility Weak"
+      },
+      {
+        "business_name": "Goldfinch Banquets",
+        "suburb": "Andheri",
+        "distance_km": 0.0,
+        "dmi_score": 41.52,
+        "dmi_category": "Operationally Chaotic"
+      },
+      {
+        "business_name": "Tunga Paradise Banquet",
+        "suburb": "Andheri",
+        "distance_km": 0.0,
+        "dmi_score": 65.91,
+        "dmi_category": "Growth Ready"
+      },
+      {
+        "business_name": "VITS Hotel Banquets",
+        "suburb": "Andheri",
+        "distance_km": 0.0,
+        "dmi_score": 55.89,
+        "dmi_category": "Visibility Weak"
+      },
+      {
+        "business_name": "Peninsula Grand Banquets",
+        "suburb": "Andheri",
+        "distance_km": 0.0,
+        "dmi_score": 26.18,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Grand Banquet at The Club",
+        "suburb": "Andheri",
+        "distance_km": 0.0,
+        "dmi_score": 68.8,
+        "dmi_category": "Growth Ready"
+      }
+    ],
+    "sales_angle": "6 nearby competitors within 3.0 km are competing for the same inquiry pool."
+  },
+  {
+    "business_name": "Swagat Banquet Hall Goregaon",
+    "suburb": "Goregaon",
+    "radius_km": 3.0,
+    "competitor_count": 5,
+    "competitors": [
+      {
+        "business_name": "Vivette Luxury Banquets",
+        "suburb": "Malad",
+        "distance_km": 2.35,
+        "dmi_score": 28.71,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Evershine Banquets",
+        "suburb": "Malad",
+        "distance_km": 2.35,
+        "dmi_score": 18.44,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Merchant Banquet Hall",
+        "suburb": "Malad",
+        "distance_km": 2.35,
+        "dmi_score": 40.16,
+        "dmi_category": "Operationally Chaotic"
+      },
+      {
+        "business_name": "Golden Leaf Banquet",
+        "suburb": "Malad",
+        "distance_km": 2.35,
+        "dmi_score": 28.32,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Royal Symphony Banquet Malad",
+        "suburb": "Malad",
+        "distance_km": 2.35,
+        "dmi_score": 39.81,
+        "dmi_category": "Operationally Chaotic"
+      }
+    ],
+    "sales_angle": "5 nearby competitors within 3.0 km are competing for the same inquiry pool."
+  },
+  {
+    "business_name": "Imperial Hall",
+    "suburb": "Chembur",
+    "radius_km": 3.0,
+    "competitor_count": 5,
+    "competitors": [
+      {
+        "business_name": "Royal Orchid Banquets",
+        "suburb": "Chembur",
+        "distance_km": 0.0,
+        "dmi_score": 22.69,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "The Acres Club",
+        "suburb": "Chembur",
+        "distance_km": 0.0,
+        "dmi_score": 40.76,
+        "dmi_category": "Operationally Chaotic"
+      },
+      {
+        "business_name": "Sumati Hall",
+        "suburb": "Chembur",
+        "distance_km": 0.0,
+        "dmi_score": 63.03,
+        "dmi_category": "Visibility Weak"
+      },
+      {
+        "business_name": "Club Emerald Banquets",
+        "suburb": "Chembur",
+        "distance_km": 0.0,
+        "dmi_score": 57.84,
+        "dmi_category": "Visibility Weak"
+      },
+      {
+        "business_name": "Blossom Banquet Hall",
+        "suburb": "Kurla",
+        "distance_km": 2.94,
+        "dmi_score": 46.71,
+        "dmi_category": "Visibility Weak"
+      }
+    ],
+    "sales_angle": "5 nearby competitors within 3.0 km are competing for the same inquiry pool."
+  },
+  {
+    "business_name": "Royal Symphony Banquet Malad",
+    "suburb": "Malad",
+    "radius_km": 3.0,
+    "competitor_count": 5,
+    "competitors": [
+      {
+        "business_name": "Vivette Luxury Banquets",
+        "suburb": "Malad",
+        "distance_km": 0.0,
+        "dmi_score": 28.71,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Evershine Banquets",
+        "suburb": "Malad",
+        "distance_km": 0.0,
+        "dmi_score": 18.44,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Merchant Banquet Hall",
+        "suburb": "Malad",
+        "distance_km": 0.0,
+        "dmi_score": 40.16,
+        "dmi_category": "Operationally Chaotic"
+      },
+      {
+        "business_name": "Golden Leaf Banquet",
+        "suburb": "Malad",
+        "distance_km": 0.0,
+        "dmi_score": 28.32,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Swagat Banquet Hall Goregaon",
+        "suburb": "Goregaon",
+        "distance_km": 2.35,
+        "dmi_score": 27.95,
+        "dmi_category": "Digitally Invisible"
+      }
+    ],
+    "sales_angle": "5 nearby competitors within 3.0 km are competing for the same inquiry pool."
+  },
+  {
+    "business_name": "Elegance Banquet",
+    "suburb": "Borivali",
+    "radius_km": 3.0,
+    "competitor_count": 1,
+    "competitors": [
+      {
+        "business_name": "Eskay Resorts Lawn",
+        "suburb": "Borivali",
+        "distance_km": 0.0,
+        "dmi_score": 25.32,
+        "dmi_category": "Digitally Invisible"
+      }
+    ],
+    "sales_angle": "1 nearby competitors within 3.0 km are competing for the same inquiry pool."
+  },
+  {
+    "business_name": "Sumati Hall",
+    "suburb": "Chembur",
+    "radius_km": 3.0,
+    "competitor_count": 5,
+    "competitors": [
+      {
+        "business_name": "Royal Orchid Banquets",
+        "suburb": "Chembur",
+        "distance_km": 0.0,
+        "dmi_score": 22.69,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "The Acres Club",
+        "suburb": "Chembur",
+        "distance_km": 0.0,
+        "dmi_score": 40.76,
+        "dmi_category": "Operationally Chaotic"
+      },
+      {
+        "business_name": "Imperial Hall",
+        "suburb": "Chembur",
+        "distance_km": 0.0,
+        "dmi_score": 20.19,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Club Emerald Banquets",
+        "suburb": "Chembur",
+        "distance_km": 0.0,
+        "dmi_score": 57.84,
+        "dmi_category": "Visibility Weak"
+      },
+      {
+        "business_name": "Blossom Banquet Hall",
+        "suburb": "Kurla",
+        "distance_km": 2.94,
+        "dmi_score": 46.71,
+        "dmi_category": "Visibility Weak"
+      }
+    ],
+    "sales_angle": "5 nearby competitors within 3.0 km are competing for the same inquiry pool."
+  },
+  {
+    "business_name": "Utsav Banquet Hall",
+    "suburb": "Mulund",
+    "radius_km": 3.0,
+    "competitor_count": 4,
+    "competitors": [
+      {
+        "business_name": "Dreamland Banquet Hall",
+        "suburb": "Mulund",
+        "distance_km": 0.0,
+        "dmi_score": 58.01,
+        "dmi_category": "Visibility Weak"
+      },
+      {
+        "business_name": "The Gateway Banquet",
+        "suburb": "Mulund",
+        "distance_km": 0.0,
+        "dmi_score": 30.09,
+        "dmi_category": "Operationally Chaotic"
+      },
+      {
+        "business_name": "Shehnai Banquet Hall",
+        "suburb": "Mulund",
+        "distance_km": 0.0,
+        "dmi_score": 40.93,
+        "dmi_category": "Operationally Chaotic"
+      },
+      {
+        "business_name": "Sapphire Banquet",
+        "suburb": "Mulund",
+        "distance_km": 0.0,
+        "dmi_score": 23.18,
+        "dmi_category": "Digitally Invisible"
+      }
+    ],
+    "sales_angle": "4 nearby competitors within 3.0 km are competing for the same inquiry pool."
+  },
+  {
+    "business_name": "Dreamland Banquet Hall",
+    "suburb": "Mulund",
+    "radius_km": 3.0,
+    "competitor_count": 4,
+    "competitors": [
+      {
+        "business_name": "Utsav Banquet Hall",
+        "suburb": "Mulund",
+        "distance_km": 0.0,
+        "dmi_score": 23.54,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "The Gateway Banquet",
+        "suburb": "Mulund",
+        "distance_km": 0.0,
+        "dmi_score": 30.09,
+        "dmi_category": "Operationally Chaotic"
+      },
+      {
+        "business_name": "Shehnai Banquet Hall",
+        "suburb": "Mulund",
+        "distance_km": 0.0,
+        "dmi_score": 40.93,
+        "dmi_category": "Operationally Chaotic"
+      },
+      {
+        "business_name": "Sapphire Banquet",
+        "suburb": "Mulund",
+        "distance_km": 0.0,
+        "dmi_score": 23.18,
+        "dmi_category": "Digitally Invisible"
+      }
+    ],
+    "sales_angle": "4 nearby competitors within 3.0 km are competing for the same inquiry pool."
+  },
+  {
+    "business_name": "The Gateway Banquet",
+    "suburb": "Mulund",
+    "radius_km": 3.0,
+    "competitor_count": 4,
+    "competitors": [
+      {
+        "business_name": "Utsav Banquet Hall",
+        "suburb": "Mulund",
+        "distance_km": 0.0,
+        "dmi_score": 23.54,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Dreamland Banquet Hall",
+        "suburb": "Mulund",
+        "distance_km": 0.0,
+        "dmi_score": 58.01,
+        "dmi_category": "Visibility Weak"
+      },
+      {
+        "business_name": "Shehnai Banquet Hall",
+        "suburb": "Mulund",
+        "distance_km": 0.0,
+        "dmi_score": 40.93,
+        "dmi_category": "Operationally Chaotic"
+      },
+      {
+        "business_name": "Sapphire Banquet",
+        "suburb": "Mulund",
+        "distance_km": 0.0,
+        "dmi_score": 23.18,
+        "dmi_category": "Digitally Invisible"
+      }
+    ],
+    "sales_angle": "4 nearby competitors within 3.0 km are competing for the same inquiry pool."
+  },
+  {
+    "business_name": "Shehnai Banquet Hall",
+    "suburb": "Mulund",
+    "radius_km": 3.0,
+    "competitor_count": 4,
+    "competitors": [
+      {
+        "business_name": "Utsav Banquet Hall",
+        "suburb": "Mulund",
+        "distance_km": 0.0,
+        "dmi_score": 23.54,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Dreamland Banquet Hall",
+        "suburb": "Mulund",
+        "distance_km": 0.0,
+        "dmi_score": 58.01,
+        "dmi_category": "Visibility Weak"
+      },
+      {
+        "business_name": "The Gateway Banquet",
+        "suburb": "Mulund",
+        "distance_km": 0.0,
+        "dmi_score": 30.09,
+        "dmi_category": "Operationally Chaotic"
+      },
+      {
+        "business_name": "Sapphire Banquet",
+        "suburb": "Mulund",
+        "distance_km": 0.0,
+        "dmi_score": 23.18,
+        "dmi_category": "Digitally Invisible"
+      }
+    ],
+    "sales_angle": "4 nearby competitors within 3.0 km are competing for the same inquiry pool."
+  },
+  {
+    "business_name": "Blossom Banquet Hall",
+    "suburb": "Kurla",
+    "radius_km": 3.0,
+    "competitor_count": 5,
+    "competitors": [
+      {
+        "business_name": "Royal Orchid Banquets",
+        "suburb": "Chembur",
+        "distance_km": 2.94,
+        "dmi_score": 22.69,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "The Acres Club",
+        "suburb": "Chembur",
+        "distance_km": 2.94,
+        "dmi_score": 40.76,
+        "dmi_category": "Operationally Chaotic"
+      },
+      {
+        "business_name": "Imperial Hall",
+        "suburb": "Chembur",
+        "distance_km": 2.94,
+        "dmi_score": 20.19,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Sumati Hall",
+        "suburb": "Chembur",
+        "distance_km": 2.94,
+        "dmi_score": 63.03,
+        "dmi_category": "Visibility Weak"
+      },
+      {
+        "business_name": "Club Emerald Banquets",
+        "suburb": "Chembur",
+        "distance_km": 2.94,
+        "dmi_score": 57.84,
+        "dmi_category": "Visibility Weak"
+      }
+    ],
+    "sales_angle": "5 nearby competitors within 3.0 km are competing for the same inquiry pool."
+  },
+  {
+    "business_name": "Club Emerald Banquets",
+    "suburb": "Chembur",
+    "radius_km": 3.0,
+    "competitor_count": 5,
+    "competitors": [
+      {
+        "business_name": "Royal Orchid Banquets",
+        "suburb": "Chembur",
+        "distance_km": 0.0,
+        "dmi_score": 22.69,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "The Acres Club",
+        "suburb": "Chembur",
+        "distance_km": 0.0,
+        "dmi_score": 40.76,
+        "dmi_category": "Operationally Chaotic"
+      },
+      {
+        "business_name": "Imperial Hall",
+        "suburb": "Chembur",
+        "distance_km": 0.0,
+        "dmi_score": 20.19,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Sumati Hall",
+        "suburb": "Chembur",
+        "distance_km": 0.0,
+        "dmi_score": 63.03,
+        "dmi_category": "Visibility Weak"
+      },
+      {
+        "business_name": "Blossom Banquet Hall",
+        "suburb": "Kurla",
+        "distance_km": 2.94,
+        "dmi_score": 46.71,
+        "dmi_category": "Visibility Weak"
+      }
+    ],
+    "sales_angle": "5 nearby competitors within 3.0 km are competing for the same inquiry pool."
+  },
+  {
+    "business_name": "GCC Club Lawn",
+    "suburb": "Mira Road",
+    "radius_km": 3.0,
+    "competitor_count": 1,
+    "competitors": [
+      {
+        "business_name": "GCC Hotel and Club",
+        "suburb": "Mira Road",
+        "distance_km": 0.0,
+        "dmi_score": 21.47,
+        "dmi_category": "Digitally Invisible"
+      }
+    ],
+    "sales_angle": "1 nearby competitors within 3.0 km are competing for the same inquiry pool."
+  },
+  {
+    "business_name": "Sapphire Banquet",
+    "suburb": "Mulund",
+    "radius_km": 3.0,
+    "competitor_count": 4,
+    "competitors": [
+      {
+        "business_name": "Utsav Banquet Hall",
+        "suburb": "Mulund",
+        "distance_km": 0.0,
+        "dmi_score": 23.54,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Dreamland Banquet Hall",
+        "suburb": "Mulund",
+        "distance_km": 0.0,
+        "dmi_score": 58.01,
+        "dmi_category": "Visibility Weak"
+      },
+      {
+        "business_name": "The Gateway Banquet",
+        "suburb": "Mulund",
+        "distance_km": 0.0,
+        "dmi_score": 30.09,
+        "dmi_category": "Operationally Chaotic"
+      },
+      {
+        "business_name": "Shehnai Banquet Hall",
+        "suburb": "Mulund",
+        "distance_km": 0.0,
+        "dmi_score": 40.93,
+        "dmi_category": "Operationally Chaotic"
+      }
+    ],
+    "sales_angle": "4 nearby competitors within 3.0 km are competing for the same inquiry pool."
+  },
+  {
+    "business_name": "Grand Banquet at The Club",
+    "suburb": "Andheri",
+    "radius_km": 3.0,
+    "competitor_count": 6,
+    "competitors": [
+      {
+        "business_name": "Juhu Club Millennium",
+        "suburb": "Andheri",
+        "distance_km": 0.0,
+        "dmi_score": 63.98,
+        "dmi_category": "Visibility Weak"
+      },
+      {
+        "business_name": "Goldfinch Banquets",
+        "suburb": "Andheri",
+        "distance_km": 0.0,
+        "dmi_score": 41.52,
+        "dmi_category": "Operationally Chaotic"
+      },
+      {
+        "business_name": "Tunga Paradise Banquet",
+        "suburb": "Andheri",
+        "distance_km": 0.0,
+        "dmi_score": 65.91,
+        "dmi_category": "Growth Ready"
+      },
+      {
+        "business_name": "VITS Hotel Banquets",
+        "suburb": "Andheri",
+        "distance_km": 0.0,
+        "dmi_score": 55.89,
+        "dmi_category": "Visibility Weak"
+      },
+      {
+        "business_name": "Peninsula Grand Banquets",
+        "suburb": "Andheri",
+        "distance_km": 0.0,
+        "dmi_score": 26.18,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Kohinoor Continental Banquets",
+        "suburb": "Andheri",
+        "distance_km": 0.0,
+        "dmi_score": 37.86,
+        "dmi_category": "Operationally Chaotic"
+      }
+    ],
+    "sales_angle": "6 nearby competitors within 3.0 km are competing for the same inquiry pool."
+  },
+  {
+    "business_name": "Eskay Resorts Lawn",
+    "suburb": "Borivali",
+    "radius_km": 3.0,
+    "competitor_count": 1,
+    "competitors": [
+      {
+        "business_name": "Elegance Banquet",
+        "suburb": "Borivali",
+        "distance_km": 0.0,
+        "dmi_score": 26.34,
+        "dmi_category": "Digitally Invisible"
+      }
+    ],
+    "sales_angle": "1 nearby competitors within 3.0 km are competing for the same inquiry pool."
+  },
+  {
+    "business_name": "Hotel Tip Top Plaza",
+    "suburb": "Thane West",
+    "radius_km": 3.0,
+    "competitor_count": 12,
+    "competitors": [
+      {
+        "business_name": "iLeaf Ritz Banquets",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 31.33,
+        "dmi_category": "Operationally Chaotic"
+      },
+      {
+        "business_name": "Satkar Grand Banquets",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 23.33,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Madhav Banquet",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 28.69,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "All Heavens Banquet",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 23.04,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Maharaja Banquet",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 28.32,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Exotica Yeoor Hills",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 29.05,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Bramha Banquet",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 23.55,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Symphony Banquet",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 57.25,
+        "dmi_category": "Visibility Weak"
+      },
+      {
+        "business_name": "Korum Mall Banquets",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 55.53,
+        "dmi_category": "Visibility Weak"
+      },
+      {
+        "business_name": "Shangrila Resort",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 29.06,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Shaurya Banquet",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 27.28,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "K. P. Banquet",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 40.58,
+        "dmi_category": "Operationally Chaotic"
+      }
+    ],
+    "sales_angle": "12 nearby competitors within 3.0 km are competing for the same inquiry pool."
+  },
+  {
+    "business_name": "iLeaf Ritz Banquets",
+    "suburb": "Thane West",
+    "radius_km": 3.0,
+    "competitor_count": 12,
+    "competitors": [
+      {
+        "business_name": "Hotel Tip Top Plaza",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 19.55,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Satkar Grand Banquets",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 23.33,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Madhav Banquet",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 28.69,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "All Heavens Banquet",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 23.04,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Maharaja Banquet",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 28.32,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Exotica Yeoor Hills",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 29.05,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Bramha Banquet",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 23.55,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Symphony Banquet",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 57.25,
+        "dmi_category": "Visibility Weak"
+      },
+      {
+        "business_name": "Korum Mall Banquets",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 55.53,
+        "dmi_category": "Visibility Weak"
+      },
+      {
+        "business_name": "Shangrila Resort",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 29.06,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Shaurya Banquet",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 27.28,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "K. P. Banquet",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 40.58,
+        "dmi_category": "Operationally Chaotic"
+      }
+    ],
+    "sales_angle": "12 nearby competitors within 3.0 km are competing for the same inquiry pool."
+  },
+  {
+    "business_name": "Satkar Grand Banquets",
+    "suburb": "Thane West",
+    "radius_km": 3.0,
+    "competitor_count": 12,
+    "competitors": [
+      {
+        "business_name": "Hotel Tip Top Plaza",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 19.55,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "iLeaf Ritz Banquets",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 31.33,
+        "dmi_category": "Operationally Chaotic"
+      },
+      {
+        "business_name": "Madhav Banquet",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 28.69,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "All Heavens Banquet",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 23.04,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Maharaja Banquet",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 28.32,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Exotica Yeoor Hills",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 29.05,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Bramha Banquet",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 23.55,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Symphony Banquet",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 57.25,
+        "dmi_category": "Visibility Weak"
+      },
+      {
+        "business_name": "Korum Mall Banquets",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 55.53,
+        "dmi_category": "Visibility Weak"
+      },
+      {
+        "business_name": "Shangrila Resort",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 29.06,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Shaurya Banquet",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 27.28,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "K. P. Banquet",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 40.58,
+        "dmi_category": "Operationally Chaotic"
+      }
+    ],
+    "sales_angle": "12 nearby competitors within 3.0 km are competing for the same inquiry pool."
+  },
+  {
+    "business_name": "Madhav Banquet",
+    "suburb": "Thane West",
+    "radius_km": 3.0,
+    "competitor_count": 12,
+    "competitors": [
+      {
+        "business_name": "Hotel Tip Top Plaza",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 19.55,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "iLeaf Ritz Banquets",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 31.33,
+        "dmi_category": "Operationally Chaotic"
+      },
+      {
+        "business_name": "Satkar Grand Banquets",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 23.33,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "All Heavens Banquet",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 23.04,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Maharaja Banquet",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 28.32,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Exotica Yeoor Hills",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 29.05,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Bramha Banquet",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 23.55,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Symphony Banquet",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 57.25,
+        "dmi_category": "Visibility Weak"
+      },
+      {
+        "business_name": "Korum Mall Banquets",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 55.53,
+        "dmi_category": "Visibility Weak"
+      },
+      {
+        "business_name": "Shangrila Resort",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 29.06,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Shaurya Banquet",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 27.28,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "K. P. Banquet",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 40.58,
+        "dmi_category": "Operationally Chaotic"
+      }
+    ],
+    "sales_angle": "12 nearby competitors within 3.0 km are competing for the same inquiry pool."
+  },
+  {
+    "business_name": "All Heavens Banquet",
+    "suburb": "Thane West",
+    "radius_km": 3.0,
+    "competitor_count": 12,
+    "competitors": [
+      {
+        "business_name": "Hotel Tip Top Plaza",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 19.55,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "iLeaf Ritz Banquets",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 31.33,
+        "dmi_category": "Operationally Chaotic"
+      },
+      {
+        "business_name": "Satkar Grand Banquets",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 23.33,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Madhav Banquet",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 28.69,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Maharaja Banquet",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 28.32,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Exotica Yeoor Hills",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 29.05,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Bramha Banquet",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 23.55,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Symphony Banquet",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 57.25,
+        "dmi_category": "Visibility Weak"
+      },
+      {
+        "business_name": "Korum Mall Banquets",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 55.53,
+        "dmi_category": "Visibility Weak"
+      },
+      {
+        "business_name": "Shangrila Resort",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 29.06,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Shaurya Banquet",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 27.28,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "K. P. Banquet",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 40.58,
+        "dmi_category": "Operationally Chaotic"
+      }
+    ],
+    "sales_angle": "12 nearby competitors within 3.0 km are competing for the same inquiry pool."
+  },
+  {
+    "business_name": "Maharaja Banquet",
+    "suburb": "Thane West",
+    "radius_km": 3.0,
+    "competitor_count": 12,
+    "competitors": [
+      {
+        "business_name": "Hotel Tip Top Plaza",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 19.55,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "iLeaf Ritz Banquets",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 31.33,
+        "dmi_category": "Operationally Chaotic"
+      },
+      {
+        "business_name": "Satkar Grand Banquets",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 23.33,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Madhav Banquet",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 28.69,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "All Heavens Banquet",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 23.04,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Exotica Yeoor Hills",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 29.05,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Bramha Banquet",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 23.55,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Symphony Banquet",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 57.25,
+        "dmi_category": "Visibility Weak"
+      },
+      {
+        "business_name": "Korum Mall Banquets",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 55.53,
+        "dmi_category": "Visibility Weak"
+      },
+      {
+        "business_name": "Shangrila Resort",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 29.06,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Shaurya Banquet",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 27.28,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "K. P. Banquet",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 40.58,
+        "dmi_category": "Operationally Chaotic"
+      }
+    ],
+    "sales_angle": "12 nearby competitors within 3.0 km are competing for the same inquiry pool."
+  },
+  {
+    "business_name": "Exotica Yeoor Hills",
+    "suburb": "Thane West",
+    "radius_km": 3.0,
+    "competitor_count": 12,
+    "competitors": [
+      {
+        "business_name": "Hotel Tip Top Plaza",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 19.55,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "iLeaf Ritz Banquets",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 31.33,
+        "dmi_category": "Operationally Chaotic"
+      },
+      {
+        "business_name": "Satkar Grand Banquets",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 23.33,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Madhav Banquet",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 28.69,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "All Heavens Banquet",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 23.04,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Maharaja Banquet",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 28.32,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Bramha Banquet",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 23.55,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Symphony Banquet",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 57.25,
+        "dmi_category": "Visibility Weak"
+      },
+      {
+        "business_name": "Korum Mall Banquets",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 55.53,
+        "dmi_category": "Visibility Weak"
+      },
+      {
+        "business_name": "Shangrila Resort",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 29.06,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Shaurya Banquet",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 27.28,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "K. P. Banquet",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 40.58,
+        "dmi_category": "Operationally Chaotic"
+      }
+    ],
+    "sales_angle": "12 nearby competitors within 3.0 km are competing for the same inquiry pool."
+  },
+  {
+    "business_name": "Bramha Banquet",
+    "suburb": "Thane West",
+    "radius_km": 3.0,
+    "competitor_count": 12,
+    "competitors": [
+      {
+        "business_name": "Hotel Tip Top Plaza",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 19.55,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "iLeaf Ritz Banquets",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 31.33,
+        "dmi_category": "Operationally Chaotic"
+      },
+      {
+        "business_name": "Satkar Grand Banquets",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 23.33,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Madhav Banquet",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 28.69,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "All Heavens Banquet",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 23.04,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Maharaja Banquet",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 28.32,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Exotica Yeoor Hills",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 29.05,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Symphony Banquet",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 57.25,
+        "dmi_category": "Visibility Weak"
+      },
+      {
+        "business_name": "Korum Mall Banquets",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 55.53,
+        "dmi_category": "Visibility Weak"
+      },
+      {
+        "business_name": "Shangrila Resort",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 29.06,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Shaurya Banquet",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 27.28,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "K. P. Banquet",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 40.58,
+        "dmi_category": "Operationally Chaotic"
+      }
+    ],
+    "sales_angle": "12 nearby competitors within 3.0 km are competing for the same inquiry pool."
+  },
+  {
+    "business_name": "Symphony Banquet",
+    "suburb": "Thane West",
+    "radius_km": 3.0,
+    "competitor_count": 12,
+    "competitors": [
+      {
+        "business_name": "Hotel Tip Top Plaza",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 19.55,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "iLeaf Ritz Banquets",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 31.33,
+        "dmi_category": "Operationally Chaotic"
+      },
+      {
+        "business_name": "Satkar Grand Banquets",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 23.33,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Madhav Banquet",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 28.69,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "All Heavens Banquet",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 23.04,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Maharaja Banquet",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 28.32,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Exotica Yeoor Hills",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 29.05,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Bramha Banquet",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 23.55,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Korum Mall Banquets",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 55.53,
+        "dmi_category": "Visibility Weak"
+      },
+      {
+        "business_name": "Shangrila Resort",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 29.06,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Shaurya Banquet",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 27.28,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "K. P. Banquet",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 40.58,
+        "dmi_category": "Operationally Chaotic"
+      }
+    ],
+    "sales_angle": "12 nearby competitors within 3.0 km are competing for the same inquiry pool."
+  },
+  {
+    "business_name": "Korum Mall Banquets",
+    "suburb": "Thane West",
+    "radius_km": 3.0,
+    "competitor_count": 12,
+    "competitors": [
+      {
+        "business_name": "Hotel Tip Top Plaza",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 19.55,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "iLeaf Ritz Banquets",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 31.33,
+        "dmi_category": "Operationally Chaotic"
+      },
+      {
+        "business_name": "Satkar Grand Banquets",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 23.33,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Madhav Banquet",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 28.69,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "All Heavens Banquet",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 23.04,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Maharaja Banquet",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 28.32,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Exotica Yeoor Hills",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 29.05,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Bramha Banquet",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 23.55,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Symphony Banquet",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 57.25,
+        "dmi_category": "Visibility Weak"
+      },
+      {
+        "business_name": "Shangrila Resort",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 29.06,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Shaurya Banquet",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 27.28,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "K. P. Banquet",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 40.58,
+        "dmi_category": "Operationally Chaotic"
+      }
+    ],
+    "sales_angle": "12 nearby competitors within 3.0 km are competing for the same inquiry pool."
+  },
+  {
+    "business_name": "Regency Hall",
+    "suburb": "Kalyan",
+    "radius_km": 3.0,
+    "competitor_count": 3,
+    "competitors": [
+      {
+        "business_name": "Springtime Club",
+        "suburb": "Kalyan",
+        "distance_km": 0.0,
+        "dmi_score": 64.56,
+        "dmi_category": "Visibility Weak"
+      },
+      {
+        "business_name": "Royal Banquet Hall Kalyan",
+        "suburb": "Kalyan",
+        "distance_km": 0.0,
+        "dmi_score": 65.74,
+        "dmi_category": "Growth Ready"
+      },
+      {
+        "business_name": "Nisarg Lawn & Banquet",
+        "suburb": "Kalyan",
+        "distance_km": 0.0,
+        "dmi_score": 27.43,
+        "dmi_category": "Digitally Invisible"
+      }
+    ],
+    "sales_angle": "3 nearby competitors within 3.0 km are competing for the same inquiry pool."
+  },
+  {
+    "business_name": "Springtime Club",
+    "suburb": "Kalyan",
+    "radius_km": 3.0,
+    "competitor_count": 3,
+    "competitors": [
+      {
+        "business_name": "Regency Hall",
+        "suburb": "Kalyan",
+        "distance_km": 0.0,
+        "dmi_score": 18.2,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Royal Banquet Hall Kalyan",
+        "suburb": "Kalyan",
+        "distance_km": 0.0,
+        "dmi_score": 65.74,
+        "dmi_category": "Growth Ready"
+      },
+      {
+        "business_name": "Nisarg Lawn & Banquet",
+        "suburb": "Kalyan",
+        "distance_km": 0.0,
+        "dmi_score": 27.43,
+        "dmi_category": "Digitally Invisible"
+      }
+    ],
+    "sales_angle": "3 nearby competitors within 3.0 km are competing for the same inquiry pool."
+  },
+  {
+    "business_name": "Guru Nanak Darbar Banquet",
+    "suburb": "Thane East",
+    "radius_km": 3.0,
+    "competitor_count": 0,
+    "competitors": [],
+    "sales_angle": "0 nearby competitors within 3.0 km are competing for the same inquiry pool."
+  },
+  {
+    "business_name": "Shangrila Resort",
+    "suburb": "Thane West",
+    "radius_km": 3.0,
+    "competitor_count": 12,
+    "competitors": [
+      {
+        "business_name": "Hotel Tip Top Plaza",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 19.55,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "iLeaf Ritz Banquets",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 31.33,
+        "dmi_category": "Operationally Chaotic"
+      },
+      {
+        "business_name": "Satkar Grand Banquets",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 23.33,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Madhav Banquet",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 28.69,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "All Heavens Banquet",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 23.04,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Maharaja Banquet",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 28.32,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Exotica Yeoor Hills",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 29.05,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Bramha Banquet",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 23.55,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Symphony Banquet",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 57.25,
+        "dmi_category": "Visibility Weak"
+      },
+      {
+        "business_name": "Korum Mall Banquets",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 55.53,
+        "dmi_category": "Visibility Weak"
+      },
+      {
+        "business_name": "Shaurya Banquet",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 27.28,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "K. P. Banquet",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 40.58,
+        "dmi_category": "Operationally Chaotic"
+      }
+    ],
+    "sales_angle": "12 nearby competitors within 3.0 km are competing for the same inquiry pool."
+  },
+  {
+    "business_name": "Shaurya Banquet",
+    "suburb": "Thane West",
+    "radius_km": 3.0,
+    "competitor_count": 12,
+    "competitors": [
+      {
+        "business_name": "Hotel Tip Top Plaza",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 19.55,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "iLeaf Ritz Banquets",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 31.33,
+        "dmi_category": "Operationally Chaotic"
+      },
+      {
+        "business_name": "Satkar Grand Banquets",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 23.33,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Madhav Banquet",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 28.69,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "All Heavens Banquet",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 23.04,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Maharaja Banquet",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 28.32,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Exotica Yeoor Hills",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 29.05,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Bramha Banquet",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 23.55,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Symphony Banquet",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 57.25,
+        "dmi_category": "Visibility Weak"
+      },
+      {
+        "business_name": "Korum Mall Banquets",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 55.53,
+        "dmi_category": "Visibility Weak"
+      },
+      {
+        "business_name": "Shangrila Resort",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 29.06,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "K. P. Banquet",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 40.58,
+        "dmi_category": "Operationally Chaotic"
+      }
+    ],
+    "sales_angle": "12 nearby competitors within 3.0 km are competing for the same inquiry pool."
+  },
+  {
+    "business_name": "Royal Banquet Hall Kalyan",
+    "suburb": "Kalyan",
+    "radius_km": 3.0,
+    "competitor_count": 3,
+    "competitors": [
+      {
+        "business_name": "Regency Hall",
+        "suburb": "Kalyan",
+        "distance_km": 0.0,
+        "dmi_score": 18.2,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Springtime Club",
+        "suburb": "Kalyan",
+        "distance_km": 0.0,
+        "dmi_score": 64.56,
+        "dmi_category": "Visibility Weak"
+      },
+      {
+        "business_name": "Nisarg Lawn & Banquet",
+        "suburb": "Kalyan",
+        "distance_km": 0.0,
+        "dmi_score": 27.43,
+        "dmi_category": "Digitally Invisible"
+      }
+    ],
+    "sales_angle": "3 nearby competitors within 3.0 km are competing for the same inquiry pool."
+  },
+  {
+    "business_name": "K. P. Banquet",
+    "suburb": "Thane West",
+    "radius_km": 3.0,
+    "competitor_count": 12,
+    "competitors": [
+      {
+        "business_name": "Hotel Tip Top Plaza",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 19.55,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "iLeaf Ritz Banquets",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 31.33,
+        "dmi_category": "Operationally Chaotic"
+      },
+      {
+        "business_name": "Satkar Grand Banquets",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 23.33,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Madhav Banquet",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 28.69,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "All Heavens Banquet",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 23.04,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Maharaja Banquet",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 28.32,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Exotica Yeoor Hills",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 29.05,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Bramha Banquet",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 23.55,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Symphony Banquet",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 57.25,
+        "dmi_category": "Visibility Weak"
+      },
+      {
+        "business_name": "Korum Mall Banquets",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 55.53,
+        "dmi_category": "Visibility Weak"
+      },
+      {
+        "business_name": "Shangrila Resort",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 29.06,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Shaurya Banquet",
+        "suburb": "Thane West",
+        "distance_km": 0.0,
+        "dmi_score": 27.28,
+        "dmi_category": "Digitally Invisible"
+      }
+    ],
+    "sales_angle": "12 nearby competitors within 3.0 km are competing for the same inquiry pool."
+  },
+  {
+    "business_name": "Nisarg Lawn & Banquet",
+    "suburb": "Kalyan",
+    "radius_km": 3.0,
+    "competitor_count": 3,
+    "competitors": [
+      {
+        "business_name": "Regency Hall",
+        "suburb": "Kalyan",
+        "distance_km": 0.0,
+        "dmi_score": 18.2,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Springtime Club",
+        "suburb": "Kalyan",
+        "distance_km": 0.0,
+        "dmi_score": 64.56,
+        "dmi_category": "Visibility Weak"
+      },
+      {
+        "business_name": "Royal Banquet Hall Kalyan",
+        "suburb": "Kalyan",
+        "distance_km": 0.0,
+        "dmi_score": 65.74,
+        "dmi_category": "Growth Ready"
+      }
+    ],
+    "sales_angle": "3 nearby competitors within 3.0 km are competing for the same inquiry pool."
+  },
+  {
+    "business_name": "Savitri Banquet Hall",
+    "suburb": "Dombivli",
+    "radius_km": 3.0,
+    "competitor_count": 1,
+    "competitors": [
+      {
+        "business_name": "Golden Palace Banquet",
+        "suburb": "Dombivli",
+        "distance_km": 0.0,
+        "dmi_score": 56.48,
+        "dmi_category": "Visibility Weak"
+      }
+    ],
+    "sales_angle": "1 nearby competitors within 3.0 km are competing for the same inquiry pool."
+  },
+  {
+    "business_name": "Golden Palace Banquet",
+    "suburb": "Dombivli",
+    "radius_km": 3.0,
+    "competitor_count": 1,
+    "competitors": [
+      {
+        "business_name": "Savitri Banquet Hall",
+        "suburb": "Dombivli",
+        "distance_km": 0.0,
+        "dmi_score": 58.6,
+        "dmi_category": "Visibility Weak"
+      }
+    ],
+    "sales_angle": "1 nearby competitors within 3.0 km are competing for the same inquiry pool."
+  },
+  {
+    "business_name": "iLeaf Grand Banquets",
+    "suburb": "Vashi",
+    "radius_km": 3.0,
+    "competitor_count": 9,
+    "competitors": [
+      {
+        "business_name": "Grand Golden Banquet",
+        "suburb": "Vashi",
+        "distance_km": 0.0,
+        "dmi_score": 29.95,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Imperial Banquets",
+        "suburb": "Vashi",
+        "distance_km": 0.0,
+        "dmi_score": 64.74,
+        "dmi_category": "Visibility Weak"
+      },
+      {
+        "business_name": "Palm Beach Lawn & Banquets",
+        "suburb": "Vashi",
+        "distance_km": 0.0,
+        "dmi_score": 26.18,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Vidhi Banquets",
+        "suburb": "Vashi",
+        "distance_km": 0.0,
+        "dmi_score": 40.16,
+        "dmi_category": "Operationally Chaotic"
+      },
+      {
+        "business_name": "Gems Party Hall",
+        "suburb": "Vashi",
+        "distance_km": 0.0,
+        "dmi_score": 26.95,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Ashoka Banquet Hall",
+        "suburb": "Vashi",
+        "distance_km": 0.0,
+        "dmi_score": 30.59,
+        "dmi_category": "Operationally Chaotic"
+      },
+      {
+        "business_name": "Moraj Banquet Hall",
+        "suburb": "Vashi",
+        "distance_km": 0.0,
+        "dmi_score": 63.03,
+        "dmi_category": "Visibility Weak"
+      },
+      {
+        "business_name": "Shubham Karoti Banquet",
+        "suburb": "Vashi",
+        "distance_km": 0.0,
+        "dmi_score": 65.91,
+        "dmi_category": "Growth Ready"
+      },
+      {
+        "business_name": "Shikara Hotel Banquets",
+        "suburb": "Vashi",
+        "distance_km": 0.0,
+        "dmi_score": 25.3,
+        "dmi_category": "Digitally Invisible"
+      }
+    ],
+    "sales_angle": "9 nearby competitors within 3.0 km are competing for the same inquiry pool."
+  },
+  {
+    "business_name": "Grand Golden Banquet",
+    "suburb": "Vashi",
+    "radius_km": 3.0,
+    "competitor_count": 9,
+    "competitors": [
+      {
+        "business_name": "iLeaf Grand Banquets",
+        "suburb": "Vashi",
+        "distance_km": 0.0,
+        "dmi_score": 28.54,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Imperial Banquets",
+        "suburb": "Vashi",
+        "distance_km": 0.0,
+        "dmi_score": 64.74,
+        "dmi_category": "Visibility Weak"
+      },
+      {
+        "business_name": "Palm Beach Lawn & Banquets",
+        "suburb": "Vashi",
+        "distance_km": 0.0,
+        "dmi_score": 26.18,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Vidhi Banquets",
+        "suburb": "Vashi",
+        "distance_km": 0.0,
+        "dmi_score": 40.16,
+        "dmi_category": "Operationally Chaotic"
+      },
+      {
+        "business_name": "Gems Party Hall",
+        "suburb": "Vashi",
+        "distance_km": 0.0,
+        "dmi_score": 26.95,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Ashoka Banquet Hall",
+        "suburb": "Vashi",
+        "distance_km": 0.0,
+        "dmi_score": 30.59,
+        "dmi_category": "Operationally Chaotic"
+      },
+      {
+        "business_name": "Moraj Banquet Hall",
+        "suburb": "Vashi",
+        "distance_km": 0.0,
+        "dmi_score": 63.03,
+        "dmi_category": "Visibility Weak"
+      },
+      {
+        "business_name": "Shubham Karoti Banquet",
+        "suburb": "Vashi",
+        "distance_km": 0.0,
+        "dmi_score": 65.91,
+        "dmi_category": "Growth Ready"
+      },
+      {
+        "business_name": "Shikara Hotel Banquets",
+        "suburb": "Vashi",
+        "distance_km": 0.0,
+        "dmi_score": 25.3,
+        "dmi_category": "Digitally Invisible"
+      }
+    ],
+    "sales_angle": "9 nearby competitors within 3.0 km are competing for the same inquiry pool."
+  },
+  {
+    "business_name": "Imperial Banquets",
+    "suburb": "Vashi",
+    "radius_km": 3.0,
+    "competitor_count": 9,
+    "competitors": [
+      {
+        "business_name": "iLeaf Grand Banquets",
+        "suburb": "Vashi",
+        "distance_km": 0.0,
+        "dmi_score": 28.54,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Grand Golden Banquet",
+        "suburb": "Vashi",
+        "distance_km": 0.0,
+        "dmi_score": 29.95,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Palm Beach Lawn & Banquets",
+        "suburb": "Vashi",
+        "distance_km": 0.0,
+        "dmi_score": 26.18,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Vidhi Banquets",
+        "suburb": "Vashi",
+        "distance_km": 0.0,
+        "dmi_score": 40.16,
+        "dmi_category": "Operationally Chaotic"
+      },
+      {
+        "business_name": "Gems Party Hall",
+        "suburb": "Vashi",
+        "distance_km": 0.0,
+        "dmi_score": 26.95,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Ashoka Banquet Hall",
+        "suburb": "Vashi",
+        "distance_km": 0.0,
+        "dmi_score": 30.59,
+        "dmi_category": "Operationally Chaotic"
+      },
+      {
+        "business_name": "Moraj Banquet Hall",
+        "suburb": "Vashi",
+        "distance_km": 0.0,
+        "dmi_score": 63.03,
+        "dmi_category": "Visibility Weak"
+      },
+      {
+        "business_name": "Shubham Karoti Banquet",
+        "suburb": "Vashi",
+        "distance_km": 0.0,
+        "dmi_score": 65.91,
+        "dmi_category": "Growth Ready"
+      },
+      {
+        "business_name": "Shikara Hotel Banquets",
+        "suburb": "Vashi",
+        "distance_km": 0.0,
+        "dmi_score": 25.3,
+        "dmi_category": "Digitally Invisible"
+      }
+    ],
+    "sales_angle": "9 nearby competitors within 3.0 km are competing for the same inquiry pool."
+  },
+  {
+    "business_name": "Palm Beach Lawn & Banquets",
+    "suburb": "Vashi",
+    "radius_km": 3.0,
+    "competitor_count": 9,
+    "competitors": [
+      {
+        "business_name": "iLeaf Grand Banquets",
+        "suburb": "Vashi",
+        "distance_km": 0.0,
+        "dmi_score": 28.54,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Grand Golden Banquet",
+        "suburb": "Vashi",
+        "distance_km": 0.0,
+        "dmi_score": 29.95,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Imperial Banquets",
+        "suburb": "Vashi",
+        "distance_km": 0.0,
+        "dmi_score": 64.74,
+        "dmi_category": "Visibility Weak"
+      },
+      {
+        "business_name": "Vidhi Banquets",
+        "suburb": "Vashi",
+        "distance_km": 0.0,
+        "dmi_score": 40.16,
+        "dmi_category": "Operationally Chaotic"
+      },
+      {
+        "business_name": "Gems Party Hall",
+        "suburb": "Vashi",
+        "distance_km": 0.0,
+        "dmi_score": 26.95,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Ashoka Banquet Hall",
+        "suburb": "Vashi",
+        "distance_km": 0.0,
+        "dmi_score": 30.59,
+        "dmi_category": "Operationally Chaotic"
+      },
+      {
+        "business_name": "Moraj Banquet Hall",
+        "suburb": "Vashi",
+        "distance_km": 0.0,
+        "dmi_score": 63.03,
+        "dmi_category": "Visibility Weak"
+      },
+      {
+        "business_name": "Shubham Karoti Banquet",
+        "suburb": "Vashi",
+        "distance_km": 0.0,
+        "dmi_score": 65.91,
+        "dmi_category": "Growth Ready"
+      },
+      {
+        "business_name": "Shikara Hotel Banquets",
+        "suburb": "Vashi",
+        "distance_km": 0.0,
+        "dmi_score": 25.3,
+        "dmi_category": "Digitally Invisible"
+      }
+    ],
+    "sales_angle": "9 nearby competitors within 3.0 km are competing for the same inquiry pool."
+  },
+  {
+    "business_name": "Vidhi Banquets",
+    "suburb": "Vashi",
+    "radius_km": 3.0,
+    "competitor_count": 9,
+    "competitors": [
+      {
+        "business_name": "iLeaf Grand Banquets",
+        "suburb": "Vashi",
+        "distance_km": 0.0,
+        "dmi_score": 28.54,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Grand Golden Banquet",
+        "suburb": "Vashi",
+        "distance_km": 0.0,
+        "dmi_score": 29.95,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Imperial Banquets",
+        "suburb": "Vashi",
+        "distance_km": 0.0,
+        "dmi_score": 64.74,
+        "dmi_category": "Visibility Weak"
+      },
+      {
+        "business_name": "Palm Beach Lawn & Banquets",
+        "suburb": "Vashi",
+        "distance_km": 0.0,
+        "dmi_score": 26.18,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Gems Party Hall",
+        "suburb": "Vashi",
+        "distance_km": 0.0,
+        "dmi_score": 26.95,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Ashoka Banquet Hall",
+        "suburb": "Vashi",
+        "distance_km": 0.0,
+        "dmi_score": 30.59,
+        "dmi_category": "Operationally Chaotic"
+      },
+      {
+        "business_name": "Moraj Banquet Hall",
+        "suburb": "Vashi",
+        "distance_km": 0.0,
+        "dmi_score": 63.03,
+        "dmi_category": "Visibility Weak"
+      },
+      {
+        "business_name": "Shubham Karoti Banquet",
+        "suburb": "Vashi",
+        "distance_km": 0.0,
+        "dmi_score": 65.91,
+        "dmi_category": "Growth Ready"
+      },
+      {
+        "business_name": "Shikara Hotel Banquets",
+        "suburb": "Vashi",
+        "distance_km": 0.0,
+        "dmi_score": 25.3,
+        "dmi_category": "Digitally Invisible"
+      }
+    ],
+    "sales_angle": "9 nearby competitors within 3.0 km are competing for the same inquiry pool."
+  },
+  {
+    "business_name": "Gems Party Hall",
+    "suburb": "Vashi",
+    "radius_km": 3.0,
+    "competitor_count": 9,
+    "competitors": [
+      {
+        "business_name": "iLeaf Grand Banquets",
+        "suburb": "Vashi",
+        "distance_km": 0.0,
+        "dmi_score": 28.54,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Grand Golden Banquet",
+        "suburb": "Vashi",
+        "distance_km": 0.0,
+        "dmi_score": 29.95,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Imperial Banquets",
+        "suburb": "Vashi",
+        "distance_km": 0.0,
+        "dmi_score": 64.74,
+        "dmi_category": "Visibility Weak"
+      },
+      {
+        "business_name": "Palm Beach Lawn & Banquets",
+        "suburb": "Vashi",
+        "distance_km": 0.0,
+        "dmi_score": 26.18,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Vidhi Banquets",
+        "suburb": "Vashi",
+        "distance_km": 0.0,
+        "dmi_score": 40.16,
+        "dmi_category": "Operationally Chaotic"
+      },
+      {
+        "business_name": "Ashoka Banquet Hall",
+        "suburb": "Vashi",
+        "distance_km": 0.0,
+        "dmi_score": 30.59,
+        "dmi_category": "Operationally Chaotic"
+      },
+      {
+        "business_name": "Moraj Banquet Hall",
+        "suburb": "Vashi",
+        "distance_km": 0.0,
+        "dmi_score": 63.03,
+        "dmi_category": "Visibility Weak"
+      },
+      {
+        "business_name": "Shubham Karoti Banquet",
+        "suburb": "Vashi",
+        "distance_km": 0.0,
+        "dmi_score": 65.91,
+        "dmi_category": "Growth Ready"
+      },
+      {
+        "business_name": "Shikara Hotel Banquets",
+        "suburb": "Vashi",
+        "distance_km": 0.0,
+        "dmi_score": 25.3,
+        "dmi_category": "Digitally Invisible"
+      }
+    ],
+    "sales_angle": "9 nearby competitors within 3.0 km are competing for the same inquiry pool."
+  },
+  {
+    "business_name": "Golden Peacock Banquet",
+    "suburb": "Kharghar",
+    "radius_km": 3.0,
+    "competitor_count": 3,
+    "competitors": [
+      {
+        "business_name": "Kesar Banquet",
+        "suburb": "Kharghar",
+        "distance_km": 0.0,
+        "dmi_score": 27.59,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Vishwa Jyot Banquet",
+        "suburb": "Kharghar",
+        "distance_km": 0.0,
+        "dmi_score": 52.48,
+        "dmi_category": "Visibility Weak"
+      },
+      {
+        "business_name": "Royal Celebration Hall",
+        "suburb": "Kharghar",
+        "distance_km": 0.0,
+        "dmi_score": 47.66,
+        "dmi_category": "Visibility Weak"
+      }
+    ],
+    "sales_angle": "3 nearby competitors within 3.0 km are competing for the same inquiry pool."
+  },
+  {
+    "business_name": "Panvel Grand Banquet",
+    "suburb": "Panvel",
+    "radius_km": 3.0,
+    "competitor_count": 1,
+    "competitors": [
+      {
+        "business_name": "Raigad Fort Banquet",
+        "suburb": "Panvel",
+        "distance_km": 0.0,
+        "dmi_score": 39.23,
+        "dmi_category": "Operationally Chaotic"
+      }
+    ],
+    "sales_angle": "1 nearby competitors within 3.0 km are competing for the same inquiry pool."
+  },
+  {
+    "business_name": "Ashoka Banquet Hall",
+    "suburb": "Vashi",
+    "radius_km": 3.0,
+    "competitor_count": 9,
+    "competitors": [
+      {
+        "business_name": "iLeaf Grand Banquets",
+        "suburb": "Vashi",
+        "distance_km": 0.0,
+        "dmi_score": 28.54,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Grand Golden Banquet",
+        "suburb": "Vashi",
+        "distance_km": 0.0,
+        "dmi_score": 29.95,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Imperial Banquets",
+        "suburb": "Vashi",
+        "distance_km": 0.0,
+        "dmi_score": 64.74,
+        "dmi_category": "Visibility Weak"
+      },
+      {
+        "business_name": "Palm Beach Lawn & Banquets",
+        "suburb": "Vashi",
+        "distance_km": 0.0,
+        "dmi_score": 26.18,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Vidhi Banquets",
+        "suburb": "Vashi",
+        "distance_km": 0.0,
+        "dmi_score": 40.16,
+        "dmi_category": "Operationally Chaotic"
+      },
+      {
+        "business_name": "Gems Party Hall",
+        "suburb": "Vashi",
+        "distance_km": 0.0,
+        "dmi_score": 26.95,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Moraj Banquet Hall",
+        "suburb": "Vashi",
+        "distance_km": 0.0,
+        "dmi_score": 63.03,
+        "dmi_category": "Visibility Weak"
+      },
+      {
+        "business_name": "Shubham Karoti Banquet",
+        "suburb": "Vashi",
+        "distance_km": 0.0,
+        "dmi_score": 65.91,
+        "dmi_category": "Growth Ready"
+      },
+      {
+        "business_name": "Shikara Hotel Banquets",
+        "suburb": "Vashi",
+        "distance_km": 0.0,
+        "dmi_score": 25.3,
+        "dmi_category": "Digitally Invisible"
+      }
+    ],
+    "sales_angle": "9 nearby competitors within 3.0 km are competing for the same inquiry pool."
+  },
+  {
+    "business_name": "Moraj Banquet Hall",
+    "suburb": "Vashi",
+    "radius_km": 3.0,
+    "competitor_count": 9,
+    "competitors": [
+      {
+        "business_name": "iLeaf Grand Banquets",
+        "suburb": "Vashi",
+        "distance_km": 0.0,
+        "dmi_score": 28.54,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Grand Golden Banquet",
+        "suburb": "Vashi",
+        "distance_km": 0.0,
+        "dmi_score": 29.95,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Imperial Banquets",
+        "suburb": "Vashi",
+        "distance_km": 0.0,
+        "dmi_score": 64.74,
+        "dmi_category": "Visibility Weak"
+      },
+      {
+        "business_name": "Palm Beach Lawn & Banquets",
+        "suburb": "Vashi",
+        "distance_km": 0.0,
+        "dmi_score": 26.18,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Vidhi Banquets",
+        "suburb": "Vashi",
+        "distance_km": 0.0,
+        "dmi_score": 40.16,
+        "dmi_category": "Operationally Chaotic"
+      },
+      {
+        "business_name": "Gems Party Hall",
+        "suburb": "Vashi",
+        "distance_km": 0.0,
+        "dmi_score": 26.95,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Ashoka Banquet Hall",
+        "suburb": "Vashi",
+        "distance_km": 0.0,
+        "dmi_score": 30.59,
+        "dmi_category": "Operationally Chaotic"
+      },
+      {
+        "business_name": "Shubham Karoti Banquet",
+        "suburb": "Vashi",
+        "distance_km": 0.0,
+        "dmi_score": 65.91,
+        "dmi_category": "Growth Ready"
+      },
+      {
+        "business_name": "Shikara Hotel Banquets",
+        "suburb": "Vashi",
+        "distance_km": 0.0,
+        "dmi_score": 25.3,
+        "dmi_category": "Digitally Invisible"
+      }
+    ],
+    "sales_angle": "9 nearby competitors within 3.0 km are competing for the same inquiry pool."
+  },
+  {
+    "business_name": "Belapur Garden Banquet",
+    "suburb": "Belapur",
+    "radius_km": 3.0,
+    "competitor_count": 3,
+    "competitors": [
+      {
+        "business_name": "Belapur Gymkhana Banquets",
+        "suburb": "Belapur",
+        "distance_km": 0.0,
+        "dmi_score": 63.8,
+        "dmi_category": "Visibility Weak"
+      },
+      {
+        "business_name": "Celebration Banquet Hall",
+        "suburb": "Nerul",
+        "distance_km": 2.59,
+        "dmi_score": 57.84,
+        "dmi_category": "Visibility Weak"
+      },
+      {
+        "business_name": "Navi Mumbai Club Banquets",
+        "suburb": "Nerul",
+        "distance_km": 2.59,
+        "dmi_score": 66.68,
+        "dmi_category": "Growth Ready"
+      }
+    ],
+    "sales_angle": "3 nearby competitors within 3.0 km are competing for the same inquiry pool."
+  },
+  {
+    "business_name": "Shubham Karoti Banquet",
+    "suburb": "Vashi",
+    "radius_km": 3.0,
+    "competitor_count": 9,
+    "competitors": [
+      {
+        "business_name": "iLeaf Grand Banquets",
+        "suburb": "Vashi",
+        "distance_km": 0.0,
+        "dmi_score": 28.54,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Grand Golden Banquet",
+        "suburb": "Vashi",
+        "distance_km": 0.0,
+        "dmi_score": 29.95,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Imperial Banquets",
+        "suburb": "Vashi",
+        "distance_km": 0.0,
+        "dmi_score": 64.74,
+        "dmi_category": "Visibility Weak"
+      },
+      {
+        "business_name": "Palm Beach Lawn & Banquets",
+        "suburb": "Vashi",
+        "distance_km": 0.0,
+        "dmi_score": 26.18,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Vidhi Banquets",
+        "suburb": "Vashi",
+        "distance_km": 0.0,
+        "dmi_score": 40.16,
+        "dmi_category": "Operationally Chaotic"
+      },
+      {
+        "business_name": "Gems Party Hall",
+        "suburb": "Vashi",
+        "distance_km": 0.0,
+        "dmi_score": 26.95,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Ashoka Banquet Hall",
+        "suburb": "Vashi",
+        "distance_km": 0.0,
+        "dmi_score": 30.59,
+        "dmi_category": "Operationally Chaotic"
+      },
+      {
+        "business_name": "Moraj Banquet Hall",
+        "suburb": "Vashi",
+        "distance_km": 0.0,
+        "dmi_score": 63.03,
+        "dmi_category": "Visibility Weak"
+      },
+      {
+        "business_name": "Shikara Hotel Banquets",
+        "suburb": "Vashi",
+        "distance_km": 0.0,
+        "dmi_score": 25.3,
+        "dmi_category": "Digitally Invisible"
+      }
+    ],
+    "sales_angle": "9 nearby competitors within 3.0 km are competing for the same inquiry pool."
+  },
+  {
+    "business_name": "Kesar Banquet",
+    "suburb": "Kharghar",
+    "radius_km": 3.0,
+    "competitor_count": 3,
+    "competitors": [
+      {
+        "business_name": "Golden Peacock Banquet",
+        "suburb": "Kharghar",
+        "distance_km": 0.0,
+        "dmi_score": 39.23,
+        "dmi_category": "Operationally Chaotic"
+      },
+      {
+        "business_name": "Vishwa Jyot Banquet",
+        "suburb": "Kharghar",
+        "distance_km": 0.0,
+        "dmi_score": 52.48,
+        "dmi_category": "Visibility Weak"
+      },
+      {
+        "business_name": "Royal Celebration Hall",
+        "suburb": "Kharghar",
+        "distance_km": 0.0,
+        "dmi_score": 47.66,
+        "dmi_category": "Visibility Weak"
+      }
+    ],
+    "sales_angle": "3 nearby competitors within 3.0 km are competing for the same inquiry pool."
+  },
+  {
+    "business_name": "Vishwa Jyot Banquet",
+    "suburb": "Kharghar",
+    "radius_km": 3.0,
+    "competitor_count": 3,
+    "competitors": [
+      {
+        "business_name": "Golden Peacock Banquet",
+        "suburb": "Kharghar",
+        "distance_km": 0.0,
+        "dmi_score": 39.23,
+        "dmi_category": "Operationally Chaotic"
+      },
+      {
+        "business_name": "Kesar Banquet",
+        "suburb": "Kharghar",
+        "distance_km": 0.0,
+        "dmi_score": 27.59,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Royal Celebration Hall",
+        "suburb": "Kharghar",
+        "distance_km": 0.0,
+        "dmi_score": 47.66,
+        "dmi_category": "Visibility Weak"
+      }
+    ],
+    "sales_angle": "3 nearby competitors within 3.0 km are competing for the same inquiry pool."
+  },
+  {
+    "business_name": "Royal Celebration Hall",
+    "suburb": "Kharghar",
+    "radius_km": 3.0,
+    "competitor_count": 3,
+    "competitors": [
+      {
+        "business_name": "Golden Peacock Banquet",
+        "suburb": "Kharghar",
+        "distance_km": 0.0,
+        "dmi_score": 39.23,
+        "dmi_category": "Operationally Chaotic"
+      },
+      {
+        "business_name": "Kesar Banquet",
+        "suburb": "Kharghar",
+        "distance_km": 0.0,
+        "dmi_score": 27.59,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Vishwa Jyot Banquet",
+        "suburb": "Kharghar",
+        "distance_km": 0.0,
+        "dmi_score": 52.48,
+        "dmi_category": "Visibility Weak"
+      }
+    ],
+    "sales_angle": "3 nearby competitors within 3.0 km are competing for the same inquiry pool."
+  },
+  {
+    "business_name": "Celebration Banquet Hall",
+    "suburb": "Nerul",
+    "radius_km": 3.0,
+    "competitor_count": 3,
+    "competitors": [
+      {
+        "business_name": "Navi Mumbai Club Banquets",
+        "suburb": "Nerul",
+        "distance_km": 0.0,
+        "dmi_score": 66.68,
+        "dmi_category": "Growth Ready"
+      },
+      {
+        "business_name": "Belapur Garden Banquet",
+        "suburb": "Belapur",
+        "distance_km": 2.59,
+        "dmi_score": 28.54,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Belapur Gymkhana Banquets",
+        "suburb": "Belapur",
+        "distance_km": 2.59,
+        "dmi_score": 63.8,
+        "dmi_category": "Visibility Weak"
+      }
+    ],
+    "sales_angle": "3 nearby competitors within 3.0 km are competing for the same inquiry pool."
+  },
+  {
+    "business_name": "Raigad Fort Banquet",
+    "suburb": "Panvel",
+    "radius_km": 3.0,
+    "competitor_count": 1,
+    "competitors": [
+      {
+        "business_name": "Panvel Grand Banquet",
+        "suburb": "Panvel",
+        "distance_km": 0.0,
+        "dmi_score": 17.8,
+        "dmi_category": "Digitally Invisible"
+      }
+    ],
+    "sales_angle": "1 nearby competitors within 3.0 km are competing for the same inquiry pool."
+  },
+  {
+    "business_name": "Shikara Hotel Banquets",
+    "suburb": "Vashi",
+    "radius_km": 3.0,
+    "competitor_count": 9,
+    "competitors": [
+      {
+        "business_name": "iLeaf Grand Banquets",
+        "suburb": "Vashi",
+        "distance_km": 0.0,
+        "dmi_score": 28.54,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Grand Golden Banquet",
+        "suburb": "Vashi",
+        "distance_km": 0.0,
+        "dmi_score": 29.95,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Imperial Banquets",
+        "suburb": "Vashi",
+        "distance_km": 0.0,
+        "dmi_score": 64.74,
+        "dmi_category": "Visibility Weak"
+      },
+      {
+        "business_name": "Palm Beach Lawn & Banquets",
+        "suburb": "Vashi",
+        "distance_km": 0.0,
+        "dmi_score": 26.18,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Vidhi Banquets",
+        "suburb": "Vashi",
+        "distance_km": 0.0,
+        "dmi_score": 40.16,
+        "dmi_category": "Operationally Chaotic"
+      },
+      {
+        "business_name": "Gems Party Hall",
+        "suburb": "Vashi",
+        "distance_km": 0.0,
+        "dmi_score": 26.95,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Ashoka Banquet Hall",
+        "suburb": "Vashi",
+        "distance_km": 0.0,
+        "dmi_score": 30.59,
+        "dmi_category": "Operationally Chaotic"
+      },
+      {
+        "business_name": "Moraj Banquet Hall",
+        "suburb": "Vashi",
+        "distance_km": 0.0,
+        "dmi_score": 63.03,
+        "dmi_category": "Visibility Weak"
+      },
+      {
+        "business_name": "Shubham Karoti Banquet",
+        "suburb": "Vashi",
+        "distance_km": 0.0,
+        "dmi_score": 65.91,
+        "dmi_category": "Growth Ready"
+      }
+    ],
+    "sales_angle": "9 nearby competitors within 3.0 km are competing for the same inquiry pool."
+  },
+  {
+    "business_name": "Belapur Gymkhana Banquets",
+    "suburb": "Belapur",
+    "radius_km": 3.0,
+    "competitor_count": 3,
+    "competitors": [
+      {
+        "business_name": "Belapur Garden Banquet",
+        "suburb": "Belapur",
+        "distance_km": 0.0,
+        "dmi_score": 28.54,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Celebration Banquet Hall",
+        "suburb": "Nerul",
+        "distance_km": 2.59,
+        "dmi_score": 57.84,
+        "dmi_category": "Visibility Weak"
+      },
+      {
+        "business_name": "Navi Mumbai Club Banquets",
+        "suburb": "Nerul",
+        "distance_km": 2.59,
+        "dmi_score": 66.68,
+        "dmi_category": "Growth Ready"
+      }
+    ],
+    "sales_angle": "3 nearby competitors within 3.0 km are competing for the same inquiry pool."
+  },
+  {
+    "business_name": "Navi Mumbai Club Banquets",
+    "suburb": "Nerul",
+    "radius_km": 3.0,
+    "competitor_count": 3,
+    "competitors": [
+      {
+        "business_name": "Celebration Banquet Hall",
+        "suburb": "Nerul",
+        "distance_km": 0.0,
+        "dmi_score": 57.84,
+        "dmi_category": "Visibility Weak"
+      },
+      {
+        "business_name": "Belapur Garden Banquet",
+        "suburb": "Belapur",
+        "distance_km": 2.59,
+        "dmi_score": 28.54,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Belapur Gymkhana Banquets",
+        "suburb": "Belapur",
+        "distance_km": 2.59,
+        "dmi_score": 63.8,
+        "dmi_category": "Visibility Weak"
+      }
+    ],
+    "sales_angle": "3 nearby competitors within 3.0 km are competing for the same inquiry pool."
+  },
+  {
+    "business_name": "Siddhi Gardens & Banquets",
+    "suburb": "Pune Central",
+    "radius_km": 3.0,
+    "competitor_count": 7,
+    "competitors": [
+      {
+        "business_name": "Navyug Banquet Hall",
+        "suburb": "Pune Central",
+        "distance_km": 0.0,
+        "dmi_score": 26.59,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Yash Lawns",
+        "suburb": "Pune Central",
+        "distance_km": 0.0,
+        "dmi_score": 25.3,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Raga Lawns",
+        "suburb": "Pune Central",
+        "distance_km": 0.0,
+        "dmi_score": 30.59,
+        "dmi_category": "Operationally Chaotic"
+      },
+      {
+        "business_name": "Saket Banquets",
+        "suburb": "Pune Central",
+        "distance_km": 0.0,
+        "dmi_score": 54.18,
+        "dmi_category": "Visibility Weak"
+      },
+      {
+        "business_name": "Shrushti Lawns",
+        "suburb": "Pune Central",
+        "distance_km": 0.0,
+        "dmi_score": 40.16,
+        "dmi_category": "Operationally Chaotic"
+      },
+      {
+        "business_name": "Nisarg Mangal Karyalaya",
+        "suburb": "Pune Central",
+        "distance_km": 0.0,
+        "dmi_score": 23.97,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Alpa Bachat Bhavan",
+        "suburb": "Pune Camp",
+        "distance_km": 2.08,
+        "dmi_score": 56.48,
+        "dmi_category": "Visibility Weak"
+      }
+    ],
+    "sales_angle": "7 nearby competitors within 3.0 km are competing for the same inquiry pool."
+  },
+  {
+    "business_name": "Raaga Heritage Banquets",
+    "suburb": "Hinjewadi",
+    "radius_km": 3.0,
+    "competitor_count": 3,
+    "competitors": [
+      {
+        "business_name": "Balaji Banquets",
+        "suburb": "Wakad",
+        "distance_km": 2.61,
+        "dmi_score": 65.34,
+        "dmi_category": "Growth Ready"
+      },
+      {
+        "business_name": "Vardhaman Lawns",
+        "suburb": "Wakad",
+        "distance_km": 2.61,
+        "dmi_score": 41.53,
+        "dmi_category": "Operationally Chaotic"
+      },
+      {
+        "business_name": "Sai Palace Banquets",
+        "suburb": "Wakad",
+        "distance_km": 2.61,
+        "dmi_score": 23.93,
+        "dmi_category": "Digitally Invisible"
+      }
+    ],
+    "sales_angle": "3 nearby competitors within 3.0 km are competing for the same inquiry pool."
+  },
+  {
+    "business_name": "Navyug Banquet Hall",
+    "suburb": "Pune Central",
+    "radius_km": 3.0,
+    "competitor_count": 7,
+    "competitors": [
+      {
+        "business_name": "Siddhi Gardens & Banquets",
+        "suburb": "Pune Central",
+        "distance_km": 0.0,
+        "dmi_score": 48.07,
+        "dmi_category": "Visibility Weak"
+      },
+      {
+        "business_name": "Yash Lawns",
+        "suburb": "Pune Central",
+        "distance_km": 0.0,
+        "dmi_score": 25.3,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Raga Lawns",
+        "suburb": "Pune Central",
+        "distance_km": 0.0,
+        "dmi_score": 30.59,
+        "dmi_category": "Operationally Chaotic"
+      },
+      {
+        "business_name": "Saket Banquets",
+        "suburb": "Pune Central",
+        "distance_km": 0.0,
+        "dmi_score": 54.18,
+        "dmi_category": "Visibility Weak"
+      },
+      {
+        "business_name": "Shrushti Lawns",
+        "suburb": "Pune Central",
+        "distance_km": 0.0,
+        "dmi_score": 40.16,
+        "dmi_category": "Operationally Chaotic"
+      },
+      {
+        "business_name": "Nisarg Mangal Karyalaya",
+        "suburb": "Pune Central",
+        "distance_km": 0.0,
+        "dmi_score": 23.97,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Alpa Bachat Bhavan",
+        "suburb": "Pune Camp",
+        "distance_km": 2.08,
+        "dmi_score": 56.48,
+        "dmi_category": "Visibility Weak"
+      }
+    ],
+    "sales_angle": "7 nearby competitors within 3.0 km are competing for the same inquiry pool."
+  },
+  {
+    "business_name": "Emerald Party Hall",
+    "suburb": "Pune West",
+    "radius_km": 3.0,
+    "competitor_count": 4,
+    "competitors": [
+      {
+        "business_name": "Pyramids Garden",
+        "suburb": "Pune West",
+        "distance_km": 0.0,
+        "dmi_score": 23.41,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Shubharambh Lawns",
+        "suburb": "Pune West",
+        "distance_km": 0.0,
+        "dmi_score": 27.95,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Abhishek Veg Banquet",
+        "suburb": "Pune West",
+        "distance_km": 0.0,
+        "dmi_score": 40.17,
+        "dmi_category": "Operationally Chaotic"
+      },
+      {
+        "business_name": "Royal Lawns",
+        "suburb": "Pune West",
+        "distance_km": 0.0,
+        "dmi_score": 29.71,
+        "dmi_category": "Digitally Invisible"
+      }
+    ],
+    "sales_angle": "4 nearby competitors within 3.0 km are competing for the same inquiry pool."
+  },
+  {
+    "business_name": "Pyramids Garden",
+    "suburb": "Pune West",
+    "radius_km": 3.0,
+    "competitor_count": 4,
+    "competitors": [
+      {
+        "business_name": "Emerald Party Hall",
+        "suburb": "Pune West",
+        "distance_km": 0.0,
+        "dmi_score": 41.33,
+        "dmi_category": "Operationally Chaotic"
+      },
+      {
+        "business_name": "Shubharambh Lawns",
+        "suburb": "Pune West",
+        "distance_km": 0.0,
+        "dmi_score": 27.95,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Abhishek Veg Banquet",
+        "suburb": "Pune West",
+        "distance_km": 0.0,
+        "dmi_score": 40.17,
+        "dmi_category": "Operationally Chaotic"
+      },
+      {
+        "business_name": "Royal Lawns",
+        "suburb": "Pune West",
+        "distance_km": 0.0,
+        "dmi_score": 29.71,
+        "dmi_category": "Digitally Invisible"
+      }
+    ],
+    "sales_angle": "4 nearby competitors within 3.0 km are competing for the same inquiry pool."
+  },
+  {
+    "business_name": "Shubharambh Lawns",
+    "suburb": "Pune West",
+    "radius_km": 3.0,
+    "competitor_count": 4,
+    "competitors": [
+      {
+        "business_name": "Emerald Party Hall",
+        "suburb": "Pune West",
+        "distance_km": 0.0,
+        "dmi_score": 41.33,
+        "dmi_category": "Operationally Chaotic"
+      },
+      {
+        "business_name": "Pyramids Garden",
+        "suburb": "Pune West",
+        "distance_km": 0.0,
+        "dmi_score": 23.41,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Abhishek Veg Banquet",
+        "suburb": "Pune West",
+        "distance_km": 0.0,
+        "dmi_score": 40.17,
+        "dmi_category": "Operationally Chaotic"
+      },
+      {
+        "business_name": "Royal Lawns",
+        "suburb": "Pune West",
+        "distance_km": 0.0,
+        "dmi_score": 29.71,
+        "dmi_category": "Digitally Invisible"
+      }
+    ],
+    "sales_angle": "4 nearby competitors within 3.0 km are competing for the same inquiry pool."
+  },
+  {
+    "business_name": "Oasis Banquets & Lawns",
+    "suburb": "Pune East",
+    "radius_km": 3.0,
+    "competitor_count": 1,
+    "competitors": [
+      {
+        "business_name": "Laxmi Lawns",
+        "suburb": "Pune East",
+        "distance_km": 0.0,
+        "dmi_score": 24.81,
+        "dmi_category": "Digitally Invisible"
+      }
+    ],
+    "sales_angle": "1 nearby competitors within 3.0 km are competing for the same inquiry pool."
+  },
+  {
+    "business_name": "Yash Lawns",
+    "suburb": "Pune Central",
+    "radius_km": 3.0,
+    "competitor_count": 7,
+    "competitors": [
+      {
+        "business_name": "Siddhi Gardens & Banquets",
+        "suburb": "Pune Central",
+        "distance_km": 0.0,
+        "dmi_score": 48.07,
+        "dmi_category": "Visibility Weak"
+      },
+      {
+        "business_name": "Navyug Banquet Hall",
+        "suburb": "Pune Central",
+        "distance_km": 0.0,
+        "dmi_score": 26.59,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Raga Lawns",
+        "suburb": "Pune Central",
+        "distance_km": 0.0,
+        "dmi_score": 30.59,
+        "dmi_category": "Operationally Chaotic"
+      },
+      {
+        "business_name": "Saket Banquets",
+        "suburb": "Pune Central",
+        "distance_km": 0.0,
+        "dmi_score": 54.18,
+        "dmi_category": "Visibility Weak"
+      },
+      {
+        "business_name": "Shrushti Lawns",
+        "suburb": "Pune Central",
+        "distance_km": 0.0,
+        "dmi_score": 40.16,
+        "dmi_category": "Operationally Chaotic"
+      },
+      {
+        "business_name": "Nisarg Mangal Karyalaya",
+        "suburb": "Pune Central",
+        "distance_km": 0.0,
+        "dmi_score": 23.97,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Alpa Bachat Bhavan",
+        "suburb": "Pune Camp",
+        "distance_km": 2.08,
+        "dmi_score": 56.48,
+        "dmi_category": "Visibility Weak"
+      }
+    ],
+    "sales_angle": "7 nearby competitors within 3.0 km are competing for the same inquiry pool."
+  },
+  {
+    "business_name": "Raga Lawns",
+    "suburb": "Pune Central",
+    "radius_km": 3.0,
+    "competitor_count": 7,
+    "competitors": [
+      {
+        "business_name": "Siddhi Gardens & Banquets",
+        "suburb": "Pune Central",
+        "distance_km": 0.0,
+        "dmi_score": 48.07,
+        "dmi_category": "Visibility Weak"
+      },
+      {
+        "business_name": "Navyug Banquet Hall",
+        "suburb": "Pune Central",
+        "distance_km": 0.0,
+        "dmi_score": 26.59,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Yash Lawns",
+        "suburb": "Pune Central",
+        "distance_km": 0.0,
+        "dmi_score": 25.3,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Saket Banquets",
+        "suburb": "Pune Central",
+        "distance_km": 0.0,
+        "dmi_score": 54.18,
+        "dmi_category": "Visibility Weak"
+      },
+      {
+        "business_name": "Shrushti Lawns",
+        "suburb": "Pune Central",
+        "distance_km": 0.0,
+        "dmi_score": 40.16,
+        "dmi_category": "Operationally Chaotic"
+      },
+      {
+        "business_name": "Nisarg Mangal Karyalaya",
+        "suburb": "Pune Central",
+        "distance_km": 0.0,
+        "dmi_score": 23.97,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Alpa Bachat Bhavan",
+        "suburb": "Pune Camp",
+        "distance_km": 2.08,
+        "dmi_score": 56.48,
+        "dmi_category": "Visibility Weak"
+      }
+    ],
+    "sales_angle": "7 nearby competitors within 3.0 km are competing for the same inquiry pool."
+  },
+  {
+    "business_name": "Saket Banquets",
+    "suburb": "Pune Central",
+    "radius_km": 3.0,
+    "competitor_count": 7,
+    "competitors": [
+      {
+        "business_name": "Siddhi Gardens & Banquets",
+        "suburb": "Pune Central",
+        "distance_km": 0.0,
+        "dmi_score": 48.07,
+        "dmi_category": "Visibility Weak"
+      },
+      {
+        "business_name": "Navyug Banquet Hall",
+        "suburb": "Pune Central",
+        "distance_km": 0.0,
+        "dmi_score": 26.59,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Yash Lawns",
+        "suburb": "Pune Central",
+        "distance_km": 0.0,
+        "dmi_score": 25.3,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Raga Lawns",
+        "suburb": "Pune Central",
+        "distance_km": 0.0,
+        "dmi_score": 30.59,
+        "dmi_category": "Operationally Chaotic"
+      },
+      {
+        "business_name": "Shrushti Lawns",
+        "suburb": "Pune Central",
+        "distance_km": 0.0,
+        "dmi_score": 40.16,
+        "dmi_category": "Operationally Chaotic"
+      },
+      {
+        "business_name": "Nisarg Mangal Karyalaya",
+        "suburb": "Pune Central",
+        "distance_km": 0.0,
+        "dmi_score": 23.97,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Alpa Bachat Bhavan",
+        "suburb": "Pune Camp",
+        "distance_km": 2.08,
+        "dmi_score": 56.48,
+        "dmi_category": "Visibility Weak"
+      }
+    ],
+    "sales_angle": "7 nearby competitors within 3.0 km are competing for the same inquiry pool."
+  },
+  {
+    "business_name": "Abhishek Veg Banquet",
+    "suburb": "Pune West",
+    "radius_km": 3.0,
+    "competitor_count": 4,
+    "competitors": [
+      {
+        "business_name": "Emerald Party Hall",
+        "suburb": "Pune West",
+        "distance_km": 0.0,
+        "dmi_score": 41.33,
+        "dmi_category": "Operationally Chaotic"
+      },
+      {
+        "business_name": "Pyramids Garden",
+        "suburb": "Pune West",
+        "distance_km": 0.0,
+        "dmi_score": 23.41,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Shubharambh Lawns",
+        "suburb": "Pune West",
+        "distance_km": 0.0,
+        "dmi_score": 27.95,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Royal Lawns",
+        "suburb": "Pune West",
+        "distance_km": 0.0,
+        "dmi_score": 29.71,
+        "dmi_category": "Digitally Invisible"
+      }
+    ],
+    "sales_angle": "4 nearby competitors within 3.0 km are competing for the same inquiry pool."
+  },
+  {
+    "business_name": "Gandharva Lawns",
+    "suburb": "Pimple Saudagar",
+    "radius_km": 3.0,
+    "competitor_count": 3,
+    "competitors": [
+      {
+        "business_name": "Balaji Banquets",
+        "suburb": "Wakad",
+        "distance_km": 1.98,
+        "dmi_score": 65.34,
+        "dmi_category": "Growth Ready"
+      },
+      {
+        "business_name": "Vardhaman Lawns",
+        "suburb": "Wakad",
+        "distance_km": 1.98,
+        "dmi_score": 41.53,
+        "dmi_category": "Operationally Chaotic"
+      },
+      {
+        "business_name": "Sai Palace Banquets",
+        "suburb": "Wakad",
+        "distance_km": 1.98,
+        "dmi_score": 23.93,
+        "dmi_category": "Digitally Invisible"
+      }
+    ],
+    "sales_angle": "3 nearby competitors within 3.0 km are competing for the same inquiry pool."
+  },
+  {
+    "business_name": "Royal Lawns",
+    "suburb": "Pune West",
+    "radius_km": 3.0,
+    "competitor_count": 4,
+    "competitors": [
+      {
+        "business_name": "Emerald Party Hall",
+        "suburb": "Pune West",
+        "distance_km": 0.0,
+        "dmi_score": 41.33,
+        "dmi_category": "Operationally Chaotic"
+      },
+      {
+        "business_name": "Pyramids Garden",
+        "suburb": "Pune West",
+        "distance_km": 0.0,
+        "dmi_score": 23.41,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Shubharambh Lawns",
+        "suburb": "Pune West",
+        "distance_km": 0.0,
+        "dmi_score": 27.95,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Abhishek Veg Banquet",
+        "suburb": "Pune West",
+        "distance_km": 0.0,
+        "dmi_score": 40.17,
+        "dmi_category": "Operationally Chaotic"
+      }
+    ],
+    "sales_angle": "4 nearby competitors within 3.0 km are competing for the same inquiry pool."
+  },
+  {
+    "business_name": "Laxmi Lawns",
+    "suburb": "Pune East",
+    "radius_km": 3.0,
+    "competitor_count": 1,
+    "competitors": [
+      {
+        "business_name": "Oasis Banquets & Lawns",
+        "suburb": "Pune East",
+        "distance_km": 0.0,
+        "dmi_score": 42.88,
+        "dmi_category": "Operationally Chaotic"
+      }
+    ],
+    "sales_angle": "1 nearby competitors within 3.0 km are competing for the same inquiry pool."
+  },
+  {
+    "business_name": "Shrushti Lawns",
+    "suburb": "Pune Central",
+    "radius_km": 3.0,
+    "competitor_count": 7,
+    "competitors": [
+      {
+        "business_name": "Siddhi Gardens & Banquets",
+        "suburb": "Pune Central",
+        "distance_km": 0.0,
+        "dmi_score": 48.07,
+        "dmi_category": "Visibility Weak"
+      },
+      {
+        "business_name": "Navyug Banquet Hall",
+        "suburb": "Pune Central",
+        "distance_km": 0.0,
+        "dmi_score": 26.59,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Yash Lawns",
+        "suburb": "Pune Central",
+        "distance_km": 0.0,
+        "dmi_score": 25.3,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Raga Lawns",
+        "suburb": "Pune Central",
+        "distance_km": 0.0,
+        "dmi_score": 30.59,
+        "dmi_category": "Operationally Chaotic"
+      },
+      {
+        "business_name": "Saket Banquets",
+        "suburb": "Pune Central",
+        "distance_km": 0.0,
+        "dmi_score": 54.18,
+        "dmi_category": "Visibility Weak"
+      },
+      {
+        "business_name": "Nisarg Mangal Karyalaya",
+        "suburb": "Pune Central",
+        "distance_km": 0.0,
+        "dmi_score": 23.97,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Alpa Bachat Bhavan",
+        "suburb": "Pune Camp",
+        "distance_km": 2.08,
+        "dmi_score": 56.48,
+        "dmi_category": "Visibility Weak"
+      }
+    ],
+    "sales_angle": "7 nearby competitors within 3.0 km are competing for the same inquiry pool."
+  },
+  {
+    "business_name": "Balaji Banquets",
+    "suburb": "Wakad",
+    "radius_km": 3.0,
+    "competitor_count": 4,
+    "competitors": [
+      {
+        "business_name": "Vardhaman Lawns",
+        "suburb": "Wakad",
+        "distance_km": 0.0,
+        "dmi_score": 41.53,
+        "dmi_category": "Operationally Chaotic"
+      },
+      {
+        "business_name": "Sai Palace Banquets",
+        "suburb": "Wakad",
+        "distance_km": 0.0,
+        "dmi_score": 23.93,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Gandharva Lawns",
+        "suburb": "Pimple Saudagar",
+        "distance_km": 1.98,
+        "dmi_score": 29.95,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Raaga Heritage Banquets",
+        "suburb": "Hinjewadi",
+        "distance_km": 2.61,
+        "dmi_score": 20.52,
+        "dmi_category": "Digitally Invisible"
+      }
+    ],
+    "sales_angle": "4 nearby competitors within 3.0 km are competing for the same inquiry pool."
+  },
+  {
+    "business_name": "Vardhaman Lawns",
+    "suburb": "Wakad",
+    "radius_km": 3.0,
+    "competitor_count": 4,
+    "competitors": [
+      {
+        "business_name": "Balaji Banquets",
+        "suburb": "Wakad",
+        "distance_km": 0.0,
+        "dmi_score": 65.34,
+        "dmi_category": "Growth Ready"
+      },
+      {
+        "business_name": "Sai Palace Banquets",
+        "suburb": "Wakad",
+        "distance_km": 0.0,
+        "dmi_score": 23.93,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Gandharva Lawns",
+        "suburb": "Pimple Saudagar",
+        "distance_km": 1.98,
+        "dmi_score": 29.95,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Raaga Heritage Banquets",
+        "suburb": "Hinjewadi",
+        "distance_km": 2.61,
+        "dmi_score": 20.52,
+        "dmi_category": "Digitally Invisible"
+      }
+    ],
+    "sales_angle": "4 nearby competitors within 3.0 km are competing for the same inquiry pool."
+  },
+  {
+    "business_name": "Sai Palace Banquets",
+    "suburb": "Wakad",
+    "radius_km": 3.0,
+    "competitor_count": 4,
+    "competitors": [
+      {
+        "business_name": "Balaji Banquets",
+        "suburb": "Wakad",
+        "distance_km": 0.0,
+        "dmi_score": 65.34,
+        "dmi_category": "Growth Ready"
+      },
+      {
+        "business_name": "Vardhaman Lawns",
+        "suburb": "Wakad",
+        "distance_km": 0.0,
+        "dmi_score": 41.53,
+        "dmi_category": "Operationally Chaotic"
+      },
+      {
+        "business_name": "Gandharva Lawns",
+        "suburb": "Pimple Saudagar",
+        "distance_km": 1.98,
+        "dmi_score": 29.95,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Raaga Heritage Banquets",
+        "suburb": "Hinjewadi",
+        "distance_km": 2.61,
+        "dmi_score": 20.52,
+        "dmi_category": "Digitally Invisible"
+      }
+    ],
+    "sales_angle": "4 nearby competitors within 3.0 km are competing for the same inquiry pool."
+  },
+  {
+    "business_name": "Nisarg Mangal Karyalaya",
+    "suburb": "Pune Central",
+    "radius_km": 3.0,
+    "competitor_count": 7,
+    "competitors": [
+      {
+        "business_name": "Siddhi Gardens & Banquets",
+        "suburb": "Pune Central",
+        "distance_km": 0.0,
+        "dmi_score": 48.07,
+        "dmi_category": "Visibility Weak"
+      },
+      {
+        "business_name": "Navyug Banquet Hall",
+        "suburb": "Pune Central",
+        "distance_km": 0.0,
+        "dmi_score": 26.59,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Yash Lawns",
+        "suburb": "Pune Central",
+        "distance_km": 0.0,
+        "dmi_score": 25.3,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Raga Lawns",
+        "suburb": "Pune Central",
+        "distance_km": 0.0,
+        "dmi_score": 30.59,
+        "dmi_category": "Operationally Chaotic"
+      },
+      {
+        "business_name": "Saket Banquets",
+        "suburb": "Pune Central",
+        "distance_km": 0.0,
+        "dmi_score": 54.18,
+        "dmi_category": "Visibility Weak"
+      },
+      {
+        "business_name": "Shrushti Lawns",
+        "suburb": "Pune Central",
+        "distance_km": 0.0,
+        "dmi_score": 40.16,
+        "dmi_category": "Operationally Chaotic"
+      },
+      {
+        "business_name": "Alpa Bachat Bhavan",
+        "suburb": "Pune Camp",
+        "distance_km": 2.08,
+        "dmi_score": 56.48,
+        "dmi_category": "Visibility Weak"
+      }
+    ],
+    "sales_angle": "7 nearby competitors within 3.0 km are competing for the same inquiry pool."
+  },
+  {
+    "business_name": "Alpa Bachat Bhavan",
+    "suburb": "Pune Camp",
+    "radius_km": 3.0,
+    "competitor_count": 7,
+    "competitors": [
+      {
+        "business_name": "Siddhi Gardens & Banquets",
+        "suburb": "Pune Central",
+        "distance_km": 2.08,
+        "dmi_score": 48.07,
+        "dmi_category": "Visibility Weak"
+      },
+      {
+        "business_name": "Navyug Banquet Hall",
+        "suburb": "Pune Central",
+        "distance_km": 2.08,
+        "dmi_score": 26.59,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Yash Lawns",
+        "suburb": "Pune Central",
+        "distance_km": 2.08,
+        "dmi_score": 25.3,
+        "dmi_category": "Digitally Invisible"
+      },
+      {
+        "business_name": "Raga Lawns",
+        "suburb": "Pune Central",
+        "distance_km": 2.08,
+        "dmi_score": 30.59,
+        "dmi_category": "Operationally Chaotic"
+      },
+      {
+        "business_name": "Saket Banquets",
+        "suburb": "Pune Central",
+        "distance_km": 2.08,
+        "dmi_score": 54.18,
+        "dmi_category": "Visibility Weak"
+      },
+      {
+        "business_name": "Shrushti Lawns",
+        "suburb": "Pune Central",
+        "distance_km": 2.08,
+        "dmi_score": 40.16,
+        "dmi_category": "Operationally Chaotic"
+      },
+      {
+        "business_name": "Nisarg Mangal Karyalaya",
+        "suburb": "Pune Central",
+        "distance_km": 2.08,
+        "dmi_score": 23.97,
+        "dmi_category": "Digitally Invisible"
+      }
+    ],
+    "sales_angle": "7 nearby competitors within 3.0 km are competing for the same inquiry pool."
+  }
+]

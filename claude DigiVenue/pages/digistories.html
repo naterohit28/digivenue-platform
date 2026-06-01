@@ -1,0 +1,427 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DigiStories — Your Google, Instagram & Reviews, Handled | DigiVenue</title>
+  <meta name="description" content="We run your Google page, Instagram and reviews. We bring real photos from your functions, reply to reviews, and make sure families see a banquet that's clearly active.">
+  <link rel="canonical" href="https://digivenue.co/pages/digistories.html">
+  <meta property="og:title" content="DigiStories — Banquet Visibility & Growth | DigiVenue">
+  <meta property="og:description" content="We run your Google page, Instagram and reviews. We bring real photos from your functions, reply to reviews, and make sure families see a banquet that's clearly active.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="../assets/images/hero-banquet.jpg">
+  
+  <!-- Fonts: preconnect for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Design system (foundation) -->
+  <link rel="stylesheet" href="../styles/main.css">
+  <link rel="stylesheet" href="../styles/pages/shared.css">
+
+  <style>
+    /* Page-specific overrides & layouts */
+    .services-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--gap-lg);
+      align-items: center;
+    }
+    .services-feature-list {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-5);
+    }
+    .services-feature-item {
+      display: flex;
+      gap: var(--space-4);
+      align-items: start;
+    }
+    .services-feature-item__icon {
+      color: var(--color-gold);
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .services-feature-item__title {
+      font-family: var(--font-sans);
+      font-size: var(--text-small);
+      font-weight: var(--weight-medium);
+      color: var(--color-text-primary);
+      margin-bottom: 2px;
+    }
+    .services-feature-item__desc {
+      font-family: var(--font-sans);
+      font-size: var(--text-caption);
+      color: var(--color-text-muted);
+      line-height: 1.55;
+      margin-bottom: 0;
+    }
+
+    /* Comparison table */
+    .comp-table-wrap {
+      width: 100%;
+      overflow-x: auto;
+      margin-top: var(--space-8);
+      border: 1px solid var(--color-border);
+    }
+    .comp-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-family: var(--font-sans);
+      table-layout: fixed;
+      min-width: 560px;
+    }
+    /* Fixed column widths — give the highlight column the most room */
+    .comp-table th:first-child,  .comp-table td:first-child  { width: 23%; }
+    .comp-table th:nth-child(2), .comp-table td:nth-child(2) { width: 35%; }
+    .comp-table th:last-child,   .comp-table td:last-child   { width: 42%; }
+
+    .comp-table th, .comp-table td {
+      padding: var(--space-4) var(--space-5);
+      border-bottom: 1px solid var(--color-border);
+      font-size: var(--text-small);
+      line-height: 1.5;
+      vertical-align: top;            /* align every cell to the top, not centre */
+    }
+    /* Header: clean editorial labels, no heavy fill */
+    .comp-table th {
+      color: var(--color-text-muted);
+      font-weight: var(--weight-semibold);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 10px;
+      border-bottom: 1px solid var(--color-border-light);
+    }
+    /* Row label (first column) reads as the subject */
+    .comp-table td:first-child {
+      color: var(--color-text-primary);
+      font-weight: var(--weight-medium);
+    }
+    .comp-table tr:last-child td { border-bottom: none; }
+    .comp-table td strong { color: var(--color-text-primary); }
+    /* Highlight column — one continuous gold-tinted band through header + body */
+    .comp-table .comp-table__highlight {
+      background: var(--color-gold-subtle);
+      color: var(--color-text-primary);
+      border-left: 2px solid var(--color-gold);
+    }
+    .comp-table td.comp-table__highlight { font-weight: var(--weight-medium); }
+
+    @media (max-width: 900px) {
+      .services-grid {
+        grid-template-columns: 1fr;
+        gap: var(--gap-md);
+      }
+      .services-grid--reverse .services-grid__image-col {
+        order: -1;
+      }
+    }
+  </style>
+  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+</head>
+<body>
+
+  <nav class="site-nav" role="navigation" aria-label="Primary navigation">
+    <a href="../index.html" class="nav-logo" aria-label="DigiVenue — Home">
+      <img src="../assets/images/logo-horizontal.svg" class="nav-logo__img" alt="DigiVenue">
+    </a>
+    <ul class="nav-links" role="list">
+      <li><a href="digistories.html" class="nav-link is-active">DigiStories</a></li>
+      <li><a href="results.html"     class="nav-link">Results</a></li>
+      <li><a href="ecosystem.html"   class="nav-link">Ecosystem</a></li>
+      <li><a href="about.html"       class="nav-link">About</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="audit.html" class="btn btn--outline btn--sm">Free Check &rarr;</a>
+    </div>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-drawer">
+      <span class="nav-toggle__bar" aria-hidden="true"></span>
+      <span class="nav-toggle__bar" aria-hidden="true"></span>
+      <span class="nav-toggle__bar" aria-hidden="true"></span>
+    </button>
+    <div class="nav-mobile-drawer" id="mobile-drawer" role="dialog" aria-label="Mobile navigation">
+      <a href="digistories.html" class="is-active">DigiStories</a>
+      <a href="results.html">Results</a>
+      <a href="ecosystem.html">Ecosystem</a>
+      <a href="about.html">About</a>
+      <div class="nav-mobile-cta">
+        <a href="audit.html" class="btn btn--outline">Free Check &rarr;</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <header class="page-hero" role="banner">
+    <div class="container">
+      <div class="page-hero__inner">
+        <div class="breadcrumb fade-up">
+          <a href="../index.html" class="breadcrumb__item">DigiVenue</a>
+          <span class="breadcrumb__sep">&#8594;</span>
+          <span class="breadcrumb__item breadcrumb__item--active">DigiStories</span>
+        </div>
+        <span class="page-hero__label fade-up delay-1">DigiStories</span>
+        <h1 class="page-hero__title fade-up delay-2">
+          Your Google, Instagram and reviews <em>— handled.</em>
+        </h1>
+        <p class="page-hero__sub fade-up delay-3">
+          Not a social-media package. Not a posting service. We're the team that looks after your photos, your Google page, your Instagram and your reviews — so your banquet looks clearly active and trusted the moment a family searches.
+        </p>
+      </div>
+    </div>
+  </header>
+
+  <!-- SECTION 1: GOOGLE PRESENCE -->
+  <section class="content-section" id="google-presence" aria-label="Google & Maps Presence">
+    <div class="container">
+      <div class="services-grid">
+        
+        <!-- Left: Text content -->
+        <div class="fade-up">
+          <span class="text-label text-label--gold" style="margin-bottom: var(--space-4); display: inline-block;">01 · Google &amp; Search</span>
+          <h2 class="text-h2">Your Google page and Maps</h2>
+          <p class="text-body" style="margin-bottom: var(--space-6);">
+            Most families open Google before they ever contact a banquet. They search "banquet hall near me," or type your name directly. What they see in the next ten seconds decides whether they call you or move to the next banquet. We make sure what they see builds trust right away.
+          </p>
+
+          <div class="services-feature-list">
+
+            <div class="services-feature-item">
+              <span class="services-feature-item__icon" aria-hidden="true">&#9670;</span>
+              <div>
+                <div class="services-feature-item__title">Found in your area</div>
+                <p class="services-feature-item__desc">We keep your Google map details correct for your local area, so families nearby see your banquet first.</p>
+              </div>
+            </div>
+
+            <div class="services-feature-item">
+              <span class="services-feature-item__icon" aria-hidden="true">&#9670;</span>
+              <div>
+                <div class="services-feature-item__title">Timings and details current</div>
+                <p class="services-feature-item__desc">We keep your holiday hours, Ganpati schedules, and banquet capacity details updated weekly so families don't hit dead ends.</p>
+              </div>
+            </div>
+
+            <div class="services-feature-item">
+              <span class="services-feature-item__icon" aria-hidden="true">&#9670;</span>
+              <div>
+                <div class="services-feature-item__title">Direct calls and WhatsApp</div>
+                <p class="services-feature-item__desc">We set up clean links for direct calls, map directions, and WhatsApp chats, so you don't pay commission to listing websites.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Right: What we do weekly -->
+        <div class="fade-up delay-1" style="background: var(--color-surface); border: 1px solid var(--color-border); padding: var(--space-8); height: 100%;">
+          <span class="text-label" style="display: block; margin-bottom: var(--space-5);">What we do every week</span>
+          <p style="font-size: 15px; color: var(--color-text-secondary); line-height: 1.65; margin-bottom: var(--space-6);">
+            The steady, repetitive work that keeps a banquet looking active and trustworthy, month after month:
+          </p>
+          <ul class="text-list" style="margin-bottom: 0;">
+            <li>Check your Google details are correct — location, phone number, address.</li>
+            <li>Reply politely to every new review, in your banquet's voice.</li>
+            <li>Add 2–3 fresh photos from the past weekend's actual setup.</li>
+            <li>Update seasonal details — wedding dates, festival bookings, corporate events.</li>
+            <li>Keep clear answers ready for common questions — parking, catering, capacity.</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 2: PHOTOGRAPHY & INSTAGRAM -->
+  <section class="content-section content-section--surface" id="photography-reels" aria-label="Real Event Photography">
+    <div class="container">
+      <div class="services-grid services-grid--reverse">
+        
+        <!-- Left: Image -->
+        <div class="services-grid__image-col fade-up img-reveal">
+          <img src="../assets/images/banquet-catering.jpg"
+               alt="Real wedding catering setup — the kind of realistic operational detail families look for."
+               width="1800" height="1200"
+               loading="lazy" decoding="async"
+               style="width: 100%; height: auto; aspect-ratio: 3/2; object-fit: cover; border: 1px solid var(--color-border);">
+        </div>
+
+        <!-- Right: Content -->
+        <div class="fade-up delay-1">
+          <span class="text-label text-label--gold" style="margin-bottom: var(--space-4); display: inline-block;">02 · Photos &amp; Reels</span>
+          <h2 class="text-h2">Real photography and reels</h2>
+          <p class="text-body" style="margin-bottom: var(--space-6);">
+            Indian families decide with their eyes. If your last photo is a blurry phone shot from a year ago, they assume you're not getting bookings. Our team comes to your banquet on event days and captures the décor, the mandap and the florals that families look for.
+          </p>
+
+          <div class="services-feature-list">
+
+            <div class="services-feature-item">
+              <span class="services-feature-item__icon" aria-hidden="true">&#9670;</span>
+              <div>
+                <div class="services-feature-item__title">Shot on event days</div>
+                <p class="services-feature-item__desc">We don't ask your staff for phone photos. Our team is there during setups and functions to capture the real event.</p>
+              </div>
+            </div>
+
+            <div class="services-feature-item">
+              <span class="services-feature-item__icon" aria-hidden="true">&#9670;</span>
+              <div>
+                <div class="services-feature-item__title">The details families notice</div>
+                <p class="services-feature-item__desc">Close-ups of the stage lighting, the entrance flowers, the buffet — the things families zoom into online.</p>
+              </div>
+            </div>
+
+            <div class="services-feature-item">
+              <span class="services-feature-item__icon" aria-hidden="true">&#9670;</span>
+              <div>
+                <div class="services-feature-item__title">Real weddings as reels</div>
+                <p class="services-feature-item__desc">We edit and post weekly reels of actual functions at your banquet. No templates, no stock clips, no generic festival graphics.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: REVIEWS & TRUST -->
+  <section class="content-section" id="reviews-trust" aria-label="How we build your reviews">
+    <div class="container">
+      <div class="services-grid">
+        
+        <!-- Left: Text -->
+        <div class="fade-up">
+          <span class="text-label text-label--gold" style="margin-bottom: var(--space-4); display: inline-block;">03 · Reviews</span>
+          <h2 class="text-h2">How we build your reviews</h2>
+          <p class="text-body" style="margin-bottom: var(--space-6);">
+            A brochure makes promises. Reviews build trust. When a family checks your name, they read your recent reviews first. We set up a simple way to follow up after each function, so happy families leave honest, detailed reviews while the day is still fresh.
+          </p>
+
+          <div class="services-feature-list">
+
+            <div class="services-feature-item">
+              <span class="services-feature-item__icon" aria-hidden="true">&#9670;</span>
+              <div>
+                <div class="services-feature-item__title">A polite follow-up</div>
+                <p class="services-feature-item__desc">After each function, we follow up with the family in a respectful way and ask for an honest review.</p>
+              </div>
+            </div>
+
+            <div class="services-feature-item">
+              <span class="services-feature-item__icon" aria-hidden="true">&#9670;</span>
+              <div>
+                <div class="services-feature-item__title">A steady flow</div>
+                <p class="services-feature-item__desc">Instead of reviews drying up months ago, fresh ones keep arriving — so the page always looks active.</p>
+              </div>
+            </div>
+
+            <div class="services-feature-item">
+              <span class="services-feature-item__icon" aria-hidden="true">&#9670;</span>
+              <div>
+                <div class="services-feature-item__title">Handling complaints</div>
+                <p class="services-feature-item__desc">If someone leaves a complaint, we don't post a robotic reply. We help you sort out the actual problem, then write a calm, professional response.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Right: Comparison table -->
+        <div class="fade-up delay-1">
+          <span class="text-label" style="display: block; margin-bottom: var(--space-4);">Why we're different</span>
+          <p style="font-size: 15px; color: var(--color-text-secondary); line-height: 1.65; margin-bottom: var(--space-6);">
+            How a typical social-media agency handles your banquet online — and how we do it.
+          </p>
+
+          <div class="comp-table-wrap">
+            <table class="comp-table" role="table" aria-label="DigiStories vs Agency Comparison">
+              <thead>
+                <tr>
+                  <th scope="col">The Job</th>
+                  <th scope="col">Typical Agency</th>
+                  <th scope="col" class="comp-table__highlight">DigiVenue</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Photos</strong></td>
+                  <td>Stock photos, or whatever you send them</td>
+                  <td class="comp-table__highlight"><strong>We come to your banquet and shoot the real setup</strong></td>
+                </tr>
+                <tr>
+                  <td><strong>What they post</strong></td>
+                  <td>National festivals and generic graphics</td>
+                  <td class="comp-table__highlight"><strong>Real weddings, décor close-ups, actual reels</strong></td>
+                </tr>
+                <tr>
+                  <td><strong>Google &amp; Maps</strong></td>
+                  <td>Ignored completely</td>
+                  <td class="comp-table__highlight"><strong>Updated weekly, timings current, questions answered</strong></td>
+                </tr>
+                <tr>
+                  <td><strong>Reviews</strong></td>
+                  <td>No follow-up with families</td>
+                  <td class="comp-table__highlight"><strong>We follow up after every function to collect them</strong></td>
+                </tr>
+                <tr>
+                  <td><strong>Your effort</strong></td>
+                  <td>You coordinate and approve everything</td>
+                  <td class="comp-table__highlight"><strong>None. We run it all in the background</strong></td>
+                </tr>
+                <tr>
+                  <td><strong>The goal</strong></td>
+                  <td>Likes and views</td>
+                  <td class="comp-table__highlight"><strong>Real calls, WhatsApp enquiries and visits</strong></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4: CALL TO ACTION -->
+  <section class="content-section content-section--dark" aria-label="Get Started CTA">
+    <div class="container" style="text-align: center; max-width: 720px; margin: 0 auto;">
+      <span class="text-label text-label--gold" style="margin-bottom: var(--space-4); display: inline-block;">A free check</span>
+      <h2 class="text-h2">See where your banquet stands today.</h2>
+      <p class="text-body" style="color: var(--color-text-secondary); margin-bottom: var(--space-8);">
+        Send us your banquet's name. Within a day, we'll show you what families see when they search you — what's working, what's missing, and what's quietly costing you bookings. No pressure to go further.
+      </p>
+      <div style="display: flex; gap: var(--space-4); justify-content: center; flex-wrap: wrap;">
+        <a href="audit.html" class="btn btn--primary btn--lg">Check my banquet online — free</a>
+        <a href="https://wa.me/919819576256?text=Hi%2C%20I'd%20like%20a%20free%20check%20of%20my%20banquet%20banquet%20online." class="btn btn--whatsapp btn--lg" target="_blank" rel="noopener noreferrer">
+          Talk to us on WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-bar">
+        <span class="footer-bar__brand">
+          <img src="../assets/images/logo-horizontal.svg" class="footer-logo__img" alt="DigiVenue">
+        </span>
+        <nav class="footer-bar__links" aria-label="Footer navigation">
+          <a href="digistories.html" class="is-active">DigiStories</a>
+          <a href="results.html">Results</a>
+          <a href="ecosystem.html">Ecosystem</a>
+          <a href="about.html">About</a>
+          <a href="https://wa.me/919819576256?text=I%20would%20like%20to%20discuss%20DigiVenue%20for%20my%20banquet%20banquet." target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        </nav>
+        <span class="footer-bar__meta">© 2026 DigiVenue &middot; Built in Mumbai</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js" defer></script>
+</body>
+</html>
+

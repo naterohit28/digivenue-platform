@@ -1,0 +1,48 @@
+{
+    "project_name":  "Mumbai Catering \u0026 Banquet Digital Readiness System",
+    "timezone":  "Asia/Kolkata",
+    "database_path":  "./database/mumbai_readiness.db",
+    "exports_dir":  "./exports",
+    "raw_dir":  "./raw",
+    "processed_dir":  "./processed",
+    "historical_dir":  "./historical",
+    "logs_dir":  "./logs",
+    "suburbs":  [
+                    "Dadar",
+                    "Chembur",
+                    "Borivali",
+                    "Thane West",
+                    "Vashi"
+                ],
+    "queries":  [
+                    "banquet hall {suburb}",
+                    "wedding venue {suburb}",
+                    "caterers {suburb}",
+                    "outdoor catering {suburb}",
+                    "marriage hall {suburb}",
+                    "lawn venue {suburb}"
+                ],
+    "weights":  {
+                    "google_trust_signals":  20,
+                    "instagram_visibility":  15,
+                    "content_freshness":  10,
+                    "inquiry_cta_structure":  10,
+                    "whatsapp_readiness":  10,
+                    "operational_maturity":  15,
+                    "review_management":  10,
+                    "booking_workflow_visibility":  10
+                },
+    "dmi_bands":  {
+                      "elite":  80,
+                      "growth_ready":  65,
+                      "visibility_weak":  45,
+                      "operationally_chaotic":  30
+                  },
+    "collection_mode":  "auto",
+    "collector_runtime":  {
+                              "google_api_key_env":  "GOOGLE_MAPS_API_KEY",
+                              "request_timeout_sec":  12,
+                              "max_results_per_query":  20,
+                              "pause_between_calls_sec":  0.2
+                          }
+}

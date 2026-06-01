@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Everything We Offer — DigiVenue</title>
+  <meta name="description" content="Six things we offer Mumbai banquet halls — starting with Google and Instagram. The rest grows with you, as your banquet grows.">
+  <link rel="canonical" href="https://digivenue.in/pages/ecosystem.html">
+  
+  <!-- Fonts: preconnect for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Design system (foundation) -->
+  <link rel="stylesheet" href="../styles/main.css">
+  <link rel="stylesheet" href="../styles/pages/shared.css">
+
+  <style>
+    /* ── Ecosystem map section ── */
+    .eco-map-section {
+      padding: clamp(48px, 7vw, 80px) 0;
+      background: var(--color-bg-deep);
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    /* Section intro block */
+    .eco-intro {
+      max-width: 680px;
+      margin: 0 auto var(--space-7);
+      text-align: center;
+    }
+    .eco-intro .text-label {
+      display: inline-block;
+      margin-bottom: var(--space-4);
+    }
+    .eco-intro .text-h2 {
+      margin-bottom: var(--space-4);
+    }
+    .eco-intro .text-body {
+      color: var(--color-text-secondary);
+      margin-bottom: 0;
+    }
+
+    /* Node grid */
+    .node-network {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--gap-md);
+      position: relative;
+    }
+    .node-network::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 10%;
+      right: 10%;
+      height: 1px;
+      background: linear-gradient(to right, transparent, var(--color-border), transparent);
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .node-card {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      padding: var(--space-5) var(--space-6);
+      position: relative;
+      z-index: 1;
+      transition: border-color 0.4s var(--ease-out), transform 0.4s var(--ease-out);
+      text-decoration: none;
+    }
+    .node-card:hover {
+      border-color: var(--color-gold);
+      transform: translateY(-4px);
+    }
+    .node-card--inactive {
+      background: rgba(255,255,255,0.01);
+      border-style: dashed;
+    }
+    .node-card--inactive:hover {
+      border-color: var(--color-border);
+      transform: none;
+    }
+
+    .node-card__num {
+      font-family: var(--font-sans);
+      font-size: var(--text-micro);
+      color: var(--color-text-muted);
+      display: block;
+      margin-bottom: var(--space-3);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+    .node-card__title {
+      font-family: var(--font-serif);
+      font-size: 20px;
+      color: var(--color-text-primary);
+      margin-bottom: var(--space-3);
+    }
+    .node-card__desc {
+      font-family: var(--font-sans);
+      font-size: var(--text-caption);
+      color: var(--color-text-muted);
+      line-height: 1.6;
+      margin-bottom: var(--space-4);
+    }
+
+    /* Roadmap timeline */
+    .roadmap-timeline {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--gap-md);
+      margin-top: var(--space-6);
+    }
+    .roadmap-phase {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      padding: var(--space-6);
+    }
+    .roadmap-phase__title {
+      font-family: var(--font-sans);
+      font-size: var(--text-micro);
+      color: var(--color-gold);
+      text-transform: uppercase;
+      letter-spacing: var(--ls-badge);
+      margin-bottom: var(--space-3);
+      display: block;
+    }
+    .roadmap-phase__nodes {
+      font-family: var(--font-sans);
+      font-size: var(--text-micro);
+      color: var(--color-text-muted);
+      letter-spacing: 0.08em;
+      margin-bottom: var(--space-3);
+      display: block;
+    }
+    .roadmap-phase__heading {
+      font-family: var(--font-serif);
+      font-size: 22px;
+      font-weight: var(--weight-medium);
+      color: var(--color-text-primary);
+      margin-bottom: var(--space-3);
+    }
+    .roadmap-phase__desc {
+      font-family: var(--font-sans);
+      font-size: var(--text-caption);
+      color: var(--color-text-muted);
+      line-height: 1.6;
+      margin-bottom: 0;
+    }
+
+    @media (max-width: 900px) {
+      .node-network {
+        grid-template-columns: 1fr;
+        gap: var(--gap-sm);
+      }
+      .node-network::before { display: none; }
+      .roadmap-timeline {
+        grid-template-columns: 1fr;
+        gap: var(--gap-sm);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="site-nav" role="navigation" aria-label="Primary navigation">
+    <a href="../index.html" class="nav-logo" aria-label="DigiVenue — Home">
+      Digi<span class="nav-logo__accent">Venue</span>
+    </a>
+    <ul class="nav-links" role="list">
+      <li><a href="what-we-do.html" class="nav-link">What We Do</a></li>
+      <li><a href="results.html"     class="nav-link">Results</a></li>
+      <li><a href="ecosystem.html"   class="nav-link is-active">Ecosystem</a></li>
+      <li><a href="about.html"       class="nav-link">About</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="audit.html" class="btn btn--outline btn--sm">Free check &rarr;</a>
+    </div>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-drawer">
+      <span class="nav-toggle__bar" aria-hidden="true"></span>
+      <span class="nav-toggle__bar" aria-hidden="true"></span>
+      <span class="nav-toggle__bar" aria-hidden="true"></span>
+    </button>
+    <div class="nav-mobile-drawer" id="mobile-drawer" role="dialog" aria-label="Mobile navigation">
+      <a href="what-we-do.html">What We Do</a>
+      <a href="results.html">Results</a>
+      <a href="ecosystem.html" class="is-active">Ecosystem</a>
+      <a href="about.html">About</a>
+      <div class="nav-mobile-cta">
+        <a href="audit.html" class="btn btn--outline">Free check of my banquet &rarr;</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <header class="page-hero" role="banner">
+    <div class="container">
+      <div class="page-hero__inner">
+        <div class="breadcrumb fade-up">
+          <a href="../index.html" class="breadcrumb__item">DigiVenue</a>
+          <span class="breadcrumb__sep">&#8594;</span>
+          <span class="breadcrumb__item breadcrumb__item--active">Ecosystem</span>
+        </div>
+        <span class="page-hero__label fade-up delay-1">Everything we offer</span>
+        <h1 class="page-hero__title fade-up delay-2">
+          Six things — <em>most banquets only need the first two.</em>
+        </h1>
+        <p class="page-hero__sub fade-up delay-3">
+          We start with Google and real wedding photos. As you grow with us, we add the pieces that make sense — better enquiry handling, the right vendor network, supplies, and eventually a place where families can find your banquet directly.
+        </p>
+      </div>
+    </div>
+  </header>
+
+  <!-- SECTION 1: THE NETWORK GRID -->
+  <section class="eco-map-section" aria-label="Ecosystem Node Map">
+    <div class="container">
+
+      <div class="eco-intro fade-up">
+        <span class="text-label text-label--gold">How it fits together</span>
+        <h2 class="text-h2">Each piece builds on the one before it.</h2>
+        <p class="text-body">
+          Real photos (02) give your Google page (01) something worth showing — which is what brings the enquiry calls. Once calls are coming in, quick replies and a clean rate sheet (03) are what turn them into bookings. The vendor network, supplies and family-discovery directory come after that, when your banquet is already known.
+        </p>
+      </div>
+
+      <div class="node-network">
+
+        <!-- Node 1: DigiVenue Core -->
+        <a href="what-we-do.html#core" class="node-card fade-up">
+          <span class="node-card__num">01 · Google &amp; Search</span>
+          <h3 class="node-card__title">DigiVenue Core</h3>
+          <p class="node-card__desc">Families searching your banquet name find an active, well-reviewed Google page — not a blank listing from three years ago. We keep it updated every week.</p>
+          <span class="badge badge--accent"><span class="badge__dot"></span>Running for all banquets</span>
+        </a>
+
+        <!-- Node 2: DigiStories -->
+        <a href="what-we-do.html#digistories" class="node-card fade-up delay-1">
+          <span class="node-card__num">02 · Photos &amp; Reels</span>
+          <h3 class="node-card__title">DigiStories</h3>
+          <p class="node-card__desc">Our team attends your functions and shoots real photos and reels — the mandap, the food, the crowd. Uploaded to Google, Instagram and WhatsApp the same week.</p>
+          <span class="badge badge--accent"><span class="badge__dot"></span>Running for all banquets</span>
+        </a>
+
+        <!-- Node 3: SmartOS -->
+        <a href="what-we-do.html#smartos" class="node-card fade-up delay-2">
+          <span class="node-card__num">03 · Enquiry handling</span>
+          <h3 class="node-card__title">SmartOS</h3>
+          <p class="node-card__desc">When a family messages "what's your rate?", your team replies in minutes with a clean PDF — not "call tomorrow". Scripts and templates your manager can actually use.</p>
+          <span class="badge badge--gold"><span class="badge__dot"></span>For banquets that want it</span>
+        </a>
+
+        <!-- Node 4: DigiNetwork -->
+        <div class="node-card node-card--inactive fade-up">
+          <span class="node-card__num">04 · Vendor network</span>
+          <h3 class="node-card__title">DigiNetwork</h3>
+          <p class="node-card__desc">Decorators, caterers and planners we trust — who we can connect enquiring families with when they need it, so your banquet becomes the easy choice.</p>
+          <span class="badge badge--gold"><span class="badge__dot"></span>Invite only</span>
+        </div>
+
+        <!-- Node 5: DigiMarket -->
+        <div class="node-card node-card--inactive fade-up delay-1">
+          <span class="node-card__num">05 · Supplies</span>
+          <h3 class="node-card__title">DigiMarket</h3>
+          <p class="node-card__desc">Display stands, lighting, printed material — things your banquet buys anyway. We source them at better rates through our network, so you spend less per event.</p>
+          <span class="badge"><span class="badge__dot"></span>Coming soon</span>
+        </div>
+
+        <!-- Node 6: DigiShaadi -->
+        <div class="node-card node-card--inactive fade-up delay-2">
+          <span class="node-card__num">06 · Family discovery</span>
+          <h3 class="node-card__title">DigiShaadi</h3>
+          <p class="node-card__desc">A clean place where families searching for banquets in Mumbai can find our partners and see real wedding photos. No commission. No middlemen.</p>
+          <span class="badge"><span class="badge__dot"></span>Coming soon</span>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION 2: ROADMAP -->
+  <section class="content-section" aria-label="DigiVenue Phased Evolution">
+    <div class="container">
+
+      <div style="max-width: 620px; margin-bottom: var(--space-6);">
+        <span class="text-label text-label--gold" style="margin-bottom: var(--space-4); display: inline-block;">How we grow with you</span>
+        <h2 class="text-h2">Three years. One season at a time.</h2>
+        <p class="text-body">
+          Trust online doesn't happen overnight — it comes from showing up consistently, month after month. Here's the order we do it in, and why.
+        </p>
+      </div>
+
+      <div class="roadmap-timeline">
+
+        <div class="roadmap-phase fade-up">
+          <span class="roadmap-phase__title">Year 1</span>
+          <span class="roadmap-phase__nodes">Nodes 01 + 02</span>
+          <h3 class="roadmap-phase__heading">Google &amp; real photos</h3>
+          <p class="roadmap-phase__desc">
+            We fix your Google listing and start shooting real photos from your functions every event day. By the end of the first season, families see a banquet that's clearly active — with real weddings, real reviews, and real photos posted recently.
+          </p>
+        </div>
+
+        <div class="roadmap-phase fade-up delay-1">
+          <span class="roadmap-phase__title">Year 2</span>
+          <span class="roadmap-phase__nodes">Nodes 03 + 04</span>
+          <h3 class="roadmap-phase__heading">Enquiry handling &amp; vendor links</h3>
+          <p class="roadmap-phase__desc">
+            More enquiries are coming in — now we make sure your team converts them. Fast WhatsApp replies, clean rate sheets, scripts that actually work. And when families need a decorator or caterer, we connect them from our trusted network.
+          </p>
+        </div>
+
+        <div class="roadmap-phase fade-up delay-2">
+          <span class="roadmap-phase__title">Year 3</span>
+          <span class="roadmap-phase__nodes">Nodes 05 + 06</span>
+          <h3 class="roadmap-phase__heading">Supplies &amp; family discovery</h3>
+          <p class="roadmap-phase__desc">
+            Your banquet is well-known and well-reviewed. We help source the supplies you buy anyway — at better rates. And your banquet gets a spot on DigiShaadi, where families searching for banquets in Mumbai come looking directly, without a middleman.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION 3: CTA -->
+  <section class="content-section content-section--dark" aria-label="Get Started CTA">
+    <div class="container" style="text-align: center; max-width: 720px; margin: 0 auto;">
+      <span class="text-label text-label--gold" style="margin-bottom: var(--space-4); display: inline-block;">A free check</span>
+      <h2 class="text-h2">See where your banquet stands today.</h2>
+      <p class="text-body" style="color: var(--color-text-secondary); margin-bottom: var(--space-8);">
+        Send us your banquet name. Within a day, we'll show you what families see when they search you on Google and Instagram — and exactly what's making them skip your banquet.
+      </p>
+      <div style="display: flex; gap: var(--space-4); justify-content: center; flex-wrap: wrap;">
+        <a href="audit.html" class="btn btn--primary btn--lg">Check my banquet's online presence — free</a>
+        <!-- TODO: replace with real number -->
+        <a href="https://wa.me/91XXXXXXXXXX?text=I%20would%20like%20to%20discuss%20DigiVenue%20for%20my%20banquet%20hall." class="btn btn--whatsapp btn--lg" target="_blank" rel="noopener noreferrer">
+          Talk to us on WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-brand__logo">
+            Digi<span style="color: var(--color-accent);">Venue</span>
+          </div>
+          <p class="footer-brand__tagline">
+            We run the Google page, Instagram and reviews for banquet halls across Mumbai, Navi Mumbai and Thane. So your banquet looks the way it actually is — active, trusted, worth choosing.
+          </p>
+        </div>
+        <div class="footer-links-col">
+          <div class="footer-links-col__title">The site</div>
+          <ul class="footer-links" role="list">
+            <li><a href="what-we-do.html">What we do</a></li>
+            <li><a href="results.html">Banquets we work with</a></li>
+            <li><a href="ecosystem.html" class="is-active">Everything we offer</a></li>
+            <li><a href="about.html">About us</a></li>
+          </ul>
+        </div>
+        <div class="footer-links-col">
+          <div class="footer-links-col__title">Talk to us</div>
+          <ul class="footer-links" role="list">
+            <li><a href="audit.html">Free check of your banquet</a></li>
+            <!-- TODO: replace with real number -->
+            <li><a href="https://wa.me/91XXXXXXXXXX?text=I%20want%20to%20see%20how%20my%20banquet%20compares%20with%20others%20nearby" target="_blank" rel="noopener noreferrer">Compare with banquets nearby</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p class="footer-bottom__copy">&copy; 2026 DigiVenue. All rights reserved.</p>
+        <nav class="footer-bottom__legal" aria-label="Legal links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js" defer></script>
+</body>
+</html>

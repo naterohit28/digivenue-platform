@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DigiVenue — Internal Portal</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --color-bg:           #FAF7F2;
+      --color-bg-deep:      #F5EFE6;
+      --color-surface:      #F3EEE5;
+      --color-surface-mid:  #EBE4D8;
+      --color-border:       #E5DFD3;
+      --color-border-light: #D5CEBF;
+      --color-text-primary:   #1F1D1C;
+      --color-text-secondary: #4A4644;
+      --color-text-muted:     #6F6864;
+      --color-accent:         #D94822;
+      --color-accent-hover:   #B83615;
+      --font-serif:    'Playfair Display', Georgia, serif;
+      --font-sans:     'Inter', system-ui, sans-serif;
+      --radius: 4px;
+      --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: var(--font-sans);
+      background-color: var(--color-bg);
+      color: var(--color-text-secondary);
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      position: relative;
+    }
+
+    /* grain overlay */
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 9999;
+      opacity: .035;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+      background-size: 200px;
+    }
+
+    /* ambient background gradient */
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      background: radial-gradient(ellipse 70% 50% at 15% 0%, rgba(217,72,34,0.035), transparent 60%), radial-gradient(ellipse 50% 40% at 85% 100%, rgba(197,160,89,0.025), transparent 60%);
+    }
+
+    .container {
+      width: 100%;
+      max-width: 440px;
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      padding: 48px 40px;
+      position: relative;
+      z-index: 1;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.05);
+      border-radius: var(--radius);
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 36px;
+    }
+
+    .logo {
+      font-family: var(--font-serif);
+      font-size: 28px;
+      font-weight: 500;
+      color: var(--color-text-primary);
+      letter-spacing: -0.02em;
+      margin-bottom: 8px;
+    }
+
+    .logo em {
+      font-style: italic;
+      color: var(--color-accent);
+      font-weight: 400;
+    }
+
+    .subtitle {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--color-text-muted);
+      font-weight: 600;
+    }
+
+    .form-group {
+      margin-bottom: 24px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--color-text-muted);
+      margin-bottom: 8px;
+    }
+
+    .input {
+      width: 100%;
+      background: var(--color-bg);
+      border: 1px solid var(--color-border-light);
+      padding: 14px 16px;
+      font-family: var(--font-sans);
+      font-size: 15px;
+      color: var(--color-text-primary);
+      outline: none;
+      border-radius: var(--radius);
+      transition: all 0.25s var(--ease-out);
+    }
+
+    .input:focus {
+      border-color: var(--color-text-primary);
+      background: #fff;
+    }
+
+    .btn {
+      width: 100%;
+      padding: 14px 28px;
+      background: var(--color-text-primary);
+      color: var(--color-bg);
+      font-family: var(--font-sans);
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      border: none;
+      cursor: pointer;
+      border-radius: var(--radius);
+      transition: background 0.25s var(--ease-out);
+    }
+
+    .btn:hover {
+      background: var(--color-accent);
+    }
+
+    .error-msg {
+      font-size: 13px;
+      color: var(--color-accent);
+      margin-top: 12px;
+      text-align: center;
+      font-weight: 500;
+      display: none;
+    }
+
+    /* dashboard state */
+    .dashboard {
+      display: none;
+    }
+
+    .dashboard-title {
+      font-family: var(--font-serif);
+      font-size: 24px;
+      color: var(--color-text-primary);
+      margin-bottom: 24px;
+      text-align: center;
+    }
+
+    .tool-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .tool-link {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: var(--color-bg-deep);
+      border: 1px solid var(--color-border);
+      padding: 20px 24px;
+      text-decoration: none;
+      color: var(--color-text-primary);
+      font-weight: 500;
+      border-radius: var(--radius);
+      transition: all 0.25s var(--ease-out);
+    }
+
+    .tool-link:hover {
+      border-color: var(--color-accent);
+      background: #fff;
+      transform: translateY(-1px);
+    }
+
+    .tool-link span {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .tool-link .tool-name {
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    .tool-link .tool-desc {
+      font-size: 12px;
+      color: var(--color-text-muted);
+      margin-top: 2px;
+    }
+
+    .tool-link .arrow {
+      color: var(--color-accent);
+      font-size: 18px;
+    }
+
+    .logout-btn {
+      margin-top: 32px;
+      background: transparent;
+      border: 1px solid var(--color-border-light);
+      color: var(--color-text-muted);
+      font-size: 11px;
+      padding: 8px 16px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      cursor: pointer;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: var(--radius);
+      transition: all 0.2s;
+    }
+
+    .logout-btn:hover {
+      background: var(--color-bg-deep);
+      color: var(--color-text-primary);
+      border-color: var(--color-text-primary);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- LOGIN INTERFACE -->
+    <div id="login-view">
+      <div class="header">
+        <div class="logo">Digi<em>Venue</em></div>
+        <div class="subtitle">🔒 Private Internal Portal</div>
+      </div>
+      
+      <form onsubmit="handleLogin(event)">
+        <div class="form-group">
+          <label for="password">Enter Portal Password</label>
+          <input type="password" id="password" class="input" placeholder="••••••••" required autofocus>
+        </div>
+        <button type="submit" class="btn">Authenticate</button>
+        <div id="error" class="error-msg">Incorrect portal password.</div>
+      </form>
+    </div>
+
+    <!-- PORTAL DASHBOARD -->
+    <div id="dashboard-view" class="dashboard">
+      <div class="header">
+        <div class="logo">Digi<em>Venue</em></div>
+        <div class="subtitle">Internal Tools Console</div>
+      </div>
+      
+      <div class="dashboard-title">Welcome, Team</div>
+      
+      <div class="tool-list">
+        <a href="sales-tool.html" class="tool-link">
+          <span>
+            <span class="tool-name">1. DigiStories Sales Tool</span>
+            <span class="tool-desc">Client consultation & audit intake</span>
+          </span>
+          <span class="arrow">→</span>
+        </a>
+        <a href="bible-engine.html" class="tool-link">
+          <span>
+            <span class="tool-name">2. Venue Growth Bible</span>
+            <span class="tool-desc">Dynamic playbook & strategy generator</span>
+          </span>
+          <span class="arrow">→</span>
+        </a>
+      </div>
+
+      <button class="logout-btn" onclick="handleLogout()">Clear Session</button>
+    </div>
+  </div>
+
+  <script>
+    // SHA-256 Hash of "DigiVenue_Secure_Sales_2026!"
+    const EXPECTED_HASH = "e0f9fb2da7895c9467ccf9f0532d29193a3d576a2293df5069b350949380a110";
+
+    async function sha256(str) {
+      const buf = new TextEncoder().encode(str);
+      const hash = await window.crypto.subtle.digest('SHA-256', buf);
+      let hex = '';
+      const bytes = new Uint8Array(hash);
+      for (let i = 0; i < bytes.length; i++) {
+        hex += bytes[i].toString(16).padStart(2, '0');
+      }
+      return hex;
+    }
+
+    async function handleLogin(e) {
+      e.preventDefault();
+      const pw = document.getElementById('password').value;
+      const errorDiv = document.getElementById('error');
+      
+      const hashed = await sha256(pw);
+      if (hashed === EXPECTED_HASH) {
+        sessionStorage.setItem('dv_portal_key', pw);
+        
+        // Handle redirect if page parameters exist
+        const params = new URLSearchParams(window.location.search);
+        const redirect = params.get('redirect');
+        if (redirect) {
+          window.location.href = redirect;
+        } else {
+          showDashboard();
+        }
+      } else {
+        errorDiv.style.display = 'block';
+        document.getElementById('password').focus();
+      }
+    }
+
+    function showDashboard() {
+      document.getElementById('login-view').style.display = 'none';
+      document.getElementById('dashboard-view').style.display = 'block';
+    }
+
+    function handleLogout() {
+      sessionStorage.removeItem('dv_portal_key');
+      window.location.href = window.location.pathname; // refresh
+    }
+
+    // Auto-login check
+    (async function checkSession() {
+      const saved = sessionStorage.getItem('dv_portal_key');
+      if (saved) {
+        const hashed = await sha256(saved);
+        if (hashed === EXPECTED_HASH) {
+          // If we have a redirect waiting, go there
+          const params = new URLSearchParams(window.location.search);
+          const redirect = params.get('redirect');
+          if (redirect) {
+            window.location.href = redirect;
+          } else {
+            showDashboard();
+          }
+        } else {
+          sessionStorage.removeItem('dv_portal_key');
+        }
+      }
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About DigiVenue — A Mumbai Catering Family, Now Running Banquets Online</title>
+  <meta name="description" content="A family that has run catering and banquets in Mumbai for 50 years. We started DigiVenue because we watched good banquets lose bookings to weaker ones — only because the weaker banquet looked more active online.">
+  <link rel="canonical" href="https://digivenue.in/pages/about.html">
+  
+  <!-- Fonts: preconnect for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Design system (foundation) -->
+  <link rel="stylesheet" href="../styles/main.css">
+  <link rel="stylesheet" href="../styles/pages/shared.css">
+
+  <style>
+    /* Founder Hero & Narrative Layouts */
+    .founder-hero {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 80px;
+      align-items: center;
+      padding: var(--space-10) 0;
+      border-bottom: 1px solid var(--color-border);
+    }
+    
+    .founder-image-col {
+      position: relative;
+    }
+    
+    /* Elegant blockquote */
+    .quote-editorial {
+      font-family: var(--font-serif);
+      font-size: clamp(20px, 2.2vw, 32px);
+      line-height: 1.4;
+      color: var(--color-text-primary);
+      margin-bottom: var(--space-6);
+      font-style: italic;
+    }
+    .quote-attribution {
+      font-family: var(--font-sans);
+      font-size: 13px;
+      color: var(--color-gold);
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      font-weight: var(--weight-medium);
+    }
+
+    /* Narrative text content columns */
+    .about-story-layout {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: var(--gap-lg);
+    }
+
+    /* Core pillars list */
+    .pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--gap-md);
+      margin-top: var(--space-8);
+    }
+    .pillar-card {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      padding: var(--space-7);
+    }
+    .pillar-card__title {
+      font-family: var(--font-serif);
+      font-size: 22px;
+      color: var(--color-text-primary);
+      margin-bottom: var(--space-3);
+    }
+    .pillar-card__desc {
+      font-family: var(--font-sans);
+      font-size: 16px;
+      color: var(--color-text-secondary);
+      line-height: 1.65;
+      margin-bottom: 0;
+    }
+
+    @media (max-width: 900px) {
+      .founder-hero {
+        grid-template-columns: 1fr;
+        gap: var(--gap-md);
+      }
+      .founder-image-col {
+        order: -1;
+      }
+      .about-story-layout {
+        grid-template-columns: 1fr;
+        gap: var(--gap-sm);
+      }
+      .pillars-grid {
+        grid-template-columns: 1fr;
+        gap: var(--gap-sm);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="site-nav" role="navigation" aria-label="Primary navigation">
+    <a href="../index.html" class="nav-logo" aria-label="DigiVenue — Home">
+      Digi<span class="nav-logo__accent">Venue</span>
+    </a>
+    <ul class="nav-links" role="list">
+      <li><a href="what-we-do.html" class="nav-link">What We Do</a></li>
+      <li><a href="results.html"     class="nav-link">Results</a></li>
+      <li><a href="ecosystem.html"   class="nav-link">Ecosystem</a></li>
+      <li><a href="about.html"       class="nav-link is-active">About</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="audit.html" class="btn btn--outline btn--sm">Free check &rarr;</a>
+    </div>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-drawer">
+      <span class="nav-toggle__bar" aria-hidden="true"></span>
+      <span class="nav-toggle__bar" aria-hidden="true"></span>
+      <span class="nav-toggle__bar" aria-hidden="true"></span>
+    </button>
+    <div class="nav-mobile-drawer" id="mobile-drawer" role="dialog" aria-label="Mobile navigation">
+      <a href="what-we-do.html">What We Do</a>
+      <a href="results.html">Results</a>
+      <a href="ecosystem.html">Ecosystem</a>
+      <a href="about.html" class="is-active">About</a>
+      <div class="nav-mobile-cta">
+        <a href="audit.html" class="btn btn--outline">Free check of my banquet &rarr;</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- FOUNDER HERO (Section 1 Archetype 4) -->
+  <section class="container" aria-label="Founder Intro">
+    <div class="founder-hero">
+      
+      <!-- Left: Candid photography -->
+      <div class="founder-image-col fade-up img-reveal">
+        <img src="../assets/images/banquet-founder.jpg"
+             alt="The DigiVenue founder at a Mumbai banquet hall, checking arrangements before a function."
+             width="1600" height="2000"
+             loading="lazy" decoding="async"
+             style="width: 100%; height: auto; aspect-ratio: 4/5; object-fit: cover; border: 1px solid var(--color-border);">
+        <!-- TODO: replace with a true candid behind-the-scenes shot when one is available -->
+
+      </div>
+
+      <!-- Right: Direct Quote Block -->
+      <div class="fade-up delay-1">
+        <span class="text-label text-label--gold" style="margin-bottom: var(--space-4); display: block;">Why we started this</span>
+        <blockquote class="quote-editorial">
+          &ldquo;We know what a 1,000-plate wedding feels like. We know what happens when the decor team is two hours late. We started DigiVenue because running a good banquet isn't enough anymore — you have to look like a good banquet online, too.&rdquo;
+        </blockquote>
+        <div class="quote-attribution">
+          &mdash; Founders, DigiVenue
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ORIGIN & NARRATIVE -->
+  <section class="content-section" aria-label="Our Origin Story">
+    <div class="container">
+      <div class="about-story-layout">
+        
+        <!-- Sidebar Title -->
+        <div class="fade-up">
+          <span class="text-label text-label--gold" style="margin-bottom: var(--space-4); display: block;">Where we come from</span>
+          <h2 class="text-h2">Fifty years in Mumbai's banquet business.</h2>
+        </div>
+
+        <!-- Main Narrative Column -->
+        <div class="fade-up delay-1">
+          <p class="text-body" style="margin-bottom: var(--space-5);">
+            We're not a software company. Our family has run catering and banquet operations across Mumbai for over fifty years. We grew up around kitchen rotations, decor teams, baraat timings, and the long phone calls with families about menu changes the week before a wedding.
+          </p>
+          <p class="text-body" style="margin-bottom: var(--space-5);">
+            Over the last few years, we kept seeing the same thing — beautiful banquets with proud histories were losing bookings to newer, smaller banquets down the road. It wasn't the food. It wasn't the location. The newer banquet just looked more active online: fresh photos every week, recent reviews, a Google page that responded the same day.
+          </p>
+          <p class="text-body" style="margin-bottom: 0;">
+            Owners didn't need another agency promising likes that don't bring bookings. They needed someone who would quietly run their Google page, their Instagram and their reviews — week after week — so the banquet they've spent a lifetime building actually looks the part online. That's why we started DigiVenue.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CORE PILLARS -->
+  <section class="content-section content-section--surface" aria-label="Core Pillars">
+    <div class="container">
+      
+      <div style="max-width: 620px; margin-bottom: var(--space-6);">
+        <span class="text-label text-label--gold" style="margin-bottom: var(--space-4); display: inline-block;">How we work</span>
+        <h2 class="text-h2" style="margin-bottom: 0;">Three things we don't compromise on.</h2>
+      </div>
+
+      <div class="pillars-grid">
+
+        <!-- Pillar 1 -->
+        <div class="pillar-card fade-up">
+          <h3 class="pillar-card__title">We're at your banquet on event days</h3>
+          <p class="pillar-card__desc">
+            We don't ask you to send us photos. Our team is at your function — Saturday weddings, Sunday receptions, peak-season nights — capturing the mandap, the decor and the moments that matter. Real photos, every week.
+          </p>
+        </div>
+
+        <!-- Pillar 2 -->
+        <div class="pillar-card fade-up delay-1">
+          <h3 class="pillar-card__title">We only do Mumbai banquets</h3>
+          <p class="pillar-card__desc">
+            Chembur, Dadar, Ghatkopar, Thane, Vashi. We know what families in this city search for, which weeks of the season decide the year, and how the locality competes. That focus is the whole point.
+          </p>
+        </div>
+
+        <!-- Pillar 3 -->
+        <div class="pillar-card fade-up delay-2">
+          <h3 class="pillar-card__title">We show you the problem first — no pressure</h3>
+          <p class="pillar-card__desc">
+            We start with a free check of how your banquet looks online — what's working, what's missing, what's quietly costing you bookings. If it makes sense to work together after that, we'll tell you. If it doesn't, we'll say so.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION 4: CALL TO ACTION -->
+  <section class="content-section content-section--dark" aria-label="Get Started CTA">
+    <div class="container" style="text-align: center; max-width: 720px; margin: 0 auto;">
+      <span class="text-label text-label--gold" style="margin-bottom: var(--space-4); display: inline-block;">A free check</span>
+      <h2 class="text-h2">See your banquet the way families see it.</h2>
+      <p class="text-body" style="color: var(--color-text-secondary); margin-bottom: var(--space-8);">
+        Send us your banquet name. Within a day, we'll show you exactly what a family sees on Google and Instagram when they search you — and where the trust is leaking. No charge, no sales pitch.
+      </p>
+      <div style="display: flex; gap: var(--space-4); justify-content: center; flex-wrap: wrap;">
+        <a href="audit.html" class="btn btn--primary btn--lg">Check my banquet's online presence — free</a>
+        <!-- TODO: replace with real number -->
+        <a href="https://wa.me/91XXXXXXXXXX?text=I%20would%20like%20to%20discuss%20DigiVenue%20for%20my%20banquet%20hall." class="btn btn--whatsapp btn--lg" target="_blank" rel="noopener noreferrer">
+          Talk to us on WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-brand__logo">
+            Digi<span style="color: var(--color-accent);">Venue</span>
+          </div>
+          <p class="footer-brand__tagline">
+            We run the Google page, Instagram and reviews for banquet halls across Mumbai, Navi Mumbai and Thane. So your banquet looks the way it actually is — active, trusted, worth choosing.
+          </p>
+        </div>
+        <div class="footer-links-col">
+          <div class="footer-links-col__title">The site</div>
+          <ul class="footer-links" role="list">
+            <li><a href="what-we-do.html">What we do</a></li>
+            <li><a href="results.html">Banquets we work with</a></li>
+            <li><a href="ecosystem.html">Everything we offer</a></li>
+            <li><a href="about.html" class="is-active">About us</a></li>
+          </ul>
+        </div>
+        <div class="footer-links-col">
+          <div class="footer-links-col__title">Talk to us</div>
+          <ul class="footer-links" role="list">
+            <li><a href="audit.html">Free check of your banquet</a></li>
+            <!-- TODO: replace with real number -->
+            <li><a href="https://wa.me/91XXXXXXXXXX?text=I%20want%20to%20see%20how%20my%20banquet%20compares%20with%20others%20nearby" target="_blank" rel="noopener noreferrer">Compare with banquets nearby</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p class="footer-bottom__copy">&copy; 2026 DigiVenue. All rights reserved.</p>
+        <nav class="footer-bottom__legal" aria-label="Legal links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js" defer></script>
+</body>
+</html>

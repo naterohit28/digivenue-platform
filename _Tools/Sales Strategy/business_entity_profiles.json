@@ -1,0 +1,2186 @@
+{
+  "Swagat Banquet Hall": {
+    "business_name": "Swagat Banquet Hall",
+    "owner": "Owner",
+    "type": "Standalone Banquet",
+    "capacity": "300 - 800",
+    "contact_info": {
+      "phone": "9819576256",
+      "email": "contact@venue.com",
+      "address": "Goregaon, Mumbai, Maharashtra"
+    },
+    "digital_properties": {
+      "website": "None",
+      "instagram": "None"
+    },
+    "deal_dynamics": {
+      "decision_maker": "Unknown",
+      "budget_interest": "Medium",
+      "timeline": "Casual",
+      "close_probability_percent": 40
+    }
+  },
+  "Swatantryaveer Savarkar Sabhagriha": {
+    "business_name": "Swatantryaveer Savarkar Sabhagriha",
+    "owner": "Owner",
+    "type": "Standalone Banquet",
+    "capacity": "300 - 800",
+    "contact_info": {
+      "phone": "9819576256",
+      "email": "contact@venue.com",
+      "address": "Shivaji Park, Mumbai, Maharashtra"
+    },
+    "digital_properties": {
+      "website": "None",
+      "instagram": "None"
+    },
+    "deal_dynamics": {
+      "decision_maker": "Yes",
+      "budget_interest": "Medium",
+      "timeline": "Casual",
+      "close_probability_percent": 55
+    }
+  },
+  "Kohinoor Hall": {
+    "business_name": "Kohinoor Hall",
+    "owner": "Owner",
+    "type": "Standalone Banquet",
+    "capacity": "300 - 800",
+    "contact_info": {
+      "phone": "9819576256",
+      "email": "contact@venue.com",
+      "address": "Dadar, Mumbai, Maharashtra"
+    },
+    "digital_properties": {
+      "website": "None",
+      "instagram": "None"
+    },
+    "deal_dynamics": {
+      "decision_maker": "Yes",
+      "budget_interest": "Medium",
+      "timeline": "Casual",
+      "close_probability_percent": 55
+    }
+  },
+  "Mayfair Banquets": {
+    "business_name": "Mayfair Banquets",
+    "owner": "Owner",
+    "type": "Standalone Banquet",
+    "capacity": "300 - 800",
+    "contact_info": {
+      "phone": "9819576256",
+      "email": "contact@venue.com",
+      "address": "Worli, Mumbai, Maharashtra"
+    },
+    "digital_properties": {
+      "website": "None",
+      "instagram": "@mayfairbanquets_mumbai"
+    },
+    "deal_dynamics": {
+      "decision_maker": "Unknown",
+      "budget_interest": "Medium",
+      "timeline": "Casual",
+      "close_probability_percent": 50
+    }
+  },
+  "Jewel of India (Jade Ballroom)": {
+    "business_name": "Jewel of India (Jade Ballroom)",
+    "owner": "Owner",
+    "type": "Standalone Banquet",
+    "capacity": "300 - 800",
+    "contact_info": {
+      "phone": "9819576256",
+      "email": "contact@venue.com",
+      "address": "Worli, Mumbai, Maharashtra"
+    },
+    "digital_properties": {
+      "website": "None",
+      "instagram": "@jewelofindia(jadeballroom)_mumbai"
+    },
+    "deal_dynamics": {
+      "decision_maker": "Unknown",
+      "budget_interest": "Medium",
+      "timeline": "Casual",
+      "close_probability_percent": 50
+    }
+  },
+  "Ramee Guestline Banquets": {
+    "business_name": "Ramee Guestline Banquets",
+    "owner": "Owner",
+    "type": "Standalone Banquet",
+    "capacity": "300 - 800",
+    "contact_info": {
+      "phone": "9819576256",
+      "email": "contact@venue.com",
+      "address": "Dadar, Mumbai, Maharashtra"
+    },
+    "digital_properties": {
+      "website": "None",
+      "instagram": "@rameeguestlinebanquets_mumbai"
+    },
+    "deal_dynamics": {
+      "decision_maker": "Yes",
+      "budget_interest": "High",
+      "timeline": "Urgent",
+      "close_probability_percent": 65
+    }
+  },
+  "Ahilyadevi Sabhagruh": {
+    "business_name": "Ahilyadevi Sabhagruh",
+    "owner": "Owner",
+    "type": "Standalone Banquet",
+    "capacity": "300 - 800",
+    "contact_info": {
+      "phone": "9819576256",
+      "email": "contact@venue.com",
+      "address": "Dadar, Mumbai, Maharashtra"
+    },
+    "digital_properties": {
+      "website": "None",
+      "instagram": "@ahilyadevisabhagruh_mumbai"
+    },
+    "deal_dynamics": {
+      "decision_maker": "Yes",
+      "budget_interest": "High",
+      "timeline": "Casual",
+      "close_probability_percent": 60
+    }
+  },
+  "Lala Lajpatrai Hall": {
+    "business_name": "Lala Lajpatrai Hall",
+    "owner": "Owner",
+    "type": "Standalone Banquet",
+    "capacity": "300 - 800",
+    "contact_info": {
+      "phone": "9819576256",
+      "email": "contact@venue.com",
+      "address": "Mahalaxmi, Mumbai, Maharashtra"
+    },
+    "digital_properties": {
+      "website": "None",
+      "instagram": "@lalalajpatraihall_mumbai"
+    },
+    "deal_dynamics": {
+      "decision_maker": "Unknown",
+      "budget_interest": "Medium",
+      "timeline": "Casual",
+      "close_probability_percent": 50
+    }
+  },
+  "Royal Symphony Banquet": {
+    "business_name": "Royal Symphony Banquet",
+    "owner": "Owner",
+    "type": "Standalone Banquet",
+    "capacity": "300 - 800",
+    "contact_info": {
+      "phone": "9819576256",
+      "email": "contact@venue.com",
+      "address": "Malad East, Mumbai, Maharashtra"
+    },
+    "digital_properties": {
+      "website": "None",
+      "instagram": "@royalsymphonybanquet_mumbai"
+    },
+    "deal_dynamics": {
+      "decision_maker": "Unknown",
+      "budget_interest": "Medium",
+      "timeline": "Casual",
+      "close_probability_percent": 50
+    }
+  },
+  "Dadar Gymkhana Banquets": {
+    "business_name": "Dadar Gymkhana Banquets",
+    "owner": "Owner",
+    "type": "Standalone Banquet",
+    "capacity": "300 - 800",
+    "contact_info": {
+      "phone": "9819576256",
+      "email": "contact@venue.com",
+      "address": "Shivaji Park, Mumbai, Maharashtra"
+    },
+    "digital_properties": {
+      "website": "None",
+      "instagram": "@dadargymkhanabanquets"
+    },
+    "deal_dynamics": {
+      "decision_maker": "Unknown",
+      "budget_interest": "Medium",
+      "timeline": "Casual",
+      "close_probability_percent": 50
+    }
+  },
+  "Sharda Sabhagriha": {
+    "business_name": "Sharda Sabhagriha",
+    "owner": "Owner",
+    "type": "Standalone Banquet",
+    "capacity": "300 - 800",
+    "contact_info": {
+      "phone": "9819576256",
+      "email": "contact@venue.com",
+      "address": "Dadar, Mumbai, Maharashtra"
+    },
+    "digital_properties": {
+      "website": "None",
+      "instagram": "None"
+    },
+    "deal_dynamics": {
+      "decision_maker": "Yes",
+      "budget_interest": "High",
+      "timeline": "Casual",
+      "close_probability_percent": 60
+    }
+  },
+  "P. L. Deshpande Mini Hall": {
+    "business_name": "P. L. Deshpande Mini Hall",
+    "owner": "Owner",
+    "type": "Standalone Banquet",
+    "capacity": "300 - 800",
+    "contact_info": {
+      "phone": "9819576256",
+      "email": "contact@venue.com",
+      "address": "Prabhadevi, Mumbai, Maharashtra"
+    },
+    "digital_properties": {
+      "website": "None",
+      "instagram": "None"
+    },
+    "deal_dynamics": {
+      "decision_maker": "Yes",
+      "budget_interest": "Medium",
+      "timeline": "Casual",
+      "close_probability_percent": 55
+    }
+  },
+  "Maharashtra College Hall": {
+    "business_name": "Maharashtra College Hall",
+    "owner": "Owner",
+    "type": "Standalone Banquet",
+    "capacity": "300 - 800",
+    "contact_info": {
+      "phone": "9819576256",
+      "email": "contact@venue.com",
+      "address": "Byculla, Mumbai, Maharashtra"
+    },
+    "digital_properties": {
+      "website": "None",
+      "instagram": "None"
+    },
+    "deal_dynamics": {
+      "decision_maker": "Unknown",
+      "budget_interest": "Medium",
+      "timeline": "Casual",
+      "close_probability_percent": 40
+    }
+  },
+  "Bombay Y.M.C.A. Banquets": {
+    "business_name": "Bombay Y.M.C.A. Banquets",
+    "owner": "Owner",
+    "type": "Standalone Banquet",
+    "capacity": "300 - 800",
+    "contact_info": {
+      "phone": "9819576256",
+      "email": "contact@venue.com",
+      "address": "Colaba, Mumbai, Maharashtra"
+    },
+    "digital_properties": {
+      "website": "None",
+      "instagram": "@bombayy.m.c.a.banquets_mumbai"
+    },
+    "deal_dynamics": {
+      "decision_maker": "Unknown",
+      "budget_interest": "Medium",
+      "timeline": "Casual",
+      "close_probability_percent": 50
+    }
+  },
+  "Royal Garden Banquet": {
+    "business_name": "Royal Garden Banquet",
+    "owner": "Owner",
+    "type": "Standalone Banquet",
+    "capacity": "300 - 800",
+    "contact_info": {
+      "phone": "9819576256",
+      "email": "contact@venue.com",
+      "address": "Dadar, Mumbai, Maharashtra"
+    },
+    "digital_properties": {
+      "website": "None",
+      "instagram": "@royalgardenbanquet_mumbai"
+    },
+    "deal_dynamics": {
+      "decision_maker": "Yes",
+      "budget_interest": "High",
+      "timeline": "Casual",
+      "close_probability_percent": 60
+    }
+  },
+  "Hindu Gymkhana Grounds": {
+    "business_name": "Hindu Gymkhana Grounds",
+    "owner": "Owner",
+    "type": "Standalone Banquet",
+    "capacity": "300 - 800",
+    "contact_info": {
+      "phone": "9819576256",
+      "email": "contact@venue.com",
+      "address": "Marine Drive, Mumbai, Maharashtra"
+    },
+    "digital_properties": {
+      "website": "None",
+      "instagram": "@hindugymkhanagrounds_mumbai"
+    },
+    "deal_dynamics": {
+      "decision_maker": "Yes",
+      "budget_interest": "Medium",
+      "timeline": "Casual",
+      "close_probability_percent": 55
+    }
+  },
+  "Parsi Gymkhana Grounds": {
+    "business_name": "Parsi Gymkhana Grounds",
+    "owner": "Owner",
+    "type": "Standalone Banquet",
+    "capacity": "300 - 800",
+    "contact_info": {
+      "phone": "9819576256",
+      "email": "contact@venue.com",
+      "address": "Marine Drive, Mumbai, Maharashtra"
+    },
+    "digital_properties": {
+      "website": "None",
+      "instagram": "@parsigymkhanagrounds_mumbai"
+    },
+    "deal_dynamics": {
+      "decision_maker": "Unknown",
+      "budget_interest": "Medium",
+      "timeline": "Casual",
+      "close_probability_percent": 50
+    }
+  },
+  "Wodehouse Gymkhana Banquets": {
+    "business_name": "Wodehouse Gymkhana Banquets",
+    "owner": "Owner",
+    "type": "Standalone Banquet",
+    "capacity": "300 - 800",
+    "contact_info": {
+      "phone": "9819576256",
+      "email": "contact@venue.com",
+      "address": "Colaba, Mumbai, Maharashtra"
+    },
+    "digital_properties": {
+      "website": "None",
+      "instagram": "@wodehousegymkhanabanquets_mumbai"
+    },
+    "deal_dynamics": {
+      "decision_maker": "Unknown",
+      "budget_interest": "Medium",
+      "timeline": "Casual",
+      "close_probability_percent": 50
+    }
+  },
+  "Vivette Luxury Banquets": {
+    "business_name": "Vivette Luxury Banquets",
+    "owner": "Owner",
+    "type": "Standalone Banquet",
+    "capacity": "300 - 800",
+    "contact_info": {
+      "phone": "9819576256",
+      "email": "contact@venue.com",
+      "address": "Malad West, Mumbai, Maharashtra"
+    },
+    "digital_properties": {
+      "website": "None",
+      "instagram": "@vivetteluxurybanquets"
+    },
+    "deal_dynamics": {
+      "decision_maker": "Unknown",
+      "budget_interest": "Low",
+      "timeline": "Casual",
+      "close_probability_percent": 30
+    }
+  },
+  "Evershine Banquets": {
+    "business_name": "Evershine Banquets",
+    "owner": "Owner",
+    "type": "Standalone Banquet",
+    "capacity": "300 - 800",
+    "contact_info": {
+      "phone": "9819576256",
+      "email": "contact@venue.com",
+      "address": "Malad West, Mumbai, Maharashtra"
+    },
+    "digital_properties": {
+      "website": "None",
+      "instagram": "@evershinebanquets"
+    },
+    "deal_dynamics": {
+      "decision_maker": "Unknown",
+      "budget_interest": "Low",
+      "timeline": "Casual",
+      "close_probability_percent": 30
+    }
+  },
+  "Merchant Banquet Hall": {
+    "business_name": "Merchant Banquet Hall",
+    "owner": "Owner",
+    "type": "Standalone Banquet",
+    "capacity": "300 - 800",
+    "contact_info": {
+      "phone": "9819576256",
+      "email": "contact@venue.com",
+      "address": "Malad West, Mumbai, Maharashtra"
+    },
+    "digital_properties": {
+      "website": "None",
+      "instagram": "None"
+    },
+    "deal_dynamics": {
+      "decision_maker": "Unknown",
+      "budget_interest": "Medium",
+      "timeline": "Casual",
+      "close_probability_percent": 50
+    }
+  },
+  "Golden Leaf Banquet": {
+    "business_name": "Golden Leaf Banquet",
+    "owner": "Owner",
+    "type": "Standalone Banquet",
+    "capacity": "300 - 800",
+    "contact_info": {
+      "phone": "9819576256",
+      "email": "contact@venue.com",
+      "address": "Malad West, Mumbai, Maharashtra"
+    },
+    "digital_properties": {
+      "website": "None",
+      "instagram": "None"
+    },
+    "deal_dynamics": {
+      "decision_maker": "Unknown",
+      "budget_interest": "Medium",
+      "timeline": "Casual",
+      "close_probability_percent": 40
+    }
+  },
+  "Royal Orchid Banquets": {
+    "business_name": "Royal Orchid Banquets",
+    "owner": "Owner",
+    "type": "Standalone Banquet",
+    "capacity": "300 - 800",
+    "contact_info": {
+      "phone": "9819576256",
+      "email": "contact@venue.com",
+      "address": "Chembur, Mumbai, Maharashtra"
+    },
+    "digital_properties": {
+      "website": "None",
+      "instagram": "None"
+    },
+    "deal_dynamics": {
+      "decision_maker": "Yes",
+      "budget_interest": "Medium",
+      "timeline": "Casual",
+      "close_probability_percent": 55
+    }
+  },
+  "The Acres Club": {
+    "business_name": "The Acres Club",
+    "owner": "Owner",
+    "type": "Standalone Banquet",
+    "capacity": "300 - 800",
+    "contact_info": {
+      "phone": "9819576256",
+      "email": "contact@venue.com",
+      "address": "Chembur, Mumbai, Maharashtra"
+    },
+    "digital_properties": {
+      "website": "None",
+      "instagram": "@theacresclub_mumbai"
+    },
+    "deal_dynamics": {
+      "decision_maker": "Yes",
+      "budget_interest": "High",
+      "timeline": "Casual",
+      "close_probability_percent": 60
+    }
+  },
+  "GCC Hotel and Club": {
+    "business_name": "GCC Hotel and Club",
+    "owner": "Owner",
+    "type": "Standalone Banquet",
+    "capacity": "300 - 800",
+    "contact_info": {
+      "phone": "9819576256",
+      "email": "contact@venue.com",
+      "address": "Mira Road, Mumbai, Maharashtra"
+    },
+    "digital_properties": {
+      "website": "None",
+      "instagram": "@gcchotelandclub_mumbai"
+    },
+    "deal_dynamics": {
+      "decision_maker": "Unknown",
+      "budget_interest": "Medium",
+      "timeline": "Casual",
+      "close_probability_percent": 50
+    }
+  },
+  "Juhu Club Millennium": {
+    "business_name": "Juhu Club Millennium",
+    "owner": "Owner",
+    "type": "Standalone Banquet",
+    "capacity": "300 - 800",
+    "contact_info": {
+      "phone": "9819576256",
+      "email": "contact@venue.com",
+      "address": "Juhu, Mumbai, Maharashtra"
+    },
+    "digital_properties": {
+      "website": "None",
+      "instagram": "@juhuclubmillennium_mumbai"
+    },
+    "deal_dynamics": {
+      "decision_maker": "Yes",
+      "budget_interest": "Medium",
+      "timeline": "Casual",
+      "close_probability_percent": 55
+    }
+  },
+  "Goldfinch Banquets": {
+    "business_name": "Goldfinch Banquets",
+    "owner": "Owner",
+    "type": "Standalone Banquet",
+    "capacity": "300 - 800",
+    "contact_info": {
+      "phone": "9819576256",
+      "email": "contact@venue.com",
+      "address": "Andheri East, Mumbai, Maharashtra"
+    },
+    "digital_properties": {
+      "website": "None",
+      "instagram": "@goldfinchbanquets_mumbai"
+    },
+    "deal_dynamics": {
+      "decision_maker": "Unknown",
+      "budget_interest": "Medium",
+      "timeline": "Casual",
+      "close_probability_percent": 50
+    }
+  },
+  "Tunga Paradise Banquet": {
+    "business_name": "Tunga Paradise Banquet",
+    "owner": "Owner",
+    "type": "Standalone Banquet",
+    "capacity": "300 - 800",
+    "contact_info": {
+      "phone": "9819576256",
+      "email": "contact@venue.com",
+      "address": "Andheri East, Mumbai, Maharashtra"
+    },
+    "digital_properties": {
+      "website": "None",
+      "instagram": "@tungaparadisebanquet_mumbai"
+    },
+    "deal_dynamics": {
+      "decision_maker": "Unknown",
+      "budget_interest": "Medium",
+      "timeline": "Casual",
+      "close_probability_percent": 50
+    }
+  },
+  "VITS Hotel Banquets": {
+    "business_name": "VITS Hotel Banquets",
+    "owner": "Owner",
+    "type": "Standalone Banquet",
+    "capacity": "300 - 800",
+    "contact_info": {
+      "phone": "9819576256",
+      "email": "contact@venue.com",
+      "address": "Andheri East, Mumbai, Maharashtra"
+    },
+    "digital_properties": {
+      "website": "None",
+      "instagram": "@vitshotelbanquets"
+    },
+    "deal_dynamics": {
+      "decision_maker": "Unknown",
+      "budget_interest": "Low",
+      "timeline": "Casual",
+      "close_probability_percent": 30
+    }
+  },
+  "Peninsula Grand Banquets": {
+    "business_name": "Peninsula Grand Banquets",
+    "owner": "Owner",
+    "type": "Standalone Banquet",
+    "capacity": "300 - 800",
+    "contact_info": {
+      "phone": "9819576256",
+      "email": "contact@venue.com",
+      "address": "Sakinaka, Mumbai, Maharashtra"
+    },
+    "digital_properties": {
+      "website": "None",
+      "instagram": "@peninsulagrandbanquets"
+    },
+    "deal_dynamics": {
+      "decision_maker": "Unknown",
+      "budget_interest": "Low",
+      "timeline": "Casual",
+      "close_probability_percent": 30
+    }
+  },
+  "Kohinoor Continental Banquets": {
+    "business_name": "Kohinoor Continental Banquets",
+    "owner": "Owner",
+    "type": "Standalone Banquet",
+    "capacity": "300 - 800",
+    "contact_info": {
+      "phone": "9819576256",
+      "email": "contact@venue.com",
+      "address": "Andheri East, Mumbai, Maharashtra"
+    },
+    "digital_properties": {
+      "website": "None",
+      "instagram": "None"
+    },
+    "deal_dynamics": {
+      "decision_maker": "Unknown",
+      "budget_interest": "Medium",
+      "timeline": "Casual",
+      "close_probability_percent": 50
+    }
+  },
+  "Imperial Hall": {
+    "business_name": "Imperial Hall",
+    "owner": "Owner",
+    "type": "Standalone Banquet",
+    "capacity": "300 - 800",
+    "contact_info": {
+      "phone": "9819576256",
+      "email": "contact@venue.com",
+      "address": "Ghatkopar, Mumbai, Maharashtra"
+    },
+    "digital_properties": {
+      "website": "None",
+      "instagram": "None"
+    },
+    "deal_dynamics": {
+      "decision_maker": "Unknown",
+      "budget_interest": "Medium",
+      "timeline": "Casual",
+      "close_probability_percent": 40
+    }
+  },
+  "Elegance Banquet": {
+    "business_name": "Elegance Banquet",
+    "owner": "Owner",
+    "type": "Standalone Banquet",
+    "capacity": "300 - 800",
+    "contact_info": {
+      "phone": "9819576256",
+      "email": "contact@venue.com",
+      "address": "Borivali, Mumbai, Maharashtra"
+    },
+    "digital_properties": {
+      "website": "None",
+      "instagram": "@elegancebanquet_mumbai"
+    },
+    "deal_dynamics": {
+      "decision_maker": "Unknown",
+      "budget_interest": "Medium",
+      "timeline": "Casual",
+      "close_probability_percent": 50
+    }
+  },
+  "Sumati Hall": {
+    "business_name": "Sumati Hall",
+    "owner": "Owner",
+    "type": "Standalone Banquet",
+    "capacity": "300 - 800",
+    "contact_info": {
+      "phone": "9819576256",
+      "email": "contact@venue.com",
+      "address": "Ghatkopar East, Mumbai, Maharashtra"
+    },
+    "digital_properties": {
+      "website": "None",
+      "instagram": "@sumatihall_mumbai"
+    },
+    "deal_dynamics": {
+      "decision_maker": "Yes",
+      "budget_interest": "Medium",
+      "timeline": "Casual",
+      "close_probability_percent": 55
+    }
+  },
+  "Utsav Banquet Hall": {
+    "business_name": "Utsav Banquet Hall",
+    "owner": "Owner",
+    "type": "Standalone Banquet",
+    "capacity": "300 - 800",
+    "contact_info": {
+      "phone": "9819576256",
+      "email": "contact@venue.com",
+      "address": "Bhandup, Mumbai, Maharashtra"
+    },
+    "digital_properties": {
+      "website": "None",
+      "instagram": "@utsavbanquethall_mumbai"
+    },
+    "deal_dynamics": {
+      "decision_maker": "Unknown",
+      "budget_interest": "Medium",
+      "timeline": "Casual",
+      "close_probability_percent": 50
+    }
+  },
+  "Dreamland Banquet Hall": {
+    "business_name": "Dreamland Banquet Hall",
+    "owner": "Owner",
+    "type": "Standalone Banquet",
+    "capacity": "300 - 800",
+    "contact_info": {
+      "phone": "9819576256",
+      "email": "contact@venue.com",
+      "address": "Bhandup, Mumbai, Maharashtra"
+    },
+    "digital_properties": {
+      "website": "None",
+      "instagram": "@dreamlandbanquethall_mumbai"
+    },
+    "deal_dynamics": {
+      "decision_maker": "Unknown",
+      "budget_interest": "Medium",
+      "timeline": "Casual",
+      "close_probability_percent": 50
+    }
+  },
+  "The Gateway Banquet": {
+    "business_name": "The Gateway Banquet",
+    "owner": "Owner",
+    "type": "Standalone Banquet",
+    "capacity": "300 - 800",
+    "contact_info": {
+      "phone": "9819576256",
+      "email": "contact@venue.com",
+      "address": "Mulund West, Mumbai, Maharashtra"
+    },
+    "digital_properties": {
+      "website": "None",
+      "instagram": "@thegatewaybanquet"
+    },
+    "deal_dynamics": {
+      "decision_maker": "Unknown",
+      "budget_interest": "Low",
+      "timeline": "Casual",
+      "close_probability_percent": 30
+    }
+  },
+  "Shehnai Banquet Hall": {
+    "business_name": "Shehnai Banquet Hall",
+    "owner": "Owner",
+    "type": "Standalone Banquet",
+    "capacity": "300 - 800",
+    "contact_info": {
+      "phone": "9819576256",
+      "email": "contact@venue.com",
+      "address": "Mulund East, Mumbai, Maharashtra"
+    },
+    "digital_properties": {
+      "website": "None",
+      "instagram": "@shehnaibanquethall"
+    },
+    "deal_dynamics": {
+      "decision_maker": "Unknown",
+      "budget_interest": "Low",
+      "timeline": "Casual",
+      "close_probability_percent": 30
+    }
+  },
+  "Blossom Banquet Hall": {
+    "business_name": "Blossom Banquet Hall",
+    "owner": "Owner",
+    "type": "Standalone Banquet",
+    "capacity": "300 - 800",
+    "contact_info": {
+      "phone": "9819576256",
+      "email": "contact@venue.com",
+      "address": "Kurla, Mumbai, Maharashtra"
+    },
+    "digital_properties": {
+      "website": "None",
+      "instagram": "None"
+    },
+    "deal_dynamics": {
+      "decision_maker": "Unknown",
+      "budget_interest": "Medium",
+      "timeline": "Casual",
+      "close_probability_percent": 50
+    }
+  },
+  "Club Emerald Banquets": {
+    "business_name": "Club Emerald Banquets",
+    "owner": "Owner",
+    "type": "Standalone Banquet",
+    "capacity": "300 - 800",
+    "contact_info": {
+      "phone": "9819576256",
+      "email": "contact@venue.com",
+      "address": "Chembur, Mumbai, Maharashtra"
+    },
+    "digital_properties": {
+      "website": "None",
+      "instagram": "None"
+    },
+    "deal_dynamics": {
+      "decision_maker": "Yes",
+      "budget_interest": "Medium",
+      "timeline": "Casual",
+      "close_probability_percent": 55
+    }
+  },
+  "GCC Club Lawn": {
+    "business_name": "GCC Club Lawn",
+    "owner": "Owner",
+    "type": "Standalone Banquet",
+    "capacity": "300 - 800",
+    "contact_info": {
+      "phone": "9819576256",
+      "email": "contact@venue.com",
+      "address": "Mira Road, Mumbai, Maharashtra"
+    },
+    "digital_properties": {
+      "website": "None",
+      "instagram": "None"
+    },
+    "deal_dynamics": {
+      "decision_maker": "Unknown",
+      "budget_interest": "Medium",
+      "timeline": "Casual",
+      "close_probability_percent": 40
+    }
+  },
+  "Sapphire Banquet": {
+    "business_name": "Sapphire Banquet",
+    "owner": "Owner",
+    "type": "Standalone Banquet",
+    "capacity": "300 - 800",
+    "contact_info": {
+      "phone": "9819576256",
+      "email": "contact@venue.com",
+      "address": "Kanjurmarg, Mumbai, Maharashtra"
+    },
+    "digital_properties": {
+      "website": "None",
+      "instagram": "@sapphirebanquet_mumbai"
+    },
+    "deal_dynamics": {
+      "decision_maker": "Unknown",
+      "budget_interest": "Medium",
+      "timeline": "Casual",
+      "close_probability_percent": 50
+    }
+  },
+  "Grand Banquet at The Club": {
+    "business_name": "Grand Banquet at The Club",
+    "owner": "Owner",
+    "type": "Standalone Banquet",
+    "capacity": "300 - 800",
+    "contact_info": {
+      "phone": "9819576256",
+      "email": "contact@venue.com",
+      "address": "Andheri West, Mumbai, Maharashtra"
+    },
+    "digital_properties": {
+      "website": "None",
+      "instagram": "@grandbanquetattheclub_mumbai"
+    },
+    "deal_dynamics": {
+      "decision_maker": "Unknown",
+      "budget_interest": "Medium",
+      "timeline": "Casual",
+      "close_probability_percent": 50
+    }
+  },
+  "Eskay Resorts Lawn": {
+    "business_name": "Eskay Resorts Lawn",
+    "owner": "Owner",
+    "type": "Standalone Banquet",
+    "capacity": "300 - 800",
+    "contact_info": {
+      "phone": "9819576256",
+      "email": "contact@venue.com",
+      "address": "Borivali West, Mumbai, Maharashtra"
+    },
+    "digital_properties": {
+      "website": "None",
+      "instagram": "@eskayresortslawn_mumbai"
+    },
+    "deal_dynamics": {
+      "decision_maker": "Yes",
+      "budget_interest": "Medium",
+      "timeline": "Casual",
+      "close_probability_percent": 55
+    }
+  },
+  "Hotel Tip Top Plaza": {
+    "business_name": "Hotel Tip Top Plaza",
+    "owner": "Owner",
+    "type": "Standalone Banquet",
+    "capacity": "300 - 800",
+    "contact_info": {
+      "phone": "9819576256",
+      "email": "contact@venue.com",
+      "address": "Thane West, Mumbai, Maharashtra"
+    },
+    "digital_properties": {
+      "website": "None",
+      "instagram": "@hoteltiptopplaza_mumbai"
+    },
+    "deal_dynamics": {
+      "decision_maker": "Unknown",
+      "budget_interest": "Medium",
+      "timeline": "Casual",
+      "close_probability_percent": 50
+    }
+  },
+  "iLeaf Ritz Banquets": {
+    "business_name": "iLeaf Ritz Banquets",
+    "owner": "Owner",
+    "type": "Standalone Banquet",
+    "capacity": "300 - 800",
+    "contact_info": {
+      "phone": "9819576256",
+      "email": "contact@venue.com",
+      "address": "Thane West, Mumbai, Maharashtra"
+    },
+    "digital_properties": {
+      "website": "None",
+      "instagram": "@ileafritzbanquets_mumbai"
+    },
+    "deal_dynamics": {
+      "decision_maker": "Unknown",
+      "budget_interest": "Medium",
+      "timeline": "Casual",
+      "close_probability_percent": 50
+    }
+  },
+  "Satkar Grand Banquets": {
+    "business_name": "Satkar Grand Banquets",
+    "owner": "Owner",
+    "type": "Standalone Banquet",
+    "capacity": "300 - 800",
+    "contact_info": {
+      "phone": "9819576256",
+      "email": "contact@venue.com",
+      "address": "Thane West, Mumbai, Maharashtra"
+    },
+    "digital_properties": {
+      "website": "None",
+      "instagram": "@satkargrandbanquets"
+    },
+    "deal_dynamics": {
+      "decision_maker": "Unknown",
+      "budget_interest": "Low",
+      "timeline": "Casual",
+      "close_probability_percent": 30
+    }
+  },
+  "Madhav Banquet": {
+    "business_name": "Madhav Banquet",
+    "owner": "Owner",
+    "type": "Standalone Banquet",
+    "capacity": "300 - 800",
+    "contact_info": {
+      "phone": "9819576256",
+      "email": "contact@venue.com",
+      "address": "Thane West, Mumbai, Maharashtra"
+    },
+    "digital_properties": {
+      "website": "None",
+      "instagram": "@madhavbanquet"
+    },
+    "deal_dynamics": {
+      "decision_maker": "Unknown",
+      "budget_interest": "Low",
+      "timeline": "Casual",
+      "close_probability_percent": 30
+    }
+  },
+  "All Heavens Banquet": {
+    "business_name": "All Heavens Banquet",
+    "owner": "Owner",
+    "type": "Standalone Banquet",
+    "capacity": "300 - 800",
+    "contact_info": {
+      "phone": "9819576256",
+      "email": "contact@venue.com",
+      "address": "Thane West, Mumbai, Maharashtra"
+    },
+    "digital_properties": {
+      "website": "None",
+      "instagram": "None"
+    },
+    "deal_dynamics": {
+      "decision_maker": "Unknown",
+      "budget_interest": "Medium",
+      "timeline": "Casual",
+      "close_probability_percent": 50
+    }
+  },
+  "Maharaja Banquet": {
+    "business_name": "Maharaja Banquet",
+    "owner": "Owner",
+    "type": "Standalone Banquet",
+    "capacity": "300 - 800",
+    "contact_info": {
+      "phone": "9819576256",
+      "email": "contact@venue.com",
+      "address": "Ghodbunder Rd, Mumbai, Maharashtra"
+    },
+    "digital_properties": {
+      "website": "None",
+      "instagram": "None"
+    },
+    "deal_dynamics": {
+      "decision_maker": "Unknown",
+      "budget_interest": "Medium",
+      "timeline": "Casual",
+      "close_probability_percent": 40
+    }
+  },
+  "Exotica Yeoor Hills": {
+    "business_name": "Exotica Yeoor Hills",
+    "owner": "Owner",
+    "type": "Standalone Banquet",
+    "capacity": "300 - 800",
+    "contact_info": {
+      "phone": "9819576256",
+      "email": "contact@venue.com",
+      "address": "Yeoor Hills, Mumbai, Maharashtra"
+    },
+    "digital_properties": {
+      "website": "None",
+      "instagram": "None"
+    },
+    "deal_dynamics": {
+      "decision_maker": "Unknown",
+      "budget_interest": "Medium",
+      "timeline": "Casual",
+      "close_probability_percent": 40
+    }
+  },
+  "Bramha Banquet": {
+    "business_name": "Bramha Banquet",
+    "owner": "Owner",
+    "type": "Standalone Banquet",
+    "capacity": "300 - 800",
+    "contact_info": {
+      "phone": "9819576256",
+      "email": "contact@venue.com",
+      "address": "Thane West, Mumbai, Maharashtra"
+    },
+    "digital_properties": {
+      "website": "None",
+      "instagram": "@bramhabanquet_mumbai"
+    },
+    "deal_dynamics": {
+      "decision_maker": "Unknown",
+      "budget_interest": "Medium",
+      "timeline": "Casual",
+      "close_probability_percent": 50
+    }
+  },
+  "Symphony Banquet": {
+    "business_name": "Symphony Banquet",
+    "owner": "Owner",
+    "type": "Standalone Banquet",
+    "capacity": "300 - 800",
+    "contact_info": {
+      "phone": "9819576256",
+      "email": "contact@venue.com",
+      "address": "Thane West, Mumbai, Maharashtra"
+    },
+    "digital_properties": {
+      "website": "None",
+      "instagram": "@symphonybanquet_mumbai"
+    },
+    "deal_dynamics": {
+      "decision_maker": "Unknown",
+      "budget_interest": "Medium",
+      "timeline": "Casual",
+      "close_probability_percent": 50
+    }
+  },
+  "Korum Mall Banquets": {
+    "business_name": "Korum Mall Banquets",
+    "owner": "Owner",
+    "type": "Standalone Banquet",
+    "capacity": "300 - 800",
+    "contact_info": {
+      "phone": "9819576256",
+      "email": "contact@venue.com",
+      "address": "Eastern Exp Hwy, Mumbai, Maharashtra"
+    },
+    "digital_properties": {
+      "website": "None",
+      "instagram": "@korummallbanquets_mumbai"
+    },
+    "deal_dynamics": {
+      "decision_maker": "Yes",
+      "budget_interest": "Medium",
+      "timeline": "Casual",
+      "close_probability_percent": 55
+    }
+  },
+  "Regency Hall": {
+    "business_name": "Regency Hall",
+    "owner": "Owner",
+    "type": "Standalone Banquet",
+    "capacity": "300 - 800",
+    "contact_info": {
+      "phone": "9819576256",
+      "email": "contact@venue.com",
+      "address": "Kalyan, Mumbai, Maharashtra"
+    },
+    "digital_properties": {
+      "website": "None",
+      "instagram": "@regencyhall_mumbai"
+    },
+    "deal_dynamics": {
+      "decision_maker": "Unknown",
+      "budget_interest": "Medium",
+      "timeline": "Casual",
+      "close_probability_percent": 50
+    }
+  },
+  "Springtime Club": {
+    "business_name": "Springtime Club",
+    "owner": "Owner",
+    "type": "Standalone Banquet",
+    "capacity": "300 - 800",
+    "contact_info": {
+      "phone": "9819576256",
+      "email": "contact@venue.com",
+      "address": "Kalyan, Mumbai, Maharashtra"
+    },
+    "digital_properties": {
+      "website": "None",
+      "instagram": "@springtimeclub_mumbai"
+    },
+    "deal_dynamics": {
+      "decision_maker": "Unknown",
+      "budget_interest": "Medium",
+      "timeline": "Casual",
+      "close_probability_percent": 50
+    }
+  },
+  "Guru Nanak Darbar Banquet": {
+    "business_name": "Guru Nanak Darbar Banquet",
+    "owner": "Owner",
+    "type": "Standalone Banquet",
+    "capacity": "300 - 800",
+    "contact_info": {
+      "phone": "9819576256",
+      "email": "contact@venue.com",
+      "address": "Thane East, Mumbai, Maharashtra"
+    },
+    "digital_properties": {
+      "website": "None",
+      "instagram": "@gurunanakdarbarbanquet"
+    },
+    "deal_dynamics": {
+      "decision_maker": "Unknown",
+      "budget_interest": "Low",
+      "timeline": "Casual",
+      "close_probability_percent": 30
+    }
+  },
+  "Shangrila Resort": {
+    "business_name": "Shangrila Resort",
+    "owner": "Owner",
+    "type": "Standalone Banquet",
+    "capacity": "300 - 800",
+    "contact_info": {
+      "phone": "9819576256",
+      "email": "contact@venue.com",
+      "address": "Bhiwandi Road, Mumbai, Maharashtra"
+    },
+    "digital_properties": {
+      "website": "None",
+      "instagram": "@shangrilaresort"
+    },
+    "deal_dynamics": {
+      "decision_maker": "Unknown",
+      "budget_interest": "Low",
+      "timeline": "Casual",
+      "close_probability_percent": 30
+    }
+  },
+  "Shaurya Banquet": {
+    "business_name": "Shaurya Banquet",
+    "owner": "Owner",
+    "type": "Standalone Banquet",
+    "capacity": "300 - 800",
+    "contact_info": {
+      "phone": "9819576256",
+      "email": "contact@venue.com",
+      "address": "Thane West, Mumbai, Maharashtra"
+    },
+    "digital_properties": {
+      "website": "None",
+      "instagram": "None"
+    },
+    "deal_dynamics": {
+      "decision_maker": "Unknown",
+      "budget_interest": "Medium",
+      "timeline": "Casual",
+      "close_probability_percent": 50
+    }
+  },
+  "Royal Banquet Hall": {
+    "business_name": "Royal Banquet Hall",
+    "owner": "Owner",
+    "type": "Standalone Banquet",
+    "capacity": "300 - 800",
+    "contact_info": {
+      "phone": "9819576256",
+      "email": "contact@venue.com",
+      "address": "Kalyan, Mumbai, Maharashtra"
+    },
+    "digital_properties": {
+      "website": "None",
+      "instagram": "None"
+    },
+    "deal_dynamics": {
+      "decision_maker": "Unknown",
+      "budget_interest": "Medium",
+      "timeline": "Casual",
+      "close_probability_percent": 40
+    }
+  },
+  "K. P. Banquet": {
+    "business_name": "K. P. Banquet",
+    "owner": "Owner",
+    "type": "Standalone Banquet",
+    "capacity": "300 - 800",
+    "contact_info": {
+      "phone": "9819576256",
+      "email": "contact@venue.com",
+      "address": "Thane West, Mumbai, Maharashtra"
+    },
+    "digital_properties": {
+      "website": "None",
+      "instagram": "None"
+    },
+    "deal_dynamics": {
+      "decision_maker": "Unknown",
+      "budget_interest": "Medium",
+      "timeline": "Casual",
+      "close_probability_percent": 40
+    }
+  },
+  "Nisarg Lawn & Banquet": {
+    "business_name": "Nisarg Lawn & Banquet",
+    "owner": "Owner",
+    "type": "Standalone Banquet",
+    "capacity": "300 - 800",
+    "contact_info": {
+      "phone": "9819576256",
+      "email": "contact@venue.com",
+      "address": "Kalyan, Mumbai, Maharashtra"
+    },
+    "digital_properties": {
+      "website": "None",
+      "instagram": "@nisarglawnandbanquet_mumbai"
+    },
+    "deal_dynamics": {
+      "decision_maker": "Unknown",
+      "budget_interest": "Medium",
+      "timeline": "Casual",
+      "close_probability_percent": 50
+    }
+  },
+  "Savitri Banquet Hall": {
+    "business_name": "Savitri Banquet Hall",
+    "owner": "Owner",
+    "type": "Standalone Banquet",
+    "capacity": "300 - 800",
+    "contact_info": {
+      "phone": "9819576256",
+      "email": "contact@venue.com",
+      "address": "Dombivli, Mumbai, Maharashtra"
+    },
+    "digital_properties": {
+      "website": "None",
+      "instagram": "@savitribanquethall_mumbai"
+    },
+    "deal_dynamics": {
+      "decision_maker": "Unknown",
+      "budget_interest": "Medium",
+      "timeline": "Casual",
+      "close_probability_percent": 50
+    }
+  },
+  "Golden Palace Banquet": {
+    "business_name": "Golden Palace Banquet",
+    "owner": "Owner",
+    "type": "Standalone Banquet",
+    "capacity": "300 - 800",
+    "contact_info": {
+      "phone": "9819576256",
+      "email": "contact@venue.com",
+      "address": "Dombivli, Mumbai, Maharashtra"
+    },
+    "digital_properties": {
+      "website": "None",
+      "instagram": "@goldenpalacebanquet_mumbai"
+    },
+    "deal_dynamics": {
+      "decision_maker": "Yes",
+      "budget_interest": "Medium",
+      "timeline": "Casual",
+      "close_probability_percent": 55
+    }
+  },
+  "iLeaf Grand Banquets": {
+    "business_name": "iLeaf Grand Banquets",
+    "owner": "Owner",
+    "type": "Standalone Banquet",
+    "capacity": "300 - 800",
+    "contact_info": {
+      "phone": "9819576256",
+      "email": "contact@venue.com",
+      "address": "Vashi, Mumbai, Maharashtra"
+    },
+    "digital_properties": {
+      "website": "None",
+      "instagram": "@ileafgrandbanquets_mumbai"
+    },
+    "deal_dynamics": {
+      "decision_maker": "Unknown",
+      "budget_interest": "Medium",
+      "timeline": "Casual",
+      "close_probability_percent": 50
+    }
+  },
+  "Grand Golden Banquet": {
+    "business_name": "Grand Golden Banquet",
+    "owner": "Owner",
+    "type": "Standalone Banquet",
+    "capacity": "300 - 800",
+    "contact_info": {
+      "phone": "9819576256",
+      "email": "contact@venue.com",
+      "address": "Vashi, Mumbai, Maharashtra"
+    },
+    "digital_properties": {
+      "website": "None",
+      "instagram": "@grandgoldenbanquet_mumbai"
+    },
+    "deal_dynamics": {
+      "decision_maker": "Unknown",
+      "budget_interest": "Medium",
+      "timeline": "Casual",
+      "close_probability_percent": 50
+    }
+  },
+  "Imperial Banquets": {
+    "business_name": "Imperial Banquets",
+    "owner": "Owner",
+    "type": "Standalone Banquet",
+    "capacity": "300 - 800",
+    "contact_info": {
+      "phone": "9819576256",
+      "email": "contact@venue.com",
+      "address": "Vashi, Mumbai, Maharashtra"
+    },
+    "digital_properties": {
+      "website": "None",
+      "instagram": "@imperialbanquets"
+    },
+    "deal_dynamics": {
+      "decision_maker": "Unknown",
+      "budget_interest": "Low",
+      "timeline": "Casual",
+      "close_probability_percent": 30
+    }
+  },
+  "Palm Beach Lawn & Banquets": {
+    "business_name": "Palm Beach Lawn & Banquets",
+    "owner": "Owner",
+    "type": "Standalone Banquet",
+    "capacity": "300 - 800",
+    "contact_info": {
+      "phone": "9819576256",
+      "email": "contact@venue.com",
+      "address": "Sanpada, Mumbai, Maharashtra"
+    },
+    "digital_properties": {
+      "website": "None",
+      "instagram": "@palmbeachlawnandbanquets"
+    },
+    "deal_dynamics": {
+      "decision_maker": "Unknown",
+      "budget_interest": "Low",
+      "timeline": "Casual",
+      "close_probability_percent": 30
+    }
+  },
+  "Vidhi Banquets": {
+    "business_name": "Vidhi Banquets",
+    "owner": "Owner",
+    "type": "Standalone Banquet",
+    "capacity": "300 - 800",
+    "contact_info": {
+      "phone": "9819576256",
+      "email": "contact@venue.com",
+      "address": "Kopar Khairane, Mumbai, Maharashtra"
+    },
+    "digital_properties": {
+      "website": "None",
+      "instagram": "None"
+    },
+    "deal_dynamics": {
+      "decision_maker": "Unknown",
+      "budget_interest": "Medium",
+      "timeline": "Casual",
+      "close_probability_percent": 50
+    }
+  },
+  "Gems Party Hall": {
+    "business_name": "Gems Party Hall",
+    "owner": "Owner",
+    "type": "Standalone Banquet",
+    "capacity": "300 - 800",
+    "contact_info": {
+      "phone": "9819576256",
+      "email": "contact@venue.com",
+      "address": "Vashi, Mumbai, Maharashtra"
+    },
+    "digital_properties": {
+      "website": "None",
+      "instagram": "None"
+    },
+    "deal_dynamics": {
+      "decision_maker": "Unknown",
+      "budget_interest": "Medium",
+      "timeline": "Casual",
+      "close_probability_percent": 40
+    }
+  },
+  "Golden Peacock Banquet": {
+    "business_name": "Golden Peacock Banquet",
+    "owner": "Owner",
+    "type": "Standalone Banquet",
+    "capacity": "300 - 800",
+    "contact_info": {
+      "phone": "9819576256",
+      "email": "contact@venue.com",
+      "address": "Kharghar, Mumbai, Maharashtra"
+    },
+    "digital_properties": {
+      "website": "None",
+      "instagram": "None"
+    },
+    "deal_dynamics": {
+      "decision_maker": "Unknown",
+      "budget_interest": "Medium",
+      "timeline": "Casual",
+      "close_probability_percent": 40
+    }
+  },
+  "Panvel Grand Banquet": {
+    "business_name": "Panvel Grand Banquet",
+    "owner": "Owner",
+    "type": "Standalone Banquet",
+    "capacity": "300 - 800",
+    "contact_info": {
+      "phone": "9819576256",
+      "email": "contact@venue.com",
+      "address": "Panvel, Mumbai, Maharashtra"
+    },
+    "digital_properties": {
+      "website": "None",
+      "instagram": "@panvelgrandbanquet_mumbai"
+    },
+    "deal_dynamics": {
+      "decision_maker": "Unknown",
+      "budget_interest": "Medium",
+      "timeline": "Casual",
+      "close_probability_percent": 50
+    }
+  },
+  "Ashoka Banquet Hall": {
+    "business_name": "Ashoka Banquet Hall",
+    "owner": "Owner",
+    "type": "Standalone Banquet",
+    "capacity": "300 - 800",
+    "contact_info": {
+      "phone": "9819576256",
+      "email": "contact@venue.com",
+      "address": "Vashi, Mumbai, Maharashtra"
+    },
+    "digital_properties": {
+      "website": "None",
+      "instagram": "@ashokabanquethall_mumbai"
+    },
+    "deal_dynamics": {
+      "decision_maker": "Unknown",
+      "budget_interest": "Medium",
+      "timeline": "Casual",
+      "close_probability_percent": 50
+    }
+  },
+  "Moraj Banquet Hall": {
+    "business_name": "Moraj Banquet Hall",
+    "owner": "Owner",
+    "type": "Standalone Banquet",
+    "capacity": "300 - 800",
+    "contact_info": {
+      "phone": "9819576256",
+      "email": "contact@venue.com",
+      "address": "Sanpada, Mumbai, Maharashtra"
+    },
+    "digital_properties": {
+      "website": "None",
+      "instagram": "@morajbanquethall_mumbai"
+    },
+    "deal_dynamics": {
+      "decision_maker": "Yes",
+      "budget_interest": "Medium",
+      "timeline": "Casual",
+      "close_probability_percent": 55
+    }
+  },
+  "Belapur Garden Banquet": {
+    "business_name": "Belapur Garden Banquet",
+    "owner": "Owner",
+    "type": "Standalone Banquet",
+    "capacity": "300 - 800",
+    "contact_info": {
+      "phone": "9819576256",
+      "email": "contact@venue.com",
+      "address": "Belapur, Mumbai, Maharashtra"
+    },
+    "digital_properties": {
+      "website": "None",
+      "instagram": "@belapurgardenbanquet_mumbai"
+    },
+    "deal_dynamics": {
+      "decision_maker": "Unknown",
+      "budget_interest": "Medium",
+      "timeline": "Casual",
+      "close_probability_percent": 50
+    }
+  },
+  "Shubham Karoti Banquet": {
+    "business_name": "Shubham Karoti Banquet",
+    "owner": "Owner",
+    "type": "Standalone Banquet",
+    "capacity": "300 - 800",
+    "contact_info": {
+      "phone": "9819576256",
+      "email": "contact@venue.com",
+      "address": "Kopar Khairane, Mumbai, Maharashtra"
+    },
+    "digital_properties": {
+      "website": "None",
+      "instagram": "@shubhamkarotibanquet_mumbai"
+    },
+    "deal_dynamics": {
+      "decision_maker": "Unknown",
+      "budget_interest": "Medium",
+      "timeline": "Casual",
+      "close_probability_percent": 50
+    }
+  },
+  "Kesar Banquet": {
+    "business_name": "Kesar Banquet",
+    "owner": "Owner",
+    "type": "Standalone Banquet",
+    "capacity": "300 - 800",
+    "contact_info": {
+      "phone": "9819576256",
+      "email": "contact@venue.com",
+      "address": "Kharghar, Mumbai, Maharashtra"
+    },
+    "digital_properties": {
+      "website": "None",
+      "instagram": "@kesarbanquet"
+    },
+    "deal_dynamics": {
+      "decision_maker": "Unknown",
+      "budget_interest": "Low",
+      "timeline": "Casual",
+      "close_probability_percent": 30
+    }
+  },
+  "Vishwa Jyot Banquet": {
+    "business_name": "Vishwa Jyot Banquet",
+    "owner": "Owner",
+    "type": "Standalone Banquet",
+    "capacity": "300 - 800",
+    "contact_info": {
+      "phone": "9819576256",
+      "email": "contact@venue.com",
+      "address": "Kharghar, Mumbai, Maharashtra"
+    },
+    "digital_properties": {
+      "website": "None",
+      "instagram": "@vishwajyotbanquet"
+    },
+    "deal_dynamics": {
+      "decision_maker": "Unknown",
+      "budget_interest": "Low",
+      "timeline": "Casual",
+      "close_probability_percent": 30
+    }
+  },
+  "Royal Celebration Hall": {
+    "business_name": "Royal Celebration Hall",
+    "owner": "Owner",
+    "type": "Standalone Banquet",
+    "capacity": "300 - 800",
+    "contact_info": {
+      "phone": "9819576256",
+      "email": "contact@venue.com",
+      "address": "Kamothe, Mumbai, Maharashtra"
+    },
+    "digital_properties": {
+      "website": "None",
+      "instagram": "None"
+    },
+    "deal_dynamics": {
+      "decision_maker": "Unknown",
+      "budget_interest": "Medium",
+      "timeline": "Casual",
+      "close_probability_percent": 50
+    }
+  },
+  "Celebration Banquet Hall": {
+    "business_name": "Celebration Banquet Hall",
+    "owner": "Owner",
+    "type": "Standalone Banquet",
+    "capacity": "300 - 800",
+    "contact_info": {
+      "phone": "9819576256",
+      "email": "contact@venue.com",
+      "address": "Nerul, Mumbai, Maharashtra"
+    },
+    "digital_properties": {
+      "website": "None",
+      "instagram": "None"
+    },
+    "deal_dynamics": {
+      "decision_maker": "Unknown",
+      "budget_interest": "Medium",
+      "timeline": "Casual",
+      "close_probability_percent": 40
+    }
+  },
+  "Raigad Fort Banquet": {
+    "business_name": "Raigad Fort Banquet",
+    "owner": "Owner",
+    "type": "Standalone Banquet",
+    "capacity": "300 - 800",
+    "contact_info": {
+      "phone": "9819576256",
+      "email": "contact@venue.com",
+      "address": "New Panvel, Mumbai, Maharashtra"
+    },
+    "digital_properties": {
+      "website": "None",
+      "instagram": "None"
+    },
+    "deal_dynamics": {
+      "decision_maker": "Unknown",
+      "budget_interest": "Medium",
+      "timeline": "Casual",
+      "close_probability_percent": 40
+    }
+  },
+  "Shikara Hotel Banquets": {
+    "business_name": "Shikara Hotel Banquets",
+    "owner": "Owner",
+    "type": "Standalone Banquet",
+    "capacity": "300 - 800",
+    "contact_info": {
+      "phone": "9819576256",
+      "email": "contact@venue.com",
+      "address": "Sanpada, Mumbai, Maharashtra"
+    },
+    "digital_properties": {
+      "website": "None",
+      "instagram": "@shikarahotelbanquets_mumbai"
+    },
+    "deal_dynamics": {
+      "decision_maker": "Unknown",
+      "budget_interest": "Medium",
+      "timeline": "Casual",
+      "close_probability_percent": 50
+    }
+  },
+  "Belapur Gymkhana Banquets": {
+    "business_name": "Belapur Gymkhana Banquets",
+    "owner": "Owner",
+    "type": "Standalone Banquet",
+    "capacity": "300 - 800",
+    "contact_info": {
+      "phone": "9819576256",
+      "email": "contact@venue.com",
+      "address": "Belapur, Mumbai, Maharashtra"
+    },
+    "digital_properties": {
+      "website": "None",
+      "instagram": "@belapurgymkhanabanquets_mumbai"
+    },
+    "deal_dynamics": {
+      "decision_maker": "Unknown",
+      "budget_interest": "Medium",
+      "timeline": "Casual",
+      "close_probability_percent": 50
+    }
+  },
+  "Navi Mumbai Club Banquets": {
+    "business_name": "Navi Mumbai Club Banquets",
+    "owner": "Owner",
+    "type": "Standalone Banquet",
+    "capacity": "300 - 800",
+    "contact_info": {
+      "phone": "9819576256",
+      "email": "contact@venue.com",
+      "address": "Nerul, Mumbai, Maharashtra"
+    },
+    "digital_properties": {
+      "website": "None",
+      "instagram": "@navimumbaiclubbanquets_mumbai"
+    },
+    "deal_dynamics": {
+      "decision_maker": "Yes",
+      "budget_interest": "Medium",
+      "timeline": "Casual",
+      "close_probability_percent": 55
+    }
+  },
+  "Siddhi Gardens & Banquets": {
+    "business_name": "Siddhi Gardens & Banquets",
+    "owner": "Owner",
+    "type": "Standalone Banquet",
+    "capacity": "300 - 800",
+    "contact_info": {
+      "phone": "9819576256",
+      "email": "contact@venue.com",
+      "address": "Erandwane, Mumbai, Maharashtra"
+    },
+    "digital_properties": {
+      "website": "None",
+      "instagram": "@siddhigardensandbanquets_mumbai"
+    },
+    "deal_dynamics": {
+      "decision_maker": "Unknown",
+      "budget_interest": "Medium",
+      "timeline": "Casual",
+      "close_probability_percent": 50
+    }
+  },
+  "Raaga Heritage Banquets": {
+    "business_name": "Raaga Heritage Banquets",
+    "owner": "Owner",
+    "type": "Standalone Banquet",
+    "capacity": "300 - 800",
+    "contact_info": {
+      "phone": "9819576256",
+      "email": "contact@venue.com",
+      "address": "Hinjewadi, Mumbai, Maharashtra"
+    },
+    "digital_properties": {
+      "website": "None",
+      "instagram": "@raagaheritagebanquets_mumbai"
+    },
+    "deal_dynamics": {
+      "decision_maker": "Unknown",
+      "budget_interest": "Medium",
+      "timeline": "Casual",
+      "close_probability_percent": 50
+    }
+  },
+  "Navyug Banquet Hall": {
+    "business_name": "Navyug Banquet Hall",
+    "owner": "Owner",
+    "type": "Standalone Banquet",
+    "capacity": "300 - 800",
+    "contact_info": {
+      "phone": "9819576256",
+      "email": "contact@venue.com",
+      "address": "Boat Club Rd, Mumbai, Maharashtra"
+    },
+    "digital_properties": {
+      "website": "None",
+      "instagram": "@navyugbanquethall"
+    },
+    "deal_dynamics": {
+      "decision_maker": "Unknown",
+      "budget_interest": "Low",
+      "timeline": "Casual",
+      "close_probability_percent": 30
+    }
+  },
+  "Emerald Party Hall": {
+    "business_name": "Emerald Party Hall",
+    "owner": "Owner",
+    "type": "Standalone Banquet",
+    "capacity": "300 - 800",
+    "contact_info": {
+      "phone": "9819576256",
+      "email": "contact@venue.com",
+      "address": "Baner, Mumbai, Maharashtra"
+    },
+    "digital_properties": {
+      "website": "None",
+      "instagram": "@emeraldpartyhall"
+    },
+    "deal_dynamics": {
+      "decision_maker": "Unknown",
+      "budget_interest": "Low",
+      "timeline": "Casual",
+      "close_probability_percent": 30
+    }
+  },
+  "Pyramids Garden": {
+    "business_name": "Pyramids Garden",
+    "owner": "Owner",
+    "type": "Standalone Banquet",
+    "capacity": "300 - 800",
+    "contact_info": {
+      "phone": "9819576256",
+      "email": "contact@venue.com",
+      "address": "Kothrud, Mumbai, Maharashtra"
+    },
+    "digital_properties": {
+      "website": "None",
+      "instagram": "None"
+    },
+    "deal_dynamics": {
+      "decision_maker": "Unknown",
+      "budget_interest": "Medium",
+      "timeline": "Casual",
+      "close_probability_percent": 50
+    }
+  },
+  "Shubharambh Lawns": {
+    "business_name": "Shubharambh Lawns",
+    "owner": "Owner",
+    "type": "Standalone Banquet",
+    "capacity": "300 - 800",
+    "contact_info": {
+      "phone": "9819576256",
+      "email": "contact@venue.com",
+      "address": "Karve Nagar, Mumbai, Maharashtra"
+    },
+    "digital_properties": {
+      "website": "None",
+      "instagram": "None"
+    },
+    "deal_dynamics": {
+      "decision_maker": "Unknown",
+      "budget_interest": "Medium",
+      "timeline": "Casual",
+      "close_probability_percent": 40
+    }
+  },
+  "Oasis Banquets & Lawns": {
+    "business_name": "Oasis Banquets & Lawns",
+    "owner": "Owner",
+    "type": "Standalone Banquet",
+    "capacity": "300 - 800",
+    "contact_info": {
+      "phone": "9819576256",
+      "email": "contact@venue.com",
+      "address": "Hadapsar, Mumbai, Maharashtra"
+    },
+    "digital_properties": {
+      "website": "None",
+      "instagram": "None"
+    },
+    "deal_dynamics": {
+      "decision_maker": "Unknown",
+      "budget_interest": "Medium",
+      "timeline": "Casual",
+      "close_probability_percent": 40
+    }
+  },
+  "Yash Lawns": {
+    "business_name": "Yash Lawns",
+    "owner": "Owner",
+    "type": "Standalone Banquet",
+    "capacity": "300 - 800",
+    "contact_info": {
+      "phone": "9819576256",
+      "email": "contact@venue.com",
+      "address": "Bibwewadi, Mumbai, Maharashtra"
+    },
+    "digital_properties": {
+      "website": "None",
+      "instagram": "@yashlawns_mumbai"
+    },
+    "deal_dynamics": {
+      "decision_maker": "Unknown",
+      "budget_interest": "Medium",
+      "timeline": "Casual",
+      "close_probability_percent": 50
+    }
+  },
+  "Raga Lawns": {
+    "business_name": "Raga Lawns",
+    "owner": "Owner",
+    "type": "Standalone Banquet",
+    "capacity": "300 - 800",
+    "contact_info": {
+      "phone": "9819576256",
+      "email": "contact@venue.com",
+      "address": "Koregaon Park, Mumbai, Maharashtra"
+    },
+    "digital_properties": {
+      "website": "None",
+      "instagram": "@ragalawns_mumbai"
+    },
+    "deal_dynamics": {
+      "decision_maker": "Unknown",
+      "budget_interest": "Medium",
+      "timeline": "Casual",
+      "close_probability_percent": 50
+    }
+  },
+  "Saket Banquets": {
+    "business_name": "Saket Banquets",
+    "owner": "Owner",
+    "type": "Standalone Banquet",
+    "capacity": "300 - 800",
+    "contact_info": {
+      "phone": "9819576256",
+      "email": "contact@venue.com",
+      "address": "Erandwane, Mumbai, Maharashtra"
+    },
+    "digital_properties": {
+      "website": "None",
+      "instagram": "@saketbanquets_mumbai"
+    },
+    "deal_dynamics": {
+      "decision_maker": "Yes",
+      "budget_interest": "Medium",
+      "timeline": "Casual",
+      "close_probability_percent": 55
+    }
+  },
+  "Abhishek Veg Banquet": {
+    "business_name": "Abhishek Veg Banquet",
+    "owner": "Owner",
+    "type": "Standalone Banquet",
+    "capacity": "300 - 800",
+    "contact_info": {
+      "phone": "9819576256",
+      "email": "contact@venue.com",
+      "address": "Kothrud, Mumbai, Maharashtra"
+    },
+    "digital_properties": {
+      "website": "None",
+      "instagram": "@abhishekvegbanquet_mumbai"
+    },
+    "deal_dynamics": {
+      "decision_maker": "Unknown",
+      "budget_interest": "Medium",
+      "timeline": "Casual",
+      "close_probability_percent": 50
+    }
+  },
+  "Gandharva Lawns": {
+    "business_name": "Gandharva Lawns",
+    "owner": "Owner",
+    "type": "Standalone Banquet",
+    "capacity": "300 - 800",
+    "contact_info": {
+      "phone": "9819576256",
+      "email": "contact@venue.com",
+      "address": "Pimple Saudagar, Mumbai, Maharashtra"
+    },
+    "digital_properties": {
+      "website": "None",
+      "instagram": "@gandharvalawns_mumbai"
+    },
+    "deal_dynamics": {
+      "decision_maker": "Unknown",
+      "budget_interest": "Medium",
+      "timeline": "Casual",
+      "close_probability_percent": 50
+    }
+  },
+  "Royal Lawns": {
+    "business_name": "Royal Lawns",
+    "owner": "Owner",
+    "type": "Standalone Banquet",
+    "capacity": "300 - 800",
+    "contact_info": {
+      "phone": "9819576256",
+      "email": "contact@venue.com",
+      "address": "Baner, Mumbai, Maharashtra"
+    },
+    "digital_properties": {
+      "website": "None",
+      "instagram": "@royallawns"
+    },
+    "deal_dynamics": {
+      "decision_maker": "Unknown",
+      "budget_interest": "Low",
+      "timeline": "Casual",
+      "close_probability_percent": 30
+    }
+  },
+  "Laxmi Lawns": {
+    "business_name": "Laxmi Lawns",
+    "owner": "Owner",
+    "type": "Standalone Banquet",
+    "capacity": "300 - 800",
+    "contact_info": {
+      "phone": "9819576256",
+      "email": "contact@venue.com",
+      "address": "Magarpatta, Mumbai, Maharashtra"
+    },
+    "digital_properties": {
+      "website": "None",
+      "instagram": "@laxmilawns"
+    },
+    "deal_dynamics": {
+      "decision_maker": "Unknown",
+      "budget_interest": "Low",
+      "timeline": "Casual",
+      "close_probability_percent": 30
+    }
+  },
+  "Shrushti Lawns": {
+    "business_name": "Shrushti Lawns",
+    "owner": "Owner",
+    "type": "Standalone Banquet",
+    "capacity": "300 - 800",
+    "contact_info": {
+      "phone": "9819576256",
+      "email": "contact@venue.com",
+      "address": "DP Road, Mumbai, Maharashtra"
+    },
+    "digital_properties": {
+      "website": "None",
+      "instagram": "None"
+    },
+    "deal_dynamics": {
+      "decision_maker": "Unknown",
+      "budget_interest": "Medium",
+      "timeline": "Casual",
+      "close_probability_percent": 50
+    }
+  },
+  "Balaji Banquets": {
+    "business_name": "Balaji Banquets",
+    "owner": "Owner",
+    "type": "Standalone Banquet",
+    "capacity": "300 - 800",
+    "contact_info": {
+      "phone": "9819576256",
+      "email": "contact@venue.com",
+      "address": "Wakad, Mumbai, Maharashtra"
+    },
+    "digital_properties": {
+      "website": "None",
+      "instagram": "None"
+    },
+    "deal_dynamics": {
+      "decision_maker": "Unknown",
+      "budget_interest": "Medium",
+      "timeline": "Casual",
+      "close_probability_percent": 40
+    }
+  },
+  "Vardhaman Lawns": {
+    "business_name": "Vardhaman Lawns",
+    "owner": "Owner",
+    "type": "Standalone Banquet",
+    "capacity": "300 - 800",
+    "contact_info": {
+      "phone": "9819576256",
+      "email": "contact@venue.com",
+      "address": "Gangadham, Mumbai, Maharashtra"
+    },
+    "digital_properties": {
+      "website": "None",
+      "instagram": "None"
+    },
+    "deal_dynamics": {
+      "decision_maker": "Unknown",
+      "budget_interest": "Medium",
+      "timeline": "Casual",
+      "close_probability_percent": 40
+    }
+  },
+  "Sai Palace Banquets": {
+    "business_name": "Sai Palace Banquets",
+    "owner": "Owner",
+    "type": "Standalone Banquet",
+    "capacity": "300 - 800",
+    "contact_info": {
+      "phone": "9819576256",
+      "email": "contact@venue.com",
+      "address": "Wakad, Mumbai, Maharashtra"
+    },
+    "digital_properties": {
+      "website": "None",
+      "instagram": "@saipalacebanquets_mumbai"
+    },
+    "deal_dynamics": {
+      "decision_maker": "Unknown",
+      "budget_interest": "Medium",
+      "timeline": "Casual",
+      "close_probability_percent": 50
+    }
+  },
+  "Nisarg Mangal Karyalaya": {
+    "business_name": "Nisarg Mangal Karyalaya",
+    "owner": "Owner",
+    "type": "Standalone Banquet",
+    "capacity": "300 - 800",
+    "contact_info": {
+      "phone": "9819576256",
+      "email": "contact@venue.com",
+      "address": "Erandwane, Mumbai, Maharashtra"
+    },
+    "digital_properties": {
+      "website": "None",
+      "instagram": "@nisargmangalkaryalaya_mumbai"
+    },
+    "deal_dynamics": {
+      "decision_maker": "Unknown",
+      "budget_interest": "Medium",
+      "timeline": "Casual",
+      "close_probability_percent": 50
+    }
+  },
+  "Alpa Bachat Bhavan": {
+    "business_name": "Alpa Bachat Bhavan",
+    "owner": "Owner",
+    "type": "Standalone Banquet",
+    "capacity": "300 - 800",
+    "contact_info": {
+      "phone": "9819576256",
+      "email": "contact@venue.com",
+      "address": "Camp, Mumbai, Maharashtra"
+    },
+    "digital_properties": {
+      "website": "None",
+      "instagram": "@alpabachatbhavan_mumbai"
+    },
+    "deal_dynamics": {
+      "decision_maker": "Yes",
+      "budget_interest": "Medium",
+      "timeline": "Casual",
+      "close_probability_percent": 55
+    }
+  }
+}

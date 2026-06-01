@@ -1,0 +1,2830 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Venue Growth Bible â€” Configurable Strategy Engine</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,900;1,400;1,500;1,600;1,700&family=Inter:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   VENUE GROWTH BIBLE â€” Premium Design System
+   Playfair Display + Inter Â· Warm Ivory Hospitality Native
+   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  /* surfaces */
+  --bg:#FAF7F2; --bg-2:#F5EFE6; --bg-3:#EBE4D8;
+  --surface:#F3EEE5; --surface-2:#E2D9C9;
+  /* text */
+  --text:#1F1D1C; --text-2:#4A4644; --text-3:#6F6864;
+  /* borders */
+  --border:#E5DFD3; --border-bright:#D5CEBF;
+  /* brand (overridden by config) */
+  --accent:#D94822; --accent-glow:#E85E39; --maroon:#B83615;
+  --gold:#C5A059; --gold-2:#D4B06A;
+  --green:#1a7a4a; --green-2:#22a861;
+  /* geometry */
+  --radius:4px; --radius-sm:4px; --radius-xs:2px;
+  --topbar-h:64px; --stack-h:128px;
+}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+body{font-family:'Inter',ui-sans-serif,system-ui,sans-serif;background:var(--bg);color:var(--text);font-size:15px;line-height:1.55;min-height:100vh;overflow-x:hidden}
+.mono{font-family:'DM Mono',ui-monospace,monospace}
+.serif{font-family:'Playfair Display',Georgia,serif;font-style:italic;font-weight:400}
+
+/* grain + ambient */
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:9999;opacity:.035;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-size:200px}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;background:radial-gradient(ellipse 70% 50% at 15% 0%,rgba(217,72,34,0.035),transparent 60%),radial-gradient(ellipse 50% 40% at 85% 100%,rgba(197,160,89,0.025),transparent 60%)}
+body>*{position:relative;z-index:1}
+
+/* â”€â”€ TOPBAR â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.topbar{background:rgba(250,247,242,0.95);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100}
+.topbar-inner{max-width:1320px;margin:0 auto;padding:13px 28px;display:flex;justify-content:space-between;align-items:center;gap:16px}
+.brand{display:flex;align-items:center;gap:12px}
+.brand-mark{width:36px;height:36px;background:linear-gradient(135deg,var(--accent),var(--maroon));border-radius:10px;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-weight:700;font-size:15px;color:#fff;box-shadow:0 0 20px rgba(232,76,30,0.15),inset 0 1px 0 rgba(255,255,255,0.25);overflow:hidden;flex-shrink:0}
+.brand-mark img{width:100%;height:100%;object-fit:contain}
+.brand-text h1{font-family:'Inter',sans-serif;font-size:14px;font-weight:700;letter-spacing:-0.01em;color:var(--text)}
+.brand-text p{font-size:11px;color:var(--text-3);margin-top:1px;font-family:'DM Mono',monospace;text-transform:uppercase;letter-spacing:0.06em}
+.topbar-actions{display:flex;align-items:center;gap:8px}
+.tb-btn{background:var(--surface);border:1px solid var(--border-bright);color:var(--text);padding:7px 14px;border-radius:8px;font-size:12px;font-weight:500;cursor:pointer;font-family:'Inter',sans-serif;display:flex;align-items:center;gap:6px;transition:all .18s}
+.tb-btn:hover{background:var(--surface-2);border-color:var(--accent);color:var(--accent-glow)}
+.tb-btn.primary{background:var(--accent);color:#fff;border-color:var(--accent);box-shadow:0 4px 16px rgba(232,76,30,0.3)}
+.tb-btn.primary:hover{background:var(--accent-glow);box-shadow:0 6px 24px rgba(232,76,30,0.4)}
+
+/* â”€â”€ HERO â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.hero{padding:64px 28px 48px;text-align:center}
+.hero-inner{max-width:840px;margin:0 auto}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:var(--surface);border:1px solid var(--border-bright);border-radius:99px;padding:6px 14px;font-family:'DM Mono',monospace;font-size:10.5px;color:var(--text-2);font-weight:500;margin-bottom:24px;text-transform:uppercase;letter-spacing:0.07em}
+.hero-badge .dot{width:5px;height:5px;border-radius:50%;background:var(--accent);box-shadow:0 0 8px var(--accent)}
+.hero h2{font-family:'Playfair Display',serif;font-size:clamp(38px,6vw,64px);font-weight:700;letter-spacing:-0.03em;line-height:1.03;margin-bottom:16px;color:var(--text)}
+.hero h2 em{font-style:italic;font-weight:400;background:linear-gradient(135deg,var(--accent),var(--gold-2));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.hero-sub{font-size:17px;color:var(--text-2);max-width:580px;margin:0 auto 32px;line-height:1.55}
+.hero-stats{display:flex;gap:44px;justify-content:center;flex-wrap:wrap;padding-top:32px;margin-top:32px;border-top:1px solid var(--border)}
+.hero-stat{text-align:center}
+.hero-stat-n{font-family:'Playfair Display',serif;font-size:32px;font-weight:700;letter-spacing:-0.03em;color:var(--text)}
+.hero-stat-n em{font-style:italic;font-weight:400;color:var(--accent)}
+.hero-stat-l{font-family:'DM Mono',monospace;font-size:10px;color:var(--text-3);margin-top:4px;text-transform:uppercase;letter-spacing:0.07em}
+
+/* â”€â”€ NAV â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.tabs-wrap{position:sticky;top:var(--topbar-h,64px);z-index:90;background:rgba(250,247,242,0.95);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--border);padding:10px 0}
+.nav-inner{max-width:1320px;margin:0 auto;padding:0 28px;position:relative}
+.nav-trigger{display:flex;align-items:center;justify-content:space-between;gap:14px;background:var(--surface);border:1px solid var(--border-bright);color:var(--text);padding:10px 16px;border-radius:10px;font-family:'Inter',sans-serif;font-size:13.5px;font-weight:600;cursor:pointer;transition:all .15s;min-width:260px;max-width:360px}
+.nav-trigger:hover{border-color:var(--accent);background:var(--surface-2)}
+.nav-trigger-label{display:flex;align-items:center;gap:10px;min-width:0}
+.nav-trigger-num{font-family:'DM Mono',monospace;font-size:11px;color:var(--accent);background:rgba(232,76,30,0.1);border:1px solid rgba(232,76,30,0.25);padding:2px 8px;border-radius:5px;font-weight:500;flex-shrink:0}
+.nav-chevron{color:var(--text-3);transition:transform .2s;flex-shrink:0}
+.nav-trigger.open .nav-chevron{transform:rotate(180deg)}
+.nav-panel{position:absolute;top:calc(100% + 8px);left:28px;background:var(--bg-2);border:1px solid var(--border-bright);border-radius:14px;padding:16px;display:none;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:8px 20px;box-shadow:0 28px 70px rgba(0,0,0,0.12),inset 0 1px 0 rgba(255,255,255,0.4);z-index:300;width:min(940px,calc(100vw - 56px));max-height:72vh;overflow-y:auto}
+.nav-panel.open{display:grid;animation:navIn .18s cubic-bezier(0.16,1,0.3,1)}
+@keyframes navIn{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+.nav-group{display:flex;flex-direction:column;gap:2px}
+.nav-group-title{font-family:'DM Mono',monospace;font-size:9.5px;color:var(--text-3);text-transform:uppercase;letter-spacing:0.1em;padding:5px 10px 7px;margin-bottom:3px;border-bottom:1px solid var(--border);font-weight:500}
+.nav-item{display:flex;align-items:center;gap:10px;background:transparent;border:none;color:var(--text-2);padding:9px 10px;border-radius:8px;font-family:'Inter',sans-serif;font-size:13px;font-weight:500;cursor:pointer;text-align:left;width:100%;transition:all .12s}
+.nav-item:hover{background:var(--surface);color:var(--text)}
+.nav-item.active{background:rgba(232,76,30,0.12);color:var(--accent-glow)}
+.nav-item-num{font-family:'DM Mono',monospace;font-size:10px;color:var(--text-3);min-width:20px;flex-shrink:0}
+.nav-item.active .nav-item-num{color:var(--accent)}
+
+/* â”€â”€ SECTIONS â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.section{max-width:1320px;margin:0 auto;padding:52px 28px 96px;display:none;scroll-margin-top:var(--stack-h,128px)}
+.section.active{display:block;animation:secIn .4s cubic-bezier(0.16,1,0.3,1)}
+@keyframes secIn{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.section-header{margin-bottom:42px}
+.section-tag{display:inline-flex;align-items:center;gap:9px;font-family:'DM Mono',monospace;font-size:10.5px;color:var(--accent);text-transform:uppercase;letter-spacing:0.08em;font-weight:500;margin-bottom:14px}
+.section-tag::before{content:"";width:22px;height:1px;background:var(--accent)}
+.section h2.section-title{font-family:'Playfair Display',serif;font-size:clamp(30px,5vw,50px);font-weight:700;letter-spacing:-0.03em;line-height:1.05;margin-bottom:14px;color:var(--text)}
+.section h2.section-title em{font-style:italic;font-weight:400;color:var(--text-2)}
+.section-sub{font-size:17px;color:var(--text-2);max-width:640px;line-height:1.55}
+
+/* â”€â”€ CARDS â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.grid{display:grid;gap:16px}
+.grid-2{grid-template-columns:repeat(auto-fit,minmax(320px,1fr))}
+.grid-3{grid-template-columns:repeat(auto-fit,minmax(270px,1fr))}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:24px;transition:border-color .18s;position:relative;overflow:hidden}
+.card:hover{border-color:var(--border-bright)}
+.card.accent{border-color:rgba(232,76,30,0.3);background:linear-gradient(160deg,rgba(232,76,30,0.07) 0%,var(--surface) 60%)}
+.card.accent::before{content:"";position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--accent),transparent)}
+.card.green{border-color:rgba(26,122,74,0.3);background:linear-gradient(160deg,rgba(26,122,74,0.07),var(--surface))}
+.card.gold{border-color:rgba(201,149,42,0.3);background:linear-gradient(160deg,rgba(201,149,42,0.06),var(--surface))}
+.card-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:12px;gap:14px}
+.card-num{font-family:'DM Mono',monospace;font-size:10px;color:var(--text-3);background:var(--bg-2);padding:3px 8px;border-radius:4px;font-weight:500}
+.card h3{font-family:'Playfair Display',serif;font-size:20px;font-weight:700;letter-spacing:-0.015em;margin-bottom:7px}
+.card .card-sub{font-family:'DM Mono',monospace;font-size:10px;color:var(--text-3);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:16px}
+.card p{font-size:14px;color:var(--text-2);margin-bottom:10px;line-height:1.6}
+.card p:last-child{margin-bottom:0}
+.card ul{list-style:none;padding:0;margin:8px 0}
+.card li{padding:9px 0 9px 22px;font-size:14px;color:var(--text-2);line-height:1.5;position:relative;border-bottom:1px solid var(--border)}
+.card li:last-child{border-bottom:none}
+.card li::before{content:"";position:absolute;left:0;top:17px;width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 6px rgba(232,76,30,0.3)}
+
+/* â”€â”€ KV STATS â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.kv-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin:14px 0}
+.kv{background:var(--bg-2);border:1px solid var(--border);border-radius:var(--radius-sm);padding:16px;position:relative;overflow:hidden}
+.kv::after{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,0.015),transparent);pointer-events:none}
+.kv-label{font-family:'DM Mono',monospace;font-size:10px;color:var(--text-3);text-transform:uppercase;letter-spacing:0.07em;margin-bottom:9px;font-weight:500}
+.kv-value{font-family:'Playfair Display',serif;font-size:26px;font-weight:700;letter-spacing:-0.02em;line-height:1}
+.kv-value em{font-style:italic;font-weight:400;color:var(--accent)}
+.kv-value small{display:block;font-size:12px;color:var(--text-3);font-weight:400;margin-top:6px;font-family:'Inter',sans-serif;letter-spacing:0}
+
+/* â”€â”€ TABLES â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.table-wrap{overflow-x:auto;margin:14px 0;background:var(--bg-2);border:1px solid var(--border);border-radius:var(--radius-sm)}
+table{width:100%;border-collapse:collapse;font-size:14px}
+thead{background:var(--bg-3)}
+thead th{padding:12px 18px;text-align:left;font-family:'DM Mono',monospace;font-size:10px;color:var(--text-3);text-transform:uppercase;letter-spacing:0.07em;font-weight:500;border-bottom:1px solid var(--border)}
+tbody td{padding:13px 18px;color:var(--text-2);border-bottom:1px solid var(--border)}
+tbody tr:last-child td{border-bottom:none}
+tbody tr:hover{background:var(--surface)}
+tbody td:first-child{color:var(--text);font-weight:600}
+
+/* â”€â”€ PROMPT BOXES â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.prompt-box{background:var(--bg-2);border:1px solid var(--border);border-radius:var(--radius);margin:14px 0 22px;overflow:hidden;transition:border-color .18s}
+.prompt-box:hover{border-color:var(--border-bright)}
+.prompt-head{display:flex;justify-content:space-between;align-items:center;padding:12px 18px;border-bottom:1px solid var(--border);background:var(--bg-3);gap:12px}
+.prompt-label{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--text);font-weight:600;flex-wrap:wrap}
+.prompt-tag{font-family:'DM Mono',monospace;font-size:9.5px;color:var(--accent);background:rgba(232,76,30,0.1);border:1px solid rgba(232,76,30,0.25);padding:2px 8px;border-radius:4px;text-transform:uppercase;letter-spacing:0.06em;font-weight:600}
+.copy-btn{background:var(--surface);border:1px solid var(--border);color:var(--text);padding:5px 12px;border-radius:6px;font-size:11px;font-weight:500;cursor:pointer;font-family:'Inter',sans-serif;display:flex;align-items:center;gap:5px;transition:all .15s;flex-shrink:0}
+.copy-btn:hover{background:var(--accent);color:#fff;border-color:var(--accent)}
+.copy-btn.copied{background:var(--green);color:#fff;border-color:var(--green)}
+.prompt-content{padding:18px;font-family:'DM Mono',monospace;font-size:12px;line-height:1.7;color:var(--text-2);white-space:pre-wrap;overflow-x:auto}
+
+/* â”€â”€ CALLOUT â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.callout{background:linear-gradient(135deg,rgba(232,76,30,0.09),rgba(160,32,10,0.04));border:1px solid rgba(232,76,30,0.22);border-radius:var(--radius);padding:18px 22px;margin:20px 0;display:flex;gap:14px}
+.callout.next{background:linear-gradient(135deg,rgba(26,122,74,0.1),rgba(232,76,30,0.04));border-color:rgba(34,168,97,0.25)}
+.callout-icon{flex-shrink:0;width:34px;height:34px;background:rgba(232,76,30,0.14);border:1px solid rgba(232,76,30,0.3);border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:16px}
+.callout.next .callout-icon{background:rgba(26,122,74,0.14);border-color:rgba(26,122,74,0.3)}
+.callout-body h4{font-size:14px;font-weight:700;margin-bottom:4px;letter-spacing:-0.01em}
+.callout-body p{font-size:13.5px;color:var(--text-2);line-height:1.5;margin:0}
+.callout-body code{font-family:'DM Mono',monospace;background:var(--bg-2);border:1px solid var(--border);color:var(--accent-glow);padding:2px 6px;border-radius:4px;font-size:12px}
+
+/* â”€â”€ DIVIDER â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.divider{margin:44px 0 20px;display:flex;align-items:center;gap:14px}
+.divider h3{font-family:'DM Mono',monospace;font-size:10.5px;font-weight:600;color:var(--text-3);text-transform:uppercase;letter-spacing:0.1em;white-space:nowrap}
+.divider::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,var(--border),transparent)}
+
+/* â”€â”€ CHIPS â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.chip-row{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.chip{background:var(--bg-2);border:1px solid var(--border);color:var(--text-2);padding:4px 10px;border-radius:6px;font-family:'DM Mono',monospace;font-size:11px;font-weight:500;transition:all .15s}
+.chip:hover{border-color:var(--accent);color:var(--accent-glow)}
+
+/* â”€â”€ DS HOOK â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.ds-hook{background:linear-gradient(135deg,rgba(26,122,74,0.1),rgba(232,76,30,0.05));border:1px solid rgba(26,122,74,0.25);border-radius:var(--radius);padding:16px 20px;margin:22px 0;display:flex;gap:13px;align-items:center}
+.ds-hook-icon{flex-shrink:0;width:36px;height:36px;background:rgba(26,122,74,0.15);border:1px solid rgba(26,122,74,0.3);border-radius:9px;display:flex;align-items:center;justify-content:center;color:var(--green-2);font-size:17px}
+.ds-hook-body{flex:1}
+.ds-hook-body strong{display:block;font-size:13.5px;color:var(--text);margin-bottom:2px;font-weight:600}
+.ds-hook-body span{font-size:12.5px;color:var(--text-2)}
+.ds-hook-btn{flex-shrink:0;background:var(--green);color:#fff;border:none;padding:8px 16px;border-radius:8px;font-family:'Inter',sans-serif;font-size:12px;font-weight:600;cursor:pointer;transition:all .18s;white-space:nowrap}
+.ds-hook-btn:hover{filter:brightness(1.12);box-shadow:0 4px 14px rgba(26,122,74,0.3)}
+
+/* â”€â”€ TIER CARDS â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.tier{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:24px;position:relative;transition:all .2s}
+.tier:hover{border-color:var(--border-bright);transform:translateY(-2px)}
+.tier.featured{border-color:var(--accent);background:linear-gradient(160deg,rgba(232,76,30,0.08),var(--surface))}
+.tier.featured::before{content:"";position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--accent),transparent)}
+.tier-badge{position:absolute;top:-10px;left:22px;background:var(--accent);color:#fff;font-family:'DM Mono',monospace;font-size:9.5px;font-weight:700;padding:3px 10px;border-radius:99px;text-transform:uppercase;letter-spacing:0.07em}
+.tier-name{font-family:'DM Mono',monospace;font-size:10.5px;font-weight:600;color:var(--text-3);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:10px}
+.tier-price{font-family:'Playfair Display',serif;font-size:34px;font-weight:700;letter-spacing:-0.025em;line-height:1;margin-bottom:4px}
+.tier-price small{font-family:'Inter',sans-serif;font-size:13px;color:var(--text-3);font-weight:400;letter-spacing:0}
+.tier-desc{font-size:13px;color:var(--text-3);margin:8px 0 16px;min-height:34px;line-height:1.5}
+
+/* â”€â”€ PIPELINE â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.pbar{margin-bottom:14px}
+.pbar-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
+.pbar-name{font-weight:600;font-size:14px;color:var(--text)}
+.pbar-val{font-family:'DM Mono',monospace;font-size:13px;color:var(--accent)}
+.pbar-track{height:9px;background:var(--bg-3);border-radius:99px;overflow:hidden}
+.pbar-fill{height:100%;background:linear-gradient(90deg,var(--accent),var(--gold));border-radius:99px;transition:width .4s cubic-bezier(0.34,1.56,0.64,1)}
+.pbar-desc{font-size:11px;color:var(--text-3);margin-top:4px}
+
+/* â”€â”€ FORM â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px}
+@media(max-width:600px){.form-row{grid-template-columns:1fr}}
+.setup-field{display:flex;flex-direction:column;gap:5px}
+.setup-field.full{grid-column:1/-1}
+.setup-field label{font-size:12px;color:var(--text-2);font-weight:500}
+.setup-field label .hint{color:var(--text-3);font-weight:400}
+.setup-field input,.setup-field textarea,.setup-field select{background:var(--surface);border:1px solid var(--border);color:var(--text);padding:9px 12px;border-radius:8px;font-family:'Inter',sans-serif;font-size:13px;width:100%;transition:border-color .15s}
+.setup-field input:focus,.setup-field textarea:focus,.setup-field select:focus{border-color:var(--accent);outline:none}
+.setup-field textarea{resize:vertical;min-height:60px}
+.setup-field .color-row{display:flex;gap:8px;align-items:center}
+.setup-field input[type=color]{width:44px;height:38px;padding:2px;cursor:pointer;border-radius:6px}
+.setup-group{margin-bottom:26px}
+.setup-group-title{font-family:'DM Mono',monospace;font-size:10px;color:var(--accent);text-transform:uppercase;letter-spacing:0.1em;font-weight:600;margin-bottom:13px;padding-bottom:8px;border-bottom:1px solid var(--border)}
+.repeater-item{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:12px;margin-bottom:8px;position:relative}
+.repeater-item .rm{position:absolute;top:8px;right:8px;background:transparent;border:none;color:var(--text-3);cursor:pointer;font-size:16px;line-height:1}
+.repeater-item .rm:hover{color:var(--maroon)}
+.repeater-add{background:var(--bg-3);border:1px dashed var(--border-bright);color:var(--text-2);padding:8px;border-radius:8px;cursor:pointer;font-family:'Inter',sans-serif;font-size:12px;width:100%;font-weight:500;transition:all .15s}
+.repeater-add:hover{border-color:var(--accent);color:var(--accent)}
+
+/* â”€â”€ BUTTONS â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.btn{background:var(--accent);color:#fff;border:none;padding:10px 20px;border-radius:9px;font-family:'Inter',sans-serif;font-size:13px;font-weight:600;cursor:pointer;transition:all .18s;display:inline-flex;align-items:center;gap:7px;letter-spacing:-0.01em}
+.btn:hover{background:var(--accent-glow);box-shadow:0 6px 20px rgba(232,76,30,0.3);transform:translateY(-1px)}
+.btn.ghost{background:var(--surface);color:var(--text);border:1px solid var(--border-bright)}
+.btn.ghost:hover{background:var(--surface-2);border-color:var(--accent)}
+.btn.danger{background:transparent;color:var(--maroon);border:1px solid rgba(160,32,10,0.35)}
+.btn.danger:hover{background:rgba(160,32,10,0.1)}
+.tb-btn.primary{background:var(--accent);color:#fff;border-color:var(--accent)}
+
+/* â”€â”€ SETUP MODAL â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.setup-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.72);backdrop-filter:blur(10px);z-index:1000;display:none;align-items:flex-start;justify-content:center;padding:40px 16px;overflow-y:auto}
+.setup-overlay.open{display:flex}
+.setup-modal{background:var(--bg-2);border:1px solid var(--border-bright);border-radius:18px;width:min(720px,100%);box-shadow:0 40px 100px rgba(0,0,0,0.12),inset 0 1px 0 rgba(255,255,255,0.4);margin:auto}
+.setup-head{padding:22px 28px;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:flex-start;gap:16px;position:sticky;top:0;background:var(--bg-2);border-radius:18px 18px 0 0;z-index:2}
+.setup-head h2{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;letter-spacing:-0.02em}
+.setup-head p{font-size:13px;color:var(--text-3);margin-top:4px}
+.setup-close{background:var(--surface);border:1px solid var(--border);color:var(--text);width:32px;height:32px;border-radius:8px;cursor:pointer;font-size:18px;flex-shrink:0;display:flex;align-items:center;justify-content:center;transition:all .15s}
+.setup-close:hover{background:var(--surface-2)}
+.setup-body{padding:24px 28px}
+.setup-foot{padding:18px 28px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;gap:12px;background:var(--bg-2);border-radius:0 0 18px 18px}
+.setup-foot .left{display:flex;gap:8px}
+
+/* â”€â”€ ONBOARD BANNER â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+#onboardBanner{max-width:1320px;margin:0 auto;padding:12px 28px}
+
+/* â”€â”€ ASSESSMENT â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.assessment-form .q-block{margin-bottom:28px;padding-bottom:22px;border-bottom:1px solid var(--border)}
+.assessment-form .q-label{display:flex;align-items:flex-start;gap:12px;margin-bottom:14px}
+.assessment-form .q-num{font-family:'DM Mono',monospace;font-size:10px;background:var(--accent);color:#fff;padding:4px 9px;border-radius:4px;font-weight:600;flex-shrink:0}
+.assessment-form .q-text{font-size:15px;font-weight:600;color:var(--text);line-height:1.4}
+.assessment-form .opt-row{display:flex;flex-direction:column;gap:6px}
+.assessment-form label.opt{display:flex;align-items:center;gap:11px;padding:12px 14px;border:1.5px solid var(--border);border-radius:9px;cursor:pointer;font-size:14px;transition:all .15s}
+.assessment-form label.opt:hover{border-color:var(--border-bright)}
+.assessment-form input[type=radio]{accent-color:var(--accent);width:17px;height:17px;cursor:pointer}
+.assessment-form input[type=radio]:checked+span{color:var(--text);font-weight:500}
+
+/* â”€â”€ FLOAT ACTIONS â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.float-actions{position:fixed;bottom:22px;right:22px;display:flex;flex-direction:column;gap:8px;z-index:200}
+.float-btn{background:var(--surface);border:1px solid var(--border-bright);color:var(--text);padding:10px 16px;border-radius:99px;font-family:'Inter',sans-serif;font-size:12px;font-weight:600;cursor:pointer;box-shadow:0 8px 24px rgba(0,0,0,0.08);display:flex;align-items:center;gap:7px;transition:all .18s}
+.float-btn:hover{background:var(--surface-2);transform:translateY(-1px)}
+.float-btn.primary{background:var(--accent);color:#fff;border-color:var(--accent);box-shadow:0 6px 20px rgba(232,76,30,0.3)}
+.float-btn.primary:hover{background:var(--accent-glow)}
+
+/* â”€â”€ INTEL / SCORING â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.score-bar-wrap{margin-bottom:14px}
+.score-bar-top{display:flex;justify-content:space-between;font-size:13px;margin-bottom:5px}
+.score-bar-track{height:7px;background:var(--bg-3);border-radius:99px;overflow:hidden}
+.score-bar-fill{height:100%;border-radius:99px;transition:width .4s ease}
+
+/* â”€â”€ FOOTER â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.footer{border-top:1px solid var(--border);padding:40px 28px;margin-top:60px;text-align:center}
+.footer h3{font-family:'Playfair Display',serif;font-size:16px;font-weight:700;margin-bottom:8px}
+.footer p{font-size:13px;color:var(--text-3);max-width:460px;margin:0 auto;line-height:1.5}
+.footer .meta{font-family:'DM Mono',monospace;font-size:10px;color:var(--text-3);margin-top:16px;text-transform:uppercase;letter-spacing:0.07em}
+
+/* â”€â”€ BROCHURE â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.brochure-page{aspect-ratio:9/16;border-radius:14px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,0.15)}
+
+/* â”€â”€ RESPONSIVE â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+@media print{.topbar,.tabs-wrap,.float-actions,.setup-overlay,.ds-hook{display:none}.section{display:block!important;page-break-after:always}}
+@media(max-width:768px){
+  .topbar-inner{padding:12px 18px}
+  .hero{padding:48px 18px 32px}
+  .hero-stats{gap:22px}
+  .section{padding:38px 18px 80px}
+  .nav-trigger{min-width:0;flex:1}
+  .nav-panel{left:14px;width:calc(100vw - 28px);grid-template-columns:1fr 1fr}
+  .form-row{grid-template-columns:1fr}
+}
+@media(max-width:480px){.nav-panel{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<!-- TOPBAR -->
+<div class="topbar">
+  <div class="topbar-inner">
+    
+    <div class="brand">
+      <img src="logo.svg" alt="DigiVenue Logo" class="digivenue-logo" style="height: 24px; width: auto; margin-right: 15px; ">
+      <div class="brand-mark" id="brandMark">V</div>
+      <div class="brand-text">
+        <h1 id="brandName">Venue Growth Bible</h1>
+        <p id="brandTagline">Configurable Strategy Engine</p>
+      </div>
+    </div>
+    <div class="topbar-actions">
+      <select id="leadsDropdown" style="display:none; max-width: 150px; padding: 4px; margin-right: 10px; border-radius: 4px; border: 1px solid #ddd;" onchange="loadLead(this.value)">
+        <option value="">Select Venue...</option>
+      </select>
+      <label class="tb-btn" style="cursor:pointer" title="Load Leads Database (JSON array)">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+        <span class="lbl">Load DB</span>
+        <input type="file" accept="application/json" style="display:none" onchange="importLeadsDB(event)">
+      </label>
+      <label class="tb-btn" style="cursor:pointer" title="Load a venue intake JSON from the sales tool">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        <span class="lbl">Load Venue</span>
+        <input type="file" accept="application/json" style="display:none" onchange="importIntakeFile(event)">
+      </label>
+      <button class="tb-btn" onclick="openSetup()" id="configBtn">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+        <span class="lbl">Configure</span>
+      </button>
+      <button class="tb-btn primary" id="ctaBtn" onclick="ctaAction()">
+        <span id="ctaLabel">Contact</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<div id="onboardBanner" style="display:none;max-width:1400px;margin:0 auto;padding:12px 20px;background:linear-gradient(135deg,rgba(34,197,94,0.12),rgba(249,115,22,0.06));border:1px solid rgba(34,197,94,0.3);border-radius:12px;margin-top:14px;font-size:13px;color:var(--text)"></div>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-badge"><span class="dot"></span><span id="heroBadge">Digital Growth Bible</span></div>
+    <h2 id="heroTitle">DigiVenue Sales Demo <em>Pitch Deck</em></h2>
+    <p class="hero-sub" id="heroSub">Sales tool for your team. Demo the assessment, diagnosis, and investment framework to close banquet venues on DigiVenue & DigiStories.</p>
+    <div class="hero-stats" id="heroStats"></div>
+  </div>
+</div>
+
+<!-- NAV -->
+<div class="tabs-wrap">
+  <div class="nav-inner">
+    <button class="nav-trigger" id="navTrigger" onclick="toggleNav(event)">
+      <span class="nav-trigger-label">
+        <span class="nav-trigger-num" id="navCurrentNum">01</span>
+        <span id="navCurrentTitle">Brand Identity</span>
+      </span>
+      <svg class="nav-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+    </button>
+    <div class="nav-panel" id="navPanel"></div>
+  </div>
+</div>
+
+<!-- SECTIONS RENDER TARGET -->
+<div id="sections"></div>
+
+<!-- FLOAT ACTIONS -->
+<div class="float-actions">
+  <button class="float-btn primary" onclick="window.print()">
+    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+    Save PDF
+  </button>
+  <button class="float-btn" onclick="scrollTo({top:0,behavior:'smooth'})">
+    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg>
+    Top
+  </button>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  <h3 id="footBrand">Venue Growth Bible</h3>
+  <p id="footTagline">Configurable Strategy Engine</p>
+  <p style="font-size:12px;color:var(--text-3);margin-top:8px;">Internal tool - DigiVenue team use only. Do not share this URL with prospects. The customer receives the printed Venue Health Brief only.</p>
+  <div class="meta" id="footMeta">Powered by DigiVenue Â· DigiStories</div>
+</div>
+
+<!-- SETUP PANEL -->
+<div class="setup-overlay" id="setupOverlay">
+  <div class="setup-modal">
+    <div class="setup-head">
+      <div>
+        <h2>Configure this Bible</h2>
+        <p>Fill in the venue &amp; company details. The entire document re-renders instantly. Saved to this browser.</p>
+      </div>
+      <button class="setup-close" onclick="closeSetup()">&times;</button>
+    </div>
+    <div class="setup-body" id="setupBody"><!-- form injected by JS --></div>
+    <div class="setup-foot">
+      <div class="left">
+        <button class="btn ghost" onclick="exportConfig()">Export JSON</button>
+        <button class="btn ghost" onclick="document.getElementById('importFile').click()">Import JSON</button>
+        <input type="file" id="importFile" accept="application/json" style="display:none" onchange="importConfig(event)">
+      </div>
+      <div style="display:flex;gap:8px">
+        <button class="btn danger" onclick="resetConfig()">Reset</button>
+        <button class="btn" onclick="saveSetup()">Save &amp; Apply</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+/* =====================================================================
+   VENUE GROWTH BIBLE â€” CONFIGURABLE ENGINE
+   All client-specific data lives in CONFIG. The whole document renders
+   from it. Edit via the Configure panel, or Import/Export JSON.
+   ===================================================================== */
+
+const DEFAULT_CONFIG = {
+  meta: {
+    productName: "DigiVenue",
+    storiesName: "DigiStories",
+    poweredBy: "Powered by DigiVenue Â· DigiStories"
+  },
+  company: {
+    name: "",
+    venueName: "",
+    venueFullName: "",
+    tagline: "",
+    logoData: "",
+    website: "",
+    email: "",
+    instagram: ""
+  },
+  location: {
+    city: "",
+    region: "",
+    addressLine: "",
+    pincode: ""
+  },
+  market: {
+    currency: "â‚¹",
+    currencyCode: "INR",
+    taxName: "GST",
+    taxPercent: "5",
+    messagingApp: "WhatsApp",
+    usesMuhurat: false,
+    weddingValue: ""
+  },
+  brand: {
+    theme: "custom",
+    logoType: "image",
+    accent: "#D94822",
+    accentGlow: "#E85E39",
+    deep: "#B83615"
+  },
+  contacts: [],
+  capacity: { min: "300", max: "800" },
+  pricing: {
+    hallFrom: "",
+    hallFullDay: "",
+    cateringFrom: "",
+    packages: [],
+    specialties: ""
+  },
+  seo: {
+    keywords: [],
+    hashtags: []
+  },
+  cta: {
+    label: "WhatsApp",
+    type: "whatsapp",
+    enableStoriesHooks: true
+  },
+  deal: { budget: "", decisionMaker: "", timeline: "", probability: "" },
+  leakage: { inquiries: "12", bookings: "1.5", revenue: "7.5L" },
+  competitor: { name: "Blue Sea", reviews: "238" }
+};;
+
+let CONFIG = JSON.parse(JSON.stringify(DEFAULT_CONFIG));
+
+/* ---------- helpers ---------- */
+const C = () => CONFIG;
+const cur = () => CONFIG.market.currency;
+const primaryPhone = () => (CONFIG.contacts.find(x=>x.primary) || CONFIG.contacts[0] || {phone:""}).phone;
+const venue = () => CONFIG.company.venueName;
+const venueFull = () => CONFIG.company.venueFullName || CONFIG.company.venueName;
+const co = () => CONFIG.company.name;
+const cityRegion = () => `${CONFIG.location.city}, ${CONFIG.location.region}`;
+function esc(s){ return (s==null?'':String(s)).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+
+/* token replacement so chapter text adapts to any client */
+function tk(str){
+  if(str==null) return '';
+  return String(str)
+    .replaceAll('{VENUE}', venue())
+    .replaceAll('{VENUE_FULL}', venueFull())
+    .replaceAll('{CO}', co())
+    .replaceAll('{CITY}', CONFIG.location.city)
+    .replaceAll('{REGION}', CONFIG.location.region)
+    .replaceAll('{CITYREGION}', cityRegion())
+    .replaceAll('{PHONE}', primaryPhone())
+    .replaceAll('{CUR}', cur())
+    .replaceAll('{TAX}', CONFIG.market.taxName)
+    .replaceAll('{TAXPCT}', CONFIG.market.taxPercent)
+    .replaceAll('{MSG}', CONFIG.market.messagingApp)
+    .replaceAll('{TAGLINE}', CONFIG.company.tagline)
+    .replaceAll('{WEBSITE}', CONFIG.company.website)
+    .replaceAll('{IG}', CONFIG.company.instagram)
+    .replaceAll('{CAPMIN}', CONFIG.capacity.min)
+    .replaceAll('{CAPMAX}', CONFIG.capacity.max)
+    .replaceAll('{HALLFROM}', CONFIG.pricing.hallFrom)
+    .replaceAll('{CATERFROM}', CONFIG.pricing.cateringFrom)
+    .replaceAll('{STORIES}', CONFIG.meta.storiesName)
+    .replaceAll('{PRODUCT}', CONFIG.meta.productName);
+}
+
+/* copy button helper */
+function copyPrompt(btn){
+  const box = btn.closest('.prompt-box');
+  const content = box.querySelector('.prompt-content');
+  navigator.clipboard.writeText(content.innerText.trim()).then(()=>{
+    btn.classList.add('copied');
+    btn.innerHTML = '<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Copied';
+    setTimeout(()=>{ btn.classList.remove('copied'); btn.innerHTML = copyIcon()+'Copy'; }, 1500);
+  });
+}
+function copyIcon(){ return '<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>'; }
+
+/* prompt box builder */
+function promptBox(tag, label, body){
+  return `<div class="prompt-box"><div class="prompt-head"><div class="prompt-label"><span class="prompt-tag">${esc(tag)}</span>${esc(label)}</div><button class="copy-btn" onclick="copyPrompt(this)">${copyIcon()}Copy</button></div><div class="prompt-content">${esc(tk(body))}</div></div>`;
+}
+
+/* DigiStories conversion hook */
+function dsHook(text){
+  if(!CONFIG.cta.enableStoriesHooks) return '';
+  return `<div class="ds-hook"><div class="ds-hook-icon">âš¡</div><div class="ds-hook-body"><strong>${esc(CONFIG.meta.storiesName)} can do this for you</strong><span>${esc(tk(text))}</span></div><button class="ds-hook-btn" onclick="ctaAction()">Start with ${esc(CONFIG.meta.storiesName)}</button></div>`;
+}
+
+/* ---------- THEME ---------- */
+function applyTheme(){
+  const r = document.documentElement.style;
+
+  r.setProperty('--accent', CONFIG.brand.accent);
+  r.setProperty('--accent-glow', CONFIG.brand.accentGlow);
+  r.setProperty('--maroon', CONFIG.brand.deep);
+  
+  // brand mark: logo or initial
+  const bm = document.getElementById('brandMark');
+  if(CONFIG.brand.logoType === 'text') {
+    bm.textContent = (co()[0]||'V').toUpperCase();
+    bm.style.background = 'linear-gradient(135deg, var(--accent), var(--maroon))';
+  } else if(CONFIG.company.logoData){ 
+    bm.innerHTML = `<img src="${CONFIG.company.logoData}" alt="logo">`; 
+    bm.style.background = 'transparent';
+  } else { 
+    bm.textContent = (co()[0]||'V').toUpperCase(); 
+    bm.style.background = 'linear-gradient(135deg, var(--accent), var(--maroon))';
+  }
+  // text bits
+  document.getElementById('brandName').textContent = venue() ? `${venue()} Growth Bible` : 'Growth Bible';
+  document.getElementById('brandTagline').textContent = co();
+  document.getElementById('heroBadge').textContent = `${venue()} Â· Digital Growth Bible`;
+  document.getElementById('heroTitle').innerHTML = `The complete <em>playbook</em><br>for filling ${esc(venue())}`;
+  document.getElementById('heroSub').textContent = tk(`Every AI prompt, content template, and execution framework â€” engineered to make ${venue()} the first choice in ${cityRegion()}.`);
+  document.getElementById('footBrand').textContent = `${venue()} Growth Bible`;
+  document.getElementById('footTagline').textContent = CONFIG.company.tagline;
+  document.getElementById('footMeta').textContent = CONFIG.meta.poweredBy;
+  document.title = venue() ? `${venue()} â€” Growth Bible` : 'DigiVenue â€” Growth Bible';
+  // CTA
+  document.getElementById('ctaLabel').textContent = CONFIG.cta.label || 'Contact';
+  document.getElementById('ctaBtn').style.display = (CONFIG.cta.type==='none') ? 'none' : '';
+  // hero stats
+  renderHeroStats();
+}
+
+function renderHeroStats(){
+  const stats = [
+    {n:'21', l:'Chapters'},
+    {n:'55<em>+</em>', l:'AI Prompts'},
+    {n:'30', l:'Day Calendar'},
+    {n:CONFIG.capacity.max, l:'Max Capacity'}
+  ];
+  document.getElementById('heroStats').innerHTML = stats.map(s=>
+    `<div class="hero-stat"><div class="hero-stat-n">${s.n}</div><div class="hero-stat-l">${esc(s.l)}</div></div>`).join('');
+}
+
+function ctaAction(){
+  if(CONFIG.cta.type==='whatsapp'){
+    const num = primaryPhone().replace(/\D/g,'');
+    window.open('https://wa.me/'+(num.length===10?'91'+num:num),'_blank');
+  } else if(CONFIG.cta.type==='url'){
+    window.open(CONFIG.company.website.startsWith('http')?CONFIG.company.website:'https://'+CONFIG.company.website,'_blank');
+  }
+}
+
+/* ---------- NAV ---------- */
+/* ---------- NAV ---------- */
+const NAV_GROUPS = [
+  { title:'Onboarding', items:[
+    ['assess','▼','Assessment'],
+    ['intel','◆','Growth Intelligence'],
+    ['audit','🔍','Deep Audit'],
+    ['investment','★','Growth Investment'],
+  ]},
+  { title:'Pillar 1 · Visibility', items:[
+    ['ch01','01','Brand Identity'],['ch02','02','Image Brief Prompts'],['ch07','07','Poster Brief Prompts'],
+    ['ch09','09','Google Business'],['ch20','20','Carousels & Local Search'],
+  ]},
+  { title:'Pillar 2 · Trust', items:[
+    ['ch18','18','Guest Photos & Reels'],['ch11','11','Influencer & PR'],['ch06','06','Brochure Brief Prompt'],
+    ['ch26','26','Review System & Reputation'],
+  ]},
+  { title:'Pillar 3 · Conversion', items:[
+    ['ch08','08','Messaging Scripts'],['ch13','13','Journey to Booking'],['ch16','16','Where Inquiries Come From'],
+    ['ch21','21','Inquiry & Follow-up System'],['ch22','22','Customer Journey to Booking'],
+  ]},
+  { title:'Pillar 4 · Operations (SmartOS)', items:[
+    ['ch23','23','Inquiry Leakage & SmartOS Readiness'],['ch24','24','Operational Maturity Patterns'],['ch12','12','Execution Checklist'],
+  ]},
+  { title:'Pillar 5 · Revenue', items:[
+    ['ch14','14','Seasonal Timing'],['ch25','25','Off-Season Revenue Activation'],['ch17','17','Paid Ads'],
+  ]},
+  { title:'Content & Rhythm', items:[
+    ['ch03','03','Social Strategy'],['ch04','04','30-Day Calendar'],['ch05','05','Caption Prompts'],
+    ['ch10','10','Reel Concepts & Scripts'],['ch19','19','Reels Mastery'],['ch15','15','Instagram Algorithm Rules'],
+  ]},
+  { title:'Assets', items:[['brochure','★','Live Brochure']] },
+  { title:'🔒 Internal', items:[['ch27','27','BCA Relationship Playbook']] }
+];
+function buildNav(){
+  document.getElementById('navPanel').innerHTML = NAV_GROUPS.map(g=>
+    `<div class="nav-group"><div class="nav-group-title">${esc(g.title)}</div>`+
+    g.items.map(it=>`<button class="nav-item" data-id="${it[0]}" onclick="go('${it[0]}',this)"><span class="nav-item-num">${it[1]}</span>${esc(it[2])}</button>`).join('')+
+    `</div>`).join('');
+}
+
+function go(id, btn){
+  // Aliases
+  if(id==='growth') id='intel';
+  if(id==='assess') id='assess';
+  // Re-render dynamic sections on every visit
+  if(id==='intel' && typeof renderIntel==='function') setTimeout(renderIntel, 0);
+  if(id==='investment' && typeof renderGrowthInvestment==='function') setTimeout(renderGrowthInvestment, 0);
+  if(id==='audit'){ var _a=document.getElementById('audit'); if(_a){ _a.innerHTML=(typeof detailedAuditSectionHTML==='function')?detailedAuditSectionHTML():''; setTimeout(function(){ if(typeof restoreDetailedAudit==='function') restoreDetailedAudit(); },50); } }
+  
+  document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
+  document.querySelectorAll('.nav-item').forEach(b=>b.classList.remove('active'));
+  const sec = document.getElementById(id);
+  if(sec) sec.classList.add('active');
+  if(!btn) btn = document.querySelector(`.nav-item[data-id="${id}"]`);
+  if(btn){
+    btn.classList.add('active');
+    const num = btn.querySelector('.nav-item-num');
+    document.getElementById('navCurrentNum').innerHTML = num ? num.innerHTML : '';
+    document.getElementById('navCurrentTitle').textContent = btn.textContent.replace(num?num.textContent:'','').trim();
+  }
+  closeNav();
+  const topbar=document.querySelector('.topbar'), tabs=document.querySelector('.tabs-wrap');
+  const stack=(topbar?topbar.offsetHeight:0)+(tabs?tabs.offsetHeight:0);
+  const y=sec.getBoundingClientRect().top+window.pageYOffset-stack-12;
+  window.scrollTo({top:Math.max(0,y),behavior:'smooth'});
+}
+function toggleNav(e){ if(e)e.stopPropagation(); document.getElementById('navPanel').classList.toggle('open'); document.getElementById('navTrigger').classList.toggle('open'); }
+function closeNav(){ const p=document.getElementById('navPanel'),t=document.getElementById('navTrigger'); if(p)p.classList.remove('open'); if(t)t.classList.remove('open'); }
+document.addEventListener('click',e=>{ const p=document.getElementById('navPanel'),t=document.getElementById('navTrigger'); if(p&&p.classList.contains('open')&&!p.contains(e.target)&&!t.contains(e.target)) closeNav(); });
+document.addEventListener('keydown',e=>{ if(e.key==='Escape'){closeNav();closeSetup();} });
+
+function syncStickyOffsets(){
+  const topbar=document.querySelector('.topbar'), tabs=document.querySelector('.tabs-wrap');
+  const tb=topbar?topbar.offsetHeight:69;
+  const stack=tb+(tabs?tabs.offsetHeight:56);
+  document.documentElement.style.setProperty('--topbar-h',tb+'px');
+  document.documentElement.style.setProperty('--stack-h',(stack+12)+'px');
+}
+window.addEventListener('load',syncStickyOffsets);
+window.addEventListener('resize',syncStickyOffsets);
+window.addEventListener('orientationchange',syncStickyOffsets);
+</script>
+<script>
+/* =====================================================================
+   SETUP FORM + PERSISTENCE
+   ===================================================================== */
+
+function openSetup(){ if(typeof restoreSetupFoot==='function') restoreSetupFoot(); buildSetupForm(); document.getElementById('setupOverlay').classList.add('open'); }
+function closeSetup(){ document.getElementById('setupOverlay').classList.remove('open'); }
+
+function field(label, id, val, opts={}){
+  const hint = opts.hint ? `<span class="hint"> â€” ${esc(opts.hint)}</span>` : '';
+  const cls = opts.full ? 'setup-field full' : 'setup-field';
+  if(opts.textarea){
+    return `<div class="${cls}"><label>${esc(label)}${hint}</label><textarea id="${id}">${esc(val)}</textarea></div>`;
+  }
+  if(opts.color){
+    return `<div class="${cls}"><label>${esc(label)}${hint}</label><div class="color-row"><input type="color" id="${id}" value="${esc(val)}"><input type="text" id="${id}_t" value="${esc(val)}" oninput="document.getElementById('${id}').value=this.value" style="flex:1"></div></div>`;
+  }
+  if(opts.select){
+    const o = opts.options.map(op=>`<option value="${esc(op)}" ${op===val?'selected':''}>${esc(op)}</option>`).join('');
+    const oc = opts.onChange ? ` onchange="${opts.onChange}"` : '';
+    return `<div class="${cls}"><label>${esc(label)}${hint}</label><select id="${id}"${oc}>${o}</select></div>`;
+  }
+  return `<div class="${cls}"><label>${esc(label)}${hint}</label><input type="text" id="${id}" value="${esc(val)}"></div>`;
+}
+
+function handleThemeChange(selectEl) {
+  const t = selectEl.value;
+  let a='', ag='', d='';
+  if(t==='royal'){ a='#c5a059'; ag='#d4b06a'; d='#1a233a'; }
+  else if(t==='modern'){ a='#1f1d1c'; ag='#4a4644'; d='#000000'; }
+  else if(t==='garden'){ a='#1a7a4a'; ag='#22a861'; d='#125c36'; }
+  else if(t==='pastel'){ a='#d8948b'; ag='#e5a59d'; d='#b5746c'; }
+  
+  if(a){
+    document.getElementById('f_accent').value = a;
+    document.getElementById('f_accent_t').value = a;
+    document.getElementById('f_accentGlow').value = ag;
+    document.getElementById('f_accentGlow_t').value = ag;
+    document.getElementById('f_deep').value = d;
+    document.getElementById('f_deep_t').value = d;
+  }
+}
+
+function buildSetupForm(){
+  const c = CONFIG;
+  let h = '';
+
+  // Company
+  h += `<div class="setup-group"><div class="setup-group-title">Company & Venue</div>`;
+  h += `<div class="setup-row">${field('Company Name','f_coName',c.company.name)}${field('Venue Name (short)','f_venueName',c.company.venueName)}</div>`;
+  h += `<div class="setup-row">${field('Venue Full Name','f_venueFull',c.company.venueFullName,{full:true})}</div>`;
+  h += `<div class="setup-row">${field('Tagline','f_tagline',c.company.tagline,{full:true})}</div>`;
+  h += `<div class="setup-row">${field('Website','f_website',c.company.website)}${field('Instagram','f_ig',c.company.instagram)}</div>`;
+  h += `<div class="setup-row">${field('Email','f_email',c.company.email)}</div>`;
+  h += `<div class="setup-row">${field('Logo Mode','f_logoType',c.brand.logoType||'image',{select:true,options:['image','text']})}</div>`;
+  h += `<div class="setup-row"><div class="setup-field full"><label>Upload Logo Image <span class="hint">â€” optional</span></label><input type="file" id="f_logo" accept="image/*" onchange="handleLogoPick(event)"><div id="logoPreview" style="margin-top:8px"></div></div></div>`;
+  h += `</div>`;
+
+  // Location
+  h += `<div class="setup-group"><div class="setup-group-title">Location</div>`;
+  h += `<div class="setup-row">${field('City','f_city',c.location.city)}${field('Region','f_region',c.location.region)}</div>`;
+  h += `<div class="setup-row">${field('Address Line','f_addr',c.location.addressLine,{full:true,textarea:true})}</div>`;
+  h += `<div class="setup-row">${field('Pincode','f_pin',c.location.pincode)}</div>`;
+  h += `</div>`;
+
+  // Market
+  h += `<div class="setup-group"><div class="setup-group-title">Market & Currency</div>`;
+  h += `<div class="setup-row">${field('Currency Symbol','f_cur',c.market.currency)}${field('Currency Code','f_curCode',c.market.currencyCode)}</div>`;
+  h += `<div class="setup-row">${field('Tax Name','f_taxName',c.market.taxName,{hint:'e.g. GST, VAT'})}${field('Tax %','f_taxPct',c.market.taxPercent)}</div>`;
+  h += `<div class="setup-row">${field('Messaging App','f_msg',c.market.messagingApp,{hint:'WhatsApp, SMS, etc'})}${field('Use Muhurat/Seasonal Timing','f_muhurat',c.market.usesMuhurat?'Yes':'No',{select:true,options:['Yes','No']})}</div>`;
+  h += `</div>`;
+
+  // Brand colors
+  h += `<div class="setup-group"><div class="setup-group-title">Brand Identity</div>`;
+  h += `<div class="setup-row">${field('Premium Theme','f_theme',c.brand.theme||'custom',{select:true,options:['custom','royal','modern','garden','pastel'],onChange:'handleThemeChange(this)'})}</div>`;
+  h += `<div class="setup-row"><div class="setup-field full"><label class="hint">Selecting a theme will auto-fill the custom colors below.</label></div></div>`;
+  h += `<div class="setup-row">${field('Accent (Custom)','f_accent',c.brand.accent,{color:true})}${field('Accent Glow (Custom)','f_accentGlow',c.brand.accentGlow,{color:true})}</div>`;
+  h += `<div class="setup-row">${field('Secondary / Deep (Custom)','f_deep',c.brand.deep,{color:true})}</div>`;
+  h += `</div>`;
+
+  // Capacity & pricing
+  h += `<div class="setup-group"><div class="setup-group-title">Capacity & Pricing</div>`;
+  h += `<div class="setup-row">${field('Min Capacity','f_capMin',c.capacity.min)}${field('Max Capacity','f_capMax',c.capacity.max)}</div>`;
+  h += `<div class="setup-row">${field('Hall From','f_hallFrom',c.pricing.hallFrom)}${field('Hall Full Day','f_hallFull',c.pricing.hallFullDay)}</div>`;
+  h += `<div class="setup-row">${field('Catering From (per pax)','f_caterFrom',c.pricing.cateringFrom)}</div>`;
+  h += `<div class="setup-row">${field('Cuisine / Menu Specialties','f_special',c.pricing.specialties,{full:true,textarea:true})}</div>`;
+  // packages repeater
+  h += `<div class="setup-field full"><label>Packages</label><div id="pkgRepeater"></div><button class="repeater-add" onclick="addPkg()">+ Add package</button></div>`;
+  h += `</div>`;
+
+  // Contacts
+  h += `<div class="setup-group"><div class="setup-group-title">Contacts</div>`;
+  h += `<div class="setup-field full"><div id="contactRepeater"></div><button class="repeater-add" onclick="addContact()">+ Add contact</button></div>`;
+  h += `</div>`;
+
+  // SEO
+  h += `<div class="setup-group"><div class="setup-group-title">SEO & Hashtags</div>`;
+  h += `<div class="setup-row">${field('Keywords','f_keywords',c.seo.keywords.join(', '),{full:true,textarea:true,hint:'comma separated'})}</div>`;
+  h += `<div class="setup-row">${field('Hashtags','f_hashtags',c.seo.hashtags.join(', '),{full:true,hint:'comma separated, no # needed'})}</div>`;
+  h += `</div>`;
+
+  // CTA / product
+  h += `<div class="setup-group"><div class="setup-group-title">Product & Call-to-Action</div>`;
+  h += `<div class="setup-row">${field('Product Name','f_product',c.meta.productName)}${field('Stories Module Name','f_stories',c.meta.storiesName)}</div>`;
+  h += `<div class="setup-row">${field('Powered-by line','f_poweredBy',c.meta.poweredBy,{full:true})}</div>`;
+  h += `<div class="setup-row">${field('CTA Button Label','f_ctaLabel',c.cta.label)}${field('CTA Type','f_ctaType',c.cta.type,{select:true,options:['whatsapp','url','none']})}</div>`;
+  h += `<div class="setup-row">${field('Show Stories conversion hooks','f_dsHooks',c.cta.enableStoriesHooks?'Yes':'No',{select:true,options:['Yes','No']})}</div>`;
+  h += `</div>`;
+
+  document.getElementById('setupBody').innerHTML = h;
+  // populate repeaters
+  renderPkgRepeater();
+  renderContactRepeater();
+  // logo preview
+  if(c.company.logoData) document.getElementById('logoPreview').innerHTML = `<img src="${c.company.logoData}" style="height:48px;border-radius:8px;border:1px solid var(--border)">`;
+}
+
+/* packages repeater */
+let _pkgTmp = [];
+function renderPkgRepeater(){
+  _pkgTmp = JSON.parse(JSON.stringify(CONFIG.pricing.packages));
+  drawPkg();
+}
+function drawPkg(){
+  document.getElementById('pkgRepeater').innerHTML = _pkgTmp.map((p,i)=>
+    `<div class="repeater-item"><button class="rm" onclick="rmPkg(${i})">&times;</button>
+      <div class="setup-row">
+        <div class="setup-field"><label>Name</label><input type="text" value="${esc(p.name)}" oninput="_pkgTmp[${i}].name=this.value"></div>
+        <div class="setup-field"><label>Price</label><input type="text" value="${esc(p.price)}" oninput="_pkgTmp[${i}].price=this.value"></div>
+      </div>
+      <div class="setup-row">
+        <div class="setup-field"><label>Includes</label><input type="text" value="${esc(p.desc)}" oninput="_pkgTmp[${i}].desc=this.value"></div>
+        <div class="setup-field"><label>Unit</label><input type="text" value="${esc(p.unit)}" oninput="_pkgTmp[${i}].unit=this.value"></div>
+      </div>
+    </div>`).join('');
+}
+function addPkg(){ _pkgTmp.push({name:'NEW',desc:'',price:'',unit:'pax'}); drawPkg(); }
+function rmPkg(i){ _pkgTmp.splice(i,1); drawPkg(); }
+
+/* contacts repeater */
+let _contactTmp = [];
+function renderContactRepeater(){
+  _contactTmp = JSON.parse(JSON.stringify(CONFIG.contacts));
+  drawContact();
+}
+function drawContact(){
+  document.getElementById('contactRepeater').innerHTML = _contactTmp.map((p,i)=>
+    `<div class="repeater-item"><button class="rm" onclick="rmContact(${i})">&times;</button>
+      <div class="setup-row">
+        <div class="setup-field"><label>Name</label><input type="text" value="${esc(p.name)}" oninput="_contactTmp[${i}].name=this.value"></div>
+        <div class="setup-field"><label>Phone</label><input type="text" value="${esc(p.phone)}" oninput="_contactTmp[${i}].phone=this.value"></div>
+      </div>
+      <div class="setup-field"><label><input type="checkbox" ${p.primary?'checked':''} onchange="setPrimary(${i},this.checked)" style="width:auto;display:inline;margin-right:6px">Primary contact</label></div>
+    </div>`).join('');
+}
+function addContact(){ _contactTmp.push({name:'',phone:'',primary:false}); drawContact(); }
+function rmContact(i){ _contactTmp.splice(i,1); drawContact(); }
+function setPrimary(i,v){ _contactTmp.forEach((c,j)=>c.primary=(j===i&&v)); drawContact(); }
+
+/* logo pick */
+function handleLogoPick(e){
+  const f = e.target.files[0]; if(!f) return;
+  const r = new FileReader();
+  r.onload = ev => { CONFIG.company.logoData = ev.target.result; document.getElementById('logoPreview').innerHTML = `<img src="${ev.target.result}" style="height:48px;border-radius:8px;border:1px solid var(--border)">`; };
+  r.readAsDataURL(f);
+}
+
+/* SAVE â€” read all fields into CONFIG */
+function saveSetup(){
+  const g = id => { const el=document.getElementById(id); return el?el.value:''; };
+  CONFIG.company.name = g('f_coName');
+  CONFIG.company.venueName = g('f_venueName');
+  CONFIG.company.venueFullName = g('f_venueFull');
+  CONFIG.company.tagline = g('f_tagline');
+  CONFIG.company.website = g('f_website');
+  CONFIG.company.instagram = g('f_ig');
+  CONFIG.company.email = g('f_email');
+  CONFIG.location.city = g('f_city');
+  CONFIG.location.region = g('f_region');
+  CONFIG.location.addressLine = g('f_addr');
+  CONFIG.location.pincode = g('f_pin');
+  CONFIG.market.currency = g('f_cur');
+  CONFIG.market.currencyCode = g('f_curCode');
+  CONFIG.market.taxName = g('f_taxName');
+  CONFIG.market.taxPercent = g('f_taxPct');
+  CONFIG.market.messagingApp = g('f_msg');
+  CONFIG.market.usesMuhurat = (g('f_muhurat')==='Yes');
+  CONFIG.brand.theme = g('f_theme');
+  CONFIG.brand.logoType = g('f_logoType');
+  CONFIG.brand.accent = g('f_accent');
+  CONFIG.brand.accentGlow = g('f_accentGlow');
+  CONFIG.brand.deep = g('f_deep');
+  CONFIG.capacity.min = g('f_capMin');
+  CONFIG.capacity.max = g('f_capMax');
+  CONFIG.pricing.hallFrom = g('f_hallFrom');
+  CONFIG.pricing.hallFullDay = g('f_hallFull');
+  CONFIG.pricing.cateringFrom = g('f_caterFrom');
+  CONFIG.pricing.specialties = g('f_special');
+  CONFIG.pricing.packages = JSON.parse(JSON.stringify(_pkgTmp));
+  if(!CONFIG.competitor) CONFIG.competitor={};
+  CONFIG.competitor.name = g('f_compName');
+  CONFIG.competitor.reviews = g('f_compRev');
+  if(!CONFIG.leakage) CONFIG.leakage={};
+  CONFIG.leakage.inquiries = g('f_leakInq');
+  CONFIG.leakage.bookings = g('f_leakBook');
+  CONFIG.leakage.revenue = g('f_leakRev');
+  if(!CONFIG.deal) CONFIG.deal={};
+  CONFIG.deal.budget = g('f_dealBudg');
+  CONFIG.deal.decisionMaker = g('f_dealDM');
+  CONFIG.deal.timeline = g('f_dealTime');
+  CONFIG.deal.probability = g('f_dealProb');
+
+  CONFIG.contacts = JSON.parse(JSON.stringify(_contactTmp));
+  if(!CONFIG.contacts.some(c=>c.primary) && CONFIG.contacts[0]) CONFIG.contacts[0].primary=true;
+  CONFIG.seo.keywords = g('f_keywords').split(',').map(s=>s.trim()).filter(Boolean);
+  CONFIG.seo.hashtags = g('f_hashtags').split(',').map(s=>s.trim().replace(/^#/,'')).filter(Boolean);
+  CONFIG.meta.productName = g('f_product');
+  CONFIG.meta.storiesName = g('f_stories');
+  CONFIG.meta.poweredBy = g('f_poweredBy');
+  CONFIG.cta.label = g('f_ctaLabel');
+  CONFIG.cta.type = g('f_ctaType');
+  CONFIG.cta.enableStoriesHooks = (g('f_dsHooks')==='Yes');
+
+  persist();
+  applyTheme();
+  renderAllChapters();
+  applyLastReviewedStamps();
+  closeSetup();
+  // keep current section visible
+  const active = document.querySelector('.section.active');
+  if(!active){ const f=document.querySelector('.section'); if(f) f.classList.add('active'); go('ch01'); }
+}
+
+/* persistence */
+async function persist(){
+  try{ if(window.storage) await window.storage.set('dvb-config-v2', JSON.stringify(CONFIG), false); }catch(e){}
+}
+async function loadPersisted(){
+  try{
+    if(window.storage){
+      const r = await window.storage.get('dvb-config-v2', false);
+      if(r && r.value){
+        const saved = JSON.parse(r.value);
+        // Guard: skip stale test data from old sessions
+        const staleName = (saved.company && saved.company.venueName)||'';
+        if(staleName && (staleName.includes('MLA') || staleName.includes('GRS'))){
+          // stale â€” ignore, start fresh
+        } else {
+          CONFIG = Object.assign(JSON.parse(JSON.stringify(DEFAULT_CONFIG)), saved);
+        } }
+    }
+  }catch(e){}
+}
+function resetConfig(){
+  if(!confirm('Reset all settings to the default example?')) return;
+  CONFIG = JSON.parse(JSON.stringify(DEFAULT_CONFIG));
+  persist(); applyTheme(); renderAllChapters();
+  applyLastReviewedStamps(); buildSetupForm();
+}
+function exportConfig(){
+  // capture latest form edits first
+  try{ saveSilent(); }catch(e){}
+  const blob = new Blob([JSON.stringify(CONFIG,null,2)],{type:'application/json'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = (CONFIG.company.venueName||'venue').replace(/\s+/g,'_')+'_config.json';
+  a.click();
+}
+function saveSilent(){ /* read fields without closing */ const tmp=document.getElementById('f_coName'); if(tmp) saveSetup(); }
+function importConfig(e){
+  const f = e.target.files[0]; if(!f) return;
+  const r = new FileReader();
+  r.onload = ev => {
+    try{
+      const obj = JSON.parse(ev.target.result);
+      CONFIG = Object.assign(JSON.parse(JSON.stringify(DEFAULT_CONFIG)), obj);
+      persist(); applyTheme(); renderAllChapters();
+  applyLastReviewedStamps(); buildSetupForm();
+      alert('Config imported successfully.');
+    }catch(err){ alert('Invalid config file.'); }
+  };
+  r.readAsText(f);
+}
+</script>
+<script>
+/* =====================================================================
+   CHAPTER RENDERERS (1-12) â€” all read from CONFIG via tk()
+   ===================================================================== */
+
+function secWrap(id, tag, title, sub, body){
+  return `<div class="section" id="${id}">
+    <div class="section-header">
+      <div class="section-tag">${esc(tag)}</div>
+      <h2 class="section-title">${title}</h2>
+      <p class="section-sub">${esc(tk(sub))}</p>
+    </div>${body}</div>`;
+}
+
+function ch01(){
+  const c=CONFIG;
+  const swatches = [
+    ['Accent', c.brand.accent, 'Headlines, highlights, CTAs'],
+    ['Accent Glow', c.brand.accentGlow, 'Hovers, gradients'],
+    ['Deep / Secondary', c.brand.deep, 'Depth, contrast accents']
+  ].map(s=>`<div class="card"><div style="height:60px;border-radius:8px;background:${esc(s[1])};margin-bottom:12px"></div><h3 style="font-size:15px">${esc(s[0])}</h3><div class="mono" style="font-size:12px;color:var(--text-3)">${esc(s[1])}</div><p style="font-size:13px;margin-top:6px">${esc(s[2])}</p></div>`).join('');
+  const body = `
+    <div class="card accent">
+      <h3>Brand positioning statement</h3>
+      <p style="font-family:'Instrument Serif',serif;font-style:italic;font-size:19px;color:var(--text);line-height:1.5;border-left:3px solid var(--accent);padding-left:18px;margin:8px 0">${esc(tk(`${co()} is ${cityRegion()}'s most trusted premium venue partner, operating at ${venueFull()}. We don't just host events â€” we architect celebrations guests remember for decades.`))}</p>
+    </div>
+    <div class="divider"><h3>Brand voice</h3></div>
+    <div class="grid grid-3">
+      <div class="card"><h3>Confident</h3><p>"We deliver" â€” never "we try to deliver."</p></div>
+      <div class="card"><h3>Warm & personal</h3><p>"Your celebration", "your guests" â€” never "the client."</p></div>
+      <div class="card"><h3>Premium but accessible</h3><p>Luxury language without being cold or corporate.</p></div>
+      <div class="card"><h3>Community-rooted</h3><p>${esc(CONFIG.location.region)} pride, local cultural sensitivity.</p></div>
+      <div class="card"><h3>Action-oriented</h3><p>Every post ends with a clear next step or CTA.</p></div>
+      <div class="card"><h3>Respectful &amp; family-oriented <span class="mono" style="font-size:10px;color:var(--text-3)">the namaskar register</span></h3><p>For community sabhagruhs, heritage halls and family-run banquets. Address families with respect, mention blessings, reference tradition. Phrases like "aapke parivaar ke shubh avsar" (for your family's auspicious occasion) and "hamare yahan" (here at our place). Trust, family, respect, tradition - not luxury-only.</p></div>
+    </div>
+    <div class="divider"><h3>Brand colours</h3></div>
+    <div class="grid grid-3">${swatches}</div>
+    <div class="callout"><div class="callout-icon">â˜…</div><div class="callout-body"><h4>The golden rule</h4><p>Every piece of content â€” post, poster, brochure, message â€” must contain: <strong>brand name + phone + location</strong>. Never publish without all three.</p></div></div>`;
+  return secWrap('ch01','Chapter 01 Â· Identity', `Brand <em>identity & positioning</em>`, `Before any post or pitch, every piece must speak in one unified voice. This is ${venue()}'s brand DNA.`, body);
+}
+
+function ch02(){
+  const prompts = [
+    ['01','Grand hall â€” empty, luxury wide angle', `Cinematic wide-angle interior photograph of a grand event hall at {VENUE}, polished marble floors reflecting warm chandelier light, recessed coffered ceiling with golden cove lighting, elegant wall paneling, large windows, hall completely empty and pristine, no people, ultra-clean, professional architectural photography, 8K, warm golden-hour ambience, 24mm lens, f/8`],
+    ['02','Banquet setup â€” reception layout', `Elegant reception banquet setup inside {VENUE}, round tables with crisp white linens and embroidered chair covers, tall candelabra centerpieces with fresh flowers, carpet aisle leading to a raised stage, stage draped in rich fabric, warm amber and white lighting, soft bokeh, professional event photography, 50mm, f/2.8`],
+    ['03','Stage close-up â€” dramatic', `Close-up dramatic photograph of the event stage at {VENUE}, rich velvet curtains, full lighting rig with warm PAR lights, symmetrical sofa seating, fresh floral arrangements at corners, spotlight drama, cinematic event photography, audience perspective, wide angle`],
+    ['04','Hall exterior â€” premium facade', `Exterior photograph of {VENUE_FULL}, clean modern facade, wide steps to glass entry, large signage in brand colours, lush greenery on both sides, bright morning light, establishing shot, architectural photography, no people, blue sky, 35mm, f/11`],
+    ['05','Signature cuisine â€” flat lay', `Top-down flat lay photograph of {VENUE}'s signature spread, perfectly arranged dishes, fresh and abundant, natural daylight, food photography styling, shot overhead 90 degrees, sharp detail, no hands visible`],
+    ['06','Buffet line â€” grand spread', `Professional event catering buffet line, long row of polished chafing dishes, multiple dishes visible, staff in uniform standing ready, warm overhead lighting, elegant and inviting, wide guest-perspective shot, bokeh background`],
+    ['07','Live counter â€” chef in action', `Dynamic photograph of a live food counter, chef in uniform, station with visible flame, food being tossed, steam and motion, dramatic side lighting, blurred guests in background, action photography, f/1.8, cinematic motion`],
+    ['08','DÃ©cor detail â€” close-up styling', `Close-up detail of reception table styling at {VENUE}, embroidered runner, tall vase with flowers and foliage, place settings, glassware, calligraphy place card, shallow depth of field, warm candlelight, editorial styling photography`]
+  ].map(p=>promptBox(p[0],p[1],p[2])).join('');
+  const body = prompts + `<div class="callout"><div class="callout-icon">âš¡</div><div class="callout-body"><h4>Generation tips</h4><p>Append <code>--ar 9:16</code> for stories, <code>--ar 1:1</code> for feed, <code>--ar 16:9</code> for thumbnails. If output looks generic, add "shot for editorial magazine" at the end.</p></div></div>` + dsHook('Auto-generates on-brand visuals and captions for every campaign â€” no prompt-copying needed.');
+  return secWrap('ch02','Chapter 02 Â· AI Generation', `Image <em>creation prompts</em>`, `Photorealistic prompts for Midjourney, ChatGPT, Firefly, Ideogram. Click any prompt to copy.`, body);
+}
+
+function ch03(){
+  const body = `
+    <div class="table-wrap"><table><thead><tr><th>Platform</th><th>Priority</th><th>Role</th></tr></thead><tbody>
+      <tr><td>Instagram</td><td><span style="color:var(--accent);font-family:Geist Mono,monospace;font-size:11px">PRIMARY</span></td><td>Visual showcase, Reels, Stories â€” main lead gen</td></tr>
+      <tr><td>Google Business</td><td><span style="color:var(--accent);font-family:Geist Mono,monospace;font-size:11px">PRIMARY</span></td><td>Search capture for "${esc(tk('venue '+CONFIG.location.city))}"</td></tr>
+      <tr><td>${esc(CONFIG.market.messagingApp)}</td><td><span style="color:var(--accent);font-family:Geist Mono,monospace;font-size:11px">PRIMARY</span></td><td>Direct conversion â€” all enquiries close here</td></tr>
+      <tr><td>Facebook</td><td><span style="color:var(--text-3);font-family:Geist Mono,monospace;font-size:11px">SECONDARY</span></td><td>Older demographic, community groups</td></tr>
+      <tr><td>YouTube</td><td><span style="color:var(--text-3);font-family:Geist Mono,monospace;font-size:11px">SECONDARY</span></td><td>Long-form walkthroughs, highlight reels</td></tr>
+    </tbody></table></div>
+    <div class="divider"><h3>Content pillars</h3></div>
+    <div class="grid grid-3">
+      <div class="card accent"><div class="card-header"><div class="card-num">01</div></div><h3>Venue Showcase</h3><div class="card-sub">2Ã— / week</div><p>Empty hall, stage setups, exterior. Make people gasp at the space.</p></div>
+      <div class="card"><div class="card-header"><div class="card-num">02</div></div><h3>Food / Service</h3><div class="card-sub">3Ã— / week</div><p>Styled food, buffet spreads, live counters. Make people hungry and trust quality.</p></div>
+      <div class="card"><div class="card-header"><div class="card-num">03</div></div><h3>Real Events</h3><div class="card-sub">1Ã— / week</div><p>Actual events â€” setup to celebration. Authentic proof.</p></div>
+      <div class="card"><div class="card-header"><div class="card-num">04</div></div><h3>Behind the Scenes</h3><div class="card-sub">1Ã— / week</div><p>Prep, team at work, setup timelapse. Humanises the brand.</p></div>
+      <div class="card"><div class="card-header"><div class="card-num">05</div></div><h3>Social Proof</h3><div class="card-sub">2Ã— / week</div><p>Reviews, client quotes, testimonial reels.</p></div>
+      <div class="card"><div class="card-header"><div class="card-num">06</div></div><h3>Educational</h3><div class="card-sub">1Ã— / week</div><p>"How to plan your event at ${esc(venue())}". Builds authority.</p></div>
+    </div>
+    <div class="divider"><h3>Hashtag stack</h3></div>
+    <div class="card"><h3>Your lean tag set</h3><div class="card-sub">2026: use 3-5 specific tags, not 20 generic ones</div><div class="chip-row">${CONFIG.seo.hashtags.map(t=>`<span class="chip">#${esc(t)}</span>`).join('')}</div></div>
+    ` + dsHook('Schedules your weekly content mix automatically and posts to every platform from one place.');
+  return secWrap('ch03','Chapter 03 Â· Distribution', `Social media <em>strategy</em>`, `Platform-specific playbook to make ${venue()} the first name people think of.`, body);
+}
+
+function ch04(){
+  const days = [
+    ["MON","Venue hero â€” grand empty hall","Feed + GMB"],["TUE","Food post â€” signature spread","Feed"],["WED","Story poll â€” which setup?","Story"],
+    ["THU","Reel â€” 30s venue walkthrough","Reel"],["FRI","Menu / packages infographic","Feed + "+CONFIG.market.messagingApp],["SAT","BTS â€” setup process","Feed"],["SUN","Client testimonial","Story"],
+    ["MON","Stage dÃ©cor â€” dramatic photo","Feed + GMB"],["TUE","Food â€” buffet spread","Feed"],["WED","Countdown to event","Story"],["THU","Reel â€” food prep BTS","Reel"],
+    ["FRI","Pricing graphic â€” from "+cur()+CONFIG.pricing.hallFrom,"Feed + FB"],["SAT","Event day coverage","Feed"],["SUN","Educational â€” 5 booking tips","Feed"],
+    ["MON","Exterior + entrance shot","Feed + GMB"],["TUE","Live counter chef","Reel"],["WED","Q&A â€” ask us anything","Story"],["THU","Corporate menu poster","Feed"],
+    ["FRI","Half vs full day compare","Feed"],["SAT","Real dining in action","Feed"],["SUN","Client quote card","Story"],
+    ["MON","Venue detail â€” lighting","Feed"],["TUE","Traditional menu spread","Feed"],["WED","Before/after setup","Story"],["THU","Reel â€” event highlight","Reel"],
+    ["FRI","Special package post","Feed + "+CONFIG.market.messagingApp],["SAT","Team at work","Story"],["SUN","Testimonial reel","Reel"],["MON","Monthly recap","Feed"],["TUE","CTA â€” book your date","All"]
+  ];
+  const cells = days.map((d,i)=>`<div class="card" style="padding:16px"><div style="display:flex;justify-content:space-between;margin-bottom:8px"><span class="mono" style="font-size:11px;color:var(--accent)">Day ${i+1}</span><span class="mono" style="font-size:10px;color:var(--text-3)">${d[0]}</span></div><p style="font-size:13px;margin-bottom:8px">${esc(d[1])}</p><span class="mono" style="font-size:10px;color:var(--text-3);text-transform:uppercase">${esc(d[2])}</span></div>`).join('');
+  const body = `<div class="grid grid-3">${cells}</div>` + dsHook('Generates your 30-day calendar from your booking gaps â€” and fills empty dates with targeted campaigns.');
+  return secWrap('ch04','Chapter 04 Â· Content', `30-day content <em>calendar</em>`, `Ready-to-execute posting schedule. Adapt dates, keep the rhythm.`, body);
+}
+
+function ch05(){
+  const prompts = [
+    ['01','Empty hall â€” aspirational', `Write an Instagram caption for a premium venue photo of {VENUE}. Tone: luxury, aspirational. 5-7 lines. Invite imagination ("picture your celebration here"), end with CTA to message or call {PHONE}. Location: {CITYREGION}. 3-4 emojis. No generic phrases. End with [HASHTAGS].`],
+    ['02','Event setup â€” emotion', `Write an Instagram caption for a fully decorated reception setup at {VENUE}. Tone: warm, celebratory, personal. Speak to a couple/family. 6-8 lines. Emotion of the occasion, pride in craft, CTA to book a venue visit. {CO}, {CITYREGION}. Phone {PHONE}. End with [HASHTAGS].`],
+    ['03','Signature food â€” pride', `Write an Instagram caption for {VENUE}'s signature cuisine photo. Tone: cultural pride, mouth-watering. Mention authentic flavours, variety, {CO}'s catering experience. 5-7 lines. CTA: call {PHONE} to book. 3-4 food emojis. End with [HASHTAGS].`],
+    ['04','Buffet â€” premium service', `Write an Instagram caption for a buffet spread at {VENUE}. Tone: confident, premium. Mention variety, hygiene, professional service, pricing hint ("from {CUR}{CATERFROM} per person"). 5-6 lines. CTA: DM for custom menu. {CO}. Phone {PHONE}. End with [HASHTAGS].`],
+    ['05','Testimonial â€” social proof', `Write an Instagram caption for a client testimonial card. Quote: [INSERT QUOTE]. Tone: grateful, community-rooted. 4-5 lines. Invite others to share, CTA: DM to check availability. {CO} at {VENUE}. Phone {PHONE}. [HASHTAGS].`],
+    ['06','Booking CTA â€” urgency', `Write an Instagram caption to drive enquiries for {VENUE} in {CITY}. Tone: urgent but not salesy â€” FOMO around limited dates. Mention peak season, limited weekend slots, capacity {CAPMAX}+, catering from {CUR}{CATERFROM}/person. 6-8 lines. CTA: "Message your event date NOW". {CO}. Phone {PHONE}. [HASHTAGS].`]
+  ].map(p=>promptBox(p[0],p[1],p[2])).join('');
+  return secWrap('ch05','Chapter 05 Â· Copywriting', `Caption <em>prompts</em>`, `Paste into Claude or ChatGPT. Each is engineered for engagement and conversion. Tokens auto-fill ${venue()}'s details.`, prompts + dsHook('Writes every caption for you â€” pre-filled with your venue, pricing, and contact.'));
+}
+
+function ch06(){
+  const body = promptBox('Master', '5-page brochure â€” full prompt',
+`Create a professional 5-page A4 PDF brochure for {CO}, operating at {VENUE_FULL}, {CITYREGION}.
+
+BRAND: use accent colour ${CONFIG.brand.accent} and secondary ${CONFIG.brand.deep}. Tagline: {TAGLINE}.
+
+PAGES:
+Page 1 â€” COVER: venue exterior, name, branding, capacity ({CAPMIN}-{CAPMAX} guests), location, phone {PHONE}
+Page 2 â€” VENUE: highlights, capacity table, rental pricing (from {CUR}{HALLFROM}), amenities grid
+Page 3 â€” MENUS: signature menus with prices per person
+Page 4 â€” PACKAGES: all packages with full item lists
+Page 5 â€” CONTACT: all contacts, address, website {WEBSITE}, tagline
+
+DESIGN: branded header bar + footer with contact, decorative rules, tables with branded headers, premium aesthetic, all pricing with {CUR} symbol.
+
+OUTPUT: Working Python code using reportlab, images as base64, single self-contained .py file.`)
+  + `<div class="callout"><div class="callout-icon">ðŸ’¡</div><div class="callout-body"><h4>Modifiers</h4><p>Update pricing: <code>update page 4, Classic is now {CUR}550</code>. Add menu: <code>add Jain Menu to page 3</code>.</p></div></div>`;
+  return secWrap('ch06','Chapter 06 Â· Design', `Brochure <em>creation prompt</em>`, `Generate ${venue()}'s complete 5-page brochure using any AI tool.`, body);
+}
+
+function ch07(){
+  const sys = promptBox('System','Master context â€” paste before any poster',
+`You are a premium event brand designer for {CO} at {VENUE}, {CITYREGION}. Brand colours: accent ${CONFIG.brand.accent}, secondary ${CONFIG.brand.deep}. Always 1080x1920px (9:16). Every poster must include: brand name, phone {PHONE}, location {CITYREGION}. No generic AI aesthetics.`);
+  const posters = [
+    ['Poster 1','Venue hero â€” story cover', `Create a 1080x1920 HTML poster. Full-bleed dark gradient. Top 55%: venue photo with overlay. Center: '{VENUE}' large, 'PREMIUM EVENTS & CELEBRATIONS' subtitle. Bottom: 'Transforming MOMENTS into EXPERIENCES'. Row of 5 event icons. Footer: location + phone {PHONE}. Branded border frame.`],
+    ['Poster 2','Venue features + packages', `Create a 1080x1920 HTML poster on light background. Header: 'Designed for MEMORABLE GATHERINGS'. Venue photo + amenities grid. Lower: 'PACKAGES STARTING FROM' with grid: Hall from {CUR}{HALLFROM}, Catering from {CUR}{CATERFROM}/pax. Info bar: Capacity {CAPMIN}-{CAPMAX}, Vashi, Security Inclusive. Footer: {VENUE}, phone {PHONE}.`],
+    ['Poster 3','Catering / service CTA', `Create a 1080x1920 HTML poster. Dark background. 'PLAN YOUR NEXT CELEBRATION WITH US' headline. {CO} logo treatment. Hero dÃ©cor photo. Contact grid with all numbers. Footer tagline: {TAGLINE}.`],
+    ['Poster 4','Experiences showcase', `Create a 1080x1920 HTML poster, light background. Header: '{CO} â€” Curated CATERING EXPERIENCES'. Food hero photo. 4-card grid of service types. Commitment bar. Footer: {TAGLINE}.`]
+  ].map(p=>promptBox(p[0],p[1],p[2])).join('');
+  return secWrap('ch07','Chapter 07 Â· Posters', `Poster <em>prompts</em>`, `9:16 story posters (1080Ã—1920). Paste system prompt first, then any poster prompt.`, sys+posters);
+}
+
+function ch08(){
+  const msg = CONFIG.market.messagingApp;
+  const prompts = [
+    ['01 Â· 5 min', 'First response â€” send immediately',
+`Namaste [Name]!
+
+Thank you for reaching out to {CO} at {VENUE}, {CITY}.
+
+We'd love to host your [wedding/reception/birthday/event]!
+
+To give you the best quote, could you share:
+1. Approximate number of guests?
+2. Preferred date(s)?
+3. Lunch, dinner, or both?
+4. Any cuisine preference?
+
+Catering packages start from {CUR}{CATERFROM}/- per person.
+Hall bookings from {CUR}{HALLFROM}/-.
+
+We can also arrange a free venue visit!
+
+â€” [Your Name] | {CO} | {PHONE}`],
+    ['02 Â· 48 hrs', 'Follow-up â€” no reply yet',
+`Hi [Name], following up on your enquiry for {VENUE}.
+
+Weekend slots for [month] are filling quickly â€” we want to make sure you get your preferred date!
+
+Happy to share our full menu & pricing. Just say the word.
+
+â€” {CO} | {PHONE}`],
+    ['03 Â· Quote', 'Custom pricing estimate',
+`Dear [Name],
+
+Here's a quick estimate for your event:
+
+Guests: [NUMBER] Â· Date: [DATE]
+Venue: {VENUE}, [Floor/Section]
+
+HALL: {CUR}[AMOUNT]/-
+CATERING: [PACKAGE] @ {CUR}[RATE]/pax = {CUR}[TOTAL]/-
+
+All prices + {TAXPCT}% {TAX}. Advance booking secures your date.
+
+Shall we schedule a venue visit?
+
+â€” {CO} | {PHONE}`],
+    ['04 Â· Review', 'Post-event review request',
+`Dear [Name], it was our pleasure hosting your [event]!
+
+Hope your guests loved every moment.
+
+If you have a minute, your honest Google review would mean the world to our team.
+
+Link: [YOUR REVIEW LINK]
+
+Thank you! â€” {CO}`]
+  ].map(p=>promptBox(p[0],p[1],p[2])).join('');
+  return secWrap('ch08','Chapter 08 Â· Conversion', `${msg} & DM <em>scripts</em>`, `Pre-written for every enquiry type. Copy, personalise the name, send within 5 minutes.`, prompts + dsHook('Auto-replies to every lead instantly and tracks the whole conversation in your Social Inbox.'));
+}
+
+function ch09(){
+  const body = `
+    <div class="table-wrap"><table><thead><tr><th>Element</th><th>Action</th><th>Why</th></tr></thead><tbody>
+      <tr><td>Business Name</td><td>${esc(venueFull())}</td><td>Match signage exactly</td></tr>
+      <tr><td>Category</td><td>Banquet Hall + Caterer</td><td>Dual = 2Ã— visibility</td></tr>
+      <tr><td>Phone</td><td>${esc(primaryPhone())} as primary</td><td>Your number as first contact</td></tr>
+      <tr><td>Photos</td><td>30+ minimum, add 2/week</td><td>Top factor for profile views</td></tr>
+      <tr><td>Reviews</td><td>50+ in 90 days</td><td>Ask after every event</td></tr>
+    </tbody></table></div>
+    ${promptBox('GMB','Business description â€” ready to paste',
+`${venueFull()} is ${CONFIG.location.city}'s premier venue, serving ${CONFIG.location.region}'s weddings, receptions, conferences and celebrations. Capacity ${CONFIG.capacity.min}-${CONFIG.capacity.max} guests, premium interiors, modern AV, ample parking. In-house catering by ${co()}: packages from ${cur()}${CONFIG.pricing.cateringFrom}/person, ${CONFIG.pricing.specialties}. Hall rentals from ${cur()}${CONFIG.pricing.hallFrom}. ${CONFIG.company.tagline}. Call ${primaryPhone()}.`)}
+    ${promptBox('SEO','Keywords to target', CONFIG.seo.keywords.join(' Â· '))}
+    ` + dsHook('Pushes weekly GMB posts and routes review requests automatically after each event.');
+  return secWrap('ch09','Chapter 09 Â· Search', `Google Business <em>strategy</em>`, `Your most important digital asset. Own this and you own the search results for ${venue()}.`, body);
+}
+
+function ch10(){
+  const prompts = [
+    ['Reel 01 Â· 30s','Venue walkthrough', `Write a 30-second Reel voiceover script for a walkthrough of {VENUE}, {CITY}. Sequence: exterior â†’ lobby â†’ empty hall â†’ stage â†’ setup â†’ food. Tone: confident, proud. Short punchy lines. Stats: {CAPMAX}+ capacity. End CTA: "Book your date â€” link in bio". {CO}. Format: [SHOT]: [VOICEOVER]`],
+    ['Reel 02 Â· 20s','Signature food reveal', `Write a 20-second Reel script for a signature dish reveal at {VENUE}. ASMR-style, item by item, final overhead reveal. Tone: nostalgic, mouth-watering. Hook in first 3 seconds. End: "Your next event at {VENUE} â€” {CO}". Format: [TIMESTAMP]: [SHOT] | [TEXT OVERLAY]`],
+    ['Reel 03 Â· 60s','Setup timelapse', `Write a 60-second Reel script for an event-setup timelapse at {VENUE}. Empty to fully decorated. Team arriving, tables, flowers, lights, reveal. Tone: dramatic, builds to emotional reveal. Music: slow to upbeat. End: "Every celebration deserves this care â€” {CO}".`],
+    ['YouTube Â· 3-5 min','Full venue tour', `Write a 3-5 minute YouTube tour script for {VENUE_FULL}, {CITYREGION}. Hosted by [host name] from {CO}. Sections: welcome / exterior / hall tour / stage / catering demo / pricing / how to book / outro CTA. Tone: friendly expert. B-roll in brackets.`]
+  ].map(p=>promptBox(p[0],p[1],p[2])).join('');
+  return secWrap('ch10','Chapter 10 Â· Video', `Reel & video <em>scripts</em>`, `Reels reach 5-10Ã— the impressions of photos. These prompts generate ready-to-shoot scripts.`, prompts);
+}
+
+function ch11(){
+  const body = `
+    <div class="table-wrap"><table><thead><tr><th>Partner</th><th>Your offer</th><th>Why it works</th></tr></thead><tbody>
+      <tr><td>Photographers</td><td>${esc(cur())}2,000/booking + free meal</td><td>They tag ${esc(venue())} in every event photo</td></tr>
+      <tr><td>Decorators / Florists</td><td>${esc(cur())}2,000 + priority slots</td><td>Their dÃ©cor content = automatic UGC</td></tr>
+      <tr><td>DJs / Sound</td><td>${esc(cur())}1,500/booking</td><td>They post reels from events</td></tr>
+      <tr><td>Event Planners</td><td>${esc(cur())}3,000 + preferred status</td><td>Highest-quality referrals</td></tr>
+    </tbody></table></div>
+    ${promptBox('DM','Influencer outreach pitch', `Write a short, genuine Instagram DM to a {CITYREGION} food blogger or wedding photographer. Personal, not mass. Offer: free tasting for 4 at {VENUE}, for 1 post + 2 stories with location tag. {CO}. Contact {PHONE}. Warm, confident, under 150 words.`)}
+    <div class="callout"><div class="callout-icon">ðŸ½</div><div class="callout-body"><h4>The tasting event â€” ${esc(cur())}20K that acts like ${esc(cur())}50K+</h4><p>Every 2 months, host 8-12 local food bloggers and influencers. Feed them, tour them. Cost ~${esc(cur())}20K. Return: 8-12 posts reaching 50,000-200,000 followers.</p></div></div>`;
+  return secWrap('ch11','Chapter 11 Â· Partnerships', `Influencer & PR <em>strategy</em>`, `You don't need celebrities. You need trusted local voices and vendor partners.`, body);
+}
+
+function ch12(){
+  const weeks = [
+    ['Week 01','Foundation',[['w1-1','Google Business','30+ photos, all packages'],['w1-2','Instagram setup','Bio + link'],['w1-3','Content shoot','10 hero shots'],['w1-4','AI image bank','8 images from Ch 02'],['w1-5','Posters','4 posters from Ch 07'],['w1-6',CONFIG.market.messagingApp+' Business','Auto-reply set up']]],
+    ['Week 02','Launch',[['w2-1','First 7 posts','Calendar Day 1-7'],['w2-2','GMB posts','2 updates'],['w2-3','Reviews','Message 10 past clients'],['w2-4','Community','5 local groups'],['w2-5','Influencers','Shortlist 5, DM them'],['w2-6','Brochure','Send to 20 contacts']]],
+    ['Week 03','Accelerate',[['w3-1','First reel','Venue walkthrough'],['w3-2','Stories','3 interactive'],['w3-3','Referrals','5 vendors'],['w3-4','Listings','Directory profiles'],['w3-5','Month 2 plan','Draft calendar'],['w3-6','Analytics','Review insights']]],
+    ['Week 04','Sustain',[['w4-1','Reviews','10+ new'],['w4-2','Reel #2','Food reel'],['w4-3','Photo refresh','5 new'],['w4-4','Competitor audit','What are they missing'],['w4-5','Testimonials','2 videos'],['w4-6','Month wrap','Recap post']]]
+  ];
+  const cards = weeks.map(w=>`<div class="card"><div style="margin-bottom:14px;padding-bottom:12px;border-bottom:1px solid var(--border)"><div class="mono" style="font-size:11px;color:var(--accent)">${esc(w[0])}</div><h3 style="margin-top:4px">${esc(w[1])}</h3></div>${w[2].map(it=>`<label style="display:flex;gap:10px;padding:9px 0;border-bottom:1px solid var(--border);cursor:pointer;font-size:13px"><input type="checkbox" data-ck="${it[0]}" onchange="saveChecks()" style="margin-top:2px;accent-color:var(--accent)"><span><strong style="display:block;color:var(--text);font-size:13px">${esc(it[1])}</strong><span style="color:var(--text-3)">${esc(it[2])}</span></span></label>`).join('')}</div>`).join('');
+  const body = `<div class="grid grid-2">${cards}</div><div class="callout" style="margin-top:24px"><div class="callout-icon">âš¡</div><div class="callout-body"><h4>The non-negotiables, every week</h4><p><strong>1.</strong> Post 4Ã— min. <strong>2.</strong> 1 GMB post. <strong>3.</strong> Ask 2 clients for reviews. <strong>4.</strong> Reply to every DM in 2 hrs.</p></div></div>`;
+  return secWrap('ch12','Chapter 12 Â· Execution', `Execution <em>checklist</em>`, `Tick every item. Progress saves automatically. Consistency beats perfection.`, body);
+}
+</script>
+<script>
+/* =====================================================================
+   CHAPTER RENDERERS (13-21) + BROCHURE + INIT
+   ===================================================================== */
+
+function ch13(){
+  const body = `
+    <div class="callout"><div class="callout-icon">âš¡</div><div class="callout-body"><h4>The real path to a booking</h4><p>A customer sees ${esc(venue())} in a <strong>Reel</strong> â†’ searches you on <strong>Google</strong> that night â†’ reads <strong>reviews</strong> next morning â†’ sends a <strong>${esc(CONFIG.market.messagingApp)}</strong> enquiry two days later. Miss one link and the chain breaks.</p></div></div>
+    <div class="divider"><h3>The 4-stage funnel</h3></div>
+    <div class="grid grid-2">
+      <div class="card accent"><div class="card-header"><div class="card-num">Stage 1</div><span class="mono" style="font-size:11px;color:var(--accent)">DISCOVER</span></div><h3>They find you</h3><p>Reels, Explore, hashtags. Job: reach, not conversion.</p><ul><li>KPI: reach, plays, shares</li><li>Content: Reels, carousels, trending audio</li></ul></div>
+      <div class="card"><div class="card-header"><div class="card-num">Stage 2</div><span class="mono" style="font-size:11px;color:var(--text-3)">VERIFY</span></div><h3>They Google you</h3><p>That night they search your name. Thin profile = trust dies here.</p><ul><li>KPI: GMB views, calls</li><li>Content: 30+ photos, weekly posts</li></ul></div>
+      <div class="card"><div class="card-header"><div class="card-num">Stage 3</div><span class="mono" style="font-size:11px;color:var(--text-3)">TRUST</span></div><h3>They read reviews</h3><p>Reviews decide a high-value purchase. 20+ recent 5-stars closes the gap.</p><ul><li>KPI: review count, recency</li><li>Content: post-event review asks</li></ul></div>
+      <div class="card"><div class="card-header"><div class="card-num">Stage 4</div><span class="mono" style="font-size:11px;color:var(--green)">CONVERT</span></div><h3>They enquire</h3><p>Reply speed is the #1 lever. 5-min reply converts 5-10Ã— better.</p><ul><li>KPI: reply time, visit rate</li><li>Content: Ch 08 scripts, instant reply</li></ul></div>
+    </div>
+    <div class="divider"><h3>Funnel maths â€” targets</h3></div>
+    <div class="kv-grid">
+      <div class="kv"><div class="kv-label">Reel reach / mo</div><div class="kv-value">50,000<small>Top of funnel</small></div></div>
+      <div class="kv"><div class="kv-label">â†’ Profile visits</div><div class="kv-value">2,500<small>~5%</small></div></div>
+      <div class="kv"><div class="kv-label">â†’ Enquiries</div><div class="kv-value">50<small>~2%</small></div></div>
+      <div class="kv"><div class="kv-label">â†’ Bookings</div><div class="kv-value"><em>8-12</em><small>~50% of visits</small></div></div>
+    </div>` + dsHook('Tracks every stage of this funnel automatically â€” reach to enquiry to booking â€” per campaign.');
+  return secWrap('ch13','Chapter 13 Â· Strategy Core', `The buyer <em>journey & funnel</em>`, `Customers don't book from one post. They move through 4 touchpoints across days. Own all four.`, body);
+}
+
+function ch14(){
+  const muhurat = CONFIG.market.usesMuhurat;
+  const seasonalBody = muhurat ? `
+    <div class="callout"><div class="callout-icon">ðŸ“…</div><div class="callout-body"><h4>The reverse-timeline principle</h4><p>Peak venues book out <strong>6-10 months ahead</strong>; the most in-demand dates 12-18 months ahead. To fill your peak season, your hardest push is <strong>right now</strong>. Wait until the season looks busy and every good date is gone.</p></div></div>
+    <div class="divider"><h3>Festival & occasion hooks</h3></div>
+    <div class="grid grid-3">
+      <div class="card"><h3>Akshaya Tritiya</h3><div class="card-sub">~April Â· busiest day</div><p>Run "book your date" 12 months ahead. Most auspicious day, slots fill first.</p></div>
+      <div class="card"><h3>Tulsi Vivah</h3><div class="card-sub">~November Â· season opens</div><p>Marks the wedding window. Time your biggest reveal-reel push here.</p></div>
+      <div class="card"><h3>Festival Season</h3><div class="card-sub">Region-specific</div><p>Community events, society functions. Pivot to non-wedding hall bookings.</p></div>
+      <div class="card"><h3>Corporate Q3-Q4</h3><div class="card-sub">Conference season</div><p>Annual meets, award nights. Fill weekdays with the conference package.</p></div>
+      <div class="card"><h3>Birthdays / Anniversaries</h3><div class="card-sub">Year-round</div><p>Milestone events fill off-peak dates.</p></div>
+      <div class="card"><h3>Wedding Reception</h3><div class="card-sub">Peak weekends</div><p>Highest-value bookings. Premium packages.</p></div>
+    </div>
+    <div class="callout" style="margin-top:24px"><div class="callout-icon">ðŸ’¡</div><div class="callout-body"><h4>The weekday-fill strategy</h4><p>Weekends sell themselves. Your margin lives in filling Tuesday-Thursday. Promote mid-week corporate and smaller functions. The hall cost is fixed whether booked or not.</p></div></div>` : `
+    <div class="callout"><div class="callout-icon">ðŸ“…</div><div class="callout-body"><h4>The reverse-timeline principle</h4><p>Event venues book months ahead. To fill your peak season, your hardest selling push must happen well before. Map your local high-demand periods and start campaigns 6+ months out.</p></div></div>
+    <div class="divider"><h3>Occasion hooks</h3></div>
+    <div class="grid grid-3">
+      <div class="card"><h3>Wedding Season</h3><div class="card-sub">Peak weekends</div><p>Highest-value bookings. Lead with premium packages.</p></div>
+      <div class="card"><h3>Corporate Events</h3><div class="card-sub">Q3-Q4</div><p>Conferences, award nights. Fill weekdays.</p></div>
+      <div class="card"><h3>Milestone Events</h3><div class="card-sub">Year-round</div><p>Birthdays, anniversaries fill off-peak dates.</p></div>
+    </div>
+    <div class="callout" style="margin-top:24px"><div class="callout-icon">ðŸ’¡</div><div class="callout-body"><h4>The weekday-fill strategy</h4><p>Weekends sell themselves. Your margin lives in filling weekdays with corporate and smaller functions. The venue cost is fixed whether booked or not.</p></div></div>`;
+  const body = seasonalBody + dsHook('Detects your empty dates and auto-suggests timed campaigns to fill them before the season peaks.');
+  return secWrap('ch14','Chapter 14 Â· Timing Edge', `Seasonal <em>campaign timing</em>`, `The biggest edge nobody uses: customers book months before the date. Target the booking window, not the event month.`, body);
+}
+
+function ch15(){
+  const body = `
+    <div class="callout" style="margin-bottom:24px"><div class="callout-icon">IN</div><div class="callout-body"><h4>What matters more in Indian banquet content</h4>
+      <p style="margin-bottom:8px"><strong>1. WhatsApp forwards matter more than Instagram shares.</strong> Indian families forward reels and Google links on WhatsApp groups before sharing publicly. Track which content gets forwarded - that is the real virality signal.</p>
+      <p style="margin-bottom:8px"><strong>2. Family-tagging beats engagement rate.</strong> When a daughter tags her mother in a venue post, the booking journey starts. That single tag is worth more than 100 generic likes.</p>
+      <p><strong>3. Daytime posts outperform evening posts.</strong> Banquet decision-makers (parents, 45-65) check phones 10am-2pm and 9pm-11pm. Decor content does best in the morning; food &amp; review content late-night.</p></div></div>
+    <div class="grid grid-2">
+      <div class="card accent"><div class="card-header"><div class="card-num">01</div></div><h3>Shares beat saves</h3><p>Instagram now weights shares as a top signal. Every post needs a share trigger: "Tag your partner", "Send to the family group".</p></div>
+      <div class="card"><div class="card-header"><div class="card-num">02</div></div><h3>First 3 seconds decide</h3><p>50% drop off in 3 seconds. Open on the reveal. No slow logo intros. Text hook by frame 1.</p></div>
+      <div class="card"><div class="card-header"><div class="card-num">03</div></div><h3>Hashtags = categorization</h3><p>The 20-tag dump now dilutes reach. Use 3-5 specific tags so the AI buckets you right.</p></div>
+      <div class="card"><div class="card-header"><div class="card-num">04</div></div><h3>Social SEO > hashtags</h3><p>Captions are indexed. Write "${esc(tk('AC venue in '+CONFIG.location.city+' for 500-guest weddings'))}" not "âœ¨ dream venue âœ¨".</p></div>
+      <div class="card"><div class="card-header"><div class="card-num">05</div></div><h3>Consistency > volume</h3><p>Daily low-effort posting flags you as filler. 3-4 quality Reels + 2-3 carousels + 1-2 static per week.</p></div>
+      <div class="card"><div class="card-header"><div class="card-num">06</div></div><h3>First 24-48 hrs matter most</h3><p>Early engagement is the strongest signal. Post at your peak times, reply to every comment in hour one.</p></div>
+    </div>
+    <div class="callout" style="margin-top:24px"><div class="callout-icon">ðŸŽ¬</div><div class="callout-body"><h4>Your two 90-day video series</h4><p><strong>A â€” "The Transformation":</strong> empty hall â†’ decorated reveal, same format every time. <strong>B â€” "Know Before You Book":</strong> parking, capacity, timeline, what's included. Builds trust, pre-handles objections.</p></div></div>`;
+  return secWrap('ch15','Chapter 15 Â· Distribution Edge', `2026 algorithm <em>playbook</em>`, `The rules changed. What worked in 2023 now hurts you. Here's what the 2026 algorithm rewards.`, body);
+}
+
+function ch16(){
+  const body = `
+    <div class="callout"><div class="callout-icon">ðŸ“Š</div><div class="callout-body"><h4>The one question that fixes everything</h4><p>Add to your first reply: <em>"Where did you find us â€” Instagram, Google, a friend, or a listing site?"</em> Log every answer. In 60 days you'll know which channel drives bookings.</p></div></div>
+    <div class="table-wrap"><table><thead><tr><th>Metric</th><th>Source</th><th>Target / mo</th></tr></thead><tbody>
+      <tr><td>Instagram reach</td><td>IG Insights</td><td>30,000+</td></tr>
+      <tr><td>GMB profile views</td><td>Google Business</td><td>2,000+</td></tr>
+      <tr><td>Total enquiries</td><td>${esc(CONFIG.market.messagingApp)} + DM + calls</td><td>40-50</td></tr>
+      <tr><td>Enquiry â†’ visit</td><td>Manual log</td><td>40%+</td></tr>
+      <tr><td>Visit â†’ booking</td><td>Manual log</td><td>50%+</td></tr>
+      <tr><td>New reviews</td><td>Google Business</td><td>8-10</td></tr>
+      <tr><td>Bookings closed</td><td>Your calendar</td><td>8-12</td></tr>
+    </tbody></table></div>
+    ${promptBox('Template','Lead log columns', `Date | Name | Phone | Source (IG / Google / ${CONFIG.market.messagingApp} / Referral / Listing) | Event Type | Date Wanted | Guests | Quoted (Y/N) | Visit (Y/N) | Booked (Y/N) | Value | Notes`)}
+    ` + dsHook('This dashboard is built in â€” every lead is auto-tagged by source and conversion tracked per campaign.');
+  return secWrap('ch16','Chapter 16 Â· Measurement', `Lead attribution & <em>ROI tracking</em>`, `You can't improve what you don't measure. Every enquiry must be tagged to a source.`, body);
+}
+
+function ch17(){
+  const body = `
+    <div class="divider"><h3>Meta (Instagram + Facebook) â€” 4 campaigns</h3></div>
+    <div class="table-wrap"><table><thead><tr><th>Campaign</th><th>Objective</th><th>Budget</th></tr></thead><tbody>
+      <tr><td>1 Â· Awareness</td><td>Video Views</td><td>${esc(cur())}3,000/mo</td></tr>
+      <tr><td>2 Â· Consideration</td><td>Traffic</td><td>${esc(cur())}4,000/mo</td></tr>
+      <tr><td>3 Â· Conversion</td><td>Lead Form</td><td>${esc(cur())}5,000/mo â€” highest ROI</td></tr>
+      <tr><td>4 Â· Retargeting</td><td>Conversions</td><td>${esc(cur())}2,000/mo</td></tr>
+    </tbody></table></div>
+    ${promptBox('Meta','Audience targeting', `Location: ${CONFIG.location.region} + nearby â€” 20km radius from ${CONFIG.location.city}
+Age: 24-45 (event decision makers)
+Targeting: Engaged, Newly married, Wedding planning, Banquet halls, Catering interests
+Exclude: People who already messaged you
+Placement: Instagram Feed + Reels + Facebook Feed
+Budget: Start ${cur()}300/day. Scale campaigns under ${cur()}200/lead.`)}
+    <div class="divider"><h3>Google Search Ads</h3></div>
+    <div class="table-wrap"><table><thead><tr><th>Keyword</th><th>Intent</th></tr></thead><tbody>
+      ${CONFIG.seo.keywords.slice(0,6).map(k=>`<tr><td>${esc(k)}</td><td><span style="color:var(--green);font-family:Geist Mono,monospace;font-size:11px">HIGH</span></td></tr>`).join('')}
+    </tbody></table></div>
+    ${promptBox('Google','Search ad copy', `Headline 1: Premium Venue in ${CONFIG.location.city}
+Headline 2: ${CONFIG.capacity.min}-${CONFIG.capacity.max} Guests | ${venue()}
+Headline 3: Catering from ${cur()}${CONFIG.pricing.cateringFrom}/- Per Person
+Description: Grand hall, professional stage & full catering. Weddings, receptions, corporate. Book today.
+Description 2: ${co()}. Call ${primaryPhone()}.
+Callouts: Security Inclusive | AC Hall | Free Parking | Stage
+Final URL: your ${CONFIG.market.messagingApp} link`)}
+    ` + dsHook('Launch and manage these campaigns from inside the platform â€” with spend and lead-cost tracked live.');
+  return secWrap('ch17','Chapter 17 Â· Acceleration', `Paid advertising <em>that converts</em>`, `Organic builds brand; paid accelerates bookings. Even ${cur()}5,000-10,000/mo spent correctly generates ROI.`, body);
+}
+
+function ch18(){
+  const body = `
+    <div class="kv-grid">
+      <div class="kv"><div class="kv-label">Conversion lift</div><div class="kv-value"><em>10.38Ã—</em><small>UGC vs branded</small></div></div>
+      <div class="kv"><div class="kv-label">Engagement</div><div class="kv-value">+28%<small>Higher</small></div></div>
+      <div class="kv"><div class="kv-label">Web traffic</div><div class="kv-value">3.84Ã—<small>More visits</small></div></div>
+      <div class="kv"><div class="kv-label">vs influencer</div><div class="kv-value">âˆ’80%<small>Cost</small></div></div>
+    </div>
+    <div class="divider"><h3>The 5-step collection system</h3></div>
+    <div class="grid grid-2">
+      <div class="card accent"><div class="card-header"><div class="card-num">01</div></div><h3>Event-day QR card</h3><p>Table card: "Tag ${esc(CONFIG.company.instagram)} â€” you might be featured!" with a QR to your Instagram.</p></div>
+      <div class="card"><div class="card-header"><div class="card-num">02</div></div><h3>Live welcome Story</h3><p>"We're live at [Event] today! Tag us for a chance to be featured."</p></div>
+      <div class="card"><div class="card-header"><div class="card-num">03</div></div><h3>Post-event DM</h3><p>2 days after: "Could you share guest photos? We'd love to feature them."</p></div>
+      <div class="card"><div class="card-header"><div class="card-num">04</div></div><h3>Incentivise</h3><p>"Share + tag us â†’ ${esc(cur())}500 off your next booking." Tiny cost, huge content.</p></div>
+      <div class="card"><div class="card-header"><div class="card-num">05</div></div><h3>Reshare fast</h3><p>Every tag â†’ repost to Stories within 30 min, save to a "Real Events" highlight, comment to boost.</p></div>
+    </div>
+    ${promptBox('UGC','Reshared content caption', `Write an Instagram caption for a reshared guest photo from an event at {VENUE} by {CO}. Photo shows: [DESCRIBE]. Tone: warm, grateful. 4-5 lines. Credit @[their handle]. CTA: "DM us to plan YOUR celebration at {VENUE}". Phone {PHONE}. [HASHTAGS].`)}`;
+  return secWrap('ch18','Chapter 18 Â· Highest ROI', `UGC â€” the <em>10.38Ã— multiplier</em>`, `User content converts 10.38Ã— better than branded posts. Your guests already photograph everything â€” capture it.`, body);
+}
+
+function ch19(){
+  const body = `
+    <div class="divider"><h3>Anatomy of a 30-sec Reel</h3></div>
+    <div class="table-wrap"><table><thead><tr><th>Time</th><th>Section</th><th>What to show</th></tr></thead><tbody>
+      <tr><td>0-2s</td><td><span style="color:var(--accent);font-family:Geist Mono,monospace;font-size:11px">HOOK</span></td><td>Most stunning frame. Text: "You won't believe this is in ${esc(CONFIG.location.city)}"</td></tr>
+      <tr><td>2-8s</td><td class="mono" style="font-size:11px">BUILD</td><td>Quick cuts, under 2s each. No talking.</td></tr>
+      <tr><td>8-20s</td><td class="mono" style="font-size:11px">VALUE</td><td>The differentiator â€” the "wow" moment.</td></tr>
+      <tr><td>20-28s</td><td class="mono" style="font-size:11px">PROOF</td><td>Client quote or packed event. Boosts saves.</td></tr>
+      <tr><td>28-30s</td><td><span style="color:var(--green);font-family:Geist Mono,monospace;font-size:11px">CTA</span></td><td>Freeze: "Book your date â€” ${esc(primaryPhone())}" for 2 sec</td></tr>
+    </tbody></table></div>
+    <div class="divider"><h3>10 reel ideas</h3></div>
+    <div class="grid grid-2">
+      ${[['Empty to Full Timelapse','Empty floor 7am â†’ full setup 7pm'],['Signature Food Reveal','ASMR item-by-item reveal'],['Before vs After Stage','Bare vs decorated, "6 hours"'],[CONFIG.capacity.max+' People, One Hall','Wide packed-event shot'],['Live Counter POV','Behind the chef, flames'],['Menu Unboxing','Fast-cut course reveal'],['First Look','Genuine reaction walking in'],['Halls Compared','Quick price comparison'],['A Day in the Life','Prep â†’ setup â†’ event â†’ cleanup'],['Testimonial Walk','Client speaks, no script']].map((r,i)=>`<div class="card"><div class="card-header"><div class="card-num">${String(i+1).padStart(2,'0')}</div></div><h3 style="font-size:16px">${esc(r[0])}</h3><p style="font-size:13px">${esc(r[1])}</p></div>`).join('')}
+    </div>
+    <div class="callout" style="margin-top:24px"><div class="callout-icon">ðŸŽµ</div><div class="callout-body"><h4>Audio strategy</h4><p>Use trending audio when it fits â€” the algorithm boosts popular sounds. Walkthroughs â†’ instrumental. Food â†’ ASMR/upbeat. Stories â†’ slow instrumental.</p></div></div>`;
+  return secWrap('ch19','Chapter 19 Â· The Format That Wins', `Reels <em>mastery</em>`, `Reels reach 5-10Ã— the impressions of photos. Watch time is the #1 ranking signal.`, body);
+}
+
+function ch20(){
+  const body = `
+    <div class="divider"><h3>10 carousel ideas</h3></div>
+    <div class="grid grid-2">
+      ${[['How Much Does an Event Cost?','Hook â†’ packages â†’ CTA. Most DMs of any post.'],['6 Things We Offer Others Don\'t','One differentiator per slide'],['Cuisine Guide','Each slide = one dish explained'],['Before vs After Setup','3 alternating pairs'],['Everything in Our Top Package','Element by element'],['5 Mistakes Booking a Venue','Pure value, gets saved'],['Real Event Step by Step','One event chronologically'],['Our Menus Explained','One menu per slide'],['Plan Your Event in 5 Steps','Reduces booking anxiety'],['Review Roundup','8-10 reviews styled']].map((r,i)=>`<div class="card"><div class="card-header"><div class="card-num">${String(i+1).padStart(2,'0')}</div></div><h3 style="font-size:16px">${esc(r[0])}</h3><p style="font-size:13px">${esc(r[1])}</p></div>`).join('')}
+    </div>
+    ${promptBox('Design','Master carousel prompt', `Create a 10-slide Instagram carousel (1080x1080) for {CO} / {VENUE}. Title: [FROM LIST]. Brand accent ${CONFIG.brand.accent}. Slide 1 hook with "Swipe â†’". Slides 2-9: numbered, heading, body, image. Slide 10: CTA, phone {PHONE}, {IG}. Branded border. HTML, self-contained.`)}
+    <div class="divider"><h3>Local SEO keywords</h3></div>
+    <div class="card"><div class="chip-row">${CONFIG.seo.keywords.map(k=>`<span class="chip">${esc(k)}</span>`).join('')}</div></div>
+    ${promptBox('SEO','Blog post prompt', `Write a 600-word blog post: "How to Choose the Perfect Venue in {CITY} for Your Wedding in 2026". Keywords: ${CONFIG.seo.keywords.slice(0,4).join(', ')}. Structure: intro â†’ 5 things to check â†’ why {VENUE} â†’ CTA. Helpful advisor tone. End: "Enquiries: {CO}, {PHONE}". Add 3 FAQs for voice search.`)}
+    <div class="divider"><h3>Story highlights to pin</h3></div>
+    <div class="chip-row"><span class="chip">THE VENUE</span><span class="chip">OUR FOOD</span><span class="chip">PACKAGES</span><span class="chip">REVIEWS</span><span class="chip">FIND US</span><span class="chip">BOOK</span></div>`;
+  return secWrap('ch20','Chapter 20 Â· Saves & Search', `Carousels, SEO & <em>discovery</em>`, `Carousels are Instagram's highest-save format. SEO gets you found when people are ready to book.`, body);
+}
+
+function ch21(){
+  const body = `
+    <div class="callout"><div class="callout-icon">âš </div><div class="callout-body"><h4>The lead graveyard â€” the #1 mistake</h4><p><strong>80% of bookings happen between the 5th and 12th contact.</strong> Most venues give up after contact 2. The money is in the follow-up.</p></div></div>
+    <div class="divider"><h3>The follow-up cadence</h3></div>
+    <div class="table-wrap"><table><thead><tr><th>Timing</th><th>Action</th></tr></thead><tbody>
+      <tr><td>Day 0</td><td>First response within 5 minutes</td></tr>
+      <tr><td>Day 1</td><td>Send brochure + pricing</td></tr>
+      <tr><td>Day 3</td><td>Check-in, offer venue visit</td></tr>
+      <tr><td>Day 7</td><td>Share event photo, ask if date is free</td></tr>
+      <tr><td>Day 14</td><td>Urgency: "your date is being asked about"</td></tr>
+      <tr><td>Day 30</td><td>Soft check-in, keep door open</td></tr>
+    </tbody></table></div>
+    ${promptBox('CRM','Lead tracking columns', `Date | Name | Phone | Source | Event Type | Date | Guests | Package Interest | Stage (New/Quote/Visit/Negotiating/Booked/Lost) | Follow-up Date | Notes | Outcome`)}
+    <div class="divider"><h3>Vendor partnership network</h3></div>
+    <div class="table-wrap"><table><thead><tr><th>Partner</th><th>Offer</th><th>Why</th></tr></thead><tbody>
+      <tr><td>Photographers</td><td>${esc(cur())}2,000/booking</td><td>They tag you in every photo</td></tr>
+      <tr><td>Decorators</td><td>${esc(cur())}2,000 + priority</td><td>DÃ©cor content = UGC</td></tr>
+      <tr><td>Planners</td><td>${esc(cur())}3,000 + preferred</td><td>Highest-quality referrals</td></tr>
+    </tbody></table></div>
+    ${promptBox('Review','Google review response', `Write a warm response to this review for {CO} at {VENUE}: [PASTE REVIEW]. Personal (use name), specific, grateful not gushing, invite them back. Under 100 words. From: [Your Name], {CO}.`)}
+    ` + dsHook('The full follow-up cadence runs automatically â€” instant replies, timed nudges, and lead stages tracked in your CRM.');
+  return secWrap('ch21','Chapter 21 Â· Don\'t Lose Leads', `CRM & lead <em>follow-up system</em>`, `Most venues lose 60-70% of leads through poor follow-up. A simple system can double conversion.`, body);
+}
+
+/* ---------- LIVE BROCHURE ---------- */
+function brochureSec(){
+  const c=CONFIG;
+  const pk = c.pricing.packages.map(p=>`<div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--border)"><div><strong style="font-size:13px">${esc(p.name)}</strong><div style="font-size:11px;color:var(--text-3)">${esc(p.desc)}</div></div><div style="text-align:right"><span style="color:var(--accent);font-weight:600;font-size:15px">${esc(cur())}${esc(p.price)}</span><div style="font-size:10px;color:var(--text-3)">${esc(p.unit)}</div></div></div>`).join('');
+  const contacts = c.contacts.map(ct=>`<div style="display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid rgba(255,255,255,0.08)"><span style="font-size:12px;color:rgba(255,255,255,0.7)">${esc(ct.name)}</span><span class="mono" style="font-size:12px;color:${ct.primary?'var(--accent-glow)':'#fff'}">${esc(ct.phone)}</span></div>`).join('');
+  const logoBit = c.company.logoData ? `<img src="${c.company.logoData}" style="width:100%;height:100%;object-fit:contain;padding:6px">` : esc((co()[0]||'V').toUpperCase());
+  const body = `
+    <div class="callout"><div class="callout-icon">ðŸ“„</div><div class="callout-body"><h4>Auto-built from your config</h4><p>This brochure reflects everything in the Configure panel â€” branding, pricing, contacts. Edit config â†’ it updates. Screenshot pages for Stories, or Save PDF.</p></div></div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:28px;margin-top:24px">
+      <div>
+        <div class="mono" style="font-size:11px;color:var(--text-3);margin-bottom:10px;text-transform:uppercase">Page 01 Â· Cover</div>
+        <div style="aspect-ratio:9/16;border-radius:14px;overflow:hidden;background:linear-gradient(160deg,${esc(c.brand.deep)},#0a0a0b);padding:7%;display:flex;flex-direction:column;justify-content:space-between;color:#fff;box-shadow:0 20px 60px rgba(0,0,0,0.15)">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start">
+            <span class="mono" style="font-size:9px;letter-spacing:0.1em;border:1px solid rgba(255,255,255,0.2);padding:5px 10px;border-radius:99px">${esc(cityRegion())}</span>
+            <div style="width:46px;height:46px;border-radius:12px;background:rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;font-weight:700;overflow:hidden">${logoBit}</div>
+          </div>
+          <div>
+            <div style="font-size:28px;font-weight:600;letter-spacing:-0.02em;line-height:1.05">${esc(venue())}</div>
+            <div style="font-family:'Instrument Serif',serif;font-style:italic;color:var(--accent-glow);font-size:18px;margin-top:4px">${esc(c.company.venueFullName||'')}</div>
+            <div style="font-size:12px;color:rgba(255,255,255,0.7);margin-top:14px">Capacity ${esc(c.capacity.min)}â€“${esc(c.capacity.max)} guests</div>
+          </div>
+          <div style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:12px;padding:14px">
+            <div class="mono" style="font-size:8px;color:rgba(255,255,255,0.5);text-transform:uppercase">In-house catering by</div>
+            <div style="font-size:14px;font-weight:600;margin-top:2px">${esc(co())}</div>
+            <div style="font-size:11px;color:rgba(255,255,255,0.6);margin-top:2px">${esc(c.company.tagline)}</div>
+            <div class="mono" style="font-size:13px;color:var(--accent-glow);margin-top:10px;padding-top:10px;border-top:1px solid rgba(255,255,255,0.1)">${esc(primaryPhone())}</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="mono" style="font-size:11px;color:var(--text-3);margin-bottom:10px;text-transform:uppercase">Page 02 Â· Catering</div>
+        <div style="aspect-ratio:9/16;border-radius:14px;overflow:hidden;background:linear-gradient(160deg,#1a1a1f,#0a0a0b);padding:7%;color:#fff;box-shadow:0 20px 60px rgba(0,0,0,0.15);display:flex;flex-direction:column">
+          <div style="font-size:24px;font-weight:600;letter-spacing:-0.02em">Cuisine that <span style="font-family:'Instrument Serif',serif;font-style:italic;color:var(--accent-glow)">defines the day</span></div>
+          <div style="font-size:12px;color:rgba(255,255,255,0.6);margin:8px 0 14px">Premium tiers Â· per-person pricing</div>
+          ${pk}
+          <div style="margin-top:auto;padding:12px;background:rgba(255,255,255,0.04);border-radius:10px;margin-top:14px">
+            <div class="mono" style="font-size:9px;color:var(--accent-glow);text-transform:uppercase;margin-bottom:5px">Specialties</div>
+            <div style="font-size:11px;color:rgba(255,255,255,0.7)">${esc(c.pricing.specialties)}</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="mono" style="font-size:11px;color:var(--text-3);margin-bottom:10px;text-transform:uppercase">Page 03 Â· Contact</div>
+        <div style="aspect-ratio:9/16;border-radius:14px;overflow:hidden;background:linear-gradient(160deg,#1a1a1f,#0a0a0b);padding:7%;color:#fff;box-shadow:0 20px 60px rgba(0,0,0,0.15);display:flex;flex-direction:column">
+          <div style="text-align:center;margin-bottom:16px">
+            <div class="mono" style="font-size:9px;color:var(--accent-glow);text-transform:uppercase">Reserve your date</div>
+            <div style="font-size:26px;font-weight:600;letter-spacing:-0.02em;margin-top:6px">Begin your <span style="font-family:'Instrument Serif',serif;font-style:italic;color:var(--accent-glow)">celebration</span></div>
+          </div>
+          <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:14px;margin-bottom:10px">
+            <div class="mono" style="font-size:9px;color:var(--accent-glow);text-transform:uppercase;margin-bottom:8px">Enquiries</div>
+            ${contacts}
+          </div>
+          <div style="background:linear-gradient(135deg,rgba(249,115,22,0.15),rgba(220,38,38,0.1));border:1px solid rgba(249,115,22,0.25);border-radius:12px;padding:12px;text-align:center;margin-bottom:auto">
+            <div class="mono" style="font-size:9px;color:var(--accent-glow);text-transform:uppercase;margin-bottom:5px">Location</div>
+            <div style="font-size:11px;color:rgba(255,255,255,0.8);line-height:1.5">${esc(c.location.addressLine)}<br>${esc(cityRegion())} â€” ${esc(c.location.pincode)}</div>
+          </div>
+          <div style="text-align:center;font-family:'Instrument Serif',serif;font-style:italic;font-size:14px;color:rgba(255,255,255,0.7);margin-top:14px">${esc(c.company.tagline)}</div>
+        </div>
+      </div>
+    </div>`;
+  return secWrap('brochure','Live Asset Â· 9:16', `Live <em>brochure</em>`, `Auto-generated from your config. Screenshot each page for Stories, or Save PDF.`, body);
+}
+
+function ch22(){
+  const stages = [
+    ['Discovery','Family first hears of the hall (Instagram, Google, referral)','Hall invisible in local search / dead Instagram','DigiStories - visibility & reels'],
+    ['Research','They compare 3-5 venues online','Few photos, no reviews, no pricing signal','DigiStories - photos, reviews, profile'],
+    ['Trust Building','They decide who is worth a visit','No real-wedding proof, old listing','DigiStories - real wedding content'],
+    ['Inquiry','They message on WhatsApp / call','Slow or no reply, scattered channels','SmartOS - inquiry capture'],
+    ['Site Visit','They come to see the hall','No follow-up to confirm the visit','SmartOS - reminders & follow-up'],
+    ['Negotiation','Price, dates, package discussion','No quote system, inconsistent pricing','SmartOS - quotes & calendar'],
+    ['Booking','They confirm and pay advance','Double-booking risk, lost paperwork','SmartOS - booking calendar'],
+    ['Referral','They recommend you after the event','No review ask, no referral loop','DigiStories - review engine']
+  ];
+  const rows = stages.map((s,i)=>`<tr><td><span class="mono" style="font-size:11px;color:var(--accent)">${String(i+1).padStart(2,'0')}</span> ${esc(s[0])}</td><td>${esc(s[1])}</td><td>${esc(s[2])}</td><td><strong>${esc(s[3])}</strong></td></tr>`).join('');
+  return secWrap('ch22','Pillar 2 - Conversion',`Customer <em>Journey</em> to Booking`,`The eight stages every family moves through - and exactly where halls leak them.`,
+    `<div class="table-wrap"><table><thead><tr><th>Stage</th><th>What happens</th><th>Where it leaks</th><th>Intervention</th></tr></thead><tbody>${rows}</tbody></table></div>
+     <div class="callout" style="margin-top:20px"><div class="callout-icon">!</div><div class="callout-body"><h4>Use this in the consultation</h4><p>Walk the owner through these eight stages and ask "where do you think you lose people?" The answer reveals whether they need DigiStories (top of journey) or SmartOS (bottom of journey) first.</p></div></div>`);
+}
+function ch23(){
+  return secWrap('ch23','Pillar 3 - Operations',`Inquiry <em>Leakage</em> & SmartOS Readiness`,`Diagnose the operational leak before ever mentioning software.`,
+    `<div class="grid grid-2">
+      <div class="card"><h3>Common leakage points</h3><ul><li>WhatsApp chaos - inquiries buried in chat</li><li>Missed follow-ups - one reply then silence</li><li>Lost quotations - no record of what was quoted</li><li>No tracking - nobody knows the real pipeline</li><li>Staff dependency - only the owner knows status</li></ul></div>
+      <div class="card"><h3>Warning signs SmartOS is needed</h3><ul><li>Owner personally manages every inquiry</li><li>Multiple phones / numbers in use</li><li>No written record of inquiries</li><li>Diary-based booking calendar</li><li>Staff cannot answer "status of the Sharma family inquiry?"</li></ul></div>
+    </div>
+    <div class="card accent"><h3>SmartOS readiness indicators</h3><ul><li>10+ bookings per month</li><li>Multiple staff handling inquiries</li><li>Wedding-season volume exceeds owner bandwidth</li><li>Owner frustrated about forgotten follow-ups</li></ul></div>
+    <div class="divider"><h3>Sequencing guidance</h3></div>
+    <div class="grid grid-3">
+      <div class="card"><h3>DigiStories first</h3><p>Invisible online, low inquiry volume, owner still handles current volume comfortably.</p></div>
+      <div class="card"><h3>SmartOS first</h3><p>Steady inquiry flow but leaking conversions, owner overloaded and dropping follow-ups.</p></div>
+      <div class="card"><h3>Both together</h3><p>Scaling fast, 15+ inquiries/month, owner wants growth without the chaos.</p></div>
+    </div>`);
+}
+function ch24(){
+  const bands = [
+    ['High Leakage Risk','Memory / verbal, no follow-up','Get every inquiry written down the same day','Basic tracking sheet before anything else','+15-25 Conversion Health'],
+    ['Manual Operations','Paper register / diary, owner remembers','Assign one owner for follow-up with a daily check','Standardise the process, then pilot SmartOS','+10-20 Conversion Health'],
+    ['Structured Operations','Excel / Google Sheet, some reminders','Add automated reminders and a shared calendar','Roll out SmartOS dashboards','+8-15 Conversion Health'],
+    ['Modern Operations','CRM / software, owner dashboard','Optimise conversion and owner reporting','Already SmartOS-ready - focus on ROI','+5-10 Conversion Health']
+  ];
+  const rows = bands.map(b=>`<tr><td><strong>${esc(b[0])}</strong></td><td>${esc(b[1])}</td><td>${esc(b[2])}</td><td>${esc(b[3])}</td><td class="mono" style="font-size:11px;color:var(--green)">${esc(b[4])}</td></tr>`).join('');
+  return secWrap('ch24','Pillar 3 - Operations',`Operational <em>Maturity</em> Patterns`,`The four operational bands, and the exact playbook to move a hall up one level.`,
+    `<div class="table-wrap"><table><thead><tr><th>Band</th><th>Typical profile</th><th>Biggest fix</th><th>Before SmartOS rollout</th><th>Expected impact</th></tr></thead><tbody>${rows}</tbody></table></div>`);
+}
+function ch25(){
+  return secWrap('ch25','Pillar 4 - Revenue',`Off-Season <em>Revenue</em> Activation`,`Fill the quiet months (Jun-Oct) without devaluing the brand.`,
+    `<div class="grid grid-2">
+      <div class="card"><h3>Corporate events</h3><p>Conferences, AGMs, product launches, training days. Weekday daytime slots that never compete with weddings.</p></div>
+      <div class="card"><h3>Festival weekend micro-events</h3><p>Small pujas, haldi-kumkum gatherings, society functions during festival weekends.</p></div>
+      <div class="card"><h3>Birthday &amp; anniversary positioning</h3><p>Package the smaller hall for 50-150 guest celebrations with a fixed-price, fixed-menu CTA.</p></div>
+      <div class="card"><h3>School / college partnerships</h3><p>Annual days, farewells, alumni meets - recurring institutional bookings.</p></div>
+    </div>
+    <div class="callout" style="margin-top:20px"><div class="callout-icon">Rs</div><div class="callout-body"><h4>Off-season pricing without devaluing the brand</h4><p>Never advertise a public discount. Instead offer "off-season inclusions" - free decor upgrade, complimentary DJ hour, extra catering counters. The family feels value; the headline price stays intact.</p></div></div>`);
+}
+function ch26(){
+  return secWrap('ch26','Pillar 2 - Trust',`Review System &amp; <em>Reputation</em> Management`,`Reviews decide a high-trust purchase. Build velocity sustainably and defend the brand.`,
+    `<div class="grid grid-2">
+      <div class="card accent"><h3>Post-function review collection</h3><ul>
+        <li>Ask 2 days after the event, never on the day.</li>
+        <li>Owner sends a short personal WhatsApp: "It was an honour to host your function. If you were happy, a Google review helps other families find us - here is the link."</li>
+        <li>One link, one tap. Never make them search.</li>
+        <li>Target 2-4 fresh reviews every month, not a one-time burst.</li>
+      </ul></div>
+      <div class="card"><h3>Responding to negative reviews</h3><ul>
+        <li>Reply within 24 hours, calm and respectful - never defensive.</li>
+        <li>Acknowledge, apologise for their experience, move details offline ("please call us so we can make it right").</li>
+        <li>Future families read the response more than the complaint. A graceful reply builds trust.</li>
+      </ul></div>
+    </div>
+    <div class="grid grid-2">
+      <div class="card"><h3>Spotting fake / planted reviews</h3><ul>
+        <li>Generic 1-star with no event detail, often clustered on one date.</li>
+        <li>Reviewer with no other activity.</li>
+        <li>Flag to Google with evidence; do not engage emotionally in public.</li>
+      </ul></div>
+      <div class="card"><h3>Trust signal placement</h3><ul>
+        <li>Pin best reviews to a "REVIEWS" Instagram highlight.</li>
+        <li>Add real wedding photos to Google Business monthly.</li>
+        <li>Screenshot 5-star reviews into branded posts once a month.</li>
+      </ul></div>
+    </div>
+    <div class="callout"><div class="callout-icon">!</div><div class="callout-body"><h4>The trust compounding rule</h4><p>Review velocity beats review count. A hall adding 3 fresh reviews a month will out-rank and out-convert a hall with 200 reviews all from two years ago.</p></div></div>`);
+}
+function ch27(){
+  return secWrap('ch27','🔒 Internal Only',`BCA Relationship <em>Playbook</em>`,`Internal lever. Never mentioned on a printed report, and never raised on a call when the sensitivity flag is set.`,
+    `<div class="card" style="border-color:#b9a4d6;">
+      <h3>What BCA is</h3>
+      <p>BCA (Bombay Catering Association) is a ~600-member association of caterers, decorators, and banquet operators. Rohit Nate is a member. BCA-connected venues are warmer leads with higher close probability.</p>
+    </div>
+    <div class="grid grid-2">
+      <div class="card"><h3>Identify BCA-connected vendors</h3><ul>
+        <li>Ask who caters and decorates their functions.</li>
+        <li>Cross-check names against the BCA member list.</li>
+        <li>A BCA caterer/decorator already working the venue is a warm bridge.</li>
+      </ul></div>
+      <div class="card"><h3>Warm intro script</h3><ul>
+        <li>"Your decorator [name] and I are both with BCA - small world. I work with a few halls on their online presence."</li>
+        <li>Let the association do the trust-building; do not oversell it.</li>
+      </ul></div>
+    </div>
+    <div class="card" style="border-left:3px solid #ef4444;">
+      <h3>Sensitivity protocols - when NOT to mention BCA</h3>
+      <ul>
+        <li>Owner has had a bad past experience with BCA.</li>
+        <li>Owner has a rivalry with another BCA member.</li>
+        <li>If either is true: treat as a cold lead, never name BCA on the call.</li>
+      </ul>
+    </div>
+    <div class="grid grid-2">
+      <div class="card"><h3>Co-pilot opportunities</h3><p>BCA members are natural DigiNetwork seeds - vendors who can refer multiple venues. Nurture the relationship, do not transact on the first call.</p></div>
+      <div class="card"><h3>Long-term positioning</h3><p>The goal is to earn "BCA partner of choice" status over time. Do not claim it before it is earned - credibility with this community is slow to build and fast to lose.</p></div>
+    </div>`);
+}
+function applyLastReviewedStamps(){
+  document.querySelectorAll('.section .section-header').forEach(h=>{
+    if(h.querySelector('.last-reviewed')) return;
+    const tag=document.createElement('div');
+    tag.className='last-reviewed';
+    tag.style.cssText='margin-top:8px;font-size:11px;color:var(--text-3);font-family:DM Mono,monospace;';
+    tag.textContent='Last reviewed: 2026-05-30 · If this advice feels out of date, ask the team to update it.';
+    h.appendChild(tag);
+  });
+}
+/* ---------- RENDER ALL ---------- */
+function renderAllChapters(){
+  const fns = [ch01,ch02,ch03,ch04,ch05,ch06,ch07,ch08,ch09,ch10,ch11,ch12,ch13,ch14,ch15,ch16,ch17,ch18,ch19,ch20,ch21,ch22,ch23,ch24,ch25,ch26,ch27,brochureSec];
+  document.getElementById('sections').innerHTML = assessmentSection() + intelligenceSection() + '<div class="section" id="investment"><\/div>' + '<div class="section" id="audit"><\/div>' + fns.map(f=>f()).join('');
+  if(typeof renderIntel==='function') renderIntel();
+  if(typeof renderGrowthInvestment==='function') renderGrowthInvestment();
+  if(typeof detailedAuditSectionHTML==='function'){ var _a=document.getElementById('audit'); if(_a){ _a.innerHTML=detailedAuditSectionHTML(); setTimeout(function(){ if(typeof restoreDetailedAudit==='function') restoreDetailedAudit(); },0); } }
+  // restore checklist
+  loadChecks();
+  // re-show active or default
+  const first = document.querySelector('.section');
+  if(first && !document.querySelector('.section.active')){ first.classList.add('active'); }
+}
+
+/* checklist persistence */
+async function saveChecks(){
+  const st={}; document.querySelectorAll('[data-ck]').forEach(cb=>st[cb.dataset.ck]=cb.checked);
+  try{ if(window.storage) await window.storage.set('dvb-checks-v2', JSON.stringify(st), false); }catch(e){}
+}
+async function loadChecks(){
+  try{ if(window.storage){ const r=await window.storage.get('dvb-checks-v2',false); if(r&&r.value){ const st=JSON.parse(r.value); document.querySelectorAll('[data-ck]').forEach(cb=>{ if(st[cb.dataset.ck]) cb.checked=true; }); } } }catch(e){}
+}
+
+/* ---------- INIT ---------- */
+async function init(){
+  await loadPersisted();
+  applyTheme();
+  buildNav();
+  renderAllChapters();
+  applyLastReviewedStamps();
+    // default to Assessment (first page)
+  document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
+  const assessSec = document.getElementById('assess');
+  if(assessSec){ assessSec.classList.add('active'); }
+  const assessNav = document.querySelector('.nav-item[data-id="assess"]');
+  if(assessNav){
+    document.querySelectorAll('.nav-item').forEach(b=>b.classList.remove('active'));
+    assessNav.classList.add('active');
+    document.getElementById('navCurrentNum').innerHTML = 'â–¼';
+    document.getElementById('navCurrentTitle').textContent = 'Assessment';
+  }
+  syncStickyOffsets();
+  if(typeof salesToolInit==='function') salesToolInit();
+  if(typeof buildSalesNav==='function') buildSalesNav();
+}
+window.addEventListener('DOMContentLoaded', init);
+</script>
+<script>
+/* =====================================================================
+   MINIMUM VIABLE INTELLIGENCE SYSTEM â€” Phase 1
+   Runs on a ~10-question operational self-assessment. Zero campaign
+   data required. Computes maturity, scores gaps, returns top-3 actions
+   and an adaptive roadmap. All rule-based, fully auditable.
+   ===================================================================== */
+
+/* ---------- ASSESSMENT SCHEMA ----------
+   Plain operational questions a non-technical owner can answer in 2 min.
+   Each maps to a scoring dimension. Stored in CONFIG.assessment. */
+const ASSESSMENT = [
+  { id:'gmb',        dim:'presence',   q:'Do you have a Google Business listing?',
+    opts:[['none','No listing',0],['basic','Yes, basic',1],['optimized','Yes, with photos & reviews',2]] },
+  { id:'instagram',  dim:'presence',   q:'Is the venue active on Instagram?',
+    opts:[['none','No account',0],['dormant','Account exists, rarely posts',1],['active','Posts regularly',2]] },
+  { id:'cadence',    dim:'consistency',q:'How often do you post content?',
+    opts:[['never','Almost never',0],['adhoc','When we remember',1],['weekly','Weekly or more',2]] },
+  { id:'reply',      dim:'conversion', q:'How fast do you reply to an enquiry?',
+    opts:[['slow','Hours or next day',0],['same','Same day',1],['fast','Within minutes',2]] },
+  { id:'followup',   dim:'conversion', q:'Do you follow up with leads who go quiet?',
+    opts:[['never','No, one reply only',0],['sometimes','Sometimes',1],['system','Yes, a set sequence',2]] },
+  { id:'reviews',    dim:'authority',  q:'How many Google reviews do you have?',
+    opts:[['few','Under 10',0],['some','10 to 40',1],['many','40+',2]] },
+  { id:'reviewask',  dim:'authority',  q:'Do you ask every client for a review?',
+    opts:[['never','No',0],['sometimes','Sometimes',1],['always','Every event',2]] },
+  { id:'content',    dim:'presence',   q:'Do you have good photos/videos of the venue?',
+    opts:[['none','Few or poor quality',0],['some','Some decent ones',1],['pro','Professional library',2]] },
+  { id:'tracking',   dim:'dataUse',    q:'Do you track where enquiries come from?',
+    opts:[['none','No',0],['head','In my head',1],['logged','Logged in a sheet/CRM',2]] },
+  { id:'referral',   dim:'authority',  q:'Do vendors (decorators/planners) refer clients to you?',
+    opts:[['none','Rarely',0],['some','A few do',1],['network','Active referral network',2]] }
+];
+
+/* dimension weights â†’ maturity */
+const DIM_WEIGHTS = { presence:0.25, consistency:0.20, conversion:0.25, authority:0.20, dataUse:0.10 };
+
+/* default empty assessment */
+function blankAssessment(){ const a={}; ASSESSMENT.forEach(q=>a[q.id]=q.opts[0][0]); return a; }
+
+/* ---------- MATURITY ENGINE ---------- */
+function computeDimensionScores(){
+  const a = (CONFIG.assessment)||blankAssessment();
+  const buckets = {presence:[],consistency:[],conversion:[],authority:[],dataUse:[]};
+  ASSESSMENT.forEach(q=>{
+    const chosen = q.opts.find(o=>o[0]===a[q.id]) || q.opts[0];
+    buckets[q.dim].push(chosen[2]); // 0,1,2
+  });
+  const dim = {};
+  Object.keys(buckets).forEach(d=>{
+    const arr = buckets[d];
+    const max = arr.length*2;
+    dim[d] = max? Math.round((arr.reduce((x,y)=>x+y,0)/max)*100) : 0;
+  });
+  return dim; // each 0-100
+}
+
+function computeMaturity(){
+  const dim = computeDimensionScores();
+  let score = 0;
+  Object.keys(DIM_WEIGHTS).forEach(d=>{ score += (dim[d]||0)*DIM_WEIGHTS[d]; });
+  score = Math.round(score); // 0-100
+  // map to level 0-5
+  let level;
+  if(score < 15) level=0;
+  else if(score < 35) level=1;
+  else if(score < 55) level=2;
+  else if(score < 75) level=3;
+  else if(score < 90) level=4;
+  else level=5;
+  return { score, level, dim };
+}
+
+const MATURITY_LEVELS = [
+  { n:'Invisible',    desc:'The venue barely exists online. Customers searching cannot find you.', focus:'Get found. Build the basic foundation.' },
+  { n:'Present',      desc:'You exist online but there is no system. Posting and replies are random.', focus:'Build rhythm. Capture every enquiry.' },
+  { n:'Converting',   desc:'You get leads but leak most of them through slow or no follow-up.', focus:'Plug the funnel. Chase every lead, collect reviews.' },
+  { n:'Authority',    desc:'You are trusted and consistent. Now optimise and accelerate.', focus:'Scale with paid + partnerships. Premium positioning.' },
+  { n:'Data-Driven',  desc:'You measure what works and shift spend accordingly.', focus:'Double down on what converts. Cut what does not.' },
+  { n:'Intelligent',  desc:'A self-optimising growth machine. Benchmark-beating.', focus:'Predictive scheduling, automation, market leadership.' }
+];
+
+/* ---------- SCORING ENGINE ----------
+   Six business scores derived from dimensions + config. Each has a
+   target that rises with maturity, so gaps re-prioritise as you grow. */
+function computeScores(){
+  const m = computeMaturity();
+  const d = m.dim;
+  const scores = {
+    visibility: { val: Math.round((d.presence*0.7 + d.consistency*0.3)), label:'Visibility', kind:'leading',
+                  hint:'Can customers find and see you?' },
+    trust:      { val: Math.round((d.authority)), label:'Trust', kind:'leading',
+                  hint:'Reviews and social proof.' },
+    conversion: { val: Math.round((d.conversion)), label:'Conversion', kind:'business',
+                  hint:'Do enquiries become bookings?' },
+    consistency:{ val: Math.round((d.consistency)), label:'Consistency', kind:'leading',
+                  hint:'Reliable content rhythm.' },
+    dataUse:    { val: Math.round((d.dataUse)), label:'Measurement', kind:'business',
+                  hint:'Do you know what works?' }
+  };
+  // growth score = weighted composite
+  scores.growth = { val: m.score, label:'Growth Score', kind:'north', hint:'Overall growth readiness.' };
+  return { maturity:m, scores };
+}
+
+/* ---------- HEALTH SCORECARD ENGINE ----------
+   Seven business-health dimensions derived from the assessment + config.
+   Four are "higher = healthier"; two product-readiness scores are
+   "higher = bigger need / stronger case"; plus a recommended growth path. */
+function computeHealthScores(){
+  let m, scores;
+  try { const r = computeScores(); m = r.maturity; scores = r.scores; }
+  catch(e){
+    m = {score:50, level:1, dim:{}};
+    scores = {visibility:{val:30}, trust:{val:30}, conversion:{val:25},
+              consistency:{val:30}, dataUse:{val:20}, growth:{val:40}};
+  }
+  const vis  = scores.visibility?.val  ?? 30;
+  const trust= scores.trust?.val       ?? 30;
+  const conv = scores.conversion?.val  ?? 25;
+  const cons = scores.consistency?.val ?? 30;
+  const data = scores.dataUse?.val     ?? 20;
+  const d = m.dim || {};
+  const clamp = x => Math.max(0, Math.min(100, Math.round(x)));
+
+  // 1. Operational Health â€” booking capture & conversion
+  const operational = clamp(conv*0.45 + cons*0.30 + data*0.25);
+
+  // 2. Revenue Health â€” conversion strength minus leakage pressure
+  const lostBook = parseFloat((CONFIG.leakage && CONFIG.leakage.bookings) || "1.5") || 1.5;
+  const leakPenalty = Math.min(100, lostBook*22);
+  const revenue = clamp(conv*0.55 + trust*0.25 + (100-leakPenalty)*0.20);
+
+  // 3. Competitive Health â€” review standing + visibility vs local rivals
+  const compRev = parseInt((CONFIG.competitor && CONFIG.competitor.reviews) || "238") || 238;
+  const youRev = 42;
+  const reviewRatio = Math.min(1, youRev/Math.max(1, compRev));
+  const competitive = clamp(reviewRatio*100*0.5 + vis*0.5);
+
+  // 4. Modernization Score â€” digital presence, consistency, data use
+  const modernization = clamp((d.presence ?? vis)*0.4 + (d.consistency ?? cons)*0.3 + (d.dataUse ?? data)*0.3);
+
+  // 5/6. Product readiness â€” higher = bigger need / stronger sales case
+  const digistoriesReadiness = clamp((100-vis)*0.55 + (100-cons)*0.45);
+  const smartosReadiness     = clamp((100-conv)*0.55 + (100-data)*0.45);
+
+  // 7. Recommended Growth Path
+  const dsHigh = digistoriesReadiness >= 55;
+  const soHigh = smartosReadiness >= 55;
+  let path, sequence, rationale;
+  if (dsHigh && soHigh) {
+    if (digistoriesReadiness >= smartosReadiness) {
+      path = 'DigiStories â†’ SmartOS';
+      sequence = ['DigiStories â€” get found & trusted', 'SmartOS â€” capture & convert'];
+      rationale = 'Severe visibility gaps AND leaking enquiries. Become visible first, then plug the funnel.';
+    } else {
+      path = 'SmartOS â†’ DigiStories';
+      sequence = ['SmartOS â€” stop the leak', 'DigiStories â€” scale visibility'];
+      rationale = 'Enquiries arrive but leak badly. Fix operations first, then amplify visibility.';
+    }
+  } else if (dsHigh) {
+    path = 'DigiStories First';
+    sequence = ['DigiStories â€” visibility & content', 'SmartOS later as volume grows'];
+    rationale = 'The main gap is visibility â€” families cannot find or trust the venue online yet.';
+  } else if (soHigh) {
+    path = 'SmartOS First';
+    sequence = ['SmartOS â€” booking & follow-up system', 'DigiStories to amplify'];
+    rationale = 'Venue is known locally but loses enquiries through manual, leaky operations.';
+  } else {
+    path = 'Optimise & Scale';
+    sequence = ['Refine content quality', 'Add paid distribution'];
+    rationale = 'Strong foundation already â€” focus on optimisation and paid acceleration.';
+  }
+
+  return {
+    operational, revenue, competitive, modernization,
+    smartosReadiness, digistoriesReadiness,
+    growthPath: { path, sequence, rationale }
+  };
+}
+
+/* ---------- DECISION ENGINE ----------
+   Rule library. Each rule: condition(assessment,dim,level) â†’ action.
+   Every action carries why / impact / confidence / priority.
+   Priority = gapSeverity Ã— businessWeight Ã— maturityFit. */
+const RULES = [
+  { id:'gmb_setup', biz:1.0,
+    when:a=>a.gmb==='none',
+    action:'Create your Google Business listing today',
+    why:'Customers searching "venue in your city" cannot find you at all. This is the single biggest leak.',
+    impact:'Unlocks the entire search channel â€” often the #1 enquiry source for venues.',
+    chapter:'ch09' },
+  { id:'gmb_optimize', biz:0.85,
+    when:a=>a.gmb==='basic',
+    action:'Add 30+ photos and start collecting reviews on Google',
+    why:'A bare listing ranks poorly and builds no trust. Photos and reviews are the top ranking factors.',
+    impact:'More profile views, more direction requests, higher rank vs competitors.',
+    chapter:'ch09' },
+  { id:'reply_speed', biz:1.0,
+    when:a=>a.reply==='slow',
+    action:'Reply to every enquiry within minutes, not hours',
+    why:'Reply speed is the #1 conversion lever. A 5-minute reply converts far better than a next-day one.',
+    impact:'Directly lifts enquiry-to-booking rate â€” the cheapest win available.',
+    chapter:'ch08' },
+  { id:'followup_system', biz:0.95,
+    when:a=>a.followup==='never',
+    action:'Set up a simple follow-up sequence for quiet leads',
+    why:'80% of bookings happen between the 5th and 12th contact. One reply and silence loses most leads.',
+    impact:'Recovers leads you are currently throwing away â€” pure found money.',
+    chapter:'ch21' },
+  { id:'review_engine', biz:0.9,
+    when:a=>a.reviewask==='never' || a.reviews==='few',
+    action:'Ask every client for a Google review, 2 days after their event',
+    why:'Reviews decide a high-trust purchase. Few/old reviews means buyers choose a competitor with more.',
+    impact:'Compounds trust over time; lifts both rank and conversion.',
+    chapter:'ch09' },
+  { id:'content_shoot', biz:0.7,
+    when:a=>a.content==='none',
+    action:'Shoot 10 strong photos/videos of the empty hall, stage and food',
+    why:'You cannot run any visual marketing without raw material. This is the fuel for everything else.',
+    impact:'Enables Reels, posts, brochure, ads â€” every downstream tactic.',
+    chapter:'ch02' },
+  { id:'instagram_start', biz:0.6,
+    when:a=>a.instagram==='none',
+    action:'Create an Instagram business account with a clear bio + link',
+    why:'Instagram is where couples fall in love with a venue before visiting. No account = invisible to them.',
+    impact:'Opens the primary discovery channel for weddings and events.',
+    chapter:'ch03' },
+  { id:'posting_rhythm', biz:0.65,
+    when:a=>a.cadence==='never' || a.cadence==='adhoc',
+    action:'Commit to a fixed weekly posting rhythm (start with 3 posts/week)',
+    why:'Random posting flags your account as filler. Consistency trains the algorithm and the audience.',
+    impact:'Steady reach growth instead of dead-flat engagement.',
+    chapter:'ch04' },
+  { id:'tracking_start', biz:0.55,
+    when:a=>a.tracking==='none' || a.tracking==='head',
+    action:'Log every enquiry and its source in one simple sheet',
+    why:'You cannot improve what you do not measure. Without source tracking you are spending blind.',
+    impact:'Reveals which channel actually drives bookings within 60 days.',
+    chapter:'ch16' },
+  { id:'referral_network', biz:0.6,
+    when:a=>a.referral==='none',
+    action:'Set up a referral deal with 3 local decorators/photographers',
+    why:'Vendors who work your venue have audiences of exactly your customers. Free distribution.',
+    impact:'High-quality referred leads that convert better than cold traffic.',
+    chapter:'ch11' },
+  { id:'paid_ready', biz:0.5,
+    when:(a,d,lvl)=>lvl>=3 && a.tracking==='logged',
+    action:'Start a small lead-gen ad campaign now that your foundation is solid',
+    why:'You have presence, trust and tracking â€” the prerequisites for paid to be profitable, not wasted.',
+    impact:'Accelerates booking volume with measurable cost-per-lead.',
+    chapter:'ch17' }
+];
+
+function decide(){
+  const m = computeMaturity();
+  const a = (CONFIG.assessment)||blankAssessment();
+  const fired = [];
+  RULES.forEach(r=>{
+    let cond=false;
+    try{ cond = r.when(a, m.dim, m.level); }catch(e){ cond=false; }
+    if(cond){
+      // priority: business weight, scaled, with a small maturity-fit nudge
+      const priority = Math.round(r.biz*100);
+      fired.push({ ...r, priority, confidence:0.9 });
+    }
+  });
+  // sort by priority desc
+  fired.sort((x,y)=>y.priority-x.priority);
+  return fired;
+}
+
+/* top 3 only â€” restraint is the feature */
+function topRecommendations(){ return decide().slice(0,3); }
+
+/* ---------- ADAPTIVE ROADMAP ----------
+   Maturity-gated phases. Current phase = the venue's level.
+   Each phase lists the wins that move them to the next level. */
+const ROADMAP = [
+  { lvl:0, title:'Get Found', wins:['Google Business listing live','Instagram account created','10 quality photos shot'] },
+  { lvl:1, title:'Build Rhythm', wins:['Weekly posting cadence','Instant enquiry replies','WhatsApp set up properly'] },
+  { lvl:2, title:'Plug the Funnel', wins:['Follow-up sequence running','Review request after every event','Enquiry source tracking'] },
+  { lvl:3, title:'Build Authority', wins:['40+ Google reviews','Vendor referral network','Consistent real-event content'] },
+  { lvl:4, title:'Accelerate', wins:['Paid lead-gen campaigns','Channel ROI analysis','Premium positioning'] },
+  { lvl:5, title:'Lead the Market', wins:['Predictive scheduling','Benchmark-beating conversion','Automation across funnel'] }
+];
+
+function nextMilestones(){
+  const m = computeMaturity();
+  const phase = ROADMAP[m.level] || ROADMAP[ROADMAP.length-1];
+  const next = ROADMAP[m.level+1];
+  return { current:phase, next, level:m.level };
+}
+</script>
+
+<script>
+/* =====================================================================
+   MVI â€” UI SURFACE
+   ===================================================================== */
+
+function intelligenceSection(){
+  return `<div class="section" id="intel"></div>`;
+}
+
+function renderIntel(){
+  const el = document.getElementById('intel'); if(!el) return;
+
+  // Compute data with fallbacks
+  let m = {level:1,score:50,dim:{}};
+  let scores = {visibility:{val:30},conversion:{val:25},growth:{val:40}};
+  let recs = [{
+    action: 'Google Review Reactivation Campaign',
+    why: 'Customers searching "venue in your city" cannot find you. This is the single biggest leak.',
+    impact: '+22% local search visibility within 30 days.'
+  }];
+
+  if (CONFIG.assessment && typeof computeScores === 'function') {
+      try {
+          const res = computeScores();
+          m = res.maturity;
+          scores = res.scores;
+          recs = topRecommendations();
+      } catch(e) {}
+  }
+  
+  const compName = (CONFIG.competitor && CONFIG.competitor.name) || "Blue Sea";
+  const compRev = parseInt((CONFIG.competitor && CONFIG.competitor.reviews) || "238");
+  const youRev = 42; // Simulated current state
+  const gap = Math.max(0, compRev - youRev);
+  
+  const leakInq = (CONFIG.leakage && CONFIG.leakage.inquiries) || "12";
+  const leakBook = (CONFIG.leakage && CONFIG.leakage.bookings) || "1.5";
+  const leakRev = (CONFIG.leakage && CONFIG.leakage.revenue) || "7.5L";
+
+  let h = `<div class="section-header">
+      <div class="section-tag">Growth Intelligence</div>
+      <h2 class="section-title">Your growth <em>intelligence</em></h2>
+    </div>`;
+
+  // â”€â”€ 7-PART VENUE HEALTH SCORECARD â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+  const H = (typeof computeHealthScores === 'function') ? computeHealthScores() : null;
+  if (H) {
+    const barColor = v => v >= 70 ? 'var(--green)' : v >= 40 ? 'var(--gold)' : '#ef4444';
+    const healthCard = (label, val, desc, opportunity) => {
+      const col = opportunity ? 'var(--accent)' : barColor(val);
+      const tag = opportunity ? '<span class="mono" style="font-size:9px;color:var(--accent);text-transform:uppercase;letter-spacing:.5px"> Â· case strength</span>' : '';
+      return `<div class="card" style="margin:0;padding:16px">
+        <div class="score-bar-top"><span style="font-weight:600">${label}${tag}</span><span class="mono" style="color:${col}">${val}/100</span></div>
+        <div class="score-bar-track"><div class="score-bar-fill" style="width:${val}%;background:${col}"></div></div>
+        <p style="font-size:12px;color:var(--text-3);margin-top:8px">${desc}</p>
+      </div>`;
+    };
+    h += `<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-bottom:18px">
+      ${healthCard('Operational Health',   H.operational,   'How well bookings are captured & converted.', false)}
+      ${healthCard('Revenue Health',        H.revenue,       'Booking conversion vs revenue leaking out.',  false)}
+      ${healthCard('Competitive Health',    H.competitive,   'How you stack up against local rivals.',      false)}
+      ${healthCard('Modernization Score',   H.modernization, 'Digital presence, consistency & data use.',   false)}
+      ${healthCard('SmartOS Readiness',     H.smartosReadiness,     'Higher = bigger operational need for SmartOS.',  true)}
+      ${healthCard('DigiStories Readiness', H.digistoriesReadiness, 'Higher = bigger visibility need for DigiStories.', true)}
+    </div>`;
+
+    // Recommended Growth Path
+    h += `<div class="card" style="margin-bottom:18px;border:1px solid var(--accent);background:linear-gradient(135deg,var(--bg-1),rgba(197,160,89,0.06))">
+      <div class="mono" style="font-size:11px;color:var(--accent);margin-bottom:8px">RECOMMENDED GROWTH PATH</div>
+      <h3 style="font-size:24px;margin-bottom:10px">${esc(H.growthPath.path)}</h3>
+      <p style="font-size:14px;color:var(--text-2);margin-bottom:14px">${esc(H.growthPath.rationale)}</p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center">
+        ${H.growthPath.sequence.map((s,i)=>`<div style="display:flex;align-items:center;gap:8px;background:var(--bg-2);padding:8px 14px;border-radius:8px"><span class="mono" style="color:var(--accent);font-weight:700">${i+1}</span><span style="font-size:13px">${esc(s)}</span></div>`).join('<span style="color:var(--text-3)">â†’</span>')}
+      </div>
+    </div>`;
+  }
+
+  // 1. Competitive Gap Visualization
+  h += `<div class="card" style="margin-bottom:18px; display:flex; gap:20px; align-items:center; background:var(--bg-1); border: 1px solid var(--border);">
+    <div style="flex:1; text-align:center;">
+      <div class="mono" style="color:var(--text-3); font-size:12px;">You</div>
+      <div style="font-size:32px; font-weight:700; color:var(--text);">${youRev}</div>
+      <div style="font-size:11px; color:var(--text-3);">Google Reviews</div>
+    </div>
+    <div style="font-size:24px; color:var(--text-2);">vs</div>
+    <div style="flex:1; text-align:center;">
+      <div class="mono" style="color:var(--accent); font-size:12px;">${esc(compName)}</div>
+      <div style="font-size:32px; font-weight:700; color:var(--accent);">${compRev}</div>
+      <div style="font-size:11px; color:var(--text-3);">Google Reviews</div>
+    </div>
+    <div style="flex:1.5; text-align:center; border-left: 1px solid var(--border); padding-left: 20px;">
+      <div class="mono" style="color:#ef4444; font-size:12px;">Visibility Gap</div>
+      <div style="font-size:42px; font-weight:800; color:#ef4444; line-height:1;">${gap}</div>
+      <div style="font-size:11px; color:var(--text-3);">Lost social proof</div>
+    </div>
+  </div>`;
+
+  // 2. Revenue Leakage Card
+  h += `<div class="card" style="margin-bottom:18px; border-left:4px solid #ef4444; background:rgba(239, 68, 68, 0.05);">
+    <h3 style="color:#ef4444; font-size:14px; text-transform:uppercase; letter-spacing:1px; margin-bottom:14px;">Estimated Monthly Revenue Leakage</h3>
+    <div style="display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px;">
+      <div>
+        <div style="font-size:24px; font-weight:700;">${esc(leakInq)}</div>
+        <div style="font-size:11px; color:var(--text-2);">Lost Inquiries</div>
+      </div>
+      <div>
+        <div style="font-size:24px; font-weight:700;">${esc(leakBook)}</div>
+        <div style="font-size:11px; color:var(--text-2);">Lost Bookings</div>
+      </div>
+      <div style="text-align:right;">
+        <div style="font-size:28px; font-weight:800; color:#ef4444;">â‚¹${esc(leakRev)}</div>
+        <div style="font-size:11px; color:var(--text-2);">Estimated Revenue Lost</div>
+      </div>
+    </div>
+  </div>`;
+
+  // 3. SmartOS Readiness Card
+  const vScore = scores.visibility?.val || 30;
+  const oScore = scores.conversion?.val || 25;
+  const gScore = scores.growth?.val || (m.score || 40);
+  
+  h += `<div class="card" style="margin-bottom:18px;">
+    <h3 style="margin-bottom:16px;">SmartOS Readiness</h3>
+    <div style="display:flex; gap:15px; text-align:center; flex-wrap:wrap;">
+      <div style="flex:1; min-width:80px; background:var(--bg-2); padding:15px; border-radius:8px;">
+        <div style="font-size:28px; font-weight:700; color:var(--accent);">${vScore}</div>
+        <div class="mono" style="font-size:10px; color:var(--text-3); margin-top:5px;">VISIBILITY</div>
+      </div>
+      <div style="flex:1; min-width:80px; background:var(--bg-2); padding:15px; border-radius:8px;">
+        <div style="font-size:28px; font-weight:700; color:var(--green);">${oScore}</div>
+        <div class="mono" style="font-size:10px; color:var(--text-3); margin-top:5px;">OPERATIONAL</div>
+      </div>
+      <div style="flex:1; min-width:80px; background:var(--bg-2); padding:15px; border-radius:8px;">
+        <div style="font-size:28px; font-weight:700; color:var(--gold);">${gScore}</div>
+        <div class="mono" style="font-size:10px; color:var(--text-3); margin-top:5px;">GROWTH</div>
+      </div>
+    </div>
+  </div>`;
+
+  // 4. AI Recommended Next Action
+  if (recs.length > 0) {
+    const r = recs[0];
+    h += `<div class="card" style="margin-bottom:18px; border: 1px solid var(--accent); background:linear-gradient(135deg, var(--bg-1), rgba(197, 160, 89, 0.05));">
+      <div class="mono" style="font-size:11px; color:var(--accent); margin-bottom:8px;">PRIORITY #1</div>
+      <h3 style="font-size:22px; margin-bottom:8px; color:var(--text);">${esc(r.action)}</h3>
+      <p style="font-size:14px; color:var(--text-2); margin-bottom:12px;">${esc(r.why)}</p>
+      <div style="background:var(--bg-2); padding:10px 14px; border-radius:6px; display:inline-block; border-left: 2px solid var(--green);">
+        <strong style="color:var(--green); font-size:12px;">Expected Impact:</strong>
+        <span style="font-size:13px; color:var(--text); margin-left:6px;">${esc(r.impact)}</span>
+      </div>
+    </div>`;
+  }
+
+  el.innerHTML = h;
+}
+
+function renderGrowthInvestment(){
+  const el = document.getElementById('investment'); if(!el) return;
+  if(!CONFIG.assessment){
+    el.innerHTML = `<div class="section-header">
+      <div class="section-tag">Growth Investment</div>
+      <h2 class="section-title">Your growth <em>investment plan</em></h2>
+      <p class="section-sub">Complete the venue assessment first â€” your maturity level drives the pricing and investment plan.</p>
+      <button class="tb-btn primary" style="margin-top:18px;padding:10px 22px;font-size:14px" onclick="go('assess')">Take the assessment â†’</button>
+    </div>`;
+    return;
+  }
+  el.innerHTML = `<div class="section-header">
+    <div class="section-tag">Growth Investment</div>
+    <h2 class="section-title">Your growth <em>investment plan</em></h2>
+    <p class="section-sub">Quarterly commitment. Maturity-based pricing. Here's what makes sense for this venue.</p>
+  </div>` + investmentSection();
+}
+</script>
+
+<script>
+/* =====================================================================
+   ASSESSMENT PAGE â€” REDESIGNED
+   
+   This is the FIRST page users land on. Beautiful, clear, 10 questions.
+   No config needed. Just operational reality check.
+   ===================================================================== */
+
+function assessmentSection(){
+  const a = CONFIG.assessment;
+  const hasAssessment = a && Object.values(a).some(v => v && v !== 'none' && v !== 'never');
+  
+  if(!hasAssessment){
+    // Empty state â€” the hero call-to-action
+    return `<div class="section" id="assess">
+      <div style="max-width:720px;margin:0 auto;text-align:center;padding:80px 28px">
+        <div class="mono" style="font-size:13px;color:var(--accent);text-transform:uppercase;letter-spacing:.08em;margin-bottom:20px">Know where you stand</div>
+        <h1 style="font-size:clamp(42px,6vw,62px);font-weight:700;letter-spacing:-0.04em;line-height:1.05;margin-bottom:16px">
+          How strong is your <em style="font-family:'Instrument Serif',serif;font-style:italic;color:var(--accent)">digital presence</em>?
+        </h1>
+        <p style="font-size:18px;color:var(--text-2);max-width:540px;margin:0 auto 32px;line-height:1.6">
+          10 quick questions about how your venue operates today. No sales pitch. Just honest assessment and a real plan.
+        </p>
+        <button class="btn" style="font-size:15px;padding:12px 28px" onclick="startAssessment()">Start assessment</button>
+        <p style="font-size:13px;color:var(--text-3);margin-top:20px">Takes 2â€“3 minutes. Results instant.</p>
+      </div>
+    </div>`;
+  }
+  
+  // Results state â€” after they complete assessment
+  const { maturity:m, scores } = computeScores();
+  const recs = topRecommendations();
+  
+  return `<div class="section" id="assess">
+    <div class="section-header">
+      <div class="section-tag">Assessment Results</div>
+      <h2 class="section-title">Your digital <em>maturity snapshot</em></h2>
+      <p class="section-sub">Based on how you operate today, here's your growth position and what matters next.</p>
+      <button class="btn ghost" style="margin-top:16px" onclick="startAssessment()">Retake assessment</button>
+    </div>
+    
+    <!-- Maturity gauge -->
+    <div class="card accent" style="margin-bottom:28px">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:28px;flex-wrap:wrap">
+        <div style="flex:1;min-width:280px">
+          <div class="mono" style="font-size:11px;color:var(--accent);text-transform:uppercase;letter-spacing:.08em">Level ${m.level} / 5</div>
+          <h3 style="font-size:32px;font-weight:700;margin:8px 0 6px;letter-spacing:-0.02em">${MATURITY_LEVELS[m.level].n}</h3>
+          <p style="font-size:14px;color:var(--text-2);line-height:1.5;margin-bottom:12px">${MATURITY_LEVELS[m.level].desc}</p>
+          <div style="font-size:13px;color:var(--text);font-weight:500">
+            <span style="color:var(--accent)">Focus:</span> ${MATURITY_LEVELS[m.level].focus}
+          </div>
+        </div>
+        <div style="text-align:center;min-width:140px;flex-shrink:0">
+          <div style="position:relative;width:120px;height:120px;margin:0 auto;display:flex;align-items:center;justify-content:center">
+            <svg viewBox="0 0 120 120" style="width:100%;height:100%;transform:rotate(-90deg)">
+              <circle cx="60" cy="60" r="54" fill="none" stroke="var(--bg-3)" stroke-width="8"/>
+              <circle cx="60" cy="60" r="54" fill="none" stroke="url(#grad)" stroke-width="8" 
+                stroke-dasharray="${(m.score/100)*339} 339" stroke-linecap="round"/>
+              <defs>
+                <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" style="stop-color:var(--accent);stop-opacity:1" />
+                  <stop offset="100%" style="stop-color:var(--gold);stop-opacity:1" />
+                </linearGradient>
+              </defs>
+            </svg>
+            <div style="position:absolute;text-align:center">
+              <div style="font-size:42px;font-weight:700;letter-spacing:-0.04em;line-height:1">${m.score}</div>
+              <div class="mono" style="font-size:9px;color:var(--text-3);text-transform:uppercase;letter-spacing:.05em">score</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Dimension breakdown -->
+    <div class="card" style="margin-bottom:28px">
+      <h3 style="margin-bottom:18px">Your dimensions</h3>
+      ${['presence','consistency','conversion','authority','dataUse'].map(dim=>{
+        const dimLabel = {presence:'Visibility',consistency:'Consistency',conversion:'Conversion',authority:'Trust',dataUse:'Measurement'}[dim];
+        const val = m.dim[dim] || 0;
+        const color = dim==='conversion'||dim==='dataUse'?'var(--green)':'var(--gold)';
+        return `
+          <div style="margin-bottom:16px">
+            <div style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:6px">
+              <span style="color:var(--text)">${dimLabel}</span>
+              <span class="mono" style="color:var(--text-2);font-weight:500">${val}</span>
+            </div>
+            <div style="height:8px;background:var(--bg-3);border-radius:99px;overflow:hidden">
+              <div style="height:100%;width:${val}%;background:${color};transition:width .3s ease"></div>
+            </div>
+          </div>
+        `;
+      }).join('')}
+      <p style="font-size:12px;color:var(--text-3);margin-top:16px;padding-top:16px;border-top:1px solid var(--border)">
+        Green = business-driven (conversion, measurement). Gold = leading indicators (reach, trust). As you improve, targets rise.
+      </p>
+    </div>
+    
+    <!-- Top 3 actions -->
+    <div class="divider"><h3>Your immediate priorities</h3></div>
+    <div class="grid grid-3" style="margin-bottom:28px">
+      ${recs.slice(0,3).map((r,i)=>`
+        <div class="card" style="border-left:3px solid ${i===0?'var(--accent)':'var(--border-bright)'}">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:10px;margin-bottom:8px">
+            <span class="mono" style="font-size:11px;color:${i===0?'var(--accent)':'var(--text-3)'};background:${i===0?'rgba(249,115,22,0.1)':'transparent'};border:1px solid ${i===0?'var(--accent)':'var(--border)'};padding:3px 9px;border-radius:6px;font-weight:600">#${i+1}</span>
+            <span class="mono" style="font-size:10px;color:var(--text-3)">confidence ${Math.round(r.confidence*100)}%</span>
+          </div>
+          <h4 style="font-size:16px;font-weight:600;margin-bottom:6px;letter-spacing:-0.01em">${r.action}</h4>
+          <p style="font-size:12px;color:var(--text-2);line-height:1.5;margin-bottom:6px"><strong style="color:var(--text)">Why:</strong> ${r.why}</p>
+          <p style="font-size:12px;color:var(--green)"><strong>Impact:</strong> ${r.impact}</p>
+        </div>
+      `).join('')}
+    </div>
+    
+    <!-- Next steps -->
+    <div class="card" style="background:linear-gradient(135deg,rgba(16,185,129,0.08),rgba(249,115,22,0.05));border:1px solid rgba(16,185,129,0.25)">
+      <h3 style="margin-bottom:12px">What's next?</h3>
+      <p style="font-size:14px;color:var(--text-2);margin-bottom:14px">
+        We've identified where you stand and what matters most. Next, see your growth roadmap and investment options â€” no obligation, fully transparent.
+      </p>
+      <button class="btn" style="background:var(--green);color:#fff;border:none" onclick="go('growth')">See your growth plan â†’</button>
+    </div>
+  </div>`;
+}
+
+function startAssessment(){
+  const form = buildAssessmentForm();
+  showAssessmentModal(form);
+}
+
+function buildAssessmentForm(){
+  const a = CONFIG.assessment || blankAssessment();
+  
+  let html = `
+    <div style="max-width:640px">
+      <div style="margin-bottom:28px;padding-bottom:20px;border-bottom:1px solid var(--border)">
+        <h3 style="font-size:18px;margin-bottom:4px">How does your venue operate today?</h3>
+        <p style="font-size:13px;color:var(--text-3)">10 questions. Just pick the closest option.</p>
+      </div>
+      <div id="assessmentQuestions"></div>
+    </div>
+  `;
+  
+  // Build question HTML
+  let questionsHtml = '';
+  ASSESSMENT.forEach((q, idx) => {
+    questionsHtml += `
+      <div style="margin-bottom:32px;padding-bottom:24px;border-bottom:1px solid var(--border)">
+        <div style="display:flex;align-items:flex-start;gap:12px;margin-bottom:16px">
+          <span class="mono" style="font-size:10px;background:var(--accent);color:#fff;padding:5px 10px;border-radius:4px;font-weight:600;flex-shrink:0">Q${idx+1}/10</span>
+          <label style="font-size:15px;font-weight:600;color:var(--text);line-height:1.4">${q.q}</label>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:6px">
+          ${q.opts.map(o=>{
+            const checked = a[q.id] === o[0];
+            return `
+              <label style="display:flex;align-items:center;gap:12px;padding:14px;background:${checked?'linear-gradient(135deg,rgba(249,115,22,0.1),rgba(251,191,36,0.05))':'var(--surface)'};border:2px solid ${checked?'var(--accent)':'var(--border)'};border-radius:10px;cursor:pointer;transition:all .15s">
+                <input type="radio" name="as_${q.id}" value="${o[0]}" ${checked?'checked':''} style="accent-color:var(--accent);cursor:pointer;width:18px;height:18px">
+                <span style="font-size:14px;color:var(--text);font-weight:${checked?'500':'400'}">${o[1]}</span>
+              </label>
+            `;
+          }).join('')}
+        </div>
+      </div>
+    `;
+  });
+  
+  html += questionsHtml;
+  
+  return html;
+}
+
+function showAssessmentModal(form){
+  const overlay = document.getElementById('setupOverlay');
+  const body = document.getElementById('setupBody');
+  const head = document.querySelector('.setup-head');
+  const foot = document.querySelector('.setup-foot');
+  
+  // Set head
+  head.querySelector('h2').textContent = 'Venue Assessment';
+  head.querySelector('p').textContent = '10 operational questions. Results in seconds.';
+  
+  // Set body
+  body.innerHTML = form;
+  
+  // Set foot
+  foot.innerHTML = `
+    <button class="btn ghost" onclick="closeSetup()">Cancel</button>
+    <button class="btn" onclick="completeAssessment()">See my results</button>
+  `;
+  
+  overlay.classList.add('open');
+}
+
+function completeAssessment(){
+  const a = CONFIG.assessment || blankAssessment();
+  
+  // Read all radio inputs
+  ASSESSMENT.forEach(q => {
+    const sel = document.querySelector('input[name="as_'+q.id+'"]:checked');
+    if(sel) a[q.id] = sel.value;
+  });
+  
+  CONFIG.assessment = a;
+  persist();
+  closeSetup();
+  
+  // Render results and navigate
+  renderAssessmentSection();
+  go('assess');
+}
+
+function renderAssessmentSection(){
+  const el = document.getElementById('assess');
+  if(el) el.innerHTML = assessmentSection();
+}
+</script>
+
+<script>
+/* =====================================================================
+   INTAKE â†’ PLAYBOOK BRIDGE
+   
+   The single source of truth is the intake JSON produced by the sales
+   tool. This module:
+   1. Maps intake JSON â†’ Bible CONFIG (branding, contacts, pricing)
+   2. DERIVES assessment answers from intake (so maturity auto-computes)
+   3. Personalizes strategy emphasis from pain points + venue type
+   
+   No API, no DB. A file travels from sales tool to bible. That's it.
+   ===================================================================== */
+
+/* ---- 1. MAP intake.online/socialState â†’ assessment answers ----
+   The intake doesn't ask all 10 assessment questions, but it captures
+   enough signal to derive sensible defaults. Sales person can refine. */
+function deriveAssessmentFromIntake(intake){
+  const o = intake.online || {};
+  const a = blankAssessment();
+  const au = intake.audit || {};
+  // If a live audit exists, it's the richer signal â€” use it first.
+  if(Object.keys(au).length){
+    // Google Business
+    if(au.gmb_missing) a.gmb='none';
+    else if(au.gmb_reviews && au.gmb_photos) a.gmb='optimized';
+    else if(au.gmb_exists) a.gmb='basic';
+    // Instagram
+    if(au.ig_dead || !au.ig_exists) a.instagram = au.ig_exists? 'dormant':'none';
+    else a.instagram='active';
+    // cadence + content from IG signals
+    if(au.ig_recent && au.ig_reels) a.cadence='weekly';
+    else if(au.ig_exists && !au.ig_dead) a.cadence='adhoc';
+    else a.cadence='never';
+    if(au.ig_realevents && au.ig_consistent) a.content='pro';
+    else if(au.ig_exists||au.web_visuals) a.content='some';
+    else a.content='none';
+    // reviews / authority
+    if(au.gmb_reviews && au.gmb_recent_rev) { a.reviews='many'; a.reviewask='always'; }
+    else if(au.gmb_reviews) a.reviews='some';
+    if(au.gmb_responds) a.reviewask='sometimes';
+    // conversion signals
+    if(au.web_inquiry || au.web_whatsapp || au.trust_response) a.reply='same';
+    if(au.trust_response) a.reply='fast';
+    if(au.trust_proof) a.followup='sometimes';
+    // measurement / data â€” leave default unless strong site
+    if(au.web_exists && au.web_inquiry) a.tracking='head';
+    // referral / differentiation
+    if(au.trust_unique) a.referral='some';
+    return a;
+  }
+
+  // Google Business
+  if(o.googleBusiness){
+    if(/optimi/i.test(o.googleBusiness)) a.gmb='optimized';
+    else if(/basic/i.test(o.googleBusiness)) a.gmb='basic';
+    else a.gmb='none';
+  }
+
+  // Instagram presence
+  if(o.instagram && !/^none$/i.test(o.instagram.trim()) && o.instagram.trim()!=='') {
+    a.instagram = (/dormant|abandon/i.test(o.socialState||'')) ? 'dormant' : 'active';
+  } else a.instagram='none';
+
+  // social state drives cadence + content maturity
+  const st = (o.socialState||'').toLowerCase();
+  if(st.includes('nothing')){ a.cadence='never'; a.content='none'; a.instagram='none'; }
+  else if(st.includes('dormant')||st.includes('abandon')){ a.cadence='never'; a.content='some'; }
+  else if(st.includes('occasion')){ a.cadence='adhoc'; a.content='some'; }
+  else if(st.includes('active')||st.includes('underperform')){ a.cadence='weekly'; a.content='some'; }
+
+  // website existence nudges presence/dataUse slightly
+  if(o.website && !/^none$/i.test(o.website.trim()) && o.website.trim()!==''){
+    if(a.content==='none') a.content='some';
+  }
+
+  // pain-point signals (from discovery) refine conversion/authority
+  const pain = ((intake.discovery&&intake.discovery.pain)||'').toLowerCase();
+  if(/lead|enquir|inquir|follow.?up|cold|lose|losing/.test(pain)){ a.reply='slow'; a.followup='never'; }
+  if(/review|trust|reputation/.test(pain)){ a.reviews='few'; a.reviewask='never'; }
+
+  return a;
+}
+
+/* ---- 2. MAP intake JSON â†’ Bible CONFIG ---- */
+function mapIntakeToConfig(intake){
+  const cfg = JSON.parse(JSON.stringify(DEFAULT_CONFIG));
+  const b = intake.business||{}, o=intake.online||{}, p=intake.pricing||{};
+
+  cfg.company.name = b.owner ? (b.name||'') : (b.name||''); // venue name = business
+  cfg.company.venueName = b.name||'';
+  cfg.company.venueFullName = b.name||'';
+  cfg.company.tagline = b.tagline||'';
+  cfg.company.email = b.email||'';
+  cfg.company.website = (o.website && !/^none$/i.test(o.website))? o.website : '';
+  cfg.company.instagram = (o.instagram && !/^none$/i.test(o.instagram))? o.instagram : '';
+
+  cfg.location.city = b.city||'';
+  cfg.location.region = b.area||b.city||'';
+  cfg.location.addressLine = b.address||'';
+
+  cfg.capacity.min = b.capacityMin||cfg.capacity.min;
+  cfg.capacity.max = b.capacityMax||cfg.capacity.max;
+
+  // venue type â†’ muhurat default (wedding-oriented venues in India)
+  const vt=(b.type||'').toLowerCase();
+  cfg.market.usesMuhurat = /banquet|wedding|lawn|convention|hotel/.test(vt);
+
+  cfg.pricing.hallFrom = p.hallFrom||'';
+  cfg.pricing.cateringFrom = p.cateringFrom||'';
+  cfg.pricing.specialties = p.packages||'';
+
+  // primary contact
+  if(b.owner || b.phone){
+    cfg.contacts = [{ name:b.owner||'Owner', phone:(b.phone||'').replace(/\D/g,''), primary:true }];
+  }
+
+  // plan â†’ CTA label stays WhatsApp; store plan in meta for reference
+  cfg.intakePlan = (intake.plan && intake.plan.name) ? intake.plan.name : '';
+
+  // attach derived assessment so maturity computes immediately
+  cfg.assessment = deriveAssessmentFromIntake(intake);
+
+  // keep the raw intake for personalization (pain, type, assets)
+  cfg.intakeAudit = intake.audit || {};
+  cfg.intakeAuditScore = intake.auditScore || null;
+  cfg.founderNotes = intake.notes || intake.founderNotes || '';
+  cfg.intake = {
+    type: b.type||'',
+    pain: (intake.discovery&&intake.discovery.pain)||'',
+    socialState: o.socialState||'',
+    assetsMissing: intake.assetsMissing||[],
+    accessPending: intake.accessPending||[],
+    usp: p.usp||'',
+    notes: intake.notes || intake.founderNotes || ''
+  };
+
+  return cfg;
+}
+
+/* ---- 3. PERSONALIZATION: priority overrides from intake ----
+   Pain points and venue type reorder what the playbook emphasizes.
+   This rides ON TOP of the maturity-based decide() engine. */
+function intakePersonalization(){
+  if(!CONFIG.intake) return null;
+  const x = CONFIG.intake;
+  const flags = [];
+  const au = (CONFIG.intakeAudit)||{};
+  // Specific audit-driven findings (most credible â€” cite exactly what's wrong)
+  if(au.gmb_missing) flags.push({tag:'foundation', msg:'No Google Business listing â€” set this up first; it\'s the #1 place customers search.'});
+  else if(!au.gmb_reviews) flags.push({tag:'trust', msg:'Few Google reviews â€” launch a review-collection push after every event.'});
+  if(au.ig_dead) flags.push({tag:'revival', msg:'Instagram looks abandoned â€” priority is a fresh content relaunch wave.'});
+  else if(!au.ig_reels && au.ig_exists) flags.push({tag:'content', msg:'No Reels yet â€” Reels get 5-10Ã— the reach; make them the core format.'});
+  if(au.web_none) flags.push({tag:'foundation', msg:'No working website â€” at minimum, a one-page site with enquiry + WhatsApp.'});
+  else if(au.web_exists && !au.web_whatsapp) flags.push({tag:'conversion', msg:'Website has no WhatsApp/call button â€” add it; it\'s the fastest conversion fix.'});
+  if(au.trust_invisible) flags.push({tag:'visibility', msg:'Hard to find in search â€” fix Google Business + consistent posting to surface them.'});
+
+  const pain = (x.pain||'').toLowerCase();
+  const ss = (x.socialState||'').toLowerCase();
+
+  if(ss.includes('nothing')) flags.push({tag:'foundation', msg:'No presence yet \u2014 priority is getting visible: profiles, first content, Google Business.'});
+  if(ss.includes('dormant')||ss.includes('abandon')) flags.push({tag:'revival', msg:'Dormant accounts \u2014 priority is a relaunch burst: fresh content wave + re-engagement.'});
+  if(/lead|enquir|inquir|cold|lose|losing/.test(pain)) flags.push({tag:'conversion', msg:'Pain is lost leads \u2014 emphasise reply speed, follow-up sequences, lead capture into SmartOS.'});
+  if(/review|trust|reputation/.test(pain)) flags.push({tag:'trust', msg:'Pain is trust \u2014 prioritise review collection and social proof content.'});
+  if(/competitor|competition|losing to/.test(pain)) flags.push({tag:'differentiation', msg:'Competitive pressure \u2014 lead with what makes them unique: '+(x.usp||'their signature strength')+'.'});
+
+  // venue type content angle
+  const vt=(x.type||'').toLowerCase();
+  if(/caterer/.test(vt)) flags.push({tag:'content', msg:'Caterer \u2014 lead with food: signature dishes, live counters, plating reels.'});
+  else if(/decorator/.test(vt)) flags.push({tag:'content', msg:'Decorator \u2014 lead with transformations: before/after setup reels.'});
+  else if(/photographer/.test(vt)) flags.push({tag:'content', msg:'Photographer \u2014 lead with portfolio reels and real-event highlights.'});
+  else if(/banquet|hall|lawn|convention|hotel/.test(vt)) flags.push({tag:'content', msg:'Venue \u2014 lead with the space: walkthroughs, empty-to-decorated reveals, capacity.'});
+
+  // readiness blockers
+  if(x.assetsMissing && x.assetsMissing.length) flags.push({tag:'blocker', msg:'Before production: collect '+x.assetsMissing.slice(0,4).join(', ')+(x.assetsMissing.length>4?'\u2026':'')+'.'});
+  if(x.accessPending && x.accessPending.length) flags.push({tag:'blocker', msg:'Pending access: '+x.accessPending.slice(0,4).join(', ')+(x.accessPending.length>4?'\u2026':'')+'. Cannot post until granted.'});
+
+  return flags.length? flags : null;
+}
+
+/* ---- 4. IMPORT an intake JSON file and personalize the whole bible ---- */
+function importIntakeFile(ev){
+  const f = ev.target.files[0]; if(!f) return;
+  const r = new FileReader();
+  r.onload = e=>{
+    try{
+      const intake = JSON.parse(e.target.result);
+      // sanity: is it an intake file?
+      if(!intake.business && !intake.online){
+        // maybe it's already a config export
+        if(intake.company){ CONFIG = Object.assign(JSON.parse(JSON.stringify(DEFAULT_CONFIG)), intake); }
+        else { alert('This does not look like a venue intake file.'); return; }
+      } else {
+        CONFIG = mapIntakeToConfig(intake);
+      }
+      if(typeof persist==='function') persist();
+      if(typeof applyTheme==='function') applyTheme();
+      if(typeof renderAllChapters==='function') renderAllChapters();
+  applyLastReviewedStamps();
+      // jump to the personalized brief
+      if(typeof go==='function') go('intel');
+      showOnboardConfirm(intake);
+    }catch(err){ alert('Could not read intake file: '+err.message); }
+  };
+  r.readAsText(f);
+}
+
+let LEADS_DB = [];
+
+function importLeadsDB(ev){
+  const f = ev.target.files[0]; if(!f) return;
+  const r = new FileReader();
+  r.onload = e=>{
+    try{
+      const db = JSON.parse(e.target.result);
+      if(!Array.isArray(db)){
+        alert('Expected a JSON array of leads.'); return;
+      }
+      LEADS_DB = db;
+      const dd = document.getElementById('leadsDropdown');
+      dd.innerHTML = '<option value="">Select Venue...</option>' + 
+        LEADS_DB.map((l, i) => `<option value="${i}">${l.name || 'Unknown'}</option>`).join('');
+      dd.style.display = 'inline-block';
+      alert(`Loaded ${LEADS_DB.length} leads from database.`);
+    }catch(err){ alert('Could not read leads file: '+err.message); }
+  };
+  r.readAsText(f);
+}
+
+function loadLead(idx) {
+  if (idx === "") return;
+  const lead = LEADS_DB[idx];
+  
+  // Auto-Hydrate CONFIG
+  CONFIG = JSON.parse(JSON.stringify(DEFAULT_CONFIG));
+  
+  CONFIG.company.name = lead.name || "";
+  CONFIG.company.venueName = lead.name || "";
+  CONFIG.company.address = lead.area || "";
+  CONFIG.company.phone = lead.phone || "";
+  CONFIG.company.email = lead.website || "";
+  
+  // Intelligent Pitch Injection
+  let target_tier = (lead.target_tier || "").toLowerCase();
+  
+  if (target_tier.includes("tier 1") || target_tier.includes("premium")) {
+    CONFIG.brand.theme = 'royal';
+    CONFIG.brand.accent = '#c5a059'; CONFIG.brand.accentGlow = '#d4b06a'; CONFIG.brand.deep = '#1a233a';
+    CONFIG.intro.summary = `We noticed that as a premium venue in ${CONFIG.company.address}, you face immense competition from 5-star corporate hotels. Your physical space is beautiful, but your online presence doesn't match the in-person luxury. DigiStories will elevate your visual brand to command the pricing you deserve.`;
+  } else if (target_tier.includes("tier 2") || target_tier.includes("mid")) {
+    CONFIG.brand.theme = 'modern';
+    CONFIG.brand.accent = '#1f1d1c'; CONFIG.brand.accentGlow = '#4a4644'; CONFIG.brand.deep = '#000000';
+    CONFIG.intro.summary = `As a high-demand venue in ${CONFIG.company.address}, you are losing potential walk-ins to newer halls because your Google Maps profile and Instagram lack consistent, high-quality video walkthroughs. DigiStories provides affordable, continuous visual updates to help you dominate local search traffic.`;
+  } else {
+    CONFIG.brand.theme = 'pastel';
+    CONFIG.brand.accent = '#d8948b'; CONFIG.brand.accentGlow = '#e5a59d'; CONFIG.brand.deep = '#b5746c';
+    CONFIG.intro.summary = `You have a great local presence in ${CONFIG.company.address}, but relying entirely on paper diaries and word-of-mouth is dangerous in 2026. DigiStories brings you online with basic, beautiful visual hygiene and SmartOS to capture more local inquiries.`;
+  }
+  
+  persist();
+  applyTheme();
+  renderAllChapters();
+  applyLastReviewedStamps();
+  go('intel');
+}
+
+function showOnboardConfirm(intake){
+  const name = (intake.business && intake.business.name) || 'this venue';
+  const m = (typeof computeMaturity==='function') ? computeMaturity() : null;
+  const lvl = m ? (MATURITY_LEVELS[m.level].n) : '';
+  const banner = document.getElementById('onboardBanner');
+  if(banner){
+    banner.style.display='block';
+    banner.innerHTML = '<strong>'+esc(name)+'</strong> loaded \u2014 playbook personalized'+(lvl?' \u00b7 starting maturity: <strong>'+esc(lvl)+'</strong>':'')+'. Scroll the Growth Intelligence tab for their custom brief.';
+  }
+}
+</script>
+
+<script>
+/* Onboarding brief â€” shows intake-driven personalization inside Growth Intelligence */
+function onboardBriefHTML(){
+  if(typeof intakePersonalization!=='function') return '';
+  const flags = intakePersonalization();
+  if(!flags) return '';
+  const groups = { foundation:[], revival:[], conversion:[], trust:[], differentiation:[], content:[], blocker:[] };
+  flags.forEach(f=>{ (groups[f.tag]=groups[f.tag]||[]).push(f.msg); });
+  const blockers = (groups.blocker||[]);
+  const strategy = flags.filter(f=>f.tag!=='blocker');
+
+  let html = '<div class="divider"><h3>Personalized onboarding brief</h3></div>';
+  html += '<div class="card glow" style="margin-bottom:18px"><h3 style="margin-bottom:6px">What this venue needs first</h3>';
+  html += '<p style="font-size:13px;color:var(--text-3);margin-bottom:14px">Auto-generated from their intake. This shapes where the playbook focuses.</p>';
+  html += '<ul class="tick" style="margin:0">';
+  strategy.forEach(f=>{ html += '<li>'+f.msg+'</li>'; });
+  html += '</ul></div>';
+
+  if(blockers.length){
+    html += '<div class="card" style="border-color:rgba(255,138,61,0.4);background:linear-gradient(165deg,rgba(255,138,61,0.08),var(--surface));margin-bottom:18px">';
+    html += '<h3 style="margin-bottom:6px;color:#ff8a3d">âš  Before content production can start</h3>';
+    html += '<ul class="tick" style="margin:0">';
+    blockers.forEach(b=>{ html += '<li>'+b+'</li>'; });
+    html += '</ul></div>';
+  }
+
+  const notesText = CONFIG.founderNotes || (CONFIG.intake && CONFIG.intake.notes);
+  if(notesText && notesText.trim() !== '') {
+    html += '<div class="card" style="border-left:4px solid var(--accent); background:var(--bg-2); margin-bottom:18px;">';
+    html += '<h3 style="margin-bottom:8px; display:flex; align-items:center; gap:8px;">ðŸ”’ Private Founder Notes <span class="mono" style="font-size:9px; color:var(--text-3); background:var(--bg-3); padding:2px 6px; border-radius:3px;">INTERNAL ONLY</span></h3>';
+    html += '<p style="font-size:13px; color:var(--text-2); white-space:pre-wrap; line-height:1.6; margin:0; font-family:var(--font-sans);">' + esc(notesText) + '</p>';
+    html += '</div>';
+  }
+
+  return html;
+}
+
+/* wrap renderIntel to append the brief */
+
+</script>
+
+<script>
+/* =====================================================================
+   DETAILED VENUE AUDIT (Bible engine)
+   Full Section-3 checklist. Done post-signup for execution planning.
+   Inherits/refines the quick audit from the sales intake.
+   Each item: weight + which score it feeds + a red-flag marker.
+   ===================================================================== */
+
+const DETAILED_AUDIT = [
+  { platform:'Instagram', icon:'\ud83d\udcf8', feeds:'visibility+content',
+    items:[
+      {id:'da_ig_account', label:'Business/creator account (not personal)', w:1},
+      {id:'da_ig_recent', label:'Posted within the last 14 days', w:2},
+      {id:'da_ig_cadence', label:'Consistent cadence (3+ posts/week)', w:2},
+      {id:'da_ig_reels', label:'Publishes Reels regularly', w:3},
+      {id:'da_ig_reelquality', label:'Reels are well-shot / edited (not random clips)', w:2},
+      {id:'da_ig_identity', label:'Consistent visual identity (colours, fonts, grid)', w:2},
+      {id:'da_ig_realevents', label:'Shows real events & real venue (not stock)', w:3},
+      {id:'da_ig_authority', label:'Positions as expert/premium (not just pretty)', w:1},
+      {id:'da_ig_cta', label:'Bio CTA + contact + link present', w:2},
+      {id:'da_ig_engage', label:'Real engagement (comments/DMs, not just likes)', w:1},
+      {id:'da_ig_highlights', label:'Story highlights organised (venue/food/reviews)', w:1},
+      {id:'da_ig_dead', label:'\u26a0 Account dead / abandoned', w:0, flag:true}
+    ]},
+  { platform:'Facebook', icon:'\ud83d\udc65', feeds:'visibility',
+    items:[
+      {id:'da_fb_page', label:'Business page exists & complete', w:1},
+      {id:'da_fb_active', label:'Posts at least occasionally', w:1},
+      {id:'da_fb_info', label:'Contact, hours, location filled in', w:1},
+      {id:'da_fb_reviews', label:'Has recommendations/reviews', w:1},
+      {id:'da_fb_none', label:'\u26a0 No page or fully neglected', w:0, flag:true}
+    ]},
+  { platform:'Google Business', icon:'\ud83d\udccd', feeds:'visibility+trust',
+    items:[
+      {id:'da_gmb_claimed', label:'Listing exists & claimed', w:3},
+      {id:'da_gmb_reviews20', label:'20+ reviews', w:2},
+      {id:'da_gmb_reviews50', label:'50+ reviews', w:1},
+      {id:'da_gmb_recent', label:'Reviews within last 3 months', w:2},
+      {id:'da_gmb_rating', label:'Rating 4.3+ stars', w:2},
+      {id:'da_gmb_responds', label:'Owner responds to reviews', w:1},
+      {id:'da_gmb_photos', label:'15+ quality photos', w:2},
+      {id:'da_gmb_freshphotos', label:'Photos added in last 2 months', w:1},
+      {id:'da_gmb_keywords', label:'Name/category match search terms', w:1},
+      {id:'da_gmb_posts', label:'Uses Google posts/updates', w:1},
+      {id:'da_gmb_missing', label:'\u26a0 No listing / unclaimed', w:0, flag:true}
+    ]},
+  { platform:'Website', icon:'\ud83c\udf10', feeds:'conversion+trust',
+    items:[
+      {id:'da_web_exists', label:'Has a working website', w:2},
+      {id:'da_web_mobile', label:'Mobile-friendly / responsive', w:2},
+      {id:'da_web_speed', label:'Loads fast (under ~3s)', w:1},
+      {id:'da_web_inquiry', label:'Clear enquiry/contact form', w:2},
+      {id:'da_web_whatsapp', label:'WhatsApp / click-to-call button', w:3},
+      {id:'da_web_visuals', label:'Strong photos & credible design', w:2},
+      {id:'da_web_pricing', label:'Packages/pricing info present', w:1},
+      {id:'da_web_proof', label:'Testimonials / reviews on site', w:1},
+      {id:'da_web_none', label:'\u26a0 No site / broken / outdated', w:0, flag:true}
+    ]},
+  { platform:'Trust & Authority', icon:'\u2b50', feeds:'trust+authority',
+    items:[
+      {id:'da_tr_proof', label:'Visible social proof across channels', w:2},
+      {id:'da_tr_testimonials', label:'Real client testimonials / quotes', w:2},
+      {id:'da_tr_pressfeature', label:'Any press / feature / awards', w:1},
+      {id:'da_tr_response', label:'Fast response to DMs/enquiries', w:2},
+      {id:'da_tr_unique', label:'Clear differentiator / signature angle', w:2},
+      {id:'da_tr_vendor', label:'Vendor/partner network referring them', w:1},
+      {id:'da_tr_invisible', label:'\u26a0 Hard to find when you search them', w:0, flag:true}
+    ]},
+  { platform:'Inquiry & Conversion', icon:'\ud83c\udfaf', feeds:'conversion',
+    items:[
+      {id:'da_iq_fast', label:'Replies to enquiries within minutes', w:3},
+      {id:'da_iq_followup', label:'Follows up with quiet leads', w:2},
+      {id:'da_iq_capture', label:'Captures enquiry source/details', w:1},
+      {id:'da_iq_whatsappbiz', label:'Uses WhatsApp Business properly', w:1},
+      {id:'da_iq_leak', label:'\u26a0 Leads go cold / no system', w:0, flag:true}
+    ]}
+];
+
+/* score the detailed audit into the same 5 dimensions the bible uses */
+function detailedAuditState(){
+  const get=id=>{const cb=document.querySelector('[data-da="'+id+'"]');return cb?cb.checked:false;};
+  let earned=0, max=0, flags=[];
+  const byPlatform={};
+  DETAILED_AUDIT.forEach(sec=>{
+    let pe=0, pm=0;
+    sec.items.forEach(it=>{
+      if(it.flag){ if(get(it.id)) flags.push(sec.platform); return; }
+      pm+=it.w; max+=it.w;
+      if(get(it.id)){ pe+=it.w; earned+=it.w; }
+    });
+    byPlatform[sec.platform]={earned:pe,max:pm,pct:pm?Math.round(pe/pm*100):0};
+  });
+  const pct = max? Math.round(earned/max*100):0;
+  return { pct, earned, max, flags, byPlatform, anyData:max>0 && (earned>0||flags.length>0) };
+}
+
+/* convert detailed audit ticks into assessment answers (overrides on save) */
+function detailedAuditToAssessment(){
+  const g=id=>{const cb=document.querySelector('[data-da="'+id+'"]');return cb?cb.checked:false;};
+  const a = (CONFIG.assessment)?JSON.parse(JSON.stringify(CONFIG.assessment)):blankAssessment();
+  // GMB
+  if(g('da_gmb_missing')) a.gmb='none';
+  else if(g('da_gmb_claimed') && g('da_gmb_reviews20') && g('da_gmb_photos')) a.gmb='optimized';
+  else if(g('da_gmb_claimed')) a.gmb='basic';
+  // Instagram + cadence + content
+  if(g('da_ig_dead') || !g('da_ig_account')) a.instagram = g('da_ig_account')?'dormant':'none';
+  else a.instagram='active';
+  if(g('da_ig_cadence')||g('da_ig_recent')) a.cadence = g('da_ig_cadence')?'weekly':'adhoc';
+  else a.cadence='never';
+  if(g('da_ig_realevents') && g('da_ig_identity') && g('da_ig_reelquality')) a.content='pro';
+  else if(g('da_ig_account')||g('da_web_visuals')) a.content='some';
+  else a.content='none';
+  // reviews / authority
+  if(g('da_gmb_reviews50')||(g('da_gmb_reviews20')&&g('da_gmb_recent'))){ a.reviews='many'; }
+  else if(g('da_gmb_reviews20')) a.reviews='some'; else a.reviews='few';
+  if(g('da_gmb_responds')) a.reviewask='sometimes';
+  if(g('da_gmb_reviews50')&&g('da_gmb_recent')) a.reviewask='always';
+  // conversion
+  if(g('da_iq_leak')) { a.reply='slow'; a.followup='never'; }
+  else { if(g('da_iq_fast')) a.reply='fast'; else if(g('da_web_whatsapp')||g('da_tr_response')) a.reply='same'; if(g('da_iq_followup')) a.followup='system'; }
+  // data
+  if(g('da_iq_capture')) a.tracking='logged'; else if(g('da_web_inquiry')) a.tracking='head';
+  // referral
+  if(g('da_tr_vendor')) a.referral='network'; else if(g('da_tr_unique')) a.referral='some';
+  return a;
+}
+
+/* prefill detailed checkboxes from the quick audit (intake) so founder refines, not redo */
+function prefillFromQuickAudit(){
+  const qa = CONFIG.intakeAudit || {};
+  if(!Object.keys(qa).length) return;
+  const map = {
+    ig_exists:'da_ig_account', ig_recent:'da_ig_recent', ig_reels:'da_ig_reels',
+    ig_consistent:'da_ig_identity', ig_realevents:'da_ig_realevents', ig_cta:'da_ig_cta', ig_dead:'da_ig_dead',
+    gmb_exists:'da_gmb_claimed', gmb_reviews:'da_gmb_reviews20', gmb_recent_rev:'da_gmb_recent',
+    gmb_photos:'da_gmb_photos', gmb_responds:'da_gmb_responds', gmb_missing:'da_gmb_missing',
+    web_exists:'da_web_exists', web_mobile:'da_web_mobile', web_inquiry:'da_web_inquiry',
+    web_whatsapp:'da_web_whatsapp', web_visuals:'da_web_visuals', web_none:'da_web_none',
+    trust_proof:'da_tr_proof', trust_response:'da_tr_response', trust_unique:'da_tr_unique', trust_invisible:'da_tr_invisible'
+  };
+  Object.keys(map).forEach(qk=>{
+    if(qa[qk]){ const cb=document.querySelector('[data-da="'+map[qk]+'"]'); if(cb) cb.checked=true; }
+  });
+}
+
+/* render the detailed audit section */
+function detailedAuditSectionHTML(){
+  return `
+    <div class="section-header">
+      <div class="section-tag">Onboarding \u00b7 Deep Audit</div>
+      <h2 class="section-title">Full venue <em>audit</em></h2>
+      <p class="section-sub">The thorough version. Go through every channel carefully now that ${esc(venue()||'this venue')} is onboard \u2014 this sharpens the whole playbook and the shoot plan. Pre-filled from your sales-call audit; refine each item.</p>
+      <button class="btn" style="margin-top:16px" onclick="saveDetailedAudit()">Save audit &amp; update playbook</button>
+    </div>
+    <div id="daScore"></div>
+    ${DETAILED_AUDIT.map(sec=>`
+      <div class="card" style="margin-bottom:14px">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px">
+          <span style="font-size:20px">${sec.icon}</span>
+          <div style="flex:1"><h3 style="margin:0;font-size:17px">${esc(sec.platform)}</h3><span class="mono" style="font-size:10px;color:var(--text-3);text-transform:uppercase">feeds: ${esc(sec.feeds)}</span></div>
+          <span class="mono" id="daP_${esc(sec.platform.replace(/\W/g,''))}" style="font-size:13px;color:var(--accent)"></span>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:8px">
+          ${sec.items.map(it=>`<label style="display:flex;align-items:center;gap:9px;background:${it.flag?'rgba(220,38,38,0.07)':'var(--bg-2)'};border:1px solid ${it.flag?'rgba(220,38,38,0.3)':'var(--border)'};padding:9px 12px;border-radius:9px;cursor:pointer;font-size:13px"><input type="checkbox" data-da="${it.id}" onchange="updateDAScore()" style="accent-color:${it.flag?'var(--maroon)':'var(--green)'};width:16px;height:16px">${esc(it.label)}</label>`).join('')}
+        </div>
+      </div>`).join('')}
+    <div class="callout"><div class="callout-icon">\ud83d\udd27</div><div class="callout-body"><h4>This drives execution</h4><p>Saving recomputes maturity, scores and the personalized brief from these detailed signals \u2014 and any red flags become first-week fixes.</p></div></div>`;
+}
+
+function updateDAScore(){
+  const d = detailedAuditState();
+  const el=document.getElementById('daScore'); if(!el)return;
+  const col = d.pct<35?'var(--maroon)':(d.pct<70?'var(--gold)':'var(--green)');
+  el.innerHTML = `
+    <div class="card accent" style="margin-bottom:18px">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap">
+        <div><div class="mono" style="font-size:11px;color:var(--accent);text-transform:uppercase">Audit completeness</div>
+          <h3 style="font-size:22px;margin:5px 0 0">${d.earned} / ${d.max} weighted points</h3>
+          ${d.flags.length?`<p style="font-size:12px;color:var(--maroon);margin:6px 0 0">\u26a0 Red flags: ${esc([...new Set(d.flags)].join(', '))}</p>`:''}
+        </div>
+        <div style="text-align:center;min-width:90px"><div style="font-size:38px;font-weight:700;color:${col};line-height:1">${d.pct}</div><div class="mono" style="font-size:9px;color:var(--text-3);text-transform:uppercase">presence</div></div>
+      </div>
+      <div style="height:8px;background:var(--bg-3);border-radius:99px;overflow:hidden;margin-top:14px"><div style="height:100%;width:${d.pct}%;background:${col};transition:width .3s"></div></div>
+    </div>`;
+  // per-platform pcts
+  DETAILED_AUDIT.forEach(sec=>{
+    const span=document.getElementById('daP_'+sec.platform.replace(/\W/g,''));
+    if(span && d.byPlatform[sec.platform]) span.textContent = d.byPlatform[sec.platform].pct+'%';
+  });
+}
+
+function saveDetailedAudit(){
+
+</body>
+</html>

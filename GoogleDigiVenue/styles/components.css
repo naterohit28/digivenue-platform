@@ -1,0 +1,1399 @@
+/* ============================================================
+   DIGIVENUE — COMPONENT LIBRARY
+   All reusable UI components for the ecosystem.
+   Every component is constitutional.
+   Constitutional authority: DIGIVENUE_MASTER_SYSTEM.md §10–13
+                              ui-rules.md §3–6
+   ============================================================ */
+
+
+/* ══════════════════════════════════════════
+   1. GLOBAL NAVIGATION
+   ══════════════════════════════════════════ */
+
+.site-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: var(--z-nav);
+  padding: 16px var(--container-padding);
+  /* transparent initially — becomes opaque on scroll via .is-scrolled */
+  background-color: transparent;
+}
+
+/* Brand wordmark */
+.nav-logo {
+  font-family: var(--font-serif);
+  font-size: 22px;
+  font-weight: var(--weight-semibold);
+  letter-spacing: -0.03em;
+  color: var(--color-text-primary);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  flex-shrink: 0;
+  justify-self: start;
+}
+
+.nav-logo__img {
+  height: 42px;
+  width: auto;
+  display: block;
+}
+
+.nav-logo__accent {
+  color: var(--color-accent);
+}
+
+/* Nav link group — desktop */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+  list-style: none;
+  justify-self: center;
+}
+
+.nav-links a {
+  font-family: var(--font-sans);
+  font-size: var(--text-micro);
+  font-weight: var(--weight-medium);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-badge);
+  color: var(--color-text-secondary);
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  color: var(--color-text-primary);
+}
+
+.nav-links a.is-active {
+  color: var(--color-gold);
+}
+
+/* CTA button in nav */
+.nav-cta {
+  flex-shrink: 0;
+  justify-self: end;
+}
+
+/* Mobile hamburger toggle */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 4px;
+  z-index: var(--z-mobile);
+}
+
+.nav-toggle__bar {
+  width: 22px;
+  height: 1.5px;
+  background-color: var(--color-text-primary);
+  display: block;
+  transition:
+    transform var(--duration-base) var(--ease-out),
+    opacity   var(--duration-base) var(--ease-out);
+}
+
+/* Transparent nav state on pages with a dark cinematic hero */
+body:has(.hero-home) .site-nav:not(.is-scrolled) .nav-links a {
+  color: rgba(250, 247, 242, 0.8);
+}
+body:has(.hero-home) .site-nav:not(.is-scrolled) .nav-logo {
+  color: #FAF7F2;
+}
+body:has(.hero-home) .site-nav:not(.is-scrolled) .nav-toggle__bar {
+  background-color: #FAF7F2;
+}
+
+/* Hamburger → X transformation */
+.site-nav.menu-open .nav-toggle__bar:nth-child(1) {
+  transform: translateY(6.5px) rotate(45deg);
+}
+.site-nav.menu-open .nav-toggle__bar:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+.site-nav.menu-open .nav-toggle__bar:nth-child(3) {
+  transform: translateY(-6.5px) rotate(-45deg);
+}
+
+/* Mobile nav drawer */
+.nav-mobile-drawer {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-mobile);
+  background-color: var(--color-bg-deep);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: var(--gap-sm);
+  padding: var(--space-9) var(--space-7);
+}
+
+.site-nav.menu-open .nav-mobile-drawer {
+  display: flex;
+}
+
+.nav-mobile-drawer a {
+  font-family: var(--font-serif);
+  font-size: clamp(28px, 5vw, 40px);
+  font-weight: var(--weight-regular);
+  color: var(--color-text-primary);
+  text-decoration: none;
+  text-align: center;
+}
+
+.nav-mobile-drawer a:hover {
+  color: var(--color-gold);
+}
+
+.nav-mobile-drawer .nav-mobile-cta {
+  margin-top: var(--gap-sm);
+}
+
+@media (max-width: 900px) {
+  .site-nav {
+    padding: 12px var(--space-4);
+  }
+  .nav-links,
+  .nav-cta {
+    display: none;
+  }
+  .nav-toggle {
+    display: flex;
+  }
+}
+
+
+/* ══════════════════════════════════════════
+   2. BUTTONS
+   Philosophy: deliberate, not flashy.
+   No rounded corners — architectural precision.
+   ══════════════════════════════════════════ */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  font-family: var(--font-sans);
+  font-size: var(--text-micro);
+  font-weight: var(--weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-badge);
+  text-decoration: none;
+  padding: 16px 36px;
+  border-radius: var(--border-radius);
+  border: 1px solid transparent;
+  cursor: pointer;
+  white-space: nowrap;
+  position: relative;
+  overflow: hidden;
+  /* Transition in motion.css via global a/button rule */
+}
+
+/* Primary — solid fill */
+.btn--primary {
+  background-color: var(--color-text-primary);
+  color: var(--color-text-inverse);
+  border-color: var(--color-text-primary);
+}
+
+.btn--primary:hover {
+  background-color: var(--color-text-secondary);
+  border-color: var(--color-text-secondary);
+  color: var(--color-text-inverse);
+}
+
+/* Accent — vermillion fill for key CTAs */
+.btn--accent {
+  background-color: var(--color-accent);
+  color: var(--color-text-primary);
+  border-color: var(--color-accent);
+}
+
+.btn--accent:hover {
+  background-color: var(--color-accent-hover);
+  border-color: var(--color-accent-hover);
+}
+
+/* Outline — ghost button for secondary CTAs */
+.btn--outline {
+  background-color: transparent;
+  color: var(--color-text-primary);
+  border-color: var(--color-border-light);
+}
+
+.btn--outline:hover {
+  border-color: var(--color-text-primary);
+  background-color: var(--color-surface-high);
+}
+
+/* Gold outline — for authority CTAs */
+.btn--gold {
+  background-color: transparent;
+  color: var(--color-gold);
+  border-color: var(--color-border-gold);
+}
+
+.btn--gold:hover {
+  background-color: var(--color-gold-subtle);
+  border-color: var(--color-gold);
+}
+
+/* Ghost — minimal, text-like */
+.btn--ghost {
+  background-color: transparent;
+  color: var(--color-text-secondary);
+  border-color: transparent;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.btn--ghost:hover {
+  color: var(--color-text-primary);
+}
+
+/* Size modifiers */
+.btn--sm {
+  padding: 11px 24px;
+  font-size: 10px;
+}
+
+.btn--lg {
+  padding: 20px 48px;
+  font-size: var(--text-caption);
+}
+
+.btn--full {
+  width: 100%;
+}
+
+/* WhatsApp CTA — warm green with icon */
+.btn--whatsapp {
+  background-color: #1a8a3c;
+  color: #ffffff;
+  border-color: #1a8a3c;
+}
+
+.btn--whatsapp:hover {
+  background-color: #147730;
+  border-color: #147730;
+}
+
+/* WhatsApp icon via CSS — applies globally to every .btn--whatsapp */
+.btn--whatsapp::before {
+  content: '';
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+/* ══════════════════════════════════════════
+   16. FLOATING WHATSAPP BUTTON
+   Fixed bottom-right. Always reachable.
+   Critical for Indian hospitality conversion.
+   ══════════════════════════════════════════ */
+
+.wa-float {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: var(--z-overlay);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #1a8a3c;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 14px 20px;
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: var(--weight-semibold);
+  letter-spacing: 0.04em;
+  border-radius: 0;
+  border: none;
+  cursor: pointer;
+  transition:
+    background-color var(--duration-base) var(--ease-out),
+    box-shadow var(--duration-base) var(--ease-out);
+  box-shadow: 0 4px 20px rgba(26, 138, 60, 0.35);
+}
+
+.wa-float:hover {
+  background-color: #147730;
+  box-shadow: 0 6px 28px rgba(26, 138, 60, 0.50);
+  color: #ffffff;
+}
+
+.wa-float__icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.wa-float__label {
+  display: none;
+}
+
+@media (min-width: 600px) {
+  .wa-float__label {
+    display: inline;
+  }
+}
+
+@media (max-width: 480px) {
+  .wa-float {
+    bottom: 20px;
+    right: 20px;
+    padding: 14px;
+  }
+}
+
+
+/* ══════════════════════════════════════════
+   3. BADGE SYSTEM
+   Section identifiers and product labels.
+   Always uppercase. Always restrained.
+   ══════════════════════════════════════════ */
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: var(--font-sans);
+  font-size: var(--text-micro);
+  font-weight: var(--weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-badge);
+  padding: 6px 14px;
+  border: 1px solid var(--color-border);
+  color: var(--color-text-muted);
+  line-height: 1;
+}
+
+/* Gold variant — for authority and featured content */
+.badge--gold {
+  border-color: var(--color-border-gold);
+  color: var(--color-gold);
+  background-color: var(--color-gold-subtle);
+}
+
+/* Accent variant — for active states and CTAs */
+.badge--accent {
+  border-color: rgba(217, 72, 34, 0.25);
+  color: var(--color-accent);
+  background-color: var(--color-accent-subtle);
+}
+
+/* Ghost variant — minimal, inline text */
+.badge--ghost {
+  border-color: transparent;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* Status dot indicator */
+.badge__dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: currentColor;
+  flex-shrink: 0;
+}
+
+
+/* ══════════════════════════════════════════
+   4. EDITORIAL CARDS
+   Flat. Structured. No rounded corners.
+   Surface-level elevation only.
+   ══════════════════════════════════════════ */
+
+.card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  padding: var(--space-7) var(--space-6);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Hover state — gold border, no scale */
+.card:hover {
+  border-color: var(--color-border-gold);
+  background-color: var(--color-surface-mid);
+}
+
+.card__label {
+  font-family: var(--font-sans);
+  font-size: var(--text-micro);
+  font-weight: var(--weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-badge);
+  color: var(--color-accent);
+  margin-bottom: var(--space-4);
+}
+
+.card__title {
+  font-family: var(--font-serif);
+  font-size: clamp(20px, 2.2vw, 26px);
+  font-weight: var(--weight-medium);
+  color: var(--color-text-primary);
+  line-height: 1.25;
+  margin-bottom: var(--space-3);
+}
+
+.card__body {
+  font-size: var(--text-body);
+  color: var(--color-text-secondary);
+  line-height: var(--lh-body);
+  flex: 1;
+}
+
+.card__footer {
+  margin-top: var(--space-5);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--color-border);
+}
+
+/* Compact card variant */
+.card--compact {
+  padding: var(--space-5) var(--space-5);
+}
+
+/* Feature card — centered content */
+.card--feature {
+  align-items: center;
+  text-align: center;
+  padding: var(--space-8) var(--space-6);
+}
+
+/* Number callout on cards */
+.card__number {
+  font-family: var(--font-serif);
+  font-size: clamp(36px, 4vw, 56px);
+  font-weight: var(--weight-medium);
+  color: var(--color-gold);
+  line-height: 1;
+  margin-bottom: var(--space-4);
+  letter-spacing: -0.02em;
+}
+
+@media (max-width: 900px) {
+  .card {
+    padding: var(--space-6) var(--space-5);
+  }
+}
+
+
+/* ══════════════════════════════════════════
+   5. QUOTE BLOCKS
+   Editorial pullquotes and testimonials.
+   Serif, italic, gold left border.
+   ══════════════════════════════════════════ */
+
+.quote-block {
+  position: relative;
+  padding: var(--space-6) var(--space-6) var(--space-6) var(--space-7);
+  border-left: 2px solid var(--color-gold);
+  background-color: var(--color-surface);
+}
+
+.quote-block__text {
+  font-family: var(--font-serif);
+  font-size: clamp(18px, 2vw, 24px);
+  font-style: italic;
+  font-weight: var(--weight-regular);
+  line-height: 1.6;
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-5);
+}
+
+.quote-block__attribution {
+  font-family: var(--font-sans);
+  font-size: var(--text-caption);
+  font-weight: var(--weight-medium);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-label);
+  color: var(--color-text-muted);
+}
+
+.quote-block__venue {
+  color: var(--color-gold);
+  margin-top: var(--space-1);
+  display: block;
+}
+
+/* Minimal pullquote — text only, no background */
+.quote-inline {
+  border-left: 2px solid var(--color-gold);
+  padding-left: var(--space-5);
+  margin: var(--space-6) 0;
+}
+
+.quote-inline p {
+  font-family: var(--font-serif);
+  font-size: clamp(18px, 2vw, 22px);
+  font-style: italic;
+  color: var(--color-text-primary);
+  margin-bottom: 0;
+}
+
+
+/* ══════════════════════════════════════════
+   6. STAT STRIP
+   Three-column proof blocks.
+   Large numerals. Precise copy beneath.
+   ══════════════════════════════════════════ */
+
+.stat-strip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.stat-strip__item {
+  padding: var(--space-7) var(--space-6);
+  border-right: 1px solid var(--color-border);
+  position: relative;
+}
+
+.stat-strip__item:last-child {
+  border-right: none;
+}
+
+.stat-strip__number {
+  font-family: var(--font-serif);
+  font-size: clamp(36px, 4.5vw, 60px);
+  font-weight: var(--weight-medium);
+  color: var(--color-text-primary);
+  line-height: 1;
+  letter-spacing: -0.025em;
+  margin-bottom: var(--space-3);
+}
+
+.stat-strip__number--gold {
+  color: var(--color-gold);
+}
+
+.stat-strip__label {
+  font-family: var(--font-sans);
+  font-size: var(--text-body);
+  font-weight: var(--weight-light);
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+  max-width: 240px;
+}
+
+@media (max-width: 900px) {
+  .stat-strip {
+    grid-template-columns: 1fr;
+  }
+  .stat-strip__item {
+    border-right: none;
+    border-bottom: 1px solid var(--color-border);
+    padding: var(--space-6) var(--space-4);
+  }
+  .stat-strip__item:last-child {
+    border-bottom: none;
+  }
+}
+
+
+/* ══════════════════════════════════════════
+   7. ECOSYSTEM ROW
+   Product listing component.
+   Horizontal layout with label + description.
+   ══════════════════════════════════════════ */
+
+.eco-list {
+  border-top: 1px solid var(--color-border);
+}
+
+.eco-row {
+  display: grid;
+  grid-template-columns: 280px 1fr auto;
+  gap: var(--space-7);
+  padding: var(--space-7) 0;
+  border-bottom: 1px solid var(--color-border);
+  align-items: start;
+  text-decoration: none;
+  cursor: default;
+}
+
+.eco-row--link {
+  cursor: pointer;
+}
+
+.eco-row__label {
+  font-family: var(--font-sans);
+  font-size: var(--text-micro);
+  font-weight: var(--weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-badge);
+  color: var(--color-accent);
+  margin-bottom: var(--space-2);
+  display: block;
+}
+
+.eco-row__label--future {
+  color: var(--color-text-muted);
+}
+
+.eco-row__title {
+  font-family: var(--font-serif);
+  font-size: clamp(24px, 2.5vw, 34px);
+  font-weight: var(--weight-medium);
+  color: var(--color-text-primary);
+  line-height: 1.15;
+  transition: color var(--duration-base) var(--ease-out);
+}
+
+.eco-row--link:hover .eco-row__title {
+  color: var(--color-gold);
+}
+
+.eco-row__body {
+  font-size: var(--text-body);
+  color: var(--color-text-secondary);
+  line-height: var(--lh-body);
+  padding-top: 6px;
+}
+
+.eco-row__status {
+  display: flex;
+  align-items: flex-start;
+  padding-top: 8px;
+}
+
+@media (max-width: 900px) {
+  .eco-row {
+    grid-template-columns: 1fr;
+    gap: var(--space-3);
+    padding: var(--space-6) 0;
+  }
+  .eco-row__status {
+    padding-top: 0;
+  }
+}
+
+
+/* ══════════════════════════════════════════
+   8. CTA SECTION BLOCK
+   Full-width conversion moment.
+   Single focus. No decoration.
+   ══════════════════════════════════════════ */
+
+.cta-block {
+  padding: var(--space-11) 0;
+  background-color: var(--color-bg-deep);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  text-align: center;
+}
+
+.cta-block--surface {
+  background-color: var(--color-surface);
+}
+
+.cta-block__label {
+  font-family: var(--font-sans);
+  font-size: var(--text-micro);
+  font-weight: var(--weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-badge);
+  color: var(--color-gold);
+  margin-bottom: var(--space-4);
+}
+
+.cta-block__title {
+  font-family: var(--font-serif);
+  font-size: clamp(28px, 3.5vw, 48px);
+  font-weight: var(--weight-medium);
+  color: var(--color-text-primary);
+  line-height: 1.2;
+  max-width: 700px;
+  margin: 0 auto var(--space-4);
+}
+
+.cta-block__body {
+  font-size: var(--text-body);
+  color: var(--color-text-secondary);
+  max-width: 520px;
+  margin: 0 auto var(--space-7);
+  line-height: var(--lh-body);
+}
+
+.cta-block__actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-xs);
+  flex-wrap: wrap;
+}
+
+@media (max-width: 600px) {
+  .cta-block__actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .cta-block__actions .btn {
+    justify-content: center;
+  }
+}
+
+
+/* ══════════════════════════════════════════
+   9. IMAGE CONTAINERS
+   Consistent aspect ratio handling.
+   All images use object-fit: cover.
+   ══════════════════════════════════════════ */
+
+.img-container {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--color-surface);
+  display: block;
+}
+
+/* Landscape — venue scale, grand setups */
+.img-container--landscape {
+  aspect-ratio: 16 / 9;
+}
+
+/* Square — social-optimized crops */
+.img-container--square {
+  aspect-ratio: 1 / 1;
+}
+
+/* Portrait — intimacy, detail close-ups */
+.img-container--portrait {
+  aspect-ratio: 3 / 4;
+}
+
+/* Cinematic — ultra-wide hero format */
+.img-container--cinematic {
+  aspect-ratio: 21 / 9;
+}
+
+/* Full-height — for split-layout visuals */
+.img-container--full-height {
+  height: 100%;
+  min-height: 480px;
+}
+
+.img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* Editorial caption beneath image */
+.img-caption {
+  font-family: var(--font-sans);
+  font-size: var(--text-caption);
+  color: var(--color-text-muted);
+  margin-top: var(--space-2);
+  line-height: 1.4;
+}
+
+
+/* ══════════════════════════════════════════
+   10. EDITORIAL TABLE
+   For case studies and before/after data.
+   Clean. No visual clutter. Data-first.
+   ══════════════════════════════════════════ */
+
+.table-editorial {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table-editorial th {
+  font-family: var(--font-sans);
+  font-size: var(--text-micro);
+  font-weight: var(--weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-badge);
+  color: var(--color-text-muted);
+  padding: var(--space-3) var(--space-4);
+  text-align: left;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.table-editorial td {
+  font-family: var(--font-sans);
+  font-size: var(--text-body);
+  color: var(--color-text-secondary);
+  padding: var(--space-4) var(--space-4);
+  border-bottom: 1px solid var(--color-border);
+  line-height: var(--lh-body);
+}
+
+.table-editorial td:first-child {
+  color: var(--color-text-primary);
+  font-weight: var(--weight-regular);
+}
+
+.table-editorial tr:last-child td {
+  border-bottom: none;
+}
+
+/* Status chips within tables */
+.status-chip {
+  display: inline-block;
+  padding: 3px 10px;
+  font-family: var(--font-sans);
+  font-size: 10px;
+  font-weight: var(--weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.status-chip--before {
+  color: var(--color-text-muted);
+  background-color: var(--color-surface-mid);
+  border: 1px solid var(--color-border);
+}
+
+.status-chip--after {
+  color: var(--color-accent);
+  background-color: var(--color-accent-subtle);
+  border: 1px solid rgba(217, 72, 34, 0.2);
+}
+
+.status-chip--future {
+  color: var(--color-gold);
+  background-color: var(--color-gold-subtle);
+  border: 1px solid var(--color-gold-border);
+}
+
+
+/* ══════════════════════════════════════════
+   11. FORM INPUTS
+   Minimal, dark, underline-focused.
+   ══════════════════════════════════════════ */
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.form-label {
+  font-family: var(--font-sans);
+  font-size: var(--text-micro);
+  font-weight: var(--weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-badge);
+  color: var(--color-text-muted);
+}
+
+.form-input {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid var(--color-border-light);
+  padding: var(--space-3) 0;
+  color: var(--color-text-primary);
+  font-family: var(--font-sans);
+  font-size: var(--text-body);
+  font-weight: var(--weight-light);
+  outline: none;
+  transition:
+    border-color var(--duration-base) var(--ease-out);
+}
+
+.form-input::placeholder {
+  color: var(--color-text-muted);
+}
+
+.form-input:focus {
+  border-bottom-color: var(--color-gold);
+}
+
+/* Contained input variant */
+.form-input--contained {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  padding: var(--space-3) var(--space-4);
+}
+
+.form-input--contained:focus {
+  border-color: var(--color-gold);
+  background-color: var(--color-surface-mid);
+}
+
+
+/* ══════════════════════════════════════════
+   12. LOCALITY TAG STRIP
+   Horizontal scroll of geographic anchors.
+   Proves local market knowledge.
+   ══════════════════════════════════════════ */
+
+.locality-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  align-items: center;
+}
+
+.locality-tag {
+  font-family: var(--font-sans);
+  font-size: var(--text-micro);
+  font-weight: var(--weight-regular);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-label);
+  color: var(--color-text-muted);
+  padding: 4px 0;
+  position: relative;
+  cursor: default;
+}
+
+.locality-tag::after {
+  content: '·';
+  margin-left: var(--space-2);
+  opacity: 0.4;
+}
+
+.locality-tag:last-child::after {
+  display: none;
+}
+
+
+/* ══════════════════════════════════════════
+   13. SECTION HEADER BLOCK
+   Reusable header for every content section.
+   Label → Title → Body → optional CTA.
+   ══════════════════════════════════════════ */
+
+.section-header {
+  max-width: var(--container-editorial);
+}
+
+.section-header--center {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-header__label {
+  font-family: var(--font-sans);
+  font-size: var(--text-micro);
+  font-weight: var(--weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-badge);
+  color: var(--color-gold);
+  margin-bottom: var(--space-4);
+  display: block;
+}
+
+.section-header__title {
+  font-family: var(--font-serif);
+  font-size: var(--text-h2);
+  font-weight: var(--weight-medium);
+  color: var(--color-text-primary);
+  line-height: 1.2;
+  letter-spacing: var(--ls-heading);
+  margin-bottom: var(--space-4);
+}
+
+.section-header__body {
+  font-size: var(--text-lead);
+  color: var(--color-text-secondary);
+  line-height: var(--lh-lead);
+  max-width: 640px;
+}
+
+.section-header--center .section-header__body {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* ══════════════════════════════════════════
+   14. GLOBAL FOOTER
+   ══════════════════════════════════════════ */
+
+.site-footer {
+  background-color: var(--color-bg);
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  padding: 0 !important;
+  color: var(--color-text-secondary);
+}
+
+.site-footer .container,
+.site-footer > .container {
+  padding-inline: clamp(28px, 6vw, 80px) !important;
+  padding-block: 48px !important;
+  max-width: none;
+}
+
+.site-footer .footer-grid,
+.site-footer .footer-bottom {
+  display: none !important;
+}
+
+.site-footer .footer-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px 40px;
+  font-family: var(--font-sans);
+  font-size: 14px;
+  letter-spacing: 0.02em;
+  color: var(--color-text-secondary);
+}
+
+.site-footer .footer-bar__brand {
+  display: flex;
+  align-items: center;
+}
+
+.footer-logo__img {
+  height: 32px;
+  width: auto;
+  display: block;
+  opacity: 0.85;
+  transition: opacity var(--duration-base) var(--ease-out);
+}
+
+.footer-logo__img:hover {
+  opacity: 1;
+}
+
+.site-footer .footer-bar__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.site-footer .footer-bar__links a {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  transition: color var(--duration-base) var(--ease-out);
+}
+
+.site-footer .footer-bar__links a:hover {
+  color: var(--color-text-primary);
+}
+
+.site-footer .footer-bar__meta {
+  color: var(--color-text-muted);
+  font-size: 13px;
+  letter-spacing: 0.04em;
+}
+
+@media (max-width: 600px) {
+  .site-footer .footer-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  .site-footer .footer-bar__links {
+    gap: 12px 20px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--gap-lg);
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: var(--gap-md);
+  }
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+
+/* ══════════════════════════════════════════
+   15. AUDIT PROGRESS / DIAGNOSTIC UI
+   ══════════════════════════════════════════ */
+
+.audit-progress {
+  border: 1px solid var(--color-border);
+  background-color: var(--color-surface);
+  padding: var(--space-5);
+}
+
+.audit-progress__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-3) 0;
+  border-bottom: 1px solid var(--color-border);
+  gap: var(--space-4);
+}
+
+.audit-progress__item:last-child {
+  border-bottom: none;
+}
+
+.audit-progress__label {
+  font-family: var(--font-sans);
+  font-size: var(--text-small);
+  color: var(--color-text-secondary);
+  flex: 1;
+}
+
+.audit-progress__bar {
+  width: 120px;
+  height: 2px;
+  background-color: var(--color-border-light);
+  position: relative;
+  flex-shrink: 0;
+}
+
+.audit-progress__fill {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  background-color: var(--color-gold);
+  transition: width 1.4s var(--ease-out);
+}
+
+.audit-progress__score {
+  font-family: var(--font-sans);
+  font-size: var(--text-small);
+  font-weight: var(--weight-semibold);
+  color: var(--color-text-primary);
+  width: 48px;
+  text-align: right;
+  flex-shrink: 0;
+}
+
+/* ══════════════════════════════════════════
+   17. COMPARATIVE DATA VISUALIZATIONS
+   Designed specifically for banquet performance.
+   Clean, premium, and interactive CSS/SVG elements.
+   ══════════════════════════════════════════ */
+
+.growth-chart {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  padding: var(--space-6);
+  margin-bottom: var(--space-6);
+}
+
+.growth-chart__item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding-bottom: var(--space-4);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.growth-chart__item:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.growth-chart__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.growth-chart__title {
+  font-family: var(--font-serif);
+  font-size: var(--text-h4);
+  font-weight: var(--weight-medium);
+  color: var(--color-text-primary);
+}
+
+.growth-chart__multiplier {
+  font-family: var(--font-sans);
+  font-size: var(--text-micro);
+  font-weight: var(--weight-bold);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-badge);
+  color: var(--color-accent);
+  background-color: var(--color-accent-subtle);
+  padding: 4px 10px;
+  border: 1px solid rgba(217, 72, 34, 0.2);
+}
+
+.growth-chart__comparison {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.growth-chart__row {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.growth-chart__label {
+  font-family: var(--font-sans);
+  font-size: var(--text-caption);
+  color: var(--color-text-muted);
+}
+
+.growth-chart__bar-container {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  width: 100%;
+}
+
+.growth-chart__bar {
+  height: 24px;
+  background-color: var(--color-surface-mid);
+  width: 0;
+  animation: growBar 1.6s var(--ease-out) forwards;
+  position: relative;
+  overflow: hidden;
+  transition: transform var(--duration-fast) var(--ease-out), filter var(--duration-fast) var(--ease-out);
+}
+
+.growth-chart__bar--before {
+  background-color: var(--color-surface-high);
+  border: 1px solid var(--color-border);
+}
+
+.growth-chart__bar--after {
+  background: linear-gradient(90deg, var(--color-gold) 0%, var(--color-accent) 100%);
+  border: 1px solid rgba(217, 72, 34, 0.3);
+}
+
+.growth-chart__bar:hover {
+  transform: scaleY(1.08);
+  filter: brightness(1.1);
+}
+
+.growth-chart__value {
+  font-family: var(--font-sans);
+  font-size: var(--text-caption);
+  font-weight: var(--weight-regular);
+  color: var(--color-text-secondary);
+}
+
+.growth-chart__value--after {
+  font-weight: var(--weight-semibold);
+  color: var(--color-accent);
+}
+
+@keyframes growBar {
+  to {
+    width: var(--val);
+  }
+}
+
+/* Sparkline styles */
+.sparkline-container {
+  margin-top: var(--space-4);
+  height: 50px;
+  position: relative;
+}
+
+.sparkline__line {
+  stroke-dasharray: 600;
+  stroke-dashoffset: 600;
+  animation: drawSparkline 2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.sparkline__area {
+  opacity: 0;
+  animation: fadeArea 1s ease-in 1.5s forwards;
+}
+
+.sparkline__dot, .sparkline__dot-glow {
+  opacity: 0;
+  animation: pulseDot 1s ease-out 2s forwards;
+}
+
+@keyframes drawSparkline {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes fadeArea {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes pulseDot {
+  0% { transform: scale(0.8); opacity: 0; }
+  50% { opacity: 0.8; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* Radial progress styles */
+.radial-progress-container {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-top: var(--space-4);
+}
+
+.radial-progress svg {
+  transform: rotate(-90deg);
+}
+
+.radial-progress__fill {
+  stroke-dasharray: 100, 100;
+  stroke-dashoffset: 100;
+  animation: drawRadial 1.8s var(--ease-out) forwards;
+}
+
+@keyframes drawRadial {
+  to {
+    stroke-dashoffset: var(--dashoffset, 58);
+  }
+}
+
+@media (max-width: 600px) {
+  .growth-chart__row {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+  .growth-chart__bar-container {
+    width: 100%;
+  }
+  .growth-chart__bar {
+    height: 20px;
+  }
+}

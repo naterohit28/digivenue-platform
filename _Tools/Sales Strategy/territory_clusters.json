@@ -1,0 +1,466 @@
+[
+  {
+    "suburb": "Thane West",
+    "venue_count": 9,
+    "avg_dmi": 33.6,
+    "invisible_count": 3,
+    "weak_count": 6,
+    "active_count": 0
+  },
+  {
+    "suburb": "Dadar",
+    "venue_count": 7,
+    "avg_dmi": 30.0,
+    "invisible_count": 3,
+    "weak_count": 4,
+    "active_count": 0
+  },
+  {
+    "suburb": "Vashi",
+    "venue_count": 5,
+    "avg_dmi": 38.8,
+    "invisible_count": 1,
+    "weak_count": 4,
+    "active_count": 0
+  },
+  {
+    "suburb": "Malad West",
+    "venue_count": 4,
+    "avg_dmi": 28.5,
+    "invisible_count": 2,
+    "weak_count": 2,
+    "active_count": 0
+  },
+  {
+    "suburb": "Andheri East",
+    "venue_count": 4,
+    "avg_dmi": 37.8,
+    "invisible_count": 1,
+    "weak_count": 3,
+    "active_count": 0
+  },
+  {
+    "suburb": "Kalyan",
+    "venue_count": 4,
+    "avg_dmi": 36.2,
+    "invisible_count": 1,
+    "weak_count": 3,
+    "active_count": 0
+  },
+  {
+    "suburb": "Chembur",
+    "venue_count": 3,
+    "avg_dmi": 19.7,
+    "invisible_count": 2,
+    "weak_count": 1,
+    "active_count": 0
+  },
+  {
+    "suburb": "Sanpada",
+    "venue_count": 3,
+    "avg_dmi": 46.3,
+    "invisible_count": 0,
+    "weak_count": 3,
+    "active_count": 0
+  },
+  {
+    "suburb": "Kharghar",
+    "venue_count": 3,
+    "avg_dmi": 35.3,
+    "invisible_count": 1,
+    "weak_count": 2,
+    "active_count": 0
+  },
+  {
+    "suburb": "Erandwane",
+    "venue_count": 3,
+    "avg_dmi": 45.7,
+    "invisible_count": 0,
+    "weak_count": 3,
+    "active_count": 0
+  },
+  {
+    "suburb": "Shivaji Park",
+    "venue_count": 2,
+    "avg_dmi": 28.5,
+    "invisible_count": 1,
+    "weak_count": 1,
+    "active_count": 0
+  },
+  {
+    "suburb": "Worli",
+    "venue_count": 2,
+    "avg_dmi": 43.0,
+    "invisible_count": 0,
+    "weak_count": 2,
+    "active_count": 0
+  },
+  {
+    "suburb": "Colaba",
+    "venue_count": 2,
+    "avg_dmi": 45.0,
+    "invisible_count": 0,
+    "weak_count": 2,
+    "active_count": 0
+  },
+  {
+    "suburb": "Marine Drive",
+    "venue_count": 2,
+    "avg_dmi": 47.0,
+    "invisible_count": 0,
+    "weak_count": 2,
+    "active_count": 0
+  },
+  {
+    "suburb": "Mira Road",
+    "venue_count": 2,
+    "avg_dmi": 25.5,
+    "invisible_count": 1,
+    "weak_count": 1,
+    "active_count": 0
+  },
+  {
+    "suburb": "Bhandup",
+    "venue_count": 2,
+    "avg_dmi": 47.0,
+    "invisible_count": 0,
+    "weak_count": 2,
+    "active_count": 0
+  },
+  {
+    "suburb": "Dombivli",
+    "venue_count": 2,
+    "avg_dmi": 45.0,
+    "invisible_count": 0,
+    "weak_count": 2,
+    "active_count": 0
+  },
+  {
+    "suburb": "Kopar Khairane",
+    "venue_count": 2,
+    "avg_dmi": 27.5,
+    "invisible_count": 1,
+    "weak_count": 1,
+    "active_count": 0
+  },
+  {
+    "suburb": "Belapur",
+    "venue_count": 2,
+    "avg_dmi": 45.0,
+    "invisible_count": 0,
+    "weak_count": 2,
+    "active_count": 0
+  },
+  {
+    "suburb": "Nerul",
+    "venue_count": 2,
+    "avg_dmi": 27.5,
+    "invisible_count": 1,
+    "weak_count": 1,
+    "active_count": 0
+  },
+  {
+    "suburb": "Baner",
+    "venue_count": 2,
+    "avg_dmi": 49.0,
+    "invisible_count": 0,
+    "weak_count": 2,
+    "active_count": 0
+  },
+  {
+    "suburb": "Kothrud",
+    "venue_count": 2,
+    "avg_dmi": 27.5,
+    "invisible_count": 1,
+    "weak_count": 1,
+    "active_count": 0
+  },
+  {
+    "suburb": "Wakad",
+    "venue_count": 2,
+    "avg_dmi": 25.5,
+    "invisible_count": 1,
+    "weak_count": 1,
+    "active_count": 0
+  },
+  {
+    "suburb": "Mahalaxmi",
+    "venue_count": 1,
+    "avg_dmi": 47.0,
+    "invisible_count": 0,
+    "weak_count": 1,
+    "active_count": 0
+  },
+  {
+    "suburb": "Prabhadevi",
+    "venue_count": 1,
+    "avg_dmi": 8.0,
+    "invisible_count": 1,
+    "weak_count": 0,
+    "active_count": 0
+  },
+  {
+    "suburb": "Byculla",
+    "venue_count": 1,
+    "avg_dmi": 8.0,
+    "invisible_count": 1,
+    "weak_count": 0,
+    "active_count": 0
+  },
+  {
+    "suburb": "Juhu",
+    "venue_count": 1,
+    "avg_dmi": 47.0,
+    "invisible_count": 0,
+    "weak_count": 1,
+    "active_count": 0
+  },
+  {
+    "suburb": "Sakinaka",
+    "venue_count": 1,
+    "avg_dmi": 49.0,
+    "invisible_count": 0,
+    "weak_count": 1,
+    "active_count": 0
+  },
+  {
+    "suburb": "Goregaon",
+    "venue_count": 1,
+    "avg_dmi": 8.0,
+    "invisible_count": 1,
+    "weak_count": 0,
+    "active_count": 0
+  },
+  {
+    "suburb": "Ghatkopar",
+    "venue_count": 1,
+    "avg_dmi": 8.0,
+    "invisible_count": 1,
+    "weak_count": 0,
+    "active_count": 0
+  },
+  {
+    "suburb": "Malad East",
+    "venue_count": 1,
+    "avg_dmi": 43.0,
+    "invisible_count": 0,
+    "weak_count": 1,
+    "active_count": 0
+  },
+  {
+    "suburb": "Borivali",
+    "venue_count": 1,
+    "avg_dmi": 43.0,
+    "invisible_count": 0,
+    "weak_count": 1,
+    "active_count": 0
+  },
+  {
+    "suburb": "Ghatkopar East",
+    "venue_count": 1,
+    "avg_dmi": 47.0,
+    "invisible_count": 0,
+    "weak_count": 1,
+    "active_count": 0
+  },
+  {
+    "suburb": "Mulund West",
+    "venue_count": 1,
+    "avg_dmi": 49.0,
+    "invisible_count": 0,
+    "weak_count": 1,
+    "active_count": 0
+  },
+  {
+    "suburb": "Mulund East",
+    "venue_count": 1,
+    "avg_dmi": 49.0,
+    "invisible_count": 0,
+    "weak_count": 1,
+    "active_count": 0
+  },
+  {
+    "suburb": "Kurla",
+    "venue_count": 1,
+    "avg_dmi": 8.0,
+    "invisible_count": 1,
+    "weak_count": 0,
+    "active_count": 0
+  },
+  {
+    "suburb": "Kanjurmarg",
+    "venue_count": 1,
+    "avg_dmi": 43.0,
+    "invisible_count": 0,
+    "weak_count": 1,
+    "active_count": 0
+  },
+  {
+    "suburb": "Andheri West",
+    "venue_count": 1,
+    "avg_dmi": 43.0,
+    "invisible_count": 0,
+    "weak_count": 1,
+    "active_count": 0
+  },
+  {
+    "suburb": "Borivali West",
+    "venue_count": 1,
+    "avg_dmi": 47.0,
+    "invisible_count": 0,
+    "weak_count": 1,
+    "active_count": 0
+  },
+  {
+    "suburb": "Ghodbunder Rd",
+    "venue_count": 1,
+    "avg_dmi": 8.0,
+    "invisible_count": 1,
+    "weak_count": 0,
+    "active_count": 0
+  },
+  {
+    "suburb": "Yeoor Hills",
+    "venue_count": 1,
+    "avg_dmi": 8.0,
+    "invisible_count": 1,
+    "weak_count": 0,
+    "active_count": 0
+  },
+  {
+    "suburb": "Eastern Exp Hwy",
+    "venue_count": 1,
+    "avg_dmi": 47.0,
+    "invisible_count": 0,
+    "weak_count": 1,
+    "active_count": 0
+  },
+  {
+    "suburb": "Thane East",
+    "venue_count": 1,
+    "avg_dmi": 49.0,
+    "invisible_count": 0,
+    "weak_count": 1,
+    "active_count": 0
+  },
+  {
+    "suburb": "Bhiwandi Road",
+    "venue_count": 1,
+    "avg_dmi": 49.0,
+    "invisible_count": 0,
+    "weak_count": 1,
+    "active_count": 0
+  },
+  {
+    "suburb": "Panvel",
+    "venue_count": 1,
+    "avg_dmi": 43.0,
+    "invisible_count": 0,
+    "weak_count": 1,
+    "active_count": 0
+  },
+  {
+    "suburb": "Kamothe",
+    "venue_count": 1,
+    "avg_dmi": 8.0,
+    "invisible_count": 1,
+    "weak_count": 0,
+    "active_count": 0
+  },
+  {
+    "suburb": "New Panvel",
+    "venue_count": 1,
+    "avg_dmi": 8.0,
+    "invisible_count": 1,
+    "weak_count": 0,
+    "active_count": 0
+  },
+  {
+    "suburb": "Hinjewadi",
+    "venue_count": 1,
+    "avg_dmi": 47.0,
+    "invisible_count": 0,
+    "weak_count": 1,
+    "active_count": 0
+  },
+  {
+    "suburb": "Boat Club Rd",
+    "venue_count": 1,
+    "avg_dmi": 49.0,
+    "invisible_count": 0,
+    "weak_count": 1,
+    "active_count": 0
+  },
+  {
+    "suburb": "Karve Nagar",
+    "venue_count": 1,
+    "avg_dmi": 8.0,
+    "invisible_count": 1,
+    "weak_count": 0,
+    "active_count": 0
+  },
+  {
+    "suburb": "Hadapsar",
+    "venue_count": 1,
+    "avg_dmi": 8.0,
+    "invisible_count": 1,
+    "weak_count": 0,
+    "active_count": 0
+  },
+  {
+    "suburb": "Bibwewadi",
+    "venue_count": 1,
+    "avg_dmi": 43.0,
+    "invisible_count": 0,
+    "weak_count": 1,
+    "active_count": 0
+  },
+  {
+    "suburb": "Koregaon Park",
+    "venue_count": 1,
+    "avg_dmi": 43.0,
+    "invisible_count": 0,
+    "weak_count": 1,
+    "active_count": 0
+  },
+  {
+    "suburb": "Pimple Saudagar",
+    "venue_count": 1,
+    "avg_dmi": 47.0,
+    "invisible_count": 0,
+    "weak_count": 1,
+    "active_count": 0
+  },
+  {
+    "suburb": "Magarpatta",
+    "venue_count": 1,
+    "avg_dmi": 49.0,
+    "invisible_count": 0,
+    "weak_count": 1,
+    "active_count": 0
+  },
+  {
+    "suburb": "DP Road",
+    "venue_count": 1,
+    "avg_dmi": 8.0,
+    "invisible_count": 1,
+    "weak_count": 0,
+    "active_count": 0
+  },
+  {
+    "suburb": "Gangadham",
+    "venue_count": 1,
+    "avg_dmi": 8.0,
+    "invisible_count": 1,
+    "weak_count": 0,
+    "active_count": 0
+  },
+  {
+    "suburb": "Camp",
+    "venue_count": 1,
+    "avg_dmi": 47.0,
+    "invisible_count": 0,
+    "weak_count": 1,
+    "active_count": 0
+  }
+]

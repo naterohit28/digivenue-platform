@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>DigiVenue — Venue Growth Diagnostic</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --color-bg:#FAF7F2; --color-bg-deep:#F5EFE6; --color-surface:#F3EEE5; --color-surface-mid:#EBE4D8; --color-surface-high:#E2D9C9;
+    --color-border:#E5DFD3; --color-border-light:#D5CEBF; --color-border-gold:rgba(197,160,89,0.3);
+    --color-text-primary:#1F1D1C; --color-text-secondary:#4A4644; --color-text-muted:#6F6864; --color-text-inverse:#FAF7F2;
+    --color-accent:#D94822; --color-accent-hover:#B83615; --color-accent-subtle:rgba(217,72,34,0.08);
+    --color-gold:#C5A059; --color-gold-hover:#D4B06A; --color-gold-subtle:rgba(197,160,89,0.06);
+    --color-green:#16a34a; --color-green-subtle:rgba(22,163,74,0.08); --color-amber:#d97706; --color-amber-subtle:rgba(217,119,6,0.10);
+    --color-yellow:#ca8a04; --color-red:#dc2626; --color-red-subtle:rgba(220,38,38,0.08); --color-purple:#7c3aed;
+    --font-serif:'Playfair Display',Georgia,serif; --font-sans:'Inter',system-ui,sans-serif; --font-mono:'DM Mono',monospace;
+    --ease-out:cubic-bezier(0.16,1,0.3,1);
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:var(--font-sans);background:var(--color-bg);color:var(--color-text-secondary);line-height:1.6;-webkit-font-smoothing:antialiased;}
+  .text-display{font-family:var(--font-serif);font-size:clamp(32px,5vw,52px);font-weight:500;color:var(--color-text-primary);line-height:1.1;letter-spacing:-0.02em;}
+  .text-display em{font-style:italic;font-weight:400;color:var(--color-accent);}
+  .text-h2{font-family:var(--font-serif);font-size:clamp(20px,3vw,28px);font-weight:500;color:var(--color-text-primary);line-height:1.25;margin-bottom:16px;}
+  .text-h3{font-family:var(--font-serif);font-size:19px;font-weight:500;color:var(--color-text-primary);}
+  .text-lead{font-size:16px;font-weight:300;color:var(--color-text-secondary);line-height:1.6;margin-bottom:24px;}
+  .text-body{font-size:14px;color:var(--color-text-secondary);}
+  .text-label{font-family:var(--font-sans);font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:var(--color-text-muted);}
+  .text-label.accent{color:var(--color-accent);}
+  .pillar-badge{display:inline-flex;align-items:center;gap:8px;background:var(--color-bg-deep);border:1px solid var(--color-border);padding:6px 12px;border-radius:99px;font-family:var(--font-mono);font-size:11px;color:var(--color-text-muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:16px;}
+  .pillar-badge .dot{width:6px;height:6px;border-radius:50%;background:var(--color-accent);}
+  .pillar-badge.internal{border-color:var(--color-purple);color:var(--color-purple);} .pillar-badge.internal .dot{background:var(--color-purple);}
+
+  .topbar{position:sticky;top:0;z-index:100;background:rgba(250,247,242,0.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--color-border);padding:14px 24px;display:flex;justify-content:space-between;align-items:center;gap:12px;}
+  .brand{font-family:var(--font-serif);font-size:18px;font-weight:600;color:var(--color-text-primary);display:flex;align-items:center;gap:10px;}
+  .brand-badge{background:var(--color-bg-deep);border:1px solid var(--color-border);padding:3px 8px;font-size:9px;text-transform:uppercase;letter-spacing:0.1em;color:var(--color-text-muted);}
+  .nav{position:sticky;top:57px;z-index:90;background:var(--color-bg);border-bottom:1px solid var(--color-border);overflow-x:auto;scrollbar-width:none;}
+  .nav::-webkit-scrollbar{display:none;}
+  .nav-inner{display:flex;padding:10px 24px;gap:22px;min-width:max-content;}
+  .nav-item{font-size:12px;font-weight:500;color:var(--color-text-muted);cursor:pointer;transition:color 0.3s;display:flex;align-items:center;gap:6px;white-space:nowrap;}
+  .nav-item:hover{color:var(--color-text-primary);} .nav-item.active{color:var(--color-accent);}
+  .nav-item.internal-step.active{color:var(--color-purple);}
+  .nav-num{font-size:10px;opacity:0.6;}
+
+  .main{max-width:920px;margin:0 auto;padding:36px 24px 120px;}
+  .stage{display:none;animation:fadeIn 0.4s var(--ease-out);}
+  .stage.active{display:block;}
+  @keyframes fadeIn{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:translateY(0);}}
+
+  .card{background:var(--color-surface);border:1px solid var(--color-border);padding:28px;margin-bottom:18px;}
+  .card.gold{background:linear-gradient(145deg,var(--color-surface),var(--color-gold-subtle));border-color:var(--color-border-gold);}
+  .card.internal{background:#faf7fb;border:1px dashed #b9a4d6;}
+  .card.compact{padding:18px;}
+  .field{margin-bottom:18px;} .field label{display:block;margin-bottom:6px;}
+  .input{width:100%;background:var(--color-bg);border:1px solid var(--color-border-light);padding:13px;font-family:var(--font-sans);font-size:15px;color:var(--color-text-primary);outline:none;transition:all 0.3s;}
+  .input:focus{border-color:var(--color-text-primary);background:#fff;}
+  select.input{appearance:none;cursor:pointer;}
+  .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+  .btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 26px;background:var(--color-text-primary);color:var(--color-text-inverse);font-size:13px;font-weight:500;text-transform:uppercase;letter-spacing:0.08em;border:none;cursor:pointer;transition:background 0.3s;}
+  .btn:hover{background:var(--color-accent);}
+  .btn.outline{background:transparent;border:1px solid var(--color-text-primary);color:var(--color-text-primary);}
+
+  .convo{background:var(--color-gold-subtle);border:1px solid var(--color-border-gold);padding:16px 20px;margin-bottom:22px;}
+  .convo ul{list-style:none;} .convo li{font-family:var(--font-serif);font-style:italic;font-size:15px;color:var(--color-text-primary);padding:5px 0 5px 18px;position:relative;}
+  .convo li::before{content:'\201C';position:absolute;left:0;color:var(--color-gold);font-size:18px;}
+
+  .q-label{font-size:14px;font-weight:600;color:var(--color-text-primary);margin:18px 0 10px;}
+  .choice-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:9px;margin-bottom:8px;}
+  .choice{border:1px solid var(--color-border-light);background:var(--color-bg);padding:11px 13px;cursor:pointer;font-size:13px;color:var(--color-text-secondary);transition:all 0.18s;display:flex;align-items:center;gap:10px;}
+  .choice:hover{border-color:var(--color-text-muted);}
+  .choice.active{border-color:var(--color-accent);background:var(--color-accent-subtle);color:var(--color-text-primary);font-weight:500;}
+  .choice .mark{width:16px;height:16px;border:1px solid var(--color-border-light);flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:11px;}
+  .choice.radio .mark{border-radius:50%;}
+  .choice.active .mark{background:var(--color-accent);border-color:var(--color-accent);color:#fff;}
+  .choice.active .mark::after{content:'\2713';}
+  .subhead{font-size:13px;font-weight:600;color:var(--color-accent);text-transform:uppercase;letter-spacing:0.05em;margin:20px 0 8px;}
+
+  .livescore{display:flex;align-items:center;justify-content:space-between;gap:16px;background:var(--color-bg-deep);border:1px solid var(--color-border);padding:16px 22px;margin:18px 0;}
+  .ls-num{font-family:var(--font-serif);font-size:38px;line-height:1;color:var(--color-text-primary);}
+  .ls-band{font-family:var(--font-mono);font-size:12px;text-transform:uppercase;letter-spacing:0.06em;padding:4px 10px;border-radius:4px;color:#fff;display:inline-block;margin-top:6px;}
+
+  .score-row{margin-bottom:14px;}
+  .score-row-top{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:5px;}
+  .score-row-name{font-size:14px;font-weight:500;color:var(--color-text-primary);}
+  .score-row-val{font-family:var(--font-mono);font-size:13px;}
+  .score-track{height:8px;background:var(--color-surface-high);border-radius:99px;overflow:hidden;}
+  .score-fill{height:100%;border-radius:99px;transition:width 0.5s var(--ease-out);}
+
+  .rev-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin-top:14px;}
+  .rev-cell{text-align:center;padding:16px;background:var(--color-bg);border:1px solid var(--color-border);}
+  .rev-cell .v{font-family:var(--font-serif);font-size:22px;color:var(--color-text-primary);}
+
+  .tier-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(225px,1fr));gap:16px;margin-bottom:18px;}
+  .tier{border:1px solid var(--color-border);background:var(--color-surface);padding:22px;cursor:pointer;transition:all 0.2s;position:relative;}
+  .tier.active{border-color:var(--color-accent);box-shadow:0 0 0 1px var(--color-accent);}
+  .tier.popular::after{content:'Most halls start here';position:absolute;top:-10px;left:22px;background:var(--color-gold);color:#fff;font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.06em;padding:3px 8px;}
+  .tier-name{font-family:var(--font-mono);font-size:12px;text-transform:uppercase;letter-spacing:0.08em;color:var(--color-text-muted);}
+  .tier-price{font-family:var(--font-serif);font-size:32px;color:var(--color-text-primary);margin:8px 0;}
+  .tier-price span{font-size:15px;color:var(--color-text-muted);}
+  .tier ul{list-style:none;margin-top:12px;} .tier li{font-size:13px;padding:4px 0 4px 16px;position:relative;color:var(--color-text-secondary);}
+  .tier li::before{content:'\2022';position:absolute;left:2px;color:var(--color-accent);}
+
+  .collapse{border:1px solid var(--color-border);margin-bottom:9px;background:var(--color-bg);}
+  .collapse-head{padding:13px 18px;font-size:14px;font-weight:500;color:var(--color-text-primary);cursor:pointer;display:flex;justify-content:space-between;}
+  .collapse-body{padding:0 18px;max-height:0;overflow:hidden;transition:max-height 0.3s,padding 0.3s;font-size:13px;color:var(--color-text-secondary);}
+  .collapse.open .collapse-body{max-height:240px;padding:0 18px 16px;}
+
+  .disclosure{background:linear-gradient(145deg,var(--color-surface),var(--color-gold-subtle));border:1px solid var(--color-border-gold);padding:22px;margin:20px 0;}
+  .rec-card{border:2px solid var(--color-accent);padding:24px;margin-bottom:18px;background:linear-gradient(135deg,var(--color-surface),var(--color-accent-subtle));}
+  .rec-line{display:flex;justify-content:space-between;padding:7px 0;border-bottom:1px solid var(--color-border);font-size:14px;}
+  .rec-line:last-child{border-bottom:none;}
+
+  .tool-footer{text-align:center;font-size:11px;color:var(--color-text-muted);opacity:0.7;padding:30px 20px 0;}
+  .controls{position:fixed;bottom:0;left:0;right:0;background:var(--color-bg);border-top:1px solid var(--color-border);padding:18px 24px;display:flex;justify-content:space-between;z-index:90;}
+
+  .founder-notes{position:fixed;bottom:0;right:40px;width:340px;background:var(--color-text-primary);color:var(--color-bg);z-index:200;transform:translateY(calc(100% - 46px));transition:transform 0.4s var(--ease-out);}
+  .founder-notes.open{transform:translateY(0);}
+  .fn-header{padding:13px 18px;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;cursor:pointer;display:flex;justify-content:space-between;border-bottom:1px solid #333;}
+  .fn-body{padding:18px;} .fn-textarea{width:100%;height:110px;background:transparent;border:none;color:#fff;font-size:13px;resize:none;outline:none;}
+
+  /* INTERNAL CONSULTANT PANEL — never prints */
+  #intelPanel .internal-warn{background:var(--color-red-subtle);border:1px solid var(--color-red);color:var(--color-red);font-size:11px;padding:8px 12px;margin-bottom:16px;}
+
+  @media print{
+    body{background:#fff;color:#000;}
+    .topbar,.nav,.founder-notes,.controls,.main,#intelPanel{display:none !important;}
+    .print-brief{display:block !important;}
+  }
+  @media (max-width:768px){ .main{padding:28px 16px 120px;} .grid-2{grid-template-columns:1fr;} .founder-notes{width:100%;right:0;} }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="brand">DigiVenue <span class="brand-badge">Venue Growth Diagnostic</span></div>
+</div>
+
+<div class="nav"><div class="nav-inner" id="navBar"></div></div>
+
+<!-- ════ LIVE INTELLIGENCE — INTERNAL CONSULTANT VIEW (visible, never prints) ════ -->
+<div class="main" id="intelPanel" style="padding-top:22px;">
+  <div class="card internal">
+    <div class="pillar-badge internal"><span class="dot"></span> Internal · Consultant View — never shown to customer</div>
+    <div class="internal-warn">Internal use only — do not screen-share during the customer-facing portion of the call.</div>
+
+    <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;margin-bottom:14px;">
+      <h2 class="text-h3">Live Intelligence</h2>
+      <select class="input" id="intel_select" style="max-width:300px;" onchange="loadIntelRow()"><option value="">— Pull venue from pipeline data —</option></select>
+    </div>
+
+    <div class="grid-2">
+      <div class="card compact" style="margin:0;">
+        <div class="text-label">📍 Territory Rank</div>
+        <p class="text-body" style="margin:4px 0;">Rank among similar halls (1 = leader, 10 = invisible)</p>
+        <input class="input" id="il_territory" placeholder="auto / editable">
+      </div>
+      <div class="card compact" style="margin:0;">
+        <div class="text-label">🔇 Digital Silence</div>
+        <p class="text-body" style="margin:4px 0;">Days since last meaningful online activity</p>
+        <input class="input" id="il_silence" placeholder="auto / editable (days)">
+      </div>
+    </div>
+
+    <div class="q-label">📈 Growth Momentum (last 6 months)</div>
+    <div class="choice-grid" data-group="il_momentum">
+      <div class="choice radio" onclick="pickRadio(this)"><span class="mark"></span> Declining</div>
+      <div class="choice radio" onclick="pickRadio(this)"><span class="mark"></span> Flat</div>
+      <div class="choice radio" onclick="pickRadio(this)"><span class="mark"></span> Growing</div>
+      <div class="choice radio" onclick="pickRadio(this)"><span class="mark"></span> Surging</div>
+    </div>
+
+    <div class="grid-2" style="margin-top:14px;">
+      <div class="card compact" style="margin:0;"><div class="text-label">⚙️ SmartOS Opportunity</div><div class="text-h3" id="il_smartos" style="margin-top:6px;color:var(--color-accent);">—</div><div class="text-body">auto from Operational Health</div></div>
+      <div class="card compact" style="margin:0;"><div class="text-label">📸 DigiStories Opportunity</div><div class="text-h3" id="il_digistories" style="margin-top:6px;color:var(--color-accent);">—</div><div class="text-body">auto from Visibility + Trust</div></div>
+    </div>
+
+    <!-- BCA RELATIONSHIP INTELLIGENCE -->
+    <div class="card" style="margin:16px 0 0;background:var(--color-bg);">
+      <div class="text-label accent">🤝 BCA Relationship Intelligence</div>
+      <div class="q-label">Owner &amp; BCA</div>
+      <div class="choice-grid" data-group="bca_member">
+        <div class="choice radio" onclick="pickRadio(this);calcClose();"><span class="mark"></span> Owner is a BCA member</div>
+        <div class="choice radio" onclick="pickRadio(this);calcClose();"><span class="mark"></span> Knows BCA, not a member</div>
+        <div class="choice radio" onclick="pickRadio(this);calcClose();"><span class="mark"></span> Does not know BCA</div>
+        <div class="choice radio" onclick="pickRadio(this);calcClose();"><span class="mark"></span> Unknown — to verify</div>
+      </div>
+      <div class="grid-2" style="margin-top:12px;">
+        <div class="field"><label class="text-label">Caterer</label><input class="input" id="bca_caterer" placeholder="name"></div>
+        <div class="field"><label class="text-label">Decorator</label><input class="input" id="bca_decorator" placeholder="name"></div>
+      </div>
+      <div class="field"><label class="text-label">Planner</label><input class="input" id="bca_planner" placeholder="name"></div>
+      <div class="q-label">BCA introduction lever</div>
+      <div class="choice-grid" data-group="bca_lever">
+        <div class="choice radio" onclick="pickRadio(this);calcClose();"><span class="mark"></span> Cold — no connection</div>
+        <div class="choice radio" onclick="pickRadio(this);calcClose();"><span class="mark"></span> Warm — knows BCA, no intro</div>
+        <div class="choice radio" onclick="pickRadio(this);calcClose();"><span class="mark"></span> Hot — Rohit can introduce</div>
+        <div class="choice radio" onclick="pickRadio(this);calcClose();"><span class="mark"></span> Done — intro already made</div>
+      </div>
+      <div class="q-label">Sensitivity flag</div>
+      <div class="choice-grid" data-group="bca_sensitive" data-multi="1">
+        <div class="choice" onclick="toggleChoice(this);calcClose();"><span class="mark"></span> Bad past experience with BCA</div>
+        <div class="choice" onclick="toggleChoice(this);calcClose();"><span class="mark"></span> Rivalry with another BCA member</div>
+      </div>
+      <p class="text-body" style="margin-top:8px;font-style:italic;">If either is ticked: never mention BCA on this call.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ════ MAIN STAGES ════ -->
+<div class="main" id="stages">
+
+  <!-- STEP 1 — VENUE BASELINE -->
+  <div class="stage active" id="st-0">
+    <div class="text-label accent" style="margin-bottom:14px;">Step 1</div>
+    <h1 class="text-display">The <em>Venue</em></h1>
+    <p class="text-lead">Establish the baseline. Who are we talking to, and what is their current scale?</p>
+    <div class="convo">
+      <div class="text-label accent">Opening the conversation</div>
+      <ul><li>Tell me about your hall. How long has it been running?</li><li>What does a normal Saturday look like for you in this season?</li><li>How do most of your bookings come in — referrals, walk-ins, online?</li></ul>
+    </div>
+    <div class="card">
+      <div class="grid-2">
+        <div class="field"><label class="text-label">Venue Name</label><input class="input" id="v_name" placeholder="e.g. The Grand Palace"></div>
+        <div class="field"><label class="text-label">City / Location</label><input class="input" id="v_loc" placeholder="e.g. Mumbai, Andheri"></div>
+      </div>
+      <div class="grid-2">
+        <div class="field"><label class="text-label">Owner / Contact</label><input class="input" id="v_owner" placeholder="e.g. Rajesh Mehta"></div>
+        <div class="field"><label class="text-label">WhatsApp / Phone</label><input class="input" id="v_phone" placeholder="e.g. 9819576256"></div>
+      </div>
+      <div class="grid-2">
+        <div class="field"><label class="text-label">Venue Type</label>
+          <select class="input" id="v_type">
+            <option value="banquet">Banquet Hall</option><option value="sabhagruh">Community Hall / Sabhagruh</option>
+            <option value="catering">Catering Service</option><option value="decoration">Decoration Service</option>
+            <option value="planner">Event Planner</option><option value="hotel">Hotel Banquet</option>
+            <option value="lawn">Lawn / Outdoor Venue</option><option value="multiple">Multiple of the above</option>
+          </select>
+        </div>
+        <div class="field"><label class="text-label">Current Monthly Inquiries</label>
+          <select class="input" id="v_inq">
+            <option value="Under 20">Under 20 — Hall is mostly hidden online</option>
+            <option value="20-50">20–50 — Steady but inconsistent</option>
+            <option value="50-100">50–100 — Healthy inquiry flow</option>
+            <option value="100+">100+ — Strong demand, capacity-limited</option>
+          </select>
+        </div>
+      </div>
+      <div class="grid-2">
+        <div class="field"><label class="text-label">Min Capacity</label><input type="number" class="input" id="v_cap_min" value="300"></div>
+        <div class="field"><label class="text-label">Max Capacity</label><input type="number" class="input" id="v_cap_max" value="800"></div>
+      </div>
+      <div class="grid-2">
+        <div class="field"><label class="text-label">Catering Rate (from)</label><input class="input" id="v_catering" placeholder="e.g. ₹800/plate"></div>
+        <div class="field"><label class="text-label">Instagram</label><input class="input" id="v_instagram" placeholder="e.g. @grandpalace"></div>
+      </div>
+      <div class="grid-2">
+        <div class="field"><label class="text-label">Website</label><input class="input" id="v_website" placeholder="e.g. grandpalace.com or None"></div>
+        <div class="field"><label class="text-label">Email</label><input class="input" id="v_email" placeholder="e.g. contact@venue.com"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- STEP 2 — VISIBILITY -->
+  <div class="stage" id="st-1">
+    <div class="pillar-badge"><span class="dot"></span> Pillar 1 of 6 · Visibility Health</div>
+    <h1 class="text-display">Can customers <em>find</em> them?</h1>
+    <p class="text-lead">Open their profiles during the call. Tick what they actually have — the score updates live.</p>
+    <div class="livescore"><div><div class="text-label">Visibility Health Score</div><div class="text-body" id="vis_note">Based on the signals below.</div></div><div style="text-align:right;"><span class="ls-num" id="vis_score">0</span><span style="font-size:18px;color:var(--color-text-muted);">/100</span><div class="ls-band" id="vis_band"></div></div></div>
+    <div class="card">
+      <div class="subhead">Google Business Profile</div>
+      <div class="choice-grid vis" data-multi="1">
+        <div class="choice" onclick="toggleChoice(this);calcVisibility();"><span class="mark"></span> Profile claimed &amp; verified</div>
+        <div class="choice" onclick="toggleChoice(this);calcVisibility();"><span class="mark"></span> Photos updated last 30 days</div>
+        <div class="choice" onclick="toggleChoice(this);calcVisibility();"><span class="mark"></span> Capacity &amp; timings accurate</div>
+        <div class="choice" onclick="toggleChoice(this);calcVisibility();"><span class="mark"></span> Direct WhatsApp link</div>
+        <div class="choice" onclick="toggleChoice(this);calcVisibility();"><span class="mark"></span> Q&amp;A actively maintained</div>
+      </div>
+      <div class="subhead">Instagram Presence</div>
+      <div class="choice-grid vis" data-multi="1">
+        <div class="choice" onclick="toggleChoice(this);calcVisibility();"><span class="mark"></span> 3+ posts per week</div>
+        <div class="choice" onclick="toggleChoice(this);calcVisibility();"><span class="mark"></span> Reels published weekly</div>
+        <div class="choice" onclick="toggleChoice(this);calcVisibility();"><span class="mark"></span> Highlights organised</div>
+        <div class="choice" onclick="toggleChoice(this);calcVisibility();"><span class="mark"></span> Wedding content visible</div>
+        <div class="choice" onclick="toggleChoice(this);calcVisibility();"><span class="mark"></span> Real engagement</div>
+        <div class="choice" onclick="toggleChoice(this);calcVisibility();"><span class="mark"></span> Clear CTA in bio</div>
+      </div>
+      <div class="subhead">Website</div>
+      <div class="choice-grid vis" data-multi="1">
+        <div class="choice" onclick="toggleChoice(this);calcVisibility();"><span class="mark"></span> Mobile-responsive</div>
+        <div class="choice" onclick="toggleChoice(this);calcVisibility();"><span class="mark"></span> Loads under 3 seconds</div>
+        <div class="choice" onclick="toggleChoice(this);calcVisibility();"><span class="mark"></span> Gallery shows real events</div>
+        <div class="choice" onclick="toggleChoice(this);calcVisibility();"><span class="mark"></span> Inquiry form works</div>
+        <div class="choice" onclick="toggleChoice(this);calcVisibility();"><span class="mark"></span> WhatsApp CTA prominent</div>
+        <div class="choice" onclick="toggleChoice(this);calcVisibility();"><span class="mark"></span> Trust signals present</div>
+      </div>
+      <div class="subhead">Wedding Portals / Other</div>
+      <div class="choice-grid vis" data-multi="1">
+        <div class="choice" onclick="toggleChoice(this);calcVisibility();"><span class="mark"></span> WedMeGood active</div>
+        <div class="choice" onclick="toggleChoice(this);calcVisibility();"><span class="mark"></span> Weddingz active</div>
+        <div class="choice" onclick="toggleChoice(this);calcVisibility();"><span class="mark"></span> Facebook maintained</div>
+        <div class="choice" onclick="toggleChoice(this);calcVisibility();"><span class="mark"></span> Top-3 Google for "[area] banquet hall"</div>
+      </div>
+    </div>
+    <div class="card compact"><div class="text-label accent">Missing assets</div><div class="text-body" id="vis_missing" style="margin-top:6px;">—</div></div>
+  </div>
+
+  <!-- STEP 3 — TRUST -->
+  <div class="stage" id="st-2">
+    <div class="pillar-badge"><span class="dot"></span> Pillar 2 of 6 · Trust Health</div>
+    <h1 class="text-display">Once found, do they <em>trust</em> it?</h1>
+    <p class="text-lead">A hall can be visible but untrustworthy. The fixes are different — so we score it separately.</p>
+    <div class="livescore"><div><div class="text-label">Trust Health Score</div><div class="text-body" id="trust_note">Reviews, real content, consistency.</div></div><div style="text-align:right;"><span class="ls-num" id="trust_score">0</span><span style="font-size:18px;color:var(--color-text-muted);">/100</span><div class="ls-band" id="trust_band"></div></div></div>
+    <div class="card">
+      <div class="subhead">Reviews</div>
+      <div class="q-label">Google review count</div>
+      <div class="choice-grid" data-group="tr_count" data-score="1"><div class="choice radio" data-val="10" onclick="pickRadio(this);calcTrust();"><span class="mark"></span> 0–10</div><div class="choice radio" data-val="35" onclick="pickRadio(this);calcTrust();"><span class="mark"></span> 10–25</div><div class="choice radio" data-val="60" onclick="pickRadio(this);calcTrust();"><span class="mark"></span> 25–50</div><div class="choice radio" data-val="85" onclick="pickRadio(this);calcTrust();"><span class="mark"></span> 50–100</div><div class="choice radio" data-val="100" onclick="pickRadio(this);calcTrust();"><span class="mark"></span> 100+</div></div>
+      <div class="q-label">Average rating</div>
+      <div class="choice-grid" data-group="tr_rating" data-score="1"><div class="choice radio" data-val="20" onclick="pickRadio(this);calcTrust();"><span class="mark"></span> Below 4.0</div><div class="choice radio" data-val="55" onclick="pickRadio(this);calcTrust();"><span class="mark"></span> 4.0–4.2</div><div class="choice radio" data-val="80" onclick="pickRadio(this);calcTrust();"><span class="mark"></span> 4.3–4.5</div><div class="choice radio" data-val="100" onclick="pickRadio(this);calcTrust();"><span class="mark"></span> 4.5+</div></div>
+      <div class="q-label">Most recent review</div>
+      <div class="choice-grid" data-group="tr_recency" data-score="1"><div class="choice radio" data-val="100" onclick="pickRadio(this);calcTrust();"><span class="mark"></span> This week</div><div class="choice radio" data-val="80" onclick="pickRadio(this);calcTrust();"><span class="mark"></span> This month</div><div class="choice radio" data-val="50" onclick="pickRadio(this);calcTrust();"><span class="mark"></span> 1–3 months</div><div class="choice radio" data-val="25" onclick="pickRadio(this);calcTrust();"><span class="mark"></span> 3–6 months</div><div class="choice radio" data-val="0" onclick="pickRadio(this);calcTrust();"><span class="mark"></span> Over 6 months</div></div>
+      <div class="q-label">Owner responses</div>
+      <div class="choice-grid tr_resp" data-multi="1"><div class="choice" onclick="toggleChoice(this);calcTrust();"><span class="mark"></span> Replies to most reviews</div><div class="choice" onclick="toggleChoice(this);calcTrust();"><span class="mark"></span> Handles negatives professionally</div><div class="choice" onclick="toggleChoice(this);calcTrust();"><span class="mark"></span> Personalised (not template)</div></div>
+      <div class="subhead">Real Wedding Content</div>
+      <div class="choice-grid tr_content" data-multi="1"><div class="choice" onclick="toggleChoice(this);calcTrust();"><span class="mark"></span> Real wedding photos on Google</div><div class="choice" onclick="toggleChoice(this);calcTrust();"><span class="mark"></span> Real wedding reels</div><div class="choice" onclick="toggleChoice(this);calcTrust();"><span class="mark"></span> Family testimonials</div><div class="choice" onclick="toggleChoice(this);calcTrust();"><span class="mark"></span> Before/after setup</div><div class="choice" onclick="toggleChoice(this);calcTrust();"><span class="mark"></span> Video walkthrough</div><div class="choice" onclick="toggleChoice(this);calcTrust();"><span class="mark"></span> Client name mentions</div></div>
+      <div class="subhead">Brand Consistency</div>
+      <div class="choice-grid tr_brand" data-multi="1"><div class="choice" onclick="toggleChoice(this);calcTrust();"><span class="mark"></span> Same name everywhere</div><div class="choice" onclick="toggleChoice(this);calcTrust();"><span class="mark"></span> Same number everywhere</div><div class="choice" onclick="toggleChoice(this);calcTrust();"><span class="mark"></span> Consistent photos</div><div class="choice" onclick="toggleChoice(this);calcTrust();"><span class="mark"></span> Consistent logo/branding</div><div class="choice" onclick="toggleChoice(this);calcTrust();"><span class="mark"></span> Consistent tone</div></div>
+    </div>
+  </div>
+
+  <!-- STEP 4 — CONVERSION -->
+  <div class="stage" id="st-3">
+    <div class="pillar-badge"><span class="dot"></span> Pillar 3 of 6 · Conversion Health</div>
+    <h1 class="text-display">When inquiries come, <em>what happens?</em></h1>
+    <p class="text-lead">This is where most venues bleed — inquiries arrive but die before becoming bookings.</p>
+    <div class="livescore"><div><div class="text-label">Conversion Health Score</div><div class="text-body" id="conv_note">Where do inquiries die?</div></div><div style="text-align:right;"><span class="ls-num" id="conv_score">0</span><span style="font-size:18px;color:var(--color-text-muted);">/100</span><div class="ls-band" id="conv_band"></div></div></div>
+    <div class="card">
+      <div class="q-label">4.1 — Inquiry sources (tick all)</div>
+      <div class="choice-grid cv_sources" data-multi="1"><div class="choice" onclick="toggleChoice(this);calcConversion();"><span class="mark"></span> WhatsApp</div><div class="choice" onclick="toggleChoice(this);calcConversion();"><span class="mark"></span> Phone calls</div><div class="choice" onclick="toggleChoice(this);calcConversion();"><span class="mark"></span> Walk-ins</div><div class="choice" onclick="toggleChoice(this);calcConversion();"><span class="mark"></span> Wedding portals</div><div class="choice" onclick="toggleChoice(this);calcConversion();"><span class="mark"></span> Instagram DM</div><div class="choice" onclick="toggleChoice(this);calcConversion();"><span class="mark"></span> Google Business</div><div class="choice" onclick="toggleChoice(this);calcConversion();"><span class="mark"></span> Past-client referrals</div><div class="choice" onclick="toggleChoice(this);calcConversion();"><span class="mark"></span> Vendor referrals</div><div class="choice" onclick="toggleChoice(this);calcConversion();"><span class="mark"></span> Facebook</div><div class="choice" onclick="toggleChoice(this);calcConversion();"><span class="mark"></span> Don't track sources</div></div>
+      <div class="q-label">4.2 — Response time</div>
+      <div class="choice-grid" data-group="cv_response" data-score="1"><div class="choice radio" data-val="100" onclick="pickRadio(this);calcConversion();"><span class="mark"></span> Within 5 min</div><div class="choice radio" data-val="80" onclick="pickRadio(this);calcConversion();"><span class="mark"></span> Within 1 hr</div><div class="choice radio" data-val="55" onclick="pickRadio(this);calcConversion();"><span class="mark"></span> Within 4 hrs</div><div class="choice radio" data-val="35" onclick="pickRadio(this);calcConversion();"><span class="mark"></span> Same day</div><div class="choice radio" data-val="15" onclick="pickRadio(this);calcConversion();"><span class="mark"></span> Next day</div><div class="choice radio" data-val="10" onclick="pickRadio(this);calcConversion();"><span class="mark"></span> Inconsistent</div></div>
+      <div class="q-label">4.3a — Inquiry → site visit</div>
+      <div class="choice-grid" data-group="cv_visit" data-score="1"><div class="choice radio" data-val="20" onclick="pickRadio(this);calcConversion();"><span class="mark"></span> Under 25%</div><div class="choice radio" data-val="50" onclick="pickRadio(this);calcConversion();"><span class="mark"></span> 25–50%</div><div class="choice radio" data-val="75" onclick="pickRadio(this);calcConversion();"><span class="mark"></span> 50–75%</div><div class="choice radio" data-val="95" onclick="pickRadio(this);calcConversion();"><span class="mark"></span> Over 75%</div><div class="choice radio" data-val="40" onclick="pickRadio(this);calcConversion();"><span class="mark"></span> Don't track</div></div>
+      <div class="q-label">4.3b — Site visit → booking</div>
+      <div class="choice-grid" data-group="cv_book" data-score="1"><div class="choice radio" data-val="20" onclick="pickRadio(this);calcConversion();"><span class="mark"></span> Under 25%</div><div class="choice radio" data-val="50" onclick="pickRadio(this);calcConversion();"><span class="mark"></span> 25–50%</div><div class="choice radio" data-val="75" onclick="pickRadio(this);calcConversion();"><span class="mark"></span> 50–75%</div><div class="choice radio" data-val="95" onclick="pickRadio(this);calcConversion();"><span class="mark"></span> Over 75%</div><div class="choice radio" data-val="40" onclick="pickRadio(this);calcConversion();"><span class="mark"></span> Don't track</div></div>
+      <div class="q-label">4.4 — Follow-up process</div>
+      <div class="choice-grid" data-group="cv_followup" data-score="1"><div class="choice radio" data-val="0" onclick="pickRadio(this);calcConversion();"><span class="mark"></span> No follow-up</div><div class="choice radio" data-val="30" onclick="pickRadio(this);calcConversion();"><span class="mark"></span> Owner remembers</div><div class="choice radio" data-val="50" onclick="pickRadio(this);calcConversion();"><span class="mark"></span> Staff reminders</div><div class="choice radio" data-val="70" onclick="pickRadio(this);calcConversion();"><span class="mark"></span> Diary list</div><div class="choice radio" data-val="85" onclick="pickRadio(this);calcConversion();"><span class="mark"></span> Spreadsheet</div><div class="choice radio" data-val="100" onclick="pickRadio(this);calcConversion();"><span class="mark"></span> CRM/automated</div></div>
+      <div class="q-label">4.6 — Where do most inquiries die?</div>
+      <div class="choice-grid" data-group="cv_death"><div class="choice radio" onclick="pickRadio(this)"><span class="mark"></span> Discovery</div><div class="choice radio" onclick="pickRadio(this)"><span class="mark"></span> Inquiry</div><div class="choice radio" onclick="pickRadio(this)"><span class="mark"></span> First response</div><div class="choice radio" onclick="pickRadio(this)"><span class="mark"></span> Site visit</div><div class="choice radio" onclick="pickRadio(this)"><span class="mark"></span> Quotation</div><div class="choice radio" onclick="pickRadio(this)"><span class="mark"></span> Negotiation</div><div class="choice radio" onclick="pickRadio(this)"><span class="mark"></span> Booking</div></div>
+      <div class="q-label">4.7 — Lost inquiry awareness</div>
+      <div class="choice-grid cv_lost" data-multi="1"><div class="choice" onclick="toggleChoice(this);calcConversion();"><span class="mark"></span> Know how many we lost</div><div class="choice" onclick="toggleChoice(this);calcConversion();"><span class="mark"></span> Know why each was lost</div><div class="choice" onclick="toggleChoice(this);calcConversion();"><span class="mark"></span> Try to re-engage lost ones</div></div>
+    </div>
+  </div>
+
+  <!-- STEP 5 — OPERATIONS -->
+  <div class="stage" id="st-4">
+    <div class="pillar-badge"><span class="dot"></span> Pillar 4 of 6 · Operational Health</div>
+    <h1 class="text-display">Can they <em>manage growth?</em></h1>
+    <p class="text-lead">This reveals the SmartOS opportunity. Two scores: how they run today, and how well SmartOS fits.</p>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
+      <div class="livescore" style="margin:0;"><div><div class="text-label">Operational Health</div></div><div style="text-align:right;"><span class="ls-num" id="op_score">0</span><span style="font-size:16px;color:var(--color-text-muted);">/100</span><div class="ls-band" id="op_band"></div></div></div>
+      <div class="livescore" style="margin:0;"><div><div class="text-label">SmartOS Readiness</div></div><div style="text-align:right;"><span class="ls-num" id="sos_score">0</span><span style="font-size:16px;color:var(--color-text-muted);">/100</span><div class="ls-band" id="sos_band"></div></div></div>
+    </div>
+    <div class="card">
+      <div class="q-label">5.1 — Inquiry tracking</div>
+      <div class="choice-grid" data-group="op_record" data-score="1"><div class="choice radio" data-val="0" onclick="pickRadio(this);calcOperations();"><span class="mark"></span> Memory / verbal</div><div class="choice radio" data-val="20" onclick="pickRadio(this);calcOperations();"><span class="mark"></span> Paper register</div><div class="choice radio" data-val="35" onclick="pickRadio(this);calcOperations();"><span class="mark"></span> Diary</div><div class="choice radio" data-val="60" onclick="pickRadio(this);calcOperations();"><span class="mark"></span> Excel</div><div class="choice radio" data-val="80" onclick="pickRadio(this);calcOperations();"><span class="mark"></span> Google Sheet</div><div class="choice radio" data-val="100" onclick="pickRadio(this);calcOperations();"><span class="mark"></span> Proper CRM</div></div>
+      <div class="q-label">5.2 — Booking calendar</div>
+      <div class="choice-grid" data-group="op_calendar" data-score="1"><div class="choice radio" data-val="0" onclick="pickRadio(this);calcOperations();"><span class="mark"></span> Physical diary</div><div class="choice radio" data-val="25" onclick="pickRadio(this);calcOperations();"><span class="mark"></span> Wall calendar</div><div class="choice radio" data-val="55" onclick="pickRadio(this);calcOperations();"><span class="mark"></span> Excel</div><div class="choice radio" data-val="80" onclick="pickRadio(this);calcOperations();"><span class="mark"></span> Shared Google Calendar</div><div class="choice radio" data-val="100" onclick="pickRadio(this);calcOperations();"><span class="mark"></span> Proper software</div></div>
+      <div class="q-label">5.3 — Team access</div>
+      <div class="choice-grid" data-group="op_team" data-score="1"><div class="choice radio" data-val="30" onclick="pickRadio(this);calcOperations();"><span class="mark"></span> Just the owner</div><div class="choice radio" data-val="55" onclick="pickRadio(this);calcOperations();"><span class="mark"></span> Owner + 1</div><div class="choice radio" data-val="80" onclick="pickRadio(this);calcOperations();"><span class="mark"></span> Owner + 2–3</div><div class="choice radio" data-val="100" onclick="pickRadio(this);calcOperations();"><span class="mark"></span> Dedicated team</div></div>
+      <div class="choice-grid op_teamflags" data-multi="1"><div class="choice" onclick="toggleChoice(this);calcOperations();"><span class="mark"></span> Multiple people see all inquiries</div><div class="choice" onclick="toggleChoice(this);calcOperations();"><span class="mark"></span> Info lost when key person away</div><div class="choice" onclick="toggleChoice(this);calcOperations();"><span class="mark"></span> Owner is the bottleneck</div></div>
+      <div class="q-label">5.5 — Payment tracking</div>
+      <div class="choice-grid op_pay" data-multi="1"><div class="choice" onclick="toggleChoice(this);calcOperations();"><span class="mark"></span> Track advances</div><div class="choice" onclick="toggleChoice(this);calcOperations();"><span class="mark"></span> Track balance dues</div><div class="choice" onclick="toggleChoice(this);calcOperations();"><span class="mark"></span> GST invoicing systematic</div><div class="choice" onclick="toggleChoice(this);calcOperations();"><span class="mark"></span> Royalty/commission tracking</div></div>
+      <div class="q-label">5.7 — Owner can instantly see</div>
+      <div class="choice-grid op_report" data-multi="1"><div class="choice" onclick="toggleChoice(this);calcOperations();"><span class="mark"></span> Today's new inquiries</div><div class="choice" onclick="toggleChoice(this);calcOperations();"><span class="mark"></span> Pending follow-ups</div><div class="choice" onclick="toggleChoice(this);calcOperations();"><span class="mark"></span> Upcoming bookings</div><div class="choice" onclick="toggleChoice(this);calcOperations();"><span class="mark"></span> Lost inquiries &amp; why</div><div class="choice" onclick="toggleChoice(this);calcOperations();"><span class="mark"></span> Monthly conversion rate</div><div class="choice" onclick="toggleChoice(this);calcOperations();"><span class="mark"></span> Monthly revenue</div><div class="choice" onclick="toggleChoice(this);calcOperations();"><span class="mark"></span> Vendor payment status</div></div>
+    </div>
+    <div class="card internal"><div class="text-label" style="color:var(--color-purple);">🔒 Internal — SmartOS detection</div><div class="text-body" id="sos_flags" style="margin-top:6px;">—</div><div class="text-body" style="margin-top:6px;"><strong>SmartOS Fit:</strong> <span id="sos_fit">—</span></div></div>
+  </div>
+
+  <!-- STEP 6 — REVENUE -->
+  <div class="stage" id="st-5">
+    <div class="pillar-badge"><span class="dot"></span> Pillar 5 of 6 · Revenue Health</div>
+    <h1 class="text-display">Are they <em>maximising revenue?</em></h1>
+    <p class="text-lead">From followers and reach to booked events and rupees. Ranges only — never fake projections.</p>
+    <div class="card">
+      <div class="q-label">6.1 — Average event value (incl. catering)</div>
+      <div class="choice-grid" data-group="rv_value" data-score="1"><div class="choice radio" data-val="150000" onclick="pickRadio(this);calcRevenue();"><span class="mark"></span> Under ₹2L</div><div class="choice radio" data-val="350000" onclick="pickRadio(this);calcRevenue();"><span class="mark"></span> ₹2L–₹5L</div><div class="choice radio" data-val="750000" onclick="pickRadio(this);calcRevenue();"><span class="mark"></span> ₹5L–₹10L</div><div class="choice radio" data-val="1250000" onclick="pickRadio(this);calcRevenue();"><span class="mark"></span> ₹10L–₹15L</div><div class="choice radio" data-val="1750000" onclick="pickRadio(this);calcRevenue();"><span class="mark"></span> ₹15L–₹20L</div><div class="choice radio" data-val="2200000" onclick="pickRadio(this);calcRevenue();"><span class="mark"></span> ₹20L+</div></div>
+      <div class="q-label">6.2 — Average monthly bookings</div>
+      <div class="choice-grid" data-group="rv_bookings" data-score="1"><div class="choice radio" data-val="3" onclick="pickRadio(this);calcRevenue();"><span class="mark"></span> 0–5</div><div class="choice radio" data-val="7" onclick="pickRadio(this);calcRevenue();"><span class="mark"></span> 5–10</div><div class="choice radio" data-val="15" onclick="pickRadio(this);calcRevenue();"><span class="mark"></span> 10–20</div><div class="choice radio" data-val="24" onclick="pickRadio(this);calcRevenue();"><span class="mark"></span> 20+</div></div>
+      <div class="q-label">6.3 — Peak season occupancy</div>
+      <div class="choice-grid" data-group="rv_peak" data-score="1"><div class="choice radio" data-val="40" onclick="pickRadio(this);calcRevenue();"><span class="mark"></span> Below 50%</div><div class="choice radio" data-val="60" onclick="pickRadio(this);calcRevenue();"><span class="mark"></span> 50–70%</div><div class="choice radio" data-val="80" onclick="pickRadio(this);calcRevenue();"><span class="mark"></span> 70–90%</div><div class="choice radio" data-val="95" onclick="pickRadio(this);calcRevenue();"><span class="mark"></span> 90%+</div></div>
+      <div class="q-label">6.4 — Off-season occupancy</div>
+      <div class="choice-grid" data-group="rv_off" data-score="1"><div class="choice radio" data-val="15" onclick="pickRadio(this);calcRevenue();"><span class="mark"></span> Below 25%</div><div class="choice radio" data-val="37" onclick="pickRadio(this);calcRevenue();"><span class="mark"></span> 25–50%</div><div class="choice radio" data-val="62" onclick="pickRadio(this);calcRevenue();"><span class="mark"></span> 50–75%</div><div class="choice radio" data-val="85" onclick="pickRadio(this);calcRevenue();"><span class="mark"></span> 75%+</div></div>
+    </div>
+    <div class="card gold" style="text-align:center;padding:24px;">
+      <div class="text-label">Total revenue opportunity (realistic yearly range)</div>
+      <div style="font-family:var(--font-serif);font-size:clamp(30px,6vw,52px);color:var(--color-gold-hover);line-height:1;margin-top:8px;" id="rv_total">₹ —</div>
+      <p class="text-body" style="margin-top:8px;font-style:italic;">These are realistic ranges based on what consistent work tends to deliver. Actual results vary by season, location, and execution.</p>
+    </div>
+    <div class="rev-grid">
+      <div class="rev-cell"><div class="v" id="rv_util">—</div><div class="text-label" style="margin-top:6px;">Utilisation rate</div></div>
+      <div class="rev-cell"><div class="v" id="rv_eff">—</div><div class="text-label" style="margin-top:6px;">Revenue Efficiency</div></div>
+      <div class="rev-cell"><div class="v" id="rv_off_opp">₹ —</div><div class="text-label" style="margin-top:6px;">Off-season opportunity</div></div>
+    </div>
+  </div>
+
+  <!-- STEP 7 — COMPETITIVE -->
+  <div class="stage" id="st-6">
+    <div class="pillar-badge"><span class="dot"></span> Competitive Position</div>
+    <h1 class="text-display">Why are competitors <em>winning?</em></h1>
+    <p class="text-lead">Not "who is the competitor" — but what advantages are pulling bookings away.</p>
+    <div class="card">
+      <div class="grid-2"><div class="field"><label class="text-label">Competitor #1</label><input class="input" id="c_name1" placeholder="Venue name"></div><div class="field"><label class="text-label">Competitor #2</label><input class="input" id="c_name2" placeholder="Optional"></div></div>
+      <div class="q-label">Why are they winning? (tick all)</div>
+      <div class="choice-grid" id="compAdvGrid"><div class="choice" data-adv="1" onclick="toggleChoice(this);calcCompetitive();"><span class="mark"></span> Better Google reviews</div><div class="choice" data-adv="1" onclick="toggleChoice(this);calcCompetitive();"><span class="mark"></span> Better Maps ranking</div><div class="choice" data-adv="1" onclick="toggleChoice(this);calcCompetitive();"><span class="mark"></span> More active Instagram</div><div class="choice" data-adv="1" onclick="toggleChoice(this);calcCompetitive();"><span class="mark"></span> Better website/response</div><div class="choice" data-adv="1" onclick="toggleChoice(this);calcCompetitive();"><span class="mark"></span> Better décor/aesthetics</div><div class="choice" data-adv="1" onclick="toggleChoice(this);calcCompetitive();"><span class="mark"></span> Better area reputation</div><div class="choice" data-adv="1" onclick="toggleChoice(this);calcCompetitive();"><span class="mark"></span> Better follow-up</div><div class="choice" data-adv="1" onclick="toggleChoice(this);calcCompetitive();"><span class="mark"></span> Better vendor network</div><div class="choice" data-adv="1" onclick="toggleChoice(this);calcCompetitive();"><span class="mark"></span> Better pricing</div><div class="choice" data-adv="1" onclick="toggleChoice(this);calcCompetitive();"><span class="mark"></span> Premium positioning</div><div class="choice" data-adv="unknown" onclick="toggleChoice(this);calcCompetitive();"><span class="mark"></span> Unknown — can't pinpoint</div></div>
+    </div>
+    <div class="livescore"><div><div class="text-label">Competitive Threat Score</div><div class="text-body" id="comp_note">Mark the advantages above.</div></div><div style="text-align:right;"><span class="ls-num" id="comp_score">0</span><span style="font-size:18px;color:var(--color-text-muted);">/100</span><div class="ls-band" id="comp_band"></div></div></div>
+  </div>
+
+  <!-- STEP 8 — LEADERSHIP (INTERNAL) -->
+  <div class="stage" id="st-7">
+    <div class="pillar-badge internal"><span class="dot"></span> 🔒 Pillar 6 of 6 · Leadership Readiness — INTERNAL ONLY</div>
+    <h1 class="text-display">Is management <em>capable of growth?</em></h1>
+    <p class="text-lead">Internal read on who decides and how likely this closes. Never shown to the owner, never printed.</p>
+    <div class="card internal">
+      <div class="q-label">Owner type</div>
+      <div class="choice-grid" data-group="ld_owner"><div class="choice radio" onclick="pickRadio(this);calcClose();"><span class="mark"></span> Founder / first-gen</div><div class="choice radio" onclick="pickRadio(this);calcClose();"><span class="mark"></span> Second generation</div><div class="choice radio" onclick="pickRadio(this);calcClose();"><span class="mark"></span> Professional manager</div><div class="choice radio" onclick="pickRadio(this);calcClose();"><span class="mark"></span> Family committee</div></div>
+      <div class="q-label">Growth mindset</div>
+      <div class="choice-grid" data-group="ld_mindset" data-score="1"><div class="choice radio" data-val="0" onclick="pickRadio(this);calcClose();"><span class="mark"></span> Resistant</div><div class="choice radio" data-val="50" onclick="pickRadio(this);calcClose();"><span class="mark"></span> Curious</div><div class="choice radio" data-val="85" onclick="pickRadio(this);calcClose();"><span class="mark"></span> Growth-focused</div><div class="choice radio" data-val="100" onclick="pickRadio(this);calcClose();"><span class="mark"></span> Aggressive</div></div>
+      <div class="q-label">Decision style</div>
+      <div class="choice-grid" data-group="ld_style"><div class="choice radio" onclick="pickRadio(this);calcClose();"><span class="mark"></span> Price-driven</div><div class="choice radio" onclick="pickRadio(this);calcClose();"><span class="mark"></span> Relationship-driven</div><div class="choice radio" onclick="pickRadio(this);calcClose();"><span class="mark"></span> Data-driven</div><div class="choice radio" onclick="pickRadio(this);calcClose();"><span class="mark"></span> Family consensus</div></div>
+      <div class="q-label">Budget comfort</div>
+      <div class="choice-grid" data-group="ld_budget" data-score="1"><div class="choice radio" data-val="30" onclick="pickRadio(this);calcClose();"><span class="mark"></span> Low (₹15K stretch)</div><div class="choice radio" data-val="65" onclick="pickRadio(this);calcClose();"><span class="mark"></span> Medium (up to ₹30K)</div><div class="choice radio" data-val="100" onclick="pickRadio(this);calcClose();"><span class="mark"></span> High (₹50K+)</div></div>
+      <div class="q-label">Decision timeline</div>
+      <div class="choice-grid" data-group="ld_timeline" data-score="1"><div class="choice radio" data-val="100" onclick="pickRadio(this);calcClose();"><span class="mark"></span> Immediate</div><div class="choice radio" data-val="75" onclick="pickRadio(this);calcClose();"><span class="mark"></span> 30 days</div><div class="choice radio" data-val="45" onclick="pickRadio(this);calcClose();"><span class="mark"></span> 90 days</div><div class="choice radio" data-val="15" onclick="pickRadio(this);calcClose();"><span class="mark"></span> Future</div></div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:12px;">
+        <div class="livescore" style="margin:0;"><div class="text-label">Leadership Readiness</div><div style="text-align:right;"><span class="ls-num" id="ld_score" style="font-size:30px;">0</span><span style="font-size:14px;color:var(--color-text-muted);">/100</span></div></div>
+        <div class="livescore" style="margin:0;"><div><div class="text-label">Close Probability</div><div class="text-body" id="close_reason">Fill fields above.</div></div><div><span class="ls-band" id="close_band" style="font-size:16px;padding:8px 16px;">—</span></div></div>
+      </div>
+      <div class="field" style="margin-top:16px;"><label class="text-label">Interest level (1–10)</label><input type="range" min="1" max="10" value="5" id="ld_interest" style="width:100%;"></div>
+      <div class="field"><label class="text-label">Main objections</label><textarea class="input" id="ld_objections" rows="2"></textarea></div>
+      <div class="q-label">Buying signals</div>
+      <div class="choice-grid" data-multi="1"><div class="choice" onclick="toggleChoice(this)"><span class="mark"></span> Asked about timeline</div><div class="choice" onclick="toggleChoice(this)"><span class="mark"></span> Asked about references</div><div class="choice" onclick="toggleChoice(this)"><span class="mark"></span> Brought spouse/partner</div><div class="choice" onclick="toggleChoice(this)"><span class="mark"></span> Asked about contract</div></div>
+    </div>
+  </div>
+
+  <!-- STEP 9 — VENUE HEALTH REPORT -->
+  <div class="stage" id="st-8">
+    <div class="text-label accent" style="margin-bottom:14px;">Step 9</div>
+    <h1 class="text-display">Venue <em>Health Report</em></h1>
+    <p class="text-lead">The full six-pillar picture, built live from this consultation.</p>
+    <div class="card" id="reportCard">
+      <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:18px;"><h2 class="text-h3" id="rep_name">Venue</h2><span class="text-body" id="rep_loc"></span></div>
+      <div id="rep_bars"></div>
+      <div style="border-top:1px solid var(--color-border);margin:16px 0;padding-top:16px;">
+        <div class="score-row-top"><span class="score-row-name" style="font-size:16px;">VENUE MATURITY SCORE</span><span class="score-row-val" id="rep_overall_val" style="font-size:16px;"></span></div>
+        <div class="score-track"><div class="score-fill" id="rep_overall_fill"></div></div>
+        <div class="score-row-val" id="rep_overall_band" style="margin-top:8px;"></div>
+      </div>
+    </div>
+    <div class="card"><div class="text-label accent" style="margin-bottom:10px;">Most critical issues (top 3)</div><ol id="rep_priorities" style="padding-left:18px;font-size:15px;line-height:1.7;color:var(--color-text-primary);"></ol></div>
+    <div class="rec-card">
+      <div class="text-label accent" style="margin-bottom:10px;">DigiVenue Recommendation</div>
+      <div class="rec-line"><span>DigiStories Fit</span><strong id="rec_ds">—</strong></div>
+      <div class="rec-line"><span>SmartOS Fit</span><strong id="rec_sos">—</strong></div>
+      <div class="rec-line"><span>Recommended Path</span><strong id="rec_path" style="color:var(--color-accent);">—</strong></div>
+      <p class="text-body" id="rec_why" style="margin-top:12px;"></p>
+    </div>
+  </div>
+
+  <!-- STEP 10 — INVESTMENT & PLAN -->
+  <div class="stage" id="st-9">
+    <div class="text-label accent" style="margin-bottom:14px;">Step 10</div>
+    <h1 class="text-display">Your <em>Plan</em></h1>
+    <p class="text-lead">Priced for ROI. One booked event pays for the entire quarter.</p>
+    <div class="tier-grid">
+      <div class="tier" data-tier="Starter" data-fee="15000" onclick="pickTier(this)"><div class="tier-name">Starter</div><div class="tier-price">₹15,000<span>/mo</span></div><p class="text-body">For halls that need to start showing up online.</p><ul><li>Google Business profile, kept active</li><li>2 posts + 1 reel per week</li><li>Reviews followed up after every function</li><li>Monthly Google performance summary</li></ul></div>
+      <div class="tier popular active" data-tier="Growth" data-fee="30000" onclick="pickTier(this)"><div class="tier-name">Growth</div><div class="tier-price">₹30,000<span>/mo</span></div><p class="text-body">For halls that want steady, qualified inquiries.</p><ul><li>Everything in Starter</li><li>On-site photography on event days</li><li>3 reels per week, real wedding footage</li><li>Inquiry handling guidance</li><li>Weekly check-in call</li></ul></div>
+      <div class="tier" data-tier="Full Front" data-fee="0" onclick="pickTier(this)"><div class="tier-name">Full Front</div><div class="tier-price">Curated</div><p class="text-body">For halls that want to dominate their area online.</p><ul><li>Everything in Growth</li><li>Daily content, multi-platform</li><li>Paid ad campaign management</li><li>Dedicated growth strategist</li><li>Quarterly competitive report</li></ul></div>
+    </div>
+    <div id="smartosPilot" style="display:none;">
+      <div class="card" style="border-left:4px solid var(--color-accent);">
+        <div class="text-label accent">Recommended add-on — operations need attention</div>
+        <h3 class="text-h3" style="margin:8px 0;">SmartOS Pilot · ₹10,000/mo</h3>
+        <p class="text-body">For halls leaking inquiries through manual operations.</p>
+        <ul style="margin-top:10px;font-size:13px;list-style:none;color:var(--color-text-secondary);"><li>• Inquiry tracking dashboard</li><li>• Automated WhatsApp follow-up reminders</li><li>• Booking calendar with conflict detection</li><li>• Owner daily/weekly summary</li></ul>
+        <label class="choice radio" style="margin-top:14px;max-width:280px;" id="pilotToggle" onclick="togglePilot()"><span class="mark"></span> Add SmartOS Pilot (+₹10,000/mo)</label>
+      </div>
+    </div>
+    <div class="disclosure">
+      <div class="text-label accent" style="margin-bottom:8px;">What's NOT included in your monthly fee</div>
+      <p class="text-body">Paid advertising spend on Google or Meta is <strong>separate</strong> from the DigiStories monthly fee. The monthly fee covers our team's work — strategy, content, posting, reviews, reporting, and (in Full Front) the management of your ad campaigns. The actual ad budget is paid directly by the hall.</p>
+      <p class="text-body" style="margin-top:10px;"><strong>Recommended ad budgets (paid separately, optional):</strong><br>• Starter — optional, typically ₹0–₹5,000/mo<br>• Growth — recommended ₹5,000–₹15,000/mo<br>• Full Front — recommended ₹15,000–₹50,000/mo, scaled to wedding season</p>
+      <p class="text-body" style="margin-top:10px;font-style:italic;">We never mark up your ad spend. Whatever you put in goes directly to Google or Meta. We only charge for our work.</p>
+    </div>
+    <h3 class="text-h3" style="margin:22px 0 12px;">Objection handling <span style="font-size:12px;color:var(--color-text-muted);">(internal reference)</span></h3>
+    <div id="objections"></div>
+    <div class="convo" style="margin-top:22px;"><div class="text-label accent">Closing the conversation</div><ul><li>Take the report home. Look through it tonight, with the family if you want.</li><li>I'll WhatsApp you tomorrow to answer any questions. No call needed if you don't want one.</li><li>If it's a yes, we can start the first photography on your next function. If it's a no, no problem — keep the report.</li></ul></div>
+    <div style="display:flex;gap:16px;flex-wrap:wrap;margin-top:22px;"><button class="btn" onclick="generateReport()">Print Venue Health Report</button><button class="btn outline" onclick="exportIntakeJSON()">Export Playbook JSON</button></div>
+  </div>
+</div>
+
+<!-- PRINTABLE HEALTH REPORT (customer language; no Leadership/Intel/BCA) -->
+<div class="print-brief" id="printBrief" style="display:none;max-width:760px;margin:40px auto;background:#fff;color:#1a1a1a;padding:40px;border:1px solid #e3e3e3;">
+  <div style="display:flex;justify-content:space-between;align-items:center;border-bottom:2px solid #1a1a1a;padding-bottom:18px;margin-bottom:22px;"><div style="font-family:'Playfair Display',serif;font-size:22px;font-weight:600;">DigiVenue · Venue Health Report</div><div style="font-size:12px;color:#777;" id="pb_date"></div></div>
+  <div style="font-family:'Playfair Display',serif;font-size:20px;" id="pb_vname"></div>
+  <div style="font-size:13px;color:#555;margin-bottom:22px;" id="pb_vmeta"></div>
+  <h3 style="font-size:12px;text-transform:uppercase;letter-spacing:0.1em;color:#666;border-bottom:1px solid #eee;padding-bottom:6px;margin-bottom:14px;">Where your hall stands today</h3>
+  <div id="pb_scores" style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px;"></div>
+  <div style="font-family:'Playfair Display',serif;font-size:18px;margin:14px 0 22px;">Overall health score: <span id="pb_overall"></span>/100 · <span id="pb_overall_band"></span></div>
+  <h3 style="font-size:12px;text-transform:uppercase;letter-spacing:0.1em;color:#666;border-bottom:1px solid #eee;padding-bottom:6px;margin-bottom:14px;">What we'd fix first</h3>
+  <ol id="pb_priorities" style="padding-left:18px;font-size:14px;line-height:1.7;margin-bottom:22px;"></ol>
+  <h3 style="font-size:12px;text-transform:uppercase;letter-spacing:0.1em;color:#666;border-bottom:1px solid #eee;padding-bottom:6px;margin-bottom:14px;">What this can become</h3>
+  <div style="font-family:'Playfair Display',serif;font-size:24px;color:#9a7b30;" id="pb_revenue"></div>
+  <p style="font-size:12px;color:#777;margin:6px 0 22px;">Honest range based on consistent execution. Not a guarantee — varies by season, location, effort.</p>
+  <h3 style="font-size:12px;text-transform:uppercase;letter-spacing:0.1em;color:#666;border-bottom:1px solid #eee;padding-bottom:6px;margin-bottom:14px;">Your growth plan</h3>
+  <div style="font-size:14px;line-height:1.8;margin-bottom:22px;">Phase 1 · Days 1–14 — Immediate Fixes<br>Phase 2 · Days 15–45 — Growth Improvements<br>Phase 3 · Days 45+ — Operational Modernisation</div>
+  <h3 style="font-size:12px;text-transform:uppercase;letter-spacing:0.1em;color:#666;border-bottom:1px solid #eee;padding-bottom:6px;margin-bottom:14px;">What we'd suggest</h3>
+  <div style="font-size:15px;margin-bottom:8px;" id="pb_plan"></div>
+  <p style="font-size:13px;color:#444;margin-bottom:22px;">This monthly fee covers our team's work. Any paid advertising spend on Google or Meta is paid separately by you, with no markup from us.</p>
+  <p style="font-size:13px;font-style:italic;color:#555;border-top:1px solid #eee;padding-top:16px;">These numbers are honest targets based on what consistent work on a hall's online presence tends to deliver. They are a goal — not a guarantee.</p>
+  <p style="font-size:13px;margin-top:12px;">Talk to us on WhatsApp · <span id="pb_phone"></span></p>
+</div>
+
+<div class="controls"><button class="btn outline" id="btnPrev" onclick="navStep(-1)" style="visibility:hidden;">Previous</button><button class="btn" id="btnNext" onclick="navStep(1)">Continue</button></div>
+
+<div class="founder-notes" id="founderNotes"><div class="fn-header" onclick="toggleNotes()"><span>🔒 Private Founder Notes</span><span id="fn-icon">▲</span></div><div class="fn-body"><textarea class="fn-textarea" placeholder="Log resistance, budget hesitation, family politics. Internal only."></textarea></div></div>
+
+<div class="tool-footer">Internal tool — DigiVenue team use only. Do not share this URL with prospects. The customer receives the printed Venue Health Report only.</div>
+
+<script src="intelligence_data.js" onerror="window.PANELS=window.PANELS||null;"></script>
+<script>
+const STEPS=[
+  {id:'venue',label:'Venue'},{id:'visibility',label:'Visibility'},{id:'trust',label:'Trust'},
+  {id:'conversion',label:'Conversion'},{id:'operations',label:'Operations'},{id:'revenue',label:'Revenue'},
+  {id:'competitive',label:'Competitive'},{id:'leadership',label:'Leadership 🔒',internal:true},
+  {id:'report',label:'Report'},{id:'plan',label:'Plan'}
+];
+let currentStep=0;
+function initNav(){
+  document.getElementById('navBar').innerHTML=STEPS.map((s,i)=>
+    `<div class="nav-item ${i===0?'active':''} ${s.internal?'internal-step':''}" id="nav-item-${i}" onclick="goToStep(${i})"><span class="nav-num">${String(i+1).padStart(2,'0')}</span> ${s.label}</div>`).join('');
+}
+function goToStep(i){
+  if(i<0||i>=STEPS.length)return;
+  const id=STEPS[i].id;
+  if(id==='report')renderReport();
+  if(id==='plan'){renderObjections();refreshPilot();}
+  document.querySelectorAll('.stage').forEach(e=>e.classList.remove('active'));
+  document.querySelectorAll('.nav-item').forEach(e=>e.classList.remove('active'));
+  document.getElementById('st-'+i).classList.add('active');
+  document.getElementById('nav-item-'+i).classList.add('active');
+  currentStep=i;
+  document.getElementById('btnPrev').style.visibility=i===0?'hidden':'visible';
+  document.getElementById('btnNext').style.display=i===STEPS.length-1?'none':'inline-flex';
+  document.getElementById('nav-item-'+i).scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'});
+  window.scrollTo({top:0,behavior:'smooth'});
+  refreshIntelDerived();
+}
+function navStep(d){goToStep(currentStep+d);}
+
+/* input helpers */
+function toggleChoice(el){el.classList.toggle('active');}
+function pickRadio(el){const g=el.parentElement;g.querySelectorAll('.choice').forEach(c=>c.classList.remove('active'));el.classList.add('active');}
+function gv(name){const g=document.querySelector(`[data-group="${name}"]`);if(!g)return 0;const a=g.querySelector('.choice.active');return a?parseFloat(a.getAttribute('data-val')||'0'):0;}
+function gsel(name){const g=document.querySelector(`[data-group="${name}"]`);return g?!!g.querySelector('.choice.active'):false;}
+function gidx(name){const g=document.querySelector(`[data-group="${name}"]`);if(!g)return -1;const ch=[...g.querySelectorAll('.choice')];return ch.findIndex(c=>c.classList.contains('active'));}
+function countSel(sel){return document.querySelectorAll(sel+' .choice.active').length;}
+function countAll(sel){return document.querySelectorAll(sel+' .choice').length;}
+function clamp(x){return Math.max(0,Math.min(100,Math.round(x)));}
+function bcol(v){return v>=76?'var(--color-green)':v>=56?'var(--color-yellow)':v>=31?'var(--color-amber)':'var(--color-red)';}
+function setBand(elId,txt,col){const b=document.getElementById(elId);if(b){b.textContent=txt;b.style.background=col;}}
+
+/* PILLAR 1 — VISIBILITY */
+function calcVisibility(){
+  const a=countSel('.choice-grid.vis'),t=countAll('.choice-grid.vis')||21;
+  const s=clamp(a/t*100);
+  document.getElementById('vis_score').textContent=s;
+  setBand('vis_band',s>=76?'Strong':s>=56?'Active':s>=31?'Present but weak':'Invisible',bcol(s));
+  const missing=[...document.querySelectorAll('.choice-grid.vis .choice')].filter(c=>!c.classList.contains('active')).slice(0,4).map(c=>c.textContent.trim());
+  document.getElementById('vis_missing').textContent=missing.length?missing.join(' · '):'All key assets present';
+  return s;
+}
+/* PILLAR 2 — TRUST */
+function calcTrust(){
+  const reviews=(gv('tr_count')*0.4+gv('tr_rating')*0.35+gv('tr_recency')*0.25);
+  const resp=countSel('.tr_resp')/3*100;
+  const content=countSel('.tr_content')/6*100;
+  const brand=countSel('.tr_brand')/5*100;
+  const s=clamp(reviews*0.45+resp*0.15+content*0.25+brand*0.15);
+  document.getElementById('trust_score').textContent=s;
+  setBand('trust_band',s>=76?'Trusted':s>=56?'Building':s>=31?'Weak':'Unproven',bcol(s));
+  return s;
+}
+/* PILLAR 3 — CONVERSION */
+function calcConversion(){
+  const resp=gv('cv_response'),visit=gv('cv_visit'),book=gv('cv_book'),follow=gv('cv_followup');
+  const lost=countSel('.cv_lost')/3*100;
+  const s=clamp(resp*0.25+visit*0.15+book*0.20+follow*0.25+lost*0.15);
+  document.getElementById('conv_score').textContent=s;
+  setBand('conv_band',s>=76?'Converting':s>=56?'Leaking some':s>=31?'Leaking heavily':'Bleeding',bcol(s));
+  const deathIdx=gidx('cv_death');
+  const deaths=['discovery','inquiry','first response','site visit','quotation','negotiation','booking'];
+  document.getElementById('conv_note').textContent=deathIdx>=0?('Biggest drop-off: '+deaths[deathIdx]):'Where do inquiries die?';
+  return s;
+}
+/* PILLAR 4 — OPERATIONS + SMARTOS READINESS */
+function calcOperations(){
+  const rec=gv('op_record'),cal=gv('op_calendar'),team=gv('op_team');
+  const report=countSel('.op_report')/7*100, pay=countSel('.op_pay')/4*100;
+  const s=clamp(rec*0.25+cal*0.20+team*0.15+report*0.25+pay*0.15);
+  document.getElementById('op_score').textContent=s;
+  let band,col;
+  if(s<=30){band='High Leakage Risk';col='var(--color-red)';}
+  else if(s<=60){band='Manual Operations';col='var(--color-amber)';}
+  else if(s<=80){band='Structured Operations';col='var(--color-yellow)';}
+  else{band='Modern Operations';col='var(--color-green)';}
+  setBand('op_band',band,col);
+  /* SmartOS readiness — higher = more fit/need */
+  const flags=[];
+  if(rec<40||cal<40)flags.push('Manual processes');
+  const bottleneck=[...document.querySelectorAll('.op_teamflags .choice.active')].some(c=>/bottleneck/i.test(c.textContent));
+  if(bottleneck)flags.push('Staff dependency');
+  const waChaos=[...document.querySelectorAll('.cv_sources .choice.active')].some(c=>/WhatsApp/i.test(c.textContent))&&rec<40;
+  if(waChaos)flags.push('WhatsApp chaos');
+  if(cal<=25&&team>=55)flags.push('Double-booking risk');
+  if(gv('cv_followup')<30&&countSel('.cv_lost')<1)flags.push('Follow-up leakage');
+  if(countSel('.op_report')<3)flags.push('Reporting gaps');
+  const sos=clamp(flags.length/6*100);
+  document.getElementById('sos_score').textContent=sos;
+  setBand('sos_band',sos>=60?'Strong fit':sos>=35?'Some fit':'Low fit',sos>=60?'var(--color-accent)':sos>=35?'var(--color-amber)':'var(--color-green)');
+  document.getElementById('sos_flags').textContent=flags.length?flags.join(', '):'no major flags';
+  const fit=(s<50||sos>60)?(s<=30?'Critical':'Beneficial'):'None';
+  document.getElementById('sos_fit').textContent=fit;
+  return {op:s,sos:sos,fit:fit};
+}
+/* PILLAR 5 — REVENUE */
+function fmtINR(n){if(n>=10000000)return '₹'+(n/10000000).toFixed(n%10000000?2:0)+' Cr';if(n>=100000)return '₹'+(n/100000).toFixed(n%100000?1:0)+' L';return '₹'+Math.round(n).toLocaleString('en-IN');}
+function calcRevenue(){
+  const avg=gv('rv_value'),bookings=gv('rv_bookings'),peak=gv('rv_peak'),off=gv('rv_off');
+  const capMax=parseInt(document.getElementById('v_cap_max').value)||800;
+  const annualCapacity=Math.max(1,Math.round((peak/100)*6*4+(off/100)*5*2)); // rough functions/yr
+  const actual=bookings*12;
+  const util=clamp(actual/Math.max(actual,annualCapacity*4)*100);
+  document.getElementById('rv_util').textContent=util?util+'%':'—';
+  const revEff=clamp(peak*0.55+off*0.45);
+  document.getElementById('rv_eff').textContent=avg?revEff+'/100':'—';
+  /* opportunity ranges */
+  let lo=0,hi=0;
+  const vis=parseInt(document.getElementById('vis_score').textContent)||0;
+  const conv=parseInt(document.getElementById('conv_score').textContent)||0;
+  if(vis<50){lo+=0.5*avg*12;hi+=1.5*avg*12;}
+  if(conv<50){lo+=bookings*0.05*avg*12;hi+=bookings*0.15*avg*12;}
+  const gap=Math.max(0,50-off)/100; const offOpp=gap*4*avg;
+  document.getElementById('rv_off_opp').textContent=avg?fmtINR(offOpp):'₹ —';
+  lo+=offOpp*0.6;hi+=offOpp;
+  document.getElementById('rv_total').textContent=avg?(fmtINR(lo)+' – '+fmtINR(hi)):'₹ —';
+  return {revEff,lo,hi,avg,offOpp};
+}
+/* COMPETITIVE */
+function calcCompetitive(){
+  const unknown=document.querySelector('#compAdvGrid .choice[data-adv="unknown"]')?.classList.contains('active');
+  const adv=document.querySelectorAll('#compAdvGrid .choice[data-adv="1"].active').length;
+  const threat=clamp(adv*11+(unknown?40:0));
+  let pos;
+  if(unknown||adv>=9)pos='Invisible';else if(adv<=2)pos='Leader';else if(adv<=4)pos='Strong';else if(adv<=6)pos='Average';else pos='Weak';
+  document.getElementById('comp_score').textContent=threat;
+  setBand('comp_band',pos,threat>=70?'var(--color-red)':threat>=45?'var(--color-amber)':'var(--color-green)');
+  document.getElementById('comp_note').textContent=adv?`Competitor leads on ${adv} front${adv>1?'s':''}.`:(unknown?'Owner cannot pinpoint why — a red flag in itself.':'No advantages marked.');
+  /* competitive health = inverse of threat for maturity */
+  return clamp(100-threat);
+}
+/* LEADERSHIP + CLOSE */
+function calcClose(){
+  const mind=gv('ld_mindset'),budget=gv('ld_budget'),time=gv('ld_timeline');
+  const ld=clamp(mind*0.4+budget*0.3+time*0.3);
+  document.getElementById('ld_score').textContent=ld;
+  let tier= (mind>=85&&budget>=65&&time>=75)?2 : (mind>=50&&budget>=65&&time>=45)?1 : 0;
+  /* BCA adjustment */
+  const lever=gidx('bca_lever'); // 1=warm,2=hot
+  const sensitive=countSel('[data-group="bca_sensitive"]')>0;
+  if(!sensitive && (lever===1||lever===2) && tier<2) tier+=1;
+  const bands=['Low','Medium','High'],cols=['var(--color-red)','var(--color-amber)','var(--color-green)'];
+  setBand('close_band',bands[tier],cols[tier]);
+  document.getElementById('close_reason').textContent= tier===2?'Growth-minded, budget present, ready to move'+(lever>=1&&!sensitive?' (BCA warm)':'') : tier===1?'Workable — nurture to close'+(lever>=1&&!sensitive?' (BCA lift applied)':'') : 'Resistant, low budget, or distant timeline';
+  return {ld,tier};
+}
+/* INTEL derived auto-fields */
+function refreshIntelDerived(){
+  const o=calcOperations();
+  const vis=parseInt(document.getElementById('vis_score').textContent)||0;
+  const tr=parseInt(document.getElementById('trust_score').textContent)||0;
+  document.getElementById('il_smartos').textContent=o.fit;
+  const dsScore=(vis+tr)/2;
+  document.getElementById('il_digistories').textContent=dsScore<40?'Critical':dsScore<60?'Beneficial':'None';
+}
+
+/* MASTER SCORES + REPORT */
+function bandName(v){return v>=91?'Dominant':v>=76?'Strong':v>=56?'Established':v>=31?'Emerging':'Foundational';}
+function pBand(v){return v>=76?'Strong':v>=56?'Yellow':v>=31?'Amber':'Red';}
+function computeAll(){
+  const vis=calcVisibility(),tr=calcTrust(),conv=calcConversion();
+  const o=calcOperations(),rev=calcRevenue(),comp=calcCompetitive();
+  const maturity=clamp(vis*0.20+tr*0.15+conv*0.25+o.op*0.20+rev.revEff*0.15+comp*0.05);
+  return {vis,tr,conv,op:o.op,sos:o.sos,rev:rev.revEff,comp,maturity,revData:rev,opData:o};
+}
+function recommendation(s){
+  const ds=(s.vis<50||s.tr<50);
+  const sos=(s.op<50||s.sos>60);
+  let path,why;
+  const lead=calcClose();
+  if(lead.ld<30){ path='Neither'; why='Low growth mindset or budget. Recommend re-engaging in 6 months — protect DigiVenue from a bad-fit customer.'; return {ds:ds?'Yes':'No',sos:sos?'Yes':'No',path,why}; }
+  if(ds&&sos){path='Both';why='Visibility/trust gaps AND operational leakage. DigiStories makes them findable and trusted; SmartOS captures the inquiries that follow.';}
+  else if(ds){path='DigiStories';why='The core problem is being found and trusted online. Operations can hold for now.';}
+  else if(sos){path='SmartOS';why='They are visible enough but leaking inquiries through manual operations.';}
+  else{path='Neither';why='Venue is performing well across diagnostics. Recommend focused internal improvements first.';}
+  return {ds:ds?'Yes':'No',sos:sos?'Yes':'No',path,why};
+}
+function topIssues(s){
+  const arr=[['How findable your hall is online',s.vis,'Google profile and Instagram are too quiet — rebuild the online presence so families can find you.'],
+    ['How much families trust your hall',s.tr,'Few reviews and little real-wedding proof — build review velocity and show real functions.'],
+    ['How well inquiries become bookings',s.conv,'Inquiries arrive but leak before booking — fix response speed and follow-up.'],
+    ['How your office handles inquiries',s.op,'The office runs on memory and paper — set up tracking and follow-up before peak season.'],
+    ['How your bookings & occupancy compare',s.rev,'Off-season dates sit empty — activate corporate and small events to fill them.']];
+  arr.sort((a,b)=>a[1]-b[1]);
+  const out=[arr[0][2],arr[1][2]];
+  const adv=document.querySelectorAll('#compAdvGrid .choice[data-adv="1"].active').length;
+  out.push(adv>0?`Competitors are out-performing you on ${adv} front${adv>1?'s':''}. Close the review and reel gap first.`:arr[2][2]);
+  return out;
+}
+function renderReport(){
+  const s=computeAll();
+  document.getElementById('rep_name').textContent=document.getElementById('v_name').value||'This Venue';
+  document.getElementById('rep_loc').textContent=document.getElementById('v_loc').value||'';
+  const rows=[['Visibility Health',s.vis],['Trust Health',s.tr],['Conversion Health',s.conv],['Operational Health',s.op],['Revenue Health',s.rev],['Competitive Position',s.comp]];
+  const lead=calcClose();
+  document.getElementById('rep_bars').innerHTML=rows.map(([n,v])=>`<div class="score-row"><div class="score-row-top"><span class="score-row-name">${n}</span><span class="score-row-val" style="color:${bcol(v)}">${v}/100 · ${pBand(v)}</span></div><div class="score-track"><div class="score-fill" style="width:${v}%;background:${bcol(v)}"></div></div></div>`).join('')
+    +`<div class="score-row" style="opacity:0.8"><div class="score-row-top"><span class="score-row-name" style="color:var(--color-purple)">🔒 Leadership Readiness</span><span class="score-row-val" style="color:var(--color-purple)">${lead.ld}/100 · internal</span></div><div class="score-track"><div class="score-fill" style="width:${lead.ld}%;background:var(--color-purple)"></div></div></div>`;
+  document.getElementById('rep_overall_val').textContent=s.maturity+'/100';
+  document.getElementById('rep_overall_fill').style.width=s.maturity+'%';
+  document.getElementById('rep_overall_fill').style.background=bcol(s.maturity);
+  const ob=document.getElementById('rep_overall_band');ob.textContent=bandName(s.maturity);ob.style.color=bcol(s.maturity);
+  document.getElementById('rep_priorities').innerHTML=topIssues(s).map(p=>`<li>${p}</li>`).join('');
+  const r=recommendation(s);
+  document.getElementById('rec_ds').textContent=r.ds;
+  document.getElementById('rec_sos').textContent=r.sos;
+  document.getElementById('rec_path').textContent=r.path;
+  document.getElementById('rec_why').textContent=r.why;
+  return s;
+}
+
+/* PRICING */
+let selectedTier={name:'Growth',fee:30000},pilotOn=false;
+function pickTier(el){document.querySelectorAll('.tier').forEach(t=>t.classList.remove('active'));el.classList.add('active');selectedTier={name:el.getAttribute('data-tier'),fee:parseInt(el.getAttribute('data-fee'))||0};}
+function togglePilot(){pilotOn=!pilotOn;document.getElementById('pilotToggle').classList.toggle('active',pilotOn);}
+function refreshPilot(){const o=calcOperations();const show=o.op<50||o.sos>60;document.getElementById('smartosPilot').style.display=show?'block':'none';if(!show){pilotOn=false;document.getElementById('pilotToggle')?.classList.remove('active');}}
+const OBJ=[['"₹15K is a lot for posts."','It\'s not for posts — it\'s for inquiries. One booking covers the whole year.'],['"We get business by word of mouth."','Keep that — it\'s your foundation. This adds a second engine that reaches the families who don\'t already know you.'],['"I don\'t understand social media."','That\'s exactly why we exist. You don\'t touch anything. We shoot, post, reply.'],['"Can you guarantee bookings?"','Nobody honestly can. What we guarantee is that you\'ll finally be visible, consistent, and generating real inquiries.'],['"Let me think about it."','Fair. While you think, your competitor down the road is posting today. Start with Starter for one month. No lock-in.']];
+function renderObjections(){document.getElementById('objections').innerHTML=OBJ.map((o,i)=>`<div class="collapse" id="obj-${i}"><div class="collapse-head" onclick="document.getElementById('obj-${i}').classList.toggle('open')"><span>${o[0]}</span><span>+</span></div><div class="collapse-body"><p style="padding-top:6px;">${o[1]}</p></div></div>`).join('');}
+
+/* REPORT PRINT */
+function planLine(){let l=`${selectedTier.name} · ${selectedTier.fee?('₹'+selectedTier.fee.toLocaleString('en-IN')+'/month'):'Curated pricing'}`;let t=selectedTier.fee;if(pilotOn){l+=`\n+ SmartOS Pilot · ₹10,000/month`;t+=10000;}if(t)l+=`\nTotal monthly fee: ₹${t.toLocaleString('en-IN')}`;l+=`\nPlus your own ad budget (paid separately to Google/Meta).`;return l;}
+function generateReport(){
+  const s=renderReport();
+  document.getElementById('pb_date').textContent=new Date().toLocaleDateString('en-IN',{day:'numeric',month:'long',year:'numeric'});
+  document.getElementById('pb_vname').textContent=document.getElementById('v_name').value||'Venue';
+  const owner=document.getElementById('v_owner').value;
+  document.getElementById('pb_vmeta').textContent=(document.getElementById('v_loc').value||'')+(owner?(' · Prepared for '+owner):'');
+  const rows=[['How findable online',s.vis],['How trusted online',s.tr],['Inquiries → bookings',s.conv],['Office handling',s.op],['Revenue use',s.rev],['Position vs others',s.comp]];
+  document.getElementById('pb_scores').innerHTML=rows.map(([n,v])=>`<div style="border:1px solid #e3e3e3;padding:10px;"><div style="font-size:12px;color:#666;">${n}</div><div style="font-family:'Playfair Display',serif;font-size:20px;color:${bcol(v)}">${v}/100</div><div style="font-size:11px;color:#888;">${pBand(v)}</div></div>`).join('');
+  document.getElementById('pb_overall').textContent=s.maturity;
+  document.getElementById('pb_overall_band').textContent=bandName(s.maturity);
+  document.getElementById('pb_priorities').innerHTML=topIssues(s).map(p=>`<li>${p}</li>`).join('');
+  document.getElementById('pb_revenue').textContent=document.getElementById('rv_total').textContent;
+  document.getElementById('pb_plan').innerHTML=planLine().replace(/\n/g,'<br>');
+  document.getElementById('pb_phone').textContent=document.getElementById('v_phone').value||'91XXXXXXXXXX';
+  document.getElementById('printBrief').style.display='block';
+  setTimeout(()=>{window.print();document.getElementById('printBrief').style.display='none';},120);
+}
+
+/* JSON BRIDGE */
+function exportIntakeJSON(){
+  const vName=document.getElementById('v_name').value.trim();
+  if(!vName){alert('Enter a Venue Name in Step 1 before exporting.');goToStep(0);return;}
+  const s=computeAll();const r=recommendation(s);const lead=calcClose();
+  const intake={
+    business:{name:vName,owner:document.getElementById('v_owner').value.trim(),phone:document.getElementById('v_phone').value.trim(),city:document.getElementById('v_loc').value.trim(),area:document.getElementById('v_loc').value.trim(),type:document.getElementById('v_type').value,capacityMin:parseInt(document.getElementById('v_cap_min').value)||300,capacityMax:parseInt(document.getElementById('v_cap_max').value)||800,email:document.getElementById('v_email').value.trim()},
+    online:{website:document.getElementById('v_website').value.trim(),instagram:document.getElementById('v_instagram').value.trim(),inquiries:document.getElementById('v_inq').value},
+    pricing:{cateringFrom:document.getElementById('v_catering').value.trim()},
+    competitor:{name:document.getElementById('c_name1').value.trim(),name2:document.getElementById('c_name2').value.trim()},
+    scores:{visibility:s.vis,trust:s.tr,conversion:s.conv,operations:s.op,smartosReadiness:s.sos,revenue:s.rev,competitive:s.comp,maturity:s.maturity},
+    revenue:{rangeLow:s.revData.lo,rangeHigh:s.revData.hi,offSeason:s.revData.offOpp},
+    recommendation:r,
+    plan:{tier:selectedTier.name,fee:selectedTier.fee,smartosPilot:pilotOn},
+    leadership:{score:lead.ld,closeProbability:document.getElementById('close_band').textContent,interest:document.getElementById('ld_interest').value,objections:document.getElementById('ld_objections').value.trim()},
+    bca:{member:gidx('bca_member'),lever:gidx('bca_lever'),caterer:document.getElementById('bca_caterer').value.trim(),decorator:document.getElementById('bca_decorator').value.trim(),planner:document.getElementById('bca_planner').value.trim()},
+    founderNotes:document.querySelector('.fn-textarea').value.trim()
+  };
+  const blob=new Blob([JSON.stringify(intake,null,2)],{type:'application/json'});
+  const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download=`${vName.toLowerCase().replace(/[^a-z0-9]+/g,'_')}_intake.json`;document.body.appendChild(a);a.click();document.body.removeChild(a);URL.revokeObjectURL(url);
+}
+
+function toggleNotes(){const n=document.getElementById('founderNotes');n.classList.toggle('open');document.getElementById('fn-icon').textContent=n.classList.contains('open')?'▼':'▲';}
+
+/* LIVE INTEL pipeline pull */
+function initIntel(){
+  const sel=document.getElementById('intel_select');if(!sel)return;
+  if(typeof window.PANELS!=='object'||!window.PANELS)return;
+  Object.keys(window.PANELS).sort((a,b)=>(window.PANELS[a].dmi_score||0)-(window.PANELS[b].dmi_score||0)).forEach(n=>{const o=document.createElement('option');o.value=n;const v=window.PANELS[n];o.textContent=`${n} — ${v.suburb||''} (DMI ${v.dmi_score})`;sel.appendChild(o);});
+}
+function loadIntelRow(){
+  const name=document.getElementById('intel_select').value;if(!name||!window.PANELS||!window.PANELS[name])return;
+  const v=window.PANELS[name];
+  document.getElementById('v_name').value=name;
+  document.getElementById('v_loc').value=v.suburb||'';
+  if(v.territory_rank)document.getElementById('il_territory').value='#'+v.territory_rank.suburb_rank+' of '+v.territory_rank.suburb_total;
+  if(v.digital_silence)document.getElementById('il_silence').value=(v.digital_silence.score)+' (silence index)';
+}
+
+initNav();initIntel();calcVisibility();calcTrust();calcConversion();calcOperations();calcRevenue();calcCompetitive();calcClose();refreshIntelDerived();
+</script>
+</body>
+</html>

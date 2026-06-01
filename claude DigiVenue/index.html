@@ -1,0 +1,866 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>DigiVenue — Google, Instagram & Reviews for Banquet Halls</title>
+  <meta name="description" content="We keep your banquet hall's Google page, Instagram and reviews active — so families find a busy, trusted banquet when they search. Built for banquet owners in Mumbai, Navi Mumbai and Thane.">
+  <meta name="keywords" content="banquet hall Google presence India, wedding venue reviews, DigiStories, DigiVenue, banquet Instagram Mumbai, venue inquiries WhatsApp">
+
+  <meta property="og:title" content="DigiVenue — Google, Instagram & Reviews for Banquet Halls">
+  <meta property="og:description" content="Families look you up before they call. We keep your Google page, Instagram and reviews active — so your banquet looks as good online as it does in person.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/images/hero-banquet.jpg">
+
+  <link rel="canonical" href="https://digivenue.co/">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/pages/home-refined.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "DigiVenue",
+    "description": "We keep banquet halls' Google pages, Instagram and reviews active, so families find a busy, trusted banquet when they search. Real event photography, Google and reviews — handled for you.",
+    "url": "https://digivenue.co",
+    "foundingLocation": "Mumbai, Maharashtra, India",
+    "areaServed": "India"
+  }
+  </script>
+
+  <style>
+    /* ── Discovery flow section ── */
+    .discovery {
+      padding-block: clamp(48px, 6vw, 72px);
+      padding-inline: clamp(28px, 6vw, 80px);
+      background: var(--color-bg);
+      border-bottom: 1px solid var(--color-border);
+      text-align: center;
+    }
+    .discovery__label {
+      display: block;
+      font-family: var(--font-sans);
+      font-size: var(--text-micro);
+      font-weight: var(--weight-semibold);
+      text-transform: uppercase;
+      letter-spacing: var(--ls-badge);
+      color: var(--color-text-muted);
+      margin-bottom: var(--space-6);
+    }
+    .discovery__flow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: var(--space-3);
+      margin-bottom: var(--space-6);
+    }
+    .discovery__flow span {
+      font-family: var(--font-sans);
+      font-size: clamp(13px, 1.2vw, 15px);
+      color: var(--color-text-secondary);
+      letter-spacing: 0.01em;
+    }
+    .discovery__flow em {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: clamp(15px, 1.4vw, 18px);
+      color: var(--color-text-primary);
+    }
+    .discovery__flow .discovery__arrow {
+      color: var(--color-gold);
+      font-size: 12px;
+      opacity: 0.6;
+    }
+    .discovery__note {
+      font-family: var(--font-sans);
+      font-size: clamp(14px, 1.2vw, 16px);
+      color: var(--color-text-muted);
+      max-width: 520px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    /* ── Vision section ── */
+    .vision {
+      padding-block: clamp(56px, 8vw, 96px);
+      background-color: var(--color-bg-deep);
+      border-top: 1px solid var(--color-border);
+      border-bottom: 1px solid var(--color-border);
+    }
+    .vision__inner {
+      max-width: 760px;
+      margin: 0 auto;
+      padding-inline: clamp(28px, 6vw, 80px);
+    }
+    .vision__label {
+      display: block;
+      font-family: var(--font-sans);
+      font-size: var(--text-micro);
+      font-weight: var(--weight-semibold);
+      text-transform: uppercase;
+      letter-spacing: var(--ls-badge);
+      color: var(--color-gold);
+      margin-bottom: var(--space-5);
+    }
+    .vision__headline {
+      font-family: var(--font-serif);
+      font-size: clamp(28px, 3.5vw, 46px);
+      font-weight: var(--weight-medium);
+      line-height: 1.15;
+      letter-spacing: -0.025em;
+      color: var(--color-text-primary);
+      margin-bottom: var(--space-6);
+    }
+    .vision__headline em {
+      font-style: italic;
+      font-weight: var(--weight-regular);
+    }
+    .vision__body {
+      font-family: var(--font-sans);
+      font-size: clamp(16px, 1.3vw, 18px);
+      line-height: 1.75;
+      color: var(--color-text-secondary);
+      margin-bottom: var(--space-5);
+      max-width: 680px;
+    }
+    .vision__body:last-of-type { margin-bottom: 0; }
+
+    /* ── Ecosystem summary section ── */
+    .ecosystem-summary {
+      padding-block: clamp(48px, 7vw, 80px);
+      background-color: var(--color-bg);
+    }
+    .ecosystem-summary__inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding-inline: clamp(28px, 6vw, 80px);
+    }
+    /* The visible layer — DigiStories leads, gold-tinted */
+    .eco-lead {
+      margin-top: var(--space-7);
+      padding: var(--space-1) 0 var(--space-1) var(--space-6);
+      border-left: 2px solid var(--color-gold);
+    }
+    .eco-lead__tag {
+      display: block;
+      font-family: var(--font-sans);
+      font-size: 10px;
+      font-weight: var(--weight-semibold);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--color-gold);
+      margin-bottom: var(--space-3);
+    }
+    .eco-lead__title {
+      font-family: var(--font-serif);
+      font-size: clamp(28px, 3.2vw, 40px);
+      font-weight: var(--weight-medium);
+      color: var(--color-text-primary);
+      margin-bottom: var(--space-3);
+    }
+    .eco-lead__desc {
+      font-family: var(--font-sans);
+      font-size: 16px;
+      line-height: 1.7;
+      color: var(--color-text-secondary);
+      max-width: 60ch;
+      margin: 0;
+    }
+
+    /* The depth underneath — quiet, secondary supporting layers */
+    .eco-quiet__label {
+      display: block;
+      font-family: var(--font-sans);
+      font-size: var(--text-micro);
+      text-transform: uppercase;
+      letter-spacing: var(--ls-badge);
+      color: var(--color-text-muted);
+      margin: var(--space-7) 0 var(--space-5);
+    }
+    .eco-quiet {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: var(--gap-md);
+    }
+    .eco-quiet__item {
+      border-top: 1px solid var(--color-border);
+      padding-top: var(--space-4);
+    }
+    .eco-quiet__name {
+      display: block;
+      font-family: var(--font-serif);
+      font-size: 18px;
+      color: var(--color-text-primary);
+      margin-bottom: var(--space-2);
+    }
+    .eco-quiet__desc {
+      font-family: var(--font-sans);
+      font-size: var(--text-caption);
+      color: var(--color-text-muted);
+      line-height: 1.6;
+      margin: 0;
+    }
+    .eco-quiet__desc em {
+      font-style: normal;
+      color: var(--color-gold);
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      display: inline-block;
+      margin-left: 4px;
+    }
+
+    @media (max-width: 900px) {
+      .eco-quiet { grid-template-columns: 1fr 1fr; gap: var(--space-6); }
+    }
+    @media (max-width: 540px) {
+      .eco-quiet { grid-template-columns: 1fr; }
+    }
+
+    /* Digital ownership — quiet editorial insight */
+    .ownership {
+      padding-block: clamp(56px, 8vw, 96px);
+      background: var(--color-bg);
+      border-top: 1px solid var(--color-border);
+    }
+    .ownership__inner {
+      max-width: 760px;
+      margin-inline: auto;
+      padding-inline: clamp(28px, 6vw, 80px);
+    }
+    .ownership__label {
+      display: block;
+      font-family: var(--font-sans);
+      font-size: 12px;
+      font-weight: var(--weight-medium);
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--color-text-muted);
+      margin-bottom: var(--space-5);
+    }
+    .ownership__headline {
+      font-family: var(--font-serif);
+      font-weight: 300;
+      font-size: clamp(28px, 3.6vw, 46px);
+      line-height: 1.16;
+      letter-spacing: -0.02em;
+      color: var(--color-text-primary);
+      margin-bottom: var(--space-6);
+    }
+    .ownership__headline em {
+      font-style: italic;
+      color: var(--color-accent);
+    }
+    .ownership__body {
+      font-family: var(--font-sans);
+      font-size: 16px;
+      line-height: 1.75;
+      color: var(--color-text-secondary);
+      margin-bottom: var(--space-5);
+    }
+    .ownership__close {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: clamp(18px, 2vw, 24px);
+      line-height: 1.5;
+      color: var(--color-text-primary);
+      border-left: 2px solid var(--color-gold);
+      padding-left: var(--space-5);
+      margin-top: var(--space-7);
+    }
+
+    /* Banquet Status — quiet intelligence-layer hook */
+    .intel {
+      padding-block: clamp(56px, 8vw, 96px);
+      background: var(--color-bg-deep);
+      border-top: 1px solid var(--color-border);
+    }
+    .intel__inner {
+      max-width: 760px;
+      margin-inline: auto;
+      padding-inline: clamp(28px, 6vw, 80px);
+    }
+    .intel__label {
+      display: block;
+      font-family: var(--font-sans);
+      font-size: 12px;
+      font-weight: var(--weight-medium);
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--color-gold);
+      margin-bottom: var(--space-5);
+    }
+    .intel__headline {
+      font-family: var(--font-serif);
+      font-weight: 300;
+      font-size: clamp(28px, 3.6vw, 46px);
+      line-height: 1.16;
+      letter-spacing: -0.02em;
+      color: var(--color-text-primary);
+      margin-bottom: var(--space-6);
+    }
+    .intel__headline em { font-style: italic; color: var(--color-accent); }
+    .intel__body {
+      font-family: var(--font-sans);
+      font-size: 16px;
+      line-height: 1.75;
+      color: var(--color-text-secondary);
+      margin-bottom: var(--space-5);
+    }
+    .intel__close {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: clamp(18px, 2vw, 24px);
+      line-height: 1.5;
+      color: var(--color-text-primary);
+      border-left: 2px solid var(--color-gold);
+      padding-left: var(--space-5);
+      margin-top: var(--space-7);
+    }
+
+    /* What section — sub-paragraph under statement */
+    .what__heading__sub {
+      font-family: var(--font-sans);
+      font-size: 15px;
+      color: var(--color-text-secondary);
+      line-height: 1.65;
+      margin-top: var(--space-5);
+    }
+
+    /* Ecosystem summary headings */
+    .ecosystem-summary__header { text-align: center; margin-bottom: var(--space-8); }
+    .ecosystem-summary__headline {
+      font-family: var(--font-serif);
+      font-size: clamp(28px, 3vw, 42px);
+      font-weight: var(--weight-medium);
+      line-height: 1.2;
+      color: var(--color-text-primary);
+      margin-bottom: var(--space-4);
+    }
+    .ecosystem-summary__headline em { font-style: italic; font-weight: var(--weight-regular); }
+    .ecosystem-summary__sub {
+      font-family: var(--font-sans);
+      font-size: var(--text-small);
+      color: var(--color-text-secondary);
+      line-height: 1.65;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .ecosystem-summary__footer {
+      text-align: center;
+      margin-top: var(--space-7);
+    }
+    .ecosystem-summary__footer a {
+      font-family: var(--font-sans);
+      font-size: var(--text-caption);
+      color: var(--color-gold);
+      text-decoration: none;
+      font-weight: var(--weight-semibold);
+      letter-spacing: 0.04em;
+    }
+    .ecosystem-summary__footer a:hover { text-decoration: underline; }
+  </style>
+</head>
+
+<body class="home">
+
+  <nav class="site-nav" role="navigation" aria-label="Primary navigation">
+    <a href="index.html" class="nav-logo" aria-label="DigiVenue — Home">
+      <img src="assets/images/logo-horizontal.svg" class="nav-logo__img" alt="DigiVenue">
+    </a>
+    <ul class="nav-links" role="list">
+      <li><a href="pages/digistories.html" class="nav-link">DigiStories</a></li>
+      <li><a href="pages/results.html"     class="nav-link">Results</a></li>
+      <li><a href="pages/ecosystem.html"   class="nav-link">Ecosystem</a></li>
+      <li><a href="pages/about.html"       class="nav-link">About</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="pages/audit.html" class="btn btn--outline btn--sm">Free Check &rarr;</a>
+    </div>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-drawer">
+      <span class="nav-toggle__bar" aria-hidden="true"></span>
+      <span class="nav-toggle__bar" aria-hidden="true"></span>
+      <span class="nav-toggle__bar" aria-hidden="true"></span>
+    </button>
+    <div class="nav-mobile-drawer" id="mobile-drawer" role="dialog" aria-label="Mobile navigation">
+      <a href="pages/digistories.html">DigiStories</a>
+      <a href="pages/results.html">Results</a>
+      <a href="pages/ecosystem.html">Ecosystem</a>
+      <a href="pages/about.html">About</a>
+      <div class="nav-mobile-cta">
+        <a href="pages/audit.html" class="btn btn--outline">Free Check &rarr;</a>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- I · Hero -->
+  <!--
+    IMAGE: An empty Mumbai banquet hall in the hour before guests arrive.
+    Warm tungsten light. Mandap half-set. Staff placing chairs in the background.
+    Documentary, anticipatory. A film still — not a brochure photograph.
+  -->
+  <header class="hero movement" role="banner">
+    <div class="hero__bg" aria-hidden="true">
+      <img src="assets/images/hero-banquet.jpg"
+           alt="A Mumbai banquet hall in the quiet hour before guests arrive."
+           width="2000" height="1333"
+           fetchpriority="high"
+           decoding="async">
+    </div>
+    <div class="hero__veil" aria-hidden="true"></div>
+
+    <div class="hero__top">
+      <span>DigiVenue</span>
+      <span>Built in Mumbai &middot; For banquet halls across India</span>
+    </div>
+
+    <div class="hero__center" aria-hidden="true"></div>
+
+    <div class="hero__bottom">
+      <div class="hero__title-block">
+        <h1 class="hero__title">
+          When a family Googles<br>
+          your banquet hall,<br>
+          <em>what do they find?</em>
+        </h1>
+        <p class="hero__anchor">
+          By the time a family calls you, they've already seen your Instagram, read your reviews, and looked at your Google photos. The visit only confirms what they decided online. We make sure what they find looks as good as your banquet really is.
+        </p>
+      </div>
+      <a href="pages/audit.html" class="hero__cta">See what families see &nbsp;&rarr;</a>
+    </div>
+
+    <span class="hero__still" aria-hidden="true">
+      Banquet hall, Mumbai &middot; The hour before guests arrive
+    </span>
+  </header>
+
+
+  <!-- II · The held truth -->
+  <section class="movement pause" aria-label="The quiet truth">
+    <p class="pause__line" style="margin-bottom: var(--space-6);">
+      A banquet can look beautiful in person<br>and still look <em>dead online.</em>
+    </p>
+    <p class="pause__caption">
+      Your banquet might be the best in the area. Booked solid next Saturday. But a family scrolling at 11 at night doesn't see any of that. They see a Google page that hasn't changed in two years, and they quietly move on. You never even hear about the booking you lost.
+    </p>
+  </section>
+
+
+  <!-- III · The discovery journey -->
+  <section class="discovery movement fade-up" aria-label="How families find venues today">
+    <span class="discovery__label">How families choose a banquet today</span>
+    <div class="discovery__flow">
+      <div class="discovery__node">
+        <div class="discovery__node__dot"></div>
+        <span class="discovery__node__label">Instagram</span>
+      </div>
+      <div class="discovery__connector" aria-hidden="true"></div>
+      <div class="discovery__node">
+        <div class="discovery__node__dot"></div>
+        <span class="discovery__node__label">Google Search</span>
+      </div>
+      <div class="discovery__connector" aria-hidden="true"></div>
+      <div class="discovery__node">
+        <div class="discovery__node__dot"></div>
+        <span class="discovery__node__label">Google Reviews</span>
+      </div>
+      <div class="discovery__connector" aria-hidden="true"></div>
+      <div class="discovery__node">
+        <div class="discovery__node__dot"></div>
+        <span class="discovery__node__label">Photos</span>
+      </div>
+      <div class="discovery__connector" aria-hidden="true"></div>
+      <div class="discovery__node">
+        <div class="discovery__node__dot"></div>
+        <span class="discovery__node__label">WhatsApp</span>
+      </div>
+      <div class="discovery__connector" aria-hidden="true"></div>
+      <div class="discovery__node">
+        <div class="discovery__node__dot"></div>
+        <span class="discovery__node__label">Visit</span>
+      </div>
+      <div class="discovery__connector" aria-hidden="true"></div>
+      <div class="discovery__node discovery__node--final">
+        <div class="discovery__node__dot discovery__node__dot--pulse"></div>
+        <span class="discovery__node__label"><em>Booking</em></span>
+      </div>
+    </div>
+    <p class="discovery__note">
+      In one evening, a family will shortlist three or four banquets — forwarding Google pages to relatives, zooming into the food counters, reading last month's reviews. Most of the deciding happens here, before anyone visits a single banquet.
+    </p>
+  </section>
+
+  <!-- Activity ticker — endless scroll of ongoing work -->
+  <div class="activity-ticker" aria-label="What DigiVenue does every week">
+    <div class="activity-ticker__track">
+      <span>Real function photographed</span><span class="activity-ticker__sep">·</span>
+      <span>Google page updated</span><span class="activity-ticker__sep">·</span>
+      <span>New reel published</span><span class="activity-ticker__sep">·</span>
+      <span>Review replied to</span><span class="activity-ticker__sep">·</span>
+      <span>Photos added to profile</span><span class="activity-ticker__sep">·</span>
+      <span>Enquiry followed up</span><span class="activity-ticker__sep">·</span>
+      <span>Mandap photographed</span><span class="activity-ticker__sep">·</span>
+      <span>WhatsApp story posted</span><span class="activity-ticker__sep">·</span>
+      <span>Review request sent</span><span class="activity-ticker__sep">·</span>
+      <span>Décor reel edited</span><span class="activity-ticker__sep">·</span>
+      <span>Real function photographed</span><span class="activity-ticker__sep">·</span>
+      <span>Google page updated</span><span class="activity-ticker__sep">·</span>
+      <span>New reel published</span><span class="activity-ticker__sep">·</span>
+      <span>Review replied to</span><span class="activity-ticker__sep">·</span>
+      <span>Photos added to profile</span><span class="activity-ticker__sep">·</span>
+      <span>Enquiry followed up</span><span class="activity-ticker__sep">·</span>
+      <span>Mandap photographed</span><span class="activity-ticker__sep">·</span>
+      <span>WhatsApp story posted</span><span class="activity-ticker__sep">·</span>
+      <span>Review request sent</span><span class="activity-ticker__sep">·</span>
+      <span>Décor reel edited</span><span class="activity-ticker__sep">·</span>
+    </div>
+  </div>
+
+  <!-- IV · DigiStories — the hero product -->
+  <section class="movement what" id="digistories" aria-label="DigiStories — what we do">
+    <div class="what__grid">
+
+      <div class="what__heading">
+        <span class="eyebrow">What we do</span>
+        <p class="statement">
+          Not just social media.<br><em>The work that actually brings calls.</em>
+        </p>
+        <p class="what__heading__sub">
+          We look after everything a family sees before they call — your Instagram, your Google photos, your reviews — so your banquet looks as alive online as it feels in person.
+        </p>
+      </div>
+
+      <div class="what__list">
+        <article class="what__item">
+          <span class="what__item__num">01 &middot; Instagram &amp; Reels</span>
+          <h3 class="what__item__title">Real weddings, not stock photos.</h3>
+          <p class="what__item__body">
+            Your functions, photographed and posted every week — the mandap, the décor, the crowd. Exactly what families look for when they're deciding which banquet to visit. Real events at your banquet, never stock pictures.
+          </p>
+          <p class="what__item__result"><strong>Outcome</strong> &nbsp;&middot;&nbsp; an active Instagram families actually trust</p>
+        </article>
+
+        <article class="what__item">
+          <span class="what__item__num">02 &middot; Google Presence</span>
+          <h3 class="what__item__title">A Google page that looks alive.</h3>
+          <p class="what__item__body">
+            Your Google profile, kept fresh every week. New photos added, reviews replied to, timings and details correct. When a family searches your name, they find a banquet that's clearly busy — not a page no one has touched in three years.
+          </p>
+          <p class="what__item__result"><strong>Outcome</strong> &nbsp;&middot;&nbsp; more calls and direction requests straight from Google</p>
+        </article>
+
+        <article class="what__item">
+          <span class="what__item__num">03 &middot; Venue Photography</span>
+          <h3 class="what__item__title">Your real functions, on camera.</h3>
+          <p class="what__item__body">
+            Our team comes to your banquet on event days and captures the décor, the setup, the moments families want to see. The photos and reels go up on Google, Instagram and WhatsApp the same week — while it's all fresh.
+          </p>
+          <p class="what__item__result"><strong>Outcome</strong> &nbsp;&middot;&nbsp; 8&ndash;12 real wedding photos added to your page every month</p>
+        </article>
+
+        <article class="what__item">
+          <span class="what__item__num">04 &middot; Reviews &amp; Trust</span>
+          <h3 class="what__item__title">Reviews families actually read.</h3>
+          <p class="what__item__body">
+            After each function, we follow up with the family and bring back an honest review. Over a season they add up — and these are the reviews families read before they decide who to call.
+          </p>
+          <p class="what__item__result"><strong>Outcome</strong> &nbsp;&middot;&nbsp; a fresh review every 2&ndash;3 weeks</p>
+        </article>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- V · The operational truth -->
+  <section class="movement truth" aria-label="The competitive reality">
+    <p class="truth__line">
+      Today, families trust<br>
+      <em>what they see online.</em>
+    </p>
+  </section>
+
+
+  <!-- V.V · Digital ownership — quiet platform-dependency insight -->
+  <section class="ownership movement" aria-label="Owning your digital presence">
+    <div class="ownership__inner">
+      <span class="ownership__label fade-up">Worth thinking about</span>
+      <h2 class="ownership__headline fade-up delay-1">
+        You built the banquet.<br><em>The first impression online shouldn't belong to someone else.</em>
+      </h2>
+      <p class="ownership__body fade-up delay-2">
+        Families still look for your banquet by name — on Google, on Instagram, asking relatives. But often that search goes through a listing website or an agent first. You did the hard work of building the banquet over the years. That first impression online should be yours.
+      </p>
+      <p class="ownership__body fade-up delay-2">
+        Listing websites have their place — they do help families find banquets. The problem is leaning on them completely. When your own Google page looks empty, families end up booking through a middleman, and you pay commission to reach people who were already looking for you.
+      </p>
+      <p class="ownership__close fade-up delay-3">
+        This isn't about fighting those websites. It's about your own banquet looking as good online as it does in person — so families can come to you directly.
+      </p>
+    </div>
+  </section>
+
+
+  <!-- VI · Proof — prototype venues -->
+  <!--
+    HONEST PROOF SLOT — pre-launch.
+    These two venues run DigiStories at prototype stage. No metrics
+    are claimed yet. Once you have written permission and real Google
+    Business Profile figures (reviews, photos, calls), a quote + a
+    before/after stat row can replace the capability list below.
+  -->
+  <section class="movement proof" id="proof" aria-label="Prototype venues">
+    <div class="proof__inner">
+
+      <p class="proof__quote">
+        We haven't launched widely yet. But the work already runs — quietly, every week — for two banquet halls in Navi Mumbai. Real functions photographed, Google pages kept active, families finding a banquet that looks alive when they search.
+      </p>
+
+      <p class="proof__attr">
+        <strong>Running now &middot; our first banquets</strong>
+      </p>
+
+      <div class="proof__line">
+        <div>
+          <span class="proof__venue__name">IES MLA Hall</span>
+          <span class="proof__line__l">Vashi, Navi Mumbai</span>
+        </div>
+        <div>
+          <span class="proof__venue__name">Swayambhu Ganesh Sabhagruh</span>
+          <span class="proof__line__l">Jui Nagar, Navi Mumbai</span>
+        </div>
+      </div>
+
+      <p class="proof__what">
+        Every week for them: real event photography, fresh Google and Instagram activity, reviews followed up — and a page that finally looks as alive as the banquet itself.
+      </p>
+
+    </div>
+  </section>
+
+  <!-- Stats row — the reality in three numbers -->
+  <section class="stats-row" aria-label="Why online presence matters">
+    <div class="stats-row__inner">
+      <div class="stats-row__item fade-up">
+        <div class="stats-row__num">
+          <span class="countup" data-target="78">0</span><span class="stats-row__suffix">%</span>
+        </div>
+        <p class="stats-row__label">of families research a banquet online before visiting in person</p>
+      </div>
+      <div class="stats-row__divider" aria-hidden="true"></div>
+      <div class="stats-row__item fade-up delay-1">
+        <div class="stats-row__num">
+          <span class="countup" data-target="18">0</span><span class="stats-row__suffix"> mo</span>
+        </div>
+        <p class="stats-row__label">average since a Google page was last updated</p>
+      </div>
+      <div class="stats-row__divider" aria-hidden="true"></div>
+      <div class="stats-row__item fade-up delay-2">
+        <div class="stats-row__num">
+          <span class="countup" data-target="4">0</span><span class="stats-row__suffix">–5</span>
+        </div>
+        <p class="stats-row__label">banquets shortlisted by a family before anyone visits</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- VI.V · Quiet ecosystem implication — DigiStories leads, depth underneath -->
+  <section class="ecosystem-summary movement" id="ecosystem" aria-label="More than content — the DigiVenue ecosystem">
+    <div class="ecosystem-summary__inner">
+      <div class="ecosystem-summary__header">
+        <span class="eyebrow">More than photos and posts</span>
+        <h2 class="ecosystem-summary__headline">
+          Most agencies just post photos.<br><em>We do the work that brings the booking.</em>
+        </h2>
+        <p class="ecosystem-summary__sub">
+          Plenty of people will shoot reels or run an Instagram. Very few have sat in a banquet office watching enquiries go unanswered and dates clash on the calendar. What families see online is the start. We quietly handle the rest too.
+        </p>
+      </div>
+
+      <!-- The visible layer — DigiStories leads -->
+      <div class="eco-lead">
+        <span class="eco-lead__tag">What families see &middot; launching now</span>
+        <h3 class="eco-lead__title">DigiStories</h3>
+        <p class="eco-lead__desc">
+          Your Google page, Instagram, real wedding photos and reviews — kept active, so your banquet looks as busy as it is the moment a family searches. Every banquet starts here.
+        </p>
+      </div>
+
+      <!-- The depth underneath — quiet, secondary -->
+      <span class="eco-quiet__label">What we also handle, quietly</span>
+      <div class="eco-quiet">
+        <div class="eco-quiet__item">
+          <span class="eco-quiet__name">SmartOS</span>
+          <p class="eco-quiet__desc">Inquiries, bookings and follow-ups — handled. <em>Operational pilot.</em></p>
+        </div>
+        <div class="eco-quiet__item">
+          <span class="eco-quiet__name">DigiNetwork</span>
+          <p class="eco-quiet__desc">Trusted caterers, decorators and planners. Quietly connected. <em>Invitation-only.</em></p>
+        </div>
+        <div class="eco-quiet__item">
+          <span class="eco-quiet__name">DigiMarket</span>
+          <p class="eco-quiet__desc">Decor and supplies, at fairer rates. <em>Quietly building.</em></p>
+        </div>
+        <div class="eco-quiet__item">
+          <span class="eco-quiet__name">DigiShaadi</span>
+          <p class="eco-quiet__desc">Where families find real banquets directly. <em>On the horizon.</em></p>
+        </div>
+      </div>
+
+      <div class="ecosystem-summary__footer">
+        <a href="pages/ecosystem.html">See how it all connects &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- VII · Vision — why this company exists -->
+  <section class="vision movement" aria-label="Why DigiVenue exists">
+    <div class="vision__inner">
+      <span class="vision__label fade-up">Why DigiVenue exists</span>
+      <h2 class="vision__headline fade-up delay-1">
+        Built by someone who<br>
+        <em>actually ran the banquet.</em>
+      </h2>
+      <p class="vision__body fade-up delay-2">
+        DigiVenue was started by Rohit Nate — thirteen years inside banquet halls, catering and wedding operations across Maharashtra. Not startup theory. The kind of experience that comes from managing bookings, sorting out vendor disputes, and watching good banquets stay invisible online.
+      </p>
+      <p class="vision__body fade-up delay-2">
+        Every platform in this business was built for couples, investors, or commissions. Nobody built for the owner — the person who actually runs the place. That's who we build for.
+      </p>
+      <p class="vision__body fade-up delay-3">
+        Most banquets start with us through DigiStories. SmartOS quietly runs the day-to-day behind it — built for the people who run banquets, not the ones who only list them.
+      </p>
+    </div>
+  </section>
+
+
+  <!-- VIII · Places -->
+  <section class="movement places" aria-label="Where we work">
+    <p class="places__line">
+      Built in Mumbai &middot; for banquet halls across India.
+    </p>
+  </section>
+
+
+  <!-- Growth chart — what steady work looks like over time -->
+  <section class="movement growth-viz" aria-label="What six months of active presence looks like">
+    <div class="growth-viz__inner">
+      <span class="eyebrow">A typical first season</span>
+      <h2 class="growth-viz__head fade-up">
+        What happens when your banquet<br><em>starts showing up online.</em>
+      </h2>
+      <div class="growth-viz__chart fade-up delay-1">
+        <div class="growth-viz__yaxis" aria-hidden="true">
+          <span>High</span>
+          <span>Mid</span>
+          <span>Low</span>
+        </div>
+        <div class="growth-viz__plot">
+          <svg class="growth-viz__svg" viewBox="0 0 640 200" preserveAspectRatio="none" aria-hidden="true">
+            <defs>
+              <linearGradient id="areaGrad" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#C5A059" stop-opacity="0.18"/>
+                <stop offset="100%" stop-color="#C5A059" stop-opacity="0.0"/>
+              </linearGradient>
+              <filter id="glow">
+                <feGaussianBlur stdDeviation="2.5" result="blur"/>
+                <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+              </filter>
+            </defs>
+            <!-- Grid lines -->
+            <line x1="0" y1="40"  x2="640" y2="40"  class="gv-grid"/>
+            <line x1="0" y1="100" x2="640" y2="100" class="gv-grid"/>
+            <line x1="0" y1="160" x2="640" y2="160" class="gv-grid"/>
+            <!-- Before line (flat / dormant) -->
+            <polyline class="gv-line gv-line--before"
+              points="0,162 107,164 213,162 320,165 427,162 533,164 640,163"/>
+            <!-- Area fill under growth line -->
+            <polygon class="gv-area"
+              points="0,165 107,148 213,122 320,90 427,62 533,40 640,26 640,200 0,200"/>
+            <!-- Growth line -->
+            <polyline class="gv-line gv-line--after"
+              points="0,165 107,148 213,122 320,90 427,62 533,40 640,26"/>
+            <!-- Start dot -->
+            <circle cx="0"   cy="165" r="4" class="gv-dot gv-dot--start"/>
+            <!-- End dot with pulse -->
+            <circle cx="640" cy="26"  r="5" class="gv-dot gv-dot--end" filter="url(#glow)">
+              <animate attributeName="r"       values="5;9;5"   dur="2.4s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values="1;0.4;1" dur="2.4s" repeatCount="indefinite"/>
+            </circle>
+          </svg>
+          <div class="growth-viz__xaxis" aria-hidden="true">
+            <span>Month 1</span>
+            <span>Month 2</span>
+            <span>Month 3</span>
+            <span>Month 4</span>
+            <span>Month 5</span>
+            <span>Month 6</span>
+          </div>
+        </div>
+      </div>
+      <div class="growth-viz__legend fade-up delay-2" aria-hidden="true">
+        <span class="gv-leg gv-leg--before">Without DigiStories</span>
+        <span class="gv-leg gv-leg--after">With DigiStories</span>
+      </div>
+      <p class="growth-viz__caption fade-up delay-2">Google Business Profile visibility — estimated trajectory. Not a guarantee.</p>
+    </div>
+  </section>
+
+
+  <!-- VIII.V · Banquet Status — intelligence-layer hook (implies depth, hides method) -->
+  <section class="intel movement" aria-label="A free check" style="padding-bottom: var(--space-4);">
+    <div class="intel__inner">
+      <span class="intel__label fade-up">A free check</span>
+      <h2 class="intel__headline fade-up delay-1">
+        See your banquet<br><em>the way a family sees it online.</em>
+      </h2>
+      <p class="intel__body fade-up delay-2">
+        You know your banquet by its kitchen and its calendar. A family knows it by your Google page at 11 at night — the photos, the reviews, how long since the last post. That page decides whether they call. We'll show you exactly what they see, and where enquiries are slipping away. Most owners have never seen it laid out.
+      </p>
+    </div>
+  </section>
+
+
+  <!-- IX · Invitation (action for the closing check) -->
+  <section class="movement invitation" id="visibility-check" aria-label="Free check" style="padding-top: var(--space-4);">
+    <a href="pages/audit.html" class="invitation__cta">
+      Get a free check &nbsp;&rarr;
+    </a>
+    <span class="invitation__note">
+      Within 24 hours &middot; no sign-up &middot; or <a href="https://wa.me/919819576256?text=Hi%2C%20I'd%20like%20a%20free%20check%20of%20my%20banquet%20banquet%20online." target="_blank" rel="noopener noreferrer" class="invitation__wa">message us on WhatsApp</a>
+    </span>
+  </section>
+
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-bar">
+        <span class="footer-bar__brand">
+          <img src="assets/images/logo-horizontal.svg" class="footer-logo__img" alt="DigiVenue">
+        </span>
+        <nav class="footer-bar__links" aria-label="Footer navigation">
+          <a href="pages/digistories.html">DigiStories</a>
+          <a href="pages/results.html">Results</a>
+          <a href="pages/ecosystem.html">Ecosystem</a>
+          <a href="pages/about.html">About</a>
+          <a href="https://wa.me/919819576256?text=I%20want%20to%20know%20more%20about%20DigiVenue%20for%20my%20venue." target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        </nav>
+        <span class="footer-bar__meta">&copy; 2026 DigiVenue &middot; Built in Mumbai</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
+

@@ -1,0 +1,10 @@
+# Never commit the real API key
+configs/secrets.local.json
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Local database
+database/*.db

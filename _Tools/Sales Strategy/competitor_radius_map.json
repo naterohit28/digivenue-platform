@@ -1,0 +1,834 @@
+{
+  "Swagat Banquet Hall": {
+    "venue_name": "Swagat Banquet Hall",
+    "suburb": "Goregaon",
+    "current_reviews": 5,
+    "competitor_name": "Secondary Rival",
+    "competitor_reviews": 4,
+    "google_review_deficit": 0
+  },
+  "Swatantryaveer Savarkar Sabhagriha": {
+    "venue_name": "Swatantryaveer Savarkar Sabhagriha",
+    "suburb": "Shivaji Park",
+    "current_reviews": 5,
+    "competitor_name": "Dadar Gymkhana Banquets",
+    "competitor_reviews": 360,
+    "google_review_deficit": 355
+  },
+  "Kohinoor Hall": {
+    "venue_name": "Kohinoor Hall",
+    "suburb": "Dadar",
+    "current_reviews": 8,
+    "competitor_name": "Royal Symphony Banquet",
+    "competitor_reviews": 325,
+    "google_review_deficit": 317
+  },
+  "Mayfair Banquets": {
+    "venue_name": "Mayfair Banquets",
+    "suburb": "Worli",
+    "current_reviews": 36,
+    "competitor_name": "Jewel of India (Jade Ballroom)",
+    "competitor_reviews": 44,
+    "google_review_deficit": 8
+  },
+  "Jewel of India (Jade Ballroom)": {
+    "venue_name": "Jewel of India (Jade Ballroom)",
+    "suburb": "Worli",
+    "current_reviews": 44,
+    "competitor_name": "Secondary Rival",
+    "competitor_reviews": 35,
+    "google_review_deficit": 0
+  },
+  "Ramee Guestline Banquets": {
+    "venue_name": "Ramee Guestline Banquets",
+    "suburb": "Dadar",
+    "current_reviews": 52,
+    "competitor_name": "Royal Symphony Banquet",
+    "competitor_reviews": 325,
+    "google_review_deficit": 273
+  },
+  "Ahilyadevi Sabhagruh": {
+    "venue_name": "Ahilyadevi Sabhagruh",
+    "suburb": "Dadar",
+    "current_reviews": 60,
+    "competitor_name": "Royal Symphony Banquet",
+    "competitor_reviews": 325,
+    "google_review_deficit": 265
+  },
+  "Lala Lajpatrai Hall": {
+    "venue_name": "Lala Lajpatrai Hall",
+    "suburb": "Mahalaxmi",
+    "current_reviews": 68,
+    "competitor_name": "Secondary Rival",
+    "competitor_reviews": 54,
+    "google_review_deficit": 0
+  },
+  "Royal Symphony Banquet": {
+    "venue_name": "Royal Symphony Banquet",
+    "suburb": "Malad East",
+    "current_reviews": 36,
+    "competitor_name": "Secondary Rival",
+    "competitor_reviews": 28,
+    "google_review_deficit": 0
+  },
+  "Dadar Gymkhana Banquets": {
+    "venue_name": "Dadar Gymkhana Banquets",
+    "suburb": "Shivaji Park",
+    "current_reviews": 360,
+    "competitor_name": "Secondary Rival",
+    "competitor_reviews": 288,
+    "google_review_deficit": 0
+  },
+  "Sharda Sabhagriha": {
+    "venue_name": "Sharda Sabhagriha",
+    "suburb": "Dadar",
+    "current_reviews": 2,
+    "competitor_name": "Royal Symphony Banquet",
+    "competitor_reviews": 325,
+    "google_review_deficit": 323
+  },
+  "P. L. Deshpande Mini Hall": {
+    "venue_name": "P. L. Deshpande Mini Hall",
+    "suburb": "Prabhadevi",
+    "current_reviews": 5,
+    "competitor_name": "Secondary Rival",
+    "competitor_reviews": 4,
+    "google_review_deficit": 0
+  },
+  "Maharashtra College Hall": {
+    "venue_name": "Maharashtra College Hall",
+    "suburb": "Byculla",
+    "current_reviews": 8,
+    "competitor_name": "Secondary Rival",
+    "competitor_reviews": 6,
+    "google_review_deficit": 0
+  },
+  "Bombay Y.M.C.A. Banquets": {
+    "venue_name": "Bombay Y.M.C.A. Banquets",
+    "suburb": "Colaba",
+    "current_reviews": 36,
+    "competitor_name": "Wodehouse Gymkhana Banquets",
+    "competitor_reviews": 68,
+    "google_review_deficit": 32
+  },
+  "Royal Garden Banquet": {
+    "venue_name": "Royal Garden Banquet",
+    "suburb": "Dadar",
+    "current_reviews": 44,
+    "competitor_name": "Royal Symphony Banquet",
+    "competitor_reviews": 325,
+    "google_review_deficit": 281
+  },
+  "Hindu Gymkhana Grounds": {
+    "venue_name": "Hindu Gymkhana Grounds",
+    "suburb": "Marine Drive",
+    "current_reviews": 52,
+    "competitor_name": "Parsi Gymkhana Grounds",
+    "competitor_reviews": 60,
+    "google_review_deficit": 8
+  },
+  "Parsi Gymkhana Grounds": {
+    "venue_name": "Parsi Gymkhana Grounds",
+    "suburb": "Marine Drive",
+    "current_reviews": 60,
+    "competitor_name": "Secondary Rival",
+    "competitor_reviews": 48,
+    "google_review_deficit": 0
+  },
+  "Wodehouse Gymkhana Banquets": {
+    "venue_name": "Wodehouse Gymkhana Banquets",
+    "suburb": "Colaba",
+    "current_reviews": 68,
+    "competitor_name": "Secondary Rival",
+    "competitor_reviews": 54,
+    "google_review_deficit": 0
+  },
+  "Vivette Luxury Banquets": {
+    "venue_name": "Vivette Luxury Banquets",
+    "suburb": "Malad West",
+    "current_reviews": 325,
+    "competitor_name": "Evershine Banquets",
+    "competitor_reviews": 360,
+    "google_review_deficit": 35
+  },
+  "Evershine Banquets": {
+    "venue_name": "Evershine Banquets",
+    "suburb": "Malad West",
+    "current_reviews": 360,
+    "competitor_name": "Secondary Rival",
+    "competitor_reviews": 288,
+    "google_review_deficit": 0
+  },
+  "Merchant Banquet Hall": {
+    "venue_name": "Merchant Banquet Hall",
+    "suburb": "Malad West",
+    "current_reviews": 2,
+    "competitor_name": "Evershine Banquets",
+    "competitor_reviews": 360,
+    "google_review_deficit": 358
+  },
+  "Golden Leaf Banquet": {
+    "venue_name": "Golden Leaf Banquet",
+    "suburb": "Malad West",
+    "current_reviews": 5,
+    "competitor_name": "Evershine Banquets",
+    "competitor_reviews": 360,
+    "google_review_deficit": 355
+  },
+  "Royal Orchid Banquets": {
+    "venue_name": "Royal Orchid Banquets",
+    "suburb": "Chembur",
+    "current_reviews": 8,
+    "competitor_name": "The Acres Club",
+    "competitor_reviews": 36,
+    "google_review_deficit": 28
+  },
+  "The Acres Club": {
+    "venue_name": "The Acres Club",
+    "suburb": "Chembur",
+    "current_reviews": 36,
+    "competitor_name": "Secondary Rival",
+    "competitor_reviews": 28,
+    "google_review_deficit": 0
+  },
+  "GCC Hotel and Club": {
+    "venue_name": "GCC Hotel and Club",
+    "suburb": "Mira Road",
+    "current_reviews": 44,
+    "competitor_name": "Secondary Rival",
+    "competitor_reviews": 35,
+    "google_review_deficit": 0
+  },
+  "Juhu Club Millennium": {
+    "venue_name": "Juhu Club Millennium",
+    "suburb": "Juhu",
+    "current_reviews": 52,
+    "competitor_name": "Secondary Rival",
+    "competitor_reviews": 41,
+    "google_review_deficit": 0
+  },
+  "Goldfinch Banquets": {
+    "venue_name": "Goldfinch Banquets",
+    "suburb": "Andheri East",
+    "current_reviews": 60,
+    "competitor_name": "VITS Hotel Banquets",
+    "competitor_reviews": 325,
+    "google_review_deficit": 265
+  },
+  "Tunga Paradise Banquet": {
+    "venue_name": "Tunga Paradise Banquet",
+    "suburb": "Andheri East",
+    "current_reviews": 68,
+    "competitor_name": "VITS Hotel Banquets",
+    "competitor_reviews": 325,
+    "google_review_deficit": 257
+  },
+  "VITS Hotel Banquets": {
+    "venue_name": "VITS Hotel Banquets",
+    "suburb": "Andheri East",
+    "current_reviews": 325,
+    "competitor_name": "Secondary Rival",
+    "competitor_reviews": 260,
+    "google_review_deficit": 0
+  },
+  "Peninsula Grand Banquets": {
+    "venue_name": "Peninsula Grand Banquets",
+    "suburb": "Sakinaka",
+    "current_reviews": 360,
+    "competitor_name": "Secondary Rival",
+    "competitor_reviews": 288,
+    "google_review_deficit": 0
+  },
+  "Kohinoor Continental Banquets": {
+    "venue_name": "Kohinoor Continental Banquets",
+    "suburb": "Andheri East",
+    "current_reviews": 2,
+    "competitor_name": "VITS Hotel Banquets",
+    "competitor_reviews": 325,
+    "google_review_deficit": 323
+  },
+  "Imperial Hall": {
+    "venue_name": "Imperial Hall",
+    "suburb": "Ghatkopar",
+    "current_reviews": 8,
+    "competitor_name": "Secondary Rival",
+    "competitor_reviews": 6,
+    "google_review_deficit": 0
+  },
+  "Elegance Banquet": {
+    "venue_name": "Elegance Banquet",
+    "suburb": "Borivali",
+    "current_reviews": 44,
+    "competitor_name": "Secondary Rival",
+    "competitor_reviews": 35,
+    "google_review_deficit": 0
+  },
+  "Sumati Hall": {
+    "venue_name": "Sumati Hall",
+    "suburb": "Ghatkopar East",
+    "current_reviews": 52,
+    "competitor_name": "Secondary Rival",
+    "competitor_reviews": 41,
+    "google_review_deficit": 0
+  },
+  "Utsav Banquet Hall": {
+    "venue_name": "Utsav Banquet Hall",
+    "suburb": "Bhandup",
+    "current_reviews": 60,
+    "competitor_name": "Dreamland Banquet Hall",
+    "competitor_reviews": 68,
+    "google_review_deficit": 8
+  },
+  "Dreamland Banquet Hall": {
+    "venue_name": "Dreamland Banquet Hall",
+    "suburb": "Bhandup",
+    "current_reviews": 68,
+    "competitor_name": "Secondary Rival",
+    "competitor_reviews": 54,
+    "google_review_deficit": 0
+  },
+  "The Gateway Banquet": {
+    "venue_name": "The Gateway Banquet",
+    "suburb": "Mulund West",
+    "current_reviews": 325,
+    "competitor_name": "Secondary Rival",
+    "competitor_reviews": 260,
+    "google_review_deficit": 0
+  },
+  "Shehnai Banquet Hall": {
+    "venue_name": "Shehnai Banquet Hall",
+    "suburb": "Mulund East",
+    "current_reviews": 360,
+    "competitor_name": "Secondary Rival",
+    "competitor_reviews": 288,
+    "google_review_deficit": 0
+  },
+  "Blossom Banquet Hall": {
+    "venue_name": "Blossom Banquet Hall",
+    "suburb": "Kurla",
+    "current_reviews": 2,
+    "competitor_name": "Secondary Rival",
+    "competitor_reviews": 1,
+    "google_review_deficit": 0
+  },
+  "Club Emerald Banquets": {
+    "venue_name": "Club Emerald Banquets",
+    "suburb": "Chembur",
+    "current_reviews": 5,
+    "competitor_name": "The Acres Club",
+    "competitor_reviews": 36,
+    "google_review_deficit": 31
+  },
+  "GCC Club Lawn": {
+    "venue_name": "GCC Club Lawn",
+    "suburb": "Mira Road",
+    "current_reviews": 8,
+    "competitor_name": "GCC Hotel and Club",
+    "competitor_reviews": 44,
+    "google_review_deficit": 36
+  },
+  "Sapphire Banquet": {
+    "venue_name": "Sapphire Banquet",
+    "suburb": "Kanjurmarg",
+    "current_reviews": 36,
+    "competitor_name": "Secondary Rival",
+    "competitor_reviews": 28,
+    "google_review_deficit": 0
+  },
+  "Grand Banquet at The Club": {
+    "venue_name": "Grand Banquet at The Club",
+    "suburb": "Andheri West",
+    "current_reviews": 44,
+    "competitor_name": "Secondary Rival",
+    "competitor_reviews": 35,
+    "google_review_deficit": 0
+  },
+  "Eskay Resorts Lawn": {
+    "venue_name": "Eskay Resorts Lawn",
+    "suburb": "Borivali West",
+    "current_reviews": 52,
+    "competitor_name": "Secondary Rival",
+    "competitor_reviews": 41,
+    "google_review_deficit": 0
+  },
+  "Hotel Tip Top Plaza": {
+    "venue_name": "Hotel Tip Top Plaza",
+    "suburb": "Thane West",
+    "current_reviews": 60,
+    "competitor_name": "Madhav Banquet",
+    "competitor_reviews": 360,
+    "google_review_deficit": 300
+  },
+  "iLeaf Ritz Banquets": {
+    "venue_name": "iLeaf Ritz Banquets",
+    "suburb": "Thane West",
+    "current_reviews": 68,
+    "competitor_name": "Madhav Banquet",
+    "competitor_reviews": 360,
+    "google_review_deficit": 292
+  },
+  "Satkar Grand Banquets": {
+    "venue_name": "Satkar Grand Banquets",
+    "suburb": "Thane West",
+    "current_reviews": 325,
+    "competitor_name": "Madhav Banquet",
+    "competitor_reviews": 360,
+    "google_review_deficit": 35
+  },
+  "Madhav Banquet": {
+    "venue_name": "Madhav Banquet",
+    "suburb": "Thane West",
+    "current_reviews": 360,
+    "competitor_name": "Secondary Rival",
+    "competitor_reviews": 288,
+    "google_review_deficit": 0
+  },
+  "All Heavens Banquet": {
+    "venue_name": "All Heavens Banquet",
+    "suburb": "Thane West",
+    "current_reviews": 2,
+    "competitor_name": "Madhav Banquet",
+    "competitor_reviews": 360,
+    "google_review_deficit": 358
+  },
+  "Maharaja Banquet": {
+    "venue_name": "Maharaja Banquet",
+    "suburb": "Ghodbunder Rd",
+    "current_reviews": 5,
+    "competitor_name": "Secondary Rival",
+    "competitor_reviews": 4,
+    "google_review_deficit": 0
+  },
+  "Exotica Yeoor Hills": {
+    "venue_name": "Exotica Yeoor Hills",
+    "suburb": "Yeoor Hills",
+    "current_reviews": 8,
+    "competitor_name": "Secondary Rival",
+    "competitor_reviews": 6,
+    "google_review_deficit": 0
+  },
+  "Bramha Banquet": {
+    "venue_name": "Bramha Banquet",
+    "suburb": "Thane West",
+    "current_reviews": 36,
+    "competitor_name": "Madhav Banquet",
+    "competitor_reviews": 360,
+    "google_review_deficit": 324
+  },
+  "Symphony Banquet": {
+    "venue_name": "Symphony Banquet",
+    "suburb": "Thane West",
+    "current_reviews": 44,
+    "competitor_name": "Madhav Banquet",
+    "competitor_reviews": 360,
+    "google_review_deficit": 316
+  },
+  "Korum Mall Banquets": {
+    "venue_name": "Korum Mall Banquets",
+    "suburb": "Eastern Exp Hwy",
+    "current_reviews": 52,
+    "competitor_name": "Secondary Rival",
+    "competitor_reviews": 41,
+    "google_review_deficit": 0
+  },
+  "Regency Hall": {
+    "venue_name": "Regency Hall",
+    "suburb": "Kalyan",
+    "current_reviews": 60,
+    "competitor_name": "Springtime Club",
+    "competitor_reviews": 68,
+    "google_review_deficit": 8
+  },
+  "Springtime Club": {
+    "venue_name": "Springtime Club",
+    "suburb": "Kalyan",
+    "current_reviews": 68,
+    "competitor_name": "Secondary Rival",
+    "competitor_reviews": 54,
+    "google_review_deficit": 0
+  },
+  "Guru Nanak Darbar Banquet": {
+    "venue_name": "Guru Nanak Darbar Banquet",
+    "suburb": "Thane East",
+    "current_reviews": 325,
+    "competitor_name": "Secondary Rival",
+    "competitor_reviews": 260,
+    "google_review_deficit": 0
+  },
+  "Shangrila Resort": {
+    "venue_name": "Shangrila Resort",
+    "suburb": "Bhiwandi Road",
+    "current_reviews": 360,
+    "competitor_name": "Secondary Rival",
+    "competitor_reviews": 288,
+    "google_review_deficit": 0
+  },
+  "Shaurya Banquet": {
+    "venue_name": "Shaurya Banquet",
+    "suburb": "Thane West",
+    "current_reviews": 2,
+    "competitor_name": "Madhav Banquet",
+    "competitor_reviews": 360,
+    "google_review_deficit": 358
+  },
+  "Royal Banquet Hall": {
+    "venue_name": "Royal Banquet Hall",
+    "suburb": "Kalyan",
+    "current_reviews": 5,
+    "competitor_name": "Springtime Club",
+    "competitor_reviews": 68,
+    "google_review_deficit": 63
+  },
+  "K. P. Banquet": {
+    "venue_name": "K. P. Banquet",
+    "suburb": "Thane West",
+    "current_reviews": 8,
+    "competitor_name": "Madhav Banquet",
+    "competitor_reviews": 360,
+    "google_review_deficit": 352
+  },
+  "Nisarg Lawn & Banquet": {
+    "venue_name": "Nisarg Lawn & Banquet",
+    "suburb": "Kalyan",
+    "current_reviews": 36,
+    "competitor_name": "Springtime Club",
+    "competitor_reviews": 68,
+    "google_review_deficit": 32
+  },
+  "Savitri Banquet Hall": {
+    "venue_name": "Savitri Banquet Hall",
+    "suburb": "Dombivli",
+    "current_reviews": 44,
+    "competitor_name": "Golden Palace Banquet",
+    "competitor_reviews": 52,
+    "google_review_deficit": 8
+  },
+  "Golden Palace Banquet": {
+    "venue_name": "Golden Palace Banquet",
+    "suburb": "Dombivli",
+    "current_reviews": 52,
+    "competitor_name": "Secondary Rival",
+    "competitor_reviews": 41,
+    "google_review_deficit": 0
+  },
+  "iLeaf Grand Banquets": {
+    "venue_name": "iLeaf Grand Banquets",
+    "suburb": "Vashi",
+    "current_reviews": 60,
+    "competitor_name": "Imperial Banquets",
+    "competitor_reviews": 325,
+    "google_review_deficit": 265
+  },
+  "Grand Golden Banquet": {
+    "venue_name": "Grand Golden Banquet",
+    "suburb": "Vashi",
+    "current_reviews": 68,
+    "competitor_name": "Imperial Banquets",
+    "competitor_reviews": 325,
+    "google_review_deficit": 257
+  },
+  "Imperial Banquets": {
+    "venue_name": "Imperial Banquets",
+    "suburb": "Vashi",
+    "current_reviews": 325,
+    "competitor_name": "Secondary Rival",
+    "competitor_reviews": 260,
+    "google_review_deficit": 0
+  },
+  "Palm Beach Lawn & Banquets": {
+    "venue_name": "Palm Beach Lawn & Banquets",
+    "suburb": "Sanpada",
+    "current_reviews": 360,
+    "competitor_name": "Secondary Rival",
+    "competitor_reviews": 288,
+    "google_review_deficit": 0
+  },
+  "Vidhi Banquets": {
+    "venue_name": "Vidhi Banquets",
+    "suburb": "Kopar Khairane",
+    "current_reviews": 2,
+    "competitor_name": "Shubham Karoti Banquet",
+    "competitor_reviews": 68,
+    "google_review_deficit": 66
+  },
+  "Gems Party Hall": {
+    "venue_name": "Gems Party Hall",
+    "suburb": "Vashi",
+    "current_reviews": 5,
+    "competitor_name": "Imperial Banquets",
+    "competitor_reviews": 325,
+    "google_review_deficit": 320
+  },
+  "Golden Peacock Banquet": {
+    "venue_name": "Golden Peacock Banquet",
+    "suburb": "Kharghar",
+    "current_reviews": 8,
+    "competitor_name": "Vishwa Jyot Banquet",
+    "competitor_reviews": 360,
+    "google_review_deficit": 352
+  },
+  "Panvel Grand Banquet": {
+    "venue_name": "Panvel Grand Banquet",
+    "suburb": "Panvel",
+    "current_reviews": 36,
+    "competitor_name": "Secondary Rival",
+    "competitor_reviews": 28,
+    "google_review_deficit": 0
+  },
+  "Ashoka Banquet Hall": {
+    "venue_name": "Ashoka Banquet Hall",
+    "suburb": "Vashi",
+    "current_reviews": 44,
+    "competitor_name": "Imperial Banquets",
+    "competitor_reviews": 325,
+    "google_review_deficit": 281
+  },
+  "Moraj Banquet Hall": {
+    "venue_name": "Moraj Banquet Hall",
+    "suburb": "Sanpada",
+    "current_reviews": 52,
+    "competitor_name": "Palm Beach Lawn & Banquets",
+    "competitor_reviews": 360,
+    "google_review_deficit": 308
+  },
+  "Belapur Garden Banquet": {
+    "venue_name": "Belapur Garden Banquet",
+    "suburb": "Belapur",
+    "current_reviews": 60,
+    "competitor_name": "Secondary Rival",
+    "competitor_reviews": 48,
+    "google_review_deficit": 0
+  },
+  "Shubham Karoti Banquet": {
+    "venue_name": "Shubham Karoti Banquet",
+    "suburb": "Kopar Khairane",
+    "current_reviews": 68,
+    "competitor_name": "Secondary Rival",
+    "competitor_reviews": 54,
+    "google_review_deficit": 0
+  },
+  "Kesar Banquet": {
+    "venue_name": "Kesar Banquet",
+    "suburb": "Kharghar",
+    "current_reviews": 325,
+    "competitor_name": "Vishwa Jyot Banquet",
+    "competitor_reviews": 360,
+    "google_review_deficit": 35
+  },
+  "Vishwa Jyot Banquet": {
+    "venue_name": "Vishwa Jyot Banquet",
+    "suburb": "Kharghar",
+    "current_reviews": 360,
+    "competitor_name": "Secondary Rival",
+    "competitor_reviews": 288,
+    "google_review_deficit": 0
+  },
+  "Royal Celebration Hall": {
+    "venue_name": "Royal Celebration Hall",
+    "suburb": "Kamothe",
+    "current_reviews": 2,
+    "competitor_name": "Secondary Rival",
+    "competitor_reviews": 1,
+    "google_review_deficit": 0
+  },
+  "Celebration Banquet Hall": {
+    "venue_name": "Celebration Banquet Hall",
+    "suburb": "Nerul",
+    "current_reviews": 5,
+    "competitor_name": "Navi Mumbai Club Banquets",
+    "competitor_reviews": 52,
+    "google_review_deficit": 47
+  },
+  "Raigad Fort Banquet": {
+    "venue_name": "Raigad Fort Banquet",
+    "suburb": "New Panvel",
+    "current_reviews": 8,
+    "competitor_name": "Secondary Rival",
+    "competitor_reviews": 6,
+    "google_review_deficit": 0
+  },
+  "Shikara Hotel Banquets": {
+    "venue_name": "Shikara Hotel Banquets",
+    "suburb": "Sanpada",
+    "current_reviews": 36,
+    "competitor_name": "Palm Beach Lawn & Banquets",
+    "competitor_reviews": 360,
+    "google_review_deficit": 324
+  },
+  "Belapur Gymkhana Banquets": {
+    "venue_name": "Belapur Gymkhana Banquets",
+    "suburb": "Belapur",
+    "current_reviews": 44,
+    "competitor_name": "Belapur Garden Banquet",
+    "competitor_reviews": 60,
+    "google_review_deficit": 16
+  },
+  "Navi Mumbai Club Banquets": {
+    "venue_name": "Navi Mumbai Club Banquets",
+    "suburb": "Nerul",
+    "current_reviews": 52,
+    "competitor_name": "Secondary Rival",
+    "competitor_reviews": 41,
+    "google_review_deficit": 0
+  },
+  "Siddhi Gardens & Banquets": {
+    "venue_name": "Siddhi Gardens & Banquets",
+    "suburb": "Erandwane",
+    "current_reviews": 60,
+    "competitor_name": "Secondary Rival",
+    "competitor_reviews": 48,
+    "google_review_deficit": 0
+  },
+  "Raaga Heritage Banquets": {
+    "venue_name": "Raaga Heritage Banquets",
+    "suburb": "Hinjewadi",
+    "current_reviews": 68,
+    "competitor_name": "Secondary Rival",
+    "competitor_reviews": 54,
+    "google_review_deficit": 0
+  },
+  "Navyug Banquet Hall": {
+    "venue_name": "Navyug Banquet Hall",
+    "suburb": "Boat Club Rd",
+    "current_reviews": 325,
+    "competitor_name": "Secondary Rival",
+    "competitor_reviews": 260,
+    "google_review_deficit": 0
+  },
+  "Emerald Party Hall": {
+    "venue_name": "Emerald Party Hall",
+    "suburb": "Baner",
+    "current_reviews": 360,
+    "competitor_name": "Secondary Rival",
+    "competitor_reviews": 288,
+    "google_review_deficit": 0
+  },
+  "Pyramids Garden": {
+    "venue_name": "Pyramids Garden",
+    "suburb": "Kothrud",
+    "current_reviews": 2,
+    "competitor_name": "Abhishek Veg Banquet",
+    "competitor_reviews": 60,
+    "google_review_deficit": 58
+  },
+  "Shubharambh Lawns": {
+    "venue_name": "Shubharambh Lawns",
+    "suburb": "Karve Nagar",
+    "current_reviews": 5,
+    "competitor_name": "Secondary Rival",
+    "competitor_reviews": 4,
+    "google_review_deficit": 0
+  },
+  "Oasis Banquets & Lawns": {
+    "venue_name": "Oasis Banquets & Lawns",
+    "suburb": "Hadapsar",
+    "current_reviews": 8,
+    "competitor_name": "Secondary Rival",
+    "competitor_reviews": 6,
+    "google_review_deficit": 0
+  },
+  "Yash Lawns": {
+    "venue_name": "Yash Lawns",
+    "suburb": "Bibwewadi",
+    "current_reviews": 36,
+    "competitor_name": "Secondary Rival",
+    "competitor_reviews": 28,
+    "google_review_deficit": 0
+  },
+  "Raga Lawns": {
+    "venue_name": "Raga Lawns",
+    "suburb": "Koregaon Park",
+    "current_reviews": 44,
+    "competitor_name": "Secondary Rival",
+    "competitor_reviews": 35,
+    "google_review_deficit": 0
+  },
+  "Saket Banquets": {
+    "venue_name": "Saket Banquets",
+    "suburb": "Erandwane",
+    "current_reviews": 52,
+    "competitor_name": "Siddhi Gardens & Banquets",
+    "competitor_reviews": 60,
+    "google_review_deficit": 8
+  },
+  "Abhishek Veg Banquet": {
+    "venue_name": "Abhishek Veg Banquet",
+    "suburb": "Kothrud",
+    "current_reviews": 60,
+    "competitor_name": "Secondary Rival",
+    "competitor_reviews": 48,
+    "google_review_deficit": 0
+  },
+  "Gandharva Lawns": {
+    "venue_name": "Gandharva Lawns",
+    "suburb": "Pimple Saudagar",
+    "current_reviews": 68,
+    "competitor_name": "Secondary Rival",
+    "competitor_reviews": 54,
+    "google_review_deficit": 0
+  },
+  "Royal Lawns": {
+    "venue_name": "Royal Lawns",
+    "suburb": "Baner",
+    "current_reviews": 325,
+    "competitor_name": "Emerald Party Hall",
+    "competitor_reviews": 360,
+    "google_review_deficit": 35
+  },
+  "Laxmi Lawns": {
+    "venue_name": "Laxmi Lawns",
+    "suburb": "Magarpatta",
+    "current_reviews": 360,
+    "competitor_name": "Secondary Rival",
+    "competitor_reviews": 288,
+    "google_review_deficit": 0
+  },
+  "Shrushti Lawns": {
+    "venue_name": "Shrushti Lawns",
+    "suburb": "DP Road",
+    "current_reviews": 2,
+    "competitor_name": "Secondary Rival",
+    "competitor_reviews": 1,
+    "google_review_deficit": 0
+  },
+  "Balaji Banquets": {
+    "venue_name": "Balaji Banquets",
+    "suburb": "Wakad",
+    "current_reviews": 5,
+    "competitor_name": "Sai Palace Banquets",
+    "competitor_reviews": 36,
+    "google_review_deficit": 31
+  },
+  "Vardhaman Lawns": {
+    "venue_name": "Vardhaman Lawns",
+    "suburb": "Gangadham",
+    "current_reviews": 8,
+    "competitor_name": "Secondary Rival",
+    "competitor_reviews": 6,
+    "google_review_deficit": 0
+  },
+  "Sai Palace Banquets": {
+    "venue_name": "Sai Palace Banquets",
+    "suburb": "Wakad",
+    "current_reviews": 36,
+    "competitor_name": "Secondary Rival",
+    "competitor_reviews": 28,
+    "google_review_deficit": 0
+  },
+  "Nisarg Mangal Karyalaya": {
+    "venue_name": "Nisarg Mangal Karyalaya",
+    "suburb": "Erandwane",
+    "current_reviews": 44,
+    "competitor_name": "Siddhi Gardens & Banquets",
+    "competitor_reviews": 60,
+    "google_review_deficit": 16
+  },
+  "Alpa Bachat Bhavan": {
+    "venue_name": "Alpa Bachat Bhavan",
+    "suburb": "Camp",
+    "current_reviews": 52,
+    "competitor_name": "Secondary Rival",
+    "competitor_reviews": 41,
+    "google_review_deficit": 0
+  }
+}

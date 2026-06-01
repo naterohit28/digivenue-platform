@@ -1,0 +1,298 @@
+/* ============================================================
+   DIGIVENUE — MOTION SYSTEM
+   Cinematic pacing. Purposeful only.
+   No decoration. No flash. No bounce.
+   Constitutional authority: DIGIVENUE_MASTER_SYSTEM.md §14
+   ============================================================ */
+
+
+/* ──────────────────────────────────────────
+   GLOBAL MICRO-INTERACTION TRANSITIONS
+   Applied to all interactive elements.
+   Smooth. Slow. Deliberate.
+   ────────────────────────────────────────── */
+
+a,
+button,
+.btn,
+.card,
+.card-editorial,
+.eco-row,
+.nav-link,
+.badge {
+  transition:
+    color            var(--duration-base)  var(--ease-out),
+    background-color var(--duration-base)  var(--ease-out),
+    border-color     var(--duration-base)  var(--ease-out),
+    opacity          var(--duration-base)  var(--ease-out),
+    box-shadow       var(--duration-base)  var(--ease-out);
+}
+
+/* No transform transitions on cards — no scale, no lift */
+/* Per ui-rules §5: "Hover states must only shift borders or
+   change color values. Never scale cards, bounce buttons,
+   or add glowing drop shadows." */
+
+
+/* ──────────────────────────────────────────
+   ENTRANCE ANIMATIONS
+   Elements enter by rising 30px while fading in.
+   Duration: 900ms. Easing: natural deceleration.
+   JS triggers .visible class via IntersectionObserver.
+   ────────────────────────────────────────── */
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition:
+    opacity   var(--duration-reveal) var(--ease-out),
+    transform var(--duration-reveal) var(--ease-out);
+  will-change: opacity, transform;
+}
+
+.fade-up.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Fade only — no vertical movement */
+.fade-in {
+  opacity: 0;
+  transition: opacity var(--duration-reveal) var(--ease-out);
+  will-change: opacity;
+}
+
+.fade-in.is-visible {
+  opacity: 1;
+}
+
+/* Slide from left — for editorial split layouts */
+.slide-right {
+  opacity: 0;
+  transform: translateX(-24px);
+  transition:
+    opacity   var(--duration-reveal) var(--ease-out),
+    transform var(--duration-reveal) var(--ease-out);
+  will-change: opacity, transform;
+}
+
+.slide-right.is-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Slide from right */
+.slide-left {
+  opacity: 0;
+  transform: translateX(24px);
+  transition:
+    opacity   var(--duration-reveal) var(--ease-out),
+    transform var(--duration-reveal) var(--ease-out);
+  will-change: opacity, transform;
+}
+
+.slide-left.is-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+
+/* ──────────────────────────────────────────
+   SEQUENTIAL CASCADE DELAYS
+   Applied to siblings in grids or lists
+   to create staggered entrance rhythm.
+   ────────────────────────────────────────── */
+
+.delay-1 { transition-delay: var(--delay-1); }  /* 80ms  */
+.delay-2 { transition-delay: var(--delay-2); }  /* 160ms */
+.delay-3 { transition-delay: var(--delay-3); }  /* 240ms */
+.delay-4 { transition-delay: var(--delay-4); }  /* 320ms */
+.delay-5 { transition-delay: var(--delay-5); }  /* 440ms */
+
+/* Reset delays on mobile — prevents animation queue pile-up
+   on fast vertical scrolling per Editorial Component System §5 */
+@media (max-width: 900px) {
+  .delay-1,
+  .delay-2,
+  .delay-3,
+  .delay-4,
+  .delay-5 {
+    transition-delay: 0ms;
+  }
+}
+
+
+/* ──────────────────────────────────────────
+   IMAGE REVEAL — CURTAIN WIPE
+   A cover panel slides away to reveal the
+   image beneath. Cinematic. Authoritative.
+   ────────────────────────────────────────── */
+
+.img-reveal {
+  position: relative;
+  overflow: hidden;
+  display: block;
+}
+
+.img-reveal::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: var(--color-bg);
+  transform-origin: top center;
+  transition: transform var(--duration-cinematic) var(--ease-reveal);
+  z-index: var(--z-raised);
+  will-change: transform;
+}
+
+.img-reveal.is-visible::after {
+  transform: scaleY(0);
+  transform-origin: bottom center;
+}
+
+/* Slower reveal for hero images */
+.img-reveal--slow::after {
+  transition-duration: calc(var(--duration-cinematic) * 1.4);
+}
+
+
+/* ──────────────────────────────────────────
+   HOVER STATES — RESTRAINED
+   Border and color shifts only.
+   No scaling. No shadows. No glow.
+   ────────────────────────────────────────── */
+
+/* Card hover — gold border highlight */
+.card-hover:hover {
+  border-color: var(--color-border-gold);
+  background-color: var(--color-surface-mid);
+}
+
+/* Link hover — warm gold shift */
+.link-hover:hover {
+  color: var(--color-gold);
+}
+
+/* Ecosystem row hover */
+.eco-row:hover .eco-row__title {
+  color: var(--color-gold);
+}
+
+/* Nav link underline draw */
+.nav-link {
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: var(--color-gold);
+  transition: width var(--duration-slow) var(--ease-out);
+}
+
+.nav-link:hover::after,
+.nav-link.is-active::after {
+  width: 100%;
+}
+
+
+/* ──────────────────────────────────────────
+   NAV SCROLL BEHAVIOR
+   Classes toggled by JS on scroll events.
+   ────────────────────────────────────────── */
+
+/* Nav becomes opaque on scroll */
+.site-nav.is-scrolled {
+  background-color: rgba(250, 247, 242, 0.96);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Dark theme scrolled nav */
+.theme-dark .site-nav.is-scrolled,
+.section-dark .site-nav.is-scrolled {
+  background-color: rgba(10, 9, 8, 0.96);
+}
+
+/* Nav hides when scrolling down */
+.site-nav.is-hidden {
+  transform: translateY(-100%);
+}
+
+/* Nav base transition */
+.site-nav {
+  transition:
+    background-color var(--duration-slow) var(--ease-out),
+    border-color     var(--duration-slow) var(--ease-out),
+    transform        var(--duration-base) var(--ease-out),
+    box-shadow       var(--duration-slow) var(--ease-out);
+}
+
+
+/* ──────────────────────────────────────────
+   AUDIT LOADER ANIMATION
+   Simulates real-time diagnostic scanning.
+   Fast, purposeful, professional.
+   ────────────────────────────────────────── */
+
+@keyframes scan-line {
+  0%   { transform: translateY(-100%); opacity: 0; }
+  10%  { opacity: 1; }
+  90%  { opacity: 1; }
+  100% { transform: translateY(100%); opacity: 0; }
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 0.3; }
+  50%       { opacity: 1; }
+}
+
+@keyframes progress-fill {
+  from { width: 0%; }
+  to   { width: 100%; }
+}
+
+.scanning-pulse {
+  animation: pulse-dot 1.2s ease-in-out infinite;
+}
+
+.scanning-pulse.delay-1 { animation-delay: 0.2s; }
+.scanning-pulse.delay-2 { animation-delay: 0.4s; }
+.scanning-pulse.delay-3 { animation-delay: 0.6s; }
+
+
+/* ──────────────────────────────────────────
+   REDUCED MOTION RESPECT
+   Accessibility: honour system preferences.
+   Disable all animations for users who
+   request reduced motion.
+   ────────────────────────────────────────── */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration:        0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration:       0.01ms !important;
+    transition-delay:          0ms !important;
+  }
+
+  .fade-up,
+  .fade-in,
+  .slide-right,
+  .slide-left {
+    opacity: 1;
+    transform: none;
+  }
+
+  .img-reveal::after {
+    display: none;
+  }
+}

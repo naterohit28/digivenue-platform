@@ -1,0 +1,35 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(sed -n '86,660p' website/index.html)",
+      "Read(//tmp/**)",
+      "Bash(cat > *)",
+      "PowerShell($lines = Get-Content -Path 'website/index.html' -Encoding UTF8; $newBody = Get-Content -Path '/tmp/new_body.txt' -Encoding UTF8 -Raw; $out = @\\(\\); $out += $lines[0..84]; $out += $newBody.TrimEnd\\(\"`r\",\"`n\"\\); $out += $lines[659..\\($lines.Length-1\\)]; Set-Content -Path 'website/index.html' -Value $out -Encoding UTF8; \"done $\\($out.Length\\) lines\")",
+      "Bash(grep -n \"<!-- I · Hero\\\\|<!-- ════════════════════════════════════════$\\\\|SECTION 10\\\\|<!-- ═════════════════════════════════════ -->$\\\\|<script src=\\\\\"js/main.js\\\\\"\" website/index.html)",
+      "Bash(ls \"C:\\\\Users\\\\rohit\\\\Downloads\\\\DigiStories\\\\.claude\" 2>/dev/null || mkdir -p \"C:\\\\Users\\\\rohit\\\\Downloads\\\\DigiStories\\\\.claude\")",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(Get-ChildItem \"C:\\\\Users\\\\rohit\\\\Downloads\\\\DigiStories\\\\website\" -Recurse -Filter \"*.html\")",
+      "Bash(Select-Object FullName, Length, LastWriteTime)",
+      "Bash(Sort-Object LastWriteTime -Descending)",
+      "Bash(grep -oE \"\\(hero__title|pause__line|truth__line|ownership__headline|ecosystem-summary__headline|intel__headline|invitation__line|statement|hero__anchor\\)\" index.html)",
+      "Bash(sed -n '430,436p' index.html)",
+      "Bash(sed -n '450,451p' index.html)",
+      "Bash(sed -n '541,543p' index.html)",
+      "Bash(sed -n '707,709p' index.html)",
+      "Bash(python -m streamlit run dashboard/app.py --server.port 8501)",
+      "Bash(pip install *)",
+      "Bash(python -m streamlit run dashboard/app.py --server.port 8501 --server.headless true)",
+      "Bash(ping -n 6 127.0.0.1)",
+      "Bash(python run_pipeline.py)",
+      "Bash(python -c ' *)",
+      "Bash(python -m streamlit run dashboard/app.py --server.port 8502 --server.headless true)",
+      "Bash(python -c \"import streamlit; print\\(streamlit.__version__\\)\")",
+      "Bash(python check_live_setup.py)",
+      "Bash(python -m streamlit run dashboard/app.py --server.port 8503 --server.headless true)",
+      "Bash(python -m py_compile dashboard/app.py collectors/google_maps_collector.py database/db.py outreach/priority_engine.py check_live_setup.py)",
+      "Bash(ping -n 5 127.0.0.1)",
+      "Bash(dir /s /b)",
+      "Bash(python -c \"import pandas as pd; q=pd.read_csv\\('exports/daily_outreach_queue.csv'\\); print\\(f'{len\\(q\\)} venues in queue, top: {q.iloc[0][\\\\\"business_name\\\\\"]}'\\)\")"
+    ]
+  }
+}

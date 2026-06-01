@@ -1,0 +1,338 @@
+/* ============================================================
+   DIGIVENUE — LAYOUT SYSTEM
+   Container doctrine, grid architecture, section rhythm.
+   Constitutional authority: DIGIVENUE_MASTER_SYSTEM.md §12–13
+   ============================================================ */
+
+
+/* ──────────────────────────────────────────
+   CONTAINER DOCTRINE
+   "All grid content must reside inside a
+   .container centered in the viewport."
+   — ui-rules.md §2
+   ────────────────────────────────────────── */
+
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--container-padding);
+  padding-right: var(--container-padding);
+}
+
+/* Reading-optimized content column (long-form, editorial) */
+.container--editorial {
+  max-width: var(--container-editorial);
+}
+
+/* Stillness sections — maximum focus, minimum width */
+.container--narrow {
+  max-width: var(--container-narrow);
+}
+
+/* Full bleed — photography, hero overlays */
+.container--full {
+  max-width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+
+/* ──────────────────────────────────────────
+   SECTION BLOCK
+   "Every section must have 140px padding on
+   desktop and 80px on mobile."
+   — ui-rules.md §2
+   ────────────────────────────────────────── */
+
+section {
+  position: relative;
+}
+
+.section {
+  padding-top: var(--section-padding-desktop);
+  padding-bottom: var(--section-padding-desktop);
+}
+
+.section--sm {
+  padding-top: var(--space-9);    /* 128px */
+  padding-bottom: var(--space-9);
+}
+
+.section--lg {
+  padding-top: var(--space-11);   /* 192px */
+  padding-bottom: var(--space-11);
+}
+
+/* Hero sections — no section padding, fills viewport */
+.section--hero {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+/* Removes top padding — for sections that follow a hero */
+.section--no-top {
+  padding-top: 0;
+}
+
+/* Removes bottom padding — for sections preceding a hero */
+.section--no-bottom {
+  padding-bottom: 0;
+}
+
+
+/* ──────────────────────────────────────────
+   HERO BLOCK
+   Full viewport height. Centers content
+   with generous breathing room.
+   ────────────────────────────────────────── */
+
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-bottom: var(--space-10);
+  overflow: hidden;
+  background-color: var(--color-bg-deep);
+}
+
+.hero--center {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: var(--space-10);
+}
+
+.hero__bg {
+  position: absolute;
+  inset: 0;
+  z-index: var(--z-below);
+  overflow: hidden;
+}
+
+.hero__bg img,
+.hero__bg video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: var(--z-default);
+  background: linear-gradient(
+    to bottom,
+    rgba(10, 9, 8, 0.30) 0%,
+    rgba(10, 9, 8, 0.55) 50%,
+    rgba(10, 9, 8, 0.85) 100%
+  );
+}
+
+.hero__content {
+  position: relative;
+  z-index: var(--z-raised);
+}
+
+
+/* ──────────────────────────────────────────
+   GRID SYSTEMS
+   All gaps use token values.
+   All grids collapse gracefully on mobile.
+   ────────────────────────────────────────── */
+
+/* Two-column equal */
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--gap-lg);
+}
+
+/* Three-column equal */
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--gap-md);
+}
+
+/* Four-column equal */
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--gap-sm);
+}
+
+/* Asymmetric: fixed label + fluid content */
+.grid-editorial {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: var(--gap-xl);
+  align-items: start;
+}
+
+/* Asymmetric: copy-heavy left + visual right */
+.grid-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--gap-xl);
+  align-items: center;
+}
+
+/* Asymmetric: wider left content */
+.grid-split--60-40 {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: var(--gap-xl);
+  align-items: center;
+}
+
+/* Asymmetric: wider right content */
+.grid-split--40-60 {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: var(--gap-xl);
+  align-items: center;
+}
+
+/* Auto-fit grid — fills columns automatically */
+.grid-auto {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--gap-md);
+}
+
+
+/* ──────────────────────────────────────────
+   FLEX UTILITIES
+   ────────────────────────────────────────── */
+
+.flex { display: flex; }
+.flex-col { flex-direction: column; }
+.flex-row { flex-direction: row; }
+.flex-wrap { flex-wrap: wrap; }
+.flex-center { align-items: center; justify-content: center; }
+.flex-between { align-items: center; justify-content: space-between; }
+.flex-start { align-items: flex-start; }
+.flex-end { align-items: flex-end; }
+.flex-gap-sm { gap: var(--gap-xs); }
+.flex-gap-md { gap: var(--gap-sm); }
+.flex-gap-lg { gap: var(--gap-md); }
+
+
+/* ──────────────────────────────────────────
+   DIVIDER
+   Used between major sections.
+   Never decorative — only structural.
+   ────────────────────────────────────────── */
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background-color: var(--color-border);
+  margin: 0;
+  border: none;
+}
+
+.divider--gold {
+  background: linear-gradient(
+    to right,
+    transparent 0%,
+    var(--color-gold) 40%,
+    var(--color-gold) 60%,
+    transparent 100%
+  );
+  opacity: 0.3;
+  height: 1px;
+}
+
+
+/* ──────────────────────────────────────────
+   SPACER UTILITIES
+   Pre-defined spacing blocks for fine control.
+   ────────────────────────────────────────── */
+
+.mt-1  { margin-top: var(--space-1); }
+.mt-2  { margin-top: var(--space-2); }
+.mt-3  { margin-top: var(--space-3); }
+.mt-4  { margin-top: var(--space-4); }
+.mt-5  { margin-top: var(--space-5); }
+.mt-6  { margin-top: var(--space-6); }
+.mt-7  { margin-top: var(--space-7); }
+.mt-8  { margin-top: var(--space-8); }
+
+.mb-1  { margin-bottom: var(--space-1); }
+.mb-2  { margin-bottom: var(--space-2); }
+.mb-3  { margin-bottom: var(--space-3); }
+.mb-4  { margin-bottom: var(--space-4); }
+.mb-5  { margin-bottom: var(--space-5); }
+.mb-6  { margin-bottom: var(--space-6); }
+.mb-7  { margin-bottom: var(--space-7); }
+.mb-8  { margin-bottom: var(--space-8); }
+
+.pt-6  { padding-top: var(--space-6); }
+.pt-7  { padding-top: var(--space-7); }
+.pt-8  { padding-top: var(--space-8); }
+.pb-6  { padding-bottom: var(--space-6); }
+.pb-7  { padding-bottom: var(--space-7); }
+.pb-8  { padding-bottom: var(--space-8); }
+
+
+/* ──────────────────────────────────────────
+   RESPONSIVE GRID COLLAPSE
+   Grids collapse to single column on mobile.
+   Image-before-text on mobile per ui-rules §5.
+   ────────────────────────────────────────── */
+
+@media (max-width: 1024px) {
+  .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .grid-editorial {
+    grid-template-columns: 220px 1fr;
+    gap: var(--gap-md);
+  }
+}
+
+@media (max-width: 900px) {
+  .section {
+    padding-top: var(--section-padding-mobile);
+    padding-bottom: var(--section-padding-mobile);
+  }
+  .section--sm {
+    padding-top: var(--space-7);
+    padding-bottom: var(--space-7);
+  }
+  .section--lg {
+    padding-top: var(--space-9);
+    padding-bottom: var(--space-9);
+  }
+  .grid-2,
+  .grid-3,
+  .grid-4,
+  .grid-editorial,
+  .grid-split,
+  .grid-split--60-40,
+  .grid-split--40-60 {
+    grid-template-columns: 1fr;
+    gap: var(--gap-md);
+  }
+  .hero {
+    min-height: 100svh;
+    padding-bottom: var(--space-8);
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .flex-row {
+    flex-direction: column;
+  }
+}

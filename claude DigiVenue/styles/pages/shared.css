@@ -1,0 +1,107 @@
+/* ============================================================
+   DIGIVENUE — SHARED INNER PAGE STYLES
+   Applies to all pages except index.html
+   ============================================================ */
+
+/* ── Page hero (text-only, no image bg) ── */
+.page-hero {
+  padding: calc(var(--space-7) + 36px) 0 var(--space-7);
+  background-color: var(--color-bg-deep);
+  border-bottom: 1px solid var(--color-border);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle grain texture via repeating gradient */
+.page-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(255,255,255,0.008) 2px,
+      rgba(255,255,255,0.008) 4px
+    );
+  pointer-events: none;
+  z-index: 0;
+}
+
+.page-hero__inner {
+  position: relative;
+  z-index: 1;
+}
+
+.page-hero__label {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: var(--text-micro);
+  font-weight: var(--weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-badge);
+  color: var(--color-gold);
+  margin-bottom: var(--space-5);
+}
+
+.page-hero__title {
+  font-family: var(--font-serif);
+  font-size: clamp(36px, 5vw, 72px);
+  font-weight: var(--weight-medium);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  color: var(--color-text-primary);
+  max-width: 860px;
+  margin-bottom: var(--space-5);
+}
+
+.page-hero__title em {
+  font-style: italic;
+  font-weight: var(--weight-regular);
+}
+
+.page-hero__sub {
+  font-size: clamp(17px, 1.4vw, 19px);
+  color: var(--color-text-secondary);
+  max-width: 620px;
+  line-height: 1.65;
+  margin-bottom: 0;
+}
+
+/* ── Breadcrumb trail ── */
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-5);
+}
+.breadcrumb__item {
+  font-family: var(--font-sans);
+  font-size: var(--text-micro);
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-label);
+  text-decoration: none;
+}
+.breadcrumb__item:hover { color: var(--color-text-secondary); }
+.breadcrumb__sep {
+  color: var(--color-text-muted);
+  opacity: 0.4;
+  font-size: 10px;
+}
+.breadcrumb__item--active { color: var(--color-text-muted); cursor: default; }
+
+/* ── Content sections within inner pages ── */
+.content-section {
+  padding: var(--space-7) 0;
+  border-bottom: 1px solid var(--color-border);
+}
+.content-section:last-of-type { border-bottom: none; }
+
+.content-section--surface {
+  background-color: var(--color-surface);
+}
+.content-section--dark {
+  background-color: var(--color-bg-deep);
+}

@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>DigiVenue — Design System QA</title>
+  <meta name="description" content="Internal component verification page for the DigiVenue design system. Not for public access.">
+
+  <!-- Canonical design system entry point -->
+  <link rel="stylesheet" href="styles/main.css">
+
+  <style>
+    /* ── QA page only styles ── */
+    /* These styles exist ONLY for this verification page.
+       They do NOT enter the production stylesheet. */
+
+    .qa-wrapper {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .qa-header {
+      padding: 120px 0 64px;
+      border-bottom: 1px solid var(--color-border);
+      margin-bottom: 0;
+    }
+
+    .qa-section {
+      padding: 80px 0;
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .qa-section:last-child {
+      border-bottom: none;
+    }
+
+    .qa-section-title {
+      font-family: var(--font-sans);
+      font-size: 10px;
+      font-weight: var(--weight-semibold);
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--color-accent);
+      margin-bottom: 48px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .qa-section-title::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--color-border);
+    }
+
+    .qa-specimen {
+      margin-bottom: 40px;
+    }
+
+    .qa-specimen-label {
+      font-family: var(--font-sans);
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--color-text-muted);
+      margin-bottom: 12px;
+    }
+
+    .qa-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: flex-start;
+      margin-bottom: 24px;
+    }
+
+    .qa-swatch {
+      width: 64px;
+      height: 64px;
+      flex-shrink: 0;
+    }
+
+    .qa-swatch-label {
+      font-size: 9px;
+      font-family: var(--font-sans);
+      color: var(--color-text-muted);
+      margin-top: 6px;
+      text-align: center;
+    }
+
+    .qa-color-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+      gap: 16px;
+    }
+
+    /* Dark surface for light-on-dark component preview */
+    .qa-dark-surface {
+      background: var(--color-bg-deep);
+      padding: 48px;
+      border: 1px solid var(--color-border);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ═══════════════════════════════════════
+       GLOBAL NAVIGATION
+       Verify: transparent → opaque on scroll,
+       hide on scroll down, mobile menu
+  ════════════════════════════════════════ -->
+
+  <nav class="site-nav" role="navigation" aria-label="Primary navigation">
+    <a href="index.html" class="nav-logo" aria-label="DigiVenue — Home">
+      Digi<span class="nav-logo__accent">Venue</span>
+    </a>
+    <ul class="nav-links" role="list">
+      <li><a href="#" class="nav-link">What We Do</a></li>
+      <li><a href="#" class="nav-link is-active">Results</a></li>
+      <li><a href="#" class="nav-link">Ecosystem</a></li>
+      <li><a href="#" class="nav-link">About</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="#" class="btn btn--outline btn--sm">Get Audit &rarr;</a>
+    </div>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-drawer">
+      <span class="nav-toggle__bar"></span>
+      <span class="nav-toggle__bar"></span>
+      <span class="nav-toggle__bar"></span>
+    </button>
+    <div class="nav-mobile-drawer" id="mobile-drawer" role="dialog" aria-label="Mobile navigation">
+      <a href="#">What We Do</a>
+      <a href="#">Results</a>
+      <a href="#">Ecosystem</a>
+      <a href="#">About</a>
+      <div class="nav-mobile-cta">
+        <a href="#" class="btn btn--outline">Get Your Free Audit &rarr;</a>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- ═══════════════════════════════════════
+       QA PAGE HEADER
+  ════════════════════════════════════════ -->
+
+  <div class="qa-wrapper">
+    <div class="qa-header">
+      <div class="badge badge--gold" style="margin-bottom: 24px;">Internal — Design System QA</div>
+      <h1 class="text-h1" style="margin-bottom: 16px;">DigiVenue Design System</h1>
+      <p class="text-lead" style="max-width: 600px;">
+        The permanent component verification page.
+        Every element shown here is constitutional — derived directly
+        from <strong>DIGIVENUE_MASTER_SYSTEM.md</strong> and its implementation documents.
+      </p>
+    </div>
+
+
+    <!-- ═══════════════════════════════════════
+         SECTION 1: COLOR SYSTEM
+    ════════════════════════════════════════ -->
+
+    <div class="qa-section" id="colors">
+      <div class="qa-section-title">01 — Color System</div>
+
+      <div class="qa-specimen">
+        <div class="qa-specimen-label">Backgrounds</div>
+        <div class="qa-color-grid">
+          <div>
+            <div class="qa-swatch" style="background:#0a0908; border: 1px solid #2e2a2a;"></div>
+            <div class="qa-swatch-label">--bg<br>#0a0908</div>
+          </div>
+          <div>
+            <div class="qa-swatch" style="background:#030303; border: 1px solid #2e2a2a;"></div>
+            <div class="qa-swatch-label">--bg-deep<br>#030303</div>
+          </div>
+          <div>
+            <div class="qa-swatch" style="background:#111010;"></div>
+            <div class="qa-swatch-label">--surface<br>#111010</div>
+          </div>
+          <div>
+            <div class="qa-swatch" style="background:#181616;"></div>
+            <div class="qa-swatch-label">--surface-mid<br>#181616</div>
+          </div>
+          <div>
+            <div class="qa-swatch" style="background:#1f1d1d;"></div>
+            <div class="qa-swatch-label">--surface-high<br>#1f1d1d</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="qa-specimen">
+        <div class="qa-specimen-label">Text</div>
+        <div class="qa-color-grid">
+          <div>
+            <div class="qa-swatch" style="background:#f5f2ee;"></div>
+            <div class="qa-swatch-label">--text-primary<br>#f5f2ee</div>
+          </div>
+          <div>
+            <div class="qa-swatch" style="background:#9a9795;"></div>
+            <div class="qa-swatch-label">--text-secondary<br>#9a9795</div>
+          </div>
+          <div>
+            <div class="qa-swatch" style="background:#5a5755;"></div>
+            <div class="qa-swatch-label">--text-muted<br>#5a5755</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="qa-specimen">
+        <div class="qa-specimen-label">Brand Accents</div>
+        <div class="qa-color-grid">
+          <div>
+            <div class="qa-swatch" style="background:#d94822;"></div>
+            <div class="qa-swatch-label">--accent<br>#d94822 Vermillion</div>
+          </div>
+          <div>
+            <div class="qa-swatch" style="background:#b83615;"></div>
+            <div class="qa-swatch-label">--accent-hover<br>#b83615</div>
+          </div>
+          <div>
+            <div class="qa-swatch" style="background:#c5a059;"></div>
+            <div class="qa-swatch-label">--gold<br>#c5a059 Champagne</div>
+          </div>
+          <div>
+            <div class="qa-swatch" style="background:#d4b06a;"></div>
+            <div class="qa-swatch-label">--gold-hover<br>#d4b06a</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ═══════════════════════════════════════
+         SECTION 2: TYPOGRAPHY SCALE
+    ════════════════════════════════════════ -->
+
+    <div class="qa-section" id="typography">
+      <div class="qa-section-title">02 — Typography Scale</div>
+
+      <div class="qa-specimen">
+        <div class="qa-specimen-label">Display — Cinematic hero title (Playfair Display)</div>
+        <p class="text-display">
+          The moment a family<br><em>searches your name.</em>
+        </p>
+      </div>
+
+      <div class="qa-specimen">
+        <div class="qa-specimen-label">H1 — Section opening (Playfair Display)</div>
+        <h1 class="text-h1">Operational Trust Infrastructure</h1>
+      </div>
+
+      <div class="qa-specimen">
+        <div class="qa-specimen-label">H2 — Major subsection (Playfair Display)</div>
+        <h2 class="text-h2">How Families Choose Venues</h2>
+      </div>
+
+      <div class="qa-specimen">
+        <div class="qa-specimen-label">H3 — Content block (Playfair Display)</div>
+        <h3 class="text-h3">The Google Validation Moment</h3>
+      </div>
+
+      <div class="qa-specimen">
+        <div class="qa-specimen-label">H4 — Sub-block (Inter)</div>
+        <h4 class="text-h4">Managed Infrastructure Model</h4>
+      </div>
+
+      <div class="qa-specimen">
+        <div class="qa-specimen-label">Lead body — Feature copy (Inter Light)</div>
+        <p class="text-lead" style="max-width:640px;">
+          A family in Chembur spent three evenings on WhatsApp, shortlisting venues
+          for their daughter's wedding. They found your competitor first — not because
+          their venue is better than yours, but because their Google profile was updated
+          last week and yours was last updated in 2022.
+        </p>
+      </div>
+
+      <div class="qa-specimen">
+        <div class="qa-specimen-label">Body — Standard reading (Inter Light)</div>
+        <p style="max-width:640px;">
+          DigiVenue builds and maintains the digital trust systems that convert venue
+          discovery into venue bookings. We are not a content agency, not a SaaS platform,
+          not an AI company. We are the operational trust infrastructure the Indian event
+          industry has always needed — and never had.
+        </p>
+      </div>
+
+      <div class="qa-specimen">
+        <div class="qa-specimen-label">Small — Supporting text</div>
+        <p class="text-small">Last updated — May 2026 · Chembur, Mumbai</p>
+      </div>
+
+      <div class="qa-specimen">
+        <div class="qa-specimen-label">Label — Section identifier (Inter Semibold, uppercase)</div>
+        <span class="text-label">Operational Infrastructure</span>
+        &nbsp;&nbsp;
+        <span class="text-label text-label--gold">DigiStories</span>
+        &nbsp;&nbsp;
+        <span class="text-label text-label--accent">Live Audit</span>
+      </div>
+
+      <div class="qa-specimen">
+        <div class="qa-specimen-label">Quote — Editorial pullquote (Playfair Italic)</div>
+        <p class="text-quote" style="max-width:680px;">
+          "These people understand how this business actually works.
+          Not theory. Not algorithms. They know what families look for."
+        </p>
+        <p class="text-quote-attribution">
+          Operations Director — Banquet Hall, Ghatkopar
+        </p>
+      </div>
+
+      <div class="qa-specimen">
+        <div class="qa-specimen-label">Stat — Large numeral display</div>
+        <div class="qa-row">
+          <div>
+            <div class="text-stat">73<span style="font-size:0.5em; color:var(--color-gold);">%</span></div>
+            <div class="text-stat-unit">Google search rate</div>
+          </div>
+          <div style="margin-left: 48px;">
+            <div class="text-stat" style="color: var(--color-gold);">214</div>
+            <div class="text-stat-unit">Reviews after 12 months</div>
+          </div>
+          <div style="margin-left: 48px;">
+            <div class="text-stat">3×</div>
+            <div class="text-stat-unit">Inquiry volume</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ═══════════════════════════════════════
+         SECTION 3: BUTTONS
+    ════════════════════════════════════════ -->
+
+    <div class="qa-section" id="buttons">
+      <div class="qa-section-title">03 — Button System</div>
+
+      <div class="qa-specimen">
+        <div class="qa-specimen-label">Primary variants</div>
+        <div class="qa-row">
+          <a href="#" class="btn btn--primary">Primary Button</a>
+          <a href="#" class="btn btn--accent">Accent — Vermillion</a>
+          <a href="#" class="btn btn--outline">Outline Button</a>
+          <a href="#" class="btn btn--gold">Gold Outline</a>
+          <a href="#" class="btn btn--ghost">Ghost Button →</a>
+        </div>
+      </div>
+
+      <div class="qa-specimen">
+        <div class="qa-specimen-label">Size variants</div>
+        <div class="qa-row" style="align-items: center;">
+          <a href="#" class="btn btn--outline btn--sm">Small Audit →</a>
+          <a href="#" class="btn btn--outline">Default</a>
+          <a href="#" class="btn btn--outline btn--lg">Large Strategy Call →</a>
+        </div>
+      </div>
+
+      <div class="qa-specimen">
+        <div class="qa-specimen-label">WhatsApp CTA</div>
+        <div class="qa-row">
+          <a href="#" class="btn btn--whatsapp">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Talk to a Venue Strategist
+          </a>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ═══════════════════════════════════════
+         SECTION 4: BADGE SYSTEM
+    ════════════════════════════════════════ -->
+
+    <div class="qa-section" id="badges">
+      <div class="qa-section-title">04 — Badge System</div>
+
+      <div class="qa-specimen">
+        <div class="qa-specimen-label">Badge variants</div>
+        <div class="qa-row">
+          <span class="badge">Default Badge</span>
+          <span class="badge badge--gold">
+            <span class="badge__dot"></span>
+            Operational Infrastructure
+          </span>
+          <span class="badge badge--accent">
+            <span class="badge__dot"></span>
+            Live Audit Active
+          </span>
+          <span class="badge badge--ghost">Ghost Label</span>
+        </div>
+      </div>
+
+      <div class="qa-specimen">
+        <div class="qa-specimen-label">Status chips (for tables and cards)</div>
+        <div class="qa-row">
+          <span class="status-chip status-chip--before">Before</span>
+          <span class="status-chip status-chip--after">After</span>
+          <span class="status-chip status-chip--future">Coming Soon</span>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ═══════════════════════════════════════
+         SECTION 5: EDITORIAL CARDS
+    ════════════════════════════════════════ -->
+
+    <div class="qa-section" id="cards">
+      <div class="qa-section-title">05 — Editorial Cards</div>
+
+      <div class="qa-specimen">
+        <div class="qa-specimen-label">Standard card — 3-column grid</div>
+        <div class="grid-3">
+          <div class="card fade-up">
+            <div class="card__label">DigiVenue Core</div>
+            <div class="card__title">Visibility &amp; Trust Infrastructure</div>
+            <div class="card__body">
+              The foundation layer. Manages Google Business Profiles,
+              review ecosystems, and the digital presence that converts
+              family discovery into venue inquiries.
+            </div>
+            <div class="card__footer">
+              <a href="#" class="btn btn--ghost btn--sm">Learn more →</a>
+            </div>
+          </div>
+          <div class="card fade-up delay-1">
+            <div class="card__label">DigiStories</div>
+            <div class="card__title">Visual Evidence Layer</div>
+            <div class="card__body">
+              Turns every event into a content asset. Professional
+              photography and video that fills Google profiles, Instagram
+              feeds, and sales decks with authentic social proof.
+            </div>
+            <div class="card__footer">
+              <a href="#" class="btn btn--ghost btn--sm">Learn more →</a>
+            </div>
+          </div>
+          <div class="card fade-up delay-2">
+            <div class="card__label">SmartOS</div>
+            <div class="card__title">Operational Intelligence</div>
+            <div class="card__body">
+              Converts the inquiries DigiVenue creates into organized,
+              professionally managed bookings. Operational clarity without
+              the cognitive burden of managing it yourself.
+            </div>
+            <div class="card__footer">
+              <a href="#" class="btn btn--ghost btn--sm">Learn more →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="qa-specimen">
+        <div class="qa-specimen-label">Feature card (centered) — stat-led</div>
+        <div class="grid-3">
+          <div class="card card--feature fade-up">
+            <div class="card__number">73%</div>
+            <div class="card__title">of families Google your name before calling</div>
+          </div>
+          <div class="card card--feature fade-up delay-1">
+            <div class="card__number" style="color:var(--color-accent);">14</div>
+            <div class="card__title">months — average dormancy of a venue's Google profile</div>
+          </div>
+          <div class="card card--feature fade-up delay-2">
+            <div class="card__number">3×</div>
+            <div class="card__title">more inquiries from actively managed profiles</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ═══════════════════════════════════════
+         SECTION 6: QUOTE BLOCKS
+    ════════════════════════════════════════ -->
+
+    <div class="qa-section theme-dark" id="quotes" style="background-color: var(--color-bg-deep); padding: 48px; border: 1px solid var(--color-border);">
+      <div class="qa-section-title" style="color: var(--color-gold);">06 — Quote Blocks (Dark Theme Specimen)</div>
+
+      <div class="qa-specimen">
+        <div class="qa-specimen-label">Full quote block</div>
+        <div style="max-width:760px;">
+          <div class="quote-block fade-up">
+            <p class="quote-block__text">
+              "Before DigiVenue, families would visit our venue and then go silent.
+              The audit showed us exactly what they were seeing when they searched us online.
+              We didn't like what we saw. Twelve months later, we understand why everything changed."
+            </p>
+            <div class="quote-block__attribution">
+              Operations Director
+              <span class="quote-block__venue">Grand Celebration Banquet, Ghatkopar</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="qa-specimen">
+        <div class="qa-specimen-label">Inline pullquote</div>
+        <div style="max-width:640px;" class="fade-up">
+          <div class="quote-inline">
+            <p>"Not a marketing agency. The operational trust infrastructure the event industry has always needed."</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ═══════════════════════════════════════
+         SECTION 7: STAT STRIP
+    ════════════════════════════════════════ -->
+
+    <div class="qa-section" id="stats">
+      <div class="qa-section-title">07 — Stat Strip</div>
+
+      <div class="qa-specimen">
+        <div class="qa-specimen-label">Three-column stat strip</div>
+        <div class="stat-strip fade-up">
+          <div class="stat-strip__item">
+            <div class="stat-strip__number">73%</div>
+            <div class="stat-strip__label">
+              of families search a venue name on Google before making first contact.
+            </div>
+          </div>
+          <div class="stat-strip__item">
+            <div class="stat-strip__number stat-strip__number--gold">14</div>
+            <div class="stat-strip__label">
+              months — the average gap since a banquet hall's Google profile was last updated.
+            </div>
+          </div>
+          <div class="stat-strip__item">
+            <div class="stat-strip__number">3×</div>
+            <div class="stat-strip__label">
+              more direction requests from actively managed Google Business Profiles vs. dormant ones.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ═══════════════════════════════════════
+         SECTION 8: ECOSYSTEM ROWS
+    ════════════════════════════════════════ -->
+
+    <div class="qa-section" id="ecosystem">
+      <div class="qa-section-title">08 — Ecosystem List Rows</div>
+
+      <div class="qa-specimen">
+        <div class="eco-list fade-up">
+          <div class="eco-row eco-row--link">
+            <div>
+              <span class="eco-row__label">Foundation</span>
+              <div class="eco-row__title">DigiVenue Core</div>
+            </div>
+            <div class="eco-row__body">
+              Visibility and trust infrastructure. Manages the digital presence that converts
+              venue discovery into venue bookings. The foundation layer every other product builds on.
+            </div>
+            <div class="eco-row__status">
+              <span class="badge badge--accent"><span class="badge__dot"></span>Active</span>
+            </div>
+          </div>
+          <div class="eco-row eco-row--link">
+            <div>
+              <span class="eco-row__label">Content</span>
+              <div class="eco-row__title">DigiStories</div>
+            </div>
+            <div class="eco-row__body">
+              Visual evidence layer. Every event becomes a multi-channel content asset
+              that fills Google profiles, Instagram, and sales materials with authentic proof.
+            </div>
+            <div class="eco-row__status">
+              <span class="badge badge--accent"><span class="badge__dot"></span>Active</span>
+            </div>
+          </div>
+          <div class="eco-row eco-row--link">
+            <div>
+              <span class="eco-row__label">Operations</span>
+              <div class="eco-row__title">SmartOS</div>
+            </div>
+            <div class="eco-row__body">
+              Operational intelligence. Converts the inquiries DigiVenue creates into
+              organized, professionally managed bookings.
+            </div>
+            <div class="eco-row__status">
+              <span class="badge badge--gold"><span class="badge__dot"></span>Growing</span>
+            </div>
+          </div>
+          <div class="eco-row">
+            <div>
+              <span class="eco-row__label eco-row__label--future">Expansion</span>
+              <div class="eco-row__title" style="color: var(--color-text-muted);">DigiShaadi</div>
+            </div>
+            <div class="eco-row__body">
+              Consumer discovery layer. Where wedding families find DigiVenue-managed venues
+              that are trusted, visual, and ready for their celebration.
+            </div>
+            <div class="eco-row__status">
+              <span class="badge"><span class="badge__dot"></span>Coming</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ═══════════════════════════════════════
+         SECTION 9: CTA BLOCK
+    ════════════════════════════════════════ -->
+
+    <div class="qa-section" id="cta">
+      <div class="qa-section-title">09 — CTA Block</div>
+    </div>
+
+  </div>
+  <!-- /qa-wrapper — exit wrapper to allow full-bleed CTA -->
+
+  <div class="cta-block fade-up">
+    <div class="container">
+      <div class="cta-block__label">Free Venue Assessment</div>
+      <h2 class="cta-block__title">
+        Where does your venue stand right now?
+      </h2>
+      <p class="cta-block__body">
+        A 3-minute audit reveals exactly how a family perceives your
+        digital presence today — before they've spoken to you.
+      </p>
+      <div class="cta-block__actions">
+        <a href="pages/audit.html" class="btn btn--primary btn--lg">
+          Get My Free Trust Audit
+        </a>
+        <a href="https://wa.me/91XXXXXXXXXX" class="btn btn--whatsapp btn--lg" target="_blank" rel="noopener noreferrer">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Talk to a Strategist
+        </a>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="qa-wrapper">
+
+    <!-- ═══════════════════════════════════════
+         SECTION 10: IMAGE CONTAINERS
+    ════════════════════════════════════════ -->
+
+    <div class="qa-section" id="images">
+      <div class="qa-section-title">10 — Image Containers &amp; Reveals</div>
+
+      <div class="qa-specimen">
+        <div class="qa-specimen-label">Landscape (16:9) with img-reveal</div>
+        <div class="img-container img-container--landscape img-reveal">
+          <!-- In production: replace src with real event photography -->
+          <img
+            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='675'%3E%3Crect width='1200' height='675' fill='%23111010'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dominant-baseline='middle' fill='%235a5755' font-family='Georgia,serif' font-size='18' font-style='italic'%3EHero Photography Placeholder — Replace with Real Venue Imagery%3C/text%3E%3C/svg%3E"
+            alt="DigiVenue venue photography — Indian banquet hall"
+            loading="lazy"
+          >
+        </div>
+        <p class="img-caption">Grand celebration setup — DigiStories event documentation</p>
+      </div>
+
+      <div class="grid-2" style="margin-top: 40px;">
+        <div class="qa-specimen">
+          <div class="qa-specimen-label">Portrait (3:4)</div>
+          <div class="img-container img-container--portrait img-reveal">
+            <img
+              src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='800'%3E%3Crect width='600' height='800' fill='%23111010'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dominant-baseline='middle' fill='%235a5755' font-family='Georgia,serif' font-size='16' font-style='italic'%3EPortrait — Detail Close-up%3C/text%3E%3C/svg%3E"
+              alt="Event detail photography"
+              loading="lazy"
+            >
+          </div>
+        </div>
+        <div class="qa-specimen">
+          <div class="qa-specimen-label">Square (1:1)</div>
+          <div class="img-container img-container--square img-reveal">
+            <img
+              src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='600'%3E%3Crect width='600' height='600' fill='%23181616'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dominant-baseline='middle' fill='%235a5755' font-family='Georgia,serif' font-size='16' font-style='italic'%3ESquare — Social Optimised%3C/text%3E%3C/svg%3E"
+              alt="Social photography"
+              loading="lazy"
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ═══════════════════════════════════════
+         SECTION 11: EDITORIAL TABLE
+    ════════════════════════════════════════ -->
+
+    <div class="qa-section" id="tables">
+      <div class="qa-section-title">11 — Editorial Tables</div>
+
+      <div class="qa-specimen fade-up">
+        <div class="qa-specimen-label">Before / After transformation table</div>
+        <table class="table-editorial">
+          <thead>
+            <tr>
+              <th>Metric</th>
+              <th>Before DigiVenue</th>
+              <th>12 Months Later</th>
+              <th>Change</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Google Reviews</td>
+              <td><span class="status-chip status-chip--before">12 reviews</span></td>
+              <td><span class="status-chip status-chip--after">214 reviews</span></td>
+              <td class="color-gold">+1,683%</td>
+            </tr>
+            <tr>
+              <td>Last Instagram Post</td>
+              <td><span class="status-chip status-chip--before">8 months ago</span></td>
+              <td><span class="status-chip status-chip--after">Updated weekly</span></td>
+              <td class="color-gold">Consistent</td>
+            </tr>
+            <tr>
+              <td>Google Photo Count</td>
+              <td><span class="status-chip status-chip--before">6 photos</span></td>
+              <td><span class="status-chip status-chip--after">240+ photos</span></td>
+              <td class="color-gold">+3,900%</td>
+            </tr>
+            <tr>
+              <td>Monthly Inquiries</td>
+              <td><span class="status-chip status-chip--before">~4 / month</span></td>
+              <td><span class="status-chip status-chip--after">~14 / month</span></td>
+              <td class="color-gold">3× increase</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+
+    <!-- ═══════════════════════════════════════
+         SECTION 12: FORM INPUTS
+    ════════════════════════════════════════ -->
+
+    <div class="qa-section" id="forms">
+      <div class="qa-section-title">12 — Form Inputs</div>
+
+      <div class="qa-specimen">
+        <div class="qa-specimen-label">Underline inputs (audit / contact forms)</div>
+        <div style="max-width:520px; display:flex; flex-direction:column; gap:32px;">
+          <div class="form-group">
+            <label class="form-label" for="venue-name">Venue Name</label>
+            <input class="form-input" id="venue-name" type="text" placeholder="e.g. Grand Celebrations Banquet Hall">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="locality">Locality</label>
+            <input class="form-input" id="locality" type="text" placeholder="e.g. Ghatkopar West, Mumbai">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="google-link">Google Maps Link (optional)</label>
+            <input class="form-input" id="google-link" type="url" placeholder="https://maps.google.com/...">
+          </div>
+          <a href="#" class="btn btn--accent">Run Venue Audit →</a>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ═══════════════════════════════════════
+         SECTION 13: MOTION VERIFICATION
+         Scroll down to see entrance animations
+    ════════════════════════════════════════ -->
+
+    <div class="qa-section" id="motion">
+      <div class="qa-section-title">13 — Motion System Verification</div>
+      <p class="text-lead" style="max-width:560px; margin-bottom:48px;">
+        Scroll through this section to verify entrance animations.
+        All elements should rise 30px while fading in.
+        Delays should create a staggered cascade in grids.
+      </p>
+
+      <div class="grid-3" style="margin-bottom: 40px;">
+        <div class="card fade-up">
+          <div class="card__label">No delay</div>
+          <div class="card__title">Fades in first</div>
+        </div>
+        <div class="card fade-up delay-1">
+          <div class="card__label">80ms delay</div>
+          <div class="card__title">Fades in second</div>
+        </div>
+        <div class="card fade-up delay-2">
+          <div class="card__label">160ms delay</div>
+          <div class="card__title">Fades in third</div>
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <div class="slide-right">
+          <div class="card">
+            <div class="card__label">Slide from left</div>
+            <div class="card__title">This card slides in from the left side.</div>
+          </div>
+        </div>
+        <div class="slide-left">
+          <div class="card">
+            <div class="card__label">Slide from right</div>
+            <div class="card__title">This card slides in from the right side.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ═══════════════════════════════════════
+         SECTION 14: LOCALITY STRIP
+    ════════════════════════════════════════ -->
+
+    <div class="qa-section" id="localities">
+      <div class="qa-section-title">14 — Locality Strip</div>
+      <div class="qa-specimen">
+        <div class="qa-specimen-label">Geographic anchor — proves local market knowledge</div>
+        <div class="locality-strip fade-up">
+          <span class="locality-tag">Chembur</span>
+          <span class="locality-tag">Dadar</span>
+          <span class="locality-tag">Wadala</span>
+          <span class="locality-tag">Ghatkopar</span>
+          <span class="locality-tag">Kurla</span>
+          <span class="locality-tag">Thane West</span>
+          <span class="locality-tag">Thane East</span>
+          <span class="locality-tag">Navi Mumbai</span>
+          <span class="locality-tag">Andheri</span>
+          <span class="locality-tag">Borivali</span>
+          <span class="locality-tag">Mulund</span>
+          <span class="locality-tag">Bhandup</span>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ═══════════════════════════════════════
+         SECTION 15: SECTION HEADER BLOCKS
+    ════════════════════════════════════════ -->
+
+    <div class="qa-section" id="section-headers">
+      <div class="qa-section-title">15 — Section Header Blocks</div>
+
+      <div class="qa-specimen">
+        <div class="qa-specimen-label">Left-aligned (default)</div>
+        <div class="section-header fade-up" style="margin-bottom: 48px;">
+          <span class="section-header__label">Ecosystem</span>
+          <h2 class="section-header__title">
+            One infrastructure.<br>Five interconnected layers.
+          </h2>
+          <p class="section-header__body">
+            Each layer is independently valuable. Each is exponentially more powerful
+            in combination with the others.
+          </p>
+        </div>
+      </div>
+
+      <div class="qa-specimen">
+        <div class="qa-specimen-label">Center-aligned (for CTA / intro sections)</div>
+        <div class="section-header section-header--center fade-up">
+          <span class="section-header__label">The Visibility Problem</span>
+          <h2 class="section-header__title">
+            Most banquet halls in India are invisible<br>when it matters most.
+          </h2>
+          <p class="section-header__body">
+            Not because their venues are poor. Because their digital presence
+            signals dormancy instead of professionalism.
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <!-- /qa-wrapper -->
+
+
+  <!-- ═══════════════════════════════════════
+       GLOBAL FOOTER
+  ════════════════════════════════════════ -->
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+
+        <div class="footer-brand">
+          <div class="footer-brand__logo">
+            Digi<span style="color: var(--color-accent);">Venue</span>
+          </div>
+          <p class="footer-brand__tagline">
+            The operational trust infrastructure for the modern Indian event industry.
+          </p>
+          <div class="footer-brand__whatsapp" style="margin-top: 24px;">
+            <a href="https://wa.me/91XXXXXXXXXX" class="btn btn--whatsapp btn--sm" target="_blank" rel="noopener noreferrer">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              Talk to a Strategist
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h3 class="footer-col__heading">Ecosystem</h3>
+          <ul class="footer-col__links">
+            <li><a href="#">DigiVenue Core</a></li>
+            <li><a href="#">DigiStories</a></li>
+            <li><a href="#">SmartOS</a></li>
+            <li><a href="#">DigiNetwork</a></li>
+            <li><a href="#" style="color:var(--color-text-muted);">DigiMarket — Coming</a></li>
+            <li><a href="#" style="color:var(--color-text-muted);">DigiShaadi — Coming</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3 class="footer-col__heading">For Venues</h3>
+          <ul class="footer-col__links">
+            <li><a href="#">Free Trust Audit</a></li>
+            <li><a href="#">Case Studies</a></li>
+            <li><a href="#">Our Philosophy</a></li>
+            <li><a href="#">Journal</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3 class="footer-col__heading">Where We Work</h3>
+          <ul class="footer-col__links">
+            <li><a href="#">Mumbai</a></li>
+            <li><a href="#">Navi Mumbai</a></li>
+            <li><a href="#">Thane</a></li>
+            <li><a href="#">Chembur &amp; Dadar</a></li>
+            <li><a href="#">Ghatkopar &amp; Kurla</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-bottom__copy">
+          &copy; 2026 DigiVenue. All rights reserved. Operational trust infrastructure for the Indian event industry.
+        </p>
+        <nav class="footer-bottom__legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+        </nav>
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- Global JS -->
+  <script src="js/main.js"></script>
+
+</body>
+</html>

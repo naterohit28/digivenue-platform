@@ -1,0 +1,262 @@
+[
+  {
+    "suburb": "Thane East",
+    "total_businesses": 1,
+    "avg_dmi_score": 67.44,
+    "avg_review_count": 68.0,
+    "instagram_activity_pct": 100.0,
+    "review_freshness_pct": 100.0,
+    "avg_operational_maturity": 47.0,
+    "updated_at": "2026-05-30T08:42:49"
+  },
+  {
+    "suburb": "Nerul",
+    "total_businesses": 2,
+    "avg_dmi_score": 62.26,
+    "avg_review_count": 68.0,
+    "instagram_activity_pct": 100.0,
+    "review_freshness_pct": 100.0,
+    "avg_operational_maturity": 37.0,
+    "updated_at": "2026-05-30T08:42:49"
+  },
+  {
+    "suburb": "Dombivli",
+    "total_businesses": 2,
+    "avg_dmi_score": 57.54,
+    "avg_review_count": 70.5,
+    "instagram_activity_pct": 100.0,
+    "review_freshness_pct": 100.0,
+    "avg_operational_maturity": 27.0,
+    "updated_at": "2026-05-30T08:42:49"
+  },
+  {
+    "suburb": "Pune Camp",
+    "total_businesses": 1,
+    "avg_dmi_score": 56.48,
+    "avg_review_count": 63.0,
+    "instagram_activity_pct": 100.0,
+    "review_freshness_pct": 100.0,
+    "avg_operational_maturity": 27.0,
+    "updated_at": "2026-05-30T08:42:49"
+  },
+  {
+    "suburb": "Andheri",
+    "total_businesses": 7,
+    "avg_dmi_score": 51.45,
+    "avg_review_count": 57.0,
+    "instagram_activity_pct": 100.0,
+    "review_freshness_pct": 100.0,
+    "avg_operational_maturity": 29.14,
+    "updated_at": "2026-05-30T08:42:49"
+  },
+  {
+    "suburb": "Kurla",
+    "total_businesses": 1,
+    "avg_dmi_score": 46.71,
+    "avg_review_count": 38.0,
+    "instagram_activity_pct": 100.0,
+    "review_freshness_pct": 100.0,
+    "avg_operational_maturity": 32.0,
+    "updated_at": "2026-05-30T08:42:49"
+  },
+  {
+    "suburb": "Belapur",
+    "total_businesses": 2,
+    "avg_dmi_score": 46.17,
+    "avg_review_count": 48.0,
+    "instagram_activity_pct": 100.0,
+    "review_freshness_pct": 100.0,
+    "avg_operational_maturity": 29.5,
+    "updated_at": "2026-05-30T08:42:49"
+  },
+  {
+    "suburb": "Kalyan",
+    "total_businesses": 4,
+    "avg_dmi_score": 43.98,
+    "avg_review_count": 45.75,
+    "instagram_activity_pct": 75.0,
+    "review_freshness_pct": 100.0,
+    "avg_operational_maturity": 29.5,
+    "updated_at": "2026-05-30T08:42:49"
+  },
+  {
+    "suburb": "Wakad",
+    "total_businesses": 3,
+    "avg_dmi_score": 43.6,
+    "avg_review_count": 48.67,
+    "instagram_activity_pct": 100.0,
+    "review_freshness_pct": 100.0,
+    "avg_operational_maturity": 23.67,
+    "updated_at": "2026-05-30T08:42:49"
+  },
+  {
+    "suburb": "Kharghar",
+    "total_businesses": 4,
+    "avg_dmi_score": 41.74,
+    "avg_review_count": 44.75,
+    "instagram_activity_pct": 100.0,
+    "review_freshness_pct": 100.0,
+    "avg_operational_maturity": 22.0,
+    "updated_at": "2026-05-30T08:42:49"
+  },
+  {
+    "suburb": "Chembur",
+    "total_businesses": 5,
+    "avg_dmi_score": 40.9,
+    "avg_review_count": 42.2,
+    "instagram_activity_pct": 100.0,
+    "review_freshness_pct": 100.0,
+    "avg_operational_maturity": 22.0,
+    "updated_at": "2026-05-30T08:42:49"
+  },
+  {
+    "suburb": "Vashi",
+    "total_businesses": 10,
+    "avg_dmi_score": 40.13,
+    "avg_review_count": 41.4,
+    "instagram_activity_pct": 100.0,
+    "review_freshness_pct": 100.0,
+    "avg_operational_maturity": 22.5,
+    "updated_at": "2026-05-30T08:42:49"
+  },
+  {
+    "suburb": "South Mumbai",
+    "total_businesses": 9,
+    "avg_dmi_score": 38.98,
+    "avg_review_count": 42.22,
+    "instagram_activity_pct": 100.0,
+    "review_freshness_pct": 100.0,
+    "avg_operational_maturity": 22.0,
+    "updated_at": "2026-05-30T08:42:49"
+  },
+  {
+    "suburb": "Dadar",
+    "total_businesses": 9,
+    "avg_dmi_score": 36.73,
+    "avg_review_count": 41.44,
+    "instagram_activity_pct": 88.89,
+    "review_freshness_pct": 100.0,
+    "avg_operational_maturity": 15.33,
+    "updated_at": "2026-05-30T08:42:49"
+  },
+  {
+    "suburb": "Pune Central",
+    "total_businesses": 7,
+    "avg_dmi_score": 35.55,
+    "avg_review_count": 36.29,
+    "instagram_activity_pct": 100.0,
+    "review_freshness_pct": 100.0,
+    "avg_operational_maturity": 17.0,
+    "updated_at": "2026-05-30T08:42:49"
+  },
+  {
+    "suburb": "Mulund",
+    "total_businesses": 5,
+    "avg_dmi_score": 35.15,
+    "avg_review_count": 39.8,
+    "instagram_activity_pct": 100.0,
+    "review_freshness_pct": 100.0,
+    "avg_operational_maturity": 15.0,
+    "updated_at": "2026-05-30T08:42:49"
+  },
+  {
+    "suburb": "Pune East",
+    "total_businesses": 2,
+    "avg_dmi_score": 33.84,
+    "avg_review_count": 39.5,
+    "instagram_activity_pct": 100.0,
+    "review_freshness_pct": 100.0,
+    "avg_operational_maturity": 12.0,
+    "updated_at": "2026-05-30T08:42:49"
+  },
+  {
+    "suburb": "Pune West",
+    "total_businesses": 5,
+    "avg_dmi_score": 32.51,
+    "avg_review_count": 35.2,
+    "instagram_activity_pct": 100.0,
+    "review_freshness_pct": 100.0,
+    "avg_operational_maturity": 12.0,
+    "updated_at": "2026-05-30T08:42:49"
+  },
+  {
+    "suburb": "Thane West",
+    "total_businesses": 13,
+    "avg_dmi_score": 32.04,
+    "avg_review_count": 31.38,
+    "instagram_activity_pct": 100.0,
+    "review_freshness_pct": 100.0,
+    "avg_operational_maturity": 14.31,
+    "updated_at": "2026-05-30T08:42:49"
+  },
+  {
+    "suburb": "Malad",
+    "total_businesses": 5,
+    "avg_dmi_score": 31.09,
+    "avg_review_count": 31.6,
+    "instagram_activity_pct": 80.0,
+    "review_freshness_pct": 100.0,
+    "avg_operational_maturity": 12.0,
+    "updated_at": "2026-05-30T08:42:49"
+  },
+  {
+    "suburb": "Pimple Saudagar",
+    "total_businesses": 1,
+    "avg_dmi_score": 29.95,
+    "avg_review_count": 39.0,
+    "instagram_activity_pct": 100.0,
+    "review_freshness_pct": 100.0,
+    "avg_operational_maturity": 12.0,
+    "updated_at": "2026-05-30T08:42:49"
+  },
+  {
+    "suburb": "Panvel",
+    "total_businesses": 2,
+    "avg_dmi_score": 28.52,
+    "avg_review_count": 34.0,
+    "instagram_activity_pct": 50.0,
+    "review_freshness_pct": 100.0,
+    "avg_operational_maturity": 12.0,
+    "updated_at": "2026-05-30T08:42:49"
+  },
+  {
+    "suburb": "Goregaon",
+    "total_businesses": 1,
+    "avg_dmi_score": 27.95,
+    "avg_review_count": 33.0,
+    "instagram_activity_pct": 100.0,
+    "review_freshness_pct": 100.0,
+    "avg_operational_maturity": 12.0,
+    "updated_at": "2026-05-30T08:42:49"
+  },
+  {
+    "suburb": "Borivali",
+    "total_businesses": 2,
+    "avg_dmi_score": 25.83,
+    "avg_review_count": 31.5,
+    "instagram_activity_pct": 100.0,
+    "review_freshness_pct": 100.0,
+    "avg_operational_maturity": 12.0,
+    "updated_at": "2026-05-30T08:42:49"
+  },
+  {
+    "suburb": "Mira Road",
+    "total_businesses": 2,
+    "avg_dmi_score": 24.2,
+    "avg_review_count": 24.0,
+    "instagram_activity_pct": 100.0,
+    "review_freshness_pct": 100.0,
+    "avg_operational_maturity": 12.0,
+    "updated_at": "2026-05-30T08:42:49"
+  },
+  {
+    "suburb": "Hinjewadi",
+    "total_businesses": 1,
+    "avg_dmi_score": 20.52,
+    "avg_review_count": 26.0,
+    "instagram_activity_pct": 0.0,
+    "review_freshness_pct": 100.0,
+    "avg_operational_maturity": 12.0,
+    "updated_at": "2026-05-30T08:42:49"
+  }
+]

@@ -1,0 +1,252 @@
+/* ============================================================
+   DIGIVENUE — PRODUCTION DESIGN TOKENS
+   The single source of truth for all visual values.
+   Every style in the system derives from these tokens.
+   Constitutional authority: DIGIVENUE_MASTER_SYSTEM.md §10–12
+   ============================================================ */
+
+:root {
+
+  /* ──────────────────────────────────────────
+     COLOR SYSTEM
+     Philosophy: warm charcoal dark mode.
+     Not blue-black. Not navy. Warm espresso.
+     ────────────────────────────────────────── */
+
+  /* Backgrounds */
+  --color-bg:           #FAF7F2;   /* Primary page background — warm ivory */
+  --color-bg-deep:      #F5EFE6;   /* Deepest background — margins, page frames */
+  --color-surface:      #F3EEE5;   /* Card surfaces — champagne / soft paper */
+  --color-surface-mid:  #EBE4D8;   /* Elevated surfaces */
+  --color-surface-high: #E2D9C9;   /* Hover states, active surfaces */
+
+  /* Borders */
+  --color-border:       #E5DFD3;   /* Subtle divider */
+  --color-border-light: #D5CEBF;   /* Slightly more visible borders */
+  --color-border-gold:  rgba(197, 160, 89, 0.3); /* Gold accent border */
+
+  /* Text — lifted for daylight phone legibility (P5) */
+  --color-text-primary:   #1F1D1C; /* Warm charcoal — headings, key text */
+  --color-text-secondary: #4A4644; /* Warm dark gray — body copy, reading (was #5C5856) */
+  --color-text-muted:     #6F6864; /* Warm muted gray — metadata, captions (was #8C8581) */
+  --color-text-inverse:   #FAF7F2; /* Light ivory text on dark surfaces */
+
+  /* Brand Accents */
+  --color-accent:         #D94822; /* Restrained Vermillion */
+  --color-accent-hover:   #B83615; /* Vermillion hover */
+  --color-accent-subtle:  rgba(217, 72, 34, 0.08);
+  --color-gold:           #C5A059; /* Muted Champagne Gold */
+  --color-gold-hover:     #D4B06A;
+  --color-gold-subtle:    rgba(197, 160, 89, 0.06);
+  --color-gold-border:    rgba(197, 160, 89, 0.18);
+
+  /* Overlays (Keep dark for text overlay contrast on images) */
+  --color-overlay-dark:   rgba(10, 9, 8, 0.70);
+  --color-overlay-mid:    rgba(10, 9, 8, 0.45);
+  --color-overlay-light:  rgba(10, 9, 8, 0.20);
+  --color-scrim-bottom:   linear-gradient(to bottom, transparent 0%, var(--color-bg-deep) 100%);
+  --color-scrim-top:      linear-gradient(to top,    transparent 0%, var(--color-bg-deep) 100%);
+
+
+
+  /* ──────────────────────────────────────────
+     TYPOGRAPHY TOKENS
+     Two-voice system: Serif = emotion/authority
+     Sans = precision/operations
+     ────────────────────────────────────────── */
+
+  --font-serif:    'Playfair Display', Georgia, 'Times New Roman', serif;
+  --font-sans:     'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Weights */
+  --weight-thin:      100;
+  --weight-light:     300;
+  --weight-regular:   400;
+  --weight-medium:    500;
+  --weight-semibold:  600;
+  --weight-bold:      700;
+
+  /* Type Scale — Desktop (P4: floor raised for mobile readability) */
+  --text-display:  clamp(56px, 7vw, 96px);  /* Cinematic hero title */
+  --text-h1:       clamp(40px, 5vw, 64px);  /* Section openings */
+  --text-h2:       clamp(28px, 3.5vw, 44px);/* Major subsections */
+  --text-h3:       clamp(22px, 2.5vw, 30px);/* Content blocks */
+  --text-h4:       clamp(18px, 2vw, 22px);  /* Sub-block titles */
+  --text-lead:     clamp(17px, 1.5vw, 20px);/* Feature copy */
+  --text-body:     17px;                     /* Standard reading (was 16px) */
+  --text-small:    15px;                     /* Supporting text — important info (was 14px) */
+  --text-caption:  14px;                     /* Captions, meaningful labels (was 12px) */
+  --text-micro:    12px;                     /* Decorative metadata only (was 11px) */
+
+  /* Line Heights */
+  --lh-display:   1.05;
+  --lh-heading:   1.15;
+  --lh-subhead:   1.25;
+  --lh-body:      1.70;
+  --lh-lead:      1.60;
+  --lh-tight:     1.10;
+
+  /* Letter Spacing */
+  --ls-display:   -0.03em;  /* Tight for large display serif */
+  --ls-heading:   -0.02em;  /* Slightly tight for headings */
+  --ls-body:       0em;     /* Standard for body */
+  --ls-label:      0.08em;  /* Open for uppercase labels */
+  --ls-badge:      0.12em;  /* Wide for badges */
+
+
+  /* ──────────────────────────────────────────
+     SPACING — 8PT GRID
+     All spacing is a multiple of 8.
+     Micro-exception: 4px for internal padding only.
+     ────────────────────────────────────────── */
+
+  --space-1:    4px;    /* Micro — internal padding only */
+  --space-2:    8px;    /* Tight — inline gaps */
+  --space-3:   16px;    /* Small — between related elements */
+  --space-4:   24px;    /* Medium — paragraph spacing */
+  --space-5:   32px;    /* Standard — component gaps */
+  --space-6:   48px;    /* Generous — card padding */
+  --space-7:   56px;    /* Large — section sub-gaps (was 64px) */
+  --space-8:   72px;    /* XL — between sections, mobile padding (was 96px) */
+  --space-9:   96px;    /* XXL — desktop section padding (was 128px) */
+  --space-10: 110px;    /* Cinematic section spacing (was 160px) */
+  --space-11: 140px;    /* Maximum — key editorial sections (was 192px) */
+
+  /* Named semantic spacing (P3: tightened) */
+  --section-padding-desktop:  100px;  /* was 140px */
+  --section-padding-mobile:    60px;  /* was 80px */
+  --container-max:           1280px;
+  --container-editorial:      960px;  /* Reading-optimized column width */
+  --container-narrow:         720px;  /* Stillness sections */
+  --container-padding:         24px;  /* Side gutter on all viewports */
+
+
+  /* ──────────────────────────────────────────
+     BORDERS & GEOMETRY
+     All corners: 0px — architectural precision.
+     ────────────────────────────────────────── */
+
+  --border-width:   1px;
+  --border-style:   solid;
+  --border-radius:  0;        /* Rigid — no rounded corners anywhere */
+  --border-thin:    1px solid var(--color-border);
+  --border-gold:    1px solid var(--color-border-gold);
+
+
+  /* ──────────────────────────────────────────
+     LAYOUT TOKENS
+     ────────────────────────────────────────── */
+
+  --gap-xs:    16px;
+  --gap-sm:    24px;
+  --gap-md:    40px;
+  --gap-lg:    64px;
+  --gap-xl:    80px;
+  --gap-xxl:  120px;
+
+
+  /* ──────────────────────────────────────────
+     MOTION — TIMING & EASING
+     Cinematic pacing. Nothing rushed.
+     Nothing decorative.
+     ────────────────────────────────────────── */
+
+  --ease-out:    cubic-bezier(0.16, 1, 0.3, 1);     /* Default ease — natural decel */
+  --ease-in:     cubic-bezier(0.7, 0, 1, 1);         /* For exit motions */
+  --ease-inout:  cubic-bezier(0.45, 0, 0.55, 1);     /* Symmetrical */
+  --ease-reveal: cubic-bezier(0.77, 0, 0.175, 1);    /* Image clip reveals */
+
+  --duration-instant:    0ms;
+  --duration-fast:      200ms;
+  --duration-base:      350ms;
+  --duration-slow:      600ms;
+  --duration-reveal:    900ms;   /* Entrance animations */
+  --duration-cinematic: 1400ms;  /* Image reveal curtains */
+
+  --delay-none:  0ms;
+  --delay-1:    80ms;
+  --delay-2:   160ms;
+  --delay-3:   240ms;
+  --delay-4:   320ms;
+  --delay-5:   440ms;
+
+
+  /* ──────────────────────────────────────────
+     Z-INDEX LAYERS
+     Named system to prevent stacking chaos.
+     ────────────────────────────────────────── */
+
+  --z-below:    -1;
+  --z-default:   0;
+  --z-raised:   10;    /* Cards on hover */
+  --z-overlay:  50;    /* Overlay masks */
+  --z-nav:     100;    /* Global navigation */
+  --z-mobile:  150;    /* Mobile nav menu */
+  --z-modal:   200;    /* Modals / lightboxes */
+  --z-top:     999;    /* Absolute top layer */
+
+
+  /* ──────────────────────────────────────────
+     SHADOW SYSTEM
+     Restrained. Premium. Never aggressive.
+     ────────────────────────────────────────── */
+
+  --shadow-sm:   0 2px 12px rgba(0, 0, 0, 0.3);
+  --shadow-md:   0 8px 32px rgba(0, 0, 0, 0.5);
+  --shadow-lg:   0 20px 60px rgba(0, 0, 0, 0.6);
+  --shadow-gold: 0 0 0 1px rgba(197, 160, 89, 0.15);
+
+}
+
+/* ──────────────────────────────────────────
+   DARK THEME OVERRIDES
+   Apply this class to any section or component
+   that requires dark cinematic rendering.
+   ────────────────────────────────────────── */
+/* ──────────────────────────────────────────
+   MOBILE STEP-DOWN (P3)
+   Tighter section spacing on small screens.
+   ────────────────────────────────────────── */
+@media (max-width: 768px) {
+  :root {
+    --space-7:    44px;
+    --space-8:    56px;
+    --space-9:    68px;
+    --space-10:   78px;
+    --space-11:   90px;
+    --section-padding-desktop: 72px;
+    --section-padding-mobile:  56px;
+  }
+}
+@media (max-width: 480px) {
+  :root {
+    --space-7:    36px;
+    --space-8:    48px;
+    --space-9:    56px;
+    --space-10:   64px;
+    --space-11:   72px;
+    --section-padding-mobile:  44px;
+  }
+}
+
+.theme-dark,
+.section-dark {
+  /* Backgrounds */
+  --color-bg:           #0A0908;   /* Primary page background — warm near-black */
+  --color-bg-deep:      #030303;   /* Deepest background */
+  --color-surface:      #111010;   /* Card surfaces */
+  --color-surface-mid:  #181616;   /* Elevated surfaces */
+  --color-surface-high: #1F1D1D;   /* Hover states */
+
+  /* Borders */
+  --color-border:       #242121;   /* Subtle divider */
+  --color-border-light: #2E2A2A;   /* Slightly visible border */
+  --color-border-gold:  rgba(197, 160, 89, 0.2);
+
+  /* Text — lifted for legibility (P5) */
+  --color-text-primary:   #F5F2EE; /* Ivory white — headings */
+  --color-text-secondary: #BFBCBA; /* Muted warm gray — body copy (was #9A9795) */
+  --color-text-muted:     #8A8784; /* Deeply muted — metadata, captions (was #5A5755) */
+  --color-text-inverse:   #0A0908; /* Dark text on light backgrounds */
+}
+

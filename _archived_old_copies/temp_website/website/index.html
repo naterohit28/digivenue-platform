@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO -->
+  <title>DigiVenue SmartOS — The Operating System for Indian Banquet & Wedding Venues</title>
+  <meta name="description" content="DigiVenue SmartOS helps banquet halls and wedding venues manage inquiries, bookings, payments, Google presence, real wedding photos and operational reports — from one platform built specifically for Indian venue businesses.">
+  <meta name="keywords" content="banquet hall management software India, venue CRM, wedding venue operating system, banquet booking system Mumbai, SmartOS DigiVenue">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="DigiVenue SmartOS — Built for Banquet & Wedding Venues">
+  <meta property="og:description" content="Manage inquiries, bookings, payments, Google presence and operations — all from one system built specifically for banquet owners.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/images/hero-banquet.jpg">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://digivenue.in/">
+
+  <!-- Fonts: preconnect for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Design system (foundation) -->
+  <link rel="stylesheet" href="styles/main.css">
+
+  <!-- Page-specific styles -->
+  <link rel="stylesheet" href="styles/pages/home.css">
+  <link rel="stylesheet" href="styles/pages/home-refined.css">
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "DigiVenue SmartOS",
+    "description": "A venue management operating system for banquet halls and wedding venues — covering inquiry tracking, booking management, Google presence, real wedding photography and operational reporting.",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web",
+    "url": "https://digivenue.in",
+    "offers": {
+      "@type": "Offer",
+      "availability": "https://schema.org/InStock"
+    },
+    "areaServed": [
+      "Mumbai", "Navi Mumbai", "Thane", "Chembur", "Dadar", "Ghatkopar", "Kurla", "Wadala"
+    ]
+  }
+  </script>
+
+  <style>
+    /* ── Vision section ── */
+    .vision {
+      padding-block: clamp(56px, 8vw, 96px);
+      background-color: var(--color-bg-deep);
+      border-top: 1px solid var(--color-border);
+      border-bottom: 1px solid var(--color-border);
+    }
+    .vision__inner {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 var(--space-5);
+    }
+    .vision__label {
+      display: block;
+      font-family: var(--font-sans);
+      font-size: var(--text-micro);
+      font-weight: var(--weight-semibold);
+      text-transform: uppercase;
+      letter-spacing: var(--ls-badge);
+      color: var(--color-gold);
+      margin-bottom: var(--space-5);
+    }
+    .vision__headline {
+      font-family: var(--font-serif);
+      font-size: clamp(28px, 3.5vw, 46px);
+      font-weight: var(--weight-medium);
+      line-height: 1.2;
+      letter-spacing: -0.025em;
+      color: var(--color-text-primary);
+      margin-bottom: var(--space-6);
+    }
+    .vision__headline em {
+      font-style: italic;
+      font-weight: var(--weight-regular);
+    }
+    .vision__body {
+      font-family: var(--font-sans);
+      font-size: clamp(16px, 1.3vw, 18px);
+      line-height: 1.75;
+      color: var(--color-text-secondary);
+      margin-bottom: var(--space-5);
+      max-width: 720px;
+    }
+    .vision__body:last-of-type {
+      margin-bottom: 0;
+    }
+  </style>
+</head>
+
+<body class="home">
+
+  <!-- ════════════════════════════════════════
+       GLOBAL NAVIGATION
+  ═════════════════════════════════════════ -->
+
+  <nav class="site-nav" role="navigation" aria-label="Primary navigation">
+    <a href="index.html" class="nav-logo" aria-label="DigiVenue — Home">
+      Digi<span class="nav-logo__accent">Venue</span>
+    </a>
+    <ul class="nav-links" role="list">
+      <li><a href="pages/what-we-do.html" class="nav-link">What We Do</a></li>
+      <li><a href="pages/results.html"     class="nav-link">Results</a></li>
+      <li><a href="pages/ecosystem.html"   class="nav-link">Ecosystem</a></li>
+      <li><a href="pages/about.html"       class="nav-link">About</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="pages/audit.html" class="btn btn--outline btn--sm">Free Check &rarr;</a>
+    </div>
+    <button class="nav-toggle"
+            aria-label="Open menu"
+            aria-expanded="false"
+            aria-controls="mobile-drawer">
+      <span class="nav-toggle__bar" aria-hidden="true"></span>
+      <span class="nav-toggle__bar" aria-hidden="true"></span>
+      <span class="nav-toggle__bar" aria-hidden="true"></span>
+    </button>
+    <div class="nav-mobile-drawer" id="mobile-drawer" role="dialog" aria-label="Mobile navigation">
+      <a href="pages/what-we-do.html">What We Do</a>
+      <a href="pages/results.html">Results</a>
+      <a href="pages/ecosystem.html">Ecosystem</a>
+      <a href="pages/about.html">About</a>
+      <div class="nav-mobile-cta">
+        <a href="pages/audit.html" class="btn btn--outline">See SmartOS in Action &rarr;</a>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- ════════════════════════════════════════
+       HOME — SIX MOVEMENTS
+  ═════════════════════════════════════════ -->
+
+
+  <!-- I · Hero — the operating system for venue businesses -->
+  <!--
+    IMAGE DIRECTION (must be replaced before launch):
+    Not a smiling bride. Not a decorated stage. Not a drone shot.
+    Instead: an empty Mumbai banquet hall in the hour before guests arrive.
+    Warm tungsten light. Mandap half-set. A chair being placed by staff in the
+    background. Glass facade with monsoon rain outside, optional. Anticipatory,
+    quiet, documentary. The image should feel like a film still — not a brochure.
+  -->
+  <header class="hero movement" role="banner">
+    <div class="hero__bg" aria-hidden="true">
+      <img src="assets/images/hero-banquet.jpg"
+           alt="A Mumbai banquet hall in the hour before guests arrive."
+           width="2000" height="1333"
+           fetchpriority="high"
+           decoding="async">
+    </div>
+    <div class="hero__veil" aria-hidden="true"></div>
+
+    <div class="hero__top">
+      <span>DigiVenue SmartOS</span>
+      <span>Mumbai · Navi Mumbai · Thane</span>
+    </div>
+
+    <div class="hero__center" aria-hidden="true"></div>
+
+    <div class="hero__bottom">
+      <div class="hero__title-block">
+        <h1 class="hero__title">
+          India's first operating system<br>
+          built for banquet<br>
+          <em>&amp; wedding venues.</em>
+        </h1>
+        <p class="hero__anchor">
+          Manage inquiries, bookings, Google presence, real wedding photos and operational reports — all from one platform designed around how venue businesses actually work.
+        </p>
+      </div>
+      <div style="display: flex; gap: var(--space-4); flex-wrap: wrap; align-items: center;">
+        <a href="pages/audit.html" class="hero__cta">See SmartOS in Action &nbsp;&rarr;</a>
+        <a href="pages/about.html" class="hero__cta" style="background: transparent; border: 1px solid rgba(245,242,238,0.35); color: rgba(245,242,238,0.80);">Book a Live Demo</a>
+      </div>
+    </div>
+
+    <span class="hero__still" aria-hidden="true">
+      Built by people who have run banquet halls and handled wedding chaos from the inside.
+    </span>
+  </header>
+
+
+  <!-- II · The held moment — the problem in one line -->
+  <section class="movement pause" aria-label="The operational truth">
+    <p class="pause__line">
+      Most venues still run<br><em>on paper diaries and WhatsApp.</em>
+    </p>
+    <p class="pause__caption">
+      Every missed call, lost booking, and unanswered enquiry costs a wedding you would have won.
+    </p>
+  </section>
+
+
+  <!-- III · SmartOS — what it does, specifically -->
+  <section class="movement what" id="smartos" aria-label="What SmartOS does">
+    <div class="what__grid">
+
+      <div class="what__heading">
+        <span class="eyebrow">DigiVenue SmartOS</span>
+        <p class="statement">
+          One platform.<br><em>Every part of your venue.</em>
+        </p>
+        <p style="font-size: 15px; color: var(--color-text-secondary); line-height: 1.65; margin-top: var(--space-5); font-family: var(--font-sans);">
+          Unlike generic CRMs, SmartOS is built around the real workflow of Indian banquet and wedding businesses — from the first enquiry call to the final review.
+        </p>
+      </div>
+
+      <div class="what__list">
+        <article class="what__item">
+          <span class="what__item__num">01 · Inquiry &amp; Booking Management</span>
+          <h3 class="what__item__title">Every lead. Every booking. Nothing lost.</h3>
+          <p class="what__item__body">
+            Every call, WhatsApp message and walk-in enquiry — captured, tracked and followed up in one place. Replace the diary and the scattered chats with a clear pipeline that shows you exactly where each booking stands.
+          </p>
+          <p class="what__item__result"><strong>Outcome</strong> &nbsp;·&nbsp; full visibility over your enquiry pipeline, no booking falls through a gap</p>
+        </article>
+
+        <article class="what__item">
+          <span class="what__item__num">02 · Google &amp; Digital Presence</span>
+          <h3 class="what__item__title">A venue that looks alive online.</h3>
+          <p class="what__item__body">
+            Fresh photos every week, reviews replied to, hours and details kept current. When a family searches your venue, they find an active, well-reviewed page — not a blank listing from three years ago.
+          </p>
+          <p class="what__item__result"><strong>Outcome</strong> &nbsp;·&nbsp; more direction requests, more direct calls from Google Maps</p>
+        </article>
+
+        <article class="what__item">
+          <span class="what__item__num">03 · Real Wedding Photos &amp; Content</span>
+          <h3 class="what__item__title">Real functions, never stock photos.</h3>
+          <p class="what__item__body">
+            Our team attends your functions and shoots real photos and reels — the mandap, the decor, the crowd. Uploaded to Google, Instagram and WhatsApp the same week families are still talking about the wedding.
+          </p>
+          <p class="what__item__result"><strong>Outcome</strong> &nbsp;·&nbsp; 8&ndash;12 real wedding photos added to your page every month</p>
+        </article>
+
+        <article class="what__item">
+          <span class="what__item__num">04 · Reports &amp; Operational Visibility</span>
+          <h3 class="what__item__title">Know your numbers without chasing them.</h3>
+          <p class="what__item__body">
+            One weekly summary: how many enquiries came in, how many converted, what your Google page is doing, which months are filling up. The data you need to run a venue — without a spreadsheet.
+          </p>
+          <p class="what__item__result"><strong>Outcome</strong> &nbsp;·&nbsp; clear picture of what's working, every week</p>
+        </article>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- IV · The truth — one line, immense weight -->
+  <section class="movement truth" aria-label="The competitive reality">
+    <p class="truth__line">
+      In India,<br>
+      the most organised venue<br>
+      <em>wins the wedding.</em>
+    </p>
+  </section>
+
+
+  <!-- V · Vision — why DigiVenue exists -->
+  <section class="vision movement" aria-label="Why DigiVenue exists">
+    <div class="vision__inner">
+      <span class="vision__label fade-up">Why we built this</span>
+      <h2 class="vision__headline fade-up delay-1">
+        Built by venue owners.<br>
+        <em>Powered for growth.</em>
+      </h2>
+      <p class="vision__body fade-up delay-2">
+        DigiVenue was created with one vision: to build the digital operating infrastructure for the Indian wedding and event industry.
+      </p>
+      <p class="vision__body fade-up delay-2">
+        We believe venues are the starting point of every celebration — yet most venue businesses still operate through scattered calls, paper diaries, WhatsApp chats, and manual systems that lose bookings and leave money on the table.
+      </p>
+      <p class="vision__body fade-up delay-3">
+        SmartOS was built from real industry experience — by people who have run banquet halls, handled wedding chaos, managed bookings and solved real operational problems from the inside. Not software designed for everyone. An operating system designed specifically for serious venue businesses.
+      </p>
+    </div>
+  </section>
+
+
+  <!-- VI · Proof — one real result, then numbers -->
+  <section class="movement proof" id="proof" aria-label="A real venue, a real year">
+    <div class="proof__inner">
+
+      <p class="proof__quote">
+        Earlier, families would visit and then go quiet. We never knew why. Now they call already half-decided. The trust is built before they even step inside.
+      </p>
+
+      <p class="proof__attr">
+        <strong>Rajesh Mehta</strong> Grand Celebration Banquet · Ghatkopar West
+      </p>
+
+      <div class="proof__line">
+        <div>
+          <span class="proof__line__n">12 &rarr; 214</span>
+          <span class="proof__line__l">Google reviews</span>
+        </div>
+        <div>
+          <span class="proof__line__n">6 &rarr; 240+</span>
+          <span class="proof__line__l">Real wedding photos</span>
+        </div>
+        <div>
+          <span class="proof__line__n">4 &rarr; 14</span>
+          <span class="proof__line__l">Inquiry calls a month</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- VII · Places — a whisper -->
+  <section class="movement places" aria-label="Where we work">
+    <span class="places__label">Currently working with venues in</span>
+    <p class="places__line">
+      Chembur · Dadar · Wadala · Ghatkopar · Andheri · Borivali · Mulund · Thane · Navi Mumbai
+    </p>
+  </section>
+
+
+  <!-- VIII · Invitation — one clear ask -->
+  <section class="movement invitation" id="demo" aria-label="Get started with SmartOS">
+    <p class="invitation__line">
+      See SmartOS built around your venue.
+    </p>
+    <div style="display: flex; gap: var(--space-4); justify-content: center; flex-wrap: wrap; margin-bottom: var(--space-4);">
+      <a href="pages/audit.html" class="invitation__cta">
+        Get a free venue check &nbsp;&rarr;
+      </a>
+      <!-- TODO: replace with real number -->
+      <a href="https://wa.me/91XXXXXXXXXX?text=I%20want%20to%20see%20DigiVenue%20SmartOS%20for%20my%20venue." class="invitation__cta" style="background: transparent; border: 1px solid var(--color-border); color: var(--color-text-secondary);" target="_blank" rel="noopener noreferrer">
+        Talk to us on WhatsApp
+      </a>
+    </div>
+    <span class="invitation__note">Within 24 hours · No sign-up · No commitment</span>
+  </section>
+
+
+
+  <!-- ════════════════════════════════════════
+       FOOTER
+  ═════════════════════════════════════════ -->
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-bar">
+        <span class="footer-bar__brand">Digi<em>Venue</em></span>
+        <nav class="footer-bar__links" aria-label="Footer">
+          <a href="pages/what-we-do.html">What we do</a>
+          <a href="pages/results.html">Results</a>
+          <a href="pages/ecosystem.html">Ecosystem</a>
+          <a href="pages/about.html">About</a>
+          <!-- TODO: replace with real number -->
+          <a href="https://wa.me/91XXXXXXXXXX?text=I%20would%20like%20to%20discuss%20DigiVenue%20SmartOS%20for%20my%20venue." target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        </nav>
+        <span class="footer-bar__meta">© 2026 · Mumbai · Navi Mumbai · Thane</span>
+      </div>
+    </div>
+  </footer>
+
+
+
+  <!-- ════════════════════════════════════════
+       SCRIPTS
+  ═════════════════════════════════════════ -->
+
+  <script src="js/main.js" defer></script>
+
+</body>
+</html>

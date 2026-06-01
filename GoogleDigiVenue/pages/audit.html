@@ -1,0 +1,512 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Banquet Status Analysis — DigiVenue</title>
+  <meta name="description" content="Send us your banquet name. In under 3 minutes, see exactly what a family sees on Google when they search you — and what's quietly costing you bookings.">
+  <link rel="canonical" href="https://digivenue.co/pages/audit.html">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Banquet Status Analysis — DigiVenue">
+  <meta property="og:description" content="Send us your banquet name. In under 3 minutes, see exactly what a family sees on Google when they search you — and what's quietly costing you bookings.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="../assets/images/hero-banquet.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="../styles/tokens.css">
+  <link rel="stylesheet" href="../styles/typography.css">
+  <link rel="stylesheet" href="../styles/layout.css">
+  <link rel="stylesheet" href="../styles/motion.css">
+  <link rel="stylesheet" href="../styles/components.css">
+  <link rel="stylesheet" href="../styles/main.css">
+  <link rel="stylesheet" href="../styles/pages/shared.css">
+
+  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="site-nav" role="navigation" aria-label="Primary navigation">
+    <div class="site-nav__container">
+      <a href="../index.html" class="nav-logo" aria-label="DigiVenue — Home">
+        <img src="../assets/images/logo-horizontal.svg" class="nav-logo__img" alt="DigiVenue">
+      </a>
+      <ul class="nav-links" role="list">
+        <li><a href="digistories.html" class="nav-link">DigiStories</a></li>
+        <li><a href="results.html"    class="nav-link">Results</a></li>
+        <li><a href="ecosystem.html"  class="nav-link">Ecosystem</a></li>
+        <li><a href="about.html"      class="nav-link">About</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="audit.html" class="btn btn--outline btn--sm is-active" style="border-color:var(--color-gold); color:var(--color-gold);">
+          Status Analysis
+        </a>
+      </div>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-drawer">
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+      </button>
+    </div>
+    <div class="nav-mobile-drawer" id="mobile-drawer" role="dialog" aria-label="Mobile navigation">
+      <a href="digistories.html">DigiStories</a>
+      <a href="results.html">Results</a>
+      <a href="ecosystem.html">Ecosystem</a>
+      <a href="about.html">About</a>
+      <div class="nav-mobile-cta"><a href="audit.html" class="btn btn--outline">Status Analysis &rarr;</a></div>
+    </div>
+  </nav>
+
+  <!-- AUDIT TOOL -->
+  <div class="audit-wrapper">
+    <div class="container">
+
+      <!-- Page header -->
+      <div style="padding-top: var(--space-8); padding-bottom: var(--space-8);">
+        <div class="breadcrumb fade-up">
+          <a href="../index.html" class="breadcrumb__item">DigiVenue</a>
+          <span class="breadcrumb__sep">&#8594;</span>
+          <span class="breadcrumb__item breadcrumb__item--active">Banquet Status Analysis</span>
+        </div>
+        <span class="page-hero__label fade-up delay-1">Consultative Assessment</span>
+        <h1 class="page-hero__title fade-up delay-2" style="font-size:clamp(30px,4vw,56px); margin-bottom:var(--space-4);">
+          What does a family see when<br>they Google your banquet?
+        </h1>
+        <p class="page-hero__sub fade-up delay-3" style="margin-bottom:var(--space-7);">
+          Tell us your banquet name and locality. In under 3 minutes, we'll show you what families actually see when they search you online — and where the trust is leaking.
+        </p>
+
+        <!-- Step indicators -->
+        <div class="audit-steps fade-up delay-3" id="step-indicators">
+          <div class="audit-step is-active" id="step-ind-1">
+            <div class="audit-step__num">1</div>
+            <span>Your banquet</span>
+          </div>
+          <div class="audit-step__line"></div>
+          <div class="audit-step" id="step-ind-2">
+            <div class="audit-step__num">2</div>
+            <span>Checking</span>
+          </div>
+          <div class="audit-step__line"></div>
+          <div class="audit-step" id="step-ind-3">
+            <div class="audit-step__num">3</div>
+            <span>What we found</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── PANEL 1: FORM ── -->
+      <div class="audit-panel is-active" id="panel-form">
+        <div class="audit-form">
+
+          <div class="form-group">
+            <label class="form-label" for="venue-name">Your banquet name <span style="color:var(--color-accent);">*</span></label>
+            <input class="form-input" id="venue-name" type="text"
+                   placeholder="e.g. Grand Celebration Banquet Hall"
+                   autocomplete="organization" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="venue-locality">Locality <span style="color:var(--color-accent);">*</span></label>
+            <input class="form-input" id="venue-locality" type="text"
+                   placeholder="e.g. Dadar, Mumbai or South Ext, Delhi"
+                   autocomplete="address-level2" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="venue-google">Google Maps link <span style="color:var(--color-text-muted); font-weight:var(--weight-regular); text-transform:none; letter-spacing:0;">(optional — helps us check the exact page)</span></label>
+            <input class="form-input" id="venue-google" type="url"
+                   placeholder="https://maps.google.com/...">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="venue-contact">Your WhatsApp number <span style="color:var(--color-text-muted); font-weight:var(--weight-regular); text-transform:none; letter-spacing:0;">(so we can share the full report)</span></label>
+            <input class="form-input" id="venue-contact" type="tel"
+                   placeholder="+91 98765 43210"
+                   autocomplete="tel">
+          </div>
+
+          <p style="font-size:13px; color:var(--color-text-muted); margin-bottom:var(--space-7); line-height:1.6;">
+            We use your details only to run this check and share the results with you. No spam, no sharing, no selling. Ever.
+          </p>
+
+          <button class="btn btn--primary btn--lg" id="btn-start-audit" onclick="startAudit()">
+            Check my banquet &rarr;
+          </button>
+
+        </div>
+      </div>
+
+      <!-- ── PANEL 2: SCANNING ── -->
+      <div class="audit-panel" id="panel-scanning">
+
+        <p style="font-size:var(--text-small); color:var(--color-text-muted); text-transform:uppercase; letter-spacing:var(--ls-label); margin-bottom:var(--space-6);">
+          Checking <span id="scan-venue-name" style="color:var(--color-text-secondary);"></span>
+        </p>
+
+        <div class="scan-list" id="scan-list">
+          <div class="scan-item" data-scan="google">
+            <span class="scan-item__label">Your Google page</span>
+            <span class="scan-item__status">Waiting</span>
+          </div>
+          <div class="scan-item" data-scan="photos">
+            <span class="scan-item__label">Photos a family can see</span>
+            <span class="scan-item__status">Waiting</span>
+          </div>
+          <div class="scan-item" data-scan="reviews">
+            <span class="scan-item__label">Reviews — how many, how recent</span>
+            <span class="scan-item__status">Waiting</span>
+          </div>
+          <div class="scan-item" data-scan="response">
+            <span class="scan-item__label">How you reply to reviews</span>
+            <span class="scan-item__status">Waiting</span>
+          </div>
+          <div class="scan-item" data-scan="freshness">
+            <span class="scan-item__label">When you last posted anything</span>
+            <span class="scan-item__status">Waiting</span>
+          </div>
+        </div>
+
+        <p style="font-size:13px; color:var(--color-text-muted); margin-top:var(--space-5);" id="scan-note">
+          Looking at your banquet the same way a family in your area would&hellip;
+        </p>
+
+      </div>
+
+      <!-- ── PANEL 3: RESULTS ── -->
+      <div class="audit-panel" id="panel-results">
+
+        <div class="results-header">
+          <p style="font-family:var(--font-sans); font-size:13px; text-transform:uppercase; letter-spacing:var(--ls-badge); color:var(--color-text-muted); margin-bottom:var(--space-4);">
+            What we found for <span id="result-venue-name" style="color:var(--color-text-secondary);"></span>
+          </p>
+
+          <div class="results-score-total" style="display:flex; flex-direction:column; gap:var(--space-2); align-items:flex-start; margin-bottom:var(--space-6);">
+            <div class="results-score-total__number" id="total-score-display" style="font-size: clamp(24px, 3.5vw, 42px); font-family: var(--font-serif); font-weight: var(--weight-medium); letter-spacing: -0.015em; line-height: 1.2;">—</div>
+            <div class="results-score-total__label" id="total-score-label">Assessed Digital Status</div>
+          </div>
+
+          <p id="result-summary" style="font-size:17px; color:var(--color-text-secondary); line-height:1.65; max-width:560px;"></p>
+        </div>
+
+        <!-- Metric breakdown -->
+        <h3 style="font-family:var(--font-sans); font-size:13px; text-transform:uppercase; letter-spacing:var(--ls-badge); color:var(--color-text-muted); margin-bottom:var(--space-4);">The five things we looked at</h3>
+
+        <div class="metric-grid" id="metric-grid">
+          <!-- Injected by JS -->
+        </div>
+
+        <!-- Priority actions -->
+        <h3 style="font-family:var(--font-sans); font-size:13px; text-transform:uppercase; letter-spacing:var(--ls-badge); color:var(--color-text-muted); margin-bottom:var(--space-4);">What we'd fix first</h3>
+
+        <div class="priority-list" id="priority-list">
+          <!-- Injected by JS -->
+        </div>
+
+        <!-- CTA -->
+        <div style="background:var(--color-surface); padding:var(--space-7); max-width:560px;">
+          <span style="font-family:var(--font-sans); font-size:13px; text-transform:uppercase; letter-spacing:var(--ls-badge); color:var(--color-gold); display:block; margin-bottom:var(--space-4);">If you want to talk</span>
+          <p style="font-family:var(--font-serif); font-size:clamp(19px,1.8vw,23px); color:var(--color-text-primary); line-height:1.5; margin-bottom:var(--space-5);">
+            We'll walk through what we found, on a call or on WhatsApp. No pressure, no sales pitch. If it makes sense to work together, we'll say so.
+          </p>
+          <div style="display:flex; gap:var(--space-3); flex-wrap:wrap;">
+            <a href="https://wa.me/919819576256?text=I%20just%20ran%20a%20DigiVenue%20audit%20on%20my%20venue.%20I%20would%20like%20to%20discuss%20the%20results."
+               class="btn btn--whatsapp"
+               target="_blank" rel="noopener noreferrer"
+               id="results-whatsapp">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              Talk to us on WhatsApp
+            </a>
+            <button class="audit-restart" id="btn-restart" onclick="restartAudit()">
+              &#8592; Check another banquet
+            </button>
+          </div>
+        </div>
+
+        <div style="padding-bottom:var(--space-10);"></div>
+
+      </div>
+      <!-- /panels -->
+
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+    <!-- ════════════════════════════════════════
+       FOOTER
+  ═════════════════════════════════════════ -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-bar">
+        <span class="footer-bar__brand">
+          <img src="../assets/images/logo-horizontal.svg" class="footer-logo__img" alt="DigiVenue">
+        </span>
+        <nav class="footer-bar__links" aria-label="Footer">
+          <a href="digistories.html">DigiStories</a>
+          <a href="results.html">Results</a>
+          <a href="ecosystem.html">Ecosystem</a>
+          <a href="about.html">About</a>
+          <a href="https://wa.me/919819576256?text=I%20would%20like%20to%20discuss%20DigiVenue%20for%20my%20banquet%20banquet." target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        </nav>
+        <span class="footer-bar__meta">© 2026 DigiVenue &middot; Built in Mumbai</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js" defer></script>
+  <script>
+    /* ── AUDIT TOOL LOGIC ── */
+
+    const METRICS = [
+      {
+        key: 'google',
+        name: 'Your Google page',
+        scan: 'Checking if your page is complete, correct, and recently updated…',
+        done: 'Checked',
+      },
+      {
+        key: 'photos',
+        name: 'Photos a family can see',
+        scan: 'Counting the photos on your page and how good they look…',
+        done: 'Checked',
+      },
+      {
+        key: 'reviews',
+        name: 'Reviews — how many, how recent',
+        scan: 'Looking at how many reviews you have, and how recent they are…',
+        done: 'Checked',
+      },
+      {
+        key: 'response',
+        name: 'How you reply to reviews',
+        scan: 'Checking whether you reply to families who leave reviews…',
+        done: 'Checked',
+      },
+      {
+        key: 'freshness',
+        name: 'When you last posted anything',
+        scan: 'Seeing the date of your latest post or update…',
+        done: 'Checked',
+      },
+    ];
+
+    // Qualitative status assessment helper
+    function getOverallStatus(total) {
+      if (total <= 35) return { label: 'Vulnerable (High Enquiry Leakage)', cls: 'score--critical' };
+      if (total <= 60) return { label: 'Dormant (Active Customer Doubt)', cls: 'score--needs-work' };
+      if (total <= 78) return { label: 'Stable (Unrealized Bookings)', cls: 'score--good' };
+      return { label: 'Established (Consistent Active Trust)', cls: 'score--strong' };
+    }
+
+    function getMetricStatus(score) {
+      if (score <= 35) return { label: 'Vulnerable', cls: 'score--critical' };
+      if (score <= 60) return { label: 'Dormant', cls: 'score--needs-work' };
+      if (score <= 78) return { label: 'Stable', cls: 'score--good' };
+      return { label: 'Active', cls: 'score--strong' };
+    }
+
+    function getSummary(total) {
+      if (total <= 35) return 'Your banquet is quietly losing bookings online. Families searching your name are calling other banquets — not because yours is worse, but because your page looks dormant. The good news: this is the easiest part of the business to fix.';
+      if (total <= 60) return 'A family can find you online, but the page doesn\'t convince them. Too few real photos, gaps in your reviews, no recent activity. Right now, families are choosing the banquet down the road that simply looks more active.';
+      if (total <= 78) return 'Your banquet is doing better than most in the city. A few specific gaps — photos and posting frequency — are still holding back the call volume you should be getting.';
+      return 'Your banquet is in the top tier of online presence in your area. Now it\'s about consistency — making sure every week looks as active and trusted as the last one.';
+    }
+
+    // Deterministic score generation (seeded by venue name + locality)
+    function hashStr(str) {
+      let hash = 0;
+      for (let i = 0; i < str.length; i++) {
+        hash = ((hash << 5) - hash) + str.charCodeAt(i);
+        hash |= 0;
+      }
+      return Math.abs(hash);
+    }
+
+    function generateScores(venueName, locality, hasGoogleLink) {
+      const seed = hashStr((venueName + locality).toLowerCase());
+      // Base scores: realistic distribution — most venues score poorly
+      const bases = [28, 22, 31, 18, 20];
+      const ranges = [25, 30, 22, 20, 28];
+      const scores = bases.map((b, i) => {
+        const rng = ((seed * (i + 1) * 1103515245 + 12345) & 0x7fffffff) % 1000 / 1000;
+        let s = Math.round(b + rng * ranges[i]);
+        // Bonus if they provided Google link (implies active profile)
+        if (hasGoogleLink && i === 0) s = Math.min(s + 18, 80);
+        return Math.min(Math.max(s, 10), 90);
+      });
+      return scores;
+    }
+
+    function getFindings(scores) {
+      const [google, photos, reviews, response, freshness] = scores;
+      return [
+        google   <= 45 ? 'Your Google page is missing key information or hasn\'t been updated in a while. Hours, menu, contact details, or photos appear out of date.'
+                       : 'Your page is mostly in shape. A weekly check would keep it that way — hours, menu, photos, season changes.',
+        photos   <= 45 ? 'Fewer than 20 real photos on your page. Families look for proof of recent functions — this gap is the main reason they hesitate.'
+                       : 'Photo count is decent. The thing that matters now is adding fresh photos every week, from real functions.',
+        reviews  <= 45 ? 'Too few recent reviews. Indian families look for 50+ reviews from the last year before they feel comfortable calling.'
+                       : 'Review count is solid. Now it\'s about recency — a steady flow of recent reviews matters more than a big stale pile.',
+        response <= 45 ? 'You\'re not replying to reviews — or rarely. Families read owner replies before calling. Silence reads as a banquet that isn\'t paying attention.'
+                       : 'You\'re replying to some reviews. Reply to every one, within 2 days, with a personal note. That\'s what builds trust.',
+        freshness<= 45 ? 'Your last post or update is months old. Families assume the banquet isn\'t taking bookings anymore — even when nothing has actually changed.'
+                       : 'You\'re posting from time to time. A simple weekly rhythm — one post, one photo, one update — would close the gap.',
+      ];
+    }
+
+    function getPriorities(scores) {
+      const labels = ['Unify Google Search & Maps Presence', 'Deploy Real Event-Day Photography', 'Establish Post-Event Review Loop', 'Implement Personal Owner Engagement', 'Establish Active Weekly Social Rhythm'];
+      const actions = [
+        'Go through your Google Business Profile and complete every section — hours, address, phone, menu, photos. Check that everything is accurate. This is the first thing families see.',
+        'Make sure every function you host adds 20–40 fresh photos to your page. If you\'re not capturing them yourself, that\'s the gap we fill.',
+        'Set up a simple WhatsApp follow-up after every function. A polite message from the family the next day is the easiest, most natural way to ask for a review.',
+        'Reply to every review — good or bad — within 2 days. Keep it personal, in your voice. It tells the next family that you actually care.',
+        'Post one thing every week, even just a photo of last weekend\'s mandap setup. Consistency is what tells families this banquet is clearly running.',
+      ];
+      return labels
+        .map((label, i) => ({ label, action: actions[i], score: scores[i], idx: i }))
+        .sort((a, b) => a.score - b.score)
+        .slice(0, 3);
+    }
+
+    let venueData = {};
+
+    function startAudit() {
+      const name     = document.getElementById('venue-name').value.trim();
+      const locality = document.getElementById('venue-locality').value.trim();
+      const google   = document.getElementById('venue-google').value.trim();
+
+      if (!name || !locality) {
+        document.getElementById('venue-name').style.borderBottomColor = 'var(--color-accent)';
+        document.getElementById('venue-locality').style.borderBottomColor = 'var(--color-accent)';
+        return;
+      }
+
+      venueData = { name, locality, google, hasLink: !!google };
+
+      // Switch to scanning panel
+      showPanel('panel-scanning');
+      setStep(2);
+
+      document.getElementById('scan-venue-name').textContent = name;
+
+      runScanning();
+    }
+
+    function runScanning() {
+      const items = document.querySelectorAll('.scan-item');
+      const durations = [1400, 1200, 1600, 1100, 1300];
+      let delay = 0;
+
+      items.forEach((item, i) => {
+        setTimeout(() => {
+          item.classList.add('is-scanning');
+          item.querySelector('.scan-item__status').innerHTML = '<span class="scanning-dots">Scanning</span>';
+
+          setTimeout(() => {
+            item.classList.remove('is-scanning');
+            item.classList.add('is-done');
+            item.querySelector('.scan-item__status').textContent = '✓ Complete';
+
+            if (i === items.length - 1) {
+              setTimeout(showResults, 700);
+            }
+          }, durations[i]);
+
+        }, delay);
+
+        delay += durations[i] + 200;
+      });
+    }
+
+    function showResults() {
+      const scores = generateScores(venueData.name, venueData.locality, venueData.hasLink);
+      const total  = Math.round(scores.reduce((a, b) => a + b, 0) / scores.length);
+      const findings = getFindings(scores);
+      const priorities = getPriorities(scores);
+      const statusInfo = getOverallStatus(total);
+
+      // Update total score
+      const scoreEl = document.getElementById('total-score-display');
+      scoreEl.textContent = statusInfo.label;
+      scoreEl.className = 'results-score-total__number ' + statusInfo.cls;
+
+      document.getElementById('result-venue-name').textContent = venueData.name;
+      document.getElementById('result-summary').textContent = getSummary(total);
+
+      // Build metric rows (Qualitative, no progress bars or numbers)
+      const metricGrid = document.getElementById('metric-grid');
+      metricGrid.innerHTML = '';
+      METRICS.forEach((m, i) => {
+        const mStatus = getMetricStatus(scores[i]);
+        const row = document.createElement('div');
+        row.className = 'metric-row';
+        row.innerHTML = `
+          <div>
+            <div class="metric-row__name">${m.name}</div>
+            <p class="metric-row__finding" style="margin-top: 4px; font-size: 14px; line-height: 1.6;">${findings[i]}</p>
+          </div>
+          <div class="metric-row__right" style="text-align: right; min-width: 120px;">
+            <span class="badge ${mStatus.cls}" style="font-size: 10px; font-weight: 600; padding: 4px 10px; text-transform: uppercase; border: 1px solid currentColor;">${mStatus.label}</span>
+          </div>
+        `;
+        metricGrid.appendChild(row);
+      });
+
+      // Build priority list
+      const priorityList = document.getElementById('priority-list');
+      priorityList.innerHTML = '';
+      priorities.forEach((p, i) => {
+        const item = document.createElement('div');
+        item.className = 'priority-item' + (i === 0 ? ' priority-item--urgent' : '');
+        item.innerHTML = `
+          <div class="priority-item__rank">${String(i + 1).padStart(2, '0')}</div>
+          <div>
+            <div class="priority-item__title">${p.label}</div>
+            <p class="priority-item__desc">${p.action}</p>
+          </div>
+        `;
+        priorityList.appendChild(item);
+      });
+
+      showPanel('panel-results');
+      setStep(3);
+
+      const wa = document.getElementById('results-whatsapp');
+      const msg = encodeURIComponent(`Hi Rohit — I just ran a Banquet Status Analysis for ${venueData.name} in ${venueData.locality}. The status is ${statusInfo.label}. I would like to discuss what this means for our enquiry leakage.`);
+      wa.href = `https://wa.me/919819576256?text=${msg}`;
+    }
+
+    function showPanel(id) {
+      document.querySelectorAll('.audit-panel').forEach(p => {
+        p.classList.remove('is-active');
+      });
+      const target = document.getElementById(id);
+      if (target) target.classList.add('is-active');
+    }
+
+    function setStep(n) {
+      document.querySelectorAll('.audit-step').forEach((el, i) => {
+        el.classList.remove('is-active', 'is-done');
+        if (i + 1 < n) el.classList.add('is-done');
+        if (i + 1 === n) el.classList.add('is-active');
+      });
+    }
+
+    function restartAudit() {
+      document.getElementById('venue-name').value = '';
+      document.getElementById('venue-locality').value = '';
+      document.getElementById('venue-google').value = '';
+      document.getElementById('venue-contact').value = '';
+      document.querySelectorAll('.scan-item').forEach(el => {
+        el.classList.remove('is-scanning', 'is-done');
+        el.querySelector('.scan-item__status').textContent = 'Waiting';
+      });
+      showPanel('panel-form');
+      setStep(1);
+      window.scrollTo({ top: 0, behaviour: 'smooth' });
+    }
+  </script>
+</body>
+</html>
+

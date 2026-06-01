@@ -1,0 +1,8 @@
+[project]
+name = "mumbai-readiness-system"
+version = "0.1.0"
+description = "Mumbai Catering & Banquet Digital Readiness Intelligence System"
+requires-python = ">=3.10"
+
+[tool.black]
+line-length = 100

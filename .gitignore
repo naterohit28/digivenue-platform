@@ -1,0 +1,21 @@
+# ── Backups / large archives (don't belong in git) ──
+*.zip
+
+# ── Secrets — never commit API keys ──
+**/configs/secrets.local.json
+.env
+
+# ── Python ──
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# ── Local databases & generated runtime data ──
+*.db
+**/logs/*.log
+
+# ── OS / editor junk ──
+Thumbs.db
+.DS_Store
+*.deprecated

@@ -1,0 +1,426 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Where We Are Today — DigiVenue</title>
+  <meta name="description" content="DigiVenue is still at the early stage, running for two real banquet halls in Navi Mumbai. No made-up numbers — just what we're doing now, and the real results we'll put here as they come.">
+  <link rel="canonical" href="https://digivenue.co/pages/results.html">
+  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Where We Are Today — DigiVenue">
+  <meta property="og:description" content="DigiVenue is still at the early stage, running for two real banquet halls in Navi Mumbai. No made-up numbers — just what we're doing now, and the real results we'll put here as they come.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="../assets/images/hero-banquet.jpg">
+  
+  <!-- Fonts: preconnect for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Design system (foundation) -->
+  <link rel="stylesheet" href="../styles/main.css">
+  <link rel="stylesheet" href="../styles/pages/shared.css">
+
+  <style>
+    /* Case studies layouts */
+    .featured-case {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: var(--gap-lg);
+      align-items: start;
+    }
+    
+    /* Before/After status grids */
+    .metric-comparison {
+      display: flex;
+      flex-direction: column;
+      gap: 1px;
+      background: var(--color-border);
+      border: 1px solid var(--color-border);
+      margin-top: var(--space-6);
+    }
+    .metric-comparison__row {
+      background: var(--color-surface);
+      padding: var(--space-4) var(--space-5);
+      display: grid;
+      grid-template-columns: 1fr auto auto auto;
+      gap: var(--space-4);
+      align-items: center;
+    }
+    .metric-comparison__name {
+      font-family: var(--font-sans);
+      font-size: var(--text-small);
+      color: var(--color-text-secondary);
+    }
+    .metric-comparison__before {
+      font-family: var(--font-sans);
+      font-variant-numeric: tabular-nums lining-nums;
+      color: var(--color-text-muted);
+      text-decoration: line-through;
+      font-size: var(--text-caption);
+    }
+    .metric-comparison__arrow {
+      color: var(--color-gold);
+      font-size: 10px;
+    }
+    .metric-comparison__after {
+      font-family: var(--font-sans);
+      font-weight: var(--weight-bold);
+      font-variant-numeric: tabular-nums lining-nums;
+      color: var(--color-gold);
+      font-size: var(--text-small);
+    }
+
+    /* Narrative blocks */
+    .case-narrative {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-8);
+    }
+    .narrative-step {
+      position: relative;
+      padding-left: var(--space-7);
+      border-left: 1px solid var(--color-border);
+    }
+    .narrative-step::before {
+      content: '';
+      position: absolute;
+      left: -4px;
+      top: 4px;
+      width: 7px;
+      height: 7px;
+      background: var(--color-border);
+      border-radius: 50%;
+    }
+    .narrative-step--highlight::before {
+      background: var(--color-gold);
+      box-shadow: 0 0 0 4px rgba(197, 160, 89, 0.2);
+    }
+    .narrative-step--highlight {
+      border-left-color: var(--color-gold);
+    }
+    .narrative-step__title {
+      font-family: var(--font-sans);
+      font-size: var(--text-micro);
+      color: var(--color-text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: var(--space-2);
+      display: block;
+    }
+    .narrative-step__text {
+      font-family: var(--font-sans);
+      font-size: var(--text-small);
+      color: var(--color-text-secondary);
+      line-height: 1.6;
+      margin-bottom: 0;
+    }
+
+    /* Secondary case grid */
+    .secondary-cases-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--gap-md);
+      margin-top: var(--space-8);
+    }
+    .secondary-case-card {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      padding: var(--space-8);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .secondary-case-card__meta {
+      font-family: var(--font-sans);
+      font-size: var(--text-micro);
+      color: var(--color-gold);
+      text-transform: uppercase;
+      letter-spacing: var(--ls-badge);
+      margin-bottom: var(--space-4);
+      display: block;
+    }
+    .secondary-case-card__title {
+      font-family: var(--font-serif);
+      font-size: 24px;
+      color: var(--color-text-primary);
+      margin-bottom: var(--space-3);
+    }
+    .secondary-case-card__desc {
+      font-family: var(--font-sans);
+      font-size: var(--text-small);
+      color: var(--color-text-muted);
+      line-height: 1.6;
+      margin-bottom: var(--space-6);
+    }
+    .secondary-case-card__stat {
+      font-family: var(--font-sans);
+      font-variant-numeric: tabular-nums lining-nums;
+      font-size: clamp(32px, 3.5vw, 44px);
+      font-weight: var(--weight-bold);
+      color: var(--color-text-primary);
+      line-height: 1;
+      margin-bottom: var(--space-2);
+    }
+    .secondary-case-card__stat-label {
+      font-family: var(--font-sans);
+      font-size: var(--text-caption);
+      color: var(--color-text-muted);
+    }
+
+    @media (max-width: 900px) {
+      .featured-case {
+        grid-template-columns: 1fr;
+        gap: var(--gap-md);
+      }
+      .secondary-cases-grid {
+        grid-template-columns: 1fr;
+        gap: var(--gap-sm);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="site-nav" role="navigation" aria-label="Primary navigation">
+    <a href="../index.html" class="nav-logo" aria-label="DigiVenue — Home">
+      <img src="../assets/images/logo-horizontal.svg" class="nav-logo__img" alt="DigiVenue">
+    </a>
+    <ul class="nav-links" role="list">
+      <li><a href="digistories.html" class="nav-link">DigiStories</a></li>
+      <li><a href="results.html"     class="nav-link is-active">Results</a></li>
+      <li><a href="ecosystem.html"   class="nav-link">Ecosystem</a></li>
+      <li><a href="about.html"       class="nav-link">About</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="audit.html" class="btn btn--outline btn--sm">Free Check &rarr;</a>
+    </div>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-drawer">
+      <span class="nav-toggle__bar" aria-hidden="true"></span>
+      <span class="nav-toggle__bar" aria-hidden="true"></span>
+      <span class="nav-toggle__bar" aria-hidden="true"></span>
+    </button>
+    <div class="nav-mobile-drawer" id="mobile-drawer" role="dialog" aria-label="Mobile navigation">
+      <a href="digistories.html">DigiStories</a>
+      <a href="results.html" class="is-active">Results</a>
+      <a href="ecosystem.html">Ecosystem</a>
+      <a href="about.html">About</a>
+      <div class="nav-mobile-cta">
+        <a href="audit.html" class="btn btn--outline">Free Check &rarr;</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <header class="page-hero" role="banner">
+    <div class="container">
+      <div class="page-hero__inner">
+        <div class="breadcrumb fade-up">
+          <a href="../index.html" class="breadcrumb__item">DigiVenue</a>
+          <span class="breadcrumb__sep">&#8594;</span>
+          <span class="breadcrumb__item breadcrumb__item--active">Results</span>
+        </div>
+        <span class="page-hero__label fade-up delay-1">Where we are today</span>
+        <h1 class="page-hero__title fade-up delay-2">
+          We haven't launched yet. <em>So we won't pretend we have.</em>
+        </h1>
+        <p class="page-hero__sub fade-up delay-3">
+          You won't find made-up numbers or borrowed success stories here. DigiVenue is still at the early stage — running quietly for two real banquet halls in Navi Mumbai. Here's exactly what we're doing for them, and what we'll put on this page the moment the results are real.
+        </p>
+      </div>
+    </div>
+  </header>
+
+  <!-- SECTION 1: FEATURED CASE STUDY -->
+  <section class="content-section" aria-label="Featured Case Study">
+    <div class="container">
+      
+      <div style="max-width: 620px; margin-bottom: var(--space-8);">
+        <span class="text-label text-label--gold" style="margin-bottom: var(--space-4); display: inline-block;">Running now &middot; our first banquets</span>
+        <h2 class="text-h2">Two real banquets. Live, every week.</h2>
+        <p class="text-body" style="color: var(--color-text-secondary);">
+          Before showing this to anyone, we wanted to run the full service on real banquets — not slides. These two in Navi Mumbai are where we're doing exactly that.
+        </p>
+      </div>
+
+      <div class="secondary-cases-grid" style="margin-bottom: var(--space-8);">
+        <div class="secondary-case-card fade-up">
+          <div>
+            <span class="secondary-case-card__meta">Vashi, Navi Mumbai</span>
+            <h3 class="secondary-case-card__title">IES MLA Hall</h3>
+            <p class="secondary-case-card__desc">
+              A known community banquet in Vashi. We are documenting its real functions, rebuilding its Google presence, and keeping its page active week after week.
+            </p>
+          </div>
+        </div>
+        <div class="secondary-case-card fade-up delay-1">
+          <div>
+            <span class="secondary-case-card__meta">Jui Nagar, Navi Mumbai</span>
+            <h3 class="secondary-case-card__title">Swayambhu Ganesh Sabhagruh</h3>
+            <p class="secondary-case-card__desc">
+              A respected sabhagruh in Jui Nagar. Same approach — real event photography, steady Google and Instagram activity, and reviews followed up after every function.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="featured-case">
+
+        <!-- Left: How the work actually goes (method, not fabricated outcomes) -->
+        <div class="case-narrative fade-up">
+
+          <div class="narrative-step">
+            <span class="narrative-step__title">01 / What we found</span>
+            <p class="narrative-step__text">
+              Good banquets. Real functions every weekend. But online, both looked quiet — old photos, thin Google pages, almost no recent activity. The kind of page a family scrolls past without realising the banquet is busy and well run.
+            </p>
+          </div>
+
+          <div class="narrative-step">
+            <span class="narrative-step__title">02 / What we do every week</span>
+            <p class="narrative-step__text">
+              Our team attends their functions and captures the real setups — the mandap, the lighting, the buffet, the guests. Those photos and reels go up on Google and Instagram the same week, sized and tagged for local search.
+            </p>
+          </div>
+
+          <div class="narrative-step">
+            <span class="narrative-step__title">03 / How trust gets built</span>
+            <p class="narrative-step__text">
+              After each function, families are asked — politely, over WhatsApp — for an honest review. Slowly, the page stops looking abandoned and starts looking like what it actually is: a banquet that hosts real weddings, every week.
+            </p>
+          </div>
+
+          <div class="narrative-step narrative-step--highlight">
+            <span class="narrative-step__title" style="color: var(--color-gold);">04 / What we're watching</span>
+            <p class="narrative-step__text">
+              Reviews, photo count, map views, direction requests, calls from Google. We track all of it from each venue's own Google Business Profile. When the numbers are real and the owners are happy to share them, they will appear here — with their names on them.
+            </p>
+          </div>
+
+        </div>
+
+        <!-- Right: image + honest "what we measure" panel -->
+        <div class="fade-up delay-1">
+
+          <div class="img-reveal" style="margin-bottom: var(--space-6);">
+            <img src="../assets/images/transformation.jpg"
+                 alt="Real event photography at a Navi Mumbai banquet hall, early stage."
+                 width="1800" height="1200"
+                 loading="lazy" decoding="async"
+                 style="width: 100%; height: auto; aspect-ratio: 3/2; object-fit: cover; border: 1px solid var(--color-border);">
+          </div>
+
+          <span class="text-label" style="display: block; margin-bottom: var(--space-4);">What we measure (real, from Google)</span>
+
+          <div class="metric-comparison">
+            <div class="metric-comparison__row" style="grid-template-columns: 1fr;">
+              <span class="metric-comparison__name">Google reviews collected after functions</span>
+            </div>
+            <div class="metric-comparison__row" style="grid-template-columns: 1fr;">
+              <span class="metric-comparison__name">Real wedding photos added to the profile</span>
+            </div>
+            <div class="metric-comparison__row" style="grid-template-columns: 1fr;">
+              <span class="metric-comparison__name">Map views &amp; direction requests</span>
+            </div>
+            <div class="metric-comparison__row" style="grid-template-columns: 1fr;">
+              <span class="metric-comparison__name">Calls and WhatsApp enquiries from Google</span>
+            </div>
+            <div class="metric-comparison__row" style="grid-template-columns: 1fr;">
+              <span class="metric-comparison__name">How many enquiries become real site visits</span>
+            </div>
+          </div>
+
+          <div style="background: var(--color-surface-high); padding: var(--space-6); border: 1px solid var(--color-border); margin-top: var(--space-6);">
+            <p style="font-family: var(--font-sans); font-size: 15px; color: var(--color-text-secondary); line-height: 1.6; margin-bottom: 0;">
+              We'd rather show you two real banquets at the start of their journey than a polished case study we made up. The numbers will come — and when they do, you'll be able to check them on Google yourself, not just take our word here.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION 2: OTHER CASE STUDIES -->
+  <section class="content-section content-section--surface" aria-label="Other Case Studies">
+    <div class="container">
+      
+      <div style="max-width: 620px; margin-bottom: var(--space-6);">
+        <span class="text-label text-label--gold" style="margin-bottom: var(--space-4); display: inline-block;">What we're working toward</span>
+        <h2 class="text-h2" style="margin-bottom: var(--space-4);">What we expect to show on this page.</h2>
+        <p class="text-body" style="color: var(--color-text-secondary);">
+          This is what steady work on a banquet's online presence tends to do — and exactly what we'll report, with real figures, as our first banquets progress. A goal, not a guarantee.
+        </p>
+      </div>
+
+      <div class="secondary-cases-grid">
+
+        <div class="secondary-case-card fade-up">
+          <div>
+            <span class="secondary-case-card__meta">Visibility</span>
+            <h3 class="secondary-case-card__title">A page that looks alive</h3>
+            <p class="secondary-case-card__desc">
+              Fresh photos from real functions every week, reviews that keep arriving, and a Google profile that finally matches how busy the banquet actually is — so families searching nearby stop scrolling past.
+            </p>
+          </div>
+        </div>
+
+        <div class="secondary-case-card fade-up delay-1">
+          <div>
+            <span class="secondary-case-card__meta">Trust</span>
+            <h3 class="secondary-case-card__title">Families who arrive already convinced</h3>
+            <p class="secondary-case-card__desc">
+              When a family has already seen real weddings at your banquet and read honest reviews, the visit becomes a confirmation, not a first impression. The trust is built before they ever call.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION 3: CTA -->
+  <section class="content-section content-section--dark" aria-label="Get Started CTA">
+    <div class="container" style="text-align: center; max-width: 720px; margin: 0 auto;">
+      <span class="text-label text-label--gold" style="margin-bottom: var(--space-4); display: inline-block;">A free check</span>
+      <h2 class="text-h2">Is your banquet quietly losing bookings?</h2>
+      <p class="text-body" style="color: var(--color-text-secondary); margin-bottom: var(--space-8);">
+        Send us your banquet's name. Within a day, we'll show you what families see when they search you — and what's making them pick the next banquet instead.
+      </p>
+      <div style="display: flex; gap: var(--space-4); justify-content: center; flex-wrap: wrap;">
+        <a href="audit.html" class="btn btn--primary btn--lg">Check my banquet online — free</a>
+        <a href="https://wa.me/919819576256?text=Hi%2C%20I'd%20like%20a%20free%20check%20of%20my%20banquet%20banquet%20online." class="btn btn--whatsapp btn--lg" target="_blank" rel="noopener noreferrer">
+          Talk to us on WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-bar">
+        <span class="footer-bar__brand">
+          <img src="../assets/images/logo-horizontal.svg" class="footer-logo__img" alt="DigiVenue">
+        </span>
+        <nav class="footer-bar__links" aria-label="Footer navigation">
+          <a href="digistories.html">DigiStories</a>
+          <a href="results.html" class="is-active">Results</a>
+          <a href="ecosystem.html">Ecosystem</a>
+          <a href="about.html">About</a>
+          <a href="https://wa.me/919819576256?text=I%20would%20like%20to%20discuss%20DigiVenue%20for%20my%20banquet%20banquet." target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        </nav>
+        <span class="footer-bar__meta">© 2026 DigiVenue &middot; Built in Mumbai</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js" defer></script>
+</body>
+</html>
+
