@@ -41,6 +41,14 @@
   --color-gold-subtle:    rgba(197, 160, 89, 0.06);
   --color-gold-border:    rgba(197, 160, 89, 0.18);
 
+  /* Redesign theme (shared site-wide for visual cohesion) */
+  --grad-warm:    linear-gradient(115deg, #D94822 0%, #E0883C 48%, #C5A059 100%);
+  --radius-btn:   10px;
+  --radius-card:  16px;
+  --shadow-soft:  0 22px 60px -24px rgba(60, 40, 15, 0.30);
+  --shadow-card:  0 10px 30px -14px rgba(60, 40, 15, 0.20);
+  --color-dark-band: #17120F; /* warm near-black for dramatic sections */
+
   /* Overlays (Keep dark for text overlay contrast on images) */
   --color-overlay-dark:   rgba(10, 9, 8, 0.70);
   --color-overlay-mid:    rgba(10, 9, 8, 0.45);

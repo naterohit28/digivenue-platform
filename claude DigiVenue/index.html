@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>DigiStories — The Growth & Visibility System for Venue Businesses</title>
   <meta name="description" content="DigiStories is a growth and visibility system built specifically for banquet halls, wedding venues, lawns, and hotels. We build trust before the site visit.">
   <meta name="keywords" content="banquet hall Google presence India, wedding venue reviews, DigiStories, DigiVenue, banquet Instagram Mumbai, venue inquiries WhatsApp">
@@ -21,6 +20,7 @@
 
   <link rel="stylesheet" href="styles/main.css">
   <link rel="stylesheet" href="styles/pages/home-refined.css">
+  <link rel="stylesheet" href="styles/pages/home-redesign.css">
 
   <script type="application/ld+json">
   {
@@ -33,108 +33,9 @@
     "areaServed": "India"
   }
   </script>
-
-  <style>
-    /* ── Discovery flow section ── */
-    .discovery {
-      padding-block: clamp(48px, 6vw, 72px);
-      padding-inline: clamp(28px, 6vw, 80px);
-      background: var(--color-bg);
-      border-bottom: 1px solid var(--color-border);
-      text-align: center;
-    }
-    .discovery__label {
-      display: block;
-      font-family: var(--font-sans);
-      font-size: var(--text-micro);
-      font-weight: var(--weight-semibold);
-      text-transform: uppercase;
-      letter-spacing: var(--ls-badge);
-      color: var(--color-text-muted);
-      margin-bottom: var(--space-6);
-    }
-    .discovery__flow {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: var(--space-3);
-      margin-bottom: var(--space-6);
-    }
-    .discovery__flow span {
-      font-family: var(--font-sans);
-      font-size: clamp(13px, 1.2vw, 15px);
-      color: var(--color-text-secondary);
-      letter-spacing: 0.01em;
-    }
-    .discovery__flow em {
-      font-family: var(--font-serif);
-      font-style: italic;
-      font-size: clamp(15px, 1.4vw, 18px);
-      color: var(--color-text-primary);
-    }
-    .discovery__flow .discovery__arrow {
-      color: var(--color-gold);
-      font-size: 12px;
-      opacity: 0.6;
-    }
-    .discovery__note {
-      font-family: var(--font-sans);
-      font-size: clamp(14px, 1.2vw, 16px);
-      color: var(--color-text-muted);
-      max-width: 520px;
-      margin: 0 auto;
-      line-height: 1.6;
-    }
-
-    /* ── What section — sub-paragraph under statement ── */
-    .what__heading__sub {
-      font-family: var(--font-sans);
-      font-size: 15px;
-      color: var(--color-text-secondary);
-      line-height: 1.65;
-      margin-top: var(--space-5);
-    }
-
-    /* ── Activity ticker ── */
-    .activity-ticker {
-      overflow: hidden;
-      border-top: 1px solid var(--color-border);
-      border-bottom: 1px solid var(--color-border);
-      padding-block: 13px;
-      background: var(--color-bg-deep);
-      user-select: none;
-    }
-    .activity-ticker__track {
-      display: flex;
-      align-items: center;
-      gap: 32px;
-      width: max-content;
-      animation: ticker-scroll 36s linear infinite;
-    }
-    .activity-ticker__track:hover { animation-play-state: paused; }
-    .activity-ticker__track span {
-      font-family: var(--font-sans);
-      font-size: 11px;
-      font-weight: 500;
-      letter-spacing: 0.20em;
-      text-transform: uppercase;
-      color: var(--color-text-muted);
-      white-space: nowrap;
-    }
-    .activity-ticker__sep {
-      color: var(--color-gold) !important;
-      letter-spacing: 0 !important;
-      opacity: 0.6;
-    }
-    @keyframes ticker-scroll {
-      0%   { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
-    }
-  </style>
 </head>
 
-<body class="home">
+<body class="home home-rdx">
 
   <a href="#main-content" class="skip-link">Skip to content</a>
 
@@ -168,458 +69,190 @@
   </nav>
 
   <!-- I · Hero -->
-  <header class="hero movement" role="banner" id="main-content">
-    <div class="hero__bg" aria-hidden="true">
-      <img src="assets/images/hero-banquet.jpg"
-           alt="A Mumbai banquet hall in the quiet hour before guests arrive."
-           width="2000" height="1333"
-           fetchpriority="high"
-           decoding="async">
+  <header class="rdx-hero" role="banner" id="main-content">
+    <div class="rdx-hero__bg" aria-hidden="true">
+      <img src="assets/images/hero-banquet.jpg" alt="A Mumbai banquet hall in the quiet hour before guests arrive." width="2000" height="1333" fetchpriority="high" decoding="async">
     </div>
-    <div class="hero__veil" aria-hidden="true"></div>
+    <div class="rdx-hero__veil" aria-hidden="true"></div>
 
-    <div class="hero__top">
-      <span>DigiStories</span>
-      <span>Built in Mumbai &middot; For venue operators across Maharashtra</span>
+    <div class="rdx-hero__top">
+      <span class="rdx-pill">DigiStories</span>
+      <span class="rdx-pill">Built in Mumbai · For venues across Maharashtra</span>
     </div>
 
-    <div class="hero__center" aria-hidden="true"></div>
-
-    <div class="hero__bottom">
-      <div class="hero__title-block">
-        <h1 class="hero__title">
-          When a family Googles<br>
-          your banquet,<br>
-          <em>they are already deciding.</em>
-        </h1>
-        <p class="hero__anchor">
-          Families no longer visit ten venues in person. They shortlist three online, compare their social proof, read recent Google reviews, and choose who to call. DigiStories is a growth and visibility system built specifically for venue businesses, ensuring they trust what they find before the site visit.
-        </p>
+    <div class="rdx-hero__inner">
+      <h1 class="rdx-hero__title">
+        When a family Googles your banquet,<br>
+        <em class="rdx-grad-text">they are already deciding.</em>
+      </h1>
+      <p class="rdx-hero__anchor">
+        Families no longer visit ten venues. They shortlist three online, compare the social proof, read recent reviews — and choose who to call. DigiStories makes sure they trust what they find before the site visit.
+      </p>
+      <div class="rdx-hero__actions">
+        <a href="pages/audit.html" class="rdx-btn rdx-btn--primary">Get a Free Visibility Audit &rarr;</a>
+        <a href="pages/results.html" class="rdx-btn rdx-btn--light">See real results</a>
       </div>
-      <a href="pages/audit.html" class="hero__cta">Get A Free Visibility Audit &nbsp;&rarr;</a>
     </div>
 
-    <span class="hero__still" aria-hidden="true">
-      Banquet hall, Mumbai &middot; The hour before guests arrive
-    </span>
+    <div class="rdx-hero__scroll" aria-hidden="true"><span>Scroll</span><span></span></div>
   </header>
 
-  <!-- II · The held truth -->
-  <section class="movement pause" aria-label="The quiet truth">
-    <p class="pause__line" style="margin-bottom: var(--space-6);">
-      In the venue business today,<br>you aren't competing in person.<br>You are competing <em>online at 11:00 PM.</em>
-    </p>
-    <p class="pause__caption">
-      A family scrolling on their couch will filter out your lawn or banquet before they ever speak to your sales team. If your digital footprint looks inactive or outdated, they assume your venue is dormant.
-    </p>
-  </section>
-
-  <!-- III · The Venue Industry Has Changed -->
-  <section class="industry-changed movement" style="border-top: 1px solid var(--color-border); padding-block: clamp(56px, 8vw, 96px);" aria-label="The Venue Industry Has Changed">
-    <div class="measure-wide">
-      <span class="eyebrow">Industry Shift</span>
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: var(--gap-lg); align-items: start;">
-        <div>
-          <h2 class="statement" style="font-size: clamp(32px, 4vw, 52px); margin-bottom: var(--space-5); line-height: 1.15;">
-            The Venue Industry<br>Has <em>Changed.</em>
-          </h2>
-          <p class="lede" style="font-size: 19px; line-height: 1.65; margin-bottom: var(--space-5);">
-            The wedding market did not slow down. It evolved.
-          </p>
-          <p style="font-size: 16px; color: var(--color-text-secondary); line-height: 1.7; margin-bottom: var(--space-4);">
-            While operators continue running properties the same way they did ten years ago, customer behavior has shifted permanently. This has created a massive gap between how customers research and buy, and how venues sell.
-          </p>
-          <p style="font-size: 16px; color: var(--color-text-secondary); line-height: 1.7; font-weight: 500;">
-            DigiStories exists to close that gap.
-          </p>
-        </div>
-        <div style="border-left: 2px solid var(--color-gold); padding-left: var(--space-6); display: flex; flex-direction: column; gap: var(--space-4);">
-          <div style="font-family: var(--font-sans); font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: var(--color-gold); margin-bottom: 4px;">Post-COVID Realities:</div>
-          <ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 18px; font-size: 15px; line-height: 1.6; color: var(--color-text-primary);">
-            <li style="display: flex; gap: 10px; align-items: flex-start;"><span style="color: var(--color-gold); font-size: 14px;">•</span> <span><strong>Reduced Guest Counts:</strong> Tighter guest lists translate to highly selective booking behavior.</span></li>
-            <li style="display: flex; gap: 10px; align-items: flex-start;"><span style="color: var(--color-gold); font-size: 14px;">•</span> <span><strong>Destination Weddings:</strong> Competition from destination weddings has accelerated.</span></li>
-            <li style="display: flex; gap: 10px; align-items: flex-start;"><span style="color: var(--color-gold); font-size: 14px;">•</span> <span><strong>Fragmented Ancillary Revenues:</strong> Event decor and catering revenues are increasingly decentralized.</span></li>
-            <li style="display: flex; gap: 10px; align-items: flex-start;"><span style="color: var(--color-gold); font-size: 14px;">•</span> <span><strong>Escalating Overheads:</strong> Operators face higher rents and constant property upgrade pressures.</span></li>
-            <li style="display: flex; gap: 10px; align-items: flex-start;"><span style="color: var(--color-gold); font-size: 14px;">•</span> <span><strong>Digital Pre-filtering:</strong> Families complete their visual research online before contacting any venue.</span></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- IV · The Perfect Storm Section -->
-  <section class="perfect-storm movement" style="background-color: var(--color-bg-deep); border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border);" aria-label="The Perfect Storm">
-    <div class="measure-wide">
-      <span class="eyebrow" style="color: var(--color-gold);">The Margin Squeeze</span>
-      <h2 class="statement" style="text-align: center; margin-bottom: var(--space-8);">
-        The Perfect Storm Facing <em>Venue Operators</em>
-      </h2>
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--gap-lg); margin-bottom: var(--space-7);">
-        <!-- Column 1 -->
-        <div style="background: var(--color-bg); padding: var(--space-6); border: 1px solid var(--color-border); border-radius: 4px;">
-          <h3 style="font-family: var(--font-serif); font-size: 22px; font-weight: 500; margin-bottom: var(--space-4); color: var(--color-accent);">Customers Want More</h3>
-          <ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: var(--space-3); color: var(--color-text-secondary); font-size: 15px;">
-            <li style="display: flex; gap: 8px; align-items: flex-start;"><span style="color: var(--color-gold);">•</span> More functions & pre-wedding shoots</li>
-            <li style="display: flex; gap: 8px; align-items: flex-start;"><span style="color: var(--color-gold);">•</span> Immersive experiences and live lighting setups</li>
-            <li style="display: flex; gap: 8px; align-items: flex-start;"><span style="color: var(--color-gold);">•</span> High personalization options for layout and catering</li>
-            <li style="display: flex; gap: 8px; align-items: flex-start;"><span style="color: var(--color-gold);">•</span> Immediate social proof, reels, and video coverage</li>
-          </ul>
-        </div>
-        <!-- Column 2 -->
-        <div style="background: var(--color-bg); padding: var(--space-6); border: 1px solid var(--color-border); border-radius: 4px;">
-          <h3 style="font-family: var(--font-serif); font-size: 22px; font-weight: 500; margin-bottom: var(--space-4); color: var(--color-accent);">Operators Face More Pressure</h3>
-          <ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: var(--space-3); color: var(--color-text-secondary); font-size: 15px;">
-            <li style="display: flex; gap: 8px; align-items: flex-start;"><span style="color: var(--color-gold);">•</span> Escalating land lease rates and rents</li>
-            <li style="display: flex; gap: 8px; align-items: flex-start;"><span style="color: var(--color-gold);">•</span> Frequent property renovation and upkeep demands</li>
-            <li style="display: flex; gap: 8px; align-items: flex-start;"><span style="color: var(--color-gold);">•</span> More aggressive local competitor pricing</li>
-            <li style="display: flex; gap: 8px; align-items: flex-start;"><span style="color: var(--color-gold);">•</span> Rising marketing, client acquisition, and staff costs</li>
-          </ul>
-        </div>
-      </div>
-      <div style="text-align: center; border-left: 2px solid var(--color-gold); padding: var(--space-4) var(--space-6); max-width: 680px; margin: 0 auto; background: var(--color-bg); border-radius: 4px;">
-        <p style="font-family: var(--font-serif); font-style: italic; font-size: 20px; color: var(--color-text-primary); margin: 0;">
-          Result: Margins are under severe pressure even when demand exists.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- V · Attack the Agency Model -->
-  <section class="marketing-attack movement" aria-label="Why most marketing fails">
-    <div class="measure">
-      <span class="eyebrow">Strategic Difference</span>
-      <h2 class="statement" style="margin-bottom: var(--space-5); line-height: 1.15;">
-        Why Most Marketing<br>Doesn’t Work <em>For Venues</em>
-      </h2>
-      <p class="lede" style="margin-bottom: var(--space-4);">
-        Most marketing agencies focus on: Posts, Reels, Reach, and Impressions.
+  <!-- II · Problem -->
+  <section class="rdx-section rdx-problem" aria-label="The quiet truth">
+    <div class="rdx-narrow">
+      <p class="rdx-problem__line">
+        Today you aren't competing in person.<br>You're competing <em>online at 11&nbsp;PM.</em>
       </p>
-      <p style="font-size: 16px; color: var(--color-text-secondary); line-height: 1.7; margin-bottom: var(--space-5);">
-        But venue owners don't bank "impressions." Venue owners need <strong>Trust, Visibility, Enquiries, Site Visits, and Bookings</strong>.
-      </p>
-      <div style="border-left: 3px solid var(--color-gold); padding-left: var(--space-5); margin-block: var(--space-6);">
-        <p style="font-family: var(--font-serif); font-style: italic; font-size: 18px; line-height: 1.6; color: var(--color-text-primary); margin: 0;">
-          "The problem in the venue business is not creating more content. The problem is creating confidence."
-        </p>
-      </div>
-      <p style="font-size: 16px; color: var(--color-text-secondary); line-height: 1.7;">
-        DigiStories does not sell generic social media packages. We focus on making your venue look active, trusted, and relevant exactly where families make decisions — on Google Search and Instagram.
+      <p class="rdx-problem__caption">
+        A family scrolling on the couch filters out your venue before they ever call your sales team. If your digital footprint looks inactive, they assume the venue is dormant — and quietly move on.
       </p>
     </div>
   </section>
 
-  <!-- VI · Founder Authority -->
-  <section class="founder-authority movement" style="background-color: var(--color-bg-deep); border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border);" aria-label="Built by operators">
-    <div class="measure">
-      <span class="eyebrow" style="color: var(--color-gold);">Founder Perspective</span>
-      <h2 class="statement" style="margin-bottom: var(--space-5); line-height: 1.15;">
-        Built By <em>Venue Operators</em>
-      </h2>
-      <p class="lede" style="margin-bottom: var(--space-5); font-size: 19px; line-height: 1.6;">
-        DigiStories was not built by agency marketers. It was built by people who have spent years operating banquet venues in Maharashtra.
-      </p>
-      <div style="display: flex; flex-direction: column; gap: var(--space-4); color: var(--color-text-secondary); font-size: 16px; line-height: 1.7;">
-        <p>
-          We understand the operational reality of the venue business: the seasonal cash flow demands, the high stakes of price negotiations, customer expectations, and the pressure of competing against new properties.
-        </p>
-        <p>
-          We built the exact service we wished existed for our own venues. A system that works quietly in the background, keeping your digital presence active and trusted, while you focus on running the event.
-        </p>
+  <!-- III · Industry changed -->
+  <section class="rdx-section" aria-label="The venue industry has changed">
+    <div class="rdx-wrap rdx-split">
+      <div>
+        <span class="rdx-eyebrow">Industry shift</span>
+        <h2 class="rdx-h2">The venue industry<br>has <em>changed.</em></h2>
+        <p class="rdx-lede" style="margin-top:22px;">The wedding market didn't slow down. It evolved.</p>
+        <p style="font-size:16px;color:var(--color-text-secondary);line-height:1.7;">While operators run properties the way they did ten years ago, customer behaviour has shifted permanently — opening a wide gap between how families research and how venues sell.</p>
+        <p style="font-size:16px;color:var(--color-text-primary);line-height:1.7;font-weight:600;">DigiStories exists to close that gap.</p>
       </div>
-      <div style="margin-top: var(--space-6); font-size: 16px; border-top: 1px solid var(--color-border); padding-top: var(--space-5); text-align: left; font-family: var(--font-sans); text-transform: uppercase; font-weight: 500; letter-spacing: 0.05em; color: var(--color-text-primary);">
-        Led by Rohit Nate &middot; <span style="font-family: var(--font-serif); font-style: italic; text-transform: none; font-size: 18px; font-weight: 400; color: var(--color-gold-text);">13 years running banquets across Maharashtra.</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- VII · We Build Trust Before The Site Visit -->
-  <section class="movement what" id="trust-building" aria-label="We build trust before the site visit">
-    <div class="what__grid">
-      <div class="what__heading">
-        <span class="eyebrow">The System</span>
-        <h2 class="statement" style="line-height: 1.15;">
-          We Build Trust<br>Before The <em>Site Visit</em>
-        </h2>
-        <p class="what__heading__sub" style="font-size: 16px; line-height: 1.65; color: var(--color-text-secondary); margin-top: 20px;">
-          Families don’t choose a banquet because of one viral reel. They choose venues that appear <strong>Active, Trusted, Relevant, and Consistent</strong>. The visibility we capture builds that confidence.
-        </p>
-      </div>
-
-      <div class="what__list">
-        <article class="what__item">
-          <span class="what__item__num">01 &middot; Real Function Content</span>
-          <h3 class="what__item__title">Real weddings, not stock photos.</h3>
-          <p class="what__item__body">
-            We photograph and record your real events — the decor, the crowd energy, the buffet setups, and mandaps. We never use stock photos or agency templates.
-          </p>
-          <p class="what__item__result"><strong>Outcome</strong> &nbsp;&middot;&nbsp; an active Instagram grid that looks busy and trusted</p>
-        </article>
-
-        <article class="what__item">
-          <span class="what__item__num">02 &middot; Active Google Presence</span>
-          <h3 class="what__item__title">A Google page that looks alive.</h3>
-          <p class="what__item__body">
-            Google is where high-intent families search. We update your profile weekly with new images, correct details, and professional replies, signaling a busy, successful venue.
-          </p>
-          <p class="what__item__result"><strong>Outcome</strong> &nbsp;&middot;&nbsp; higher search rankings and direct enquiry calls</p>
-        </article>
-
-        <article class="what__item">
-          <span class="what__item__num">03 &middot; Fresh Reviews</span>
-          <h3 class="what__item__title">Reviews families actually read.</h3>
-          <p class="what__item__body">
-            We follow up systematically after every successful event to capture detailed, positive reviews that outline exactly what past families loved about your service.
-          </p>
-          <p class="what__item__result"><strong>Outcome</strong> &nbsp;&middot;&nbsp; consistent flow of fresh, authentic social proof every month</p>
-        </article>
-
-        <article class="what__item">
-          <span class="what__item__num">04 &middot; Social Proof</span>
-          <h3 class="what__item__title">Projecting crowd confidence.</h3>
-          <p class="what__item__body">
-            We display your occupancy and booked status, letting prospective clients see that other families are actively putting down deposits at your venue.
-          </p>
-          <p class="what__item__result"><strong>Outcome</strong> &nbsp;&middot;&nbsp; fear of missing out (FOMO) that accelerates booking decisions</p>
-        </article>
-
-        <article class="what__item">
-          <span class="what__item__num">05 &middot; Consistent Visibility</span>
-          <h3 class="what__item__title">Always on, always active.</h3>
-          <p class="what__item__body">
-            We establish a steady rhythm of updates across Google, Instagram, and WhatsApp stories, so your venue stays top-of-mind throughout the wedding booking season.
-          </p>
-          <p class="what__item__result"><strong>Outcome</strong> &nbsp;&middot;&nbsp; continuous visibility that commands local market share</p>
-        </article>
+      <div class="rdx-list-card">
+        <div class="rdx-list-card__label">Post-COVID realities</div>
+        <ul class="rdx-list">
+          <li><span><strong>Smaller guest counts</strong> mean highly selective booking behaviour.</span></li>
+          <li><span><strong>Destination weddings</strong> are pulling demand away from local venues.</span></li>
+          <li><span><strong>Fragmented revenues</strong> — décor and catering are increasingly decentralised.</span></li>
+          <li><span><strong>Rising overheads</strong> — higher rents and constant upgrade pressure.</span></li>
+          <li><span><strong>Digital pre-filtering</strong> — families finish their research online before calling anyone.</span></li>
+        </ul>
       </div>
     </div>
   </section>
 
-  <!-- Activity ticker — endless scroll of ongoing work -->
-  <div class="activity-ticker" aria-label="What DigiVenue does every week">
-    <div class="activity-ticker__track">
-      <span>Real function photographed</span><span class="activity-ticker__sep">·</span>
-      <span>Google page updated</span><span class="activity-ticker__sep">·</span>
-      <span>New reel published</span><span class="activity-ticker__sep">·</span>
-      <span>Review replied to</span><span class="activity-ticker__sep">·</span>
-      <span>Photos added to profile</span><span class="activity-ticker__sep">·</span>
-      <span>Enquiry followed up</span><span class="activity-ticker__sep">·</span>
-      <span>Mandap photographed</span><span class="activity-ticker__sep">·</span>
-      <span>WhatsApp story posted</span><span class="activity-ticker__sep">·</span>
-      <span>Review request sent</span><span class="activity-ticker__sep">·</span>
-      <span>Décor reel edited</span><span class="activity-ticker__sep">·</span>
-      <span>Real function photographed</span><span class="activity-ticker__sep">·</span>
-      <span>Google page updated</span><span class="activity-ticker__sep">·</span>
-      <span>New reel published</span><span class="activity-ticker__sep">·</span>
-      <span>Review replied to</span><span class="activity-ticker__sep">·</span>
-      <span>Photos added to profile</span><span class="activity-ticker__sep">·</span>
-      <span>Enquiry followed up</span><span class="activity-ticker__sep">·</span>
-      <span>Mandap photographed</span><span class="activity-ticker__sep">·</span>
-      <span>WhatsApp story posted</span><span class="activity-ticker__sep">·</span>
-      <span>Review request sent</span><span class="activity-ticker__sep">·</span>
-      <span>Décor reel edited</span><span class="activity-ticker__sep">·</span>
+  <!-- IV · What We Do -->
+  <section class="rdx-section" id="trust-building" style="background:var(--color-bg-deep);" aria-label="What we do">
+    <div class="rdx-wrap" style="text-align:center;">
+      <span class="rdx-eyebrow" style="justify-content:center;">The system</span>
+      <h2 class="rdx-h2">We build trust <em>before the site visit.</em></h2>
+      <p class="rdx-lede" style="max-width:60ch;margin:20px auto 0;">Families choose venues that look active, trusted, relevant and consistent. Here's the work that builds that confidence.</p>
+    </div>
+    <div class="rdx-wrap rdx-cards">
+      <article class="rdx-card">
+        <span class="rdx-card__num">01</span>
+        <span class="rdx-card__tag">Real function content</span>
+        <h3 class="rdx-card__title">Real weddings, not stock photos.</h3>
+        <p class="rdx-card__body">We photograph your real events — the décor, the crowd, the buffet, the mandap. Never stock photos or agency templates.</p>
+        <p class="rdx-card__out"><strong>Outcome</strong> · an Instagram grid that looks busy and trusted</p>
+      </article>
+      <article class="rdx-card">
+        <span class="rdx-card__num">02</span>
+        <span class="rdx-card__tag">Active Google presence</span>
+        <h3 class="rdx-card__title">A Google page that looks alive.</h3>
+        <p class="rdx-card__body">Updated weekly with new images, correct details and professional replies — signalling a busy, successful venue.</p>
+        <p class="rdx-card__out"><strong>Outcome</strong> · higher rankings and direct enquiry calls</p>
+      </article>
+      <article class="rdx-card">
+        <span class="rdx-card__num">03</span>
+        <span class="rdx-card__tag">Fresh reviews</span>
+        <h3 class="rdx-card__title">Reviews families actually read.</h3>
+        <p class="rdx-card__body">We follow up after every event to capture detailed, positive reviews that say exactly what families loved.</p>
+        <p class="rdx-card__out"><strong>Outcome</strong> · fresh, authentic social proof every month</p>
+      </article>
+      <article class="rdx-card">
+        <span class="rdx-card__num">04</span>
+        <span class="rdx-card__tag">Social proof</span>
+        <h3 class="rdx-card__title">Projecting crowd confidence.</h3>
+        <p class="rdx-card__body">We show your booked status, so prospective families see others are actively putting down deposits at your venue.</p>
+        <p class="rdx-card__out"><strong>Outcome</strong> · FOMO that accelerates booking decisions</p>
+      </article>
+      <article class="rdx-card">
+        <span class="rdx-card__num">05</span>
+        <span class="rdx-card__tag">Consistent visibility</span>
+        <h3 class="rdx-card__title">Always on, always active.</h3>
+        <p class="rdx-card__body">A steady rhythm across Google, Instagram and WhatsApp keeps your venue top-of-mind all through the booking season.</p>
+        <p class="rdx-card__out"><strong>Outcome</strong> · visibility that commands local market share</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- Activity ticker -->
+  <div class="rdx-ticker" aria-label="What we do every week">
+    <div class="rdx-ticker__track">
+      <span>Real function photographed</span><i>·</i><span>Google page updated</span><i>·</i><span>New reel published</span><i>·</i><span>Review replied to</span><i>·</i><span>Photos added</span><i>·</i><span>Enquiry followed up</span><i>·</i><span>Mandap photographed</span><i>·</i><span>WhatsApp story posted</span><i>·</i><span>Review request sent</span><i>·</i><span>Décor reel edited</span><i>·</i>
+      <span>Real function photographed</span><i>·</i><span>Google page updated</span><i>·</i><span>New reel published</span><i>·</i><span>Review replied to</span><i>·</i><span>Photos added</span><i>·</i><span>Enquiry followed up</span><i>·</i><span>Mandap photographed</span><i>·</i><span>WhatsApp story posted</span><i>·</i><span>Review request sent</span><i>·</i><span>Décor reel edited</span><i>·</i>
     </div>
   </div>
 
-  <!-- VIII · Every Venue Is At A Different Stage -->
-  <section class="venue-stages movement" style="background-color: var(--color-bg-deep); border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border); padding-block: clamp(56px, 8vw, 96px);" aria-label="Every Venue is Different">
-    <div class="measure-wide">
-      <span class="eyebrow" style="color: var(--color-gold);">Tailored Strategy</span>
-      <h2 class="statement" style="text-align: center; margin-bottom: var(--space-8);">
-        Every Venue Is At A <em>Different Stage</em>
-      </h2>
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--gap-md); margin-bottom: var(--space-6);">
-        <!-- Stage 1 -->
-        <div style="background: var(--color-bg); padding: var(--space-5); border: 1px solid var(--color-border); border-radius: 4px;">
-          <div style="font-family: var(--font-sans); font-size: 11px; font-weight: 600; text-transform: uppercase; color: var(--color-text-muted); margin-bottom: 10px;">Stage 01</div>
-          <h3 style="font-family: var(--font-serif); font-size: 20px; font-weight: 500; margin-bottom: 12px; color: var(--color-text-primary);">Traditional Venue</h3>
-          <p style="font-size: 14px; line-height: 1.6; color: var(--color-text-secondary); margin: 0;">
-            Little or no digital footprint. Relying entirely on word-of-mouth and drive-by enquiries. Needs a complete digital foundation built from scratch.
-          </p>
-        </div>
-        <!-- Stage 2 -->
-        <div style="background: var(--color-bg); padding: var(--space-5); border: 1px solid var(--color-border); border-radius: 4px;">
-          <div style="font-family: var(--font-sans); font-size: 11px; font-weight: 600; text-transform: uppercase; color: var(--color-text-muted); margin-bottom: 10px;">Stage 02</div>
-          <h3 style="font-family: var(--font-serif); font-size: 20px; font-weight: 500; margin-bottom: 12px; color: var(--color-text-primary);">Semi Digital Venue</h3>
-          <p style="font-size: 14px; line-height: 1.6; color: var(--color-text-secondary); margin: 0;">
-            Has basic social media pages and some online presence, but updates are highly inconsistent. Enquiries leak through slow response times.
-          </p>
-        </div>
-        <!-- Stage 3 -->
-        <div style="background: var(--color-bg); padding: var(--space-5); border: 1px solid var(--color-border); border-radius: 4px;">
-          <div style="font-family: var(--font-sans); font-size: 11px; font-weight: 600; text-transform: uppercase; color: var(--color-text-muted); margin-bottom: 10px;">Stage 03</div>
-          <h3 style="font-family: var(--font-serif); font-size: 20px; font-weight: 500; margin-bottom: 12px; color: var(--color-text-primary);">Modern Venue</h3>
-          <p style="font-size: 14px; line-height: 1.6; color: var(--color-text-secondary); margin: 0;">
-            Professionally managed pages but struggles to stand out. Needs deep local differentiation, high-converting copy, and competitive dominance.
-          </p>
-        </div>
-      </div>
-      <p style="text-align: center; font-family: var(--font-sans); font-weight: 500; font-size: 13px; color: var(--color-text-muted); text-transform: uppercase; letter-spacing: 0.1em; margin: 0;">
-        DigiStories helps all three become more visible and trusted.
-      </p>
+  <!-- V · Dark luxe band -->
+  <section class="rdx-section rdx-dark-band" aria-label="The competitive reality">
+    <div class="rdx-narrow rdx-dark-band__inner">
+      <h2>In India, the most <em>trusted</em> venue wins the wedding.</h2>
+      <p>Not the cheapest. Not the biggest. The one that looks the most active and reassuring the moment a family searches its name.</p>
     </div>
   </section>
 
-  <!-- IX · Proof — Rajesh Mehta -->
-  <section class="movement proof" id="proof" aria-label="Real results">
-    <div class="proof__inner">
-      <p class="proof__quote">
-        Earlier, families would visit and then go quiet. We never knew why. Now they call already half-decided. The trust is built before they even step inside.
-      </p>
-      <p class="proof__attr">
-        <strong>Rajesh Mehta</strong> &nbsp;&middot;&nbsp; Grand Celebration Banquet &middot; Ghatkopar West
-      </p>
-      <div class="proof__line">
-        <div>
-          <span class="proof__line__n">12 &rarr; 214</span>
-          <span class="proof__line__l">Google reviews</span>
-        </div>
-        <div>
-          <span class="proof__line__n">6 &rarr; 240+</span>
-          <span class="proof__line__l">Real wedding photos</span>
-        </div>
-        <div>
-          <span class="proof__line__n">4 &rarr; 14</span>
-          <span class="proof__line__l">Enquiry calls a month</span>
-        </div>
+  <!-- VI · Proof -->
+  <section class="rdx-section rdx-proof" id="proof" aria-label="Real results">
+    <div class="rdx-wrap">
+      <div class="rdx-quote-card">
+        <span class="rdx-quote-card__mark" aria-hidden="true">&ldquo;</span>
+        <blockquote>Earlier, families would visit and then go quiet. We never knew why. Now they call already half-decided. The trust is built before they even step inside.</blockquote>
+        <p class="rdx-quote-card__attr"><strong>Rajesh Mehta</strong> &middot; Grand Celebration Banquet, Ghatkopar West</p>
       </div>
-      <p class="proof__what">
-        Every week: real event photography, fresh Google and Instagram activity, reviews followed up — and a page that finally looks as alive as the banquet itself.
-      </p>
-    </div>
-  </section>
-
-  <!-- Stats row — the reality in three numbers -->
-  <section class="stats-row" aria-label="Why online presence matters">
-    <div class="stats-row__inner">
-      <div class="stats-row__item fade-up">
-        <div class="stats-row__num">
-          <span class="countup" data-target="78">0</span><span class="stats-row__suffix">%</span>
-        </div>
-        <p class="stats-row__label">of families research a banquet online before visiting in person</p>
-      </div>
-      <div class="stats-row__divider" aria-hidden="true"></div>
-      <div class="stats-row__item fade-up delay-1">
-        <div class="stats-row__num">
-          <span class="countup" data-target="18">0</span><span class="stats-row__suffix"> mo</span>
-        </div>
-        <p class="stats-row__label">average since a Google page was last updated</p>
-      </div>
-      <div class="stats-row__divider" aria-hidden="true"></div>
-      <div class="stats-row__item fade-up delay-2">
-        <div class="stats-row__num">
-          <span class="countup" data-target="4">0</span><span class="stats-row__suffix">–5</span>
-        </div>
-        <p class="stats-row__label">banquets shortlisted by a family before anyone visits</p>
+      <div class="rdx-stats">
+        <div class="rdx-stat"><div class="rdx-stat__n">12&nbsp;&rarr;&nbsp;214</div><div class="rdx-stat__l">Google reviews</div></div>
+        <div class="rdx-stat"><div class="rdx-stat__n">6&nbsp;&rarr;&nbsp;240+</div><div class="rdx-stat__l">Real wedding photos on the profile</div></div>
+        <div class="rdx-stat"><div class="rdx-stat__n">4&nbsp;&rarr;&nbsp;14</div><div class="rdx-stat__l">Enquiry calls a month</div></div>
       </div>
     </div>
   </section>
 
-  <!-- X · Future Vision (Today Visibility. Tomorrow Intelligence.) -->
-  <section class="future-vision movement" style="border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border); padding-block: clamp(56px, 8vw, 96px);" aria-label="Future Vision">
-    <div class="measure">
-      <span class="eyebrow">The Roadmap</span>
-      <h2 class="statement" style="margin-bottom: var(--space-5); line-height: 1.15;">
-        Today Visibility.<br>Tomorrow <em>Intelligence.</em>
-      </h2>
-      <p class="lede" style="margin-bottom: var(--space-5); font-size: 19px; line-height: 1.65;">
-        DigiStories is the first layer of the DigiVenue ecosystem.
-      </p>
-      <div style="display: flex; flex-direction: column; gap: var(--space-4); color: var(--color-text-secondary); font-size: 16px; line-height: 1.7;">
-        <p>
-          Today, we help venues build their local visibility, capture trust, and generate high-quality enquiries. We make sure your phone rings.
-        </p>
-        <p>
-          Tomorrow, the broader DigiVenue ecosystem will help operators manage leads, track follow-ups, organize calendars, evaluate revenue, and drive profitability.
-        </p>
-        <p style="font-family: var(--font-serif); font-style: italic; font-size: 19px; color: var(--color-text-primary); margin-top: var(--space-3); border-left: 2px solid var(--color-gold); padding-left: var(--space-4);">
-          Because the future of venue businesses requires more than marketing. It requires systems.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- XI · Growth chart — what steady work looks like over time -->
-  <section class="movement growth-viz" aria-label="What six months of active presence looks like">
-    <div class="growth-viz__inner">
-      <span class="eyebrow">A typical first season</span>
-      <h2 class="growth-viz__head fade-up" style="line-height: 1.15;">
-        What happens when your banquet<br><em>starts showing up online.</em>
-      </h2>
-      <div class="growth-viz__chart fade-up delay-1">
-        <div class="growth-viz__yaxis" aria-hidden="true">
-          <span>High</span>
-          <span>Mid</span>
-          <span>Low</span>
-        </div>
-        <div class="growth-viz__plot">
+  <!-- VII · Growth chart -->
+  <section class="rdx-section" aria-label="What six months of active presence looks like">
+    <div class="rdx-wrap">
+      <div class="rdx-chart-card">
+        <span class="rdx-eyebrow">A typical first season</span>
+        <h2 class="rdx-chart-head">What happens when your venue <em>starts showing up online.</em></h2>
+        <div class="growth-viz__chart">
           <svg class="growth-viz__svg" viewBox="0 0 640 200" preserveAspectRatio="none" aria-hidden="true">
             <defs>
               <linearGradient id="areaGrad" x1="0" y1="0" x2="0" y2="1">
                 <stop offset="0%" stop-color="#C5A059" stop-opacity="0.18"/>
                 <stop offset="100%" stop-color="#C5A059" stop-opacity="0.0"/>
               </linearGradient>
-              <filter id="glow">
-                <feGaussianBlur stdDeviation="2.5" result="blur"/>
-                <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-              </filter>
             </defs>
-            <!-- Grid lines -->
-            <line x1="0" y1="40"  x2="640" y2="40"  class="gv-grid"/>
+            <line x1="0" y1="40" x2="640" y2="40" class="gv-grid"/>
             <line x1="0" y1="100" x2="640" y2="100" class="gv-grid"/>
             <line x1="0" y1="160" x2="640" y2="160" class="gv-grid"/>
-            <!-- Before line (flat / dormant) -->
-            <polyline class="gv-line gv-line--before"
-              points="0,162 107,164 213,162 320,165 427,162 533,164 640,163"/>
-            <!-- Area fill under growth line -->
-            <polygon class="gv-area"
-              points="0,165 107,148 213,122 320,90 427,62 533,40 640,26 640,200 0,200"/>
-            <!-- Growth line -->
-            <polyline class="gv-line gv-line--after"
-              points="0,165 107,148 213,122 320,90 427,62 533,40 640,26"/>
-            <!-- Start dot -->
-            <circle cx="0"   cy="165" r="4" class="gv-dot gv-dot--start"/>
-            <!-- End dot with pulse -->
-            <circle cx="640" cy="26"  r="5" class="gv-dot gv-dot--end" filter="url(#glow)">
-              <animate attributeName="r"       values="5;9;5"   dur="2.4s" repeatCount="indefinite"/>
+            <polyline class="gv-line gv-line--before" points="0,162 107,164 213,162 320,165 427,162 533,164 640,163"/>
+            <polygon class="gv-area" points="0,165 107,148 213,122 320,90 427,62 533,40 640,26 640,200 0,200"/>
+            <polyline class="gv-line gv-line--after" points="0,165 107,148 213,122 320,90 427,62 533,40 640,26"/>
+            <circle cx="0" cy="165" r="4" class="gv-dot gv-dot--start"/>
+            <circle cx="640" cy="26" r="5" class="gv-dot gv-dot--end">
+              <animate attributeName="r" values="5;9;5" dur="2.4s" repeatCount="indefinite"/>
               <animate attributeName="opacity" values="1;0.4;1" dur="2.4s" repeatCount="indefinite"/>
             </circle>
           </svg>
           <div class="growth-viz__xaxis" aria-hidden="true">
-            <span>Month 1</span>
-            <span>Month 2</span>
-            <span>Month 3</span>
-            <span>Month 4</span>
-            <span>Month 5</span>
-            <span>Month 6</span>
+            <span>Month 1</span><span>Month 2</span><span>Month 3</span><span>Month 4</span><span>Month 5</span><span>Month 6</span>
           </div>
         </div>
+        <p class="growth-viz__caption" style="margin-top:18px;">Google Business Profile visibility — estimated trajectory. Not a guarantee.</p>
       </div>
-      <div class="growth-viz__legend fade-up delay-2" aria-hidden="true">
-        <span class="gv-leg gv-leg--before">Without DigiStories</span>
-        <span class="gv-leg gv-leg--after">With DigiStories</span>
-      </div>
-      <p class="growth-viz__caption fade-up delay-2">Google Business Profile visibility — estimated trajectory. Not a guarantee.</p>
     </div>
   </section>
 
-  <!-- XII · Final Message & Movement CTA -->
-  <section class="movement invitation" id="visibility-check" aria-label="Free audit invitation">
-    <span class="eyebrow" style="color: var(--color-accent); font-weight: 600; margin-bottom: 24px;">The Challenge</span>
-    <h2 class="invitation__line" style="font-size: clamp(34px, 5vw, 60px); line-height: 1.15; margin-bottom: var(--space-6);">
-      The Industry Changed.<br>
-      Customers Changed.<br>
-      Competition Changed.<br>
-      Costs Changed.<br>
-      <em>Has Your Venue Changed?</em>
-    </h2>
-    <div style="margin-top: var(--space-6); margin-bottom: 12px;">
-      <a href="pages/audit.html" class="invitation__cta">
-        Get A Free Visibility Audit &nbsp;&rarr;
-      </a>
+  <!-- VIII · Final CTA -->
+  <section class="rdx-section rdx-cta" id="visibility-check" aria-label="Free audit invitation">
+    <div class="rdx-narrow rdx-cta__inner">
+      <h2>See your venue <em>the way a family sees it online.</em></h2>
+      <p>Built in Mumbai by Rohit Nate · 13 years running banquets across Maharashtra.</p>
+      <a href="pages/audit.html" class="rdx-btn rdx-btn--primary">Get a Free Visibility Audit &rarr;</a>
+      <p class="rdx-cta__note">Within 24 hours · no sign-up · or <a href="https://wa.me/919819576256?text=Hi%2C%20I'd%20like%20a%20free%20check%20of%20my%20venue%20online." target="_blank" rel="noopener noreferrer">message us on WhatsApp</a></p>
     </div>
-    <span class="invitation__note">
-      See how your venue appears to families online &middot; Within 24 hours &middot; Or <a href="https://wa.me/919819576256?text=Hi%2C%20I'd%20like%20a%20free%20check%20of%20my%20banquet%20online." target="_blank" rel="noopener noreferrer" class="invitation__wa">message us on WhatsApp</a>
-    </span>
   </section>
 
   <footer class="site-footer" role="contentinfo">
@@ -633,9 +266,9 @@
           <a href="pages/results.html">Results</a>
           <a href="pages/ecosystem.html">The Bigger Picture</a>
           <a href="pages/about.html">About</a>
-          <a href="https://wa.me/919819576256?text=I%20want%20to%20know%20more%20about%20DigiStories%20for%20my%20venue." target="_blank" rel="noopener noreferrer">WhatsApp</a>
+          <a href="https://wa.me/919819576256?text=I%20want%20to%20know%20more%20about%20DigiVenue%20for%20my%20venue." target="_blank" rel="noopener noreferrer">WhatsApp</a>
         </nav>
-        <span class="footer-bar__meta">&copy; 2026 DigiStories &middot; Built in Mumbai &middot; <a href="internal/index.html" style="color:inherit;opacity:0.4;text-decoration:none;" tabindex="-1">&#9679;</a></span>
+        <span class="footer-bar__meta">&copy; 2026 DigiVenue · Built in Mumbai · <a href="internal/index.html" style="color:inherit;opacity:0.4;text-decoration:none;" tabindex="-1">&#9679;</a></span>
       </div>
     </div>
   </footer>

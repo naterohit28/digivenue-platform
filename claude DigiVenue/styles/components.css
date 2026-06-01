@@ -198,26 +198,27 @@ body:has(.hero-home) .site-nav:not(.is-scrolled) .nav-toggle__bar {
   letter-spacing: var(--ls-badge);
   text-decoration: none;
   padding: 16px 36px;
-  border-radius: var(--border-radius);
+  border-radius: var(--radius-btn, 10px);
   border: 1px solid transparent;
   cursor: pointer;
   white-space: nowrap;
   position: relative;
   overflow: hidden;
-  /* Transition in motion.css via global a/button rule */
+  transition: transform 280ms var(--ease-out), box-shadow 280ms var(--ease-out), background-color 280ms var(--ease-out), border-color 280ms var(--ease-out);
 }
 
-/* Primary — solid fill */
+/* Primary — warm gradient fill (site-wide signature CTA) */
 .btn--primary {
-  background-color: var(--color-text-primary);
-  color: var(--color-text-inverse);
-  border-color: var(--color-text-primary);
+  background: var(--grad-warm, linear-gradient(115deg, #D94822 0%, #E0883C 48%, #C5A059 100%));
+  color: #FFFFFF;
+  border-color: transparent;
+  box-shadow: 0 12px 30px -10px rgba(217, 72, 34, 0.45);
 }
 
 .btn--primary:hover {
-  background-color: var(--color-text-secondary);
-  border-color: var(--color-text-secondary);
-  color: var(--color-text-inverse);
+  color: #FFFFFF;
+  transform: translateY(-2px);
+  box-shadow: 0 18px 40px -10px rgba(217, 72, 34, 0.55);
 }
 
 /* Accent — vermillion fill for key CTAs */
