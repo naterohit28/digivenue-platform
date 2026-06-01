@@ -476,14 +476,14 @@
   font-size: 14px;
   color: var(--color-text-secondary);
 }
-@media (min-width: 720px) {
+@media (min-width: 600px) {
   .home .proof__line {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     max-width: 760px;
   }
   .home .proof__line > div + div {
     border-left: 1px solid var(--color-border);
-    padding-left: 40px;
+    padding-left: 32px;
   }
 }
 .home .proof__line__n {
