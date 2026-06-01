@@ -1,0 +1,245 @@
+/* ============================================================
+   DIGIVENUE — HOMEPAGE REDESIGN (v2)
+   Bolder, warmer, more modern — while staying premium.
+   Loads on top of main.css (tokens, nav, footer, base).
+   Scoped to body.home-rdx so it never touches other pages.
+   ============================================================ */
+
+.home-rdx {
+  /* Redesign-only tokens */
+  --rdx-r:        16px;   /* card radius */
+  --rdx-r-sm:     10px;   /* button radius */
+  --rdx-grad:     linear-gradient(115deg, #D94822 0%, #E0883C 48%, #C5A059 100%);
+  --rdx-grad-soft:linear-gradient(160deg, #FBF8F3 0%, #F3EADB 100%);
+  --rdx-dark:     #17120F;
+  --rdx-dark-2:   #211A15;
+  --rdx-shadow:   0 22px 60px -24px rgba(60,40,15,0.30);
+  --rdx-shadow-sm:0 10px 30px -14px rgba(60,40,15,0.22);
+
+  background: var(--color-bg);
+  color: var(--color-text-primary);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Shared section frame */
+.rdx-section { padding-block: clamp(64px, 9vw, 128px); padding-inline: clamp(24px, 6vw, 64px); }
+.rdx-wrap    { max-width: 1180px; margin-inline: auto; }
+.rdx-narrow  { max-width: 760px; margin-inline: auto; }
+
+.rdx-eyebrow {
+  display: inline-flex; align-items: center; gap: 12px;
+  font-family: var(--font-sans); font-size: 12px; font-weight: 600;
+  letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--color-gold-text); margin-bottom: 24px;
+}
+.rdx-eyebrow::before {
+  content: ""; width: 28px; height: 2px; border-radius: 2px;
+  background: var(--rdx-grad);
+}
+
+.rdx-h2 {
+  font-family: var(--font-serif); font-weight: 400;
+  font-size: clamp(30px, 4.4vw, 56px); line-height: 1.12;
+  letter-spacing: -0.025em; color: var(--color-text-primary); margin: 0;
+}
+.rdx-h2 em { font-style: italic; color: var(--color-accent); }
+.rdx-grad-text {
+  background: var(--rdx-grad); -webkit-background-clip: text;
+  background-clip: text; color: transparent;
+}
+.rdx-lede {
+  font-family: var(--font-sans); font-size: clamp(17px, 1.6vw, 20px);
+  line-height: 1.65; color: var(--color-text-secondary); margin: 0;
+}
+
+/* ───────── Buttons ───────── */
+.rdx-btn {
+  display: inline-flex; align-items: center; gap: 12px;
+  font-family: var(--font-sans); font-size: 15px; font-weight: 600;
+  letter-spacing: 0.04em; text-decoration: none; cursor: pointer;
+  padding: 17px 32px; min-height: 56px; border-radius: var(--rdx-r-sm);
+  border: 1px solid transparent; transition: transform 280ms var(--ease-out), box-shadow 280ms var(--ease-out), background 280ms var(--ease-out), color 280ms var(--ease-out);
+}
+.rdx-btn--primary {
+  background: var(--rdx-grad); color: #fff;
+  box-shadow: 0 12px 30px -10px rgba(217,72,34,0.5);
+}
+.rdx-btn--primary:hover { transform: translateY(-2px); box-shadow: 0 18px 40px -10px rgba(217,72,34,0.6); }
+.rdx-btn--ghost {
+  background: transparent; color: var(--color-text-primary);
+  border-color: var(--color-border-light);
+}
+.rdx-btn--ghost:hover { border-color: var(--color-text-primary); transform: translateY(-2px); }
+.rdx-btn--light {
+  background: rgba(255,255,255,0.10); color: #F5F2EE;
+  border-color: rgba(245,242,238,0.5); backdrop-filter: blur(4px);
+}
+.rdx-btn--light:hover { background: #F5F2EE; color: #1F1D1C; border-color: #F5F2EE; transform: translateY(-2px); }
+
+/* ───────── I · Hero ───────── */
+.rdx-hero {
+  position: relative; min-height: 100svh; display: grid;
+  grid-template-rows: auto 1fr auto; overflow: clip;
+  background: var(--rdx-dark); color: #F5F2EE; isolation: isolate;
+}
+.rdx-hero__bg { position: absolute; inset: 0; z-index: -2; }
+.rdx-hero__bg img { width: 100%; height: 100%; object-fit: cover; filter: brightness(0.5) saturate(1.08) contrast(1.05); transform: scale(1.04); }
+.rdx-hero__veil {
+  position: absolute; inset: 0; z-index: -1; pointer-events: none;
+  background:
+    radial-gradient(ellipse 70% 60% at 18% 92%, rgba(217,72,34,0.32), transparent 60%),
+    radial-gradient(ellipse 60% 50% at 90% 10%, rgba(197,160,89,0.22), transparent 55%),
+    linear-gradient(180deg, rgba(10,8,6,0.55) 0%, rgba(10,8,6,0.15) 35%, rgba(10,8,6,0.75) 100%);
+}
+.rdx-hero__top {
+  display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;
+  padding: clamp(96px, 11vh, 124px) clamp(24px, 6vw, 64px) 0;
+}
+.rdx-pill {
+  font-family: var(--font-sans); font-size: 11px; font-weight: 600;
+  letter-spacing: 0.16em; text-transform: uppercase; color: #F5F2EE;
+  padding: 8px 16px; border: 1px solid rgba(245,242,238,0.28);
+  border-radius: 100px; background: rgba(255,255,255,0.06); backdrop-filter: blur(4px);
+}
+.rdx-hero__inner { align-self: end; padding: 0 clamp(24px, 6vw, 64px) clamp(56px, 8vh, 96px); }
+.rdx-hero__title {
+  font-family: var(--font-serif); font-weight: 300;
+  font-size: clamp(42px, 6.4vw, 88px); line-height: 1.03; letter-spacing: -0.035em;
+  margin: 0; max-width: 16ch; color: #FBF8F3;
+}
+.rdx-hero__title em { font-style: italic; }
+.rdx-hero__anchor {
+  margin: 28px 0 36px; max-width: 52ch; font-size: clamp(15px, 1.4vw, 18px);
+  line-height: 1.6; color: rgba(245,242,238,0.82);
+}
+.rdx-hero__actions { display: flex; flex-wrap: wrap; gap: 16px; align-items: center; }
+.rdx-hero__scroll {
+  position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%);
+  font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase;
+  color: rgba(245,242,238,0.55); display: flex; flex-direction: column; align-items: center; gap: 8px;
+}
+.rdx-hero__scroll span:last-child { width: 1px; height: 28px; background: linear-gradient(rgba(245,242,238,0.6), transparent); animation: rdx-scroll 2s ease-in-out infinite; }
+@keyframes rdx-scroll { 0%,100%{opacity:0.3; transform:scaleY(0.7);} 50%{opacity:1; transform:scaleY(1);} }
+
+/* ───────── II · Problem ───────── */
+.rdx-problem { background: var(--rdx-grad-soft); text-align: center; }
+.rdx-problem__line {
+  font-family: var(--font-serif); font-weight: 300; font-style: italic;
+  font-size: clamp(30px, 4.6vw, 60px); line-height: 1.18; letter-spacing: -0.02em;
+  color: var(--color-text-primary); max-width: 20ch; margin: 0 auto;
+}
+.rdx-problem__line em { color: var(--color-accent); }
+.rdx-problem__caption { margin: 32px auto 0; max-width: 56ch; font-size: 16px; line-height: 1.75; color: var(--color-text-secondary); }
+
+/* ───────── III · Industry changed (split) ───────── */
+.rdx-split { display: grid; grid-template-columns: 1fr; gap: clamp(40px, 5vw, 72px); align-items: start; }
+@media (min-width: 900px) { .rdx-split { grid-template-columns: 1fr 1fr; } }
+.rdx-split p + p { margin-top: 18px; }
+.rdx-split .rdx-lede { margin-bottom: 20px; }
+.rdx-list-card {
+  background: #fff; border: 1px solid var(--color-border); border-radius: var(--rdx-r);
+  padding: clamp(28px, 3vw, 40px); box-shadow: var(--rdx-shadow-sm);
+}
+.rdx-list-card__label { font-size: 12px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-gold-text); margin-bottom: 22px; }
+.rdx-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 18px; }
+.rdx-list li { display: flex; gap: 14px; align-items: flex-start; font-size: 15px; line-height: 1.55; color: var(--color-text-primary); }
+.rdx-list li::before { content: ""; flex: none; width: 8px; height: 8px; margin-top: 7px; border-radius: 50%; background: var(--rdx-grad); }
+.rdx-list strong { font-weight: 600; }
+
+/* ───────── IV · What We Do (cards) ───────── */
+.rdx-cards { display: grid; grid-template-columns: 1fr; gap: 24px; margin-top: clamp(40px, 5vw, 64px); }
+@media (min-width: 680px) { .rdx-cards { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 1040px) { .rdx-cards { grid-template-columns: repeat(3, 1fr); } }
+.rdx-card {
+  position: relative; background: #fff; border: 1px solid var(--color-border);
+  border-radius: var(--rdx-r); padding: clamp(28px, 2.6vw, 38px);
+  box-shadow: var(--rdx-shadow-sm); overflow: hidden;
+  transition: transform 320ms var(--ease-out), box-shadow 320ms var(--ease-out);
+}
+.rdx-card::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--rdx-grad); transform: scaleX(0); transform-origin: left; transition: transform 360ms var(--ease-out); }
+@media (hover: hover) {
+  .rdx-card:hover { transform: translateY(-6px); box-shadow: var(--rdx-shadow); }
+  .rdx-card:hover::before { transform: scaleX(1); }
+}
+.rdx-card__num {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 46px; height: 46px; border-radius: 12px; margin-bottom: 22px;
+  font-family: var(--font-serif); font-size: 20px; font-weight: 500;
+  color: var(--color-accent); background: var(--color-accent-subtle);
+}
+.rdx-card__tag { display: block; font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-text-muted); margin-bottom: 10px; }
+.rdx-card__title { font-family: var(--font-serif); font-weight: 500; font-size: clamp(20px, 2vw, 24px); line-height: 1.25; color: var(--color-text-primary); margin: 0 0 12px; }
+.rdx-card__body { font-size: 15px; line-height: 1.6; color: var(--color-text-secondary); margin: 0 0 18px; }
+.rdx-card__out { font-size: 13px; font-weight: 600; letter-spacing: 0.02em; color: var(--color-text-primary); padding-top: 16px; border-top: 1px solid var(--color-border); }
+.rdx-card__out strong { color: var(--color-gold-text); }
+
+/* ───────── Activity ticker ───────── */
+.rdx-ticker { overflow: hidden; border-block: 1px solid var(--color-border); padding-block: 14px; background: var(--color-bg-deep); }
+.rdx-ticker__track { display: flex; align-items: center; gap: 30px; width: max-content; animation: rdx-tick 38s linear infinite; }
+.rdx-ticker__track:hover { animation-play-state: paused; }
+.rdx-ticker span { font-size: 11px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--color-text-muted); white-space: nowrap; }
+.rdx-ticker i { color: var(--color-gold); font-style: normal; }
+@keyframes rdx-tick { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+/* ───────── V · Dark luxe band ───────── */
+.rdx-dark-band {
+  position: relative; background: var(--rdx-dark); color: #F5F2EE; text-align: center; overflow: hidden;
+}
+.rdx-dark-band::before { content: ""; position: absolute; inset: 0; background: radial-gradient(ellipse 60% 70% at 50% 0%, rgba(197,160,89,0.18), transparent 65%); pointer-events: none; }
+.rdx-dark-band__inner { position: relative; }
+.rdx-dark-band h2 {
+  font-family: var(--font-serif); font-weight: 300; font-size: clamp(32px, 5vw, 64px);
+  line-height: 1.12; letter-spacing: -0.025em; margin: 0 auto; max-width: 18ch; color: #FBF8F3;
+}
+.rdx-dark-band h2 em { font-style: italic; }
+.rdx-dark-band p { margin: 28px auto 0; max-width: 54ch; color: rgba(245,242,238,0.72); font-size: 16px; line-height: 1.7; }
+
+/* ───────── VI · Proof ───────── */
+.rdx-proof { background: var(--rdx-grad-soft); }
+.rdx-quote-card {
+  background: #fff; border: 1px solid var(--color-border); border-radius: var(--rdx-r);
+  padding: clamp(36px, 4vw, 64px); box-shadow: var(--rdx-shadow-sm); max-width: 880px; margin: 0 auto;
+  position: relative;
+}
+.rdx-quote-card__mark { font-family: var(--font-serif); font-size: 80px; line-height: 0.8; color: var(--color-gold); opacity: 0.5; height: 36px; display: block; }
+.rdx-quote-card blockquote {
+  font-family: var(--font-serif); font-style: italic; font-weight: 400;
+  font-size: clamp(20px, 2.4vw, 30px); line-height: 1.45; color: var(--color-text-primary); margin: 0;
+}
+.rdx-quote-card__attr { margin-top: 28px; font-size: 14px; color: var(--color-text-muted); }
+.rdx-quote-card__attr strong { color: var(--color-text-primary); font-size: 16px; }
+.rdx-stats { display: grid; grid-template-columns: 1fr; gap: 28px; margin-top: clamp(36px, 4vw, 56px); }
+@media (min-width: 640px) { .rdx-stats { grid-template-columns: repeat(3, 1fr); } }
+.rdx-stat { text-align: center; padding: clamp(24px, 3vw, 36px) 16px; background: #fff; border: 1px solid var(--color-border); border-radius: var(--rdx-r); box-shadow: var(--rdx-shadow-sm); }
+.rdx-stat__n {
+  font-family: var(--font-serif); font-weight: 400; font-size: clamp(40px, 5vw, 60px); line-height: 1;
+  letter-spacing: -0.03em; background: var(--rdx-grad); -webkit-background-clip: text; background-clip: text; color: transparent;
+  font-variant-numeric: tabular-nums;
+}
+.rdx-stat__l { margin-top: 14px; font-size: 13px; line-height: 1.55; color: var(--color-text-muted); max-width: 24ch; margin-inline: auto; }
+
+/* ───────── VII · Growth chart card ───────── */
+.rdx-chart-card { background: #fff; border: 1px solid var(--color-border); border-radius: var(--rdx-r); padding: clamp(28px, 3.5vw, 52px); box-shadow: var(--rdx-shadow-sm); max-width: 920px; margin-inline: auto; }
+.rdx-chart-card .growth-viz__chart { display: block; }
+.rdx-chart-card .growth-viz__svg { height: clamp(150px, 24vw, 240px); width: 100%; display: block; }
+.rdx-chart-card .growth-viz__xaxis { display: flex; justify-content: space-between; width: 100%; margin-top: 10px; font-family: var(--font-sans); font-size: 11px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-text-muted); opacity: 0.6; }
+.rdx-chart-head { font-family: var(--font-serif); font-weight: 400; font-size: clamp(24px, 3vw, 38px); line-height: 1.2; letter-spacing: -0.02em; margin: 0 0 clamp(28px,3vw,44px); }
+.rdx-chart-head em { font-style: italic; color: var(--color-accent); }
+
+/* ───────── VIII · Final CTA ───────── */
+.rdx-cta { position: relative; background: var(--rdx-dark); color: #F5F2EE; text-align: center; overflow: hidden; }
+.rdx-cta::before { content: ""; position: absolute; inset: 0; background: radial-gradient(ellipse 70% 80% at 50% 120%, rgba(217,72,34,0.35), transparent 60%), radial-gradient(ellipse 50% 60% at 50% 0%, rgba(197,160,89,0.16), transparent 60%); pointer-events: none; }
+.rdx-cta__inner { position: relative; }
+.rdx-cta h2 { font-family: var(--font-serif); font-weight: 300; font-size: clamp(34px, 5.2vw, 66px); line-height: 1.08; letter-spacing: -0.03em; margin: 0 auto 18px; max-width: 16ch; color: #FBF8F3; }
+.rdx-cta h2 em { font-style: italic; color: #E6B873; }
+.rdx-cta p { color: rgba(245,242,238,0.72); font-size: 15px; margin: 0 0 36px; }
+.rdx-cta__note { margin-top: 24px; font-size: 13px; letter-spacing: 0.06em; color: rgba(245,242,238,0.55); }
+.rdx-cta__note a { color: #E6B873; text-decoration: none; border-bottom: 1px solid rgba(230,184,115,0.4); }
+
+/* ───────── Reduced motion ───────── */
+@media (prefers-reduced-motion: reduce) {
+  .rdx-ticker__track { animation: none; }
+  .rdx-hero__scroll span:last-child { animation: none; }
+  .rdx-card:hover, .rdx-btn:hover { transform: none; }
+}
