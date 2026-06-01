@@ -317,6 +317,66 @@ function initWhatsAppFloat() {
 
 
 /* ──────────────────────────────────────────
+   9. COUNT-UP ANIMATION
+   ────────────────────────────────────────── */
+
+function initCountUp() {
+  const els = document.querySelectorAll('.countup[data-target]');
+  if (!els.length) return;
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        const el     = entry.target;
+        const target = parseInt(el.dataset.target, 10);
+        const duration = 1400;
+        const start    = performance.now();
+
+        function tick(now) {
+          const elapsed  = now - start;
+          const progress = Math.min(elapsed / duration, 1);
+          const eased = 1 - Math.pow(1 - progress, 3);
+          el.textContent = Math.round(eased * target);
+          if (progress < 1) requestAnimationFrame(tick);
+        }
+
+        requestAnimationFrame(tick);
+        observer.unobserve(el);
+      });
+    },
+    { threshold: 0.3 }
+  );
+
+  els.forEach((el) => observer.observe(el));
+}
+
+
+/* ──────────────────────────────────────────
+   10. GROWTH CHART LINE DRAW
+   ────────────────────────────────────────── */
+
+function initGrowthChart() {
+  const chart = document.querySelector('.growth-viz__chart');
+  if (!chart) return;
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.25 }
+  );
+
+  observer.observe(chart);
+}
+
+
+/* ──────────────────────────────────────────
    INIT — Run all behaviors on DOM ready
    ────────────────────────────────────────── */
 
@@ -327,6 +387,8 @@ function init() {
   initSmoothScroll();
   initActiveNavLinks();
   initWhatsAppFloat();
+  initCountUp();
+  initGrowthChart();
 }
 
 if (document.readyState === 'loading') {

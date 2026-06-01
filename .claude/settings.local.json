@@ -29,7 +29,8 @@
       "Bash(python -m py_compile dashboard/app.py collectors/google_maps_collector.py database/db.py outreach/priority_engine.py check_live_setup.py)",
       "Bash(ping -n 5 127.0.0.1)",
       "Bash(dir /s /b)",
-      "Bash(python -c \"import pandas as pd; q=pd.read_csv\\('exports/daily_outreach_queue.csv'\\); print\\(f'{len\\(q\\)} venues in queue, top: {q.iloc[0][\\\\\"business_name\\\\\"]}'\\)\")"
+      "Bash(python -c \"import pandas as pd; q=pd.read_csv\\('exports/daily_outreach_queue.csv'\\); print\\(f'{len\\(q\\)} venues in queue, top: {q.iloc[0][\\\\\"business_name\\\\\"]}'\\)\")",
+      "Bash(git add *)"
     ]
   }
 }
