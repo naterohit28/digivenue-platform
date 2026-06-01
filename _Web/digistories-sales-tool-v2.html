@@ -530,6 +530,7 @@
 <div class="tool-footer">Internal tool — DigiVenue team use only. Do not share this URL with prospects. The customer receives the printed Venue Health Report only.</div>
 
 <script src="intelligence_data.js" onerror="window.PANELS=window.PANELS||null;"></script>
+<script src="benchmark_data.js" onerror="window.BCA_STATS=window.BCA_STATS||null;"></script>
 <script>
 const STEPS=[
   {id:'venue',label:'Venue'},{id:'visibility',label:'Visibility'},{id:'trust',label:'Trust'},
@@ -794,19 +795,21 @@ function generateReport(){
 /* JSON BRIDGE */
 let benchmarks = { average_reviews: 120, average_visibility: 54, average_occupancy: 68, average_response_time: 4 };
 async function loadBenchmarks(){
-  try {
-    const res = await fetch('Sales Strategy/bcda_statistics.json');
-    if (res.ok) {
-      const data = await res.json();
-      benchmarks.average_reviews = data.average_reviews || 120;
-      benchmarks.average_visibility = 54;
-      benchmarks.average_occupancy = 68;
-      benchmarks.average_response_time = 4;
-      calcVisibility(); calcTrust(); calcOperations();
-    }
-  } catch(e) {
-    console.log("Could not load benchmarks, using defaults", e);
+  // Prefer the bundled global (works under file://). Fall back to fetch when served over http.
+  function apply(data){
+    if(!data) return false;
+    benchmarks.average_reviews = data.average_reviews || 120;
+    benchmarks.average_visibility = 54;
+    benchmarks.average_occupancy = 68;
+    benchmarks.average_response_time = 4;
+    calcVisibility(); calcTrust(); calcOperations();
+    return true;
   }
+  if (typeof window.BCA_STATS === 'object' && apply(window.BCA_STATS)) return;
+  for (const path of ['../Sales Strategy/bcda_statistics.json','Sales Strategy/bcda_statistics.json']) {
+    try { const res = await fetch(path); if (res.ok) { apply(await res.json()); return; } } catch(e) {}
+  }
+  console.log("Benchmarks: using built-in defaults");
 }
 
 function exportIntakeJSON(){

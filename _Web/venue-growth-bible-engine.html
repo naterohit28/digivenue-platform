@@ -287,6 +287,7 @@ tbody td:first-child{color:var(--text);font-weight:600}
 }
 @media(max-width:480px){.nav-panel{grid-template-columns:1fr}}
 </style>
+<script src="benchmark_data.js" onerror="window.BCA_STATS=window.BCA_STATS||null;"></script>
 </head>
 <body>
 
@@ -482,16 +483,22 @@ async function loadConfidenceAndBenchmarks(){
         loaded = true;
       }
     }
+    if (!loaded && Array.isArray(window.REC_CONFIDENCE)) {
+      RECOMMENDATIONS_CONFIDENCE = window.REC_CONFIDENCE; loaded = true;
+    }
     if (!loaded) {
-      const res = await fetch('Sales Strategy/recommendations_confidence.json');
-      if (res.ok) RECOMMENDATIONS_CONFIDENCE = await res.json();
+      for (const path of ['../Sales Strategy/recommendations_confidence.json','Sales Strategy/recommendations_confidence.json']) {
+        try { const res = await fetch(path); if (res.ok) { RECOMMENDATIONS_CONFIDENCE = await res.json(); break; } } catch(e) {}
+      }
     }
   } catch(e) {}
   try {
-    const res = await fetch('Sales Strategy/bcda_statistics.json');
-    if (res.ok) {
-      const data = await res.json();
-      benchmarks.average_reviews = data.average_reviews || 120;
+    if (typeof window.BCA_STATS === 'object' && window.BCA_STATS) {
+      benchmarks.average_reviews = window.BCA_STATS.average_reviews || 120;
+    } else {
+      for (const path of ['../Sales Strategy/bcda_statistics.json','Sales Strategy/bcda_statistics.json']) {
+        try { const res = await fetch(path); if (res.ok) { const d = await res.json(); benchmarks.average_reviews = d.average_reviews || 120; break; } } catch(e) {}
+      }
     }
   } catch(e) {}
 }
