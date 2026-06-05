@@ -1,31 +1,30 @@
 window.PANELS = {
   "Swagat Banquet Hall": {
     "business_name": "Swagat Banquet Hall",
-    "area": "Goregaon",
-    "suburb": "Goregaon",
-    "dmi_score": 8,
+    "area": "Dadar",
+    "suburb": "Dadar",
+    "dmi_score": 17.56,
     "dmi_category": "Digitally Invisible",
     "data_source": "ai_estimate",
     "territory_rank": {
-      "suburb": "Goregaon",
-      "suburb_rank": 1,
-      "suburb_total": 1,
-      "global_rank": 74,
+      "suburb": "Dadar",
+      "suburb_rank": 9,
+      "suburb_total": 9,
+      "global_rank": 106,
       "global_total": 106,
       "lines": [
-        "Goregaon Rank: #1 of 1 venues",
-        "Overall Rank: #74 of 106 venues"
+        "Dadar Rank: #9 of 9 venues",
+        "Overall Rank: #106 of 106 venues"
       ]
     },
     "digital_silence": {
-      "score": 100,
+      "score": 100.0,
       "label": "Severe Silence",
       "is_strong_digistories_signal": true,
       "lines": [
-        "No Instagram account found",
-        "Very low Google review count",
-        "No active website trust signal",
-        "Only 4 photos on Google Maps"
+        "No reels found at all",
+        "No review in 72 days",
+        "Only 4 photos on Google"
       ]
     },
     "smartos_opportunity": {
@@ -34,10 +33,9 @@ window.PANELS = {
       "manual_workflow_risk": "High",
       "whatsapp_dependency_risk": "High",
       "lines": [
-        "High capacity venue; double booking risk is critical",
-        "Structured as a Standalone Banquet; complex booking contracts",
-        "High probability of paper booking diary usage",
-        "WhatsApp booking chats are unorganized and staff-dependent"
+        "Inquiry leakage risk: High (~88%)",
+        "Manual workflow risk: High",
+        "WhatsApp dependency risk: High"
       ]
     },
     "growth_momentum": {
@@ -48,9 +46,9 @@ window.PANELS = {
       "website_updated": false,
       "is_buying_signal": false,
       "lines": [
-        "\u2717 Reviews stagnant or low",
-        "\u2717 Instagram dormant or missing",
-        "\u2717 Website missing"
+        "✗ Reviews increasing",
+        "✗ Instagram active",
+        "✗ Website updated"
       ]
     },
     "relationship": {
@@ -69,69 +67,65 @@ window.PANELS = {
   "Swatantryaveer Savarkar Sabhagriha": {
     "business_name": "Swatantryaveer Savarkar Sabhagriha",
     "area": "Shivaji Park",
-    "suburb": "Shivaji Park",
-    "dmi_score": 8,
-    "dmi_category": "Digitally Invisible",
+    "suburb": "Dadar",
+    "dmi_score": 57.84,
+    "dmi_category": "Visibility Weak",
     "data_source": "ai_estimate",
     "territory_rank": {
-      "suburb": "Shivaji Park",
-      "suburb_rank": 2,
-      "suburb_total": 2,
-      "global_rank": 74,
+      "suburb": "Dadar",
+      "suburb_rank": 1,
+      "suburb_total": 9,
+      "global_rank": 18,
       "global_total": 106,
       "lines": [
-        "Shivaji Park Rank: #2 of 2 venues",
-        "Overall Rank: #74 of 106 venues"
+        "Dadar Rank: #1 of 9 venues",
+        "Overall Rank: #18 of 106 venues"
       ]
     },
     "digital_silence": {
-      "score": 100,
-      "label": "Severe Silence",
-      "is_strong_digistories_signal": true,
+      "score": 15.0,
+      "label": "Active Pulse",
+      "is_strong_digistories_signal": false,
       "lines": [
-        "No Instagram account found",
-        "Very low Google review count",
-        "No active website trust signal",
-        "Only 4 photos on Google Maps"
+        "No reel in 26 days",
+        "No review in 43 days",
+        "43 photos on Google"
       ]
     },
     "smartos_opportunity": {
-      "opportunity_score": 100,
+      "opportunity_score": 85.0,
       "inquiry_leakage_risk": "High",
       "manual_workflow_risk": "High",
       "whatsapp_dependency_risk": "High",
       "lines": [
-        "High capacity venue; double booking risk is critical",
-        "Structured as a Standalone Banquet; complex booking contracts",
-        "High probability of paper booking diary usage",
-        "WhatsApp booking chats are unorganized and staff-dependent"
+        "Inquiry leakage risk: High (~73%)",
+        "Manual workflow risk: High",
+        "WhatsApp dependency risk: High"
       ]
     },
     "growth_momentum": {
-      "score": 0,
-      "label": "Dormant",
+      "score": 35,
+      "label": "Some Movement",
       "reviews_increasing": false,
-      "instagram_active": false,
+      "instagram_active": true,
       "website_updated": false,
       "is_buying_signal": false,
       "lines": [
-        "\u2717 Reviews stagnant or low",
-        "\u2717 Instagram dormant or missing",
-        "\u2717 Website missing"
+        "✗ Reviews increasing",
+        "✓ Instagram active",
+        "✗ Website updated"
       ]
     },
     "relationship": {
-      "bca_member": true,
+      "bca_member": false,
       "second_generation": false,
       "growth_mindset": false,
       "agency_user": false,
-      "tags": [
-        "BCA Member"
-      ],
-      "notes": "BCA network contact. Trust factor is high.",
-      "has_human_intel": true,
+      "tags": [],
+      "notes": "",
+      "has_human_intel": false,
       "lines": [
-        "BCA Member"
+        "No field intel captured yet"
       ]
     }
   },
@@ -139,29 +133,28 @@ window.PANELS = {
     "business_name": "Kohinoor Hall",
     "area": "Dadar",
     "suburb": "Dadar",
-    "dmi_score": 8,
+    "dmi_score": 28.67,
     "dmi_category": "Digitally Invisible",
-    "data_source": "google_live",
+    "data_source": "ai_estimate",
     "territory_rank": {
       "suburb": "Dadar",
-      "suburb_rank": 5,
-      "suburb_total": 7,
-      "global_rank": 74,
+      "suburb_rank": 6,
+      "suburb_total": 9,
+      "global_rank": 65,
       "global_total": 106,
       "lines": [
-        "Dadar Rank: #5 of 7 venues",
-        "Overall Rank: #74 of 106 venues"
+        "Dadar Rank: #6 of 9 venues",
+        "Overall Rank: #65 of 106 venues"
       ]
     },
     "digital_silence": {
-      "score": 100,
+      "score": 85.0,
       "label": "Severe Silence",
       "is_strong_digistories_signal": true,
       "lines": [
-        "No Instagram account found",
-        "Very low Google review count",
-        "No active website trust signal",
-        "Only 4 photos on Google Maps"
+        "No reel in 109 days",
+        "No review in 73 days",
+        "14 photos on Google"
       ]
     },
     "smartos_opportunity": {
@@ -170,10 +163,9 @@ window.PANELS = {
       "manual_workflow_risk": "High",
       "whatsapp_dependency_risk": "High",
       "lines": [
-        "High capacity venue; double booking risk is critical",
-        "Structured as a Standalone Banquet; complex booking contracts",
-        "High probability of paper booking diary usage",
-        "WhatsApp booking chats are unorganized and staff-dependent"
+        "Inquiry leakage risk: High (~88%)",
+        "Manual workflow risk: High",
+        "WhatsApp dependency risk: High"
       ]
     },
     "growth_momentum": {
@@ -184,53 +176,50 @@ window.PANELS = {
       "website_updated": false,
       "is_buying_signal": false,
       "lines": [
-        "\u2717 Reviews stagnant or low",
-        "\u2717 Instagram dormant or missing",
-        "\u2717 Website missing"
+        "✗ Reviews increasing",
+        "✗ Instagram active",
+        "✗ Website updated"
       ]
     },
     "relationship": {
-      "bca_member": true,
+      "bca_member": false,
       "second_generation": false,
       "growth_mindset": false,
       "agency_user": false,
-      "tags": [
-        "BCA Member"
-      ],
-      "notes": "BCA network contact. Trust factor is high.",
-      "has_human_intel": true,
+      "tags": [],
+      "notes": "",
+      "has_human_intel": false,
       "lines": [
-        "BCA Member"
+        "No field intel captured yet"
       ]
     }
   },
   "Mayfair Banquets": {
     "business_name": "Mayfair Banquets",
     "area": "Worli",
-    "suburb": "Worli",
-    "dmi_score": 43,
-    "dmi_category": "Visibility Weak",
-    "data_source": "google_live",
+    "suburb": "South Mumbai",
+    "dmi_score": 23.18,
+    "dmi_category": "Digitally Invisible",
+    "data_source": "ai_estimate",
     "territory_rank": {
-      "suburb": "Worli",
-      "suburb_rank": 1,
-      "suburb_total": 2,
-      "global_rank": 52,
+      "suburb": "South Mumbai",
+      "suburb_rank": 8,
+      "suburb_total": 9,
+      "global_rank": 94,
       "global_total": 106,
       "lines": [
-        "Worli Rank: #1 of 2 venues",
-        "Overall Rank: #52 of 106 venues"
+        "South Mumbai Rank: #8 of 9 venues",
+        "Overall Rank: #94 of 106 venues"
       ]
     },
     "digital_silence": {
-      "score": 55,
-      "label": "Moderate Silence",
-      "is_strong_digistories_signal": false,
+      "score": 75.0,
+      "label": "Severe Silence",
+      "is_strong_digistories_signal": true,
       "lines": [
-        "Instagram profile exists but needs reels rhythm",
-        "Recent Google reviews are sparse",
-        "No active website trust signal",
-        "24 photos uploaded on Google Maps"
+        "No reel in 45 days",
+        "No review in 61 days",
+        "Only 8 photos on Google"
       ]
     },
     "smartos_opportunity": {
@@ -239,23 +228,22 @@ window.PANELS = {
       "manual_workflow_risk": "High",
       "whatsapp_dependency_risk": "High",
       "lines": [
-        "High capacity venue; double booking risk is critical",
-        "Structured as a Standalone Banquet; complex booking contracts",
-        "High probability of paper booking diary usage",
-        "WhatsApp booking chats are unorganized and staff-dependent"
+        "Inquiry leakage risk: High (~88%)",
+        "Manual workflow risk: High",
+        "WhatsApp dependency risk: High"
       ]
     },
     "growth_momentum": {
-      "score": 40,
-      "label": "Some Movement",
+      "score": 0,
+      "label": "Dormant",
       "reviews_increasing": false,
-      "instagram_active": true,
+      "instagram_active": false,
       "website_updated": false,
       "is_buying_signal": false,
       "lines": [
-        "\u2717 Reviews stagnant or low",
-        "\u2713 Instagram profile active",
-        "\u2717 Website missing"
+        "✗ Reviews increasing",
+        "✗ Instagram active",
+        "✗ Website updated"
       ]
     },
     "relationship": {
@@ -274,30 +262,29 @@ window.PANELS = {
   "Jewel of India (Jade Ballroom)": {
     "business_name": "Jewel of India (Jade Ballroom)",
     "area": "Worli",
-    "suburb": "Worli",
-    "dmi_score": 43,
-    "dmi_category": "Visibility Weak",
-    "data_source": "google_live",
+    "suburb": "South Mumbai",
+    "dmi_score": 21.47,
+    "dmi_category": "Digitally Invisible",
+    "data_source": "ai_estimate",
     "territory_rank": {
-      "suburb": "Worli",
-      "suburb_rank": 1,
-      "suburb_total": 2,
-      "global_rank": 52,
+      "suburb": "South Mumbai",
+      "suburb_rank": 9,
+      "suburb_total": 9,
+      "global_rank": 98,
       "global_total": 106,
       "lines": [
-        "Worli Rank: #1 of 2 venues",
-        "Overall Rank: #52 of 106 venues"
+        "South Mumbai Rank: #9 of 9 venues",
+        "Overall Rank: #98 of 106 venues"
       ]
     },
     "digital_silence": {
-      "score": 55,
-      "label": "Moderate Silence",
-      "is_strong_digistories_signal": false,
+      "score": 85.0,
+      "label": "Severe Silence",
+      "is_strong_digistories_signal": true,
       "lines": [
-        "Instagram profile exists but needs reels rhythm",
-        "Recent Google reviews are sparse",
-        "No active website trust signal",
-        "24 photos uploaded on Google Maps"
+        "No reel in 110 days",
+        "No review in 96 days",
+        "12 photos on Google"
       ]
     },
     "smartos_opportunity": {
@@ -306,23 +293,22 @@ window.PANELS = {
       "manual_workflow_risk": "High",
       "whatsapp_dependency_risk": "High",
       "lines": [
-        "High capacity venue; double booking risk is critical",
-        "Structured as a Standalone Banquet; complex booking contracts",
-        "High probability of paper booking diary usage",
-        "WhatsApp booking chats are unorganized and staff-dependent"
+        "Inquiry leakage risk: High (~88%)",
+        "Manual workflow risk: High",
+        "WhatsApp dependency risk: High"
       ]
     },
     "growth_momentum": {
-      "score": 40,
-      "label": "Some Movement",
+      "score": 0,
+      "label": "Dormant",
       "reviews_increasing": false,
-      "instagram_active": true,
+      "instagram_active": false,
       "website_updated": false,
       "is_buying_signal": false,
       "lines": [
-        "\u2717 Reviews stagnant or low",
-        "\u2713 Instagram profile active",
-        "\u2717 Website missing"
+        "✗ Reviews increasing",
+        "✗ Instagram active",
+        "✗ Website updated"
       ]
     },
     "relationship": {
@@ -342,69 +328,64 @@ window.PANELS = {
     "business_name": "Ramee Guestline Banquets",
     "area": "Dadar",
     "suburb": "Dadar",
-    "dmi_score": 47,
+    "dmi_score": 55.13,
     "dmi_category": "Visibility Weak",
-    "data_source": "google_live",
+    "data_source": "ai_estimate",
     "territory_rank": {
       "suburb": "Dadar",
       "suburb_rank": 2,
-      "suburb_total": 7,
-      "global_rank": 21,
+      "suburb_total": 9,
+      "global_rank": 26,
       "global_total": 106,
       "lines": [
-        "Dadar Rank: #2 of 7 venues",
-        "Overall Rank: #21 of 106 venues"
+        "Dadar Rank: #2 of 9 venues",
+        "Overall Rank: #26 of 106 venues"
       ]
     },
     "digital_silence": {
-      "score": 40,
-      "label": "Moderate Silence",
+      "score": 15.0,
+      "label": "Active Pulse",
       "is_strong_digistories_signal": false,
       "lines": [
-        "Instagram profile exists but needs reels rhythm",
-        "No active website trust signal",
-        "24 photos uploaded on Google Maps"
+        "No reel in 14 days",
+        "No review in 37 days",
+        "37 photos on Google"
       ]
     },
     "smartos_opportunity": {
-      "opportunity_score": 100,
+      "opportunity_score": 85.0,
       "inquiry_leakage_risk": "High",
       "manual_workflow_risk": "High",
       "whatsapp_dependency_risk": "High",
       "lines": [
-        "High capacity venue; double booking risk is critical",
-        "Structured as a Standalone Banquet; complex booking contracts",
-        "High probability of paper booking diary usage",
-        "WhatsApp booking chats are unorganized and staff-dependent"
+        "Inquiry leakage risk: High (~73%)",
+        "Manual workflow risk: High",
+        "WhatsApp dependency risk: High"
       ]
     },
     "growth_momentum": {
-      "score": 80,
-      "label": "Heating Up",
-      "reviews_increasing": true,
+      "score": 35,
+      "label": "Some Movement",
+      "reviews_increasing": false,
       "instagram_active": true,
       "website_updated": false,
-      "is_buying_signal": true,
+      "is_buying_signal": false,
       "lines": [
-        "\u2713 Google reviews active",
-        "\u2713 Instagram profile active",
-        "\u2717 Website missing"
+        "✗ Reviews increasing",
+        "✓ Instagram active",
+        "✗ Website updated"
       ]
     },
     "relationship": {
-      "bca_member": true,
-      "second_generation": true,
+      "bca_member": false,
+      "second_generation": false,
       "growth_mindset": false,
       "agency_user": false,
-      "tags": [
-        "BCA Member",
-        "2nd Gen Operator"
-      ],
-      "notes": "Rohit met owner's son last week; open to modernizing traditional register.",
-      "has_human_intel": true,
+      "tags": [],
+      "notes": "",
+      "has_human_intel": false,
       "lines": [
-        "BCA Member",
-        "2nd Gen Operator"
+        "No field intel captured yet"
       ]
     }
   },
@@ -412,28 +393,28 @@ window.PANELS = {
     "business_name": "Ahilyadevi Sabhagruh",
     "area": "Dadar",
     "suburb": "Dadar",
-    "dmi_score": 47,
-    "dmi_category": "Visibility Weak",
-    "data_source": "google_live",
+    "dmi_score": 40.17,
+    "dmi_category": "Operationally Chaotic",
+    "data_source": "ai_estimate",
     "territory_rank": {
       "suburb": "Dadar",
-      "suburb_rank": 2,
-      "suburb_total": 7,
-      "global_rank": 21,
+      "suburb_rank": 3,
+      "suburb_total": 9,
+      "global_rank": 40,
       "global_total": 106,
       "lines": [
-        "Dadar Rank: #2 of 7 venues",
-        "Overall Rank: #21 of 106 venues"
+        "Dadar Rank: #3 of 9 venues",
+        "Overall Rank: #40 of 106 venues"
       ]
     },
     "digital_silence": {
-      "score": 40,
-      "label": "Moderate Silence",
+      "score": 15.0,
+      "label": "Active Pulse",
       "is_strong_digistories_signal": false,
       "lines": [
-        "Instagram profile exists but needs reels rhythm",
-        "No active website trust signal",
-        "24 photos uploaded on Google Maps"
+        "No reel in 14 days",
+        "No review in 28 days",
+        "28 photos on Google"
       ]
     },
     "smartos_opportunity": {
@@ -442,66 +423,63 @@ window.PANELS = {
       "manual_workflow_risk": "High",
       "whatsapp_dependency_risk": "High",
       "lines": [
-        "High capacity venue; double booking risk is critical",
-        "Structured as a Standalone Banquet; complex booking contracts",
-        "High probability of paper booking diary usage",
-        "WhatsApp booking chats are unorganized and staff-dependent"
+        "Inquiry leakage risk: High (~88%)",
+        "Manual workflow risk: High",
+        "WhatsApp dependency risk: High"
       ]
     },
     "growth_momentum": {
-      "score": 80,
+      "score": 75,
       "label": "Heating Up",
       "reviews_increasing": true,
       "instagram_active": true,
       "website_updated": false,
       "is_buying_signal": true,
       "lines": [
-        "\u2713 Google reviews active",
-        "\u2713 Instagram profile active",
-        "\u2717 Website missing"
+        "✓ Reviews increasing",
+        "✓ Instagram active",
+        "✗ Website updated"
       ]
     },
     "relationship": {
-      "bca_member": true,
+      "bca_member": false,
       "second_generation": false,
       "growth_mindset": false,
       "agency_user": false,
-      "tags": [
-        "BCA Member"
-      ],
-      "notes": "BCA network contact. Trust factor is high.",
-      "has_human_intel": true,
+      "tags": [],
+      "notes": "",
+      "has_human_intel": false,
       "lines": [
-        "BCA Member"
+        "No field intel captured yet"
       ]
     }
   },
   "Lala Lajpatrai Hall": {
     "business_name": "Lala Lajpatrai Hall",
     "area": "Mahalaxmi",
-    "suburb": "Mahalaxmi",
-    "dmi_score": 47,
-    "dmi_category": "Visibility Weak",
-    "data_source": "google_live",
+    "suburb": "South Mumbai",
+    "dmi_score": 29.95,
+    "dmi_category": "Digitally Invisible",
+    "data_source": "ai_estimate",
     "territory_rank": {
-      "suburb": "Mahalaxmi",
-      "suburb_rank": 1,
-      "suburb_total": 1,
-      "global_rank": 21,
+      "suburb": "South Mumbai",
+      "suburb_rank": 5,
+      "suburb_total": 9,
+      "global_rank": 56,
       "global_total": 106,
       "lines": [
-        "Mahalaxmi Rank: #1 of 1 venues",
-        "Overall Rank: #21 of 106 venues"
+        "South Mumbai Rank: #5 of 9 venues",
+        "Overall Rank: #56 of 106 venues"
       ]
     },
     "digital_silence": {
-      "score": 40,
-      "label": "Moderate Silence",
-      "is_strong_digistories_signal": false,
+      "score": 85.0,
+      "label": "Severe Silence",
+      "is_strong_digistories_signal": true,
       "lines": [
-        "Instagram profile exists but needs reels rhythm",
-        "No active website trust signal",
-        "24 photos uploaded on Google Maps"
+        "No reel in 101 days",
+        "No review in 93 days",
+        "24 photos on Google"
       ]
     },
     "smartos_opportunity": {
@@ -510,67 +488,63 @@ window.PANELS = {
       "manual_workflow_risk": "High",
       "whatsapp_dependency_risk": "High",
       "lines": [
-        "High capacity venue; double booking risk is critical",
-        "Structured as a Standalone Banquet; complex booking contracts",
-        "High probability of paper booking diary usage",
-        "WhatsApp booking chats are unorganized and staff-dependent"
+        "Inquiry leakage risk: High (~88%)",
+        "Manual workflow risk: High",
+        "WhatsApp dependency risk: High"
       ]
     },
     "growth_momentum": {
-      "score": 80,
-      "label": "Heating Up",
-      "reviews_increasing": true,
-      "instagram_active": true,
+      "score": 0,
+      "label": "Dormant",
+      "reviews_increasing": false,
+      "instagram_active": false,
       "website_updated": false,
-      "is_buying_signal": true,
+      "is_buying_signal": false,
       "lines": [
-        "\u2713 Google reviews active",
-        "\u2713 Instagram profile active",
-        "\u2717 Website missing"
+        "✗ Reviews increasing",
+        "✗ Instagram active",
+        "✗ Website updated"
       ]
     },
     "relationship": {
       "bca_member": false,
       "second_generation": false,
-      "growth_mindset": true,
+      "growth_mindset": false,
       "agency_user": false,
-      "tags": [
-        "Growth Mindset"
-      ],
+      "tags": [],
       "notes": "",
-      "has_human_intel": true,
+      "has_human_intel": false,
       "lines": [
-        "Growth Mindset"
+        "No field intel captured yet"
       ]
     }
   },
   "Royal Symphony Banquet": {
     "business_name": "Royal Symphony Banquet",
-    "area": "Malad East",
-    "suburb": "Malad East",
-    "dmi_score": 43,
-    "dmi_category": "Visibility Weak",
-    "data_source": "google_live",
+    "area": "Dadar",
+    "suburb": "Dadar",
+    "dmi_score": 27.59,
+    "dmi_category": "Digitally Invisible",
+    "data_source": "ai_estimate",
     "territory_rank": {
-      "suburb": "Malad East",
-      "suburb_rank": 1,
-      "suburb_total": 1,
-      "global_rank": 52,
+      "suburb": "Dadar",
+      "suburb_rank": 7,
+      "suburb_total": 9,
+      "global_rank": 72,
       "global_total": 106,
       "lines": [
-        "Malad East Rank: #1 of 1 venues",
-        "Overall Rank: #52 of 106 venues"
+        "Dadar Rank: #7 of 9 venues",
+        "Overall Rank: #72 of 106 venues"
       ]
     },
     "digital_silence": {
-      "score": 55,
-      "label": "Moderate Silence",
-      "is_strong_digistories_signal": false,
+      "score": 85.0,
+      "label": "Severe Silence",
+      "is_strong_digistories_signal": true,
       "lines": [
-        "Instagram profile exists but needs reels rhythm",
-        "Recent Google reviews are sparse",
-        "No active website trust signal",
-        "24 photos uploaded on Google Maps"
+        "No reel in 77 days",
+        "No review in 81 days",
+        "18 photos on Google"
       ]
     },
     "smartos_opportunity": {
@@ -579,23 +553,22 @@ window.PANELS = {
       "manual_workflow_risk": "High",
       "whatsapp_dependency_risk": "High",
       "lines": [
-        "High capacity venue; double booking risk is critical",
-        "Structured as a Standalone Banquet; complex booking contracts",
-        "High probability of paper booking diary usage",
-        "WhatsApp booking chats are unorganized and staff-dependent"
+        "Inquiry leakage risk: High (~88%)",
+        "Manual workflow risk: High",
+        "WhatsApp dependency risk: High"
       ]
     },
     "growth_momentum": {
-      "score": 40,
-      "label": "Some Movement",
+      "score": 0,
+      "label": "Dormant",
       "reviews_increasing": false,
-      "instagram_active": true,
+      "instagram_active": false,
       "website_updated": false,
       "is_buying_signal": false,
       "lines": [
-        "\u2717 Reviews stagnant or low",
-        "\u2713 Instagram profile active",
-        "\u2717 Website missing"
+        "✗ Reviews increasing",
+        "✗ Instagram active",
+        "✗ Website updated"
       ]
     },
     "relationship": {
@@ -614,29 +587,29 @@ window.PANELS = {
   "Dadar Gymkhana Banquets": {
     "business_name": "Dadar Gymkhana Banquets",
     "area": "Shivaji Park",
-    "suburb": "Shivaji Park",
-    "dmi_score": 49,
-    "dmi_category": "Visibility Weak",
-    "data_source": "google_live",
+    "suburb": "Dadar",
+    "dmi_score": 39.98,
+    "dmi_category": "Operationally Chaotic",
+    "data_source": "ai_estimate",
     "territory_rank": {
-      "suburb": "Shivaji Park",
-      "suburb_rank": 1,
-      "suburb_total": 2,
-      "global_rank": 1,
+      "suburb": "Dadar",
+      "suburb_rank": 4,
+      "suburb_total": 9,
+      "global_rank": 45,
       "global_total": 106,
       "lines": [
-        "Shivaji Park Rank: #1 of 2 venues",
-        "Overall Rank: #1 of 106 venues"
+        "Dadar Rank: #4 of 9 venues",
+        "Overall Rank: #45 of 106 venues"
       ]
     },
     "digital_silence": {
-      "score": 40,
-      "label": "Moderate Silence",
+      "score": 15.0,
+      "label": "Active Pulse",
       "is_strong_digistories_signal": false,
       "lines": [
-        "Instagram profile exists but needs reels rhythm",
-        "No active website trust signal",
-        "24 photos uploaded on Google Maps"
+        "No reel in 8 days",
+        "No review in 31 days",
+        "31 photos on Google"
       ]
     },
     "smartos_opportunity": {
@@ -645,37 +618,34 @@ window.PANELS = {
       "manual_workflow_risk": "High",
       "whatsapp_dependency_risk": "High",
       "lines": [
-        "High capacity venue; double booking risk is critical",
-        "Structured as a Standalone Banquet; complex booking contracts",
-        "High probability of paper booking diary usage",
-        "WhatsApp booking chats are unorganized and staff-dependent"
+        "Inquiry leakage risk: High (~88%)",
+        "Manual workflow risk: High",
+        "WhatsApp dependency risk: High"
       ]
     },
     "growth_momentum": {
-      "score": 80,
-      "label": "Heating Up",
-      "reviews_increasing": true,
+      "score": 35,
+      "label": "Some Movement",
+      "reviews_increasing": false,
       "instagram_active": true,
       "website_updated": false,
-      "is_buying_signal": true,
+      "is_buying_signal": false,
       "lines": [
-        "\u2713 Google reviews active",
-        "\u2713 Instagram profile active",
-        "\u2717 Website missing"
+        "✗ Reviews increasing",
+        "✓ Instagram active",
+        "✗ Website updated"
       ]
     },
     "relationship": {
-      "bca_member": true,
+      "bca_member": false,
       "second_generation": false,
       "growth_mindset": false,
       "agency_user": false,
-      "tags": [
-        "BCA Member"
-      ],
-      "notes": "BCA network contact. Trust factor is high.",
-      "has_human_intel": true,
+      "tags": [],
+      "notes": "",
+      "has_human_intel": false,
       "lines": [
-        "BCA Member"
+        "No field intel captured yet"
       ]
     }
   },
@@ -683,29 +653,28 @@ window.PANELS = {
     "business_name": "Sharda Sabhagriha",
     "area": "Dadar",
     "suburb": "Dadar",
-    "dmi_score": 8,
-    "dmi_category": "Digitally Invisible",
+    "dmi_score": 36.51,
+    "dmi_category": "Operationally Chaotic",
     "data_source": "ai_estimate",
     "territory_rank": {
       "suburb": "Dadar",
       "suburb_rank": 5,
-      "suburb_total": 7,
-      "global_rank": 74,
+      "suburb_total": 9,
+      "global_rank": 51,
       "global_total": 106,
       "lines": [
-        "Dadar Rank: #5 of 7 venues",
-        "Overall Rank: #74 of 106 venues"
+        "Dadar Rank: #5 of 9 venues",
+        "Overall Rank: #51 of 106 venues"
       ]
     },
     "digital_silence": {
-      "score": 100,
-      "label": "Severe Silence",
-      "is_strong_digistories_signal": true,
+      "score": 15.0,
+      "label": "Active Pulse",
+      "is_strong_digistories_signal": false,
       "lines": [
-        "No Instagram account found",
-        "Very low Google review count",
-        "No active website trust signal",
-        "Only 4 photos on Google Maps"
+        "No reel in 32 days",
+        "No review in 22 days",
+        "22 photos on Google"
       ]
     },
     "smartos_opportunity": {
@@ -714,163 +683,152 @@ window.PANELS = {
       "manual_workflow_risk": "High",
       "whatsapp_dependency_risk": "High",
       "lines": [
-        "High capacity venue; double booking risk is critical",
-        "Structured as a Standalone Banquet; complex booking contracts",
-        "High probability of paper booking diary usage",
-        "WhatsApp booking chats are unorganized and staff-dependent"
+        "Inquiry leakage risk: High (~88%)",
+        "Manual workflow risk: High",
+        "WhatsApp dependency risk: High"
       ]
     },
     "growth_momentum": {
-      "score": 0,
-      "label": "Dormant",
-      "reviews_increasing": false,
+      "score": 40,
+      "label": "Some Movement",
+      "reviews_increasing": true,
       "instagram_active": false,
       "website_updated": false,
       "is_buying_signal": false,
       "lines": [
-        "\u2717 Reviews stagnant or low",
-        "\u2717 Instagram dormant or missing",
-        "\u2717 Website missing"
+        "✓ Reviews increasing",
+        "✗ Instagram active",
+        "✗ Website updated"
       ]
     },
     "relationship": {
-      "bca_member": true,
-      "second_generation": true,
+      "bca_member": false,
+      "second_generation": false,
       "growth_mindset": false,
       "agency_user": false,
-      "tags": [
-        "BCA Member",
-        "2nd Gen Operator"
-      ],
-      "notes": "Rohit met owner's son last week; open to modernizing traditional register.",
-      "has_human_intel": true,
+      "tags": [],
+      "notes": "",
+      "has_human_intel": false,
       "lines": [
-        "BCA Member",
-        "2nd Gen Operator"
+        "No field intel captured yet"
       ]
     }
   },
   "P. L. Deshpande Mini Hall": {
     "business_name": "P. L. Deshpande Mini Hall",
     "area": "Prabhadevi",
-    "suburb": "Prabhadevi",
-    "dmi_score": 8,
-    "dmi_category": "Digitally Invisible",
+    "suburb": "South Mumbai",
+    "dmi_score": 65.34,
+    "dmi_category": "Growth Ready",
     "data_source": "ai_estimate",
     "territory_rank": {
-      "suburb": "Prabhadevi",
-      "suburb_rank": 1,
-      "suburb_total": 1,
-      "global_rank": 74,
+      "suburb": "South Mumbai",
+      "suburb_rank": 2,
+      "suburb_total": 9,
+      "global_rank": 8,
       "global_total": 106,
       "lines": [
-        "Prabhadevi Rank: #1 of 1 venues",
-        "Overall Rank: #74 of 106 venues"
+        "South Mumbai Rank: #2 of 9 venues",
+        "Overall Rank: #8 of 106 venues"
       ]
     },
     "digital_silence": {
-      "score": 100,
-      "label": "Severe Silence",
-      "is_strong_digistories_signal": true,
+      "score": 15.0,
+      "label": "Active Pulse",
+      "is_strong_digistories_signal": false,
       "lines": [
-        "No Instagram account found",
-        "Very low Google review count",
-        "No active website trust signal",
-        "Only 4 photos on Google Maps"
+        "No reel in 23 days",
+        "No review in 43 days",
+        "43 photos on Google"
       ]
     },
     "smartos_opportunity": {
-      "opportunity_score": 100,
+      "opportunity_score": 61.0,
       "inquiry_leakage_risk": "High",
       "manual_workflow_risk": "High",
       "whatsapp_dependency_risk": "High",
       "lines": [
-        "High capacity venue; double booking risk is critical",
-        "Structured as a Standalone Banquet; complex booking contracts",
-        "High probability of paper booking diary usage",
-        "WhatsApp booking chats are unorganized and staff-dependent"
+        "Inquiry leakage risk: High (~53%)",
+        "Manual workflow risk: High",
+        "WhatsApp dependency risk: High"
       ]
     },
     "growth_momentum": {
-      "score": 0,
-      "label": "Dormant",
+      "score": 35,
+      "label": "Some Movement",
       "reviews_increasing": false,
-      "instagram_active": false,
+      "instagram_active": true,
       "website_updated": false,
       "is_buying_signal": false,
       "lines": [
-        "\u2717 Reviews stagnant or low",
-        "\u2717 Instagram dormant or missing",
-        "\u2717 Website missing"
+        "✗ Reviews increasing",
+        "✓ Instagram active",
+        "✗ Website updated"
       ]
     },
     "relationship": {
-      "bca_member": true,
+      "bca_member": false,
       "second_generation": false,
       "growth_mindset": false,
       "agency_user": false,
-      "tags": [
-        "BCA Member"
-      ],
-      "notes": "BCA network contact. Trust factor is high.",
-      "has_human_intel": true,
+      "tags": [],
+      "notes": "",
+      "has_human_intel": false,
       "lines": [
-        "BCA Member"
+        "No field intel captured yet"
       ]
     }
   },
   "Maharashtra College Hall": {
     "business_name": "Maharashtra College Hall",
     "area": "Byculla",
-    "suburb": "Byculla",
-    "dmi_score": 8,
-    "dmi_category": "Digitally Invisible",
-    "data_source": "google_live",
+    "suburb": "South Mumbai",
+    "dmi_score": 48.08,
+    "dmi_category": "Visibility Weak",
+    "data_source": "ai_estimate",
     "territory_rank": {
-      "suburb": "Byculla",
-      "suburb_rank": 1,
-      "suburb_total": 1,
-      "global_rank": 74,
+      "suburb": "South Mumbai",
+      "suburb_rank": 3,
+      "suburb_total": 9,
+      "global_rank": 29,
       "global_total": 106,
       "lines": [
-        "Byculla Rank: #1 of 1 venues",
-        "Overall Rank: #74 of 106 venues"
+        "South Mumbai Rank: #3 of 9 venues",
+        "Overall Rank: #29 of 106 venues"
       ]
     },
     "digital_silence": {
-      "score": 100,
-      "label": "Severe Silence",
-      "is_strong_digistories_signal": true,
+      "score": 15.0,
+      "label": "Active Pulse",
+      "is_strong_digistories_signal": false,
       "lines": [
-        "No Instagram account found",
-        "Very low Google review count",
-        "No active website trust signal",
-        "Only 4 photos on Google Maps"
+        "No reel in 5 days",
+        "No review in 34 days",
+        "34 photos on Google"
       ]
     },
     "smartos_opportunity": {
-      "opportunity_score": 100,
+      "opportunity_score": 80.0,
       "inquiry_leakage_risk": "High",
       "manual_workflow_risk": "High",
       "whatsapp_dependency_risk": "High",
       "lines": [
-        "High capacity venue; double booking risk is critical",
-        "Structured as a Standalone Banquet; complex booking contracts",
-        "High probability of paper booking diary usage",
-        "WhatsApp booking chats are unorganized and staff-dependent"
+        "Inquiry leakage risk: High (~68%)",
+        "Manual workflow risk: High",
+        "WhatsApp dependency risk: High"
       ]
     },
     "growth_momentum": {
-      "score": 0,
-      "label": "Dormant",
+      "score": 35,
+      "label": "Some Movement",
       "reviews_increasing": false,
-      "instagram_active": false,
+      "instagram_active": true,
       "website_updated": false,
       "is_buying_signal": false,
       "lines": [
-        "\u2717 Reviews stagnant or low",
-        "\u2717 Instagram dormant or missing",
-        "\u2717 Website missing"
+        "✗ Reviews increasing",
+        "✓ Instagram active",
+        "✗ Website updated"
       ]
     },
     "relationship": {
@@ -889,30 +847,29 @@ window.PANELS = {
   "Bombay Y.M.C.A. Banquets": {
     "business_name": "Bombay Y.M.C.A. Banquets",
     "area": "Colaba",
-    "suburb": "Colaba",
-    "dmi_score": 43,
-    "dmi_category": "Visibility Weak",
-    "data_source": "google_live",
+    "suburb": "South Mumbai",
+    "dmi_score": 39.41,
+    "dmi_category": "Operationally Chaotic",
+    "data_source": "ai_estimate",
     "territory_rank": {
-      "suburb": "Colaba",
-      "suburb_rank": 2,
-      "suburb_total": 2,
-      "global_rank": 52,
+      "suburb": "South Mumbai",
+      "suburb_rank": 4,
+      "suburb_total": 9,
+      "global_rank": 47,
       "global_total": 106,
       "lines": [
-        "Colaba Rank: #2 of 2 venues",
-        "Overall Rank: #52 of 106 venues"
+        "South Mumbai Rank: #4 of 9 venues",
+        "Overall Rank: #47 of 106 venues"
       ]
     },
     "digital_silence": {
-      "score": 55,
-      "label": "Moderate Silence",
+      "score": 15.0,
+      "label": "Active Pulse",
       "is_strong_digistories_signal": false,
       "lines": [
-        "Instagram profile exists but needs reels rhythm",
-        "Recent Google reviews are sparse",
-        "No active website trust signal",
-        "24 photos uploaded on Google Maps"
+        "No reel in 14 days",
+        "No review in 25 days",
+        "25 photos on Google"
       ]
     },
     "smartos_opportunity": {
@@ -921,23 +878,22 @@ window.PANELS = {
       "manual_workflow_risk": "High",
       "whatsapp_dependency_risk": "High",
       "lines": [
-        "High capacity venue; double booking risk is critical",
-        "Structured as a Standalone Banquet; complex booking contracts",
-        "High probability of paper booking diary usage",
-        "WhatsApp booking chats are unorganized and staff-dependent"
+        "Inquiry leakage risk: High (~88%)",
+        "Manual workflow risk: High",
+        "WhatsApp dependency risk: High"
       ]
     },
     "growth_momentum": {
-      "score": 40,
-      "label": "Some Movement",
-      "reviews_increasing": false,
+      "score": 75,
+      "label": "Heating Up",
+      "reviews_increasing": true,
       "instagram_active": true,
       "website_updated": false,
-      "is_buying_signal": false,
+      "is_buying_signal": true,
       "lines": [
-        "\u2717 Reviews stagnant or low",
-        "\u2713 Instagram profile active",
-        "\u2717 Website missing"
+        "✓ Reviews increasing",
+        "✓ Instagram active",
+        "✗ Website updated"
       ]
     },
     "relationship": {
@@ -957,29 +913,28 @@ window.PANELS = {
     "business_name": "Royal Garden Banquet",
     "area": "Dadar",
     "suburb": "Dadar",
-    "dmi_score": 43,
-    "dmi_category": "Visibility Weak",
-    "data_source": "google_live",
+    "dmi_score": 27.09,
+    "dmi_category": "Digitally Invisible",
+    "data_source": "ai_estimate",
     "territory_rank": {
       "suburb": "Dadar",
-      "suburb_rank": 4,
-      "suburb_total": 7,
-      "global_rank": 52,
+      "suburb_rank": 8,
+      "suburb_total": 9,
+      "global_rank": 76,
       "global_total": 106,
       "lines": [
-        "Dadar Rank: #4 of 7 venues",
-        "Overall Rank: #52 of 106 venues"
+        "Dadar Rank: #8 of 9 venues",
+        "Overall Rank: #76 of 106 venues"
       ]
     },
     "digital_silence": {
-      "score": 55,
-      "label": "Moderate Silence",
-      "is_strong_digistories_signal": false,
+      "score": 85.0,
+      "label": "Severe Silence",
+      "is_strong_digistories_signal": true,
       "lines": [
-        "Instagram profile exists but needs reels rhythm",
-        "Recent Google reviews are sparse",
-        "No active website trust signal",
-        "24 photos uploaded on Google Maps"
+        "No reel in 93 days",
+        "No review in 89 days",
+        "22 photos on Google"
       ]
     },
     "smartos_opportunity": {
@@ -988,68 +943,63 @@ window.PANELS = {
       "manual_workflow_risk": "High",
       "whatsapp_dependency_risk": "High",
       "lines": [
-        "High capacity venue; double booking risk is critical",
-        "Structured as a Standalone Banquet; complex booking contracts",
-        "High probability of paper booking diary usage",
-        "WhatsApp booking chats are unorganized and staff-dependent"
+        "Inquiry leakage risk: High (~88%)",
+        "Manual workflow risk: High",
+        "WhatsApp dependency risk: High"
       ]
     },
     "growth_momentum": {
-      "score": 40,
-      "label": "Some Movement",
+      "score": 0,
+      "label": "Dormant",
       "reviews_increasing": false,
-      "instagram_active": true,
+      "instagram_active": false,
       "website_updated": false,
       "is_buying_signal": false,
       "lines": [
-        "\u2717 Reviews stagnant or low",
-        "\u2713 Instagram profile active",
-        "\u2717 Website missing"
+        "✗ Reviews increasing",
+        "✗ Instagram active",
+        "✗ Website updated"
       ]
     },
     "relationship": {
-      "bca_member": true,
+      "bca_member": false,
       "second_generation": false,
-      "growth_mindset": true,
+      "growth_mindset": false,
       "agency_user": false,
-      "tags": [
-        "BCA Member",
-        "Growth Mindset"
-      ],
-      "notes": "BCA network contact. Trust factor is high.",
-      "has_human_intel": true,
+      "tags": [],
+      "notes": "",
+      "has_human_intel": false,
       "lines": [
-        "BCA Member",
-        "Growth Mindset"
+        "No field intel captured yet"
       ]
     }
   },
   "Hindu Gymkhana Grounds": {
     "business_name": "Hindu Gymkhana Grounds",
     "area": "Marine Drive",
-    "suburb": "Marine Drive",
-    "dmi_score": 47,
-    "dmi_category": "Visibility Weak",
-    "data_source": "google_live",
+    "suburb": "South Mumbai",
+    "dmi_score": 29.94,
+    "dmi_category": "Digitally Invisible",
+    "data_source": "ai_estimate",
     "territory_rank": {
-      "suburb": "Marine Drive",
-      "suburb_rank": 1,
-      "suburb_total": 2,
-      "global_rank": 21,
+      "suburb": "South Mumbai",
+      "suburb_rank": 6,
+      "suburb_total": 9,
+      "global_rank": 59,
       "global_total": 106,
       "lines": [
-        "Marine Drive Rank: #1 of 2 venues",
-        "Overall Rank: #21 of 106 venues"
+        "South Mumbai Rank: #6 of 9 venues",
+        "Overall Rank: #59 of 106 venues"
       ]
     },
     "digital_silence": {
-      "score": 40,
-      "label": "Moderate Silence",
-      "is_strong_digistories_signal": false,
+      "score": 85.0,
+      "label": "Severe Silence",
+      "is_strong_digistories_signal": true,
       "lines": [
-        "Instagram profile exists but needs reels rhythm",
-        "No active website trust signal",
-        "24 photos uploaded on Google Maps"
+        "No reel in 61 days",
+        "No review in 77 days",
+        "16 photos on Google"
       ]
     },
     "smartos_opportunity": {
@@ -1058,66 +1008,63 @@ window.PANELS = {
       "manual_workflow_risk": "High",
       "whatsapp_dependency_risk": "High",
       "lines": [
-        "High capacity venue; double booking risk is critical",
-        "Structured as a Standalone Banquet; complex booking contracts",
-        "High probability of paper booking diary usage",
-        "WhatsApp booking chats are unorganized and staff-dependent"
+        "Inquiry leakage risk: High (~88%)",
+        "Manual workflow risk: High",
+        "WhatsApp dependency risk: High"
       ]
     },
     "growth_momentum": {
-      "score": 80,
-      "label": "Heating Up",
-      "reviews_increasing": true,
-      "instagram_active": true,
+      "score": 0,
+      "label": "Dormant",
+      "reviews_increasing": false,
+      "instagram_active": false,
       "website_updated": false,
-      "is_buying_signal": true,
+      "is_buying_signal": false,
       "lines": [
-        "\u2713 Google reviews active",
-        "\u2713 Instagram profile active",
-        "\u2717 Website missing"
+        "✗ Reviews increasing",
+        "✗ Instagram active",
+        "✗ Website updated"
       ]
     },
     "relationship": {
       "bca_member": false,
-      "second_generation": true,
+      "second_generation": false,
       "growth_mindset": false,
       "agency_user": false,
-      "tags": [
-        "2nd Gen Operator"
-      ],
+      "tags": [],
       "notes": "",
-      "has_human_intel": true,
+      "has_human_intel": false,
       "lines": [
-        "2nd Gen Operator"
+        "No field intel captured yet"
       ]
     }
   },
   "Parsi Gymkhana Grounds": {
     "business_name": "Parsi Gymkhana Grounds",
     "area": "Marine Drive",
-    "suburb": "Marine Drive",
-    "dmi_score": 47,
-    "dmi_category": "Visibility Weak",
-    "data_source": "google_live",
+    "suburb": "South Mumbai",
+    "dmi_score": 23.91,
+    "dmi_category": "Digitally Invisible",
+    "data_source": "ai_estimate",
     "territory_rank": {
-      "suburb": "Marine Drive",
-      "suburb_rank": 1,
-      "suburb_total": 2,
-      "global_rank": 21,
+      "suburb": "South Mumbai",
+      "suburb_rank": 7,
+      "suburb_total": 9,
+      "global_rank": 89,
       "global_total": 106,
       "lines": [
-        "Marine Drive Rank: #1 of 2 venues",
-        "Overall Rank: #21 of 106 venues"
+        "South Mumbai Rank: #7 of 9 venues",
+        "Overall Rank: #89 of 106 venues"
       ]
     },
     "digital_silence": {
-      "score": 40,
-      "label": "Moderate Silence",
-      "is_strong_digistories_signal": false,
+      "score": 85.0,
+      "label": "Severe Silence",
+      "is_strong_digistories_signal": true,
       "lines": [
-        "Instagram profile exists but needs reels rhythm",
-        "No active website trust signal",
-        "24 photos uploaded on Google Maps"
+        "No reel in 117 days",
+        "No review in 65 days",
+        "Only 10 photos on Google"
       ]
     },
     "smartos_opportunity": {
@@ -1126,23 +1073,22 @@ window.PANELS = {
       "manual_workflow_risk": "High",
       "whatsapp_dependency_risk": "High",
       "lines": [
-        "High capacity venue; double booking risk is critical",
-        "Structured as a Standalone Banquet; complex booking contracts",
-        "High probability of paper booking diary usage",
-        "WhatsApp booking chats are unorganized and staff-dependent"
+        "Inquiry leakage risk: High (~88%)",
+        "Manual workflow risk: High",
+        "WhatsApp dependency risk: High"
       ]
     },
     "growth_momentum": {
-      "score": 80,
-      "label": "Heating Up",
-      "reviews_increasing": true,
-      "instagram_active": true,
+      "score": 0,
+      "label": "Dormant",
+      "reviews_increasing": false,
+      "instagram_active": false,
       "website_updated": false,
-      "is_buying_signal": true,
+      "is_buying_signal": false,
       "lines": [
-        "\u2713 Google reviews active",
-        "\u2713 Instagram profile active",
-        "\u2717 Website missing"
+        "✗ Reviews increasing",
+        "✗ Instagram active",
+        "✗ Website updated"
       ]
     },
     "relationship": {
@@ -1161,54 +1107,53 @@ window.PANELS = {
   "Wodehouse Gymkhana Banquets": {
     "business_name": "Wodehouse Gymkhana Banquets",
     "area": "Colaba",
-    "suburb": "Colaba",
-    "dmi_score": 47,
-    "dmi_category": "Visibility Weak",
-    "data_source": "google_live",
+    "suburb": "South Mumbai",
+    "dmi_score": 69.56,
+    "dmi_category": "Growth Ready",
+    "data_source": "ai_estimate",
     "territory_rank": {
-      "suburb": "Colaba",
+      "suburb": "South Mumbai",
       "suburb_rank": 1,
-      "suburb_total": 2,
-      "global_rank": 21,
+      "suburb_total": 9,
+      "global_rank": 1,
       "global_total": 106,
       "lines": [
-        "Colaba Rank: #1 of 2 venues",
-        "Overall Rank: #21 of 106 venues"
+        "South Mumbai Rank: #1 of 9 venues",
+        "Overall Rank: #1 of 106 venues"
       ]
     },
     "digital_silence": {
-      "score": 40,
-      "label": "Moderate Silence",
+      "score": 15.0,
+      "label": "Active Pulse",
       "is_strong_digistories_signal": false,
       "lines": [
-        "Instagram profile exists but needs reels rhythm",
-        "No active website trust signal",
-        "24 photos uploaded on Google Maps"
+        "No reel in 11 days",
+        "No review in 49 days",
+        "49 photos on Google"
       ]
     },
     "smartos_opportunity": {
-      "opportunity_score": 100,
+      "opportunity_score": 61.0,
       "inquiry_leakage_risk": "High",
       "manual_workflow_risk": "High",
       "whatsapp_dependency_risk": "High",
       "lines": [
-        "High capacity venue; double booking risk is critical",
-        "Structured as a Standalone Banquet; complex booking contracts",
-        "High probability of paper booking diary usage",
-        "WhatsApp booking chats are unorganized and staff-dependent"
+        "Inquiry leakage risk: High (~53%)",
+        "Manual workflow risk: High",
+        "WhatsApp dependency risk: High"
       ]
     },
     "growth_momentum": {
-      "score": 80,
-      "label": "Heating Up",
-      "reviews_increasing": true,
+      "score": 35,
+      "label": "Some Movement",
+      "reviews_increasing": false,
       "instagram_active": true,
       "website_updated": false,
-      "is_buying_signal": true,
+      "is_buying_signal": false,
       "lines": [
-        "\u2713 Google reviews active",
-        "\u2713 Instagram profile active",
-        "\u2717 Website missing"
+        "✗ Reviews increasing",
+        "✓ Instagram active",
+        "✗ Website updated"
       ]
     },
     "relationship": {
@@ -1227,29 +1172,29 @@ window.PANELS = {
   "Vivette Luxury Banquets": {
     "business_name": "Vivette Luxury Banquets",
     "area": "Malad West",
-    "suburb": "Malad West",
-    "dmi_score": 49,
-    "dmi_category": "Visibility Weak",
-    "data_source": "google_live",
+    "suburb": "Malad",
+    "dmi_score": 28.71,
+    "dmi_category": "Digitally Invisible",
+    "data_source": "ai_estimate",
     "territory_rank": {
-      "suburb": "Malad West",
-      "suburb_rank": 1,
-      "suburb_total": 4,
-      "global_rank": 1,
+      "suburb": "Malad",
+      "suburb_rank": 3,
+      "suburb_total": 5,
+      "global_rank": 63,
       "global_total": 106,
       "lines": [
-        "Malad West Rank: #1 of 4 venues",
-        "Overall Rank: #1 of 106 venues"
+        "Malad Rank: #3 of 5 venues",
+        "Overall Rank: #63 of 106 venues"
       ]
     },
     "digital_silence": {
-      "score": 40,
-      "label": "Moderate Silence",
-      "is_strong_digistories_signal": false,
+      "score": 85.0,
+      "label": "Severe Silence",
+      "is_strong_digistories_signal": true,
       "lines": [
-        "Instagram profile exists but needs reels rhythm",
-        "No active website trust signal",
-        "24 photos uploaded on Google Maps"
+        "No reel in 101 days",
+        "No review in 81 days",
+        "18 photos on Google"
       ]
     },
     "smartos_opportunity": {
@@ -1258,23 +1203,22 @@ window.PANELS = {
       "manual_workflow_risk": "High",
       "whatsapp_dependency_risk": "High",
       "lines": [
-        "High capacity venue; double booking risk is critical",
-        "Structured as a Standalone Banquet; complex booking contracts",
-        "High probability of paper booking diary usage",
-        "WhatsApp booking chats are unorganized and staff-dependent"
+        "Inquiry leakage risk: High (~88%)",
+        "Manual workflow risk: High",
+        "WhatsApp dependency risk: High"
       ]
     },
     "growth_momentum": {
-      "score": 80,
-      "label": "Heating Up",
-      "reviews_increasing": true,
-      "instagram_active": true,
+      "score": 0,
+      "label": "Dormant",
+      "reviews_increasing": false,
+      "instagram_active": false,
       "website_updated": false,
-      "is_buying_signal": true,
+      "is_buying_signal": false,
       "lines": [
-        "\u2713 Google reviews active",
-        "\u2713 Instagram profile active",
-        "\u2717 Website missing"
+        "✗ Reviews increasing",
+        "✗ Instagram active",
+        "✗ Website updated"
       ]
     },
     "relationship": {
@@ -1293,29 +1237,29 @@ window.PANELS = {
   "Evershine Banquets": {
     "business_name": "Evershine Banquets",
     "area": "Malad West",
-    "suburb": "Malad West",
-    "dmi_score": 49,
-    "dmi_category": "Visibility Weak",
-    "data_source": "google_live",
+    "suburb": "Malad",
+    "dmi_score": 18.44,
+    "dmi_category": "Digitally Invisible",
+    "data_source": "ai_estimate",
     "territory_rank": {
-      "suburb": "Malad West",
-      "suburb_rank": 1,
-      "suburb_total": 4,
-      "global_rank": 1,
+      "suburb": "Malad",
+      "suburb_rank": 5,
+      "suburb_total": 5,
+      "global_rank": 103,
       "global_total": 106,
       "lines": [
-        "Malad West Rank: #1 of 4 venues",
-        "Overall Rank: #1 of 106 venues"
+        "Malad Rank: #5 of 5 venues",
+        "Overall Rank: #103 of 106 venues"
       ]
     },
     "digital_silence": {
-      "score": 40,
-      "label": "Moderate Silence",
-      "is_strong_digistories_signal": false,
+      "score": 100.0,
+      "label": "Severe Silence",
+      "is_strong_digistories_signal": true,
       "lines": [
-        "Instagram profile exists but needs reels rhythm",
-        "No active website trust signal",
-        "24 photos uploaded on Google Maps"
+        "No reels found at all",
+        "No review in 81 days",
+        "Only 7 photos on Google"
       ]
     },
     "smartos_opportunity": {
@@ -1324,23 +1268,22 @@ window.PANELS = {
       "manual_workflow_risk": "High",
       "whatsapp_dependency_risk": "High",
       "lines": [
-        "High capacity venue; double booking risk is critical",
-        "Structured as a Standalone Banquet; complex booking contracts",
-        "High probability of paper booking diary usage",
-        "WhatsApp booking chats are unorganized and staff-dependent"
+        "Inquiry leakage risk: High (~88%)",
+        "Manual workflow risk: High",
+        "WhatsApp dependency risk: High"
       ]
     },
     "growth_momentum": {
-      "score": 80,
-      "label": "Heating Up",
-      "reviews_increasing": true,
-      "instagram_active": true,
+      "score": 0,
+      "label": "Dormant",
+      "reviews_increasing": false,
+      "instagram_active": false,
       "website_updated": false,
-      "is_buying_signal": true,
+      "is_buying_signal": false,
       "lines": [
-        "\u2713 Google reviews active",
-        "\u2713 Instagram profile active",
-        "\u2717 Website missing"
+        "✗ Reviews increasing",
+        "✗ Instagram active",
+        "✗ Website updated"
       ]
     },
     "relationship": {
@@ -1359,30 +1302,29 @@ window.PANELS = {
   "Merchant Banquet Hall": {
     "business_name": "Merchant Banquet Hall",
     "area": "Malad West",
-    "suburb": "Malad West",
-    "dmi_score": 8,
-    "dmi_category": "Digitally Invisible",
+    "suburb": "Malad",
+    "dmi_score": 40.16,
+    "dmi_category": "Operationally Chaotic",
     "data_source": "ai_estimate",
     "territory_rank": {
-      "suburb": "Malad West",
-      "suburb_rank": 3,
-      "suburb_total": 4,
-      "global_rank": 74,
+      "suburb": "Malad",
+      "suburb_rank": 1,
+      "suburb_total": 5,
+      "global_rank": 42,
       "global_total": 106,
       "lines": [
-        "Malad West Rank: #3 of 4 venues",
-        "Overall Rank: #74 of 106 venues"
+        "Malad Rank: #1 of 5 venues",
+        "Overall Rank: #42 of 106 venues"
       ]
     },
     "digital_silence": {
-      "score": 100,
-      "label": "Severe Silence",
-      "is_strong_digistories_signal": true,
+      "score": 15.0,
+      "label": "Active Pulse",
+      "is_strong_digistories_signal": false,
       "lines": [
-        "No Instagram account found",
-        "Very low Google review count",
-        "No active website trust signal",
-        "Only 4 photos on Google Maps"
+        "No reel in 26 days",
+        "No review in 22 days",
+        "22 photos on Google"
       ]
     },
     "smartos_opportunity": {
@@ -1391,67 +1333,63 @@ window.PANELS = {
       "manual_workflow_risk": "High",
       "whatsapp_dependency_risk": "High",
       "lines": [
-        "High capacity venue; double booking risk is critical",
-        "Structured as a Standalone Banquet; complex booking contracts",
-        "High probability of paper booking diary usage",
-        "WhatsApp booking chats are unorganized and staff-dependent"
+        "Inquiry leakage risk: High (~88%)",
+        "Manual workflow risk: High",
+        "WhatsApp dependency risk: High"
       ]
     },
     "growth_momentum": {
-      "score": 0,
-      "label": "Dormant",
-      "reviews_increasing": false,
-      "instagram_active": false,
+      "score": 75,
+      "label": "Heating Up",
+      "reviews_increasing": true,
+      "instagram_active": true,
       "website_updated": false,
-      "is_buying_signal": false,
+      "is_buying_signal": true,
       "lines": [
-        "\u2717 Reviews stagnant or low",
-        "\u2717 Instagram dormant or missing",
-        "\u2717 Website missing"
+        "✓ Reviews increasing",
+        "✓ Instagram active",
+        "✗ Website updated"
       ]
     },
     "relationship": {
       "bca_member": false,
-      "second_generation": true,
+      "second_generation": false,
       "growth_mindset": false,
       "agency_user": false,
-      "tags": [
-        "2nd Gen Operator"
-      ],
+      "tags": [],
       "notes": "",
-      "has_human_intel": true,
+      "has_human_intel": false,
       "lines": [
-        "2nd Gen Operator"
+        "No field intel captured yet"
       ]
     }
   },
   "Golden Leaf Banquet": {
     "business_name": "Golden Leaf Banquet",
     "area": "Malad West",
-    "suburb": "Malad West",
-    "dmi_score": 8,
+    "suburb": "Malad",
+    "dmi_score": 28.32,
     "dmi_category": "Digitally Invisible",
     "data_source": "ai_estimate",
     "territory_rank": {
-      "suburb": "Malad West",
-      "suburb_rank": 3,
-      "suburb_total": 4,
-      "global_rank": 74,
+      "suburb": "Malad",
+      "suburb_rank": 4,
+      "suburb_total": 5,
+      "global_rank": 68,
       "global_total": 106,
       "lines": [
-        "Malad West Rank: #3 of 4 venues",
-        "Overall Rank: #74 of 106 venues"
+        "Malad Rank: #4 of 5 venues",
+        "Overall Rank: #68 of 106 venues"
       ]
     },
     "digital_silence": {
-      "score": 100,
-      "label": "Severe Silence",
+      "score": 60.0,
+      "label": "At Risk",
       "is_strong_digistories_signal": true,
       "lines": [
-        "No Instagram account found",
-        "Very low Google review count",
-        "No active website trust signal",
-        "Only 4 photos on Google Maps"
+        "No reel in 53 days",
+        "No review in 85 days",
+        "20 photos on Google"
       ]
     },
     "smartos_opportunity": {
@@ -1460,10 +1398,9 @@ window.PANELS = {
       "manual_workflow_risk": "High",
       "whatsapp_dependency_risk": "High",
       "lines": [
-        "High capacity venue; double booking risk is critical",
-        "Structured as a Standalone Banquet; complex booking contracts",
-        "High probability of paper booking diary usage",
-        "WhatsApp booking chats are unorganized and staff-dependent"
+        "Inquiry leakage risk: High (~88%)",
+        "Manual workflow risk: High",
+        "WhatsApp dependency risk: High"
       ]
     },
     "growth_momentum": {
@@ -1474,23 +1411,21 @@ window.PANELS = {
       "website_updated": false,
       "is_buying_signal": false,
       "lines": [
-        "\u2717 Reviews stagnant or low",
-        "\u2717 Instagram dormant or missing",
-        "\u2717 Website missing"
+        "✗ Reviews increasing",
+        "✗ Instagram active",
+        "✗ Website updated"
       ]
     },
     "relationship": {
       "bca_member": false,
       "second_generation": false,
-      "growth_mindset": true,
+      "growth_mindset": false,
       "agency_user": false,
-      "tags": [
-        "Growth Mindset"
-      ],
+      "tags": [],
       "notes": "",
-      "has_human_intel": true,
+      "has_human_intel": false,
       "lines": [
-        "Growth Mindset"
+        "No field intel captured yet"
       ]
     }
   },
@@ -1498,29 +1433,28 @@ window.PANELS = {
     "business_name": "Royal Orchid Banquets",
     "area": "Chembur",
     "suburb": "Chembur",
-    "dmi_score": 8,
+    "dmi_score": 22.69,
     "dmi_category": "Digitally Invisible",
-    "data_source": "google_live",
+    "data_source": "ai_estimate",
     "territory_rank": {
       "suburb": "Chembur",
-      "suburb_rank": 2,
-      "suburb_total": 3,
-      "global_rank": 74,
+      "suburb_rank": 4,
+      "suburb_total": 5,
+      "global_rank": 97,
       "global_total": 106,
       "lines": [
-        "Chembur Rank: #2 of 3 venues",
-        "Overall Rank: #74 of 106 venues"
+        "Chembur Rank: #4 of 5 venues",
+        "Overall Rank: #97 of 106 venues"
       ]
     },
     "digital_silence": {
-      "score": 100,
+      "score": 100.0,
       "label": "Severe Silence",
       "is_strong_digistories_signal": true,
       "lines": [
-        "No Instagram account found",
-        "Very low Google review count",
-        "No active website trust signal",
-        "Only 4 photos on Google Maps"
+        "No reel in 125 days",
+        "No review in 84 days",
+        "Only 8 photos on Google"
       ]
     },
     "smartos_opportunity": {
@@ -1529,10 +1463,9 @@ window.PANELS = {
       "manual_workflow_risk": "High",
       "whatsapp_dependency_risk": "High",
       "lines": [
-        "High capacity venue; double booking risk is critical",
-        "Structured as a Standalone Banquet; complex booking contracts",
-        "High probability of paper booking diary usage",
-        "WhatsApp booking chats are unorganized and staff-dependent"
+        "Inquiry leakage risk: High (~88%)",
+        "Manual workflow risk: High",
+        "WhatsApp dependency risk: High"
       ]
     },
     "growth_momentum": {
@@ -1543,23 +1476,21 @@ window.PANELS = {
       "website_updated": false,
       "is_buying_signal": false,
       "lines": [
-        "\u2717 Reviews stagnant or low",
-        "\u2717 Instagram dormant or missing",
-        "\u2717 Website missing"
+        "✗ Reviews increasing",
+        "✗ Instagram active",
+        "✗ Website updated"
       ]
     },
     "relationship": {
-      "bca_member": true,
+      "bca_member": false,
       "second_generation": false,
       "growth_mindset": false,
       "agency_user": false,
-      "tags": [
-        "BCA Member"
-      ],
-      "notes": "BCA network contact. Trust factor is high.",
-      "has_human_intel": true,
+      "tags": [],
+      "notes": "",
+      "has_human_intel": false,
       "lines": [
-        "BCA Member"
+        "No field intel captured yet"
       ]
     }
   },
@@ -1567,29 +1498,28 @@ window.PANELS = {
     "business_name": "The Acres Club",
     "area": "Chembur",
     "suburb": "Chembur",
-    "dmi_score": 43,
-    "dmi_category": "Visibility Weak",
-    "data_source": "google_live",
+    "dmi_score": 40.76,
+    "dmi_category": "Operationally Chaotic",
+    "data_source": "ai_estimate",
     "territory_rank": {
       "suburb": "Chembur",
-      "suburb_rank": 1,
-      "suburb_total": 3,
-      "global_rank": 52,
+      "suburb_rank": 3,
+      "suburb_total": 5,
+      "global_rank": 38,
       "global_total": 106,
       "lines": [
-        "Chembur Rank: #1 of 3 venues",
-        "Overall Rank: #52 of 106 venues"
+        "Chembur Rank: #3 of 5 venues",
+        "Overall Rank: #38 of 106 venues"
       ]
     },
     "digital_silence": {
-      "score": 55,
-      "label": "Moderate Silence",
+      "score": 15.0,
+      "label": "Active Pulse",
       "is_strong_digistories_signal": false,
       "lines": [
-        "Instagram profile exists but needs reels rhythm",
-        "Recent Google reviews are sparse",
-        "No active website trust signal",
-        "24 photos uploaded on Google Maps"
+        "No reel in 26 days",
+        "No review in 25 days",
+        "25 photos on Google"
       ]
     },
     "smartos_opportunity": {
@@ -1598,37 +1528,34 @@ window.PANELS = {
       "manual_workflow_risk": "High",
       "whatsapp_dependency_risk": "High",
       "lines": [
-        "High capacity venue; double booking risk is critical",
-        "Structured as a Standalone Banquet; complex booking contracts",
-        "High probability of paper booking diary usage",
-        "WhatsApp booking chats are unorganized and staff-dependent"
+        "Inquiry leakage risk: High (~88%)",
+        "Manual workflow risk: High",
+        "WhatsApp dependency risk: High"
       ]
     },
     "growth_momentum": {
-      "score": 40,
-      "label": "Some Movement",
-      "reviews_increasing": false,
+      "score": 75,
+      "label": "Heating Up",
+      "reviews_increasing": true,
       "instagram_active": true,
       "website_updated": false,
-      "is_buying_signal": false,
+      "is_buying_signal": true,
       "lines": [
-        "\u2717 Reviews stagnant or low",
-        "\u2713 Instagram profile active",
-        "\u2717 Website missing"
+        "✓ Reviews increasing",
+        "✓ Instagram active",
+        "✗ Website updated"
       ]
     },
     "relationship": {
-      "bca_member": true,
+      "bca_member": false,
       "second_generation": false,
       "growth_mindset": false,
       "agency_user": false,
-      "tags": [
-        "BCA Member"
-      ],
-      "notes": "BCA network contact. Trust factor is high.",
-      "has_human_intel": true,
+      "tags": [],
+      "notes": "",
+      "has_human_intel": false,
       "lines": [
-        "BCA Member"
+        "No field intel captured yet"
       ]
     }
   },
@@ -1636,29 +1563,28 @@ window.PANELS = {
     "business_name": "GCC Hotel and Club",
     "area": "Mira Road",
     "suburb": "Mira Road",
-    "dmi_score": 43,
-    "dmi_category": "Visibility Weak",
-    "data_source": "google_live",
+    "dmi_score": 21.47,
+    "dmi_category": "Digitally Invisible",
+    "data_source": "ai_estimate",
     "territory_rank": {
       "suburb": "Mira Road",
-      "suburb_rank": 1,
+      "suburb_rank": 2,
       "suburb_total": 2,
-      "global_rank": 52,
+      "global_rank": 99,
       "global_total": 106,
       "lines": [
-        "Mira Road Rank: #1 of 2 venues",
-        "Overall Rank: #52 of 106 venues"
+        "Mira Road Rank: #2 of 2 venues",
+        "Overall Rank: #99 of 106 venues"
       ]
     },
     "digital_silence": {
-      "score": 55,
-      "label": "Moderate Silence",
-      "is_strong_digistories_signal": false,
+      "score": 85.0,
+      "label": "Severe Silence",
+      "is_strong_digistories_signal": true,
       "lines": [
-        "Instagram profile exists but needs reels rhythm",
-        "Recent Google reviews are sparse",
-        "No active website trust signal",
-        "24 photos uploaded on Google Maps"
+        "No reel in 110 days",
+        "No review in 96 days",
+        "12 photos on Google"
       ]
     },
     "smartos_opportunity": {
@@ -1667,23 +1593,22 @@ window.PANELS = {
       "manual_workflow_risk": "High",
       "whatsapp_dependency_risk": "High",
       "lines": [
-        "High capacity venue; double booking risk is critical",
-        "Structured as a Standalone Banquet; complex booking contracts",
-        "High probability of paper booking diary usage",
-        "WhatsApp booking chats are unorganized and staff-dependent"
+        "Inquiry leakage risk: High (~88%)",
+        "Manual workflow risk: High",
+        "WhatsApp dependency risk: High"
       ]
     },
     "growth_momentum": {
-      "score": 40,
-      "label": "Some Movement",
+      "score": 0,
+      "label": "Dormant",
       "reviews_increasing": false,
-      "instagram_active": true,
+      "instagram_active": false,
       "website_updated": false,
       "is_buying_signal": false,
       "lines": [
-        "\u2717 Reviews stagnant or low",
-        "\u2713 Instagram profile active",
-        "\u2717 Website missing"
+        "✗ Reviews increasing",
+        "✗ Instagram active",
+        "✗ Website updated"
       ]
     },
     "relationship": {
@@ -1702,97 +1627,94 @@ window.PANELS = {
   "Juhu Club Millennium": {
     "business_name": "Juhu Club Millennium",
     "area": "Juhu",
-    "suburb": "Juhu",
-    "dmi_score": 47,
+    "suburb": "Andheri",
+    "dmi_score": 63.98,
     "dmi_category": "Visibility Weak",
-    "data_source": "google_live",
+    "data_source": "ai_estimate",
     "territory_rank": {
-      "suburb": "Juhu",
-      "suburb_rank": 1,
-      "suburb_total": 1,
-      "global_rank": 21,
+      "suburb": "Andheri",
+      "suburb_rank": 3,
+      "suburb_total": 7,
+      "global_rank": 12,
       "global_total": 106,
       "lines": [
-        "Juhu Rank: #1 of 1 venues",
-        "Overall Rank: #21 of 106 venues"
+        "Andheri Rank: #3 of 7 venues",
+        "Overall Rank: #12 of 106 venues"
       ]
     },
     "digital_silence": {
-      "score": 40,
-      "label": "Moderate Silence",
+      "score": 15.0,
+      "label": "Active Pulse",
       "is_strong_digistories_signal": false,
       "lines": [
-        "Instagram profile exists but needs reels rhythm",
-        "No active website trust signal",
-        "24 photos uploaded on Google Maps"
+        "No reel in 23 days",
+        "No review in 37 days",
+        "37 photos on Google"
       ]
     },
     "smartos_opportunity": {
-      "opportunity_score": 100,
+      "opportunity_score": 61.0,
       "inquiry_leakage_risk": "High",
       "manual_workflow_risk": "High",
       "whatsapp_dependency_risk": "High",
       "lines": [
-        "High capacity venue; double booking risk is critical",
-        "Structured as a Standalone Banquet; complex booking contracts",
-        "High probability of paper booking diary usage",
-        "WhatsApp booking chats are unorganized and staff-dependent"
+        "Inquiry leakage risk: High (~53%)",
+        "Manual workflow risk: High",
+        "WhatsApp dependency risk: High"
       ]
     },
     "growth_momentum": {
-      "score": 80,
-      "label": "Heating Up",
-      "reviews_increasing": true,
+      "score": 35,
+      "label": "Some Movement",
+      "reviews_increasing": false,
       "instagram_active": true,
       "website_updated": false,
-      "is_buying_signal": true,
+      "is_buying_signal": false,
       "lines": [
-        "\u2713 Google reviews active",
-        "\u2713 Instagram profile active",
-        "\u2717 Website missing"
+        "✗ Reviews increasing",
+        "✓ Instagram active",
+        "✗ Website updated"
       ]
     },
     "relationship": {
       "bca_member": false,
-      "second_generation": true,
+      "second_generation": false,
       "growth_mindset": false,
       "agency_user": false,
-      "tags": [
-        "2nd Gen Operator"
-      ],
+      "tags": [],
       "notes": "",
-      "has_human_intel": true,
+      "has_human_intel": false,
       "lines": [
-        "2nd Gen Operator"
+        "No field intel captured yet"
       ]
     }
   },
   "Goldfinch Banquets": {
     "business_name": "Goldfinch Banquets",
     "area": "Andheri East",
-    "suburb": "Andheri East",
-    "dmi_score": 47,
-    "dmi_category": "Visibility Weak",
-    "data_source": "google_live",
+    "suburb": "Andheri",
+    "dmi_score": 41.52,
+    "dmi_category": "Operationally Chaotic",
+    "data_source": "ai_estimate",
     "territory_rank": {
-      "suburb": "Andheri East",
-      "suburb_rank": 2,
-      "suburb_total": 4,
-      "global_rank": 21,
+      "suburb": "Andheri",
+      "suburb_rank": 5,
+      "suburb_total": 7,
+      "global_rank": 35,
       "global_total": 106,
       "lines": [
-        "Andheri East Rank: #2 of 4 venues",
-        "Overall Rank: #21 of 106 venues"
+        "Andheri Rank: #5 of 7 venues",
+        "Overall Rank: #35 of 106 venues"
       ]
     },
     "digital_silence": {
-      "score": 40,
-      "label": "Moderate Silence",
+      "score": 15.0,
+      "label": "Active Pulse",
       "is_strong_digistories_signal": false,
       "lines": [
-        "Instagram profile exists but needs reels rhythm",
-        "No active website trust signal",
-        "24 photos uploaded on Google Maps"
+        "No reel in 26 days",
+        "No review in 28 days",
+        "28 photos on Google"
       ]
     },
     "smartos_opportunity": {
@@ -1801,23 +1723,22 @@ window.PANELS = {
       "manual_workflow_risk": "High",
       "whatsapp_dependency_risk": "High",
       "lines": [
-        "High capacity venue; double booking risk is critical",
-        "Structured as a Standalone Banquet; complex booking contracts",
-        "High probability of paper booking diary usage",
-        "WhatsApp booking chats are unorganized and staff-dependent"
+        "Inquiry leakage risk: High (~88%)",
+        "Manual workflow risk: High",
+        "WhatsApp dependency risk: High"
       ]
     },
     "growth_momentum": {
-      "score": 80,
+      "score": 75,
       "label": "Heating Up",
       "reviews_increasing": true,
       "instagram_active": true,
       "website_updated": false,
       "is_buying_signal": true,
       "lines": [
-        "\u2713 Google reviews active",
-        "\u2713 Instagram profile active",
-        "\u2717 Website missing"
+        "✓ Reviews increasing",
+        "✓ Instagram active",
+        "✗ Website updated"
       ]
     },
     "relationship": {
@@ -1836,54 +1757,53 @@ window.PANELS = {
   "Tunga Paradise Banquet": {
     "business_name": "Tunga Paradise Banquet",
     "area": "Andheri East",
-    "suburb": "Andheri East",
-    "dmi_score": 47,
-    "dmi_category": "Visibility Weak",
-    "data_source": "google_live",
+    "suburb": "Andheri",
+    "dmi_score": 65.91,
+    "dmi_category": "Growth Ready",
+    "data_source": "ai_estimate",
     "territory_rank": {
-      "suburb": "Andheri East",
+      "suburb": "Andheri",
       "suburb_rank": 2,
-      "suburb_total": 4,
-      "global_rank": 21,
+      "suburb_total": 7,
+      "global_rank": 5,
       "global_total": 106,
       "lines": [
-        "Andheri East Rank: #2 of 4 venues",
-        "Overall Rank: #21 of 106 venues"
+        "Andheri Rank: #2 of 7 venues",
+        "Overall Rank: #5 of 106 venues"
       ]
     },
     "digital_silence": {
-      "score": 40,
-      "label": "Moderate Silence",
+      "score": 15.0,
+      "label": "Active Pulse",
       "is_strong_digistories_signal": false,
       "lines": [
-        "Instagram profile exists but needs reels rhythm",
-        "No active website trust signal",
-        "24 photos uploaded on Google Maps"
+        "No reel in 17 days",
+        "No review in 49 days",
+        "49 photos on Google"
       ]
     },
     "smartos_opportunity": {
-      "opportunity_score": 100,
+      "opportunity_score": 61.0,
       "inquiry_leakage_risk": "High",
       "manual_workflow_risk": "High",
       "whatsapp_dependency_risk": "High",
       "lines": [
-        "High capacity venue; double booking risk is critical",
-        "Structured as a Standalone Banquet; complex booking contracts",
-        "High probability of paper booking diary usage",
-        "WhatsApp booking chats are unorganized and staff-dependent"
+        "Inquiry leakage risk: High (~53%)",
+        "Manual workflow risk: High",
+        "WhatsApp dependency risk: High"
       ]
     },
     "growth_momentum": {
-      "score": 80,
-      "label": "Heating Up",
-      "reviews_increasing": true,
+      "score": 35,
+      "label": "Some Movement",
+      "reviews_increasing": false,
       "instagram_active": true,
       "website_updated": false,
-      "is_buying_signal": true,
+      "is_buying_signal": false,
       "lines": [
-        "\u2713 Google reviews active",
-        "\u2713 Instagram profile active",
-        "\u2717 Website missing"
+        "✗ Reviews increasing",
+        "✓ Instagram active",
+        "✗ Website updated"
       ]
     },
     "relationship": {
@@ -1902,97 +1822,94 @@ window.PANELS = {
   "VITS Hotel Banquets": {
     "business_name": "VITS Hotel Banquets",
     "area": "Andheri East",
-    "suburb": "Andheri East",
-    "dmi_score": 49,
+    "suburb": "Andheri",
+    "dmi_score": 55.89,
     "dmi_category": "Visibility Weak",
-    "data_source": "google_live",
+    "data_source": "ai_estimate",
     "territory_rank": {
-      "suburb": "Andheri East",
-      "suburb_rank": 1,
-      "suburb_total": 4,
-      "global_rank": 1,
+      "suburb": "Andheri",
+      "suburb_rank": 4,
+      "suburb_total": 7,
+      "global_rank": 24,
       "global_total": 106,
       "lines": [
-        "Andheri East Rank: #1 of 4 venues",
-        "Overall Rank: #1 of 106 venues"
+        "Andheri Rank: #4 of 7 venues",
+        "Overall Rank: #24 of 106 venues"
       ]
     },
     "digital_silence": {
-      "score": 40,
-      "label": "Moderate Silence",
+      "score": 15.0,
+      "label": "Active Pulse",
       "is_strong_digistories_signal": false,
       "lines": [
-        "Instagram profile exists but needs reels rhythm",
-        "No active website trust signal",
-        "24 photos uploaded on Google Maps"
+        "No reel in 14 days",
+        "No review in 40 days",
+        "40 photos on Google"
       ]
     },
     "smartos_opportunity": {
-      "opportunity_score": 100,
+      "opportunity_score": 85.0,
       "inquiry_leakage_risk": "High",
       "manual_workflow_risk": "High",
       "whatsapp_dependency_risk": "High",
       "lines": [
-        "High capacity venue; double booking risk is critical",
-        "Structured as a Standalone Banquet; complex booking contracts",
-        "High probability of paper booking diary usage",
-        "WhatsApp booking chats are unorganized and staff-dependent"
+        "Inquiry leakage risk: High (~73%)",
+        "Manual workflow risk: High",
+        "WhatsApp dependency risk: High"
       ]
     },
     "growth_momentum": {
-      "score": 80,
-      "label": "Heating Up",
-      "reviews_increasing": true,
+      "score": 35,
+      "label": "Some Movement",
+      "reviews_increasing": false,
       "instagram_active": true,
       "website_updated": false,
-      "is_buying_signal": true,
+      "is_buying_signal": false,
       "lines": [
-        "\u2713 Google reviews active",
-        "\u2713 Instagram profile active",
-        "\u2717 Website missing"
+        "✗ Reviews increasing",
+        "✓ Instagram active",
+        "✗ Website updated"
       ]
     },
     "relationship": {
       "bca_member": false,
       "second_generation": false,
-      "growth_mindset": true,
+      "growth_mindset": false,
       "agency_user": false,
-      "tags": [
-        "Growth Mindset"
-      ],
+      "tags": [],
       "notes": "",
-      "has_human_intel": true,
+      "has_human_intel": false,
       "lines": [
-        "Growth Mindset"
+        "No field intel captured yet"
       ]
     }
   },
   "Peninsula Grand Banquets": {
     "business_name": "Peninsula Grand Banquets",
     "area": "Sakinaka",
-    "suburb": "Sakinaka",
-    "dmi_score": 49,
-    "dmi_category": "Visibility Weak",
-    "data_source": "google_live",
+    "suburb": "Andheri",
+    "dmi_score": 26.18,
+    "dmi_category": "Digitally Invisible",
+    "data_source": "ai_estimate",
     "territory_rank": {
-      "suburb": "Sakinaka",
-      "suburb_rank": 1,
-      "suburb_total": 1,
-      "global_rank": 1,
+      "suburb": "Andheri",
+      "suburb_rank": 7,
+      "suburb_total": 7,
+      "global_rank": 81,
       "global_total": 106,
       "lines": [
-        "Sakinaka Rank: #1 of 1 venues",
-        "Overall Rank: #1 of 106 venues"
+        "Andheri Rank: #7 of 7 venues",
+        "Overall Rank: #81 of 106 venues"
       ]
     },
     "digital_silence": {
-      "score": 40,
-      "label": "Moderate Silence",
-      "is_strong_digistories_signal": false,
+      "score": 85.0,
+      "label": "Severe Silence",
+      "is_strong_digistories_signal": true,
       "lines": [
-        "Instagram profile exists but needs reels rhythm",
-        "No active website trust signal",
-        "24 photos uploaded on Google Maps"
+        "No reel in 77 days",
+        "No review in 69 days",
+        "12 photos on Google"
       ]
     },
     "smartos_opportunity": {
@@ -2001,23 +1918,22 @@ window.PANELS = {
       "manual_workflow_risk": "High",
       "whatsapp_dependency_risk": "High",
       "lines": [
-        "High capacity venue; double booking risk is critical",
-        "Structured as a Standalone Banquet; complex booking contracts",
-        "High probability of paper booking diary usage",
-        "WhatsApp booking chats are unorganized and staff-dependent"
+        "Inquiry leakage risk: High (~88%)",
+        "Manual workflow risk: High",
+        "WhatsApp dependency risk: High"
       ]
     },
     "growth_momentum": {
-      "score": 80,
-      "label": "Heating Up",
-      "reviews_increasing": true,
-      "instagram_active": true,
+      "score": 0,
+      "label": "Dormant",
+      "reviews_increasing": false,
+      "instagram_active": false,
       "website_updated": false,
-      "is_buying_signal": true,
+      "is_buying_signal": false,
       "lines": [
-        "\u2713 Google reviews active",
-        "\u2713 Instagram profile active",
-        "\u2717 Website missing"
+        "✗ Reviews increasing",
+        "✗ Instagram active",
+        "✗ Website updated"
       ]
     },
     "relationship": {
@@ -2036,30 +1952,29 @@ window.PANELS = {
   "Kohinoor Continental Banquets": {
     "business_name": "Kohinoor Continental Banquets",
     "area": "Andheri East",
-    "suburb": "Andheri East",
-    "dmi_score": 8,
-    "dmi_category": "Digitally Invisible",
+    "suburb": "Andheri",
+    "dmi_score": 37.86,
+    "dmi_category": "Operationally Chaotic",
     "data_source": "ai_estimate",
     "territory_rank": {
-      "suburb": "Andheri East",
-      "suburb_rank": 4,
-      "suburb_total": 4,
-      "global_rank": 74,
+      "suburb": "Andheri",
+      "suburb_rank": 6,
+      "suburb_total": 7,
+      "global_rank": 50,
       "global_total": 106,
       "lines": [
-        "Andheri East Rank: #4 of 4 venues",
-        "Overall Rank: #74 of 106 venues"
+        "Andheri Rank: #6 of 7 venues",
+        "Overall Rank: #50 of 106 venues"
       ]
     },
     "digital_silence": {
-      "score": 100,
-      "label": "Severe Silence",
-      "is_strong_digistories_signal": true,
+      "score": 15.0,
+      "label": "Active Pulse",
+      "is_strong_digistories_signal": false,
       "lines": [
-        "No Instagram account found",
-        "Very low Google review count",
-        "No active website trust signal",
-        "Only 4 photos on Google Maps"
+        "No reel in 8 days",
+        "No review in 22 days",
+        "22 photos on Google"
       ]
     },
     "smartos_opportunity": {
@@ -2068,10 +1983,74 @@ window.PANELS = {
       "manual_workflow_risk": "High",
       "whatsapp_dependency_risk": "High",
       "lines": [
-        "High capacity venue; double booking risk is critical",
-        "Structured as a Standalone Banquet; complex booking contracts",
-        "High probability of paper booking diary usage",
-        "WhatsApp booking chats are unorganized and staff-dependent"
+        "Inquiry leakage risk: High (~88%)",
+        "Manual workflow risk: High",
+        "WhatsApp dependency risk: High"
+      ]
+    },
+    "growth_momentum": {
+      "score": 75,
+      "label": "Heating Up",
+      "reviews_increasing": true,
+      "instagram_active": true,
+      "website_updated": false,
+      "is_buying_signal": true,
+      "lines": [
+        "✓ Reviews increasing",
+        "✓ Instagram active",
+        "✗ Website updated"
+      ]
+    },
+    "relationship": {
+      "bca_member": false,
+      "second_generation": false,
+      "growth_mindset": false,
+      "agency_user": false,
+      "tags": [],
+      "notes": "",
+      "has_human_intel": false,
+      "lines": [
+        "No field intel captured yet"
+      ]
+    }
+  },
+  "Swagat Banquet Hall Goregaon": {
+    "business_name": "Swagat Banquet Hall Goregaon",
+    "area": "Goregaon",
+    "suburb": "Goregaon",
+    "dmi_score": 27.95,
+    "dmi_category": "Digitally Invisible",
+    "data_source": "ai_estimate",
+    "territory_rank": {
+      "suburb": "Goregaon",
+      "suburb_rank": 1,
+      "suburb_total": 1,
+      "global_rank": 70,
+      "global_total": 106,
+      "lines": [
+        "Goregaon Rank: #1 of 1 venues",
+        "Overall Rank: #70 of 106 venues"
+      ]
+    },
+    "digital_silence": {
+      "score": 85.0,
+      "label": "Severe Silence",
+      "is_strong_digistories_signal": true,
+      "lines": [
+        "No reel in 77 days",
+        "No review in 85 days",
+        "20 photos on Google"
+      ]
+    },
+    "smartos_opportunity": {
+      "opportunity_score": 100,
+      "inquiry_leakage_risk": "High",
+      "manual_workflow_risk": "High",
+      "whatsapp_dependency_risk": "High",
+      "lines": [
+        "Inquiry leakage risk: High (~88%)",
+        "Manual workflow risk: High",
+        "WhatsApp dependency risk: High"
       ]
     },
     "growth_momentum": {
@@ -2082,53 +2061,50 @@ window.PANELS = {
       "website_updated": false,
       "is_buying_signal": false,
       "lines": [
-        "\u2717 Reviews stagnant or low",
-        "\u2717 Instagram dormant or missing",
-        "\u2717 Website missing"
+        "✗ Reviews increasing",
+        "✗ Instagram active",
+        "✗ Website updated"
       ]
     },
     "relationship": {
       "bca_member": false,
-      "second_generation": true,
+      "second_generation": false,
       "growth_mindset": false,
       "agency_user": false,
-      "tags": [
-        "2nd Gen Operator"
-      ],
+      "tags": [],
       "notes": "",
-      "has_human_intel": true,
+      "has_human_intel": false,
       "lines": [
-        "2nd Gen Operator"
+        "No field intel captured yet"
       ]
     }
   },
   "Imperial Hall": {
     "business_name": "Imperial Hall",
     "area": "Ghatkopar",
-    "suburb": "Ghatkopar",
-    "dmi_score": 8,
+    "suburb": "Chembur",
+    "dmi_score": 20.19,
     "dmi_category": "Digitally Invisible",
-    "data_source": "google_live",
+    "data_source": "ai_estimate",
     "territory_rank": {
-      "suburb": "Ghatkopar",
-      "suburb_rank": 1,
-      "suburb_total": 1,
-      "global_rank": 74,
+      "suburb": "Chembur",
+      "suburb_rank": 5,
+      "suburb_total": 5,
+      "global_rank": 101,
       "global_total": 106,
       "lines": [
-        "Ghatkopar Rank: #1 of 1 venues",
-        "Overall Rank: #74 of 106 venues"
+        "Chembur Rank: #5 of 5 venues",
+        "Overall Rank: #101 of 106 venues"
       ]
     },
     "digital_silence": {
-      "score": 100,
+      "score": 100.0,
       "label": "Severe Silence",
       "is_strong_digistories_signal": true,
       "lines": [
-        "No Instagram account found",
-        "Very low Google review count",
-        "No active website trust signal",
-        "Only 4 photos on Google Maps"
+        "No reel in 110 days",
+        "No review in 84 days",
+        "Only 8 photos on Google"
       ]
     },
     "smartos_opportunity": {
@@ -2137,10 +2113,9 @@ window.PANELS = {
       "manual_workflow_risk": "High",
       "whatsapp_dependency_risk": "High",
       "lines": [
-        "High capacity venue; double booking risk is critical",
-        "Structured as a Standalone Banquet; complex booking contracts",
-        "High probability of paper booking diary usage",
-        "WhatsApp booking chats are unorganized and staff-dependent"
+        "Inquiry leakage risk: High (~88%)",
+        "Manual workflow risk: High",
+        "WhatsApp dependency risk: High"
       ]
     },
     "growth_momentum": {
@@ -2151,9 +2126,74 @@ window.PANELS = {
       "website_updated": false,
       "is_buying_signal": false,
       "lines": [
-        "\u2717 Reviews stagnant or low",
-        "\u2717 Instagram dormant or missing",
-        "\u2717 Website missing"
+        "✗ Reviews increasing",
+        "✗ Instagram active",
+        "✗ Website updated"
+      ]
+    },
+    "relationship": {
+      "bca_member": false,
+      "second_generation": false,
+      "growth_mindset": false,
+      "agency_user": false,
+      "tags": [],
+      "notes": "",
+      "has_human_intel": false,
+      "lines": [
+        "No field intel captured yet"
+      ]
+    }
+  },
+  "Royal Symphony Banquet Malad": {
+    "business_name": "Royal Symphony Banquet Malad",
+    "area": "Malad East",
+    "suburb": "Malad",
+    "dmi_score": 39.81,
+    "dmi_category": "Operationally Chaotic",
+    "data_source": "ai_estimate",
+    "territory_rank": {
+      "suburb": "Malad",
+      "suburb_rank": 2,
+      "suburb_total": 5,
+      "global_rank": 46,
+      "global_total": 106,
+      "lines": [
+        "Malad Rank: #2 of 5 venues",
+        "Overall Rank: #46 of 106 venues"
+      ]
+    },
+    "digital_silence": {
+      "score": 15.0,
+      "label": "Active Pulse",
+      "is_strong_digistories_signal": false,
+      "lines": [
+        "No reel in 20 days",
+        "No review in 25 days",
+        "25 photos on Google"
+      ]
+    },
+    "smartos_opportunity": {
+      "opportunity_score": 100,
+      "inquiry_leakage_risk": "High",
+      "manual_workflow_risk": "High",
+      "whatsapp_dependency_risk": "High",
+      "lines": [
+        "Inquiry leakage risk: High (~88%)",
+        "Manual workflow risk: High",
+        "WhatsApp dependency risk: High"
+      ]
+    },
+    "growth_momentum": {
+      "score": 75,
+      "label": "Heating Up",
+      "reviews_increasing": true,
+      "instagram_active": true,
+      "website_updated": false,
+      "is_buying_signal": true,
+      "lines": [
+        "✓ Reviews increasing",
+        "✓ Instagram active",
+        "✗ Website updated"
       ]
     },
     "relationship": {
@@ -2173,29 +2213,28 @@ window.PANELS = {
     "business_name": "Elegance Banquet",
     "area": "Borivali",
     "suburb": "Borivali",
-    "dmi_score": 43,
-    "dmi_category": "Visibility Weak",
-    "data_source": "google_live",
+    "dmi_score": 26.34,
+    "dmi_category": "Digitally Invisible",
+    "data_source": "ai_estimate",
     "territory_rank": {
       "suburb": "Borivali",
       "suburb_rank": 1,
-      "suburb_total": 1,
-      "global_rank": 52,
+      "suburb_total": 2,
+      "global_rank": 80,
       "global_total": 106,
       "lines": [
-        "Borivali Rank: #1 of 1 venues",
-        "Overall Rank: #52 of 106 venues"
+        "Borivali Rank: #1 of 2 venues",
+        "Overall Rank: #80 of 106 venues"
       ]
     },
     "digital_silence": {
-      "score": 55,
-      "label": "Moderate Silence",
-      "is_strong_digistories_signal": false,
+      "score": 60.0,
+      "label": "At Risk",
+      "is_strong_digistories_signal": true,
       "lines": [
-        "Instagram profile exists but needs reels rhythm",
-        "Recent Google reviews are sparse",
-        "No active website trust signal",
-        "24 photos uploaded on Google Maps"
+        "No reel in 45 days",
+        "No review in 89 days",
+        "22 photos on Google"
       ]
     },
     "smartos_opportunity": {
@@ -2204,23 +2243,22 @@ window.PANELS = {
       "manual_workflow_risk": "High",
       "whatsapp_dependency_risk": "High",
       "lines": [
-        "High capacity venue; double booking risk is critical",
-        "Structured as a Standalone Banquet; complex booking contracts",
-        "High probability of paper booking diary usage",
-        "WhatsApp booking chats are unorganized and staff-dependent"
+        "Inquiry leakage risk: High (~88%)",
+        "Manual workflow risk: High",
+        "WhatsApp dependency risk: High"
       ]
     },
     "growth_momentum": {
-      "score": 40,
-      "label": "Some Movement",
+      "score": 0,
+      "label": "Dormant",
       "reviews_increasing": false,
-      "instagram_active": true,
+      "instagram_active": false,
       "website_updated": false,
       "is_buying_signal": false,
       "lines": [
-        "\u2717 Reviews stagnant or low",
-        "\u2713 Instagram profile active",
-        "\u2717 Website missing"
+        "✗ Reviews increasing",
+        "✗ Instagram active",
+        "✗ Website updated"
       ]
     },
     "relationship": {
@@ -2239,99 +2277,94 @@ window.PANELS = {
   "Sumati Hall": {
     "business_name": "Sumati Hall",
     "area": "Ghatkopar East",
-    "suburb": "Ghatkopar East",
-    "dmi_score": 47,
+    "suburb": "Chembur",
+    "dmi_score": 63.03,
     "dmi_category": "Visibility Weak",
-    "data_source": "google_live",
+    "data_source": "ai_estimate",
     "territory_rank": {
-      "suburb": "Ghatkopar East",
+      "suburb": "Chembur",
       "suburb_rank": 1,
-      "suburb_total": 1,
-      "global_rank": 21,
+      "suburb_total": 5,
+      "global_rank": 14,
       "global_total": 106,
       "lines": [
-        "Ghatkopar East Rank: #1 of 1 venues",
-        "Overall Rank: #21 of 106 venues"
+        "Chembur Rank: #1 of 5 venues",
+        "Overall Rank: #14 of 106 venues"
       ]
     },
     "digital_silence": {
-      "score": 40,
-      "label": "Moderate Silence",
+      "score": 15.0,
+      "label": "Active Pulse",
       "is_strong_digistories_signal": false,
       "lines": [
-        "Instagram profile exists but needs reels rhythm",
-        "No active website trust signal",
-        "24 photos uploaded on Google Maps"
+        "No reel in 17 days",
+        "No review in 37 days",
+        "37 photos on Google"
       ]
     },
     "smartos_opportunity": {
-      "opportunity_score": 100,
+      "opportunity_score": 61.0,
       "inquiry_leakage_risk": "High",
       "manual_workflow_risk": "High",
       "whatsapp_dependency_risk": "High",
       "lines": [
-        "High capacity venue; double booking risk is critical",
-        "Structured as a Standalone Banquet; complex booking contracts",
-        "High probability of paper booking diary usage",
-        "WhatsApp booking chats are unorganized and staff-dependent"
+        "Inquiry leakage risk: High (~53%)",
+        "Manual workflow risk: High",
+        "WhatsApp dependency risk: High"
       ]
     },
     "growth_momentum": {
-      "score": 80,
-      "label": "Heating Up",
-      "reviews_increasing": true,
+      "score": 35,
+      "label": "Some Movement",
+      "reviews_increasing": false,
       "instagram_active": true,
       "website_updated": false,
-      "is_buying_signal": true,
+      "is_buying_signal": false,
       "lines": [
-        "\u2713 Google reviews active",
-        "\u2713 Instagram profile active",
-        "\u2717 Website missing"
+        "✗ Reviews increasing",
+        "✓ Instagram active",
+        "✗ Website updated"
       ]
     },
     "relationship": {
       "bca_member": false,
-      "second_generation": true,
-      "growth_mindset": true,
+      "second_generation": false,
+      "growth_mindset": false,
       "agency_user": false,
-      "tags": [
-        "2nd Gen Operator",
-        "Growth Mindset"
-      ],
+      "tags": [],
       "notes": "",
-      "has_human_intel": true,
+      "has_human_intel": false,
       "lines": [
-        "2nd Gen Operator",
-        "Growth Mindset"
+        "No field intel captured yet"
       ]
     }
   },
   "Utsav Banquet Hall": {
     "business_name": "Utsav Banquet Hall",
     "area": "Bhandup",
-    "suburb": "Bhandup",
-    "dmi_score": 47,
-    "dmi_category": "Visibility Weak",
-    "data_source": "google_live",
+    "suburb": "Mulund",
+    "dmi_score": 23.54,
+    "dmi_category": "Digitally Invisible",
+    "data_source": "ai_estimate",
     "territory_rank": {
-      "suburb": "Bhandup",
-      "suburb_rank": 1,
-      "suburb_total": 2,
-      "global_rank": 21,
+      "suburb": "Mulund",
+      "suburb_rank": 4,
+      "suburb_total": 5,
+      "global_rank": 91,
       "global_total": 106,
       "lines": [
-        "Bhandup Rank: #1 of 2 venues",
-        "Overall Rank: #21 of 106 venues"
+        "Mulund Rank: #4 of 5 venues",
+        "Overall Rank: #91 of 106 venues"
       ]
     },
     "digital_silence": {
-      "score": 40,
-      "label": "Moderate Silence",
-      "is_strong_digistories_signal": false,
+      "score": 60.0,
+      "label": "At Risk",
+      "is_strong_digistories_signal": true,
       "lines": [
-        "Instagram profile exists but needs reels rhythm",
-        "No active website trust signal",
-        "24 photos uploaded on Google Maps"
+        "No reel in 45 days",
+        "No review in 65 days",
+        "Only 10 photos on Google"
       ]
     },
     "smartos_opportunity": {
@@ -2340,23 +2373,22 @@ window.PANELS = {
       "manual_workflow_risk": "High",
       "whatsapp_dependency_risk": "High",
       "lines": [
-        "High capacity venue; double booking risk is critical",
-        "Structured as a Standalone Banquet; complex booking contracts",
-        "High probability of paper booking diary usage",
-        "WhatsApp booking chats are unorganized and staff-dependent"
+        "Inquiry leakage risk: High (~88%)",
+        "Manual workflow risk: High",
+        "WhatsApp dependency risk: High"
       ]
     },
     "growth_momentum": {
-      "score": 80,
-      "label": "Heating Up",
-      "reviews_increasing": true,
-      "instagram_active": true,
+      "score": 0,
+      "label": "Dormant",
+      "reviews_increasing": false,
+      "instagram_active": false,
       "website_updated": false,
-      "is_buying_signal": true,
+      "is_buying_signal": false,
       "lines": [
-        "\u2713 Google reviews active",
-        "\u2713 Instagram profile active",
-        "\u2717 Website missing"
+        "✗ Reviews increasing",
+        "✗ Instagram active",
+        "✗ Website updated"
       ]
     },
     "relationship": {
@@ -2375,54 +2407,53 @@ window.PANELS = {
   "Dreamland Banquet Hall": {
     "business_name": "Dreamland Banquet Hall",
     "area": "Bhandup",
-    "suburb": "Bhandup",
-    "dmi_score": 47,
+    "suburb": "Mulund",
+    "dmi_score": 58.01,
     "dmi_category": "Visibility Weak",
-    "data_source": "google_live",
+    "data_source": "ai_estimate",
     "territory_rank": {
-      "suburb": "Bhandup",
+      "suburb": "Mulund",
       "suburb_rank": 1,
-      "suburb_total": 2,
-      "global_rank": 21,
+      "suburb_total": 5,
+      "global_rank": 17,
       "global_total": 106,
       "lines": [
-        "Bhandup Rank: #1 of 2 venues",
-        "Overall Rank: #21 of 106 venues"
+        "Mulund Rank: #1 of 5 venues",
+        "Overall Rank: #17 of 106 venues"
       ]
     },
     "digital_silence": {
-      "score": 40,
-      "label": "Moderate Silence",
+      "score": 15.0,
+      "label": "Active Pulse",
       "is_strong_digistories_signal": false,
       "lines": [
-        "Instagram profile exists but needs reels rhythm",
-        "No active website trust signal",
-        "24 photos uploaded on Google Maps"
+        "No reel in 14 days",
+        "No review in 49 days",
+        "49 photos on Google"
       ]
     },
     "smartos_opportunity": {
-      "opportunity_score": 100,
+      "opportunity_score": 85.0,
       "inquiry_leakage_risk": "High",
       "manual_workflow_risk": "High",
       "whatsapp_dependency_risk": "High",
       "lines": [
-        "High capacity venue; double booking risk is critical",
-        "Structured as a Standalone Banquet; complex booking contracts",
-        "High probability of paper booking diary usage",
-        "WhatsApp booking chats are unorganized and staff-dependent"
+        "Inquiry leakage risk: High (~73%)",
+        "Manual workflow risk: High",
+        "WhatsApp dependency risk: High"
       ]
     },
     "growth_momentum": {
-      "score": 80,
-      "label": "Heating Up",
-      "reviews_increasing": true,
+      "score": 35,
+      "label": "Some Movement",
+      "reviews_increasing": false,
       "instagram_active": true,
       "website_updated": false,
-      "is_buying_signal": true,
+      "is_buying_signal": false,
       "lines": [
-        "\u2713 Google reviews active",
-        "\u2713 Instagram profile active",
-        "\u2717 Website missing"
+        "✗ Reviews increasing",
+        "✓ Instagram active",
+        "✗ Website updated"
       ]
     },
     "relationship": {
@@ -2441,29 +2472,29 @@ window.PANELS = {
   "The Gateway Banquet": {
     "business_name": "The Gateway Banquet",
     "area": "Mulund West",
-    "suburb": "Mulund West",
-    "dmi_score": 49,
-    "dmi_category": "Visibility Weak",
-    "data_source": "google_live",
+    "suburb": "Mulund",
+    "dmi_score": 30.09,
+    "dmi_category": "Operationally Chaotic",
+    "data_source": "ai_estimate",
     "territory_rank": {
-      "suburb": "Mulund West",
-      "suburb_rank": 1,
-      "suburb_total": 1,
-      "global_rank": 1,
+      "suburb": "Mulund",
+      "suburb_rank": 3,
+      "suburb_total": 5,
+      "global_rank": 55,
       "global_total": 106,
       "lines": [
-        "Mulund West Rank: #1 of 1 venues",
-        "Overall Rank: #1 of 106 venues"
+        "Mulund Rank: #3 of 5 venues",
+        "Overall Rank: #55 of 106 venues"
       ]
     },
     "digital_silence": {
-      "score": 40,
-      "label": "Moderate Silence",
-      "is_strong_digistories_signal": false,
+      "score": 85.0,
+      "label": "Severe Silence",
+      "is_strong_digistories_signal": true,
       "lines": [
-        "Instagram profile exists but needs reels rhythm",
-        "No active website trust signal",
-        "24 photos uploaded on Google Maps"
+        "No reel in 85 days",
+        "No review in 81 days",
+        "18 photos on Google"
       ]
     },
     "smartos_opportunity": {
@@ -2472,23 +2503,22 @@ window.PANELS = {
       "manual_workflow_risk": "High",
       "whatsapp_dependency_risk": "High",
       "lines": [
-        "High capacity venue; double booking risk is critical",
-        "Structured as a Standalone Banquet; complex booking contracts",
-        "High probability of paper booking diary usage",
-        "WhatsApp booking chats are unorganized and staff-dependent"
+        "Inquiry leakage risk: High (~88%)",
+        "Manual workflow risk: High",
+        "WhatsApp dependency risk: High"
       ]
     },
     "growth_momentum": {
-      "score": 80,
-      "label": "Heating Up",
-      "reviews_increasing": true,
-      "instagram_active": true,
+      "score": 0,
+      "label": "Dormant",
+      "reviews_increasing": false,
+      "instagram_active": false,
       "website_updated": false,
-      "is_buying_signal": true,
+      "is_buying_signal": false,
       "lines": [
-        "\u2713 Google reviews active",
-        "\u2713 Instagram profile active",
-        "\u2717 Website missing"
+        "✗ Reviews increasing",
+        "✗ Instagram active",
+        "✗ Website updated"
       ]
     },
     "relationship": {
@@ -2507,29 +2537,29 @@ window.PANELS = {
   "Shehnai Banquet Hall": {
     "business_name": "Shehnai Banquet Hall",
     "area": "Mulund East",
-    "suburb": "Mulund East",
-    "dmi_score": 49,
-    "dmi_category": "Visibility Weak",
-    "data_source": "google_live",
+    "suburb": "Mulund",
+    "dmi_score": 40.93,
+    "dmi_category": "Operationally Chaotic",
+    "data_source": "ai_estimate",
     "territory_rank": {
-      "suburb": "Mulund East",
-      "suburb_rank": 1,
-      "suburb_total": 1,
-      "global_rank": 1,
+      "suburb": "Mulund",
+      "suburb_rank": 2,
+      "suburb_total": 5,
+      "global_rank": 37,
       "global_total": 106,
       "lines": [
-        "Mulund East Rank: #1 of 1 venues",
-        "Overall Rank: #1 of 106 venues"
+        "Mulund Rank: #2 of 5 venues",
+        "Overall Rank: #37 of 106 venues"
       ]
     },
     "digital_silence": {
-      "score": 40,
-      "label": "Moderate Silence",
+      "score": 15.0,
+      "label": "Active Pulse",
       "is_strong_digistories_signal": false,
       "lines": [
-        "Instagram profile exists but needs reels rhythm",
-        "No active website trust signal",
-        "24 photos uploaded on Google Maps"
+        "No reel in 14 days",
+        "No review in 31 days",
+        "31 photos on Google"
       ]
     },
     "smartos_opportunity": {
@@ -2538,23 +2568,22 @@ window.PANELS = {
       "manual_workflow_risk": "High",
       "whatsapp_dependency_risk": "High",
       "lines": [
-        "High capacity venue; double booking risk is critical",
-        "Structured as a Standalone Banquet; complex booking contracts",
-        "High probability of paper booking diary usage",
-        "WhatsApp booking chats are unorganized and staff-dependent"
+        "Inquiry leakage risk: High (~88%)",
+        "Manual workflow risk: High",
+        "WhatsApp dependency risk: High"
       ]
     },
     "growth_momentum": {
-      "score": 80,
-      "label": "Heating Up",
-      "reviews_increasing": true,
+      "score": 35,
+      "label": "Some Movement",
+      "reviews_increasing": false,
       "instagram_active": true,
       "website_updated": false,
-      "is_buying_signal": true,
+      "is_buying_signal": false,
       "lines": [
-        "\u2713 Google reviews active",
-        "\u2713 Instagram profile active",
-        "\u2717 Website missing"
+        "✗ Reviews increasing",
+        "✓ Instagram active",
+        "✗ Website updated"
       ]
     },
     "relationship": {
@@ -2574,68 +2603,64 @@ window.PANELS = {
     "business_name": "Blossom Banquet Hall",
     "area": "Kurla",
     "suburb": "Kurla",
-    "dmi_score": 8,
-    "dmi_category": "Digitally Invisible",
+    "dmi_score": 46.71,
+    "dmi_category": "Visibility Weak",
     "data_source": "ai_estimate",
     "territory_rank": {
       "suburb": "Kurla",
       "suburb_rank": 1,
       "suburb_total": 1,
-      "global_rank": 74,
+      "global_rank": 32,
       "global_total": 106,
       "lines": [
         "Kurla Rank: #1 of 1 venues",
-        "Overall Rank: #74 of 106 venues"
+        "Overall Rank: #32 of 106 venues"
       ]
     },
     "digital_silence": {
-      "score": 100,
-      "label": "Severe Silence",
-      "is_strong_digistories_signal": true,
+      "score": 15.0,
+      "label": "Active Pulse",
+      "is_strong_digistories_signal": false,
       "lines": [
-        "No Instagram account found",
-        "Very low Google review count",
-        "No active website trust signal",
-        "Only 4 photos on Google Maps"
+        "No reel in 17 days",
+        "No review in 22 days",
+        "22 photos on Google"
       ]
     },
     "smartos_opportunity": {
-      "opportunity_score": 100,
+      "opportunity_score": 80.0,
       "inquiry_leakage_risk": "High",
       "manual_workflow_risk": "High",
       "whatsapp_dependency_risk": "High",
       "lines": [
-        "High capacity venue; double booking risk is critical",
-        "Structured as a Standalone Banquet; complex booking contracts",
-        "High probability of paper booking diary usage",
-        "WhatsApp booking chats are unorganized and staff-dependent"
+        "Inquiry leakage risk: High (~68%)",
+        "Manual workflow risk: High",
+        "WhatsApp dependency risk: High"
       ]
     },
     "growth_momentum": {
-      "score": 0,
-      "label": "Dormant",
-      "reviews_increasing": false,
-      "instagram_active": false,
+      "score": 75,
+      "label": "Heating Up",
+      "reviews_increasing": true,
+      "instagram_active": true,
       "website_updated": false,
-      "is_buying_signal": false,
+      "is_buying_signal": true,
       "lines": [
-        "\u2717 Reviews stagnant or low",
-        "\u2717 Instagram dormant or missing",
-        "\u2717 Website missing"
+        "✓ Reviews increasing",
+        "✓ Instagram active",
+        "✗ Website updated"
       ]
     },
     "relationship": {
       "bca_member": false,
-      "second_generation": true,
+      "second_generation": false,
       "growth_mindset": false,
       "agency_user": false,
-      "tags": [
-        "2nd Gen Operator"
-      ],
+      "tags": [],
       "notes": "",
-      "has_human_intel": true,
+      "has_human_intel": false,
       "lines": [
-        "2nd Gen Operator"
+        "No field intel captured yet"
       ]
     }
   },
@@ -2643,68 +2668,64 @@ window.PANELS = {
     "business_name": "Club Emerald Banquets",
     "area": "Chembur",
     "suburb": "Chembur",
-    "dmi_score": 8,
-    "dmi_category": "Digitally Invisible",
+    "dmi_score": 57.84,
+    "dmi_category": "Visibility Weak",
     "data_source": "ai_estimate",
     "territory_rank": {
       "suburb": "Chembur",
       "suburb_rank": 2,
-      "suburb_total": 3,
-      "global_rank": 74,
+      "suburb_total": 5,
+      "global_rank": 19,
       "global_total": 106,
       "lines": [
-        "Chembur Rank: #2 of 3 venues",
-        "Overall Rank: #74 of 106 venues"
+        "Chembur Rank: #2 of 5 venues",
+        "Overall Rank: #19 of 106 venues"
       ]
     },
     "digital_silence": {
-      "score": 100,
-      "label": "Severe Silence",
-      "is_strong_digistories_signal": true,
+      "score": 15.0,
+      "label": "Active Pulse",
+      "is_strong_digistories_signal": false,
       "lines": [
-        "No Instagram account found",
-        "Very low Google review count",
-        "No active website trust signal",
-        "Only 4 photos on Google Maps"
+        "No reel in 26 days",
+        "No review in 43 days",
+        "43 photos on Google"
       ]
     },
     "smartos_opportunity": {
-      "opportunity_score": 100,
+      "opportunity_score": 85.0,
       "inquiry_leakage_risk": "High",
       "manual_workflow_risk": "High",
       "whatsapp_dependency_risk": "High",
       "lines": [
-        "High capacity venue; double booking risk is critical",
-        "Structured as a Standalone Banquet; complex booking contracts",
-        "High probability of paper booking diary usage",
-        "WhatsApp booking chats are unorganized and staff-dependent"
+        "Inquiry leakage risk: High (~73%)",
+        "Manual workflow risk: High",
+        "WhatsApp dependency risk: High"
       ]
     },
     "growth_momentum": {
-      "score": 0,
-      "label": "Dormant",
+      "score": 35,
+      "label": "Some Movement",
       "reviews_increasing": false,
-      "instagram_active": false,
+      "instagram_active": true,
       "website_updated": false,
       "is_buying_signal": false,
       "lines": [
-        "\u2717 Reviews stagnant or low",
-        "\u2717 Instagram dormant or missing",
-        "\u2717 Website missing"
+        "✗ Reviews increasing",
+        "✓ Instagram active",
+        "✗ Website updated"
       ]
     },
     "relationship": {
-      "bca_member": true,
+      "bca_member": false,
       "second_generation": false,
       "growth_mindset": false,
       "agency_user": false,
-      "tags": [
-        "BCA Member"
-      ],
-      "notes": "BCA network contact. Trust factor is high.",
-      "has_human_intel": true,
+      "tags": [],
+      "notes": "",
+      "has_human_intel": false,
       "lines": [
-        "BCA Member"
+        "No field intel captured yet"
       ]
     }
   },
@@ -2712,29 +2733,28 @@ window.PANELS = {
     "business_name": "GCC Club Lawn",
     "area": "Mira Road",
     "suburb": "Mira Road",
-    "dmi_score": 8,
+    "dmi_score": 26.92,
     "dmi_category": "Digitally Invisible",
-    "data_source": "google_live",
+    "data_source": "ai_estimate",
     "territory_rank": {
       "suburb": "Mira Road",
-      "suburb_rank": 2,
+      "suburb_rank": 1,
       "suburb_total": 2,
-      "global_rank": 74,
+      "global_rank": 78,
       "global_total": 106,
       "lines": [
-        "Mira Road Rank: #2 of 2 venues",
-        "Overall Rank: #74 of 106 venues"
+        "Mira Road Rank: #1 of 2 venues",
+        "Overall Rank: #78 of 106 venues"
       ]
     },
     "digital_silence": {
-      "score": 100,
-      "label": "Severe Silence",
+      "score": 60.0,
+      "label": "At Risk",
       "is_strong_digistories_signal": true,
       "lines": [
-        "No Instagram account found",
-        "Very low Google review count",
-        "No active website trust signal",
-        "Only 4 photos on Google Maps"
+        "No reel in 53 days",
+        "No review in 73 days",
+        "14 photos on Google"
       ]
     },
     "smartos_opportunity": {
@@ -2743,10 +2763,9 @@ window.PANELS = {
       "manual_workflow_risk": "High",
       "whatsapp_dependency_risk": "High",
       "lines": [
-        "High capacity venue; double booking risk is critical",
-        "Structured as a Standalone Banquet; complex booking contracts",
-        "High probability of paper booking diary usage",
-        "WhatsApp booking chats are unorganized and staff-dependent"
+        "Inquiry leakage risk: High (~88%)",
+        "Manual workflow risk: High",
+        "WhatsApp dependency risk: High"
       ]
     },
     "growth_momentum": {
@@ -2757,53 +2776,50 @@ window.PANELS = {
       "website_updated": false,
       "is_buying_signal": false,
       "lines": [
-        "\u2717 Reviews stagnant or low",
-        "\u2717 Instagram dormant or missing",
-        "\u2717 Website missing"
+        "✗ Reviews increasing",
+        "✗ Instagram active",
+        "✗ Website updated"
       ]
     },
     "relationship": {
       "bca_member": false,
       "second_generation": false,
-      "growth_mindset": true,
+      "growth_mindset": false,
       "agency_user": false,
-      "tags": [
-        "Growth Mindset"
-      ],
+      "tags": [],
       "notes": "",
-      "has_human_intel": true,
+      "has_human_intel": false,
       "lines": [
-        "Growth Mindset"
+        "No field intel captured yet"
       ]
     }
   },
   "Sapphire Banquet": {
     "business_name": "Sapphire Banquet",
     "area": "Kanjurmarg",
-    "suburb": "Kanjurmarg",
-    "dmi_score": 43,
-    "dmi_category": "Visibility Weak",
-    "data_source": "google_live",
+    "suburb": "Mulund",
+    "dmi_score": 23.18,
+    "dmi_category": "Digitally Invisible",
+    "data_source": "ai_estimate",
     "territory_rank": {
-      "suburb": "Kanjurmarg",
-      "suburb_rank": 1,
-      "suburb_total": 1,
-      "global_rank": 52,
+      "suburb": "Mulund",
+      "suburb_rank": 5,
+      "suburb_total": 5,
+      "global_rank": 95,
       "global_total": 106,
       "lines": [
-        "Kanjurmarg Rank: #1 of 1 venues",
-        "Overall Rank: #52 of 106 venues"
+        "Mulund Rank: #5 of 5 venues",
+        "Overall Rank: #95 of 106 venues"
       ]
     },
     "digital_silence": {
-      "score": 55,
-      "label": "Moderate Silence",
-      "is_strong_digistories_signal": false,
+      "score": 75.0,
+      "label": "Severe Silence",
+      "is_strong_digistories_signal": true,
       "lines": [
-        "Instagram profile exists but needs reels rhythm",
-        "Recent Google reviews are sparse",
-        "No active website trust signal",
-        "24 photos uploaded on Google Maps"
+        "No reel in 45 days",
+        "No review in 61 days",
+        "Only 8 photos on Google"
       ]
     },
     "smartos_opportunity": {
@@ -2812,23 +2828,22 @@ window.PANELS = {
       "manual_workflow_risk": "High",
       "whatsapp_dependency_risk": "High",
       "lines": [
-        "High capacity venue; double booking risk is critical",
-        "Structured as a Standalone Banquet; complex booking contracts",
-        "High probability of paper booking diary usage",
-        "WhatsApp booking chats are unorganized and staff-dependent"
+        "Inquiry leakage risk: High (~88%)",
+        "Manual workflow risk: High",
+        "WhatsApp dependency risk: High"
       ]
     },
     "growth_momentum": {
-      "score": 40,
-      "label": "Some Movement",
+      "score": 0,
+      "label": "Dormant",
       "reviews_increasing": false,
-      "instagram_active": true,
+      "instagram_active": false,
       "website_updated": false,
       "is_buying_signal": false,
       "lines": [
-        "\u2717 Reviews stagnant or low",
-        "\u2713 Instagram profile active",
-        "\u2717 Website missing"
+        "✗ Reviews increasing",
+        "✗ Instagram active",
+        "✗ Website updated"
       ]
     },
     "relationship": {
@@ -2847,55 +2862,53 @@ window.PANELS = {
   "Grand Banquet at The Club": {
     "business_name": "Grand Banquet at The Club",
     "area": "Andheri West",
-    "suburb": "Andheri West",
-    "dmi_score": 43,
-    "dmi_category": "Visibility Weak",
-    "data_source": "google_live",
+    "suburb": "Andheri",
+    "dmi_score": 68.8,
+    "dmi_category": "Growth Ready",
+    "data_source": "ai_estimate",
     "territory_rank": {
-      "suburb": "Andheri West",
+      "suburb": "Andheri",
       "suburb_rank": 1,
-      "suburb_total": 1,
-      "global_rank": 52,
+      "suburb_total": 7,
+      "global_rank": 2,
       "global_total": 106,
       "lines": [
-        "Andheri West Rank: #1 of 1 venues",
-        "Overall Rank: #52 of 106 venues"
+        "Andheri Rank: #1 of 7 venues",
+        "Overall Rank: #2 of 106 venues"
       ]
     },
     "digital_silence": {
-      "score": 55,
-      "label": "Moderate Silence",
+      "score": 15.0,
+      "label": "Active Pulse",
       "is_strong_digistories_signal": false,
       "lines": [
-        "Instagram profile exists but needs reels rhythm",
-        "Recent Google reviews are sparse",
-        "No active website trust signal",
-        "24 photos uploaded on Google Maps"
+        "No reel in 11 days",
+        "No review in 46 days",
+        "46 photos on Google"
       ]
     },
     "smartos_opportunity": {
-      "opportunity_score": 100,
+      "opportunity_score": 61.0,
       "inquiry_leakage_risk": "High",
       "manual_workflow_risk": "High",
       "whatsapp_dependency_risk": "High",
       "lines": [
-        "High capacity venue; double booking risk is critical",
-        "Structured as a Standalone Banquet; complex booking contracts",
-        "High probability of paper booking diary usage",
-        "WhatsApp booking chats are unorganized and staff-dependent"
+        "Inquiry leakage risk: High (~53%)",
+        "Manual workflow risk: High",
+        "WhatsApp dependency risk: High"
       ]
     },
     "growth_momentum": {
-      "score": 40,
+      "score": 35,
       "label": "Some Movement",
       "reviews_increasing": false,
       "instagram_active": true,
       "website_updated": false,
       "is_buying_signal": false,
       "lines": [
-        "\u2717 Reviews stagnant or low",
-        "\u2713 Instagram profile active",
-        "\u2717 Website missing"
+        "✗ Reviews increasing",
+        "✓ Instagram active",
+        "✗ Website updated"
       ]
     },
     "relationship": {
@@ -2914,29 +2927,29 @@ window.PANELS = {
   "Eskay Resorts Lawn": {
     "business_name": "Eskay Resorts Lawn",
     "area": "Borivali West",
-    "suburb": "Borivali West",
-    "dmi_score": 47,
-    "dmi_category": "Visibility Weak",
-    "data_source": "google_live",
+    "suburb": "Borivali",
+    "dmi_score": 25.32,
+    "dmi_category": "Digitally Invisible",
+    "data_source": "ai_estimate",
     "territory_rank": {
-      "suburb": "Borivali West",
-      "suburb_rank": 1,
-      "suburb_total": 1,
-      "global_rank": 21,
+      "suburb": "Borivali",
+      "suburb_rank": 2,
+      "suburb_total": 2,
+      "global_rank": 83,
       "global_total": 106,
       "lines": [
-        "Borivali West Rank: #1 of 1 venues",
-        "Overall Rank: #21 of 106 venues"
+        "Borivali Rank: #2 of 2 venues",
+        "Overall Rank: #83 of 106 venues"
       ]
     },
     "digital_silence": {
-      "score": 40,
-      "label": "Moderate Silence",
-      "is_strong_digistories_signal": false,
+      "score": 85.0,
+      "label": "Severe Silence",
+      "is_strong_digistories_signal": true,
       "lines": [
-        "Instagram profile exists but needs reels rhythm",
-        "No active website trust signal",
-        "24 photos uploaded on Google Maps"
+        "No reel in 117 days",
+        "No review in 77 days",
+        "16 photos on Google"
       ]
     },
     "smartos_opportunity": {
@@ -2945,37 +2958,34 @@ window.PANELS = {
       "manual_workflow_risk": "High",
       "whatsapp_dependency_risk": "High",
       "lines": [
-        "High capacity venue; double booking risk is critical",
-        "Structured as a Standalone Banquet; complex booking contracts",
-        "High probability of paper booking diary usage",
-        "WhatsApp booking chats are unorganized and staff-dependent"
+        "Inquiry leakage risk: High (~88%)",
+        "Manual workflow risk: High",
+        "WhatsApp dependency risk: High"
       ]
     },
     "growth_momentum": {
-      "score": 80,
-      "label": "Heating Up",
-      "reviews_increasing": true,
-      "instagram_active": true,
+      "score": 0,
+      "label": "Dormant",
+      "reviews_increasing": false,
+      "instagram_active": false,
       "website_updated": false,
-      "is_buying_signal": true,
+      "is_buying_signal": false,
       "lines": [
-        "\u2713 Google reviews active",
-        "\u2713 Instagram profile active",
-        "\u2717 Website missing"
+        "✗ Reviews increasing",
+        "✗ Instagram active",
+        "✗ Website updated"
       ]
     },
     "relationship": {
       "bca_member": false,
-      "second_generation": true,
+      "second_generation": false,
       "growth_mindset": false,
       "agency_user": false,
-      "tags": [
-        "2nd Gen Operator"
-      ],
+      "tags": [],
       "notes": "",
-      "has_human_intel": true,
+      "has_human_intel": false,
       "lines": [
-        "2nd Gen Operator"
+        "No field intel captured yet"
       ]
     }
   },
@@ -2983,28 +2993,28 @@ window.PANELS = {
     "business_name": "Hotel Tip Top Plaza",
     "area": "Thane West",
     "suburb": "Thane West",
-    "dmi_score": 47,
-    "dmi_category": "Visibility Weak",
-    "data_source": "google_live",
+    "dmi_score": 19.55,
+    "dmi_category": "Digitally Invisible",
+    "data_source": "ai_estimate",
     "territory_rank": {
       "suburb": "Thane West",
-      "suburb_rank": 3,
-      "suburb_total": 9,
-      "global_rank": 21,
+      "suburb_rank": 13,
+      "suburb_total": 13,
+      "global_rank": 102,
       "global_total": 106,
       "lines": [
-        "Thane West Rank: #3 of 9 venues",
-        "Overall Rank: #21 of 106 venues"
+        "Thane West Rank: #13 of 13 venues",
+        "Overall Rank: #102 of 106 venues"
       ]
     },
     "digital_silence": {
-      "score": 40,
-      "label": "Moderate Silence",
-      "is_strong_digistories_signal": false,
+      "score": 100.0,
+      "label": "Severe Silence",
+      "is_strong_digistories_signal": true,
       "lines": [
-        "Instagram profile exists but needs reels rhythm",
-        "No active website trust signal",
-        "24 photos uploaded on Google Maps"
+        "No reel in 110 days",
+        "No review in 78 days",
+        "Only 6 photos on Google"
       ]
     },
     "smartos_opportunity": {
@@ -3013,23 +3023,22 @@ window.PANELS = {
       "manual_workflow_risk": "High",
       "whatsapp_dependency_risk": "High",
       "lines": [
-        "High capacity venue; double booking risk is critical",
-        "Structured as a Standalone Banquet; complex booking contracts",
-        "High probability of paper booking diary usage",
-        "WhatsApp booking chats are unorganized and staff-dependent"
+        "Inquiry leakage risk: High (~88%)",
+        "Manual workflow risk: High",
+        "WhatsApp dependency risk: High"
       ]
     },
     "growth_momentum": {
-      "score": 80,
-      "label": "Heating Up",
-      "reviews_increasing": true,
-      "instagram_active": true,
+      "score": 0,
+      "label": "Dormant",
+      "reviews_increasing": false,
+      "instagram_active": false,
       "website_updated": false,
-      "is_buying_signal": true,
+      "is_buying_signal": false,
       "lines": [
-        "\u2713 Google reviews active",
-        "\u2713 Instagram profile active",
-        "\u2717 Website missing"
+        "✗ Reviews increasing",
+        "✗ Instagram active",
+        "✗ Website updated"
       ]
     },
     "relationship": {
@@ -3049,28 +3058,28 @@ window.PANELS = {
     "business_name": "iLeaf Ritz Banquets",
     "area": "Thane West",
     "suburb": "Thane West",
-    "dmi_score": 47,
-    "dmi_category": "Visibility Weak",
-    "data_source": "google_live",
+    "dmi_score": 31.33,
+    "dmi_category": "Operationally Chaotic",
+    "data_source": "ai_estimate",
     "territory_rank": {
       "suburb": "Thane West",
-      "suburb_rank": 3,
-      "suburb_total": 9,
-      "global_rank": 21,
+      "suburb_rank": 4,
+      "suburb_total": 13,
+      "global_rank": 52,
       "global_total": 106,
       "lines": [
-        "Thane West Rank: #3 of 9 venues",
-        "Overall Rank: #21 of 106 venues"
+        "Thane West Rank: #4 of 13 venues",
+        "Overall Rank: #52 of 106 venues"
       ]
     },
     "digital_silence": {
-      "score": 40,
-      "label": "Moderate Silence",
-      "is_strong_digistories_signal": false,
+      "score": 85.0,
+      "label": "Severe Silence",
+      "is_strong_digistories_signal": true,
       "lines": [
-        "Instagram profile exists but needs reels rhythm",
-        "No active website trust signal",
-        "24 photos uploaded on Google Maps"
+        "No reel in 85 days",
+        "No review in 93 days",
+        "24 photos on Google"
       ]
     },
     "smartos_opportunity": {
@@ -3079,23 +3088,22 @@ window.PANELS = {
       "manual_workflow_risk": "High",
       "whatsapp_dependency_risk": "High",
       "lines": [
-        "High capacity venue; double booking risk is critical",
-        "Structured as a Standalone Banquet; complex booking contracts",
-        "High probability of paper booking diary usage",
-        "WhatsApp booking chats are unorganized and staff-dependent"
+        "Inquiry leakage risk: High (~88%)",
+        "Manual workflow risk: High",
+        "WhatsApp dependency risk: High"
       ]
     },
     "growth_momentum": {
-      "score": 80,
-      "label": "Heating Up",
-      "reviews_increasing": true,
-      "instagram_active": true,
+      "score": 0,
+      "label": "Dormant",
+      "reviews_increasing": false,
+      "instagram_active": false,
       "website_updated": false,
-      "is_buying_signal": true,
+      "is_buying_signal": false,
       "lines": [
-        "\u2713 Google reviews active",
-        "\u2713 Instagram profile active",
-        "\u2717 Website missing"
+        "✗ Reviews increasing",
+        "✗ Instagram active",
+        "✗ Website updated"
       ]
     },
     "relationship": {
@@ -3115,28 +3123,28 @@ window.PANELS = {
     "business_name": "Satkar Grand Banquets",
     "area": "Thane West",
     "suburb": "Thane West",
-    "dmi_score": 49,
-    "dmi_category": "Visibility Weak",
-    "data_source": "google_live",
+    "dmi_score": 23.33,
+    "dmi_category": "Digitally Invisible",
+    "data_source": "ai_estimate",
     "territory_rank": {
       "suburb": "Thane West",
-      "suburb_rank": 1,
-      "suburb_total": 9,
-      "global_rank": 1,
+      "suburb_rank": 11,
+      "suburb_total": 13,
+      "global_rank": 93,
       "global_total": 106,
       "lines": [
-        "Thane West Rank: #1 of 9 venues",
-        "Overall Rank: #1 of 106 venues"
+        "Thane West Rank: #11 of 13 venues",
+        "Overall Rank: #93 of 106 venues"
       ]
     },
     "digital_silence": {
-      "score": 40,
-      "label": "Moderate Silence",
-      "is_strong_digistories_signal": false,
+      "score": 85.0,
+      "label": "Severe Silence",
+      "is_strong_digistories_signal": true,
       "lines": [
-        "Instagram profile exists but needs reels rhythm",
-        "No active website trust signal",
-        "24 photos uploaded on Google Maps"
+        "No reel in 105 days",
+        "No review in 90 days",
+        "Only 10 photos on Google"
       ]
     },
     "smartos_opportunity": {
@@ -3145,23 +3153,22 @@ window.PANELS = {
       "manual_workflow_risk": "High",
       "whatsapp_dependency_risk": "High",
       "lines": [
-        "High capacity venue; double booking risk is critical",
-        "Structured as a Standalone Banquet; complex booking contracts",
-        "High probability of paper booking diary usage",
-        "WhatsApp booking chats are unorganized and staff-dependent"
+        "Inquiry leakage risk: High (~88%)",
+        "Manual workflow risk: High",
+        "WhatsApp dependency risk: High"
       ]
     },
     "growth_momentum": {
-      "score": 80,
-      "label": "Heating Up",
-      "reviews_increasing": true,
-      "instagram_active": true,
+      "score": 0,
+      "label": "Dormant",
+      "reviews_increasing": false,
+      "instagram_active": false,
       "website_updated": false,
-      "is_buying_signal": true,
+      "is_buying_signal": false,
       "lines": [
-        "\u2713 Google reviews active",
-        "\u2713 Instagram profile active",
-        "\u2717 Website missing"
+        "✗ Reviews increasing",
+        "✗ Instagram active",
+        "✗ Website updated"
       ]
     },
     "relationship": {
@@ -3181,28 +3188,28 @@ window.PANELS = {
     "business_name": "Madhav Banquet",
     "area": "Thane West",
     "suburb": "Thane West",
-    "dmi_score": 49,
-    "dmi_category": "Visibility Weak",
-    "data_source": "google_live",
+    "dmi_score": 28.69,
+    "dmi_category": "Digitally Invisible",
+    "data_source": "ai_estimate",
     "territory_rank": {
       "suburb": "Thane West",
-      "suburb_rank": 1,
-      "suburb_total": 9,
-      "global_rank": 1,
+      "suburb_rank": 7,
+      "suburb_total": 13,
+      "global_rank": 64,
       "global_total": 106,
       "lines": [
-        "Thane West Rank: #1 of 9 venues",
-        "Overall Rank: #1 of 106 venues"
+        "Thane West Rank: #7 of 13 venues",
+        "Overall Rank: #64 of 106 venues"
       ]
     },
     "digital_silence": {
-      "score": 40,
-      "label": "Moderate Silence",
-      "is_strong_digistories_signal": false,
+      "score": 85.0,
+      "label": "Severe Silence",
+      "is_strong_digistories_signal": true,
       "lines": [
-        "Instagram profile exists but needs reels rhythm",
-        "No active website trust signal",
-        "24 photos uploaded on Google Maps"
+        "No reel in 85 days",
+        "No review in 69 days",
+        "12 photos on Google"
       ]
     },
     "smartos_opportunity": {
@@ -3211,37 +3218,34 @@ window.PANELS = {
       "manual_workflow_risk": "High",
       "whatsapp_dependency_risk": "High",
       "lines": [
-        "High capacity venue; double booking risk is critical",
-        "Structured as a Standalone Banquet; complex booking contracts",
-        "High probability of paper booking diary usage",
-        "WhatsApp booking chats are unorganized and staff-dependent"
+        "Inquiry leakage risk: High (~88%)",
+        "Manual workflow risk: High",
+        "WhatsApp dependency risk: High"
       ]
     },
     "growth_momentum": {
-      "score": 80,
-      "label": "Heating Up",
-      "reviews_increasing": true,
-      "instagram_active": true,
+      "score": 0,
+      "label": "Dormant",
+      "reviews_increasing": false,
+      "instagram_active": false,
       "website_updated": false,
-      "is_buying_signal": true,
+      "is_buying_signal": false,
       "lines": [
-        "\u2713 Google reviews active",
-        "\u2713 Instagram profile active",
-        "\u2717 Website missing"
+        "✗ Reviews increasing",
+        "✗ Instagram active",
+        "✗ Website updated"
       ]
     },
     "relationship": {
       "bca_member": false,
       "second_generation": false,
-      "growth_mindset": true,
+      "growth_mindset": false,
       "agency_user": false,
-      "tags": [
-        "Growth Mindset"
-      ],
+      "tags": [],
       "notes": "",
-      "has_human_intel": true,
+      "has_human_intel": false,
       "lines": [
-        "Growth Mindset"
+        "No field intel captured yet"
       ]
     }
   },
@@ -3249,29 +3253,28 @@ window.PANELS = {
     "business_name": "All Heavens Banquet",
     "area": "Thane West",
     "suburb": "Thane West",
-    "dmi_score": 8,
+    "dmi_score": 23.04,
     "dmi_category": "Digitally Invisible",
     "data_source": "ai_estimate",
     "territory_rank": {
       "suburb": "Thane West",
-      "suburb_rank": 7,
-      "suburb_total": 9,
-      "global_rank": 74,
+      "suburb_rank": 12,
+      "suburb_total": 13,
+      "global_rank": 96,
       "global_total": 106,
       "lines": [
-        "Thane West Rank: #7 of 9 venues",
-        "Overall Rank: #74 of 106 venues"
+        "Thane West Rank: #12 of 13 venues",
+        "Overall Rank: #96 of 106 venues"
       ]
     },
     "digital_silence": {
-      "score": 100,
+      "score": 75.0,
       "label": "Severe Silence",
       "is_strong_digistories_signal": true,
       "lines": [
-        "No Instagram account found",
-        "Very low Google review count",
-        "No active website trust signal",
-        "Only 4 photos on Google Maps"
+        "No reel in 117 days",
+        "No review in 57 days",
+        "Only 6 photos on Google"
       ]
     },
     "smartos_opportunity": {
@@ -3280,10 +3283,9 @@ window.PANELS = {
       "manual_workflow_risk": "High",
       "whatsapp_dependency_risk": "High",
       "lines": [
-        "High capacity venue; double booking risk is critical",
-        "Structured as a Standalone Banquet; complex booking contracts",
-        "High probability of paper booking diary usage",
-        "WhatsApp booking chats are unorganized and staff-dependent"
+        "Inquiry leakage risk: High (~88%)",
+        "Manual workflow risk: High",
+        "WhatsApp dependency risk: High"
       ]
     },
     "growth_momentum": {
@@ -3294,53 +3296,50 @@ window.PANELS = {
       "website_updated": false,
       "is_buying_signal": false,
       "lines": [
-        "\u2717 Reviews stagnant or low",
-        "\u2717 Instagram dormant or missing",
-        "\u2717 Website missing"
+        "✗ Reviews increasing",
+        "✗ Instagram active",
+        "✗ Website updated"
       ]
     },
     "relationship": {
       "bca_member": false,
-      "second_generation": true,
+      "second_generation": false,
       "growth_mindset": false,
       "agency_user": false,
-      "tags": [
-        "2nd Gen Operator"
-      ],
+      "tags": [],
       "notes": "",
-      "has_human_intel": true,
+      "has_human_intel": false,
       "lines": [
-        "2nd Gen Operator"
+        "No field intel captured yet"
       ]
     }
   },
   "Maharaja Banquet": {
     "business_name": "Maharaja Banquet",
     "area": "Ghodbunder Rd",
-    "suburb": "Ghodbunder Rd",
-    "dmi_score": 8,
+    "suburb": "Thane West",
+    "dmi_score": 28.32,
     "dmi_category": "Digitally Invisible",
     "data_source": "ai_estimate",
     "territory_rank": {
-      "suburb": "Ghodbunder Rd",
-      "suburb_rank": 1,
-      "suburb_total": 1,
-      "global_rank": 74,
+      "suburb": "Thane West",
+      "suburb_rank": 8,
+      "suburb_total": 13,
+      "global_rank": 69,
       "global_total": 106,
       "lines": [
-        "Ghodbunder Rd Rank: #1 of 1 venues",
-        "Overall Rank: #74 of 106 venues"
+        "Thane West Rank: #8 of 13 venues",
+        "Overall Rank: #69 of 106 venues"
       ]
     },
     "digital_silence": {
-      "score": 100,
-      "label": "Severe Silence",
+      "score": 60.0,
+      "label": "At Risk",
       "is_strong_digistories_signal": true,
       "lines": [
-        "No Instagram account found",
-        "Very low Google review count",
-        "No active website trust signal",
-        "Only 4 photos on Google Maps"
+        "No reel in 53 days",
+        "No review in 85 days",
+        "20 photos on Google"
       ]
     },
     "smartos_opportunity": {
@@ -3349,10 +3348,9 @@ window.PANELS = {
       "manual_workflow_risk": "High",
       "whatsapp_dependency_risk": "High",
       "lines": [
-        "High capacity venue; double booking risk is critical",
-        "Structured as a Standalone Banquet; complex booking contracts",
-        "High probability of paper booking diary usage",
-        "WhatsApp booking chats are unorganized and staff-dependent"
+        "Inquiry leakage risk: High (~88%)",
+        "Manual workflow risk: High",
+        "WhatsApp dependency risk: High"
       ]
     },
     "growth_momentum": {
@@ -3363,9 +3361,9 @@ window.PANELS = {
       "website_updated": false,
       "is_buying_signal": false,
       "lines": [
-        "\u2717 Reviews stagnant or low",
-        "\u2717 Instagram dormant or missing",
-        "\u2717 Website missing"
+        "✗ Reviews increasing",
+        "✗ Instagram active",
+        "✗ Website updated"
       ]
     },
     "relationship": {
@@ -3384,30 +3382,29 @@ window.PANELS = {
   "Exotica Yeoor Hills": {
     "business_name": "Exotica Yeoor Hills",
     "area": "Yeoor Hills",
-    "suburb": "Yeoor Hills",
-    "dmi_score": 8,
+    "suburb": "Thane West",
+    "dmi_score": 29.05,
     "dmi_category": "Digitally Invisible",
-    "data_source": "google_live",
+    "data_source": "ai_estimate",
     "territory_rank": {
-      "suburb": "Yeoor Hills",
-      "suburb_rank": 1,
-      "suburb_total": 1,
-      "global_rank": 74,
+      "suburb": "Thane West",
+      "suburb_rank": 6,
+      "suburb_total": 13,
+      "global_rank": 62,
       "global_total": 106,
       "lines": [
-        "Yeoor Hills Rank: #1 of 1 venues",
-        "Overall Rank: #74 of 106 venues"
+        "Thane West Rank: #6 of 13 venues",
+        "Overall Rank: #62 of 106 venues"
       ]
     },
     "digital_silence": {
-      "score": 100,
+      "score": 85.0,
       "label": "Severe Silence",
       "is_strong_digistories_signal": true,
       "lines": [
-        "No Instagram account found",
-        "Very low Google review count",
-        "No active website trust signal",
-        "Only 4 photos on Google Maps"
+        "No reel in 85 days",
+        "No review in 73 days",
+        "14 photos on Google"
       ]
     },
     "smartos_opportunity": {
@@ -3416,10 +3413,9 @@ window.PANELS = {
       "manual_workflow_risk": "High",
       "whatsapp_dependency_risk": "High",
       "lines": [
-        "High capacity venue; double booking risk is critical",
-        "Structured as a Standalone Banquet; complex booking contracts",
-        "High probability of paper booking diary usage",
-        "WhatsApp booking chats are unorganized and staff-dependent"
+        "Inquiry leakage risk: High (~88%)",
+        "Manual workflow risk: High",
+        "WhatsApp dependency risk: High"
       ]
     },
     "growth_momentum": {
@@ -3430,9 +3426,9 @@ window.PANELS = {
       "website_updated": false,
       "is_buying_signal": false,
       "lines": [
-        "\u2717 Reviews stagnant or low",
-        "\u2717 Instagram dormant or missing",
-        "\u2717 Website missing"
+        "✗ Reviews increasing",
+        "✗ Instagram active",
+        "✗ Website updated"
       ]
     },
     "relationship": {
@@ -3452,29 +3448,28 @@ window.PANELS = {
     "business_name": "Bramha Banquet",
     "area": "Thane West",
     "suburb": "Thane West",
-    "dmi_score": 43,
-    "dmi_category": "Visibility Weak",
-    "data_source": "google_live",
+    "dmi_score": 23.55,
+    "dmi_category": "Digitally Invisible",
+    "data_source": "ai_estimate",
     "territory_rank": {
       "suburb": "Thane West",
-      "suburb_rank": 5,
-      "suburb_total": 9,
-      "global_rank": 52,
+      "suburb_rank": 10,
+      "suburb_total": 13,
+      "global_rank": 90,
       "global_total": 106,
       "lines": [
-        "Thane West Rank: #5 of 9 venues",
-        "Overall Rank: #52 of 106 venues"
+        "Thane West Rank: #10 of 13 venues",
+        "Overall Rank: #90 of 106 venues"
       ]
     },
     "digital_silence": {
-      "score": 55,
-      "label": "Moderate Silence",
-      "is_strong_digistories_signal": false,
+      "score": 100.0,
+      "label": "Severe Silence",
+      "is_strong_digistories_signal": true,
       "lines": [
-        "Instagram profile exists but needs reels rhythm",
-        "Recent Google reviews are sparse",
-        "No active website trust signal",
-        "24 photos uploaded on Google Maps"
+        "No reel in 117 days",
+        "No review in 61 days",
+        "Only 8 photos on Google"
       ]
     },
     "smartos_opportunity": {
@@ -3483,23 +3478,22 @@ window.PANELS = {
       "manual_workflow_risk": "High",
       "whatsapp_dependency_risk": "High",
       "lines": [
-        "High capacity venue; double booking risk is critical",
-        "Structured as a Standalone Banquet; complex booking contracts",
-        "High probability of paper booking diary usage",
-        "WhatsApp booking chats are unorganized and staff-dependent"
+        "Inquiry leakage risk: High (~88%)",
+        "Manual workflow risk: High",
+        "WhatsApp dependency risk: High"
       ]
     },
     "growth_momentum": {
-      "score": 40,
-      "label": "Some Movement",
+      "score": 0,
+      "label": "Dormant",
       "reviews_increasing": false,
-      "instagram_active": true,
+      "instagram_active": false,
       "website_updated": false,
       "is_buying_signal": false,
       "lines": [
-        "\u2717 Reviews stagnant or low",
-        "\u2713 Instagram profile active",
-        "\u2717 Website missing"
+        "✗ Reviews increasing",
+        "✗ Instagram active",
+        "✗ Website updated"
       ]
     },
     "relationship": {
@@ -3519,54 +3513,52 @@ window.PANELS = {
     "business_name": "Symphony Banquet",
     "area": "Thane West",
     "suburb": "Thane West",
-    "dmi_score": 43,
+    "dmi_score": 57.25,
     "dmi_category": "Visibility Weak",
-    "data_source": "google_live",
+    "data_source": "ai_estimate",
     "territory_rank": {
       "suburb": "Thane West",
-      "suburb_rank": 5,
-      "suburb_total": 9,
-      "global_rank": 52,
+      "suburb_rank": 1,
+      "suburb_total": 13,
+      "global_rank": 21,
       "global_total": 106,
       "lines": [
-        "Thane West Rank: #5 of 9 venues",
-        "Overall Rank: #52 of 106 venues"
+        "Thane West Rank: #1 of 13 venues",
+        "Overall Rank: #21 of 106 venues"
       ]
     },
     "digital_silence": {
-      "score": 55,
-      "label": "Moderate Silence",
+      "score": 15.0,
+      "label": "Active Pulse",
       "is_strong_digistories_signal": false,
       "lines": [
-        "Instagram profile exists but needs reels rhythm",
-        "Recent Google reviews are sparse",
-        "No active website trust signal",
-        "24 photos uploaded on Google Maps"
+        "No reel in 14 days",
+        "No review in 46 days",
+        "46 photos on Google"
       ]
     },
     "smartos_opportunity": {
-      "opportunity_score": 100,
+      "opportunity_score": 85.0,
       "inquiry_leakage_risk": "High",
       "manual_workflow_risk": "High",
       "whatsapp_dependency_risk": "High",
       "lines": [
-        "High capacity venue; double booking risk is critical",
-        "Structured as a Standalone Banquet; complex booking contracts",
-        "High probability of paper booking diary usage",
-        "WhatsApp booking chats are unorganized and staff-dependent"
+        "Inquiry leakage risk: High (~73%)",
+        "Manual workflow risk: High",
+        "WhatsApp dependency risk: High"
       ]
     },
     "growth_momentum": {
-      "score": 40,
+      "score": 35,
       "label": "Some Movement",
       "reviews_increasing": false,
       "instagram_active": true,
       "website_updated": false,
       "is_buying_signal": false,
       "lines": [
-        "\u2717 Reviews stagnant or low",
-        "\u2713 Instagram profile active",
-        "\u2717 Website missing"
+        "✗ Reviews increasing",
+        "✓ Instagram active",
+        "✗ Website updated"
       ]
     },
     "relationship": {
@@ -3585,68 +3577,65 @@ window.PANELS = {
   "Korum Mall Banquets": {
     "business_name": "Korum Mall Banquets",
     "area": "Eastern Exp Hwy",
-    "suburb": "Eastern Exp Hwy",
-    "dmi_score": 47,
+    "suburb": "Thane West",
+    "dmi_score": 55.53,
     "dmi_category": "Visibility Weak",
-    "data_source": "google_live",
+    "data_source": "ai_estimate",
     "territory_rank": {
-      "suburb": "Eastern Exp Hwy",
-      "suburb_rank": 1,
-      "suburb_total": 1,
-      "global_rank": 21,
+      "suburb": "Thane West",
+      "suburb_rank": 2,
+      "suburb_total": 13,
+      "global_rank": 25,
       "global_total": 106,
       "lines": [
-        "Eastern Exp Hwy Rank: #1 of 1 venues",
-        "Overall Rank: #21 of 106 venues"
+        "Thane West Rank: #2 of 13 venues",
+        "Overall Rank: #25 of 106 venues"
       ]
     },
     "digital_silence": {
-      "score": 40,
-      "label": "Moderate Silence",
+      "score": 15.0,
+      "label": "Active Pulse",
       "is_strong_digistories_signal": false,
       "lines": [
-        "Instagram profile exists but needs reels rhythm",
-        "No active website trust signal",
-        "24 photos uploaded on Google Maps"
+        "No reel in 20 days",
+        "No review in 37 days",
+        "37 photos on Google"
       ]
     },
     "smartos_opportunity": {
-      "opportunity_score": 100,
+      "opportunity_score": 85.0,
       "inquiry_leakage_risk": "High",
       "manual_workflow_risk": "High",
       "whatsapp_dependency_risk": "High",
       "lines": [
-        "High capacity venue; double booking risk is critical",
-        "Structured as a Standalone Banquet; complex booking contracts",
-        "High probability of paper booking diary usage",
-        "WhatsApp booking chats are unorganized and staff-dependent"
+        "Inquiry leakage risk: High (~73%)",
+        "Manual workflow risk: High",
+        "WhatsApp dependency risk: High"
       ]
     },
     "growth_momentum": {
-      "score": 80,
-      "label": "Heating Up",
-      "reviews_increasing": true,
+      "score": 35,
+      "label": "Some Movement",
+      "reviews_increasing": false,
       "instagram_active": true,
       "website_updated": false,
-      "is_buying_signal": true,
+      "is_buying_signal": false,
       "lines": [
-        "\u2713 Google reviews active",
-        "\u2713 Instagram profile active",
-        "\u2717 Website missing"
+        "✗ Reviews increasing",
+        "✓ Instagram active",
+        "✗ Website updated"
       ]
     },
     "relationship": {
       "bca_member": false,
-      "second_generation": true,
+      "second_generation": false,
       "growth_mindset": false,
       "agency_user": false,
-      "tags": [
-        "2nd Gen Operator"
-      ],
+      "tags": [],
       "notes": "",
-      "has_human_intel": true,
+      "has_human_intel": false,
       "lines": [
-        "2nd Gen Operator"
+        "No field intel captured yet"
       ]
     }
   },
@@ -3654,28 +3643,28 @@ window.PANELS = {
     "business_name": "Regency Hall",
     "area": "Kalyan",
     "suburb": "Kalyan",
-    "dmi_score": 47,
-    "dmi_category": "Visibility Weak",
-    "data_source": "google_live",
+    "dmi_score": 18.2,
+    "dmi_category": "Digitally Invisible",
+    "data_source": "ai_estimate",
     "territory_rank": {
       "suburb": "Kalyan",
-      "suburb_rank": 1,
+      "suburb_rank": 4,
       "suburb_total": 4,
-      "global_rank": 21,
+      "global_rank": 104,
       "global_total": 106,
       "lines": [
-        "Kalyan Rank: #1 of 4 venues",
-        "Overall Rank: #21 of 106 venues"
+        "Kalyan Rank: #4 of 4 venues",
+        "Overall Rank: #104 of 106 venues"
       ]
     },
     "digital_silence": {
-      "score": 40,
-      "label": "Moderate Silence",
-      "is_strong_digistories_signal": false,
+      "score": 100.0,
+      "label": "Severe Silence",
+      "is_strong_digistories_signal": true,
       "lines": [
-        "Instagram profile exists but needs reels rhythm",
-        "No active website trust signal",
-        "24 photos uploaded on Google Maps"
+        "No reels found at all",
+        "No review in 78 days",
+        "Only 6 photos on Google"
       ]
     },
     "smartos_opportunity": {
@@ -3684,37 +3673,34 @@ window.PANELS = {
       "manual_workflow_risk": "High",
       "whatsapp_dependency_risk": "High",
       "lines": [
-        "High capacity venue; double booking risk is critical",
-        "Structured as a Standalone Banquet; complex booking contracts",
-        "High probability of paper booking diary usage",
-        "WhatsApp booking chats are unorganized and staff-dependent"
+        "Inquiry leakage risk: High (~88%)",
+        "Manual workflow risk: High",
+        "WhatsApp dependency risk: High"
       ]
     },
     "growth_momentum": {
-      "score": 80,
-      "label": "Heating Up",
-      "reviews_increasing": true,
-      "instagram_active": true,
+      "score": 0,
+      "label": "Dormant",
+      "reviews_increasing": false,
+      "instagram_active": false,
       "website_updated": false,
-      "is_buying_signal": true,
+      "is_buying_signal": false,
       "lines": [
-        "\u2713 Google reviews active",
-        "\u2713 Instagram profile active",
-        "\u2717 Website missing"
+        "✗ Reviews increasing",
+        "✗ Instagram active",
+        "✗ Website updated"
       ]
     },
     "relationship": {
       "bca_member": false,
       "second_generation": false,
-      "growth_mindset": true,
+      "growth_mindset": false,
       "agency_user": false,
-      "tags": [
-        "Growth Mindset"
-      ],
+      "tags": [],
       "notes": "",
-      "has_human_intel": true,
+      "has_human_intel": false,
       "lines": [
-        "Growth Mindset"
+        "No field intel captured yet"
       ]
     }
   },
@@ -3722,53 +3708,52 @@ window.PANELS = {
     "business_name": "Springtime Club",
     "area": "Kalyan",
     "suburb": "Kalyan",
-    "dmi_score": 47,
+    "dmi_score": 64.56,
     "dmi_category": "Visibility Weak",
-    "data_source": "google_live",
+    "data_source": "ai_estimate",
     "territory_rank": {
       "suburb": "Kalyan",
-      "suburb_rank": 1,
+      "suburb_rank": 2,
       "suburb_total": 4,
-      "global_rank": 21,
+      "global_rank": 11,
       "global_total": 106,
       "lines": [
-        "Kalyan Rank: #1 of 4 venues",
-        "Overall Rank: #21 of 106 venues"
+        "Kalyan Rank: #2 of 4 venues",
+        "Overall Rank: #11 of 106 venues"
       ]
     },
     "digital_silence": {
-      "score": 40,
-      "label": "Moderate Silence",
+      "score": 15.0,
+      "label": "Active Pulse",
       "is_strong_digistories_signal": false,
       "lines": [
-        "Instagram profile exists but needs reels rhythm",
-        "No active website trust signal",
-        "24 photos uploaded on Google Maps"
+        "No reel in 5 days",
+        "No review in 49 days",
+        "49 photos on Google"
       ]
     },
     "smartos_opportunity": {
-      "opportunity_score": 100,
+      "opportunity_score": 61.0,
       "inquiry_leakage_risk": "High",
       "manual_workflow_risk": "High",
       "whatsapp_dependency_risk": "High",
       "lines": [
-        "High capacity venue; double booking risk is critical",
-        "Structured as a Standalone Banquet; complex booking contracts",
-        "High probability of paper booking diary usage",
-        "WhatsApp booking chats are unorganized and staff-dependent"
+        "Inquiry leakage risk: High (~53%)",
+        "Manual workflow risk: High",
+        "WhatsApp dependency risk: High"
       ]
     },
     "growth_momentum": {
-      "score": 80,
-      "label": "Heating Up",
-      "reviews_increasing": true,
+      "score": 35,
+      "label": "Some Movement",
+      "reviews_increasing": false,
       "instagram_active": true,
       "website_updated": false,
-      "is_buying_signal": true,
+      "is_buying_signal": false,
       "lines": [
-        "\u2713 Google reviews active",
-        "\u2713 Instagram profile active",
-        "\u2717 Website missing"
+        "✗ Reviews increasing",
+        "✓ Instagram active",
+        "✗ Website updated"
       ]
     },
     "relationship": {
@@ -3788,53 +3773,52 @@ window.PANELS = {
     "business_name": "Guru Nanak Darbar Banquet",
     "area": "Thane East",
     "suburb": "Thane East",
-    "dmi_score": 49,
-    "dmi_category": "Visibility Weak",
-    "data_source": "google_live",
+    "dmi_score": 67.44,
+    "dmi_category": "Growth Ready",
+    "data_source": "ai_estimate",
     "territory_rank": {
       "suburb": "Thane East",
       "suburb_rank": 1,
       "suburb_total": 1,
-      "global_rank": 1,
+      "global_rank": 3,
       "global_total": 106,
       "lines": [
         "Thane East Rank: #1 of 1 venues",
-        "Overall Rank: #1 of 106 venues"
+        "Overall Rank: #3 of 106 venues"
       ]
     },
     "digital_silence": {
-      "score": 40,
-      "label": "Moderate Silence",
+      "score": 15.0,
+      "label": "Active Pulse",
       "is_strong_digistories_signal": false,
       "lines": [
-        "Instagram profile exists but needs reels rhythm",
-        "No active website trust signal",
-        "24 photos uploaded on Google Maps"
+        "No reel in 11 days",
+        "No review in 40 days",
+        "40 photos on Google"
       ]
     },
     "smartos_opportunity": {
-      "opportunity_score": 100,
+      "opportunity_score": 61.0,
       "inquiry_leakage_risk": "High",
       "manual_workflow_risk": "High",
       "whatsapp_dependency_risk": "High",
       "lines": [
-        "High capacity venue; double booking risk is critical",
-        "Structured as a Standalone Banquet; complex booking contracts",
-        "High probability of paper booking diary usage",
-        "WhatsApp booking chats are unorganized and staff-dependent"
+        "Inquiry leakage risk: High (~53%)",
+        "Manual workflow risk: High",
+        "WhatsApp dependency risk: High"
       ]
     },
     "growth_momentum": {
-      "score": 80,
-      "label": "Heating Up",
-      "reviews_increasing": true,
+      "score": 35,
+      "label": "Some Movement",
+      "reviews_increasing": false,
       "instagram_active": true,
       "website_updated": false,
-      "is_buying_signal": true,
+      "is_buying_signal": false,
       "lines": [
-        "\u2713 Google reviews active",
-        "\u2713 Instagram profile active",
-        "\u2717 Website missing"
+        "✗ Reviews increasing",
+        "✓ Instagram active",
+        "✗ Website updated"
       ]
     },
     "relationship": {
@@ -3853,29 +3837,29 @@ window.PANELS = {
   "Shangrila Resort": {
     "business_name": "Shangrila Resort",
     "area": "Bhiwandi Road",
-    "suburb": "Bhiwandi Road",
-    "dmi_score": 49,
-    "dmi_category": "Visibility Weak",
-    "data_source": "google_live",
+    "suburb": "Thane West",
+    "dmi_score": 29.06,
+    "dmi_category": "Digitally Invisible",
+    "data_source": "ai_estimate",
     "territory_rank": {
-      "suburb": "Bhiwandi Road",
-      "suburb_rank": 1,
-      "suburb_total": 1,
-      "global_rank": 1,
+      "suburb": "Thane West",
+      "suburb_rank": 5,
+      "suburb_total": 13,
+      "global_rank": 61,
       "global_total": 106,
       "lines": [
-        "Bhiwandi Road Rank: #1 of 1 venues",
-        "Overall Rank: #1 of 106 venues"
+        "Thane West Rank: #5 of 13 venues",
+        "Overall Rank: #61 of 106 venues"
       ]
     },
     "digital_silence": {
-      "score": 40,
-      "label": "Moderate Silence",
-      "is_strong_digistories_signal": false,
+      "score": 85.0,
+      "label": "Severe Silence",
+      "is_strong_digistories_signal": true,
       "lines": [
-        "Instagram profile exists but needs reels rhythm",
-        "No active website trust signal",
-        "24 photos uploaded on Google Maps"
+        "No reel in 61 days",
+        "No review in 69 days",
+        "12 photos on Google"
       ]
     },
     "smartos_opportunity": {
@@ -3884,23 +3868,22 @@ window.PANELS = {
       "manual_workflow_risk": "High",
       "whatsapp_dependency_risk": "High",
       "lines": [
-        "High capacity venue; double booking risk is critical",
-        "Structured as a Standalone Banquet; complex booking contracts",
-        "High probability of paper booking diary usage",
-        "WhatsApp booking chats are unorganized and staff-dependent"
+        "Inquiry leakage risk: High (~88%)",
+        "Manual workflow risk: High",
+        "WhatsApp dependency risk: High"
       ]
     },
     "growth_momentum": {
-      "score": 80,
-      "label": "Heating Up",
-      "reviews_increasing": true,
-      "instagram_active": true,
+      "score": 0,
+      "label": "Dormant",
+      "reviews_increasing": false,
+      "instagram_active": false,
       "website_updated": false,
-      "is_buying_signal": true,
+      "is_buying_signal": false,
       "lines": [
-        "\u2713 Google reviews active",
-        "\u2713 Instagram profile active",
-        "\u2717 Website missing"
+        "✗ Reviews increasing",
+        "✗ Instagram active",
+        "✗ Website updated"
       ]
     },
     "relationship": {
@@ -3920,29 +3903,28 @@ window.PANELS = {
     "business_name": "Shaurya Banquet",
     "area": "Thane West",
     "suburb": "Thane West",
-    "dmi_score": 8,
+    "dmi_score": 27.28,
     "dmi_category": "Digitally Invisible",
     "data_source": "ai_estimate",
     "territory_rank": {
       "suburb": "Thane West",
-      "suburb_rank": 7,
-      "suburb_total": 9,
-      "global_rank": 74,
+      "suburb_rank": 9,
+      "suburb_total": 13,
+      "global_rank": 75,
       "global_total": 106,
       "lines": [
-        "Thane West Rank: #7 of 9 venues",
-        "Overall Rank: #74 of 106 venues"
+        "Thane West Rank: #9 of 13 venues",
+        "Overall Rank: #75 of 106 venues"
       ]
     },
     "digital_silence": {
-      "score": 100,
+      "score": 75.0,
       "label": "Severe Silence",
       "is_strong_digistories_signal": true,
       "lines": [
-        "No Instagram account found",
-        "Very low Google review count",
-        "No active website trust signal",
-        "Only 4 photos on Google Maps"
+        "No reel in 85 days",
+        "No review in 57 days",
+        "Only 6 photos on Google"
       ]
     },
     "smartos_opportunity": {
@@ -3951,10 +3933,9 @@ window.PANELS = {
       "manual_workflow_risk": "High",
       "whatsapp_dependency_risk": "High",
       "lines": [
-        "High capacity venue; double booking risk is critical",
-        "Structured as a Standalone Banquet; complex booking contracts",
-        "High probability of paper booking diary usage",
-        "WhatsApp booking chats are unorganized and staff-dependent"
+        "Inquiry leakage risk: High (~88%)",
+        "Manual workflow risk: High",
+        "WhatsApp dependency risk: High"
       ]
     },
     "growth_momentum": {
@@ -3965,78 +3946,74 @@ window.PANELS = {
       "website_updated": false,
       "is_buying_signal": false,
       "lines": [
-        "\u2717 Reviews stagnant or low",
-        "\u2717 Instagram dormant or missing",
-        "\u2717 Website missing"
+        "✗ Reviews increasing",
+        "✗ Instagram active",
+        "✗ Website updated"
       ]
     },
     "relationship": {
       "bca_member": false,
-      "second_generation": true,
+      "second_generation": false,
       "growth_mindset": false,
       "agency_user": false,
-      "tags": [
-        "2nd Gen Operator"
-      ],
+      "tags": [],
       "notes": "",
-      "has_human_intel": true,
+      "has_human_intel": false,
       "lines": [
-        "2nd Gen Operator"
+        "No field intel captured yet"
       ]
     }
   },
-  "Royal Banquet Hall": {
-    "business_name": "Royal Banquet Hall",
+  "Royal Banquet Hall Kalyan": {
+    "business_name": "Royal Banquet Hall Kalyan",
     "area": "Kalyan",
     "suburb": "Kalyan",
-    "dmi_score": 8,
-    "dmi_category": "Digitally Invisible",
+    "dmi_score": 65.74,
+    "dmi_category": "Growth Ready",
     "data_source": "ai_estimate",
     "territory_rank": {
       "suburb": "Kalyan",
-      "suburb_rank": 4,
+      "suburb_rank": 1,
       "suburb_total": 4,
-      "global_rank": 74,
+      "global_rank": 7,
       "global_total": 106,
       "lines": [
-        "Kalyan Rank: #4 of 4 venues",
-        "Overall Rank: #74 of 106 venues"
+        "Kalyan Rank: #1 of 4 venues",
+        "Overall Rank: #7 of 106 venues"
       ]
     },
     "digital_silence": {
-      "score": 100,
-      "label": "Severe Silence",
-      "is_strong_digistories_signal": true,
+      "score": 15.0,
+      "label": "Active Pulse",
+      "is_strong_digistories_signal": false,
       "lines": [
-        "No Instagram account found",
-        "Very low Google review count",
-        "No active website trust signal",
-        "Only 4 photos on Google Maps"
+        "No reel in 29 days",
+        "No review in 43 days",
+        "43 photos on Google"
       ]
     },
     "smartos_opportunity": {
-      "opportunity_score": 100,
+      "opportunity_score": 61.0,
       "inquiry_leakage_risk": "High",
       "manual_workflow_risk": "High",
       "whatsapp_dependency_risk": "High",
       "lines": [
-        "High capacity venue; double booking risk is critical",
-        "Structured as a Standalone Banquet; complex booking contracts",
-        "High probability of paper booking diary usage",
-        "WhatsApp booking chats are unorganized and staff-dependent"
+        "Inquiry leakage risk: High (~53%)",
+        "Manual workflow risk: High",
+        "WhatsApp dependency risk: High"
       ]
     },
     "growth_momentum": {
-      "score": 0,
-      "label": "Dormant",
+      "score": 35,
+      "label": "Some Movement",
       "reviews_increasing": false,
-      "instagram_active": false,
+      "instagram_active": true,
       "website_updated": false,
       "is_buying_signal": false,
       "lines": [
-        "\u2717 Reviews stagnant or low",
-        "\u2717 Instagram dormant or missing",
-        "\u2717 Website missing"
+        "✗ Reviews increasing",
+        "✓ Instagram active",
+        "✗ Website updated"
       ]
     },
     "relationship": {
@@ -4056,29 +4033,28 @@ window.PANELS = {
     "business_name": "K. P. Banquet",
     "area": "Thane West",
     "suburb": "Thane West",
-    "dmi_score": 8,
-    "dmi_category": "Digitally Invisible",
-    "data_source": "google_live",
+    "dmi_score": 40.58,
+    "dmi_category": "Operationally Chaotic",
+    "data_source": "ai_estimate",
     "territory_rank": {
       "suburb": "Thane West",
-      "suburb_rank": 7,
-      "suburb_total": 9,
-      "global_rank": 74,
+      "suburb_rank": 3,
+      "suburb_total": 13,
+      "global_rank": 39,
       "global_total": 106,
       "lines": [
-        "Thane West Rank: #7 of 9 venues",
-        "Overall Rank: #74 of 106 venues"
+        "Thane West Rank: #3 of 13 venues",
+        "Overall Rank: #39 of 106 venues"
       ]
     },
     "digital_silence": {
-      "score": 100,
-      "label": "Severe Silence",
-      "is_strong_digistories_signal": true,
+      "score": 15.0,
+      "label": "Active Pulse",
+      "is_strong_digistories_signal": false,
       "lines": [
-        "No Instagram account found",
-        "Very low Google review count",
-        "No active website trust signal",
-        "Only 4 photos on Google Maps"
+        "No reel in 8 days",
+        "No review in 34 days",
+        "34 photos on Google"
       ]
     },
     "smartos_opportunity": {
@@ -4087,23 +4063,22 @@ window.PANELS = {
       "manual_workflow_risk": "High",
       "whatsapp_dependency_risk": "High",
       "lines": [
-        "High capacity venue; double booking risk is critical",
-        "Structured as a Standalone Banquet; complex booking contracts",
-        "High probability of paper booking diary usage",
-        "WhatsApp booking chats are unorganized and staff-dependent"
+        "Inquiry leakage risk: High (~88%)",
+        "Manual workflow risk: High",
+        "WhatsApp dependency risk: High"
       ]
     },
     "growth_momentum": {
-      "score": 0,
-      "label": "Dormant",
+      "score": 35,
+      "label": "Some Movement",
       "reviews_increasing": false,
-      "instagram_active": false,
+      "instagram_active": true,
       "website_updated": false,
       "is_buying_signal": false,
       "lines": [
-        "\u2717 Reviews stagnant or low",
-        "\u2717 Instagram dormant or missing",
-        "\u2717 Website missing"
+        "✗ Reviews increasing",
+        "✓ Instagram active",
+        "✗ Website updated"
       ]
     },
     "relationship": {
@@ -4123,29 +4098,28 @@ window.PANELS = {
     "business_name": "Nisarg Lawn & Banquet",
     "area": "Kalyan",
     "suburb": "Kalyan",
-    "dmi_score": 43,
-    "dmi_category": "Visibility Weak",
-    "data_source": "google_live",
+    "dmi_score": 27.43,
+    "dmi_category": "Digitally Invisible",
+    "data_source": "ai_estimate",
     "territory_rank": {
       "suburb": "Kalyan",
       "suburb_rank": 3,
       "suburb_total": 4,
-      "global_rank": 52,
+      "global_rank": 74,
       "global_total": 106,
       "lines": [
         "Kalyan Rank: #3 of 4 venues",
-        "Overall Rank: #52 of 106 venues"
+        "Overall Rank: #74 of 106 venues"
       ]
     },
     "digital_silence": {
-      "score": 55,
-      "label": "Moderate Silence",
-      "is_strong_digistories_signal": false,
+      "score": 100.0,
+      "label": "Severe Silence",
+      "is_strong_digistories_signal": true,
       "lines": [
-        "Instagram profile exists but needs reels rhythm",
-        "Recent Google reviews are sparse",
-        "No active website trust signal",
-        "24 photos uploaded on Google Maps"
+        "No reel in 109 days",
+        "No review in 61 days",
+        "Only 8 photos on Google"
       ]
     },
     "smartos_opportunity": {
@@ -4154,37 +4128,34 @@ window.PANELS = {
       "manual_workflow_risk": "High",
       "whatsapp_dependency_risk": "High",
       "lines": [
-        "High capacity venue; double booking risk is critical",
-        "Structured as a Standalone Banquet; complex booking contracts",
-        "High probability of paper booking diary usage",
-        "WhatsApp booking chats are unorganized and staff-dependent"
+        "Inquiry leakage risk: High (~88%)",
+        "Manual workflow risk: High",
+        "WhatsApp dependency risk: High"
       ]
     },
     "growth_momentum": {
-      "score": 40,
-      "label": "Some Movement",
+      "score": 0,
+      "label": "Dormant",
       "reviews_increasing": false,
-      "instagram_active": true,
+      "instagram_active": false,
       "website_updated": false,
       "is_buying_signal": false,
       "lines": [
-        "\u2717 Reviews stagnant or low",
-        "\u2713 Instagram profile active",
-        "\u2717 Website missing"
+        "✗ Reviews increasing",
+        "✗ Instagram active",
+        "✗ Website updated"
       ]
     },
     "relationship": {
       "bca_member": false,
       "second_generation": false,
-      "growth_mindset": true,
+      "growth_mindset": false,
       "agency_user": false,
-      "tags": [
-        "Growth Mindset"
-      ],
+      "tags": [],
       "notes": "",
-      "has_human_intel": true,
+      "has_human_intel": false,
       "lines": [
-        "Growth Mindset"
+        "No field intel captured yet"
       ]
     }
   },
@@ -4192,54 +4163,52 @@ window.PANELS = {
     "business_name": "Savitri Banquet Hall",
     "area": "Dombivli",
     "suburb": "Dombivli",
-    "dmi_score": 43,
+    "dmi_score": 58.6,
     "dmi_category": "Visibility Weak",
-    "data_source": "google_live",
+    "data_source": "ai_estimate",
     "territory_rank": {
       "suburb": "Dombivli",
-      "suburb_rank": 2,
+      "suburb_rank": 1,
       "suburb_total": 2,
-      "global_rank": 52,
+      "global_rank": 16,
       "global_total": 106,
       "lines": [
-        "Dombivli Rank: #2 of 2 venues",
-        "Overall Rank: #52 of 106 venues"
+        "Dombivli Rank: #1 of 2 venues",
+        "Overall Rank: #16 of 106 venues"
       ]
     },
     "digital_silence": {
-      "score": 55,
-      "label": "Moderate Silence",
+      "score": 15.0,
+      "label": "Active Pulse",
       "is_strong_digistories_signal": false,
       "lines": [
-        "Instagram profile exists but needs reels rhythm",
-        "Recent Google reviews are sparse",
-        "No active website trust signal",
-        "24 photos uploaded on Google Maps"
+        "No reel in 26 days",
+        "No review in 46 days",
+        "46 photos on Google"
       ]
     },
     "smartos_opportunity": {
-      "opportunity_score": 100,
+      "opportunity_score": 85.0,
       "inquiry_leakage_risk": "High",
       "manual_workflow_risk": "High",
       "whatsapp_dependency_risk": "High",
       "lines": [
-        "High capacity venue; double booking risk is critical",
-        "Structured as a Standalone Banquet; complex booking contracts",
-        "High probability of paper booking diary usage",
-        "WhatsApp booking chats are unorganized and staff-dependent"
+        "Inquiry leakage risk: High (~73%)",
+        "Manual workflow risk: High",
+        "WhatsApp dependency risk: High"
       ]
     },
     "growth_momentum": {
-      "score": 40,
+      "score": 35,
       "label": "Some Movement",
       "reviews_increasing": false,
       "instagram_active": true,
       "website_updated": false,
       "is_buying_signal": false,
       "lines": [
-        "\u2717 Reviews stagnant or low",
-        "\u2713 Instagram profile active",
-        "\u2717 Website missing"
+        "✗ Reviews increasing",
+        "✓ Instagram active",
+        "✗ Website updated"
       ]
     },
     "relationship": {
@@ -4259,67 +4228,64 @@ window.PANELS = {
     "business_name": "Golden Palace Banquet",
     "area": "Dombivli",
     "suburb": "Dombivli",
-    "dmi_score": 47,
+    "dmi_score": 56.48,
     "dmi_category": "Visibility Weak",
-    "data_source": "google_live",
+    "data_source": "ai_estimate",
     "territory_rank": {
       "suburb": "Dombivli",
-      "suburb_rank": 1,
+      "suburb_rank": 2,
       "suburb_total": 2,
-      "global_rank": 21,
+      "global_rank": 22,
       "global_total": 106,
       "lines": [
-        "Dombivli Rank: #1 of 2 venues",
-        "Overall Rank: #21 of 106 venues"
+        "Dombivli Rank: #2 of 2 venues",
+        "Overall Rank: #22 of 106 venues"
       ]
     },
     "digital_silence": {
-      "score": 40,
-      "label": "Moderate Silence",
+      "score": 15.0,
+      "label": "Active Pulse",
       "is_strong_digistories_signal": false,
       "lines": [
-        "Instagram profile exists but needs reels rhythm",
-        "No active website trust signal",
-        "24 photos uploaded on Google Maps"
+        "No reel in 26 days",
+        "No review in 37 days",
+        "37 photos on Google"
       ]
     },
     "smartos_opportunity": {
-      "opportunity_score": 100,
+      "opportunity_score": 85.0,
       "inquiry_leakage_risk": "High",
       "manual_workflow_risk": "High",
       "whatsapp_dependency_risk": "High",
       "lines": [
-        "High capacity venue; double booking risk is critical",
-        "Structured as a Standalone Banquet; complex booking contracts",
-        "High probability of paper booking diary usage",
-        "WhatsApp booking chats are unorganized and staff-dependent"
+        "Inquiry leakage risk: High (~73%)",
+        "Manual workflow risk: High",
+        "WhatsApp dependency risk: High"
       ]
     },
     "growth_momentum": {
-      "score": 80,
-      "label": "Heating Up",
-      "reviews_increasing": true,
+      "score": 35,
+      "label": "Some Movement",
+      "reviews_increasing": false,
       "instagram_active": true,
       "website_updated": false,
-      "is_buying_signal": true,
+      "is_buying_signal": false,
       "lines": [
-        "\u2713 Google reviews active",
-        "\u2713 Instagram profile active",
-        "\u2717 Website missing"
+        "✗ Reviews increasing",
+        "✓ Instagram active",
+        "✗ Website updated"
       ]
     },
     "relationship": {
       "bca_member": false,
-      "second_generation": true,
+      "second_generation": false,
       "growth_mindset": false,
       "agency_user": false,
-      "tags": [
-        "2nd Gen Operator"
-      ],
+      "tags": [],
       "notes": "",
-      "has_human_intel": true,
+      "has_human_intel": false,
       "lines": [
-        "2nd Gen Operator"
+        "No field intel captured yet"
       ]
     }
   },
@@ -4327,28 +4293,28 @@ window.PANELS = {
     "business_name": "iLeaf Grand Banquets",
     "area": "Vashi",
     "suburb": "Vashi",
-    "dmi_score": 47,
-    "dmi_category": "Visibility Weak",
-    "data_source": "google_live",
+    "dmi_score": 28.54,
+    "dmi_category": "Digitally Invisible",
+    "data_source": "ai_estimate",
     "territory_rank": {
       "suburb": "Vashi",
-      "suburb_rank": 2,
-      "suburb_total": 5,
-      "global_rank": 21,
+      "suburb_rank": 7,
+      "suburb_total": 10,
+      "global_rank": 66,
       "global_total": 106,
       "lines": [
-        "Vashi Rank: #2 of 5 venues",
-        "Overall Rank: #21 of 106 venues"
+        "Vashi Rank: #7 of 10 venues",
+        "Overall Rank: #66 of 106 venues"
       ]
     },
     "digital_silence": {
-      "score": 40,
-      "label": "Moderate Silence",
-      "is_strong_digistories_signal": false,
+      "score": 85.0,
+      "label": "Severe Silence",
+      "is_strong_digistories_signal": true,
       "lines": [
-        "Instagram profile exists but needs reels rhythm",
-        "No active website trust signal",
-        "24 photos uploaded on Google Maps"
+        "No reel in 61 days",
+        "No review in 65 days",
+        "Only 10 photos on Google"
       ]
     },
     "smartos_opportunity": {
@@ -4357,23 +4323,22 @@ window.PANELS = {
       "manual_workflow_risk": "High",
       "whatsapp_dependency_risk": "High",
       "lines": [
-        "High capacity venue; double booking risk is critical",
-        "Structured as a Standalone Banquet; complex booking contracts",
-        "High probability of paper booking diary usage",
-        "WhatsApp booking chats are unorganized and staff-dependent"
+        "Inquiry leakage risk: High (~88%)",
+        "Manual workflow risk: High",
+        "WhatsApp dependency risk: High"
       ]
     },
     "growth_momentum": {
-      "score": 80,
-      "label": "Heating Up",
-      "reviews_increasing": true,
-      "instagram_active": true,
+      "score": 0,
+      "label": "Dormant",
+      "reviews_increasing": false,
+      "instagram_active": false,
       "website_updated": false,
-      "is_buying_signal": true,
+      "is_buying_signal": false,
       "lines": [
-        "\u2713 Google reviews active",
-        "\u2713 Instagram profile active",
-        "\u2717 Website missing"
+        "✗ Reviews increasing",
+        "✗ Instagram active",
+        "✗ Website updated"
       ]
     },
     "relationship": {
@@ -4393,28 +4358,28 @@ window.PANELS = {
     "business_name": "Grand Golden Banquet",
     "area": "Vashi",
     "suburb": "Vashi",
-    "dmi_score": 47,
-    "dmi_category": "Visibility Weak",
-    "data_source": "google_live",
+    "dmi_score": 29.95,
+    "dmi_category": "Digitally Invisible",
+    "data_source": "ai_estimate",
     "territory_rank": {
       "suburb": "Vashi",
-      "suburb_rank": 2,
-      "suburb_total": 5,
-      "global_rank": 21,
+      "suburb_rank": 6,
+      "suburb_total": 10,
+      "global_rank": 57,
       "global_total": 106,
       "lines": [
-        "Vashi Rank: #2 of 5 venues",
-        "Overall Rank: #21 of 106 venues"
+        "Vashi Rank: #6 of 10 venues",
+        "Overall Rank: #57 of 106 venues"
       ]
     },
     "digital_silence": {
-      "score": 40,
-      "label": "Moderate Silence",
-      "is_strong_digistories_signal": false,
+      "score": 85.0,
+      "label": "Severe Silence",
+      "is_strong_digistories_signal": true,
       "lines": [
-        "Instagram profile exists but needs reels rhythm",
-        "No active website trust signal",
-        "24 photos uploaded on Google Maps"
+        "No reel in 101 days",
+        "No review in 93 days",
+        "24 photos on Google"
       ]
     },
     "smartos_opportunity": {
@@ -4423,23 +4388,22 @@ window.PANELS = {
       "manual_workflow_risk": "High",
       "whatsapp_dependency_risk": "High",
       "lines": [
-        "High capacity venue; double booking risk is critical",
-        "Structured as a Standalone Banquet; complex booking contracts",
-        "High probability of paper booking diary usage",
-        "WhatsApp booking chats are unorganized and staff-dependent"
+        "Inquiry leakage risk: High (~88%)",
+        "Manual workflow risk: High",
+        "WhatsApp dependency risk: High"
       ]
     },
     "growth_momentum": {
-      "score": 80,
-      "label": "Heating Up",
-      "reviews_increasing": true,
-      "instagram_active": true,
+      "score": 0,
+      "label": "Dormant",
+      "reviews_increasing": false,
+      "instagram_active": false,
       "website_updated": false,
-      "is_buying_signal": true,
+      "is_buying_signal": false,
       "lines": [
-        "\u2713 Google reviews active",
-        "\u2713 Instagram profile active",
-        "\u2717 Website missing"
+        "✗ Reviews increasing",
+        "✗ Instagram active",
+        "✗ Website updated"
       ]
     },
     "relationship": {
@@ -4459,53 +4423,52 @@ window.PANELS = {
     "business_name": "Imperial Banquets",
     "area": "Vashi",
     "suburb": "Vashi",
-    "dmi_score": 49,
+    "dmi_score": 64.74,
     "dmi_category": "Visibility Weak",
-    "data_source": "google_live",
+    "data_source": "ai_estimate",
     "territory_rank": {
       "suburb": "Vashi",
-      "suburb_rank": 1,
-      "suburb_total": 5,
-      "global_rank": 1,
+      "suburb_rank": 2,
+      "suburb_total": 10,
+      "global_rank": 10,
       "global_total": 106,
       "lines": [
-        "Vashi Rank: #1 of 5 venues",
-        "Overall Rank: #1 of 106 venues"
+        "Vashi Rank: #2 of 10 venues",
+        "Overall Rank: #10 of 106 venues"
       ]
     },
     "digital_silence": {
-      "score": 40,
-      "label": "Moderate Silence",
+      "score": 15.0,
+      "label": "Active Pulse",
       "is_strong_digistories_signal": false,
       "lines": [
-        "Instagram profile exists but needs reels rhythm",
-        "No active website trust signal",
-        "24 photos uploaded on Google Maps"
+        "No reel in 23 days",
+        "No review in 40 days",
+        "40 photos on Google"
       ]
     },
     "smartos_opportunity": {
-      "opportunity_score": 100,
+      "opportunity_score": 61.0,
       "inquiry_leakage_risk": "High",
       "manual_workflow_risk": "High",
       "whatsapp_dependency_risk": "High",
       "lines": [
-        "High capacity venue; double booking risk is critical",
-        "Structured as a Standalone Banquet; complex booking contracts",
-        "High probability of paper booking diary usage",
-        "WhatsApp booking chats are unorganized and staff-dependent"
+        "Inquiry leakage risk: High (~53%)",
+        "Manual workflow risk: High",
+        "WhatsApp dependency risk: High"
       ]
     },
     "growth_momentum": {
-      "score": 80,
-      "label": "Heating Up",
-      "reviews_increasing": true,
+      "score": 35,
+      "label": "Some Movement",
+      "reviews_increasing": false,
       "instagram_active": true,
       "website_updated": false,
-      "is_buying_signal": true,
+      "is_buying_signal": false,
       "lines": [
-        "\u2713 Google reviews active",
-        "\u2713 Instagram profile active",
-        "\u2717 Website missing"
+        "✗ Reviews increasing",
+        "✓ Instagram active",
+        "✗ Website updated"
       ]
     },
     "relationship": {
@@ -4524,29 +4487,29 @@ window.PANELS = {
   "Palm Beach Lawn & Banquets": {
     "business_name": "Palm Beach Lawn & Banquets",
     "area": "Sanpada",
-    "suburb": "Sanpada",
-    "dmi_score": 49,
-    "dmi_category": "Visibility Weak",
-    "data_source": "google_live",
+    "suburb": "Vashi",
+    "dmi_score": 26.18,
+    "dmi_category": "Digitally Invisible",
+    "data_source": "ai_estimate",
     "territory_rank": {
-      "suburb": "Sanpada",
-      "suburb_rank": 1,
-      "suburb_total": 3,
-      "global_rank": 1,
+      "suburb": "Vashi",
+      "suburb_rank": 9,
+      "suburb_total": 10,
+      "global_rank": 82,
       "global_total": 106,
       "lines": [
-        "Sanpada Rank: #1 of 3 venues",
-        "Overall Rank: #1 of 106 venues"
+        "Vashi Rank: #9 of 10 venues",
+        "Overall Rank: #82 of 106 venues"
       ]
     },
     "digital_silence": {
-      "score": 40,
-      "label": "Moderate Silence",
-      "is_strong_digistories_signal": false,
+      "score": 85.0,
+      "label": "Severe Silence",
+      "is_strong_digistories_signal": true,
       "lines": [
-        "Instagram profile exists but needs reels rhythm",
-        "No active website trust signal",
-        "24 photos uploaded on Google Maps"
+        "No reel in 77 days",
+        "No review in 69 days",
+        "12 photos on Google"
       ]
     },
     "smartos_opportunity": {
@@ -4555,23 +4518,22 @@ window.PANELS = {
       "manual_workflow_risk": "High",
       "whatsapp_dependency_risk": "High",
       "lines": [
-        "High capacity venue; double booking risk is critical",
-        "Structured as a Standalone Banquet; complex booking contracts",
-        "High probability of paper booking diary usage",
-        "WhatsApp booking chats are unorganized and staff-dependent"
+        "Inquiry leakage risk: High (~88%)",
+        "Manual workflow risk: High",
+        "WhatsApp dependency risk: High"
       ]
     },
     "growth_momentum": {
-      "score": 80,
-      "label": "Heating Up",
-      "reviews_increasing": true,
-      "instagram_active": true,
+      "score": 0,
+      "label": "Dormant",
+      "reviews_increasing": false,
+      "instagram_active": false,
       "website_updated": false,
-      "is_buying_signal": true,
+      "is_buying_signal": false,
       "lines": [
-        "\u2713 Google reviews active",
-        "\u2713 Instagram profile active",
-        "\u2717 Website missing"
+        "✗ Reviews increasing",
+        "✗ Instagram active",
+        "✗ Website updated"
       ]
     },
     "relationship": {
@@ -4590,30 +4552,29 @@ window.PANELS = {
   "Vidhi Banquets": {
     "business_name": "Vidhi Banquets",
     "area": "Kopar Khairane",
-    "suburb": "Kopar Khairane",
-    "dmi_score": 8,
-    "dmi_category": "Digitally Invisible",
+    "suburb": "Vashi",
+    "dmi_score": 40.16,
+    "dmi_category": "Operationally Chaotic",
     "data_source": "ai_estimate",
     "territory_rank": {
-      "suburb": "Kopar Khairane",
-      "suburb_rank": 2,
-      "suburb_total": 2,
-      "global_rank": 74,
+      "suburb": "Vashi",
+      "suburb_rank": 4,
+      "suburb_total": 10,
+      "global_rank": 43,
       "global_total": 106,
       "lines": [
-        "Kopar Khairane Rank: #2 of 2 venues",
-        "Overall Rank: #74 of 106 venues"
+        "Vashi Rank: #4 of 10 venues",
+        "Overall Rank: #43 of 106 venues"
       ]
     },
     "digital_silence": {
-      "score": 100,
-      "label": "Severe Silence",
-      "is_strong_digistories_signal": true,
+      "score": 15.0,
+      "label": "Active Pulse",
+      "is_strong_digistories_signal": false,
       "lines": [
-        "No Instagram account found",
-        "Very low Google review count",
-        "No active website trust signal",
-        "Only 4 photos on Google Maps"
+        "No reel in 26 days",
+        "No review in 22 days",
+        "22 photos on Google"
       ]
     },
     "smartos_opportunity": {
@@ -4622,39 +4583,34 @@ window.PANELS = {
       "manual_workflow_risk": "High",
       "whatsapp_dependency_risk": "High",
       "lines": [
-        "High capacity venue; double booking risk is critical",
-        "Structured as a Standalone Banquet; complex booking contracts",
-        "High probability of paper booking diary usage",
-        "WhatsApp booking chats are unorganized and staff-dependent"
+        "Inquiry leakage risk: High (~88%)",
+        "Manual workflow risk: High",
+        "WhatsApp dependency risk: High"
       ]
     },
     "growth_momentum": {
-      "score": 0,
-      "label": "Dormant",
-      "reviews_increasing": false,
-      "instagram_active": false,
+      "score": 75,
+      "label": "Heating Up",
+      "reviews_increasing": true,
+      "instagram_active": true,
       "website_updated": false,
-      "is_buying_signal": false,
+      "is_buying_signal": true,
       "lines": [
-        "\u2717 Reviews stagnant or low",
-        "\u2717 Instagram dormant or missing",
-        "\u2717 Website missing"
+        "✓ Reviews increasing",
+        "✓ Instagram active",
+        "✗ Website updated"
       ]
     },
     "relationship": {
       "bca_member": false,
-      "second_generation": true,
-      "growth_mindset": true,
+      "second_generation": false,
+      "growth_mindset": false,
       "agency_user": false,
-      "tags": [
-        "2nd Gen Operator",
-        "Growth Mindset"
-      ],
+      "tags": [],
       "notes": "",
-      "has_human_intel": true,
+      "has_human_intel": false,
       "lines": [
-        "2nd Gen Operator",
-        "Growth Mindset"
+        "No field intel captured yet"
       ]
     }
   },
@@ -4662,29 +4618,28 @@ window.PANELS = {
     "business_name": "Gems Party Hall",
     "area": "Vashi",
     "suburb": "Vashi",
-    "dmi_score": 8,
+    "dmi_score": 26.95,
     "dmi_category": "Digitally Invisible",
     "data_source": "ai_estimate",
     "territory_rank": {
       "suburb": "Vashi",
-      "suburb_rank": 5,
-      "suburb_total": 5,
-      "global_rank": 74,
+      "suburb_rank": 8,
+      "suburb_total": 10,
+      "global_rank": 77,
       "global_total": 106,
       "lines": [
-        "Vashi Rank: #5 of 5 venues",
-        "Overall Rank: #74 of 106 venues"
+        "Vashi Rank: #8 of 10 venues",
+        "Overall Rank: #77 of 106 venues"
       ]
     },
     "digital_silence": {
-      "score": 100,
+      "score": 85.0,
       "label": "Severe Silence",
       "is_strong_digistories_signal": true,
       "lines": [
-        "No Instagram account found",
-        "Very low Google review count",
-        "No active website trust signal",
-        "Only 4 photos on Google Maps"
+        "No reel in 69 days",
+        "No review in 85 days",
+        "20 photos on Google"
       ]
     },
     "smartos_opportunity": {
@@ -4693,10 +4648,9 @@ window.PANELS = {
       "manual_workflow_risk": "High",
       "whatsapp_dependency_risk": "High",
       "lines": [
-        "High capacity venue; double booking risk is critical",
-        "Structured as a Standalone Banquet; complex booking contracts",
-        "High probability of paper booking diary usage",
-        "WhatsApp booking chats are unorganized and staff-dependent"
+        "Inquiry leakage risk: High (~88%)",
+        "Manual workflow risk: High",
+        "WhatsApp dependency risk: High"
       ]
     },
     "growth_momentum": {
@@ -4707,9 +4661,9 @@ window.PANELS = {
       "website_updated": false,
       "is_buying_signal": false,
       "lines": [
-        "\u2717 Reviews stagnant or low",
-        "\u2717 Instagram dormant or missing",
-        "\u2717 Website missing"
+        "✗ Reviews increasing",
+        "✗ Instagram active",
+        "✗ Website updated"
       ]
     },
     "relationship": {
@@ -4729,29 +4683,28 @@ window.PANELS = {
     "business_name": "Golden Peacock Banquet",
     "area": "Kharghar",
     "suburb": "Kharghar",
-    "dmi_score": 8,
-    "dmi_category": "Digitally Invisible",
-    "data_source": "google_live",
+    "dmi_score": 39.23,
+    "dmi_category": "Operationally Chaotic",
+    "data_source": "ai_estimate",
     "territory_rank": {
       "suburb": "Kharghar",
       "suburb_rank": 3,
-      "suburb_total": 3,
-      "global_rank": 74,
+      "suburb_total": 4,
+      "global_rank": 48,
       "global_total": 106,
       "lines": [
-        "Kharghar Rank: #3 of 3 venues",
-        "Overall Rank: #74 of 106 venues"
+        "Kharghar Rank: #3 of 4 venues",
+        "Overall Rank: #48 of 106 venues"
       ]
     },
     "digital_silence": {
-      "score": 100,
-      "label": "Severe Silence",
-      "is_strong_digistories_signal": true,
+      "score": 15.0,
+      "label": "Active Pulse",
+      "is_strong_digistories_signal": false,
       "lines": [
-        "No Instagram account found",
-        "Very low Google review count",
-        "No active website trust signal",
-        "Only 4 photos on Google Maps"
+        "No reel in 32 days",
+        "No review in 34 days",
+        "34 photos on Google"
       ]
     },
     "smartos_opportunity": {
@@ -4760,10 +4713,9 @@ window.PANELS = {
       "manual_workflow_risk": "High",
       "whatsapp_dependency_risk": "High",
       "lines": [
-        "High capacity venue; double booking risk is critical",
-        "Structured as a Standalone Banquet; complex booking contracts",
-        "High probability of paper booking diary usage",
-        "WhatsApp booking chats are unorganized and staff-dependent"
+        "Inquiry leakage risk: High (~88%)",
+        "Manual workflow risk: High",
+        "WhatsApp dependency risk: High"
       ]
     },
     "growth_momentum": {
@@ -4774,9 +4726,9 @@ window.PANELS = {
       "website_updated": false,
       "is_buying_signal": false,
       "lines": [
-        "\u2717 Reviews stagnant or low",
-        "\u2717 Instagram dormant or missing",
-        "\u2717 Website missing"
+        "✗ Reviews increasing",
+        "✗ Instagram active",
+        "✗ Website updated"
       ]
     },
     "relationship": {
@@ -4796,29 +4748,28 @@ window.PANELS = {
     "business_name": "Panvel Grand Banquet",
     "area": "Panvel",
     "suburb": "Panvel",
-    "dmi_score": 43,
-    "dmi_category": "Visibility Weak",
-    "data_source": "google_live",
+    "dmi_score": 17.8,
+    "dmi_category": "Digitally Invisible",
+    "data_source": "ai_estimate",
     "territory_rank": {
       "suburb": "Panvel",
-      "suburb_rank": 1,
-      "suburb_total": 1,
-      "global_rank": 52,
+      "suburb_rank": 2,
+      "suburb_total": 2,
+      "global_rank": 105,
       "global_total": 106,
       "lines": [
-        "Panvel Rank: #1 of 1 venues",
-        "Overall Rank: #52 of 106 venues"
+        "Panvel Rank: #2 of 2 venues",
+        "Overall Rank: #105 of 106 venues"
       ]
     },
     "digital_silence": {
-      "score": 55,
-      "label": "Moderate Silence",
-      "is_strong_digistories_signal": false,
+      "score": 100.0,
+      "label": "Severe Silence",
+      "is_strong_digistories_signal": true,
       "lines": [
-        "Instagram profile exists but needs reels rhythm",
-        "Recent Google reviews are sparse",
-        "No active website trust signal",
-        "24 photos uploaded on Google Maps"
+        "No reels found at all",
+        "No review in 75 days",
+        "Only 5 photos on Google"
       ]
     },
     "smartos_opportunity": {
@@ -4827,23 +4778,22 @@ window.PANELS = {
       "manual_workflow_risk": "High",
       "whatsapp_dependency_risk": "High",
       "lines": [
-        "High capacity venue; double booking risk is critical",
-        "Structured as a Standalone Banquet; complex booking contracts",
-        "High probability of paper booking diary usage",
-        "WhatsApp booking chats are unorganized and staff-dependent"
+        "Inquiry leakage risk: High (~88%)",
+        "Manual workflow risk: High",
+        "WhatsApp dependency risk: High"
       ]
     },
     "growth_momentum": {
-      "score": 40,
-      "label": "Some Movement",
+      "score": 0,
+      "label": "Dormant",
       "reviews_increasing": false,
-      "instagram_active": true,
+      "instagram_active": false,
       "website_updated": false,
       "is_buying_signal": false,
       "lines": [
-        "\u2717 Reviews stagnant or low",
-        "\u2713 Instagram profile active",
-        "\u2717 Website missing"
+        "✗ Reviews increasing",
+        "✗ Instagram active",
+        "✗ Website updated"
       ]
     },
     "relationship": {
@@ -4863,29 +4813,28 @@ window.PANELS = {
     "business_name": "Ashoka Banquet Hall",
     "area": "Vashi",
     "suburb": "Vashi",
-    "dmi_score": 43,
-    "dmi_category": "Visibility Weak",
-    "data_source": "google_live",
+    "dmi_score": 30.59,
+    "dmi_category": "Operationally Chaotic",
+    "data_source": "ai_estimate",
     "territory_rank": {
       "suburb": "Vashi",
-      "suburb_rank": 4,
-      "suburb_total": 5,
-      "global_rank": 52,
+      "suburb_rank": 5,
+      "suburb_total": 10,
+      "global_rank": 53,
       "global_total": 106,
       "lines": [
-        "Vashi Rank: #4 of 5 venues",
-        "Overall Rank: #52 of 106 venues"
+        "Vashi Rank: #5 of 10 venues",
+        "Overall Rank: #53 of 106 venues"
       ]
     },
     "digital_silence": {
-      "score": 55,
-      "label": "Moderate Silence",
-      "is_strong_digistories_signal": false,
+      "score": 85.0,
+      "label": "Severe Silence",
+      "is_strong_digistories_signal": true,
       "lines": [
-        "Instagram profile exists but needs reels rhythm",
-        "Recent Google reviews are sparse",
-        "No active website trust signal",
-        "24 photos uploaded on Google Maps"
+        "No reel in 109 days",
+        "No review in 89 days",
+        "22 photos on Google"
       ]
     },
     "smartos_opportunity": {
@@ -4894,23 +4843,22 @@ window.PANELS = {
       "manual_workflow_risk": "High",
       "whatsapp_dependency_risk": "High",
       "lines": [
-        "High capacity venue; double booking risk is critical",
-        "Structured as a Standalone Banquet; complex booking contracts",
-        "High probability of paper booking diary usage",
-        "WhatsApp booking chats are unorganized and staff-dependent"
+        "Inquiry leakage risk: High (~88%)",
+        "Manual workflow risk: High",
+        "WhatsApp dependency risk: High"
       ]
     },
     "growth_momentum": {
-      "score": 40,
-      "label": "Some Movement",
+      "score": 0,
+      "label": "Dormant",
       "reviews_increasing": false,
-      "instagram_active": true,
+      "instagram_active": false,
       "website_updated": false,
       "is_buying_signal": false,
       "lines": [
-        "\u2717 Reviews stagnant or low",
-        "\u2713 Instagram profile active",
-        "\u2717 Website missing"
+        "✗ Reviews increasing",
+        "✗ Instagram active",
+        "✗ Website updated"
       ]
     },
     "relationship": {
@@ -4929,68 +4877,65 @@ window.PANELS = {
   "Moraj Banquet Hall": {
     "business_name": "Moraj Banquet Hall",
     "area": "Sanpada",
-    "suburb": "Sanpada",
-    "dmi_score": 47,
+    "suburb": "Vashi",
+    "dmi_score": 63.03,
     "dmi_category": "Visibility Weak",
-    "data_source": "google_live",
+    "data_source": "ai_estimate",
     "territory_rank": {
-      "suburb": "Sanpada",
-      "suburb_rank": 2,
-      "suburb_total": 3,
-      "global_rank": 21,
+      "suburb": "Vashi",
+      "suburb_rank": 3,
+      "suburb_total": 10,
+      "global_rank": 15,
       "global_total": 106,
       "lines": [
-        "Sanpada Rank: #2 of 3 venues",
-        "Overall Rank: #21 of 106 venues"
+        "Vashi Rank: #3 of 10 venues",
+        "Overall Rank: #15 of 106 venues"
       ]
     },
     "digital_silence": {
-      "score": 40,
-      "label": "Moderate Silence",
+      "score": 15.0,
+      "label": "Active Pulse",
       "is_strong_digistories_signal": false,
       "lines": [
-        "Instagram profile exists but needs reels rhythm",
-        "No active website trust signal",
-        "24 photos uploaded on Google Maps"
+        "No reel in 17 days",
+        "No review in 37 days",
+        "37 photos on Google"
       ]
     },
     "smartos_opportunity": {
-      "opportunity_score": 100,
+      "opportunity_score": 61.0,
       "inquiry_leakage_risk": "High",
       "manual_workflow_risk": "High",
       "whatsapp_dependency_risk": "High",
       "lines": [
-        "High capacity venue; double booking risk is critical",
-        "Structured as a Standalone Banquet; complex booking contracts",
-        "High probability of paper booking diary usage",
-        "WhatsApp booking chats are unorganized and staff-dependent"
+        "Inquiry leakage risk: High (~53%)",
+        "Manual workflow risk: High",
+        "WhatsApp dependency risk: High"
       ]
     },
     "growth_momentum": {
-      "score": 80,
-      "label": "Heating Up",
-      "reviews_increasing": true,
+      "score": 35,
+      "label": "Some Movement",
+      "reviews_increasing": false,
       "instagram_active": true,
       "website_updated": false,
-      "is_buying_signal": true,
+      "is_buying_signal": false,
       "lines": [
-        "\u2713 Google reviews active",
-        "\u2713 Instagram profile active",
-        "\u2717 Website missing"
+        "✗ Reviews increasing",
+        "✓ Instagram active",
+        "✗ Website updated"
       ]
     },
     "relationship": {
       "bca_member": false,
-      "second_generation": true,
+      "second_generation": false,
       "growth_mindset": false,
       "agency_user": false,
-      "tags": [
-        "2nd Gen Operator"
-      ],
+      "tags": [],
       "notes": "",
-      "has_human_intel": true,
+      "has_human_intel": false,
       "lines": [
-        "2nd Gen Operator"
+        "No field intel captured yet"
       ]
     }
   },
@@ -4998,28 +4943,28 @@ window.PANELS = {
     "business_name": "Belapur Garden Banquet",
     "area": "Belapur",
     "suburb": "Belapur",
-    "dmi_score": 47,
-    "dmi_category": "Visibility Weak",
-    "data_source": "google_live",
+    "dmi_score": 28.54,
+    "dmi_category": "Digitally Invisible",
+    "data_source": "ai_estimate",
     "territory_rank": {
       "suburb": "Belapur",
-      "suburb_rank": 1,
+      "suburb_rank": 2,
       "suburb_total": 2,
-      "global_rank": 21,
+      "global_rank": 67,
       "global_total": 106,
       "lines": [
-        "Belapur Rank: #1 of 2 venues",
-        "Overall Rank: #21 of 106 venues"
+        "Belapur Rank: #2 of 2 venues",
+        "Overall Rank: #67 of 106 venues"
       ]
     },
     "digital_silence": {
-      "score": 40,
-      "label": "Moderate Silence",
-      "is_strong_digistories_signal": false,
+      "score": 85.0,
+      "label": "Severe Silence",
+      "is_strong_digistories_signal": true,
       "lines": [
-        "Instagram profile exists but needs reels rhythm",
-        "No active website trust signal",
-        "24 photos uploaded on Google Maps"
+        "No reel in 61 days",
+        "No review in 65 days",
+        "Only 10 photos on Google"
       ]
     },
     "smartos_opportunity": {
@@ -5028,23 +4973,22 @@ window.PANELS = {
       "manual_workflow_risk": "High",
       "whatsapp_dependency_risk": "High",
       "lines": [
-        "High capacity venue; double booking risk is critical",
-        "Structured as a Standalone Banquet; complex booking contracts",
-        "High probability of paper booking diary usage",
-        "WhatsApp booking chats are unorganized and staff-dependent"
+        "Inquiry leakage risk: High (~88%)",
+        "Manual workflow risk: High",
+        "WhatsApp dependency risk: High"
       ]
     },
     "growth_momentum": {
-      "score": 80,
-      "label": "Heating Up",
-      "reviews_increasing": true,
-      "instagram_active": true,
+      "score": 0,
+      "label": "Dormant",
+      "reviews_increasing": false,
+      "instagram_active": false,
       "website_updated": false,
-      "is_buying_signal": true,
+      "is_buying_signal": false,
       "lines": [
-        "\u2713 Google reviews active",
-        "\u2713 Instagram profile active",
-        "\u2717 Website missing"
+        "✗ Reviews increasing",
+        "✗ Instagram active",
+        "✗ Website updated"
       ]
     },
     "relationship": {
@@ -5063,68 +5007,65 @@ window.PANELS = {
   "Shubham Karoti Banquet": {
     "business_name": "Shubham Karoti Banquet",
     "area": "Kopar Khairane",
-    "suburb": "Kopar Khairane",
-    "dmi_score": 47,
-    "dmi_category": "Visibility Weak",
-    "data_source": "google_live",
+    "suburb": "Vashi",
+    "dmi_score": 65.91,
+    "dmi_category": "Growth Ready",
+    "data_source": "ai_estimate",
     "territory_rank": {
-      "suburb": "Kopar Khairane",
+      "suburb": "Vashi",
       "suburb_rank": 1,
-      "suburb_total": 2,
-      "global_rank": 21,
+      "suburb_total": 10,
+      "global_rank": 6,
       "global_total": 106,
       "lines": [
-        "Kopar Khairane Rank: #1 of 2 venues",
-        "Overall Rank: #21 of 106 venues"
+        "Vashi Rank: #1 of 10 venues",
+        "Overall Rank: #6 of 106 venues"
       ]
     },
     "digital_silence": {
-      "score": 40,
-      "label": "Moderate Silence",
+      "score": 15.0,
+      "label": "Active Pulse",
       "is_strong_digistories_signal": false,
       "lines": [
-        "Instagram profile exists but needs reels rhythm",
-        "No active website trust signal",
-        "24 photos uploaded on Google Maps"
+        "No reel in 17 days",
+        "No review in 49 days",
+        "49 photos on Google"
       ]
     },
     "smartos_opportunity": {
-      "opportunity_score": 100,
+      "opportunity_score": 61.0,
       "inquiry_leakage_risk": "High",
       "manual_workflow_risk": "High",
       "whatsapp_dependency_risk": "High",
       "lines": [
-        "High capacity venue; double booking risk is critical",
-        "Structured as a Standalone Banquet; complex booking contracts",
-        "High probability of paper booking diary usage",
-        "WhatsApp booking chats are unorganized and staff-dependent"
+        "Inquiry leakage risk: High (~53%)",
+        "Manual workflow risk: High",
+        "WhatsApp dependency risk: High"
       ]
     },
     "growth_momentum": {
-      "score": 80,
-      "label": "Heating Up",
-      "reviews_increasing": true,
+      "score": 35,
+      "label": "Some Movement",
+      "reviews_increasing": false,
       "instagram_active": true,
       "website_updated": false,
-      "is_buying_signal": true,
+      "is_buying_signal": false,
       "lines": [
-        "\u2713 Google reviews active",
-        "\u2713 Instagram profile active",
-        "\u2717 Website missing"
+        "✗ Reviews increasing",
+        "✓ Instagram active",
+        "✗ Website updated"
       ]
     },
     "relationship": {
       "bca_member": false,
       "second_generation": false,
-      "growth_mindset": true,
+      "growth_mindset": false,
       "agency_user": false,
-      "tags": [
-        "Growth Mindset"
-      ],
+      "tags": [],
       "notes": "",
-      "has_human_intel": true,
+      "has_human_intel": false,
       "lines": [
-        "Growth Mindset"
+        "No field intel captured yet"
       ]
     }
   },
@@ -5132,28 +5073,28 @@ window.PANELS = {
     "business_name": "Kesar Banquet",
     "area": "Kharghar",
     "suburb": "Kharghar",
-    "dmi_score": 49,
-    "dmi_category": "Visibility Weak",
-    "data_source": "google_live",
+    "dmi_score": 27.59,
+    "dmi_category": "Digitally Invisible",
+    "data_source": "ai_estimate",
     "territory_rank": {
       "suburb": "Kharghar",
-      "suburb_rank": 1,
-      "suburb_total": 3,
-      "global_rank": 1,
+      "suburb_rank": 4,
+      "suburb_total": 4,
+      "global_rank": 73,
       "global_total": 106,
       "lines": [
-        "Kharghar Rank: #1 of 3 venues",
-        "Overall Rank: #1 of 106 venues"
+        "Kharghar Rank: #4 of 4 venues",
+        "Overall Rank: #73 of 106 venues"
       ]
     },
     "digital_silence": {
-      "score": 40,
-      "label": "Moderate Silence",
-      "is_strong_digistories_signal": false,
+      "score": 85.0,
+      "label": "Severe Silence",
+      "is_strong_digistories_signal": true,
       "lines": [
-        "Instagram profile exists but needs reels rhythm",
-        "No active website trust signal",
-        "24 photos uploaded on Google Maps"
+        "No reel in 77 days",
+        "No review in 81 days",
+        "18 photos on Google"
       ]
     },
     "smartos_opportunity": {
@@ -5162,23 +5103,22 @@ window.PANELS = {
       "manual_workflow_risk": "High",
       "whatsapp_dependency_risk": "High",
       "lines": [
-        "High capacity venue; double booking risk is critical",
-        "Structured as a Standalone Banquet; complex booking contracts",
-        "High probability of paper booking diary usage",
-        "WhatsApp booking chats are unorganized and staff-dependent"
+        "Inquiry leakage risk: High (~88%)",
+        "Manual workflow risk: High",
+        "WhatsApp dependency risk: High"
       ]
     },
     "growth_momentum": {
-      "score": 80,
-      "label": "Heating Up",
-      "reviews_increasing": true,
-      "instagram_active": true,
+      "score": 0,
+      "label": "Dormant",
+      "reviews_increasing": false,
+      "instagram_active": false,
       "website_updated": false,
-      "is_buying_signal": true,
+      "is_buying_signal": false,
       "lines": [
-        "\u2713 Google reviews active",
-        "\u2713 Instagram profile active",
-        "\u2717 Website missing"
+        "✗ Reviews increasing",
+        "✗ Instagram active",
+        "✗ Website updated"
       ]
     },
     "relationship": {
@@ -5198,53 +5138,52 @@ window.PANELS = {
     "business_name": "Vishwa Jyot Banquet",
     "area": "Kharghar",
     "suburb": "Kharghar",
-    "dmi_score": 49,
+    "dmi_score": 52.48,
     "dmi_category": "Visibility Weak",
-    "data_source": "google_live",
+    "data_source": "ai_estimate",
     "territory_rank": {
       "suburb": "Kharghar",
       "suburb_rank": 1,
-      "suburb_total": 3,
-      "global_rank": 1,
+      "suburb_total": 4,
+      "global_rank": 28,
       "global_total": 106,
       "lines": [
-        "Kharghar Rank: #1 of 3 venues",
-        "Overall Rank: #1 of 106 venues"
+        "Kharghar Rank: #1 of 4 venues",
+        "Overall Rank: #28 of 106 venues"
       ]
     },
     "digital_silence": {
-      "score": 40,
-      "label": "Moderate Silence",
+      "score": 15.0,
+      "label": "Active Pulse",
       "is_strong_digistories_signal": false,
       "lines": [
-        "Instagram profile exists but needs reels rhythm",
-        "No active website trust signal",
-        "24 photos uploaded on Google Maps"
+        "No reel in 11 days",
+        "No review in 31 days",
+        "31 photos on Google"
       ]
     },
     "smartos_opportunity": {
-      "opportunity_score": 100,
+      "opportunity_score": 80.0,
       "inquiry_leakage_risk": "High",
       "manual_workflow_risk": "High",
       "whatsapp_dependency_risk": "High",
       "lines": [
-        "High capacity venue; double booking risk is critical",
-        "Structured as a Standalone Banquet; complex booking contracts",
-        "High probability of paper booking diary usage",
-        "WhatsApp booking chats are unorganized and staff-dependent"
+        "Inquiry leakage risk: High (~68%)",
+        "Manual workflow risk: High",
+        "WhatsApp dependency risk: High"
       ]
     },
     "growth_momentum": {
-      "score": 80,
-      "label": "Heating Up",
-      "reviews_increasing": true,
+      "score": 35,
+      "label": "Some Movement",
+      "reviews_increasing": false,
       "instagram_active": true,
       "website_updated": false,
-      "is_buying_signal": true,
+      "is_buying_signal": false,
       "lines": [
-        "\u2713 Google reviews active",
-        "\u2713 Instagram profile active",
-        "\u2717 Website missing"
+        "✗ Reviews increasing",
+        "✓ Instagram active",
+        "✗ Website updated"
       ]
     },
     "relationship": {
@@ -5263,69 +5202,65 @@ window.PANELS = {
   "Royal Celebration Hall": {
     "business_name": "Royal Celebration Hall",
     "area": "Kamothe",
-    "suburb": "Kamothe",
-    "dmi_score": 8,
-    "dmi_category": "Digitally Invisible",
+    "suburb": "Kharghar",
+    "dmi_score": 47.66,
+    "dmi_category": "Visibility Weak",
     "data_source": "ai_estimate",
     "territory_rank": {
-      "suburb": "Kamothe",
-      "suburb_rank": 1,
-      "suburb_total": 1,
-      "global_rank": 74,
+      "suburb": "Kharghar",
+      "suburb_rank": 2,
+      "suburb_total": 4,
+      "global_rank": 31,
       "global_total": 106,
       "lines": [
-        "Kamothe Rank: #1 of 1 venues",
-        "Overall Rank: #74 of 106 venues"
+        "Kharghar Rank: #2 of 4 venues",
+        "Overall Rank: #31 of 106 venues"
       ]
     },
     "digital_silence": {
-      "score": 100,
-      "label": "Severe Silence",
-      "is_strong_digistories_signal": true,
+      "score": 15.0,
+      "label": "Active Pulse",
+      "is_strong_digistories_signal": false,
       "lines": [
-        "No Instagram account found",
-        "Very low Google review count",
-        "No active website trust signal",
-        "Only 4 photos on Google Maps"
+        "No reel in 23 days",
+        "No review in 22 days",
+        "22 photos on Google"
       ]
     },
     "smartos_opportunity": {
-      "opportunity_score": 100,
+      "opportunity_score": 80.0,
       "inquiry_leakage_risk": "High",
       "manual_workflow_risk": "High",
       "whatsapp_dependency_risk": "High",
       "lines": [
-        "High capacity venue; double booking risk is critical",
-        "Structured as a Standalone Banquet; complex booking contracts",
-        "High probability of paper booking diary usage",
-        "WhatsApp booking chats are unorganized and staff-dependent"
+        "Inquiry leakage risk: High (~68%)",
+        "Manual workflow risk: High",
+        "WhatsApp dependency risk: High"
       ]
     },
     "growth_momentum": {
-      "score": 0,
-      "label": "Dormant",
-      "reviews_increasing": false,
-      "instagram_active": false,
+      "score": 75,
+      "label": "Heating Up",
+      "reviews_increasing": true,
+      "instagram_active": true,
       "website_updated": false,
-      "is_buying_signal": false,
+      "is_buying_signal": true,
       "lines": [
-        "\u2717 Reviews stagnant or low",
-        "\u2717 Instagram dormant or missing",
-        "\u2717 Website missing"
+        "✓ Reviews increasing",
+        "✓ Instagram active",
+        "✗ Website updated"
       ]
     },
     "relationship": {
       "bca_member": false,
-      "second_generation": true,
+      "second_generation": false,
       "growth_mindset": false,
       "agency_user": false,
-      "tags": [
-        "2nd Gen Operator"
-      ],
+      "tags": [],
       "notes": "",
-      "has_human_intel": true,
+      "has_human_intel": false,
       "lines": [
-        "2nd Gen Operator"
+        "No field intel captured yet"
       ]
     }
   },
@@ -5333,54 +5268,52 @@ window.PANELS = {
     "business_name": "Celebration Banquet Hall",
     "area": "Nerul",
     "suburb": "Nerul",
-    "dmi_score": 8,
-    "dmi_category": "Digitally Invisible",
+    "dmi_score": 57.84,
+    "dmi_category": "Visibility Weak",
     "data_source": "ai_estimate",
     "territory_rank": {
       "suburb": "Nerul",
       "suburb_rank": 2,
       "suburb_total": 2,
-      "global_rank": 74,
+      "global_rank": 20,
       "global_total": 106,
       "lines": [
         "Nerul Rank: #2 of 2 venues",
-        "Overall Rank: #74 of 106 venues"
+        "Overall Rank: #20 of 106 venues"
       ]
     },
     "digital_silence": {
-      "score": 100,
-      "label": "Severe Silence",
-      "is_strong_digistories_signal": true,
+      "score": 15.0,
+      "label": "Active Pulse",
+      "is_strong_digistories_signal": false,
       "lines": [
-        "No Instagram account found",
-        "Very low Google review count",
-        "No active website trust signal",
-        "Only 4 photos on Google Maps"
+        "No reel in 26 days",
+        "No review in 43 days",
+        "43 photos on Google"
       ]
     },
     "smartos_opportunity": {
-      "opportunity_score": 100,
+      "opportunity_score": 85.0,
       "inquiry_leakage_risk": "High",
       "manual_workflow_risk": "High",
       "whatsapp_dependency_risk": "High",
       "lines": [
-        "High capacity venue; double booking risk is critical",
-        "Structured as a Standalone Banquet; complex booking contracts",
-        "High probability of paper booking diary usage",
-        "WhatsApp booking chats are unorganized and staff-dependent"
+        "Inquiry leakage risk: High (~73%)",
+        "Manual workflow risk: High",
+        "WhatsApp dependency risk: High"
       ]
     },
     "growth_momentum": {
-      "score": 0,
-      "label": "Dormant",
+      "score": 35,
+      "label": "Some Movement",
       "reviews_increasing": false,
-      "instagram_active": false,
+      "instagram_active": true,
       "website_updated": false,
       "is_buying_signal": false,
       "lines": [
-        "\u2717 Reviews stagnant or low",
-        "\u2717 Instagram dormant or missing",
-        "\u2717 Website missing"
+        "✗ Reviews increasing",
+        "✓ Instagram active",
+        "✗ Website updated"
       ]
     },
     "relationship": {
@@ -5399,30 +5332,29 @@ window.PANELS = {
   "Raigad Fort Banquet": {
     "business_name": "Raigad Fort Banquet",
     "area": "New Panvel",
-    "suburb": "New Panvel",
-    "dmi_score": 8,
-    "dmi_category": "Digitally Invisible",
-    "data_source": "google_live",
+    "suburb": "Panvel",
+    "dmi_score": 39.23,
+    "dmi_category": "Operationally Chaotic",
+    "data_source": "ai_estimate",
     "territory_rank": {
-      "suburb": "New Panvel",
+      "suburb": "Panvel",
       "suburb_rank": 1,
-      "suburb_total": 1,
-      "global_rank": 74,
+      "suburb_total": 2,
+      "global_rank": 49,
       "global_total": 106,
       "lines": [
-        "New Panvel Rank: #1 of 1 venues",
-        "Overall Rank: #74 of 106 venues"
+        "Panvel Rank: #1 of 2 venues",
+        "Overall Rank: #49 of 106 venues"
       ]
     },
     "digital_silence": {
-      "score": 100,
-      "label": "Severe Silence",
-      "is_strong_digistories_signal": true,
+      "score": 15.0,
+      "label": "Active Pulse",
+      "is_strong_digistories_signal": false,
       "lines": [
-        "No Instagram account found",
-        "Very low Google review count",
-        "No active website trust signal",
-        "Only 4 photos on Google Maps"
+        "No reel in 32 days",
+        "No review in 34 days",
+        "34 photos on Google"
       ]
     },
     "smartos_opportunity": {
@@ -5431,10 +5363,9 @@ window.PANELS = {
       "manual_workflow_risk": "High",
       "whatsapp_dependency_risk": "High",
       "lines": [
-        "High capacity venue; double booking risk is critical",
-        "Structured as a Standalone Banquet; complex booking contracts",
-        "High probability of paper booking diary usage",
-        "WhatsApp booking chats are unorganized and staff-dependent"
+        "Inquiry leakage risk: High (~88%)",
+        "Manual workflow risk: High",
+        "WhatsApp dependency risk: High"
       ]
     },
     "growth_momentum": {
@@ -5445,9 +5376,9 @@ window.PANELS = {
       "website_updated": false,
       "is_buying_signal": false,
       "lines": [
-        "\u2717 Reviews stagnant or low",
-        "\u2717 Instagram dormant or missing",
-        "\u2717 Website missing"
+        "✗ Reviews increasing",
+        "✗ Instagram active",
+        "✗ Website updated"
       ]
     },
     "relationship": {
@@ -5466,30 +5397,29 @@ window.PANELS = {
   "Shikara Hotel Banquets": {
     "business_name": "Shikara Hotel Banquets",
     "area": "Sanpada",
-    "suburb": "Sanpada",
-    "dmi_score": 43,
-    "dmi_category": "Visibility Weak",
-    "data_source": "google_live",
+    "suburb": "Vashi",
+    "dmi_score": 25.3,
+    "dmi_category": "Digitally Invisible",
+    "data_source": "ai_estimate",
     "territory_rank": {
-      "suburb": "Sanpada",
-      "suburb_rank": 3,
-      "suburb_total": 3,
-      "global_rank": 52,
+      "suburb": "Vashi",
+      "suburb_rank": 10,
+      "suburb_total": 10,
+      "global_rank": 84,
       "global_total": 106,
       "lines": [
-        "Sanpada Rank: #3 of 3 venues",
-        "Overall Rank: #52 of 106 venues"
+        "Vashi Rank: #10 of 10 venues",
+        "Overall Rank: #84 of 106 venues"
       ]
     },
     "digital_silence": {
-      "score": 55,
-      "label": "Moderate Silence",
-      "is_strong_digistories_signal": false,
+      "score": 100.0,
+      "label": "Severe Silence",
+      "is_strong_digistories_signal": true,
       "lines": [
-        "Instagram profile exists but needs reels rhythm",
-        "Recent Google reviews are sparse",
-        "No active website trust signal",
-        "24 photos uploaded on Google Maps"
+        "No reel in 77 days",
+        "No review in 61 days",
+        "Only 8 photos on Google"
       ]
     },
     "smartos_opportunity": {
@@ -5498,23 +5428,22 @@ window.PANELS = {
       "manual_workflow_risk": "High",
       "whatsapp_dependency_risk": "High",
       "lines": [
-        "High capacity venue; double booking risk is critical",
-        "Structured as a Standalone Banquet; complex booking contracts",
-        "High probability of paper booking diary usage",
-        "WhatsApp booking chats are unorganized and staff-dependent"
+        "Inquiry leakage risk: High (~88%)",
+        "Manual workflow risk: High",
+        "WhatsApp dependency risk: High"
       ]
     },
     "growth_momentum": {
-      "score": 40,
-      "label": "Some Movement",
+      "score": 0,
+      "label": "Dormant",
       "reviews_increasing": false,
-      "instagram_active": true,
+      "instagram_active": false,
       "website_updated": false,
       "is_buying_signal": false,
       "lines": [
-        "\u2717 Reviews stagnant or low",
-        "\u2713 Instagram profile active",
-        "\u2717 Website missing"
+        "✗ Reviews increasing",
+        "✗ Instagram active",
+        "✗ Website updated"
       ]
     },
     "relationship": {
@@ -5534,68 +5463,64 @@ window.PANELS = {
     "business_name": "Belapur Gymkhana Banquets",
     "area": "Belapur",
     "suburb": "Belapur",
-    "dmi_score": 43,
+    "dmi_score": 63.8,
     "dmi_category": "Visibility Weak",
-    "data_source": "google_live",
+    "data_source": "ai_estimate",
     "territory_rank": {
       "suburb": "Belapur",
-      "suburb_rank": 2,
+      "suburb_rank": 1,
       "suburb_total": 2,
-      "global_rank": 52,
+      "global_rank": 13,
       "global_total": 106,
       "lines": [
-        "Belapur Rank: #2 of 2 venues",
-        "Overall Rank: #52 of 106 venues"
+        "Belapur Rank: #1 of 2 venues",
+        "Overall Rank: #13 of 106 venues"
       ]
     },
     "digital_silence": {
-      "score": 55,
-      "label": "Moderate Silence",
+      "score": 15.0,
+      "label": "Active Pulse",
       "is_strong_digistories_signal": false,
       "lines": [
-        "Instagram profile exists but needs reels rhythm",
-        "Recent Google reviews are sparse",
-        "No active website trust signal",
-        "24 photos uploaded on Google Maps"
+        "No reel in 5 days",
+        "No review in 46 days",
+        "46 photos on Google"
       ]
     },
     "smartos_opportunity": {
-      "opportunity_score": 100,
+      "opportunity_score": 61.0,
       "inquiry_leakage_risk": "High",
       "manual_workflow_risk": "High",
       "whatsapp_dependency_risk": "High",
       "lines": [
-        "High capacity venue; double booking risk is critical",
-        "Structured as a Standalone Banquet; complex booking contracts",
-        "High probability of paper booking diary usage",
-        "WhatsApp booking chats are unorganized and staff-dependent"
+        "Inquiry leakage risk: High (~53%)",
+        "Manual workflow risk: High",
+        "WhatsApp dependency risk: High"
       ]
     },
     "growth_momentum": {
-      "score": 40,
+      "score": 35,
       "label": "Some Movement",
       "reviews_increasing": false,
       "instagram_active": true,
       "website_updated": false,
       "is_buying_signal": false,
       "lines": [
-        "\u2717 Reviews stagnant or low",
-        "\u2713 Instagram profile active",
-        "\u2717 Website missing"
+        "✗ Reviews increasing",
+        "✓ Instagram active",
+        "✗ Website updated"
       ]
     },
     "relationship": {
       "bca_member": false,
       "second_generation": false,
-      "growth_mindset": true,
+      "growth_mindset": false,
       "agency_user": false,
-      "tags": [
-        "Growth Mindset"
-      ],
+      "tags": [],
       "notes": "",
-      "has_human_intel": true,
+      "has_human_intel": false,
       "lines": [
-        "Growth Mindset"
+        "No field intel captured yet"
       ]
     }
   },
@@ -5603,121 +5528,117 @@ window.PANELS = {
     "business_name": "Navi Mumbai Club Banquets",
     "area": "Nerul",
     "suburb": "Nerul",
-    "dmi_score": 47,
-    "dmi_category": "Visibility Weak",
-    "data_source": "google_live",
+    "dmi_score": 66.68,
+    "dmi_category": "Growth Ready",
+    "data_source": "ai_estimate",
     "territory_rank": {
       "suburb": "Nerul",
       "suburb_rank": 1,
       "suburb_total": 2,
-      "global_rank": 21,
+      "global_rank": 4,
       "global_total": 106,
       "lines": [
         "Nerul Rank: #1 of 2 venues",
-        "Overall Rank: #21 of 106 venues"
+        "Overall Rank: #4 of 106 venues"
       ]
     },
     "digital_silence": {
-      "score": 40,
-      "label": "Moderate Silence",
+      "score": 15.0,
+      "label": "Active Pulse",
       "is_strong_digistories_signal": false,
       "lines": [
-        "Instagram profile exists but needs reels rhythm",
-        "No active website trust signal",
-        "24 photos uploaded on Google Maps"
+        "No reel in 11 days",
+        "No review in 37 days",
+        "37 photos on Google"
       ]
     },
     "smartos_opportunity": {
-      "opportunity_score": 100,
+      "opportunity_score": 61.0,
       "inquiry_leakage_risk": "High",
       "manual_workflow_risk": "High",
       "whatsapp_dependency_risk": "High",
       "lines": [
-        "High capacity venue; double booking risk is critical",
-        "Structured as a Standalone Banquet; complex booking contracts",
-        "High probability of paper booking diary usage",
-        "WhatsApp booking chats are unorganized and staff-dependent"
+        "Inquiry leakage risk: High (~53%)",
+        "Manual workflow risk: High",
+        "WhatsApp dependency risk: High"
       ]
     },
     "growth_momentum": {
-      "score": 80,
-      "label": "Heating Up",
-      "reviews_increasing": true,
+      "score": 35,
+      "label": "Some Movement",
+      "reviews_increasing": false,
       "instagram_active": true,
       "website_updated": false,
-      "is_buying_signal": true,
+      "is_buying_signal": false,
       "lines": [
-        "\u2713 Google reviews active",
-        "\u2713 Instagram profile active",
-        "\u2717 Website missing"
+        "✗ Reviews increasing",
+        "✓ Instagram active",
+        "✗ Website updated"
       ]
     },
     "relationship": {
       "bca_member": false,
-      "second_generation": true,
+      "second_generation": false,
       "growth_mindset": false,
       "agency_user": false,
-      "tags": [
-        "2nd Gen Operator"
-      ],
+      "tags": [],
       "notes": "",
-      "has_human_intel": true,
+      "has_human_intel": false,
       "lines": [
-        "2nd Gen Operator"
+        "No field intel captured yet"
       ]
     }
   },
   "Siddhi Gardens & Banquets": {
     "business_name": "Siddhi Gardens & Banquets",
     "area": "Erandwane",
-    "suburb": "Erandwane",
-    "dmi_score": 47,
+    "suburb": "Pune Central",
+    "dmi_score": 48.07,
     "dmi_category": "Visibility Weak",
-    "data_source": "google_live",
+    "data_source": "ai_estimate",
     "territory_rank": {
-      "suburb": "Erandwane",
-      "suburb_rank": 1,
-      "suburb_total": 3,
-      "global_rank": 21,
+      "suburb": "Pune Central",
+      "suburb_rank": 2,
+      "suburb_total": 7,
+      "global_rank": 30,
       "global_total": 106,
       "lines": [
-        "Erandwane Rank: #1 of 3 venues",
-        "Overall Rank: #21 of 106 venues"
+        "Pune Central Rank: #2 of 7 venues",
+        "Overall Rank: #30 of 106 venues"
       ]
     },
     "digital_silence": {
-      "score": 40,
-      "label": "Moderate Silence",
+      "score": 15.0,
+      "label": "Active Pulse",
       "is_strong_digistories_signal": false,
       "lines": [
-        "Instagram profile exists but needs reels rhythm",
-        "No active website trust signal",
-        "24 photos uploaded on Google Maps"
+        "No reel in 17 days",
+        "No review in 28 days",
+        "28 photos on Google"
       ]
     },
     "smartos_opportunity": {
-      "opportunity_score": 100,
+      "opportunity_score": 80.0,
       "inquiry_leakage_risk": "High",
       "manual_workflow_risk": "High",
       "whatsapp_dependency_risk": "High",
       "lines": [
-        "High capacity venue; double booking risk is critical",
-        "Structured as a Standalone Banquet; complex booking contracts",
-        "High probability of paper booking diary usage",
-        "WhatsApp booking chats are unorganized and staff-dependent"
+        "Inquiry leakage risk: High (~68%)",
+        "Manual workflow risk: High",
+        "WhatsApp dependency risk: High"
       ]
     },
     "growth_momentum": {
-      "score": 80,
+      "score": 75,
       "label": "Heating Up",
       "reviews_increasing": true,
       "instagram_active": true,
       "website_updated": false,
       "is_buying_signal": true,
       "lines": [
-        "\u2713 Google reviews active",
-        "\u2713 Instagram profile active",
-        "\u2717 Website missing"
+        "✓ Reviews increasing",
+        "✓ Instagram active",
+        "✗ Website updated"
       ]
     },
     "relationship": {
@@ -5737,28 +5658,28 @@ window.PANELS = {
     "business_name": "Raaga Heritage Banquets",
     "area": "Hinjewadi",
     "suburb": "Hinjewadi",
-    "dmi_score": 47,
-    "dmi_category": "Visibility Weak",
-    "data_source": "google_live",
+    "dmi_score": 20.52,
+    "dmi_category": "Digitally Invisible",
+    "data_source": "ai_estimate",
     "territory_rank": {
       "suburb": "Hinjewadi",
       "suburb_rank": 1,
       "suburb_total": 1,
-      "global_rank": 21,
+      "global_rank": 100,
       "global_total": 106,
       "lines": [
         "Hinjewadi Rank: #1 of 1 venues",
-        "Overall Rank: #21 of 106 venues"
+        "Overall Rank: #100 of 106 venues"
       ]
     },
     "digital_silence": {
-      "score": 40,
-      "label": "Moderate Silence",
-      "is_strong_digistories_signal": false,
+      "score": 85.0,
+      "label": "Severe Silence",
+      "is_strong_digistories_signal": true,
       "lines": [
-        "Instagram profile exists but needs reels rhythm",
-        "No active website trust signal",
-        "24 photos uploaded on Google Maps"
+        "No reels found at all",
+        "No review in 99 days",
+        "13 photos on Google"
       ]
     },
     "smartos_opportunity": {
@@ -5767,23 +5688,22 @@ window.PANELS = {
       "manual_workflow_risk": "High",
       "whatsapp_dependency_risk": "High",
       "lines": [
-        "High capacity venue; double booking risk is critical",
-        "Structured as a Standalone Banquet; complex booking contracts",
-        "High probability of paper booking diary usage",
-        "WhatsApp booking chats are unorganized and staff-dependent"
+        "Inquiry leakage risk: High (~88%)",
+        "Manual workflow risk: High",
+        "WhatsApp dependency risk: High"
       ]
     },
     "growth_momentum": {
-      "score": 80,
-      "label": "Heating Up",
-      "reviews_increasing": true,
-      "instagram_active": true,
+      "score": 0,
+      "label": "Dormant",
+      "reviews_increasing": false,
+      "instagram_active": false,
       "website_updated": false,
-      "is_buying_signal": true,
+      "is_buying_signal": false,
       "lines": [
-        "\u2713 Google reviews active",
-        "\u2713 Instagram profile active",
-        "\u2717 Website missing"
+        "✗ Reviews increasing",
+        "✗ Instagram active",
+        "✗ Website updated"
       ]
     },
     "relationship": {
@@ -5802,29 +5722,29 @@ window.PANELS = {
   "Navyug Banquet Hall": {
     "business_name": "Navyug Banquet Hall",
     "area": "Boat Club Rd",
-    "suburb": "Boat Club Rd",
-    "dmi_score": 49,
-    "dmi_category": "Visibility Weak",
-    "data_source": "google_live",
+    "suburb": "Pune Central",
+    "dmi_score": 26.59,
+    "dmi_category": "Digitally Invisible",
+    "data_source": "ai_estimate",
     "territory_rank": {
-      "suburb": "Boat Club Rd",
-      "suburb_rank": 1,
-      "suburb_total": 1,
-      "global_rank": 1,
+      "suburb": "Pune Central",
+      "suburb_rank": 5,
+      "suburb_total": 7,
+      "global_rank": 79,
       "global_total": 106,
       "lines": [
-        "Boat Club Rd Rank: #1 of 1 venues",
-        "Overall Rank: #1 of 106 venues"
+        "Pune Central Rank: #5 of 7 venues",
+        "Overall Rank: #79 of 106 venues"
       ]
     },
     "digital_silence": {
-      "score": 40,
-      "label": "Moderate Silence",
-      "is_strong_digistories_signal": false,
+      "score": 85.0,
+      "label": "Severe Silence",
+      "is_strong_digistories_signal": true,
       "lines": [
-        "Instagram profile exists but needs reels rhythm",
-        "No active website trust signal",
-        "24 photos uploaded on Google Maps"
+        "No reel in 69 days",
+        "No review in 81 days",
+        "18 photos on Google"
       ]
     },
     "smartos_opportunity": {
@@ -5833,23 +5753,22 @@ window.PANELS = {
       "manual_workflow_risk": "High",
       "whatsapp_dependency_risk": "High",
       "lines": [
-        "High capacity venue; double booking risk is critical",
-        "Structured as a Standalone Banquet; complex booking contracts",
-        "High probability of paper booking diary usage",
-        "WhatsApp booking chats are unorganized and staff-dependent"
+        "Inquiry leakage risk: High (~88%)",
+        "Manual workflow risk: High",
+        "WhatsApp dependency risk: High"
       ]
     },
     "growth_momentum": {
-      "score": 80,
-      "label": "Heating Up",
-      "reviews_increasing": true,
-      "instagram_active": true,
+      "score": 0,
+      "label": "Dormant",
+      "reviews_increasing": false,
+      "instagram_active": false,
       "website_updated": false,
-      "is_buying_signal": true,
+      "is_buying_signal": false,
       "lines": [
-        "\u2713 Google reviews active",
-        "\u2713 Instagram profile active",
-        "\u2717 Website missing"
+        "✗ Reviews increasing",
+        "✗ Instagram active",
+        "✗ Website updated"
       ]
     },
     "relationship": {
@@ -5868,29 +5787,29 @@ window.PANELS = {
   "Emerald Party Hall": {
     "business_name": "Emerald Party Hall",
     "area": "Baner",
-    "suburb": "Baner",
-    "dmi_score": 49,
-    "dmi_category": "Visibility Weak",
-    "data_source": "google_live",
+    "suburb": "Pune West",
+    "dmi_score": 41.33,
+    "dmi_category": "Operationally Chaotic",
+    "data_source": "ai_estimate",
     "territory_rank": {
-      "suburb": "Baner",
+      "suburb": "Pune West",
       "suburb_rank": 1,
-      "suburb_total": 2,
-      "global_rank": 1,
+      "suburb_total": 5,
+      "global_rank": 36,
       "global_total": 106,
       "lines": [
-        "Baner Rank: #1 of 2 venues",
-        "Overall Rank: #1 of 106 venues"
+        "Pune West Rank: #1 of 5 venues",
+        "Overall Rank: #36 of 106 venues"
       ]
     },
     "digital_silence": {
-      "score": 40,
-      "label": "Moderate Silence",
+      "score": 15.0,
+      "label": "Active Pulse",
       "is_strong_digistories_signal": false,
       "lines": [
-        "Instagram profile exists but needs reels rhythm",
-        "No active website trust signal",
-        "24 photos uploaded on Google Maps"
+        "No reel in 20 days",
+        "No review in 31 days",
+        "31 photos on Google"
       ]
     },
     "smartos_opportunity": {
@@ -5899,23 +5818,22 @@ window.PANELS = {
       "manual_workflow_risk": "High",
       "whatsapp_dependency_risk": "High",
       "lines": [
-        "High capacity venue; double booking risk is critical",
-        "Structured as a Standalone Banquet; complex booking contracts",
-        "High probability of paper booking diary usage",
-        "WhatsApp booking chats are unorganized and staff-dependent"
+        "Inquiry leakage risk: High (~88%)",
+        "Manual workflow risk: High",
+        "WhatsApp dependency risk: High"
       ]
     },
     "growth_momentum": {
-      "score": 80,
-      "label": "Heating Up",
-      "reviews_increasing": true,
+      "score": 35,
+      "label": "Some Movement",
+      "reviews_increasing": false,
       "instagram_active": true,
       "website_updated": false,
-      "is_buying_signal": true,
+      "is_buying_signal": false,
       "lines": [
-        "\u2713 Google reviews active",
-        "\u2713 Instagram profile active",
-        "\u2717 Website missing"
+        "✗ Reviews increasing",
+        "✓ Instagram active",
+        "✗ Website updated"
       ]
     },
     "relationship": {
@@ -5934,30 +5852,29 @@ window.PANELS = {
   "Pyramids Garden": {
     "business_name": "Pyramids Garden",
     "area": "Kothrud",
-    "suburb": "Kothrud",
-    "dmi_score": 8,
+    "suburb": "Pune West",
+    "dmi_score": 23.41,
     "dmi_category": "Digitally Invisible",
     "data_source": "ai_estimate",
     "territory_rank": {
-      "suburb": "Kothrud",
-      "suburb_rank": 2,
-      "suburb_total": 2,
-      "global_rank": 74,
+      "suburb": "Pune West",
+      "suburb_rank": 5,
+      "suburb_total": 5,
+      "global_rank": 92,
       "global_total": 106,
       "lines": [
-        "Kothrud Rank: #2 of 2 venues",
-        "Overall Rank: #74 of 106 venues"
+        "Pune West Rank: #5 of 5 venues",
+        "Overall Rank: #92 of 106 venues"
       ]
     },
     "digital_silence": {
-      "score": 100,
+      "score": 75.0,
       "label": "Severe Silence",
       "is_strong_digistories_signal": true,
       "lines": [
-        "No Instagram account found",
-        "Very low Google review count",
-        "No active website trust signal",
-        "Only 4 photos on Google Maps"
+        "No reel in 93 days",
+        "No review in 57 days",
+        "Only 6 photos on Google"
       ]
     },
     "smartos_opportunity": {
@@ -5966,10 +5883,9 @@ window.PANELS = {
       "manual_workflow_risk": "High",
       "whatsapp_dependency_risk": "High",
       "lines": [
-        "High capacity venue; double booking risk is critical",
-        "Structured as a Standalone Banquet; complex booking contracts",
-        "High probability of paper booking diary usage",
-        "WhatsApp booking chats are unorganized and staff-dependent"
+        "Inquiry leakage risk: High (~88%)",
+        "Manual workflow risk: High",
+        "WhatsApp dependency risk: High"
       ]
     },
     "growth_momentum": {
@@ -5980,53 +5896,50 @@ window.PANELS = {
       "website_updated": false,
       "is_buying_signal": false,
       "lines": [
-        "\u2717 Reviews stagnant or low",
-        "\u2717 Instagram dormant or missing",
-        "\u2717 Website missing"
+        "✗ Reviews increasing",
+        "✗ Instagram active",
+        "✗ Website updated"
       ]
     },
     "relationship": {
       "bca_member": false,
-      "second_generation": true,
+      "second_generation": false,
       "growth_mindset": false,
       "agency_user": false,
-      "tags": [
-        "2nd Gen Operator"
-      ],
+      "tags": [],
       "notes": "",
-      "has_human_intel": true,
+      "has_human_intel": false,
       "lines": [
-        "2nd Gen Operator"
+        "No field intel captured yet"
       ]
     }
   },
   "Shubharambh Lawns": {
     "business_name": "Shubharambh Lawns",
     "area": "Karve Nagar",
-    "suburb": "Karve Nagar",
-    "dmi_score": 8,
+    "suburb": "Pune West",
+    "dmi_score": 27.95,
     "dmi_category": "Digitally Invisible",
     "data_source": "ai_estimate",
     "territory_rank": {
-      "suburb": "Karve Nagar",
-      "suburb_rank": 1,
-      "suburb_total": 1,
-      "global_rank": 74,
+      "suburb": "Pune West",
+      "suburb_rank": 4,
+      "suburb_total": 5,
+      "global_rank": 71,
       "global_total": 106,
       "lines": [
-        "Karve Nagar Rank: #1 of 1 venues",
-        "Overall Rank: #74 of 106 venues"
+        "Pune West Rank: #4 of 5 venues",
+        "Overall Rank: #71 of 106 venues"
       ]
     },
     "digital_silence": {
-      "score": 100,
+      "score": 85.0,
       "label": "Severe Silence",
       "is_strong_digistories_signal": true,
       "lines": [
-        "No Instagram account found",
-        "Very low Google review count",
-        "No active website trust signal",
-        "Only 4 photos on Google Maps"
+        "No reel in 77 days",
+        "No review in 85 days",
+        "20 photos on Google"
       ]
     },
     "smartos_opportunity": {
@@ -6035,10 +5948,9 @@ window.PANELS = {
       "manual_workflow_risk": "High",
       "whatsapp_dependency_risk": "High",
       "lines": [
-        "High capacity venue; double booking risk is critical",
-        "Structured as a Standalone Banquet; complex booking contracts",
-        "High probability of paper booking diary usage",
-        "WhatsApp booking chats are unorganized and staff-dependent"
+        "Inquiry leakage risk: High (~88%)",
+        "Manual workflow risk: High",
+        "WhatsApp dependency risk: High"
       ]
     },
     "growth_momentum": {
@@ -6049,53 +5961,50 @@ window.PANELS = {
       "website_updated": false,
       "is_buying_signal": false,
       "lines": [
-        "\u2717 Reviews stagnant or low",
-        "\u2717 Instagram dormant or missing",
-        "\u2717 Website missing"
+        "✗ Reviews increasing",
+        "✗ Instagram active",
+        "✗ Website updated"
       ]
     },
     "relationship": {
       "bca_member": false,
       "second_generation": false,
-      "growth_mindset": true,
+      "growth_mindset": false,
       "agency_user": false,
-      "tags": [
-        "Growth Mindset"
-      ],
+      "tags": [],
       "notes": "",
-      "has_human_intel": true,
+      "has_human_intel": false,
       "lines": [
-        "Growth Mindset"
+        "No field intel captured yet"
       ]
     }
   },
   "Oasis Banquets & Lawns": {
     "business_name": "Oasis Banquets & Lawns",
     "area": "Hadapsar",
-    "suburb": "Hadapsar",
-    "dmi_score": 8,
-    "dmi_category": "Digitally Invisible",
-    "data_source": "google_live",
+    "suburb": "Pune East",
+    "dmi_score": 42.88,
+    "dmi_category": "Operationally Chaotic",
+    "data_source": "ai_estimate",
     "territory_rank": {
-      "suburb": "Hadapsar",
+      "suburb": "Pune East",
       "suburb_rank": 1,
-      "suburb_total": 1,
-      "global_rank": 74,
+      "suburb_total": 2,
+      "global_rank": 33,
       "global_total": 106,
       "lines": [
-        "Hadapsar Rank: #1 of 1 venues",
-        "Overall Rank: #74 of 106 venues"
+        "Pune East Rank: #1 of 2 venues",
+        "Overall Rank: #33 of 106 venues"
       ]
     },
     "digital_silence": {
-      "score": 100,
-      "label": "Severe Silence",
-      "is_strong_digistories_signal": true,
+      "score": 15.0,
+      "label": "Active Pulse",
+      "is_strong_digistories_signal": false,
       "lines": [
-        "No Instagram account found",
-        "Very low Google review count",
-        "No active website trust signal",
-        "Only 4 photos on Google Maps"
+        "No reel in 26 days",
+        "No review in 34 days",
+        "34 photos on Google"
       ]
     },
     "smartos_opportunity": {
@@ -6104,23 +6013,22 @@ window.PANELS = {
       "manual_workflow_risk": "High",
       "whatsapp_dependency_risk": "High",
       "lines": [
-        "High capacity venue; double booking risk is critical",
-        "Structured as a Standalone Banquet; complex booking contracts",
-        "High probability of paper booking diary usage",
-        "WhatsApp booking chats are unorganized and staff-dependent"
+        "Inquiry leakage risk: High (~88%)",
+        "Manual workflow risk: High",
+        "WhatsApp dependency risk: High"
       ]
     },
     "growth_momentum": {
-      "score": 0,
-      "label": "Dormant",
+      "score": 35,
+      "label": "Some Movement",
       "reviews_increasing": false,
-      "instagram_active": false,
+      "instagram_active": true,
       "website_updated": false,
       "is_buying_signal": false,
       "lines": [
-        "\u2717 Reviews stagnant or low",
-        "\u2717 Instagram dormant or missing",
-        "\u2717 Website missing"
+        "✗ Reviews increasing",
+        "✓ Instagram active",
+        "✗ Website updated"
       ]
     },
     "relationship": {
@@ -6139,30 +6047,29 @@ window.PANELS = {
   "Yash Lawns": {
     "business_name": "Yash Lawns",
     "area": "Bibwewadi",
-    "suburb": "Bibwewadi",
-    "dmi_score": 43,
-    "dmi_category": "Visibility Weak",
-    "data_source": "google_live",
+    "suburb": "Pune Central",
+    "dmi_score": 25.3,
+    "dmi_category": "Digitally Invisible",
+    "data_source": "ai_estimate",
     "territory_rank": {
-      "suburb": "Bibwewadi",
-      "suburb_rank": 1,
-      "suburb_total": 1,
-      "global_rank": 52,
+      "suburb": "Pune Central",
+      "suburb_rank": 6,
+      "suburb_total": 7,
+      "global_rank": 85,
       "global_total": 106,
       "lines": [
-        "Bibwewadi Rank: #1 of 1 venues",
-        "Overall Rank: #52 of 106 venues"
+        "Pune Central Rank: #6 of 7 venues",
+        "Overall Rank: #85 of 106 venues"
       ]
     },
     "digital_silence": {
-      "score": 55,
-      "label": "Moderate Silence",
-      "is_strong_digistories_signal": false,
+      "score": 100.0,
+      "label": "Severe Silence",
+      "is_strong_digistories_signal": true,
       "lines": [
-        "Instagram profile exists but needs reels rhythm",
-        "Recent Google reviews are sparse",
-        "No active website trust signal",
-        "24 photos uploaded on Google Maps"
+        "No reel in 77 days",
+        "No review in 61 days",
+        "Only 8 photos on Google"
       ]
     },
     "smartos_opportunity": {
@@ -6171,23 +6078,22 @@ window.PANELS = {
       "manual_workflow_risk": "High",
       "whatsapp_dependency_risk": "High",
       "lines": [
-        "High capacity venue; double booking risk is critical",
-        "Structured as a Standalone Banquet; complex booking contracts",
-        "High probability of paper booking diary usage",
-        "WhatsApp booking chats are unorganized and staff-dependent"
+        "Inquiry leakage risk: High (~88%)",
+        "Manual workflow risk: High",
+        "WhatsApp dependency risk: High"
       ]
     },
     "growth_momentum": {
-      "score": 40,
-      "label": "Some Movement",
+      "score": 0,
+      "label": "Dormant",
       "reviews_increasing": false,
-      "instagram_active": true,
+      "instagram_active": false,
       "website_updated": false,
       "is_buying_signal": false,
       "lines": [
-        "\u2717 Reviews stagnant or low",
-        "\u2713 Instagram profile active",
-        "\u2717 Website missing"
+        "✗ Reviews increasing",
+        "✗ Instagram active",
+        "✗ Website updated"
       ]
     },
     "relationship": {
@@ -6206,30 +6112,29 @@ window.PANELS = {
   "Raga Lawns": {
     "business_name": "Raga Lawns",
     "area": "Koregaon Park",
-    "suburb": "Koregaon Park",
-    "dmi_score": 43,
-    "dmi_category": "Visibility Weak",
-    "data_source": "google_live",
+    "suburb": "Pune Central",
+    "dmi_score": 30.59,
+    "dmi_category": "Operationally Chaotic",
+    "data_source": "ai_estimate",
     "territory_rank": {
-      "suburb": "Koregaon Park",
-      "suburb_rank": 1,
-      "suburb_total": 1,
-      "global_rank": 52,
+      "suburb": "Pune Central",
+      "suburb_rank": 4,
+      "suburb_total": 7,
+      "global_rank": 54,
       "global_total": 106,
       "lines": [
-        "Koregaon Park Rank: #1 of 1 venues",
-        "Overall Rank: #52 of 106 venues"
+        "Pune Central Rank: #4 of 7 venues",
+        "Overall Rank: #54 of 106 venues"
       ]
     },
     "digital_silence": {
-      "score": 55,
-      "label": "Moderate Silence",
-      "is_strong_digistories_signal": false,
+      "score": 85.0,
+      "label": "Severe Silence",
+      "is_strong_digistories_signal": true,
       "lines": [
-        "Instagram profile exists but needs reels rhythm",
-        "Recent Google reviews are sparse",
-        "No active website trust signal",
-        "24 photos uploaded on Google Maps"
+        "No reel in 109 days",
+        "No review in 89 days",
+        "22 photos on Google"
       ]
     },
     "smartos_opportunity": {
@@ -6238,23 +6143,22 @@ window.PANELS = {
       "manual_workflow_risk": "High",
       "whatsapp_dependency_risk": "High",
       "lines": [
-        "High capacity venue; double booking risk is critical",
-        "Structured as a Standalone Banquet; complex booking contracts",
-        "High probability of paper booking diary usage",
-        "WhatsApp booking chats are unorganized and staff-dependent"
+        "Inquiry leakage risk: High (~88%)",
+        "Manual workflow risk: High",
+        "WhatsApp dependency risk: High"
       ]
     },
     "growth_momentum": {
-      "score": 40,
-      "label": "Some Movement",
+      "score": 0,
+      "label": "Dormant",
       "reviews_increasing": false,
-      "instagram_active": true,
+      "instagram_active": false,
       "website_updated": false,
       "is_buying_signal": false,
       "lines": [
-        "\u2717 Reviews stagnant or low",
-        "\u2713 Instagram profile active",
-        "\u2717 Website missing"
+        "✗ Reviews increasing",
+        "✗ Instagram active",
+        "✗ Website updated"
       ]
     },
     "relationship": {
@@ -6273,97 +6177,94 @@ window.PANELS = {
   "Saket Banquets": {
     "business_name": "Saket Banquets",
     "area": "Erandwane",
-    "suburb": "Erandwane",
-    "dmi_score": 47,
+    "suburb": "Pune Central",
+    "dmi_score": 54.18,
     "dmi_category": "Visibility Weak",
-    "data_source": "google_live",
+    "data_source": "ai_estimate",
     "territory_rank": {
-      "suburb": "Erandwane",
+      "suburb": "Pune Central",
       "suburb_rank": 1,
-      "suburb_total": 3,
-      "global_rank": 21,
+      "suburb_total": 7,
+      "global_rank": 27,
       "global_total": 106,
       "lines": [
-        "Erandwane Rank: #1 of 3 venues",
-        "Overall Rank: #21 of 106 venues"
+        "Pune Central Rank: #1 of 7 venues",
+        "Overall Rank: #27 of 106 venues"
       ]
     },
     "digital_silence": {
-      "score": 40,
-      "label": "Moderate Silence",
+      "score": 15.0,
+      "label": "Active Pulse",
       "is_strong_digistories_signal": false,
       "lines": [
-        "Instagram profile exists but needs reels rhythm",
-        "No active website trust signal",
-        "24 photos uploaded on Google Maps"
+        "No reel in 8 days",
+        "No review in 37 days",
+        "37 photos on Google"
       ]
     },
     "smartos_opportunity": {
-      "opportunity_score": 100,
+      "opportunity_score": 85.0,
       "inquiry_leakage_risk": "High",
       "manual_workflow_risk": "High",
       "whatsapp_dependency_risk": "High",
       "lines": [
-        "High capacity venue; double booking risk is critical",
-        "Structured as a Standalone Banquet; complex booking contracts",
-        "High probability of paper booking diary usage",
-        "WhatsApp booking chats are unorganized and staff-dependent"
+        "Inquiry leakage risk: High (~73%)",
+        "Manual workflow risk: High",
+        "WhatsApp dependency risk: High"
       ]
     },
     "growth_momentum": {
-      "score": 80,
-      "label": "Heating Up",
-      "reviews_increasing": true,
+      "score": 35,
+      "label": "Some Movement",
+      "reviews_increasing": false,
       "instagram_active": true,
       "website_updated": false,
-      "is_buying_signal": true,
+      "is_buying_signal": false,
       "lines": [
-        "\u2713 Google reviews active",
-        "\u2713 Instagram profile active",
-        "\u2717 Website missing"
+        "✗ Reviews increasing",
+        "✓ Instagram active",
+        "✗ Website updated"
       ]
     },
     "relationship": {
       "bca_member": false,
-      "second_generation": true,
+      "second_generation": false,
       "growth_mindset": false,
       "agency_user": false,
-      "tags": [
-        "2nd Gen Operator"
-      ],
+      "tags": [],
       "notes": "",
-      "has_human_intel": true,
+      "has_human_intel": false,
       "lines": [
-        "2nd Gen Operator"
+        "No field intel captured yet"
       ]
     }
   },
   "Abhishek Veg Banquet": {
     "business_name": "Abhishek Veg Banquet",
     "area": "Kothrud",
-    "suburb": "Kothrud",
-    "dmi_score": 47,
-    "dmi_category": "Visibility Weak",
-    "data_source": "google_live",
+    "suburb": "Pune West",
+    "dmi_score": 40.17,
+    "dmi_category": "Operationally Chaotic",
+    "data_source": "ai_estimate",
     "territory_rank": {
-      "suburb": "Kothrud",
-      "suburb_rank": 1,
-      "suburb_total": 2,
-      "global_rank": 21,
+      "suburb": "Pune West",
+      "suburb_rank": 2,
+      "suburb_total": 5,
+      "global_rank": 41,
       "global_total": 106,
       "lines": [
-        "Kothrud Rank: #1 of 2 venues",
-        "Overall Rank: #21 of 106 venues"
+        "Pune West Rank: #2 of 5 venues",
+        "Overall Rank: #41 of 106 venues"
       ]
     },
     "digital_silence": {
-      "score": 40,
-      "label": "Moderate Silence",
+      "score": 15.0,
+      "label": "Active Pulse",
       "is_strong_digistories_signal": false,
       "lines": [
-        "Instagram profile exists but needs reels rhythm",
-        "No active website trust signal",
-        "24 photos uploaded on Google Maps"
+        "No reel in 14 days",
+        "No review in 28 days",
+        "28 photos on Google"
       ]
     },
     "smartos_opportunity": {
@@ -6372,23 +6273,22 @@ window.PANELS = {
       "manual_workflow_risk": "High",
       "whatsapp_dependency_risk": "High",
       "lines": [
-        "High capacity venue; double booking risk is critical",
-        "Structured as a Standalone Banquet; complex booking contracts",
-        "High probability of paper booking diary usage",
-        "WhatsApp booking chats are unorganized and staff-dependent"
+        "Inquiry leakage risk: High (~88%)",
+        "Manual workflow risk: High",
+        "WhatsApp dependency risk: High"
       ]
     },
     "growth_momentum": {
-      "score": 80,
+      "score": 75,
       "label": "Heating Up",
       "reviews_increasing": true,
       "instagram_active": true,
       "website_updated": false,
       "is_buying_signal": true,
       "lines": [
-        "\u2713 Google reviews active",
-        "\u2713 Instagram profile active",
-        "\u2717 Website missing"
+        "✓ Reviews increasing",
+        "✓ Instagram active",
+        "✗ Website updated"
       ]
     },
     "relationship": {
@@ -6408,28 +6308,28 @@ window.PANELS = {
     "business_name": "Gandharva Lawns",
     "area": "Pimple Saudagar",
     "suburb": "Pimple Saudagar",
-    "dmi_score": 47,
-    "dmi_category": "Visibility Weak",
-    "data_source": "google_live",
+    "dmi_score": 29.95,
+    "dmi_category": "Digitally Invisible",
+    "data_source": "ai_estimate",
     "territory_rank": {
       "suburb": "Pimple Saudagar",
       "suburb_rank": 1,
       "suburb_total": 1,
-      "global_rank": 21,
+      "global_rank": 58,
       "global_total": 106,
       "lines": [
         "Pimple Saudagar Rank: #1 of 1 venues",
-        "Overall Rank: #21 of 106 venues"
+        "Overall Rank: #58 of 106 venues"
       ]
     },
     "digital_silence": {
-      "score": 40,
-      "label": "Moderate Silence",
-      "is_strong_digistories_signal": false,
+      "score": 85.0,
+      "label": "Severe Silence",
+      "is_strong_digistories_signal": true,
       "lines": [
-        "Instagram profile exists but needs reels rhythm",
-        "No active website trust signal",
-        "24 photos uploaded on Google Maps"
+        "No reel in 101 days",
+        "No review in 93 days",
+        "24 photos on Google"
       ]
     },
     "smartos_opportunity": {
@@ -6438,23 +6338,22 @@ window.PANELS = {
       "manual_workflow_risk": "High",
       "whatsapp_dependency_risk": "High",
       "lines": [
-        "High capacity venue; double booking risk is critical",
-        "Structured as a Standalone Banquet; complex booking contracts",
-        "High probability of paper booking diary usage",
-        "WhatsApp booking chats are unorganized and staff-dependent"
+        "Inquiry leakage risk: High (~88%)",
+        "Manual workflow risk: High",
+        "WhatsApp dependency risk: High"
       ]
     },
     "growth_momentum": {
-      "score": 80,
-      "label": "Heating Up",
-      "reviews_increasing": true,
-      "instagram_active": true,
+      "score": 0,
+      "label": "Dormant",
+      "reviews_increasing": false,
+      "instagram_active": false,
       "website_updated": false,
-      "is_buying_signal": true,
+      "is_buying_signal": false,
       "lines": [
-        "\u2713 Google reviews active",
-        "\u2713 Instagram profile active",
-        "\u2717 Website missing"
+        "✗ Reviews increasing",
+        "✗ Instagram active",
+        "✗ Website updated"
       ]
     },
     "relationship": {
@@ -6473,29 +6372,29 @@ window.PANELS = {
   "Royal Lawns": {
     "business_name": "Royal Lawns",
     "area": "Baner",
-    "suburb": "Baner",
-    "dmi_score": 49,
-    "dmi_category": "Visibility Weak",
-    "data_source": "google_live",
+    "suburb": "Pune West",
+    "dmi_score": 29.71,
+    "dmi_category": "Digitally Invisible",
+    "data_source": "ai_estimate",
     "territory_rank": {
-      "suburb": "Baner",
-      "suburb_rank": 1,
-      "suburb_total": 2,
-      "global_rank": 1,
+      "suburb": "Pune West",
+      "suburb_rank": 3,
+      "suburb_total": 5,
+      "global_rank": 60,
       "global_total": 106,
       "lines": [
-        "Baner Rank: #1 of 2 venues",
-        "Overall Rank: #1 of 106 venues"
+        "Pune West Rank: #3 of 5 venues",
+        "Overall Rank: #60 of 106 venues"
       ]
     },
     "digital_silence": {
-      "score": 40,
-      "label": "Moderate Silence",
-      "is_strong_digistories_signal": false,
+      "score": 85.0,
+      "label": "Severe Silence",
+      "is_strong_digistories_signal": true,
       "lines": [
-        "Instagram profile exists but needs reels rhythm",
-        "No active website trust signal",
-        "24 photos uploaded on Google Maps"
+        "No reel in 109 days",
+        "No review in 81 days",
+        "18 photos on Google"
       ]
     },
     "smartos_opportunity": {
@@ -6504,66 +6403,63 @@ window.PANELS = {
       "manual_workflow_risk": "High",
       "whatsapp_dependency_risk": "High",
       "lines": [
-        "High capacity venue; double booking risk is critical",
-        "Structured as a Standalone Banquet; complex booking contracts",
-        "High probability of paper booking diary usage",
-        "WhatsApp booking chats are unorganized and staff-dependent"
+        "Inquiry leakage risk: High (~88%)",
+        "Manual workflow risk: High",
+        "WhatsApp dependency risk: High"
       ]
     },
     "growth_momentum": {
-      "score": 80,
-      "label": "Heating Up",
-      "reviews_increasing": true,
-      "instagram_active": true,
+      "score": 0,
+      "label": "Dormant",
+      "reviews_increasing": false,
+      "instagram_active": false,
       "website_updated": false,
-      "is_buying_signal": true,
+      "is_buying_signal": false,
       "lines": [
-        "\u2713 Google reviews active",
-        "\u2713 Instagram profile active",
-        "\u2717 Website missing"
+        "✗ Reviews increasing",
+        "✗ Instagram active",
+        "✗ Website updated"
       ]
     },
     "relationship": {
       "bca_member": false,
       "second_generation": false,
-      "growth_mindset": true,
+      "growth_mindset": false,
       "agency_user": false,
-      "tags": [
-        "Growth Mindset"
-      ],
+      "tags": [],
       "notes": "",
-      "has_human_intel": true,
+      "has_human_intel": false,
       "lines": [
-        "Growth Mindset"
+        "No field intel captured yet"
       ]
     }
   },
   "Laxmi Lawns": {
     "business_name": "Laxmi Lawns",
     "area": "Magarpatta",
-    "suburb": "Magarpatta",
-    "dmi_score": 49,
-    "dmi_category": "Visibility Weak",
-    "data_source": "google_live",
+    "suburb": "Pune East",
+    "dmi_score": 24.81,
+    "dmi_category": "Digitally Invisible",
+    "data_source": "ai_estimate",
     "territory_rank": {
-      "suburb": "Magarpatta",
-      "suburb_rank": 1,
-      "suburb_total": 1,
-      "global_rank": 1,
+      "suburb": "Pune East",
+      "suburb_rank": 2,
+      "suburb_total": 2,
+      "global_rank": 86,
       "global_total": 106,
       "lines": [
-        "Magarpatta Rank: #1 of 1 venues",
-        "Overall Rank: #1 of 106 venues"
+        "Pune East Rank: #2 of 2 venues",
+        "Overall Rank: #86 of 106 venues"
       ]
     },
     "digital_silence": {
-      "score": 40,
-      "label": "Moderate Silence",
-      "is_strong_digistories_signal": false,
+      "score": 85.0,
+      "label": "Severe Silence",
+      "is_strong_digistories_signal": true,
       "lines": [
-        "Instagram profile exists but needs reels rhythm",
-        "No active website trust signal",
-        "24 photos uploaded on Google Maps"
+        "No reel in 93 days",
+        "No review in 69 days",
+        "12 photos on Google"
       ]
     },
     "smartos_opportunity": {
@@ -6572,23 +6468,22 @@ window.PANELS = {
       "manual_workflow_risk": "High",
       "whatsapp_dependency_risk": "High",
       "lines": [
-        "High capacity venue; double booking risk is critical",
-        "Structured as a Standalone Banquet; complex booking contracts",
-        "High probability of paper booking diary usage",
-        "WhatsApp booking chats are unorganized and staff-dependent"
+        "Inquiry leakage risk: High (~88%)",
+        "Manual workflow risk: High",
+        "WhatsApp dependency risk: High"
       ]
     },
     "growth_momentum": {
-      "score": 80,
-      "label": "Heating Up",
-      "reviews_increasing": true,
-      "instagram_active": true,
+      "score": 0,
+      "label": "Dormant",
+      "reviews_increasing": false,
+      "instagram_active": false,
       "website_updated": false,
-      "is_buying_signal": true,
+      "is_buying_signal": false,
       "lines": [
-        "\u2713 Google reviews active",
-        "\u2713 Instagram profile active",
-        "\u2717 Website missing"
+        "✗ Reviews increasing",
+        "✗ Instagram active",
+        "✗ Website updated"
       ]
     },
     "relationship": {
@@ -6607,30 +6502,29 @@ window.PANELS = {
   "Shrushti Lawns": {
     "business_name": "Shrushti Lawns",
     "area": "DP Road",
-    "suburb": "DP Road",
-    "dmi_score": 8,
-    "dmi_category": "Digitally Invisible",
+    "suburb": "Pune Central",
+    "dmi_score": 40.16,
+    "dmi_category": "Operationally Chaotic",
     "data_source": "ai_estimate",
     "territory_rank": {
-      "suburb": "DP Road",
-      "suburb_rank": 1,
-      "suburb_total": 1,
-      "global_rank": 74,
+      "suburb": "Pune Central",
+      "suburb_rank": 3,
+      "suburb_total": 7,
+      "global_rank": 44,
       "global_total": 106,
       "lines": [
-        "DP Road Rank: #1 of 1 venues",
-        "Overall Rank: #74 of 106 venues"
+        "Pune Central Rank: #3 of 7 venues",
+        "Overall Rank: #44 of 106 venues"
       ]
     },
     "digital_silence": {
-      "score": 100,
-      "label": "Severe Silence",
-      "is_strong_digistories_signal": true,
+      "score": 15.0,
+      "label": "Active Pulse",
+      "is_strong_digistories_signal": false,
       "lines": [
-        "No Instagram account found",
-        "Very low Google review count",
-        "No active website trust signal",
-        "Only 4 photos on Google Maps"
+        "No reel in 26 days",
+        "No review in 22 days",
+        "22 photos on Google"
       ]
     },
     "smartos_opportunity": {
@@ -6639,37 +6533,34 @@ window.PANELS = {
       "manual_workflow_risk": "High",
       "whatsapp_dependency_risk": "High",
       "lines": [
-        "High capacity venue; double booking risk is critical",
-        "Structured as a Standalone Banquet; complex booking contracts",
-        "High probability of paper booking diary usage",
-        "WhatsApp booking chats are unorganized and staff-dependent"
+        "Inquiry leakage risk: High (~88%)",
+        "Manual workflow risk: High",
+        "WhatsApp dependency risk: High"
       ]
     },
     "growth_momentum": {
-      "score": 0,
-      "label": "Dormant",
-      "reviews_increasing": false,
-      "instagram_active": false,
+      "score": 75,
+      "label": "Heating Up",
+      "reviews_increasing": true,
+      "instagram_active": true,
       "website_updated": false,
-      "is_buying_signal": false,
+      "is_buying_signal": true,
       "lines": [
-        "\u2717 Reviews stagnant or low",
-        "\u2717 Instagram dormant or missing",
-        "\u2717 Website missing"
+        "✓ Reviews increasing",
+        "✓ Instagram active",
+        "✗ Website updated"
       ]
     },
     "relationship": {
       "bca_member": false,
-      "second_generation": true,
+      "second_generation": false,
       "growth_mindset": false,
       "agency_user": false,
-      "tags": [
-        "2nd Gen Operator"
-      ],
+      "tags": [],
       "notes": "",
-      "has_human_intel": true,
+      "has_human_intel": false,
       "lines": [
-        "2nd Gen Operator"
+        "No field intel captured yet"
       ]
     }
   },
@@ -6677,54 +6568,52 @@ window.PANELS = {
     "business_name": "Balaji Banquets",
     "area": "Wakad",
     "suburb": "Wakad",
-    "dmi_score": 8,
-    "dmi_category": "Digitally Invisible",
+    "dmi_score": 65.34,
+    "dmi_category": "Growth Ready",
     "data_source": "ai_estimate",
     "territory_rank": {
       "suburb": "Wakad",
-      "suburb_rank": 2,
-      "suburb_total": 2,
-      "global_rank": 74,
+      "suburb_rank": 1,
+      "suburb_total": 3,
+      "global_rank": 9,
       "global_total": 106,
       "lines": [
-        "Wakad Rank: #2 of 2 venues",
-        "Overall Rank: #74 of 106 venues"
+        "Wakad Rank: #1 of 3 venues",
+        "Overall Rank: #9 of 106 venues"
       ]
     },
     "digital_silence": {
-      "score": 100,
-      "label": "Severe Silence",
-      "is_strong_digistories_signal": true,
+      "score": 15.0,
+      "label": "Active Pulse",
+      "is_strong_digistories_signal": false,
       "lines": [
-        "No Instagram account found",
-        "Very low Google review count",
-        "No active website trust signal",
-        "Only 4 photos on Google Maps"
+        "No reel in 23 days",
+        "No review in 43 days",
+        "43 photos on Google"
       ]
     },
     "smartos_opportunity": {
-      "opportunity_score": 100,
+      "opportunity_score": 61.0,
       "inquiry_leakage_risk": "High",
       "manual_workflow_risk": "High",
       "whatsapp_dependency_risk": "High",
       "lines": [
-        "High capacity venue; double booking risk is critical",
-        "Structured as a Standalone Banquet; complex booking contracts",
-        "High probability of paper booking diary usage",
-        "WhatsApp booking chats are unorganized and staff-dependent"
+        "Inquiry leakage risk: High (~53%)",
+        "Manual workflow risk: High",
+        "WhatsApp dependency risk: High"
       ]
     },
     "growth_momentum": {
-      "score": 0,
-      "label": "Dormant",
+      "score": 35,
+      "label": "Some Movement",
       "reviews_increasing": false,
-      "instagram_active": false,
+      "instagram_active": true,
       "website_updated": false,
       "is_buying_signal": false,
       "lines": [
-        "\u2717 Reviews stagnant or low",
-        "\u2717 Instagram dormant or missing",
-        "\u2717 Website missing"
+        "✗ Reviews increasing",
+        "✓ Instagram active",
+        "✗ Website updated"
       ]
     },
     "relationship": {
@@ -6743,30 +6632,29 @@ window.PANELS = {
   "Vardhaman Lawns": {
     "business_name": "Vardhaman Lawns",
     "area": "Gangadham",
-    "suburb": "Gangadham",
-    "dmi_score": 8,
-    "dmi_category": "Digitally Invisible",
-    "data_source": "google_live",
+    "suburb": "Wakad",
+    "dmi_score": 41.53,
+    "dmi_category": "Operationally Chaotic",
+    "data_source": "ai_estimate",
     "territory_rank": {
-      "suburb": "Gangadham",
-      "suburb_rank": 1,
-      "suburb_total": 1,
-      "global_rank": 74,
+      "suburb": "Wakad",
+      "suburb_rank": 2,
+      "suburb_total": 3,
+      "global_rank": 34,
       "global_total": 106,
       "lines": [
-        "Gangadham Rank: #1 of 1 venues",
-        "Overall Rank: #74 of 106 venues"
+        "Wakad Rank: #2 of 3 venues",
+        "Overall Rank: #34 of 106 venues"
       ]
     },
     "digital_silence": {
-      "score": 100,
-      "label": "Severe Silence",
-      "is_strong_digistories_signal": true,
+      "score": 15.0,
+      "label": "Active Pulse",
+      "is_strong_digistories_signal": false,
       "lines": [
-        "No Instagram account found",
-        "Very low Google review count",
-        "No active website trust signal",
-        "Only 4 photos on Google Maps"
+        "No reel in 14 days",
+        "No review in 34 days",
+        "34 photos on Google"
       ]
     },
     "smartos_opportunity": {
@@ -6775,23 +6663,22 @@ window.PANELS = {
       "manual_workflow_risk": "High",
       "whatsapp_dependency_risk": "High",
       "lines": [
-        "High capacity venue; double booking risk is critical",
-        "Structured as a Standalone Banquet; complex booking contracts",
-        "High probability of paper booking diary usage",
-        "WhatsApp booking chats are unorganized and staff-dependent"
+        "Inquiry leakage risk: High (~88%)",
+        "Manual workflow risk: High",
+        "WhatsApp dependency risk: High"
       ]
     },
     "growth_momentum": {
-      "score": 0,
-      "label": "Dormant",
+      "score": 35,
+      "label": "Some Movement",
       "reviews_increasing": false,
-      "instagram_active": false,
+      "instagram_active": true,
       "website_updated": false,
       "is_buying_signal": false,
       "lines": [
-        "\u2717 Reviews stagnant or low",
-        "\u2717 Instagram dormant or missing",
-        "\u2717 Website missing"
+        "✗ Reviews increasing",
+        "✓ Instagram active",
+        "✗ Website updated"
       ]
     },
     "relationship": {
@@ -6811,29 +6698,28 @@ window.PANELS = {
     "business_name": "Sai Palace Banquets",
     "area": "Wakad",
     "suburb": "Wakad",
-    "dmi_score": 43,
-    "dmi_category": "Visibility Weak",
-    "data_source": "google_live",
+    "dmi_score": 23.93,
+    "dmi_category": "Digitally Invisible",
+    "data_source": "ai_estimate",
     "territory_rank": {
       "suburb": "Wakad",
-      "suburb_rank": 1,
-      "suburb_total": 2,
-      "global_rank": 52,
+      "suburb_rank": 3,
+      "suburb_total": 3,
+      "global_rank": 88,
       "global_total": 106,
       "lines": [
-        "Wakad Rank: #1 of 2 venues",
-        "Overall Rank: #52 of 106 venues"
+        "Wakad Rank: #3 of 3 venues",
+        "Overall Rank: #88 of 106 venues"
       ]
     },
     "digital_silence": {
-      "score": 55,
-      "label": "Moderate Silence",
-      "is_strong_digistories_signal": false,
+      "score": 100.0,
+      "label": "Severe Silence",
+      "is_strong_digistories_signal": true,
       "lines": [
-        "Instagram profile exists but needs reels rhythm",
-        "Recent Google reviews are sparse",
-        "No active website trust signal",
-        "24 photos uploaded on Google Maps"
+        "No reel in 93 days",
+        "No review in 61 days",
+        "Only 8 photos on Google"
       ]
     },
     "smartos_opportunity": {
@@ -6842,23 +6728,22 @@ window.PANELS = {
       "manual_workflow_risk": "High",
       "whatsapp_dependency_risk": "High",
       "lines": [
-        "High capacity venue; double booking risk is critical",
-        "Structured as a Standalone Banquet; complex booking contracts",
-        "High probability of paper booking diary usage",
-        "WhatsApp booking chats are unorganized and staff-dependent"
+        "Inquiry leakage risk: High (~88%)",
+        "Manual workflow risk: High",
+        "WhatsApp dependency risk: High"
       ]
     },
     "growth_momentum": {
-      "score": 40,
-      "label": "Some Movement",
+      "score": 0,
+      "label": "Dormant",
       "reviews_increasing": false,
-      "instagram_active": true,
+      "instagram_active": false,
       "website_updated": false,
       "is_buying_signal": false,
       "lines": [
-        "\u2717 Reviews stagnant or low",
-        "\u2713 Instagram profile active",
-        "\u2717 Website missing"
+        "✗ Reviews increasing",
+        "✗ Instagram active",
+        "✗ Website updated"
       ]
     },
     "relationship": {
@@ -6877,30 +6762,29 @@ window.PANELS = {
   "Nisarg Mangal Karyalaya": {
     "business_name": "Nisarg Mangal Karyalaya",
     "area": "Erandwane",
-    "suburb": "Erandwane",
-    "dmi_score": 43,
-    "dmi_category": "Visibility Weak",
-    "data_source": "google_live",
+    "suburb": "Pune Central",
+    "dmi_score": 23.97,
+    "dmi_category": "Digitally Invisible",
+    "data_source": "ai_estimate",
     "territory_rank": {
-      "suburb": "Erandwane",
-      "suburb_rank": 3,
-      "suburb_total": 3,
-      "global_rank": 52,
+      "suburb": "Pune Central",
+      "suburb_rank": 7,
+      "suburb_total": 7,
+      "global_rank": 87,
       "global_total": 106,
       "lines": [
-        "Erandwane Rank: #3 of 3 venues",
-        "Overall Rank: #52 of 106 venues"
+        "Pune Central Rank: #7 of 7 venues",
+        "Overall Rank: #87 of 106 venues"
       ]
     },
     "digital_silence": {
-      "score": 55,
-      "label": "Moderate Silence",
-      "is_strong_digistories_signal": false,
+      "score": 85.0,
+      "label": "Severe Silence",
+      "is_strong_digistories_signal": true,
       "lines": [
-        "Instagram profile exists but needs reels rhythm",
-        "Recent Google reviews are sparse",
-        "No active website trust signal",
-        "24 photos uploaded on Google Maps"
+        "No reel in 105 days",
+        "No review in 96 days",
+        "12 photos on Google"
       ]
     },
     "smartos_opportunity": {
@@ -6909,23 +6793,22 @@ window.PANELS = {
       "manual_workflow_risk": "High",
       "whatsapp_dependency_risk": "High",
       "lines": [
-        "High capacity venue; double booking risk is critical",
-        "Structured as a Standalone Banquet; complex booking contracts",
-        "High probability of paper booking diary usage",
-        "WhatsApp booking chats are unorganized and staff-dependent"
+        "Inquiry leakage risk: High (~88%)",
+        "Manual workflow risk: High",
+        "WhatsApp dependency risk: High"
       ]
     },
     "growth_momentum": {
-      "score": 40,
-      "label": "Some Movement",
+      "score": 0,
+      "label": "Dormant",
       "reviews_increasing": false,
-      "instagram_active": true,
+      "instagram_active": false,
       "website_updated": false,
       "is_buying_signal": false,
       "lines": [
-        "\u2717 Reviews stagnant or low",
-        "\u2713 Instagram profile active",
-        "\u2717 Website missing"
+        "✗ Reviews increasing",
+        "✗ Instagram active",
+        "✗ Website updated"
       ]
     },
     "relationship": {
@@ -6944,70 +6827,65 @@ window.PANELS = {
   "Alpa Bachat Bhavan": {
     "business_name": "Alpa Bachat Bhavan",
     "area": "Camp",
-    "suburb": "Camp",
-    "dmi_score": 47,
+    "suburb": "Pune Camp",
+    "dmi_score": 56.48,
     "dmi_category": "Visibility Weak",
-    "data_source": "google_live",
+    "data_source": "ai_estimate",
     "territory_rank": {
-      "suburb": "Camp",
+      "suburb": "Pune Camp",
       "suburb_rank": 1,
       "suburb_total": 1,
-      "global_rank": 21,
+      "global_rank": 23,
       "global_total": 106,
       "lines": [
-        "Camp Rank: #1 of 1 venues",
-        "Overall Rank: #21 of 106 venues"
+        "Pune Camp Rank: #1 of 1 venues",
+        "Overall Rank: #23 of 106 venues"
       ]
     },
     "digital_silence": {
-      "score": 40,
-      "label": "Moderate Silence",
+      "score": 15.0,
+      "label": "Active Pulse",
       "is_strong_digistories_signal": false,
       "lines": [
-        "Instagram profile exists but needs reels rhythm",
-        "No active website trust signal",
-        "24 photos uploaded on Google Maps"
+        "No reel in 26 days",
+        "No review in 37 days",
+        "37 photos on Google"
       ]
     },
     "smartos_opportunity": {
-      "opportunity_score": 100,
+      "opportunity_score": 85.0,
       "inquiry_leakage_risk": "High",
       "manual_workflow_risk": "High",
       "whatsapp_dependency_risk": "High",
       "lines": [
-        "High capacity venue; double booking risk is critical",
-        "Structured as a Standalone Banquet; complex booking contracts",
-        "High probability of paper booking diary usage",
-        "WhatsApp booking chats are unorganized and staff-dependent"
+        "Inquiry leakage risk: High (~73%)",
+        "Manual workflow risk: High",
+        "WhatsApp dependency risk: High"
       ]
     },
     "growth_momentum": {
-      "score": 80,
-      "label": "Heating Up",
-      "reviews_increasing": true,
+      "score": 35,
+      "label": "Some Movement",
+      "reviews_increasing": false,
       "instagram_active": true,
       "website_updated": false,
-      "is_buying_signal": true,
+      "is_buying_signal": false,
       "lines": [
-        "\u2713 Google reviews active",
-        "\u2713 Instagram profile active",
-        "\u2717 Website missing"
+        "✗ Reviews increasing",
+        "✓ Instagram active",
+        "✗ Website updated"
       ]
     },
     "relationship": {
       "bca_member": false,
-      "second_generation": true,
-      "growth_mindset": true,
+      "second_generation": false,
+      "growth_mindset": false,
       "agency_user": false,
-      "tags": [
-        "2nd Gen Operator",
-        "Growth Mindset"
-      ],
+      "tags": [],
       "notes": "",
-      "has_human_intel": true,
+      "has_human_intel": false,
       "lines": [
-        "2nd Gen Operator",
-        "Growth Mindset"
+        "No field intel captured yet"
       ]
     }
   }

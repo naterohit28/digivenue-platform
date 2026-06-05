@@ -24,3 +24,21 @@ def compute_delta(current_rows: list[dict], previous_path: Path) -> dict:
             alerts.append({'business_name': row['business_name'], 'alert': 'Review spike detected'})
 
     return {'run_at': datetime.utcnow().isoformat(timespec='seconds'), 'alerts': alerts}
+
+
+def compute_delta_from_rows(current_rows: list[dict], previous_rows: list[dict]) -> dict:
+    prev = {x['business_name']: x for x in previous_rows if x.get('business_name')}
+
+    alerts = []
+    for row in current_rows:
+        old = prev.get(row['business_name'])
+        if not old:
+            alerts.append({'business_name': row['business_name'], 'alert': 'New venue discovered'})
+            continue
+        move = row.get('dmi_score', 0) - old.get('dmi_score', 0)
+        if move >= 10:
+            alerts.append({'business_name': row['business_name'], 'alert': 'Modernization movement +10 DMI'})
+        if row.get('review_count', 0) - old.get('review_count', 0) >= 20:
+            alerts.append({'business_name': row['business_name'], 'alert': 'Review spike detected'})
+
+    return {'run_at': datetime.utcnow().isoformat(timespec='seconds'), 'alerts': alerts}

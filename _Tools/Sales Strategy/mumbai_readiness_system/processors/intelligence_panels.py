@@ -202,10 +202,12 @@ def _relationship(row: dict) -> dict:
 # ─────────────────────────────────────────────
 #  Assemble all panels for every venue
 # ─────────────────────────────────────────────
-def build_intelligence_panels(rows: list[dict], previous_path: Path | None = None) -> dict:
+def build_intelligence_panels(rows: list[dict], previous_path: Path | list[dict] | None = None) -> dict:
     # previous run (for momentum)
     prev_map = {}
-    if previous_path and Path(previous_path).exists():
+    if isinstance(previous_path, list):
+        prev_map = {x["business_name"]: x for x in previous_path if x.get("business_name")}
+    elif previous_path and Path(previous_path).exists():
         try:
             prev_data = json.loads(Path(previous_path).read_text(encoding="utf-8"))
             prev_map = {x["business_name"]: x for x in prev_data}

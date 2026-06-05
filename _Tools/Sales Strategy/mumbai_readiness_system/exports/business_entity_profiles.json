@@ -271,11 +271,11 @@
         "review_management": 2,
         "booking_workflow_visibility": 5
       },
-      "digital_silence_index": 50,
-      "digital_silence_label": "At Risk",
+      "digital_silence_index": 75,
+      "digital_silence_label": "Severe Silence",
       "digital_silence_breakdown": {
         "no_post_60_plus_days": 0,
-        "no_recent_google_reviews": 0,
+        "no_recent_google_reviews": 1,
         "no_recent_google_photos_signal": 1,
         "outdated_branding_signal": 1,
         "dead_website_signal": 1
@@ -1349,11 +1349,11 @@
         "review_management": 2,
         "booking_workflow_visibility": 5
       },
-      "digital_silence_index": 60,
-      "digital_silence_label": "At Risk",
+      "digital_silence_index": 85,
+      "digital_silence_label": "Severe Silence",
       "digital_silence_breakdown": {
         "no_post_60_plus_days": 1,
-        "no_recent_google_reviews": 0,
+        "no_recent_google_reviews": 1,
         "no_recent_google_photos_signal": 0,
         "outdated_branding_signal": 1,
         "dead_website_signal": 1
@@ -3005,11 +3005,11 @@
         "review_management": 2,
         "booking_workflow_visibility": 5
       },
-      "digital_silence_index": 35,
-      "digital_silence_label": "Active Pulse",
+      "digital_silence_index": 60,
+      "digital_silence_label": "At Risk",
       "digital_silence_breakdown": {
         "no_post_60_plus_days": 0,
-        "no_recent_google_reviews": 0,
+        "no_recent_google_reviews": 1,
         "no_recent_google_photos_signal": 0,
         "outdated_branding_signal": 1,
         "dead_website_signal": 1
@@ -3586,11 +3586,11 @@
         "review_management": 2,
         "booking_workflow_visibility": 5
       },
-      "digital_silence_index": 50,
-      "digital_silence_label": "At Risk",
+      "digital_silence_index": 75,
+      "digital_silence_label": "Severe Silence",
       "digital_silence_breakdown": {
         "no_post_60_plus_days": 0,
-        "no_recent_google_reviews": 0,
+        "no_recent_google_reviews": 1,
         "no_recent_google_photos_signal": 1,
         "outdated_branding_signal": 1,
         "dead_website_signal": 1
@@ -4415,11 +4415,11 @@
         "review_management": 2,
         "booking_workflow_visibility": 5
       },
-      "digital_silence_index": 75,
+      "digital_silence_index": 100,
       "digital_silence_label": "Severe Silence",
       "digital_silence_breakdown": {
         "no_post_60_plus_days": 1,
-        "no_recent_google_reviews": 0,
+        "no_recent_google_reviews": 1,
         "no_recent_google_photos_signal": 1,
         "outdated_branding_signal": 1,
         "dead_website_signal": 1
@@ -5242,11 +5242,11 @@
         "review_management": 2,
         "booking_workflow_visibility": 5
       },
-      "digital_silence_index": 75,
+      "digital_silence_index": 100,
       "digital_silence_label": "Severe Silence",
       "digital_silence_breakdown": {
         "no_post_60_plus_days": 1,
-        "no_recent_google_reviews": 0,
+        "no_recent_google_reviews": 1,
         "no_recent_google_photos_signal": 1,
         "outdated_branding_signal": 1,
         "dead_website_signal": 1
@@ -5491,11 +5491,11 @@
         "review_management": 2,
         "booking_workflow_visibility": 5
       },
-      "digital_silence_index": 60,
-      "digital_silence_label": "At Risk",
+      "digital_silence_index": 85,
+      "digital_silence_label": "Severe Silence",
       "digital_silence_breakdown": {
         "no_post_60_plus_days": 1,
-        "no_recent_google_reviews": 0,
+        "no_recent_google_reviews": 1,
         "no_recent_google_photos_signal": 0,
         "outdated_branding_signal": 1,
         "dead_website_signal": 1
@@ -6319,11 +6319,11 @@
         "review_management": 2,
         "booking_workflow_visibility": 5
       },
-      "digital_silence_index": 60,
-      "digital_silence_label": "At Risk",
+      "digital_silence_index": 85,
+      "digital_silence_label": "Severe Silence",
       "digital_silence_breakdown": {
         "no_post_60_plus_days": 1,
-        "no_recent_google_reviews": 0,
+        "no_recent_google_reviews": 1,
         "no_recent_google_photos_signal": 0,
         "outdated_branding_signal": 1,
         "dead_website_signal": 1
@@ -6899,11 +6899,11 @@
         "review_management": 2,
         "booking_workflow_visibility": 5
       },
-      "digital_silence_index": 75,
+      "digital_silence_index": 100,
       "digital_silence_label": "Severe Silence",
       "digital_silence_breakdown": {
         "no_post_60_plus_days": 1,
-        "no_recent_google_reviews": 0,
+        "no_recent_google_reviews": 1,
         "no_recent_google_photos_signal": 1,
         "outdated_branding_signal": 1,
         "dead_website_signal": 1
@@ -7727,11 +7727,11 @@
         "review_management": 2,
         "booking_workflow_visibility": 5
       },
-      "digital_silence_index": 75,
+      "digital_silence_index": 100,
       "digital_silence_label": "Severe Silence",
       "digital_silence_breakdown": {
         "no_post_60_plus_days": 1,
-        "no_recent_google_reviews": 0,
+        "no_recent_google_reviews": 1,
         "no_recent_google_photos_signal": 1,
         "outdated_branding_signal": 1,
         "dead_website_signal": 1
@@ -8556,11 +8556,11 @@
         "review_management": 2,
         "booking_workflow_visibility": 5
       },
-      "digital_silence_index": 75,
+      "digital_silence_index": 100,
       "digital_silence_label": "Severe Silence",
       "digital_silence_breakdown": {
         "no_post_60_plus_days": 1,
-        "no_recent_google_reviews": 0,
+        "no_recent_google_reviews": 1,
         "no_recent_google_photos_signal": 1,
         "outdated_branding_signal": 1,
         "dead_website_signal": 1

@@ -2,7 +2,7 @@ name,address,rating,reviews_count,website,phones,instagram,whatsapp_link,dmi_sco
 Swagat Banquet Hall,"Dadar, Dadar, Maharashtra",3.5,8,,,None,None,17.56,Digitally Invisible,ai_estimate,100,Severe Silence,12.0,0.88,100,DigiStories + SmartOS,Low,auto,C,28.2,0.75,0.3,0.35
 Swatantryaveer Savarkar Sabhagriha,"Shivaji Park, Dadar, Maharashtra",4.3,73,,,swatantryaveersavark,None,57.84,Visibility Weak,ai_estimate,15,Active Pulse,27.0,0.73,10,SmartOS,Low,auto,B,12.45,0.75,0.3,0.45
 Kohinoor Hall,"Dadar, Dadar, Maharashtra",3.9,24,,,kohinoorhall,None,28.67,Digitally Invisible,ai_estimate,85,Severe Silence,12.0,0.88,80,DigiStories + SmartOS,Low,auto,B,25.2,0.75,0.3,0.45
-Mayfair Banquets,"Worli, South Mumbai, Maharashtra",3.8,15,,,mayfairbanquets,None,23.18,Digitally Invisible,ai_estimate,50,At Risk,12.0,0.88,80,DigiStories + SmartOS,Low,auto,B,25.2,0.75,0.3,0.45
+Mayfair Banquets,"Worli, South Mumbai, Maharashtra",3.8,15,,,mayfairbanquets,None,23.18,Digitally Invisible,ai_estimate,75,Severe Silence,12.0,0.88,80,DigiStories + SmartOS,Low,auto,B,25.2,0.75,0.3,0.45
 Jewel of India (Jade Ballroom),"Worli, South Mumbai, Maharashtra",3.9,24,,,jewelofindia(jadebal,None,21.47,Digitally Invisible,ai_estimate,85,Severe Silence,12.0,0.88,90,DigiStories + SmartOS,Low,auto,B,26.7,0.75,0.3,0.45
 Ramee Guestline Banquets,"Dadar, Dadar, Maharashtra",4.2,63,,,rameeguestlinebanque,None,55.13,Visibility Weak,ai_estimate,15,Active Pulse,27.0,0.73,25,SmartOS,Low,auto,B,14.7,0.75,0.3,0.45
 Ahilyadevi Sabhagruh,"Dadar, Dadar, Maharashtra",4.1,48,,,ahilyadevisabhagruh,None,40.17,Operationally Chaotic,ai_estimate,15,Active Pulse,12.0,0.88,15,SmartOS,Low,auto,B,15.45,0.75,0.3,0.45
@@ -15,7 +15,7 @@ Maharashtra College Hall,"Byculla, South Mumbai, Maharashtra",4.2,58,,,maharasht
 Bombay Y.M.C.A. Banquets,"Colaba, South Mumbai, Maharashtra",4.0,43,,,bombayy.m.c.a.banque,None,39.41,Operationally Chaotic,ai_estimate,15,Active Pulse,12.0,0.88,25,SmartOS,Low,auto,B,16.95,0.75,0.3,0.45
 Royal Garden Banquet,"Dadar, Dadar, Maharashtra",4.2,36,,,royalgardenbanquet,None,27.09,Digitally Invisible,ai_estimate,85,Severe Silence,12.0,0.88,80,DigiStories + SmartOS,Low,auto,B,25.2,0.75,0.3,0.45
 Hindu Gymkhana Grounds,"Marine Drive, South Mumbai, Maharashtra",4.0,27,,,hindugymkhanagrounds,None,29.94,Digitally Invisible,ai_estimate,85,Severe Silence,12.0,0.88,90,DigiStories + SmartOS,Low,auto,B,26.7,0.75,0.3,0.45
-Parsi Gymkhana Grounds,"Marine Drive, South Mumbai, Maharashtra",3.8,18,,,parsigymkhanagrounds,None,23.91,Digitally Invisible,ai_estimate,60,At Risk,12.0,0.88,90,DigiStories + SmartOS,Low,auto,B,26.7,0.75,0.3,0.45
+Parsi Gymkhana Grounds,"Marine Drive, South Mumbai, Maharashtra",3.8,18,,,parsigymkhanagrounds,None,23.91,Digitally Invisible,ai_estimate,85,Severe Silence,12.0,0.88,90,DigiStories + SmartOS,Low,auto,B,26.7,0.75,0.3,0.45
 Wodehouse Gymkhana Banquets,"Colaba, South Mumbai, Maharashtra",4.5,83,,,wodehousegymkhanaban,None,69.56,Growth Ready,ai_estimate,15,Active Pulse,47.0,0.53,10,DigiStories,Low,auto,B,9.45,0.75,0.3,0.45
 Vivette Luxury Banquets,"Malad West, Malad, Maharashtra",4.1,30,,,vivetteluxurybanquet,None,28.71,Digitally Invisible,ai_estimate,85,Severe Silence,12.0,0.88,55,DigiStories + SmartOS,Low,auto,B,21.45,0.75,0.3,0.45
 Evershine Banquets,"Malad West, Malad, Maharashtra",3.6,14,,,None,None,18.44,Digitally Invisible,ai_estimate,100,Severe Silence,12.0,0.88,100,DigiStories + SmartOS,Low,auto,C,28.2,0.75,0.3,0.35
@@ -35,14 +35,14 @@ Imperial Hall,"Ghatkopar, Chembur, Maharashtra",3.7,16,,,imperialhall,None,20.19
 Royal Symphony Banquet Malad,"Malad East, Malad, Maharashtra",4.0,43,,,royalsymphonybanquet,None,39.81,Operationally Chaotic,ai_estimate,15,Active Pulse,12.0,0.88,0,SmartOS,Low,auto,B,13.2,0.75,0.3,0.45
 Elegance Banquet,"Borivali, Borivali, Maharashtra",4.2,36,,,elegancebanquet,None,26.34,Digitally Invisible,ai_estimate,60,At Risk,12.0,0.88,90,DigiStories + SmartOS,Low,auto,B,26.7,0.75,0.3,0.45
 Sumati Hall,"Ghatkopar East, Chembur, Maharashtra",4.2,63,,,sumatihall,None,63.03,Visibility Weak,ai_estimate,15,Active Pulse,47.0,0.53,50,DigiStories,Low,auto,B,15.45,0.75,0.3,0.45
-Utsav Banquet Hall,"Bhandup, Mulund, Maharashtra",3.8,18,,,utsavbanquethall,None,23.54,Digitally Invisible,ai_estimate,35,Active Pulse,12.0,0.88,80,DigiStories + SmartOS,Low,auto,B,25.2,0.75,0.3,0.45
+Utsav Banquet Hall,"Bhandup, Mulund, Maharashtra",3.8,18,,,utsavbanquethall,None,23.54,Digitally Invisible,ai_estimate,60,At Risk,12.0,0.88,80,DigiStories + SmartOS,Low,auto,B,25.2,0.75,0.3,0.45
 Dreamland Banquet Hall,"Bhandup, Mulund, Maharashtra",4.5,83,,,dreamlandbanquethall,None,58.01,Visibility Weak,ai_estimate,15,Active Pulse,27.0,0.73,25,SmartOS,Low,auto,B,14.7,0.75,0.3,0.45
 The Gateway Banquet,"Mulund West, Mulund, Maharashtra",4.1,30,,,thegatewaybanquet,None,30.09,Operationally Chaotic,ai_estimate,85,Severe Silence,12.0,0.88,80,DigiStories + SmartOS,Low,auto,B,25.2,0.75,0.3,0.45
 Shehnai Banquet Hall,"Mulund East, Mulund, Maharashtra",4.2,53,,,shehnaibanquethall,None,40.93,Operationally Chaotic,ai_estimate,15,Active Pulse,12.0,0.88,15,SmartOS,Low,auto,B,15.45,0.75,0.3,0.45
 Blossom Banquet Hall,"Kurla, Kurla, Maharashtra",4.0,38,,,blossombanquethall,None,46.71,Visibility Weak,ai_estimate,15,Active Pulse,32.0,0.68,50,SmartOS,Low,auto,B,17.7,0.75,0.3,0.45
 Club Emerald Banquets,"Chembur, Chembur, Maharashtra",4.3,73,,,clubemeraldbanquets,None,57.84,Visibility Weak,ai_estimate,15,Active Pulse,27.0,0.73,0,SmartOS,Low,auto,B,10.95,0.75,0.3,0.45
 GCC Club Lawn,"Mira Road, Mira Road, Maharashtra",3.9,24,,,gccclublawn,None,26.92,Digitally Invisible,ai_estimate,60,At Risk,12.0,0.88,80,DigiStories + SmartOS,Low,auto,B,25.2,0.75,0.3,0.45
-Sapphire Banquet,"Kanjurmarg, Mulund, Maharashtra",3.8,15,,,sapphirebanquet,None,23.18,Digitally Invisible,ai_estimate,50,At Risk,12.0,0.88,80,DigiStories + SmartOS,Low,auto,B,25.2,0.75,0.3,0.45
+Sapphire Banquet,"Kanjurmarg, Mulund, Maharashtra",3.8,15,,,sapphirebanquet,None,23.18,Digitally Invisible,ai_estimate,75,Severe Silence,12.0,0.88,80,DigiStories + SmartOS,Low,auto,B,25.2,0.75,0.3,0.45
 Grand Banquet at The Club,"Andheri West, Andheri, Maharashtra",4.4,78,,,grandbanquetattheclu,None,68.8,Growth Ready,ai_estimate,15,Active Pulse,47.0,0.53,0,DigiStories,Low,auto,B,7.95,0.75,0.3,0.45
 Eskay Resorts Lawn,"Borivali West, Borivali, Maharashtra",4.0,27,,,eskayresortslawn,None,25.32,Digitally Invisible,ai_estimate,85,Severe Silence,12.0,0.88,90,DigiStories + SmartOS,Low,auto,B,26.7,0.75,0.3,0.45
 Hotel Tip Top Plaza,"Thane West, Thane West, Maharashtra",3.6,12,,,hoteltiptopplaza,None,19.55,Digitally Invisible,ai_estimate,100,Severe Silence,12.0,0.88,90,DigiStories + SmartOS,Low,auto,B,26.7,0.75,0.3,0.45
@@ -52,7 +52,7 @@ Madhav Banquet,"Thane West, Thane West, Maharashtra",3.9,21,,,madhavbanquet,None
 All Heavens Banquet,"Thane West, Thane West, Maharashtra",3.7,12,,,allheavensbanquet,None,23.04,Digitally Invisible,ai_estimate,75,Severe Silence,12.0,0.88,90,DigiStories + SmartOS,Low,auto,B,26.7,0.75,0.3,0.45
 Maharaja Banquet,"Ghodbunder Rd, Thane West, Maharashtra",4.1,33,,,maharajabanquet,None,28.32,Digitally Invisible,ai_estimate,60,At Risk,12.0,0.88,90,DigiStories + SmartOS,Low,auto,B,26.7,0.75,0.3,0.45
 Exotica Yeoor Hills,"Yeoor Hills, Thane West, Maharashtra",3.9,24,,,exoticayeoorhills,None,29.05,Digitally Invisible,ai_estimate,85,Severe Silence,12.0,0.88,90,DigiStories + SmartOS,Low,auto,B,26.7,0.75,0.3,0.45
-Bramha Banquet,"Thane West, Thane West, Maharashtra",3.8,15,,,bramhabanquet,None,23.55,Digitally Invisible,ai_estimate,75,Severe Silence,12.0,0.88,90,DigiStories + SmartOS,Low,auto,B,26.7,0.75,0.3,0.45
+Bramha Banquet,"Thane West, Thane West, Maharashtra",3.8,15,,,bramhabanquet,None,23.55,Digitally Invisible,ai_estimate,100,Severe Silence,12.0,0.88,90,DigiStories + SmartOS,Low,auto,B,26.7,0.75,0.3,0.45
 Symphony Banquet,"Thane West, Thane West, Maharashtra",4.4,78,,,symphonybanquet,None,57.25,Visibility Weak,ai_estimate,15,Active Pulse,27.0,0.73,15,SmartOS,Low,auto,B,13.2,0.75,0.3,0.45
 Korum Mall Banquets,"Eastern Exp Hwy, Thane West, Maharashtra",4.2,63,,,korummallbanquets,None,55.53,Visibility Weak,ai_estimate,15,Active Pulse,27.0,0.73,10,SmartOS,Low,auto,B,12.45,0.75,0.3,0.45
 Regency Hall,"Kalyan, Kalyan, Maharashtra",3.6,12,,,None,None,18.2,Digitally Invisible,ai_estimate,100,Severe Silence,12.0,0.88,100,DigiStories + SmartOS,Low,auto,C,28.2,0.75,0.3,0.35
@@ -62,10 +62,10 @@ Shangrila Resort,"Bhiwandi Road, Thane West, Maharashtra",3.9,21,,,shangrilareso
 Shaurya Banquet,"Thane West, Thane West, Maharashtra",3.7,12,,,shauryabanquet,None,27.28,Digitally Invisible,ai_estimate,75,Severe Silence,12.0,0.88,90,DigiStories + SmartOS,Low,auto,B,26.7,0.75,0.3,0.45
 Royal Banquet Hall Kalyan,"Kalyan, Kalyan, Maharashtra",4.3,73,,,royalbanquethallkaly,None,65.74,Growth Ready,ai_estimate,15,Active Pulse,47.0,0.53,40,DigiStories,Low,auto,B,13.95,0.75,0.3,0.45
 K. P. Banquet,"Thane West, Thane West, Maharashtra",4.2,58,,,k.p.banquet,None,40.58,Operationally Chaotic,ai_estimate,15,Active Pulse,12.0,0.88,10,SmartOS,Low,auto,B,14.7,0.75,0.3,0.45
-Nisarg Lawn & Banquet,"Kalyan, Kalyan, Maharashtra",3.8,15,,,nisarglawn&banquet,None,27.43,Digitally Invisible,ai_estimate,75,Severe Silence,12.0,0.88,80,DigiStories + SmartOS,Low,auto,B,25.2,0.75,0.3,0.45
+Nisarg Lawn & Banquet,"Kalyan, Kalyan, Maharashtra",3.8,15,,,nisarglawn&banquet,None,27.43,Digitally Invisible,ai_estimate,100,Severe Silence,12.0,0.88,80,DigiStories + SmartOS,Low,auto,B,25.2,0.75,0.3,0.45
 Savitri Banquet Hall,"Dombivli, Dombivli, Maharashtra",4.4,78,,,savitribanquethall,None,58.6,Visibility Weak,ai_estimate,15,Active Pulse,27.0,0.73,0,SmartOS,Low,auto,B,10.95,0.75,0.3,0.45
 Golden Palace Banquet,"Dombivli, Dombivli, Maharashtra",4.2,63,,,goldenpalacebanquet,None,56.48,Visibility Weak,ai_estimate,15,Active Pulse,27.0,0.73,10,SmartOS,Low,auto,B,12.45,0.75,0.3,0.45
-iLeaf Grand Banquets,"Vashi, Vashi, Maharashtra",3.8,18,,,ileafgrandbanquets,None,28.54,Digitally Invisible,ai_estimate,60,At Risk,12.0,0.88,80,DigiStories + SmartOS,Low,auto,B,25.2,0.75,0.3,0.45
+iLeaf Grand Banquets,"Vashi, Vashi, Maharashtra",3.8,18,,,ileafgrandbanquets,None,28.54,Digitally Invisible,ai_estimate,85,Severe Silence,12.0,0.88,80,DigiStories + SmartOS,Low,auto,B,25.2,0.75,0.3,0.45
 Grand Golden Banquet,"Vashi, Vashi, Maharashtra",4.2,39,,,grandgoldenbanquet,None,29.95,Digitally Invisible,ai_estimate,85,Severe Silence,12.0,0.88,65,DigiStories + SmartOS,Low,auto,B,22.95,0.75,0.3,0.45
 Imperial Banquets,"Vashi, Vashi, Maharashtra",4.3,68,,,imperialbanquets,None,64.74,Visibility Weak,ai_estimate,15,Active Pulse,47.0,0.53,15,DigiStories,Low,auto,B,10.2,0.75,0.3,0.45
 Palm Beach Lawn & Banquets,"Sanpada, Vashi, Maharashtra",3.9,21,,,palmbeachlawn&banque,None,26.18,Digitally Invisible,ai_estimate,85,Severe Silence,12.0,0.88,80,DigiStories + SmartOS,Low,auto,B,25.2,0.75,0.3,0.45
@@ -75,14 +75,14 @@ Golden Peacock Banquet,"Kharghar, Kharghar, Maharashtra",4.2,58,,,goldenpeacockb
 Panvel Grand Banquet,"Panvel, Panvel, Maharashtra",3.5,10,,,None,None,17.8,Digitally Invisible,ai_estimate,100,Severe Silence,12.0,0.88,100,DigiStories + SmartOS,Low,auto,C,28.2,0.75,0.3,0.35
 Ashoka Banquet Hall,"Vashi, Vashi, Maharashtra",4.2,36,,,ashokabanquethall,None,30.59,Operationally Chaotic,ai_estimate,85,Severe Silence,12.0,0.88,80,DigiStories + SmartOS,Low,auto,B,25.2,0.75,0.3,0.45
 Moraj Banquet Hall,"Sanpada, Vashi, Maharashtra",4.2,63,,,morajbanquethall,None,63.03,Visibility Weak,ai_estimate,15,Active Pulse,47.0,0.53,50,DigiStories,Low,auto,B,15.45,0.75,0.3,0.45
-Belapur Garden Banquet,"Belapur, Belapur, Maharashtra",3.8,18,,,belapurgardenbanquet,None,28.54,Digitally Invisible,ai_estimate,60,At Risk,12.0,0.88,80,DigiStories + SmartOS,Low,auto,B,25.2,0.75,0.3,0.45
+Belapur Garden Banquet,"Belapur, Belapur, Maharashtra",3.8,18,,,belapurgardenbanquet,None,28.54,Digitally Invisible,ai_estimate,85,Severe Silence,12.0,0.88,80,DigiStories + SmartOS,Low,auto,B,25.2,0.75,0.3,0.45
 Shubham Karoti Banquet,"Kopar Khairane, Vashi, Maharashtra",4.5,83,,,shubhamkarotibanquet,None,65.91,Growth Ready,ai_estimate,15,Active Pulse,47.0,0.53,50,DigiStories,Low,auto,B,15.45,0.75,0.3,0.45
 Kesar Banquet,"Kharghar, Kharghar, Maharashtra",4.1,30,,,kesarbanquet,None,27.59,Digitally Invisible,ai_estimate,85,Severe Silence,12.0,0.88,90,DigiStories + SmartOS,Low,auto,B,26.7,0.75,0.3,0.45
 Vishwa Jyot Banquet,"Kharghar, Kharghar, Maharashtra",4.2,53,,,vishwajyotbanquet,None,52.48,Visibility Weak,ai_estimate,15,Active Pulse,32.0,0.68,0,SmartOS,Low,auto,B,10.2,0.75,0.3,0.45
 Royal Celebration Hall,"Kamothe, Kharghar, Maharashtra",4.0,38,,,royalcelebrationhall,None,47.66,Visibility Weak,ai_estimate,15,Active Pulse,32.0,0.68,15,SmartOS,Low,auto,B,12.45,0.75,0.3,0.45
 Celebration Banquet Hall,"Nerul, Nerul, Maharashtra",4.3,73,,,celebrationbanquetha,None,57.84,Visibility Weak,ai_estimate,15,Active Pulse,27.0,0.73,10,SmartOS,Low,auto,B,12.45,0.75,0.3,0.45
 Raigad Fort Banquet,"New Panvel, Panvel, Maharashtra",4.2,58,,,raigadfortbanquet,None,39.23,Operationally Chaotic,ai_estimate,15,Active Pulse,12.0,0.88,25,SmartOS,Low,auto,B,16.95,0.75,0.3,0.45
-Shikara Hotel Banquets,"Sanpada, Vashi, Maharashtra",3.8,15,,,shikarahotelbanquets,None,25.3,Digitally Invisible,ai_estimate,75,Severe Silence,12.0,0.88,90,DigiStories + SmartOS,Low,auto,B,26.7,0.75,0.3,0.45
+Shikara Hotel Banquets,"Sanpada, Vashi, Maharashtra",3.8,15,,,shikarahotelbanquets,None,25.3,Digitally Invisible,ai_estimate,100,Severe Silence,12.0,0.88,90,DigiStories + SmartOS,Low,auto,B,26.7,0.75,0.3,0.45
 Belapur Gymkhana Banquets,"Belapur, Belapur, Maharashtra",4.4,78,,,belapurgymkhanabanqu,None,63.8,Visibility Weak,ai_estimate,15,Active Pulse,47.0,0.53,65,DigiStories,Low,auto,B,17.7,0.75,0.3,0.45
 Navi Mumbai Club Banquets,"Nerul, Nerul, Maharashtra",4.2,63,,,navimumbaiclubbanque,None,66.68,Growth Ready,ai_estimate,15,Active Pulse,47.0,0.53,0,DigiStories,Low,auto,B,7.95,0.75,0.3,0.45
 Siddhi Gardens & Banquets,"Erandwane, Pune Central, Maharashtra",4.1,48,,,siddhigardens&banque,None,48.07,Visibility Weak,ai_estimate,15,Active Pulse,32.0,0.68,40,SmartOS,Low,auto,B,16.2,0.75,0.3,0.45
@@ -92,7 +92,7 @@ Emerald Party Hall,"Baner, Pune West, Maharashtra",4.2,53,,,emeraldpartyhall,Non
 Pyramids Garden,"Kothrud, Pune West, Maharashtra",3.7,12,,,pyramidsgarden,None,23.41,Digitally Invisible,ai_estimate,75,Severe Silence,12.0,0.88,80,DigiStories + SmartOS,Low,auto,B,25.2,0.75,0.3,0.45
 Shubharambh Lawns,"Karve Nagar, Pune West, Maharashtra",4.1,33,,,shubharambhlawns,None,27.95,Digitally Invisible,ai_estimate,85,Severe Silence,12.0,0.88,90,DigiStories + SmartOS,Low,auto,B,26.7,0.75,0.3,0.45
 Oasis Banquets & Lawns,"Hadapsar, Pune East, Maharashtra",4.2,58,,,oasisbanquets&lawns,None,42.88,Operationally Chaotic,ai_estimate,15,Active Pulse,12.0,0.88,10,SmartOS,Low,auto,B,14.7,0.75,0.3,0.45
-Yash Lawns,"Bibwewadi, Pune Central, Maharashtra",3.8,15,,,yashlawns,None,25.3,Digitally Invisible,ai_estimate,75,Severe Silence,12.0,0.88,90,DigiStories + SmartOS,Low,auto,B,26.7,0.75,0.3,0.45
+Yash Lawns,"Bibwewadi, Pune Central, Maharashtra",3.8,15,,,yashlawns,None,25.3,Digitally Invisible,ai_estimate,100,Severe Silence,12.0,0.88,90,DigiStories + SmartOS,Low,auto,B,26.7,0.75,0.3,0.45
 Raga Lawns,"Koregaon Park, Pune Central, Maharashtra",4.2,36,,,ragalawns,None,30.59,Operationally Chaotic,ai_estimate,85,Severe Silence,12.0,0.88,80,DigiStories + SmartOS,Low,auto,B,25.2,0.75,0.3,0.45
 Saket Banquets,"Erandwane, Pune Central, Maharashtra",4.2,63,,,saketbanquets,None,54.18,Visibility Weak,ai_estimate,15,Active Pulse,27.0,0.73,0,SmartOS,Low,auto,B,10.95,0.75,0.3,0.45
 Abhishek Veg Banquet,"Kothrud, Pune West, Maharashtra",4.1,48,,,abhishekvegbanquet,None,40.17,Operationally Chaotic,ai_estimate,15,Active Pulse,12.0,0.88,15,SmartOS,Low,auto,B,15.45,0.75,0.3,0.45
@@ -102,6 +102,6 @@ Laxmi Lawns,"Magarpatta, Pune East, Maharashtra",3.9,21,,,laxmilawns,None,24.81,
 Shrushti Lawns,"DP Road, Pune Central, Maharashtra",4.0,38,,,shrushtilawns,None,40.16,Operationally Chaotic,ai_estimate,15,Active Pulse,12.0,0.88,10,SmartOS,Low,auto,B,14.7,0.75,0.3,0.45
 Balaji Banquets,"Wakad, Wakad, Maharashtra",4.3,73,,,balajibanquets,None,65.34,Growth Ready,ai_estimate,15,Active Pulse,47.0,0.53,15,DigiStories,Low,auto,B,10.2,0.75,0.3,0.45
 Vardhaman Lawns,"Gangadham, Wakad, Maharashtra",4.2,58,,,vardhamanlawns,None,41.53,Operationally Chaotic,ai_estimate,15,Active Pulse,12.0,0.88,25,SmartOS,Low,auto,B,16.95,0.75,0.3,0.45
-Sai Palace Banquets,"Wakad, Wakad, Maharashtra",3.8,15,,,saipalacebanquets,None,23.93,Digitally Invisible,ai_estimate,75,Severe Silence,12.0,0.88,90,DigiStories + SmartOS,Low,auto,B,26.7,0.75,0.3,0.45
+Sai Palace Banquets,"Wakad, Wakad, Maharashtra",3.8,15,,,saipalacebanquets,None,23.93,Digitally Invisible,ai_estimate,100,Severe Silence,12.0,0.88,90,DigiStories + SmartOS,Low,auto,B,26.7,0.75,0.3,0.45
 Nisarg Mangal Karyalaya,"Erandwane, Pune Central, Maharashtra",3.9,24,,,nisargmangalkaryalay,None,23.97,Digitally Invisible,ai_estimate,85,Severe Silence,12.0,0.88,80,DigiStories + SmartOS,Low,auto,B,25.2,0.75,0.3,0.45
 Alpa Bachat Bhavan,"Camp, Pune Camp, Maharashtra",4.2,63,,,alpabachatbhavan,None,56.48,Visibility Weak,ai_estimate,15,Active Pulse,27.0,0.73,10,SmartOS,Low,auto,B,12.45,0.75,0.3,0.45

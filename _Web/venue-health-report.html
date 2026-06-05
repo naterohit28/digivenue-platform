@@ -1,0 +1,1229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Premium Venue Health Report — DigiVenue</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  
+  <style>
+    /* ── Master Theme Variables (aligned with tokens.css) ── */
+    :root {
+      --color-bg:           #FAF7F2;   /* warm ivory */
+      --color-bg-deep:      #F5EFE6;   /* champagne frame */
+      --color-surface:      #F3EEE5;   /* champagne paper */
+      --color-surface-mid:  #EBE4D8;
+      --color-border:       #E5DFD3;   /* subtle divider */
+      --color-border-light: #D5CEBF;
+      --color-text-primary:   #1F1D1C; /* espresso */
+      --color-text-secondary: #4A4644; /* dark gray */
+      --color-text-muted:     #6F6864; /* muted gray */
+      
+      --color-accent:         #D94822; /* restrained vermillion */
+      --color-accent-subtle:  rgba(217, 72, 34, 0.08);
+      --color-gold:           #C5A059; /* champagne gold */
+      --color-gold-text:      #8C6B28;
+      --color-gold-subtle:    rgba(197, 160, 89, 0.06);
+      
+      --color-green:          #16A34A; /* safe green */
+      --color-amber:          #D97706; /* amber */
+      --color-red:            #DC2626; /* red */
+      
+      --font-serif:    'Playfair Display', Georgia, serif;
+      --font-sans:     'Inter', system-ui, sans-serif;
+    }
+
+    /* ── Base Reset & Global Styles ── */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      background-color: var(--color-bg-deep);
+      color: var(--color-text-secondary);
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      padding: 40px 24px;
+    }
+
+    /* ── Page Layout: Rigid Editorial Column ── */
+    .report-wrapper {
+      max-width: 900px;
+      margin: 0 auto;
+      background: var(--color-bg);
+      border: 1px solid var(--color-border-light);
+      box-shadow: 0 30px 80px rgba(60, 40, 15, 0.08);
+      position: relative;
+    }
+
+    /* ── Screen-only Control Bar ── */
+    .control-bar {
+      background: #17120F; /* warm dark espresso */
+      color: #FAF7F2;
+      padding: 16px 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #2B2420;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .control-bar h1 {
+      font-family: var(--font-serif);
+      font-size: 18px;
+      font-weight: 500;
+      letter-spacing: -0.01em;
+      color: var(--color-gold);
+    }
+    .btn-group {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+    .c-btn {
+      background: transparent;
+      border: 1px solid rgba(250, 247, 242, 0.3);
+      color: #FAF7F2;
+      padding: 8px 16px;
+      font-size: 12px;
+      font-family: var(--font-sans);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      cursor: pointer;
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .c-btn:hover {
+      background: #FAF7F2;
+      color: #17120F;
+      border-color: #FAF7F2;
+    }
+    .c-btn.primary {
+      background: var(--color-accent);
+      border-color: var(--color-accent);
+      color: #FAF7F2;
+    }
+    .c-btn.primary:hover {
+      background: #FAF7F2;
+      color: #17120F;
+      border-color: #FAF7F2;
+    }
+
+    /* ── Editorial Pages Structure ── */
+    .page {
+      padding: 64px 80px;
+      background: var(--color-bg);
+      position: relative;
+      border-bottom: 1px solid var(--color-border);
+    }
+    .page:last-child {
+      border-bottom: none;
+    }
+
+    /* ── Typography & Components ── */
+    .eyebrow {
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--color-gold-text);
+      display: block;
+      margin-bottom: 12px;
+    }
+    h2.title {
+      font-family: var(--font-serif);
+      font-size: 40px;
+      font-weight: 300;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      color: var(--color-text-primary);
+      margin-bottom: 32px;
+    }
+    h2.title em {
+      font-style: italic;
+      color: var(--color-accent);
+      font-weight: 300;
+    }
+
+    /* Header Cover block */
+    .cover-meta {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 32px;
+      border-top: 1px solid var(--color-border);
+      border-bottom: 1px solid var(--color-border);
+      padding-block: 24px;
+      margin-bottom: 40px;
+    }
+    .meta-item span {
+      display: block;
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--color-text-muted);
+      margin-bottom: 4px;
+    }
+    .meta-item strong {
+      font-family: var(--font-serif);
+      font-size: 20px;
+      font-weight: 500;
+      color: var(--color-text-primary);
+    }
+
+    /* Quote Block */
+    .cover-quote {
+      border-left: 2px solid var(--color-gold);
+      padding-left: 32px;
+      margin-bottom: 40px;
+    }
+    .cover-quote p {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: 20px;
+      line-height: 1.5;
+      color: var(--color-text-primary);
+    }
+
+    /* DMI Dashboard Row */
+    .dashboard-row {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 48px;
+      align-items: center;
+      background: var(--color-surface);
+      padding: 32px;
+      border: 1px solid var(--color-border);
+      margin-bottom: 40px;
+    }
+    .gauge-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .dmi-gauge {
+      overflow: visible;
+    }
+    .gauge-bg {
+      stroke: var(--color-border-light);
+    }
+    .gauge-fill {
+      transition: stroke-dashoffset 1.2s ease-in-out;
+      transform: rotate(-90deg);
+      transform-origin: 50% 50%;
+    }
+    .summary-text h3 {
+      font-family: var(--font-serif);
+      font-size: 24px;
+      font-weight: 500;
+      color: var(--color-text-primary);
+      margin-bottom: 12px;
+    }
+    .summary-text p {
+      font-size: 15px;
+      line-height: 1.6;
+      color: var(--color-text-secondary);
+    }
+
+    /* 6-Dimensional Scorecard Grid */
+    .scorecard-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      margin-bottom: 12px;
+    }
+    .score-card {
+      background: var(--color-bg);
+      border: 1px solid var(--color-border);
+      padding: 24px;
+      position: relative;
+    }
+    .score-card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 12px;
+    }
+    .score-card-title {
+      font-family: var(--font-serif);
+      font-size: 18px;
+      font-weight: 500;
+      color: var(--color-text-primary);
+    }
+    .score-card-value {
+      font-family: var(--font-sans);
+      font-weight: 700;
+      font-size: 20px;
+    }
+    .score-card-bar-bg {
+      height: 4px;
+      background: var(--color-border);
+      margin-bottom: 12px;
+    }
+    .score-card-bar-fill {
+      height: 100%;
+      background: var(--color-gold);
+      transition: width 1s ease-in-out;
+    }
+    .score-card-desc {
+      font-size: 13px;
+      line-height: 1.5;
+      color: var(--color-text-secondary);
+    }
+    .score-card-badge {
+      display: inline-block;
+      font-size: 9px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      padding: 2px 6px;
+      background: var(--color-border);
+      color: var(--color-text-primary);
+      margin-top: 12px;
+    }
+
+    /* Comparative Table */
+    .comp-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 40px;
+    }
+    .comp-table th, .comp-table td {
+      padding: 14px 18px;
+      text-align: left;
+      font-size: 14px;
+      border-bottom: 1px solid var(--color-border);
+    }
+    .comp-table th {
+      font-family: var(--font-sans);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 11px;
+      color: var(--color-text-muted);
+      background: var(--color-surface);
+    }
+    .comp-table tr:hover td {
+      background: var(--color-gold-subtle);
+    }
+    .comp-table td strong {
+      color: var(--color-text-primary);
+    }
+
+    /* Leakage Calculator */
+    .calculator-box {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border-light);
+      padding: 32px;
+      margin-bottom: 40px;
+    }
+    .calc-title {
+      font-family: var(--font-serif);
+      font-size: 22px;
+      font-weight: 500;
+      color: var(--color-text-primary);
+      margin-bottom: 8px;
+    }
+    .calc-subtitle {
+      font-size: 13.5px;
+      color: var(--color-text-muted);
+      margin-bottom: 24px;
+    }
+    .calc-layout {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+    .slider-group {
+      margin-bottom: 20px;
+    }
+    .slider-group:last-child {
+      margin-bottom: 0;
+    }
+    .slider-label {
+      display: flex;
+      justify-content: space-between;
+      font-size: 13.5px;
+      font-weight: 600;
+      color: var(--color-text-primary);
+      margin-bottom: 8px;
+    }
+    .slider-label span:last-child {
+      font-family: var(--font-sans);
+      color: var(--color-accent);
+      font-size: 15px;
+    }
+    .range-slider {
+      width: 100%;
+      height: 4px;
+      background: var(--color-border-light);
+      outline: none;
+      accent-color: var(--color-accent);
+      cursor: pointer;
+    }
+    .calc-output-box {
+      background: var(--color-bg);
+      border: 1px solid var(--color-border);
+      padding: 24px;
+      text-align: center;
+      border-left: 3px solid var(--color-accent);
+    }
+    .output-item {
+      margin-bottom: 16px;
+    }
+    .output-item:last-child {
+      margin-bottom: 0;
+    }
+    .output-label {
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--color-text-muted);
+    }
+    .output-val {
+      font-family: var(--font-serif);
+      font-size: 32px;
+      font-weight: 500;
+      color: var(--color-text-primary);
+      line-height: 1.2;
+    }
+    .output-val em {
+      font-style: normal;
+      color: var(--color-accent);
+    }
+
+    /* Roadmap Timeline */
+    .timeline {
+      position: relative;
+      margin-bottom: 40px;
+      padding-left: 24px;
+      border-left: 1px solid var(--color-border-light);
+    }
+    .timeline-item {
+      position: relative;
+      margin-bottom: 32px;
+    }
+    .timeline-item:last-child {
+      margin-bottom: 0;
+    }
+    .timeline-dot {
+      width: 9px;
+      height: 9px;
+      background: var(--color-gold);
+      position: absolute;
+      left: -29px;
+      top: 6px;
+      border-radius: 0;
+    }
+    .timeline-item.critical .timeline-dot {
+      background: var(--color-accent);
+    }
+    .timeline-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 6px;
+    }
+    .timeline-title {
+      font-family: var(--font-serif);
+      font-size: 18px;
+      font-weight: 500;
+      color: var(--color-text-primary);
+    }
+    .timeline-phase {
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--color-gold-text);
+    }
+    .timeline-body {
+      font-size: 14px;
+      color: var(--color-text-secondary);
+      line-height: 1.5;
+    }
+
+    /* Actions Checklist */
+    .checklist {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      margin-bottom: 40px;
+    }
+    .checklist-item {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      background: var(--color-surface);
+      padding: 16px;
+      border: 1px solid var(--color-border);
+      cursor: pointer;
+    }
+    .checklist-item input[type="checkbox"] {
+      margin-top: 4px;
+      accent-color: var(--color-accent);
+      cursor: pointer;
+    }
+    .checklist-text strong {
+      display: block;
+      font-size: 13.5px;
+      color: var(--color-text-primary);
+    }
+    .checklist-text span {
+      font-size: 12px;
+      color: var(--color-text-muted);
+    }
+
+    /* Pricing & Action Box */
+    .proposal-box {
+      border: 1px solid var(--color-border-light);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    .proposal-left {
+      background: var(--color-surface);
+      padding: 40px;
+      border-right: 1px solid var(--color-border-light);
+    }
+    .proposal-right {
+      background: var(--color-bg);
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    .proposal-price {
+      font-family: var(--font-serif);
+      font-size: 32px;
+      color: var(--color-text-primary);
+      margin-bottom: 6px;
+    }
+    .proposal-desc {
+      font-size: 13px;
+      color: var(--color-text-muted);
+      line-height: 1.5;
+    }
+    .cta-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--color-accent);
+      color: #FAF7F2;
+      border: none;
+      padding: 14px 28px;
+      font-family: var(--font-sans);
+      font-weight: 600;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .cta-button:hover {
+      background: var(--color-text-primary);
+      color: #FAF7F2;
+    }
+
+    /* ── Responsive styling ── */
+    @media (max-width: 768px) {
+      body { padding: 0; }
+      .report-wrapper { border: none; }
+      .page { padding: 40px 24px; }
+      .scorecard-grid, .calc-layout, .proposal-box, .checklist {
+        grid-template-columns: 1fr;
+      }
+      .proposal-left { border-right: none; border-bottom: 1px solid var(--color-border-light); }
+      .dashboard-row { grid-template-columns: 1fr; text-align: center; gap: 24px; }
+    }
+
+    /* ── Print Stylesheet (Optimized for A4 Page breaks) ── */
+    @media print {
+      body {
+        background: #fff;
+        color: #000;
+        padding: 0;
+      }
+      .control-bar, input[type="range"] {
+        display: none !important;
+      }
+      .report-wrapper {
+        border: none;
+        box-shadow: none;
+        max-width: 100%;
+      }
+      .page {
+        padding: 40px;
+        page-break-after: always;
+        page-break-inside: avoid;
+        border-bottom: none;
+        background: #fff !important;
+      }
+      .page:last-child {
+        page-break-after: avoid;
+      }
+      .dashboard-row, .calculator-box, .proposal-box, .checklist-item, .score-card {
+        background: #fff !important;
+        border: 1px solid #999 !important;
+        page-break-inside: avoid;
+      }
+      .calc-output-box {
+        background: #fff !important;
+        border: 1px solid #000 !important;
+        border-left: 4px solid #000 !important;
+      }
+      .c-btn, .cta-button, input[type="checkbox"] {
+        display: none !important;
+      }
+      .comp-table th {
+        background: #eee !important;
+        color: #000 !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="report-wrapper">
+  <!-- Top Control Bar (Screen Only) -->
+  <div class="control-bar">
+    <div style="display: flex; align-items: center; gap: 8px;">
+      <img src="logo.svg" alt="DigiVenue Logo" style="height: 20px; width: auto; vertical-align: middle;">
+      <h1>DigiVenue · Venue Health System</h1>
+    </div>
+    <div class="btn-group">
+      <input type="file" id="fileInput" accept=".json" style="display:none;" onchange="handleFileInput(event)">
+      <button class="c-btn" onclick="document.getElementById('fileInput').click()">Upload Audit JSON</button>
+      <button class="c-btn" onclick="loadDemoData()">Load Demo Profile</button>
+      <button class="c-btn primary" onclick="window.print()">Print Health Report</button>
+    </div>
+  </div>
+
+  <!-- PAGE 1: COVER & EXECUTIVE SUMMARY -->
+  <div class="page" id="page-1">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 40px; border-bottom: 1px solid var(--color-border); padding-bottom: 16px;">
+      <div style="display: flex; align-items: center; gap: 8px;">
+        <img src="logo.svg" alt="DigiVenue Logo" style="height: 28px; width: auto; vertical-align: middle;">
+        <span style="font-family: var(--font-sans); font-size: 13px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: var(--color-text-primary);">DigiVenue</span>
+      </div>
+      <span style="font-family: var(--font-sans); font-size: 9px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.15em; color: var(--color-text-muted);">Confidential Audit Report</span>
+    </div>
+    
+    <span class="eyebrow" style="letter-spacing: 0.25em;">VENUE VISIBILITY & DIGITAL HEALTH</span>
+    <h2 class="title" style="font-size: 44px; margin-bottom: 24px;">
+      Digital Diagnostic <br><em>Health Report</em>
+    </h2>
+    
+    <!-- Cover Meta Details -->
+    <div class="cover-meta">
+      <div class="meta-item">
+        <span>Prepared For</span>
+        <strong id="v_name_header">Swayambhu Ganesh Sabhagruh</strong>
+      </div>
+      <div class="meta-item">
+        <span>Location / Region</span>
+        <strong id="v_loc_header">Nerul, Navi Mumbai</strong>
+      </div>
+      <div class="meta-item">
+        <span>Audit Completed</span>
+        <strong id="v_date_header">Q2 2026</strong>
+      </div>
+      <div class="meta-item">
+        <span>Moat Specialist</span>
+        <strong>DigiStories &middot; Mumbai Team</strong>
+      </div>
+    </div>
+
+    <!-- Editorial Quote -->
+    <div class="cover-quote">
+      <p>
+        "Before a wedding family ever speaks to your sales team, they have already made their decision. They scrolled your Instagram, read your Google reviews, and verified your setups. The physical visit only confirms what they decided online."
+      </p>
+    </div>
+
+    <!-- Executive Summary & DMI Gauge -->
+    <div class="dashboard-row">
+      <div class="gauge-container">
+        <svg width="150" height="150" viewBox="0 0 100 100" class="dmi-gauge">
+          <circle cx="50" cy="50" r="40" stroke="var(--color-border)" stroke-width="6" fill="transparent" class="gauge-bg" />
+          <circle cx="50" cy="50" r="40" stroke="var(--color-accent)" stroke-width="8" fill="transparent"
+                  stroke-dasharray="251.2" stroke-dashoffset="251.2" class="gauge-fill" id="dmi_circle" />
+          <text x="50" y="47" text-anchor="middle" font-family="var(--font-sans)" font-size="16" font-weight="700" fill="var(--color-text-primary)" id="dmi_value_text">0</text>
+          <text x="50" y="65" text-anchor="middle" font-family="var(--font-sans)" font-size="7" font-weight="600" fill="var(--color-text-muted)" id="dmi_band_text">LOADING</text>
+        </svg>
+      </div>
+      <div class="summary-text">
+        <h3 id="dmi_band_header">Vulnerable Digital Moat</h3>
+        <p id="dmi_summary_paragraph">
+          Your venue is active physically, but silent online. High-value wedding bookings are leaking to local competitors because families looking for wedding halls online find dormant profiles, old photos, and missing social proof.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- PAGE 2: THE 6-DIMENSIONAL SCORECARD & COMPETITIVE STANDING -->
+  <div class="page" id="page-2">
+    <span class="eyebrow">DIAGNOSTIC SCORES</span>
+    <h2 class="title">The 6 Pillars of <em>Venue Health</em></h2>
+    
+    <!-- Scorecard Grid -->
+    <div class="scorecard-grid" id="scorecard_grid">
+      <!-- Visibility -->
+      <div class="score-card">
+        <div class="score-card-header">
+          <span class="score-card-title">Visibility Health</span>
+          <span class="score-card-value" id="score_vis">0/100</span>
+        </div>
+        <div class="score-card-bar-bg"><div class="score-card-bar-fill" id="bar_vis" style="width: 0%;"></div></div>
+        <p class="score-card-desc" id="desc_vis">Your Google page and Instagram profiles are quiet. Families searching in your region cannot locate you easily.</p>
+        <span class="score-card-badge" id="badge_vis">Invisible</span>
+      </div>
+      
+      <!-- Trust -->
+      <div class="score-card">
+        <div class="score-card-header">
+          <span class="score-card-title">Trust Health</span>
+          <span class="score-card-value" id="score_tr">0/100</span>
+        </div>
+        <div class="score-card-bar-bg"><div class="score-card-bar-fill" id="bar_tr" style="width: 0%;"></div></div>
+        <p class="score-card-desc" id="desc_tr">Few reviews and missing real-wedding proof. Page lacks recent event photos, creating a dormant impression.</p>
+        <span class="score-card-badge" id="badge_tr">Unproven</span>
+      </div>
+
+      <!-- Conversion -->
+      <div class="score-card">
+        <div class="score-card-header">
+          <span class="score-card-title">Conversion Health</span>
+          <span class="score-card-value" id="score_conv">0/100</span>
+        </div>
+        <div class="score-card-bar-bg"><div class="score-card-bar-fill" id="bar_conv" style="width: 0%;"></div></div>
+        <p class="score-card-desc" id="desc_conv">Inquiries arrive but leak before booking. Lacks direct WhatsApp links, and reply speeds are slow.</p>
+        <span class="score-card-badge" id="badge_conv">Leaking</span>
+      </div>
+
+      <!-- Operations -->
+      <div class="score-card">
+        <div class="score-card-header">
+          <span class="score-card-title">Operational Health</span>
+          <span class="score-card-value" id="score_op">0/100</span>
+        </div>
+        <div class="score-card-bar-bg"><div class="score-card-bar-fill" id="bar_op" style="width: 0%;"></div></div>
+        <p class="score-card-desc" id="desc_op">Inquiries and bookings are recorded manually on paper diaries. High risk of staff bottleneck and calendar conflict.</p>
+        <span class="score-card-badge" id="badge_op">Manual</span>
+      </div>
+
+      <!-- Revenue -->
+      <div class="score-card">
+        <div class="score-card-header">
+          <span class="score-card-title">Revenue Health</span>
+          <span class="score-card-value" id="score_rev">0/100</span>
+        </div>
+        <div class="score-card-bar-bg"><div class="score-card-bar-fill" id="bar_rev" style="width: 0%;"></div></div>
+        <p class="score-card-desc" id="desc_rev">Off-season dates sit empty and weekday bookings are low. Direct margin opportunity sits un-utilized.</p>
+        <span class="score-card-badge" id="badge_rev">Under-utilized</span>
+      </div>
+
+      <!-- Competitive Position -->
+      <div class="score-card">
+        <div class="score-card-header">
+          <span class="score-card-title">Competitive Position</span>
+          <span class="score-card-value" id="score_comp">0/100</span>
+        </div>
+        <div class="score-card-bar-bg"><div class="score-card-bar-fill" id="bar_comp" style="width: 0%;"></div></div>
+        <p class="score-card-desc" id="desc_comp">Rivals in your area are actively posting reels and running review drives, capturing the premium market share.</p>
+        <span class="score-card-badge" id="badge_comp">Weak</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- PAGE 3: COMPETITIVE TABLE, LEAKAGE CALCULATOR, ROADMAP & NEXT ACTIONS -->
+  <div class="page" id="page-3">
+    <span class="eyebrow">BENCHMARKS</span>
+    <h2 class="title">Local <em>Market Standing</em></h2>
+    
+    <!-- Benchmarks Table -->
+    <table class="comp-table">
+      <thead>
+        <tr>
+          <th>Metric</th>
+          <th id="lbl_my_venue">Your Venue</th>
+          <th>City Average</th>
+          <th>Top 10% Venues</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Google Review Volume</strong></td>
+          <td id="comp_val_reviews">34 Reviews</td>
+          <td>120 Reviews</td>
+          <td>350+ Reviews</td>
+        </tr>
+        <tr>
+          <td><strong>Google Star Rating</strong></td>
+          <td id="comp_val_rating">3.8 / 5.0</td>
+          <td>4.2 / 5.0</td>
+          <td>4.6+ / 5.0</td>
+        </tr>
+        <tr>
+          <td><strong>Inquiry Response Speed</strong></td>
+          <td id="comp_val_speed">4 Hours</td>
+          <td>45 Mins</td>
+          <td>&lt; 5 Mins (Instant)</td>
+        </tr>
+        <tr>
+          <td><strong>Instagram Posting Rhythm</strong></td>
+          <td id="comp_val_ig">Dormant (&gt; 3 mos)</td>
+          <td>2 posts / week</td>
+          <td>3 reels + daily stories</td>
+        </tr>
+        <tr>
+          <td><strong>Booking Capture System</strong></td>
+          <td id="comp_val_diary">Paper Diary</td>
+          <td>Shared Excel Sheet</td>
+          <td>Real-time CRM Calendar</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Interactive Margin Leakage Calculator -->
+    <div class="calculator-box">
+      <div class="calc-title">Interactive Revenue Leakage Calculator</div>
+      <div class="calc-subtitle">Adjust the sliders to see how much revenue escapes your venue due to digital leakage.</div>
+      
+      <div class="calc-layout">
+        <div>
+          <!-- Slider 1 -->
+          <div class="slider-group">
+            <div class="slider-label">
+              <span>Annual Enquiries / Bookings</span>
+              <span id="lbl_calc_bookings">40 bookings</span>
+            </div>
+            <input type="range" min="10" max="150" value="40" class="range-slider" id="slide_bookings" oninput="recalcLeakage()">
+          </div>
+          <!-- Slider 2 -->
+          <div class="slider-group" style="margin-top: 24px;">
+            <div class="slider-label">
+              <span>Average Booking Value</span>
+              <span id="lbl_calc_val">₹3,00,000</span>
+            </div>
+            <input type="range" min="100000" max="1000000" step="50000" value="300000" class="range-slider" id="slide_val" oninput="recalcLeakage()">
+          </div>
+          <!-- Slider 3 -->
+          <div class="slider-group" style="margin-top: 24px;">
+            <div class="slider-label">
+              <span>Estimated Leakage Rate</span>
+              <span id="lbl_calc_leak">20%</span>
+            </div>
+            <input type="range" min="5" max="50" step="1" value="20" class="range-slider" id="slide_leak" oninput="recalcLeakage()">
+          </div>
+        </div>
+        
+        <!-- Calculator Output -->
+        <div class="calc-output-box">
+          <div class="output-item">
+            <div class="output-label">Lost Bookings / Year</div>
+            <div class="output-val" id="calc_lost_num">8 bookings</div>
+          </div>
+          <div class="output-item" style="margin-top: 18px; border-top: 1px solid var(--color-border); padding-top: 14px;">
+            <div class="output-label" style="color: var(--color-accent);">Lost Margins (Annual)</div>
+            <div class="output-val" style="color: var(--color-accent);" id="calc_lost_lakhs"><em>₹24.0 Lakhs</em></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PAGE 4: ROADMAP, CHECKLIST & NEXT STEPS -->
+  <div class="page" id="page-4">
+    <span class="eyebrow">NEXT STEPS</span>
+    <h2 class="title">Tactical <em>Growth Roadmap</em></h2>
+
+    <!-- Timeline Roadmap -->
+    <div class="timeline">
+      <!-- Phase 1 -->
+      <div class="timeline-item critical">
+        <div class="timeline-dot"></div>
+        <div class="timeline-header">
+          <h3 class="timeline-title">Immediate GMB & Response Optimisations</h3>
+          <span class="timeline-phase">Phase 1 &middot; Days 1–14</span>
+        </div>
+        <div class="timeline-body">
+          Claim and verify your Google Business profile. Set up automated instant auto-replies on WhatsApp to capture inquiries the minute they occur. Establish a written enquiry log sheet.
+        </div>
+      </div>
+      <!-- Phase 2 -->
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-header">
+          <h3 class="timeline-title">Social Proof & Event Content Shoots</h3>
+          <span class="timeline-phase">Phase 2 &middot; Days 15–45</span>
+        </div>
+        <div class="timeline-body">
+          Message 10 recent successful families to request detailed reviews. Photograph 10 hero event setups (crowd, catering, decor) and establish a rhythm of 3 posts/reels per week.
+        </div>
+      </div>
+      <!-- Phase 3 -->
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-header">
+          <h3 class="timeline-title">Operations Control & Off-Season Campaigns</h3>
+          <span class="timeline-phase">Phase 3 &middot; Days 45+</span>
+        </div>
+        <div class="timeline-body">
+          Roll out a shared digital calendar system (SmartOS) to eliminate paper register double-booking risks. Launch focused off-season corporate and small function packages.
+        </div>
+      </div>
+    </div>
+
+    <!-- Interactive Next Actions Checklist -->
+    <span class="eyebrow" style="margin-top: 48px;">CHECKLIST</span>
+    <h3 style="font-family: var(--font-serif); font-size: 20px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 20px;">First 4 Actions to Take Now</h3>
+    <div class="checklist">
+      <div class="checklist-item" onclick="toggleCheckbox('chk_1')">
+        <input type="checkbox" id="chk_1" onclick="event.stopPropagation()">
+        <div class="checklist-text">
+          <strong>Verify Google Business Listing</strong>
+          <span>Ensure hours, address, and packages are correct.</span>
+        </div>
+      </div>
+      <div class="checklist-item" onclick="toggleCheckbox('chk_2')">
+        <input type="checkbox" id="chk_2" onclick="event.stopPropagation()">
+        <div class="checklist-text">
+          <strong>Install WhatsApp Business Link</strong>
+          <span>Create a direct message link and add it to Instagram bio.</span>
+        </div>
+      </div>
+      <div class="checklist-item" onclick="toggleCheckbox('chk_3')">
+        <input type="checkbox" id="chk_3" onclick="event.stopPropagation()">
+        <div class="checklist-text">
+          <strong>Request 10 Google Reviews</strong>
+          <span>Reach out to past clients using a direct feedback link.</span>
+        </div>
+      </div>
+      <div class="checklist-item" onclick="toggleCheckbox('chk_4')">
+        <input type="checkbox" id="chk_4" onclick="event.stopPropagation()">
+        <div class="checklist-text">
+          <strong>Shoot Next Saturday's Setup</strong>
+          <span>Capture 3 reels and 10 photos of the active mandap & decor.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Suggested Growth Plan -->
+    <span class="eyebrow" style="margin-top: 48px;">PROPOSAL</span>
+    <h3 style="font-family: var(--font-serif); font-size: 20px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 20px;">Suggested Engagement</h3>
+    <div class="proposal-box">
+      <div class="proposal-left">
+        <div class="proposal-price" id="plan_fee">₹30,000 / month</div>
+        <div class="proposal-desc" id="plan_desc">Growth Plan. Includes weekly real-wedding shoots, Google Business Optimization, review campaigns, and Instagram grid management.</div>
+      </div>
+      <div class="proposal-right">
+        <a id="wa_cta_link" href="https://wa.me/919819576256" target="_blank" class="cta-button">
+          Message Us On WhatsApp &nbsp;&rarr;
+        </a>
+        <p style="font-size: 11px; color: var(--color-text-muted); margin-top: 12px;">No commitments. Cancel anytime.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // ── Pre-seeded Swayambhu Ganesh Sabhagruh Data ──
+  const SWAYAMBHU_DATA = {
+    business: {
+      name: "Swayambhu Ganesh Sabhagruh",
+      owner: "Sanjay Patil",
+      phone: "919833456789",
+      city: "Nerul, Navi Mumbai",
+      area: "Nerul",
+      type: "hall",
+      capacityMin: 300,
+      capacityMax: 800,
+      email: "contact@swayambhuganesh.com"
+    },
+    online: {
+      website: "None",
+      instagram: "banquet_swayambhuganesh",
+      inquiries: "15-30"
+    },
+    pricing: {
+      cateringFrom: "₹350/person"
+    },
+    competitor: {
+      name: "Golden Banquet Hall",
+      name2: "Sai Palace Banquet"
+    },
+    scores: {
+      visibility: 45,
+      trust: 30,
+      conversion: 50,
+      operations: 30,
+      smartosReadiness: 60,
+      revenue: 40,
+      competitive: 30,
+      maturity: 40
+    },
+    revenue: {
+      rangeLow: 1200000,
+      rangeHigh: 3600000,
+      offSeason: 1500000
+    },
+    recommendation: {
+      ds: "Yes",
+      sos: "Yes",
+      path: "Both",
+      why: "Visibility and trust gaps are high, combined with severe operational leakage from paper registers. Recommend the full DigiStories + SmartOS package."
+    },
+    plan: {
+      tier: "Growth Plan",
+      fee: 30000,
+      smartosPilot: true
+    },
+    leadership: {
+      score: 65,
+      closeProbability: "Medium",
+      interest: "Interested",
+      objections: "pricing, timeline"
+    },
+    founderNotes: "Sanjay is curious but hesitant about pricing. His family committee makes decisions. Highlight that one booking covers the annual cost of the system."
+  };
+
+  let activeData = null;
+
+  // ── Helper functions for colors and bands ──
+  function getBandColor(v) {
+    if (v >= 76) return "#16A34A"; // green
+    if (v >= 56) return "#D97706"; // amber
+    if (v >= 31) return "#D97706"; // amber
+    return "#DC2626"; // red
+  }
+  
+  function getBandName(v) {
+    if (v >= 91) return "DOMINANT";
+    if (v >= 76) return "STRONG";
+    if (v >= 56) return "ESTABLISHED";
+    if (v >= 31) return "EMERGING";
+    return "FOUNDATIONAL";
+  }
+
+  function getDimensionBand(pillar, v) {
+    if (pillar === 'visibility') {
+      return v >= 76 ? 'Strong' : v >= 56 ? 'Active' : v >= 31 ? 'Present but weak' : 'Invisible';
+    }
+    if (pillar === 'trust') {
+      return v >= 76 ? 'Trusted' : v >= 56 ? 'Building' : v >= 31 ? 'Weak' : 'Unproven';
+    }
+    if (pillar === 'conversion') {
+      return v >= 76 ? 'Converting' : v >= 56 ? 'Leaking some' : v >= 31 ? 'Leaking heavily' : 'Bleeding';
+    }
+    if (pillar === 'operations') {
+      return v >= 80 ? 'Modern Operations' : v >= 60 ? 'Structured Operations' : v >= 30 ? 'Manual Operations' : 'High Leakage Risk';
+    }
+    if (pillar === 'revenue') {
+      return v >= 76 ? 'Optimised' : v >= 56 ? 'Balanced' : v >= 31 ? 'Under-utilized' : 'Inactive';
+    }
+    return v >= 76 ? 'Market Leader' : v >= 56 ? 'Average' : v >= 31 ? 'Weak' : 'Vulnerable';
+  }
+
+  function formatCurrency(n) {
+    if (n >= 10000000) return '₹' + (n / 10000000).toFixed(n % 10000000 ? 1 : 0) + ' Cr';
+    if (n >= 100000) return '₹' + (n / 100000).toFixed(n % 100000 ? 1 : 0) + ' L';
+    return '₹' + Math.round(n).toLocaleString('en-IN');
+  }
+
+  // ── Recalculate Leakage dynamically (screen-only interaction) ──
+  function recalcLeakage() {
+    const bookings = parseInt(document.getElementById('slide_bookings').value);
+    const val = parseInt(document.getElementById('slide_val').value);
+    const leakPct = parseInt(document.getElementById('slide_leak').value);
+    
+    document.getElementById('lbl_calc_bookings').textContent = bookings + " bookings";
+    document.getElementById('lbl_calc_val').textContent = formatCurrency(val);
+    document.getElementById('lbl_calc_leak').textContent = leakPct + "%";
+    
+    const lostBookings = Math.round(bookings * (leakPct / 100));
+    const lostRevenue = lostBookings * val;
+    
+    document.getElementById('calc_lost_num').textContent = lostBookings + " booking" + (lostBookings !== 1 ? "s" : "");
+    document.getElementById('calc_lost_lakhs').innerHTML = `<em>${formatCurrency(lostRevenue)}</em>`;
+  }
+
+  // ── Load the audit payload into the layout ──
+  function renderReport(data) {
+    activeData = data;
+    
+    // Header Cover text
+    document.getElementById('v_name_header').textContent = data.business.name;
+    document.getElementById('v_loc_header').textContent = data.business.area + ", " + (data.business.city || 'Mumbai');
+    document.title = `${data.business.name} — Premium Venue Health Report`;
+    
+    // Render current date
+    document.getElementById('v_date_header').textContent = new Date().toLocaleDateString('en-IN', { month: 'short', year: 'numeric' });
+    
+    const sc = data.scores;
+    
+    // Overall DMI score gauge animate
+    document.getElementById('dmi_value_text').textContent = sc.maturity;
+    const band = getBandName(sc.maturity);
+    document.getElementById('dmi_band_text').textContent = band;
+    document.getElementById('dmi_band_header').textContent = `${band.charAt(0) + band.slice(1).toLowerCase()} Digital Moat`;
+    
+    // Animate circular gauge SVG
+    const circumference = 251.2;
+    const offset = circumference - (sc.maturity / 100) * circumference;
+    const dmiCircle = document.getElementById('dmi_circle');
+    dmiCircle.style.strokeDashoffset = offset;
+    dmiCircle.style.stroke = getBandColor(sc.maturity);
+    document.getElementById('dmi_value_text').style.fill = getBandColor(sc.maturity);
+    
+    // Customize summary paragraph based on DMI
+    let summary = "";
+    if (sc.maturity < 35) {
+      summary = `Your venue has a critical digital deficit. With a score of ${sc.maturity}/100, the online representation is effectively silent. High-value wedding bookings are actively leaking to local competitors because families looking for halls online find dormant profiles, old photos, and zero social proof. Immediate action is recommended.`;
+    } else if (sc.maturity < 55) {
+      summary = `Your venue is active physically, but vulnerable online. With a score of ${sc.maturity}/100, you are present on Google and Instagram, but updates are inconsistent. Booking enquiries leak because response times are slow and calendar systems run manually on paper. Rebuilding digital trust will unlock significant occupancy.`;
+    } else if (sc.maturity < 75) {
+      summary = `Your venue is established online with a score of ${sc.maturity}/100. You have an active rhythm and some reviews. However, you lack competitive differentiation. Enhancing real function content shoots and introducing SmartOS inquiry automation will push your venue into the dominant top-10% category.`;
+    } else {
+      summary = `Your venue dominates the local market with a score of ${sc.maturity}/100. Visibility is high and operations are modern. Focus on maintaining your posting frequency and collecting reviews systematically. We recommend minor optimizations to maximize off-season corporate bookings.`;
+    }
+    document.getElementById('dmi_summary_paragraph').textContent = summary;
+
+    // 6-Dimensional Scorecard elements
+    const dimensions = [
+      { id: 'vis', name: 'Visibility Health', val: sc.visibility, desc: `Visibility score is ${sc.visibility}/100. Google profile and Instagram are too quiet — rebuild the online presence so families can find you.` },
+      { id: 'tr', name: 'Trust Health', val: sc.trust, desc: `Trust rating sits at ${sc.trust}/100. Few reviews and little real-wedding proof — build review velocity and show real functions.` },
+      { id: 'conv', name: 'Conversion Health', val: sc.conversion, desc: `Conversion is ${sc.conversion}/100. Inquiries arrive but leak before booking — fix response speed and WhatsApp CTAs.` },
+      { id: 'op', name: 'Operational Health', val: sc.operations, desc: `Operations score is ${sc.operations}/100. The office runs on memory and paper diaries — set up tracking and follow-up.` },
+      { id: 'rev', name: 'Revenue Health', val: sc.revenue, desc: `Revenue efficiency is ${sc.revenue}/100. Off-season dates sit empty — activate corporate and small events to fill them.` },
+      { id: 'comp', name: 'Competitive Position', val: sc.competitive, desc: `Competitive index is ${sc.competitive}/100. Local competitors are out-performing you. Close the review and reel gap first.` }
+    ];
+    
+    dimensions.forEach(d => {
+      document.getElementById(`score_${d.id}`).textContent = `${d.val}/100`;
+      document.getElementById(`score_${d.id}`).style.color = getBandColor(d.val);
+      document.getElementById(`bar_${d.id}`).style.width = `${d.val}%`;
+      document.getElementById(`bar_${d.id}`).style.background = getBandColor(d.val);
+      document.getElementById(`desc_${d.id}`).textContent = d.desc;
+      
+      const badge = document.getElementById(`badge_${d.id}`);
+      badge.textContent = getDimensionBand(d.id === 'comp' ? 'competitive' : (d.id === 'op' ? 'operations' : d.id), d.val);
+      badge.style.color = '#fff';
+      badge.style.background = getBandColor(d.val);
+    });
+
+    // Comparative standing table metrics
+    document.getElementById('lbl_my_venue').textContent = data.business.name;
+    document.getElementById('comp_val_reviews').textContent = (data.online.reviews_count || Math.round(sc.trust * 1.5)) + " Reviews";
+    document.getElementById('comp_val_rating').textContent = (data.online.google_rating || (3.0 + sc.trust * 0.02).toFixed(1)) + " / 5.0";
+    
+    const respTime = data.online.response_time || (sc.conversion >= 75 ? "5 Mins" : (sc.conversion >= 50 ? "45 Mins" : "4 Hours"));
+    document.getElementById('comp_val_speed').textContent = respTime;
+    
+    const igStatus = sc.visibility >= 75 ? "3 reels / week" : (sc.visibility >= 50 ? "2 posts / week" : "Dormant (> 2 mos)");
+    document.getElementById('comp_val_ig').textContent = igStatus;
+    
+    const diaryStatus = sc.operations >= 75 ? "Real-time CRM" : (sc.operations >= 50 ? "Shared Excel" : "Paper Diary");
+    document.getElementById('comp_val_diary').textContent = diaryStatus;
+
+    // Seeding Sliders for Revenue Calculator
+    document.getElementById('slide_bookings').value = data.business.bookings || 40;
+    const avgVal = data.revenue.avg || 300000;
+    document.getElementById('slide_val').value = avgVal;
+    
+    const estLeak = 100 - sc.conversion;
+    document.getElementById('slide_leak').value = estLeak || 20;
+    
+    recalcLeakage();
+
+    // Engagement & Pricing proposal details
+    let planLabel = data.plan.tier || "Growth Plan";
+    let planFee = data.plan.fee || 30000;
+    let smartosPilot = data.plan.smartosPilot || false;
+    
+    let totalFee = planFee;
+    let desc = "";
+    if (planLabel.includes("Starter")) {
+      desc = "Starter Plan. Focused on Google Business Optimization, review response setup, and 1 content shoot per month.";
+    } else if (planLabel.includes("Growth")) {
+      desc = "Growth Plan. Weekly real-wedding shoots, Google optimization, review campaigns, and Instagram grid management.";
+    } else {
+      desc = "Enterprise Plan. Multipage web design, scaling Meta and Google ad campaigns, custom video production, and CRM integration.";
+    }
+    
+    if (smartosPilot) {
+      totalFee += 10000;
+      desc += " Includes SmartOS Pilot integration for real-time lead capture, digital bookings, and automatic WhatsApp reminders.";
+    }
+    
+    document.getElementById('plan_fee').textContent = totalFee ? `₹${totalFee.toLocaleString('en-IN')} / month` : "Custom Quote";
+    document.getElementById('plan_desc').textContent = desc;
+
+    // Dynamically build WhatsApp message link
+    const phone = data.business.phone || "919819576256";
+    document.getElementById('wa_cta_link').href = `https://wa.me/${phone}?text=Hi%20DigiStories%2C%20I%20have%20reviewed%20our%20Venue%20Health%20Report%20for%20${encodeURIComponent(data.business.name)}.%20I'd%20like%20to%20get%20started.`;
+  }
+
+  // ── Load Temp Data from LocalStorage or Fallback ──
+  function loadActiveData() {
+    try {
+      const saved = localStorage.getItem('dvb-temp-intake');
+      if (saved) {
+        console.log("Loading audit data from Sales Tool session...");
+        renderReport(JSON.parse(saved));
+        return;
+      }
+    } catch(e) {}
+    console.log("Using default demo data...");
+    renderReport(SWAYAMBHU_DATA);
+  }
+
+  function loadDemoData() {
+    renderReport(SWAYAMBHU_DATA);
+  }
+
+  // ── Handle audit file uploading ──
+  function handleFileInput(e) {
+    const file = e.target.files[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = function(evt) {
+      try {
+        const payload = JSON.parse(evt.target.result);
+        if (payload.business && payload.scores) {
+          renderReport(payload);
+          alert(`Successfully loaded diagnostic audit for ${payload.business.name}!`);
+        } else {
+          alert("Invalid audit JSON format. Missing scores or business keys.");
+        }
+      } catch(err) {
+        alert("Failed to parse JSON file.");
+      }
+    };
+    reader.readAsText(file);
+  }
+
+  // ── Checklist toggle helper ──
+  function toggleCheckbox(chkId) {
+    const chk = document.getElementById(chkId);
+    if (chk) {
+      chk.checked = !chk.checked;
+    }
+  }
+
+  // Run on load
+  window.onload = loadActiveData;
+</script>
+
+</body>
+</html>

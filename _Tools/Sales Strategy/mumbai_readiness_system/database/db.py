@@ -54,6 +54,38 @@ class DB:
         self.conn.executescript(sql)
         self.conn.commit()
 
+    def start_run(self, collection_mode: str, source_name: str, config: dict | None = None) -> int:
+        cur = self.conn.execute(
+            '''INSERT INTO ingestion_runs (started_at,collection_mode,source_name,status,config_json)
+               VALUES (?,?,?,?,?)''',
+            (utc_now(), collection_mode, source_name, 'running', json.dumps(config or {})),
+        )
+        self.conn.commit()
+        return cur.lastrowid
+
+    def finish_run(
+        self,
+        run_id: int,
+        status: str,
+        total_collected: int = 0,
+        total_processed: int = 0,
+        error_message: str | None = None,
+    ) -> None:
+        self.conn.execute(
+            '''UPDATE ingestion_runs
+               SET finished_at=?, status=?, total_collected=?, total_processed=?, error_message=?
+               WHERE id=?''',
+            (utc_now(), status, total_collected, total_processed, error_message, run_id),
+        )
+        self.conn.commit()
+
+    def business_id_by_name(self, name: str) -> int | None:
+        row = self.conn.execute(
+            'SELECT id FROM businesses WHERE lower(business_name)=lower(?) ORDER BY updated_at DESC LIMIT 1',
+            (name,),
+        ).fetchone()
+        return row['id'] if row else None
+
     def upsert_business(self, row: dict) -> int:
         now = utc_now()
         ext = row.get('external_id')
@@ -144,6 +176,237 @@ class DB:
         )
         self.conn.commit()
 
+    def insert_processed_snapshot(self, run_id: int, business_id: int, row: dict) -> None:
+        self.conn.execute(
+            '''INSERT INTO processed_snapshots
+               (run_id,business_id,snapshot_at,dmi_score,dmi_category,review_count,rating,
+                digital_silence_index,smartos_readiness_score,inquiry_leakage_probability,payload_json)
+               VALUES (?,?,?,?,?,?,?,?,?,?,?)''',
+            (
+                run_id,
+                business_id,
+                utc_now(),
+                row.get('dmi_score'),
+                row.get('dmi_category'),
+                row.get('review_count'),
+                row.get('rating'),
+                row.get('digital_silence_index'),
+                row.get('smartos_readiness_score'),
+                row.get('inquiry_leakage_probability'),
+                json.dumps(row),
+            ),
+        )
+        self.conn.commit()
+
+    def latest_processed_snapshot(self) -> list[dict]:
+        run = self.conn.execute(
+            '''SELECT id FROM ingestion_runs
+               WHERE status='completed'
+               ORDER BY finished_at DESC, id DESC
+               LIMIT 1'''
+        ).fetchone()
+        if not run:
+            return []
+        rows = self.conn.execute(
+            'SELECT payload_json FROM processed_snapshots WHERE run_id=?',
+            (run['id'],),
+        ).fetchall()
+        return [json.loads(r['payload_json']) for r in rows]
+
+    def intelligence_history(self) -> dict[str, list[dict]]:
+        rows = self.conn.execute(
+            '''SELECT v.vir_id,d.score_at,d.dmi_score,d.dmi_band,d.discoverability_score,d.trust_score,
+                      d.conversion_score,d.operations_score,d.intelligence_score
+               FROM dmi_history d
+               JOIN vir_snapshots v ON v.run_id=d.run_id AND v.business_id=d.business_id
+               ORDER BY d.score_at ASC'''
+        ).fetchall()
+        history: dict[str, list[dict]] = {}
+        for r in rows:
+            period = (r['score_at'] or '')[:7]
+            history.setdefault(r['vir_id'], []).append(
+                {
+                    'period': period,
+                    'maturity_stage': r['dmi_band'],
+                    'discoverability': r['discoverability_score'],
+                    'trust': r['trust_score'],
+                    'conversion': r['conversion_score'],
+                    'operations': r['operations_score'],
+                    'intelligence': r['intelligence_score'],
+                    'dmi': r['dmi_score'],
+                }
+            )
+        return history
+
+    def insert_vir_record(self, run_id: int, business_id: int, record: dict) -> None:
+        vir = record.get('vir', {})
+        dmi = record.get('dmi', {})
+        competitive = record.get('competitive', {})
+        recommendations = record.get('recommendations', []) or []
+        generated_at = vir.get('generated_at') or utc_now()
+
+        self.conn.execute(
+            '''INSERT INTO vir_snapshots
+               (run_id,business_id,vir_id,schema_version,generated_at,collection_mode,data_source,payload_json)
+               VALUES (?,?,?,?,?,?,?,?)''',
+            (
+                run_id,
+                business_id,
+                vir.get('vir_id'),
+                vir.get('schema_version'),
+                generated_at,
+                vir.get('collection_mode'),
+                vir.get('data_source'),
+                json.dumps(vir),
+            ),
+        )
+
+        dims = dmi.get('dimensions', {}) or {}
+        self.conn.execute(
+            '''INSERT INTO dmi_history
+               (run_id,business_id,score_at,dmi_score,dmi_band,confidence,discoverability_score,trust_score,
+                conversion_score,operations_score,intelligence_score,payload_json)
+               VALUES (?,?,?,?,?,?,?,?,?,?,?,?)''',
+            (
+                run_id,
+                business_id,
+                generated_at,
+                dmi.get('score') or dmi.get('dmi') or 0,
+                dmi.get('band'),
+                dmi.get('confidence'),
+                dims.get('discoverability'),
+                dims.get('trust'),
+                dims.get('conversion'),
+                dims.get('operations'),
+                dims.get('intelligence'),
+                json.dumps(dmi),
+            ),
+        )
+
+        self.conn.execute(
+            '''INSERT INTO competitor_benchmarks
+               (run_id,business_id,benchmark_type,cohort_key,cohort_size,competitive_index,position,biggest_gap,
+                competitor_count,radius_km,payload_json,created_at)
+               VALUES (?,?,?,?,?,?,?,?,?,?,?,?)''',
+            (
+                run_id,
+                business_id,
+                'cohort',
+                vir.get('venue', {}).get('area'),
+                competitive.get('cohort_size'),
+                competitive.get('index'),
+                competitive.get('position'),
+                competitive.get('biggest_gap'),
+                None,
+                None,
+                json.dumps(competitive),
+                utc_now(),
+            ),
+        )
+
+        for rec in recommendations:
+            self.conn.execute(
+                '''INSERT INTO recommendations
+                   (run_id,business_id,recommendation_type,priority_score,product,action,reason,script,payload_json,created_at)
+                   VALUES (?,?,?,?,?,?,?,?,?,?)''',
+                (
+                    run_id,
+                    business_id,
+                    'engine',
+                    rec.get('priority') or rec.get('priority_score'),
+                    rec.get('product'),
+                    rec.get('action'),
+                    rec.get('reason') or rec.get('why'),
+                    rec.get('script'),
+                    json.dumps(rec),
+                    utc_now(),
+                ),
+            )
+        self.conn.commit()
+
+    def insert_competitor_radius_benchmark(self, run_id: int, business_id: int, row: dict) -> None:
+        self.conn.execute(
+            '''INSERT INTO competitor_benchmarks
+               (run_id,business_id,benchmark_type,cohort_key,cohort_size,competitive_index,position,biggest_gap,
+                competitor_count,radius_km,payload_json,created_at)
+               VALUES (?,?,?,?,?,?,?,?,?,?,?,?)''',
+            (
+                run_id,
+                business_id,
+                'radius',
+                row.get('suburb'),
+                None,
+                None,
+                None,
+                None,
+                row.get('competitor_count'),
+                row.get('radius_km'),
+                json.dumps(row),
+                utc_now(),
+            ),
+        )
+        self.conn.commit()
+
+    def insert_outcome_summary(self, run_id: int, business_id: int, summary: dict) -> None:
+        self.conn.execute(
+            '''INSERT INTO outcome_summaries
+               (run_id,business_id,past_contact_count,past_reply_count,past_meeting_count,past_win_count,
+                reply_rate,meeting_rate,win_rate,payload_json,updated_at)
+               VALUES (?,?,?,?,?,?,?,?,?,?,?)''',
+            (
+                run_id,
+                business_id,
+                summary.get('past_contact_count', 0),
+                summary.get('past_reply_count', 0),
+                summary.get('past_meeting_count', 0),
+                summary.get('past_win_count', 0),
+                summary.get('reply_rate', 0),
+                summary.get('meeting_rate', 0),
+                summary.get('win_rate', 0),
+                json.dumps(summary),
+                utc_now(),
+            ),
+        )
+        self.conn.commit()
+
+    def insert_outcome_event(self, run_id: int, business_id: int, event: dict) -> None:
+        self.conn.execute(
+            '''INSERT INTO outcome_events
+               (run_id,business_id,outcome_date,channel,outcome,notes,payload_json,created_at)
+               VALUES (?,?,?,?,?,?,?,?)''',
+            (
+                run_id,
+                business_id,
+                event.get('outreach_date'),
+                event.get('channel'),
+                event.get('outcome'),
+                event.get('notes'),
+                json.dumps(event),
+                utc_now(),
+            ),
+        )
+        self.conn.commit()
+
+    def insert_outreach_recommendation(self, run_id: int, business_id: int, row: dict) -> None:
+        self.conn.execute(
+            '''INSERT INTO recommendations
+               (run_id,business_id,recommendation_type,priority_score,product,action,reason,script,payload_json,created_at)
+               VALUES (?,?,?,?,?,?,?,?,?,?)''',
+            (
+                run_id,
+                business_id,
+                'outreach_queue',
+                row.get('priority_score'),
+                row.get('recommended_product'),
+                row.get('priority_reason'),
+                row.get('recommendation_reason'),
+                row.get('whatsapp_script'),
+                json.dumps(row),
+                utc_now(),
+            ),
+        )
+        self.conn.commit()
+
     def latest_business_scores(self):
         return self.conn.execute(
             '''SELECT b.id,b.business_name,b.area,b.suburb,b.website,b.rating,b.review_count,
@@ -153,4 +416,3 @@ class DB:
                JOIN dmi_scores d ON d.business_id=b.id
                WHERE d.id IN (SELECT MAX(id) FROM dmi_scores GROUP BY business_id)'''
         ).fetchall()
-

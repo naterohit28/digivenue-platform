@@ -33,7 +33,19 @@
       "Bash(git add *)",
       "Bash(git commit -m ' *)",
       "Bash(git push *)",
-      "Bash(dir /b /a)"
+      "Bash(dir /b /a)",
+      "Bash(ls -lat ~/.claude/skills 2>/dev/null | head -40)",
+      "Bash(xargs ls -lt)",
+      "Bash(git reset *)",
+      "PowerShell($dir = \"C:\\\\Users\\\\rohit\\\\Downloads\\\\DigiStories\\\\claude DigiVenue\"; Copy-Item \"$dir\\\\index-redesign.html\" \"$dir\\\\index.html\" -Force; Remove-Item \"$dir\\\\index-redesign.html\"; Write-Host \"Promoted redesign to index.html and removed preview file.\"; Test-Path \"$dir\\\\index.html\"; Test-Path \"$dir\\\\index-redesign.html\")",
+      "Bash(gh auth *)",
+      "Bash(gh api *)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" https://api.github.com/repos/naterohit28/digivenue-platform/pages)",
+      "Bash(curl -s -o /dev/null -w \"HTTP %{http_code}\\\\n\" --max-time 8 https://digivenue.co)",
+      "Bash(curl -sIL --max-time 12 https://digivenue.co)",
+      "mcp__c0b087f3-ceb7-48a8-b38b-6110c6ff273c__list_teams",
+      "mcp__c0b087f3-ceb7-48a8-b38b-6110c6ff273c__list_projects",
+      "mcp__c0b087f3-ceb7-48a8-b38b-6110c6ff273c__get_project"
     ]
   }
 }

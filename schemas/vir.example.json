@@ -1,0 +1,97 @@
+{
+  "schema_version": "1.0",
+  "vir_id": "swayambhu_ganesh_sabhagruh",
+  "generated_at": "2026-06-05T09:30:00Z",
+  "collection_mode": "mixed",
+  "data_completeness": 0.78,
+
+  "venue": {
+    "name": "Swayambhu Ganesh Sabhagruh",
+    "type": "sabhagruh",
+    "city": "Navi Mumbai",
+    "area": "Nerul",
+    "capacity_min": 200,
+    "capacity_max": 800,
+    "price_range": { "catering_from": 650, "avg_event_value": 350000, "currency": "INR" },
+    "contact": { "owner": "Mr. Patil", "phone": "9819000000", "whatsapp": "9819000000", "email": "" },
+    "geo": { "lat": 19.0327, "lng": 73.0169, "google_place_id": "ChIJ_example" }
+  },
+
+  "google_business": {
+    "claimed":             { "value": false, "source": "google_places_api", "observed_at": "2026-06-05T09:00:00Z", "confidence": 0.95 },
+    "rating":              { "value": 3.8,  "source": "google_places_api", "observed_at": "2026-06-05T09:00:00Z", "confidence": 1.0 },
+    "total_reviews":       { "value": 34,   "source": "google_places_api", "observed_at": "2026-06-05T09:00:00Z", "confidence": 1.0 },
+    "review_velocity":     { "value": 0.5,  "unit": "reviews/month", "source": "google_places_api", "observed_at": "2026-06-05T09:00:00Z", "confidence": 0.7 },
+    "review_response_rate":{ "value": 0.0,  "source": "google_places_api", "observed_at": "2026-06-05T09:00:00Z", "confidence": 0.9 },
+    "total_photos":        { "value": 11,   "source": "google_places_api", "observed_at": "2026-06-05T09:00:00Z", "confidence": 0.8 },
+    "last_photo_upload":   { "value": "2025-04-12", "source": "google_business_manual", "observed_at": "2026-06-05T09:00:00Z", "confidence": 0.6 }
+  },
+
+  "instagram": {
+    "followers":         { "value": 280, "source": "instagram_scrape", "observed_at": "2026-06-05T09:05:00Z", "confidence": 0.7 },
+    "total_posts":       { "value": 22,  "source": "instagram_scrape", "observed_at": "2026-06-05T09:05:00Z", "confidence": 0.7 },
+    "reels_count":       { "value": 2,   "source": "instagram_scrape", "observed_at": "2026-06-05T09:05:00Z", "confidence": 0.6 },
+    "posting_frequency": { "value": 0.2, "unit": "posts/week", "source": "instagram_scrape", "observed_at": "2026-06-05T09:05:00Z", "confidence": 0.6 },
+    "last_post_date":    { "value": "2025-12-20", "source": "instagram_scrape", "observed_at": "2026-06-05T09:05:00Z", "confidence": 0.6 },
+    "link_present":      { "value": false, "source": "instagram_scrape", "observed_at": "2026-06-05T09:05:00Z", "confidence": 0.8 },
+    "whatsapp_cta":      { "value": false, "source": "instagram_scrape", "observed_at": "2026-06-05T09:05:00Z", "confidence": 0.8 }
+  },
+
+  "website": {
+    "exists": { "value": false, "source": "website_crawl", "observed_at": "2026-06-05T09:06:00Z", "confidence": 0.95 }
+  },
+
+  "trust_signals": {
+    "testimonials":     { "value": 0, "source": "manual_consultant", "observed_at": "2026-06-05T09:30:00Z", "confidence": 0.8 },
+    "wedding_albums":   { "value": 0, "source": "manual_consultant", "observed_at": "2026-06-05T09:30:00Z", "confidence": 0.8 }
+  },
+
+  "conversion_systems": {
+    "whatsapp_automation": { "value": false, "source": "owner_reported", "observed_at": "2026-06-05T09:30:00Z", "confidence": 0.9 },
+    "lead_form":           { "value": false, "source": "owner_reported", "observed_at": "2026-06-05T09:30:00Z", "confidence": 0.9 },
+    "follow_up_system":    { "value": "owner_memory", "source": "owner_reported", "observed_at": "2026-06-05T09:30:00Z", "confidence": 0.9 },
+    "inquiry_tracking":    { "value": "paper", "source": "owner_reported", "observed_at": "2026-06-05T09:30:00Z", "confidence": 0.9 }
+  },
+
+  "operations": {
+    "smartos_usage":       { "value": false, "source": "owner_reported", "observed_at": "2026-06-05T09:30:00Z", "confidence": 1.0 },
+    "calendar_management": { "value": "diary", "source": "owner_reported", "observed_at": "2026-06-05T09:30:00Z", "confidence": 0.9 },
+    "reporting":           { "value": 1, "source": "owner_reported", "observed_at": "2026-06-05T09:30:00Z", "confidence": 0.8 }
+  },
+
+  "revenue": {
+    "booking_volume_monthly":  { "value": 5,      "source": "owner_reported", "observed_at": "2026-06-05T09:30:00Z", "confidence": 0.7 },
+    "inquiry_volume_monthly":  { "value": 18,     "source": "owner_reported", "observed_at": "2026-06-05T09:30:00Z", "confidence": 0.6 },
+    "conversion_rate":         { "value": 0.28,   "source": "pipeline_estimate", "observed_at": "2026-06-05T09:30:00Z", "confidence": 0.5 },
+    "avg_booking_value":       { "value": 350000, "source": "owner_reported", "observed_at": "2026-06-05T09:30:00Z", "confidence": 0.7 },
+    "peak_occupancy":          { "value": 60,     "source": "owner_reported", "observed_at": "2026-06-05T09:30:00Z", "confidence": 0.6 },
+    "off_season_occupancy":    { "value": 25,     "source": "owner_reported", "observed_at": "2026-06-05T09:30:00Z", "confidence": 0.6 }
+  },
+
+  "dimensions": {
+    "visibility": { "score": 28, "band": "red", "method": "rule_v3", "confidence": 0.82, "computed_at": "2026-06-05T09:30:00Z",
+      "evidence_refs": ["/google_business/claimed", "/google_business/total_reviews", "/instagram/posting_frequency", "/website/exists"] },
+    "trust":      { "score": 24, "band": "red", "method": "rule_v3", "confidence": 0.75, "computed_at": "2026-06-05T09:30:00Z",
+      "evidence_refs": ["/google_business/rating", "/google_business/review_response_rate", "/trust_signals/wedding_albums"] },
+    "conversion": { "score": 40, "band": "amber", "method": "rule_v3", "confidence": 0.7, "computed_at": "2026-06-05T09:30:00Z",
+      "evidence_refs": ["/conversion_systems/follow_up_system", "/revenue/conversion_rate"] },
+    "operations": { "score": 22, "band": "red", "method": "rule_v3", "confidence": 0.85, "computed_at": "2026-06-05T09:30:00Z",
+      "evidence_refs": ["/operations/calendar_management", "/conversion_systems/inquiry_tracking", "/operations/reporting"] },
+    "revenue":    { "score": 42, "band": "amber", "method": "rule_v3", "confidence": 0.6, "computed_at": "2026-06-05T09:30:00Z",
+      "evidence_refs": ["/revenue/peak_occupancy", "/revenue/off_season_occupancy"] },
+    "leadership": { "score": 65, "band": "yellow", "method": "manual_override", "confidence": 0.5, "computed_at": "2026-06-05T09:30:00Z",
+      "override_reason": "Owner curious, medium budget (consultant read)", "evidence_refs": [] }
+  },
+
+  "recommendation": {
+    "digistories_fit": "critical",
+    "smartos_fit": "beneficial",
+    "recommended_path": "Both",
+    "why": "Unclaimed Google + dormant Instagram + no website = severe visibility/trust gap; paper diary + owner-memory follow-up leaks inquiries.",
+    "confidence": 0.78,
+    "maturity_score": 33,
+    "priority_order": ["gmb_setup", "review_engine", "reply_speed", "posting_rhythm"]
+  },
+
+  "lifecycle": { "status": "Audited", "days_to_close": 22, "close_probability": "Medium" }
+}

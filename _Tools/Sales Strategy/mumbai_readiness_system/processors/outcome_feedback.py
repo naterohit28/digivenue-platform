@@ -33,3 +33,16 @@ def load_outreach_outcomes(path: Path) -> dict[str, dict]:
         }
     return summary
 
+
+def load_outreach_outcome_events(path: Path) -> dict[str, list[dict]]:
+    if not path.exists():
+        return {}
+    events: dict[str, list[dict]] = {}
+    with path.open("r", encoding="utf-8") as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            name = (row.get("business_name") or "").strip().lower()
+            if not name:
+                continue
+            events.setdefault(name, []).append(row)
+    return events

@@ -5,20 +5,25 @@ import csv
 import json
 import logging
 import os
+import sys
 from pathlib import Path
 
 import pandas as pd
+
+# 7-engine intelligence stack (VIR/DMI/CIE/OSE/VMF/HVT/REC)
+sys.path.insert(0, str(Path(__file__).resolve().parent / 'intelligence'))
+from pipeline_intelligence import enrich_with_intelligence
 
 from collectors.google_maps_collector import CollectorConfig, GoogleMapsCollector
 from collectors.instagram_engine import collect_instagram_profile
 from collectors.marketplace_engine import analyze_marketplaces
 from collectors.website_analyzer import analyze_website
 from database.db import DB, load_settings, load_google_api_key
-from historical.delta_engine import compute_delta
+from historical.delta_engine import compute_delta_from_rows
 from outreach.priority_engine import build_priority_queue
 from outreach.whatsapp_engine import whatsapp_script
 from processors.relationship_intelligence import load_relationship_intelligence
-from processors.outcome_feedback import load_outreach_outcomes
+from processors.outcome_feedback import load_outreach_outcome_events, load_outreach_outcomes
 from processors.intelligence_panels import build_intelligence_panels
 from reports.statistics_report import build_statistics
 from reports.territory_intelligence import build_competitor_radius_map, build_territory_clusters
@@ -55,6 +60,7 @@ def run_all(root: Path) -> None:
 
     db = DB(root / settings['database_path'])
     db.init_schema(root / 'database' / 'schema.sql')
+    previous_processed_rows = db.latest_processed_snapshot()
 
     runtime = settings.get('collector_runtime', {})
     api_key = load_google_api_key(root, runtime.get('google_api_key_env', 'GOOGLE_MAPS_API_KEY'))
@@ -66,15 +72,19 @@ def run_all(root: Path) -> None:
     if mode == 'live' and not api_key:
         logging.warning('collection_mode=live but no API key found — falling back to estimates (mock).')
         mode = 'mock'
+    run_id = db.start_run(mode, 'google_maps_pipeline', settings)
     collector = GoogleMapsCollector(settings['suburbs'], settings['queries'], CollectorConfig(mode=mode, google_api_key=api_key, max_results_per_query=runtime.get('max_results_per_query', 20), request_timeout_sec=runtime.get('request_timeout_sec', 12), pause_between_calls_sec=runtime.get('pause_between_calls_sec', 0.2)))
     raw_rows = collector.collect()
     export_json(root / settings['raw_dir'] / 'google_maps_snapshot.json', raw_rows)
     relationship_map = load_relationship_intelligence(root / "raw" / "relationship_intelligence.csv")
     outcomes_map = load_outreach_outcomes(root / "raw" / "outreach_outcomes.csv")
+    outcome_events_map = load_outreach_outcome_events(root / "raw" / "outreach_outcomes.csv")
 
     processed = []
+    business_ids_by_name = {}
     for r in raw_rows:
         business_id = db.upsert_business(r)
+        business_ids_by_name[r["business_name"]] = business_id
         site = analyze_website(r.get('website'), timeout_sec=runtime.get('request_timeout_sec', 12), mode=mode)
         ig = collect_instagram_profile(
             r['business_name'],
@@ -102,21 +112,40 @@ def run_all(root: Path) -> None:
 
         rel = relationship_map.get(r["business_name"].strip().lower(), {})
         outcomes = outcomes_map.get(r["business_name"].strip().lower(), {})
+        outcome_events = outcome_events_map.get(r["business_name"].strip().lower(), [])
         merged = {**r, **ig, **site, **market, **scored, **rel, **outcomes, 'collection_mode': mode}
         merged.update(data_quality_grade(merged))
         merged.update(conversion_likelihood(merged))
+        db.insert_processed_snapshot(run_id, business_id, merged)
+        if outcomes:
+            db.insert_outcome_summary(run_id, business_id, outcomes)
+        for event in outcome_events:
+            db.insert_outcome_event(run_id, business_id, event)
         processed.append(merged)
+
+    # ── Full Venue Intelligence: build a VIR per venue and run VIR->DMI->CIE->OSE->VMF->HVT->REC
+    try:
+        vir_records = enrich_with_intelligence(processed, root, history=db.intelligence_history())
+        for record in vir_records:
+            business_name = record.get('vir', {}).get('venue', {}).get('name')
+            business_id = business_ids_by_name.get(business_name) or db.business_id_by_name(business_name)
+            if business_id:
+                db.insert_vir_record(run_id, business_id, record)
+        export_json(root / settings['exports_dir'] / 'venue_intelligence_records.json', vir_records)
+        logging.info('Venue Intelligence Records generated: %s', len(vir_records))
+    except Exception as e:
+        logging.warning('Intelligence enrichment failed: %s', e)
 
     current_processed = root / settings['processed_dir'] / 'current_run_scored.json'
     previous_processed = root / settings['historical_dir'] / 'latest_scored_snapshot.json'
     export_json(current_processed, processed)
 
-    delta = compute_delta(processed, previous_processed)
+    delta = compute_delta_from_rows(processed, previous_processed_rows)
     export_json(root / settings['exports_dir'] / 'leads_audit_tracker.json', delta)
 
     # ── 5 Sales-Intelligence Panels (Territory / Silence / SmartOS / Momentum / Relationship)
     # Computed BEFORE we overwrite latest_scored_snapshot, so momentum can compare to the previous run.
-    panels = build_intelligence_panels(processed, previous_processed)
+    panels = build_intelligence_panels(processed, previous_processed_rows)
     export_json(root / settings['exports_dir'] / 'intelligence_panels.json', panels)
     # Also publish a JS file the standalone Sales Tool HTML can read under file://
     try:
@@ -131,10 +160,18 @@ def run_all(root: Path) -> None:
 
     # priority_engine now generates whatsapp_script internally per DMI category
     queue = build_priority_queue(processed)
+    for row in queue:
+        business_id = business_ids_by_name.get(row.get('business_name')) or db.business_id_by_name(row.get('business_name'))
+        if business_id:
+            db.insert_outreach_recommendation(run_id, business_id, row)
 
     stats = build_statistics(processed)
     territory_clusters = build_territory_clusters(processed)
     competitor_map = build_competitor_radius_map(processed, radius_km=3.0)
+    for row in competitor_map:
+        business_id = business_ids_by_name.get(row.get('business_name')) or db.business_id_by_name(row.get('business_name'))
+        if business_id:
+            db.insert_competitor_radius_benchmark(run_id, business_id, row)
 
     leads_export = [
         {
@@ -243,6 +280,7 @@ def run_all(root: Path) -> None:
     export_json(root / settings['historical_dir'] / f'scored_snapshot_{stamp}.json', processed)
     export_json(previous_processed, processed)
 
+    db.finish_run(run_id, 'completed', len(raw_rows), len(processed))
     logging.info('Run complete. Processed=%s Queue=%s', len(processed), len(queue))
 
 
@@ -255,4 +293,3 @@ def main() -> None:
 
 if __name__ == '__main__':
     main()
-

@@ -17,6 +17,9 @@ venv/
 **/logs/*.log
 chrome_debug.log
 
+# ── Per-run snapshot dumps (redundant with latest_scored_snapshot.json) ──
+**/historical/scored_snapshot_*.json
+
 # ── OS / editor junk ──
 Thumbs.db
 .DS_Store

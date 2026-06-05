@@ -46,6 +46,7 @@
   .main{max-width:920px;margin:0 auto;padding:36px 24px 120px;}
   .stage{display:none;animation:fadeIn 0.4s var(--ease-out);}
   .stage.active{display:block;}
+  .deferred-intelligence{display:none !important;}
   @keyframes fadeIn{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:translateY(0);}}
 
   .card{background:var(--color-surface);border:1px solid var(--color-border);padding:28px;margin-bottom:18px;transition:all 0.2s cubic-bezier(0.16, 1, 0.3, 1);}
@@ -140,8 +141,9 @@
 
 <div class="nav"><div class="nav-inner" id="navBar"></div></div>
 
-<!-- ════ LIVE INTELLIGENCE — INTERNAL CONSULTANT VIEW (visible, never prints) ════ -->
-<div class="main" id="intelPanel" style="padding-top:22px;">
+<!-- Deferred for Phase 2: Live Intelligence + BCA Relationship Intelligence.
+     Kept in the file for later, hidden from the current consultation workflow. -->
+<div class="main deferred-intelligence" id="intelPanel" style="padding-top:22px;">
   <div class="card internal">
     <div class="pillar-badge internal"><span class="dot"></span> Internal · Consultant View — never shown to customer</div>
     <div class="internal-warn">Internal use only — do not screen-share during the customer-facing portion of the call.</div>
@@ -498,7 +500,7 @@
     <h3 class="text-h3" style="margin:22px 0 12px;">Objection handling <span style="font-size:12px;color:var(--color-text-muted);">(internal reference)</span></h3>
     <div id="objections"></div>
     <div class="convo" style="margin-top:22px;"><div class="text-label accent">Closing the conversation</div><ul><li>Take the report home. Look through it tonight, with the family if you want.</li><li>I'll WhatsApp you tomorrow to answer any questions. No call needed if you don't want one.</li><li>If it's a yes, we can start the first photography on your next function. If it's a no, no problem — keep the report.</li></ul></div>
-    <div style="display:flex;gap:16px;flex-wrap:wrap;margin-top:22px;"><button class="btn" onclick="generateReport()">Print Venue Health Report</button><button class="btn outline" onclick="exportIntakeJSON()">Export Playbook JSON</button></div>
+    <div style="display:flex;gap:16px;flex-wrap:wrap;margin-top:22px;"><button class="btn" onclick="openPremiumReport()">Open Premium Health Report &nbsp;&rarr;</button><button class="btn outline" onclick="generateReport()">Quick Print (Standard)</button><button class="btn outline" onclick="exportIntakeJSON()">Export Playbook JSON</button></div>
   </div>
 </div>
 
@@ -533,6 +535,7 @@
 <script src="intelligence_data.js" onerror="window.PANELS=window.PANELS||null;"></script>
 <script src="benchmark_data.js" onerror="window.BCA_STATS=window.BCA_STATS||null;"></script>
 <script>
+const ENABLE_DEFERRED_INTELLIGENCE = false;
 const STEPS=[
   {id:'venue',label:'Venue'},{id:'visibility',label:'Visibility'},{id:'trust',label:'Trust'},
   {id:'conversion',label:'Conversion'},{id:'operations',label:'Operations'},{id:'revenue',label:'Revenue'},
@@ -813,6 +816,68 @@ async function loadBenchmarks(){
   console.log("Benchmarks: using built-in defaults");
 }
 
+function openPremiumReport(){
+  const vName=document.getElementById('v_name').value.trim();
+  if(!vName){alert('Enter a Venue Name in Step 1 first.');goToStep(0);return;}
+  const s=computeAll();const r=recommendation(s);const lead=calcClose();
+  
+  const rootCauses = [];
+  const priorityOrder = [];
+  const inactiveChoices = Array.from(document.querySelectorAll('.choice:not(.active)')).map(c => c.textContent.trim());
+  
+  if (inactiveChoices.some(t => t.includes("claimed & verified"))) rootCauses.push("unclaimed_google_business");
+  if (inactiveChoices.some(t => t.includes("Reels published weekly"))) rootCauses.push("dormant_instagram");
+  if (inactiveChoices.some(t => t.includes("WhatsApp CTA prominent") || t.includes("Direct WhatsApp link"))) rootCauses.push("no_whatsapp_cta");
+  
+  const opRecordActive = document.querySelector('[data-group="op_record"] .choice.radio.active');
+  const opRecordVal = opRecordActive ? opRecordActive.textContent.trim() : "";
+  if (opRecordVal.includes("Paper register") || opRecordVal.includes("Diary") || opRecordVal.includes("Memory")) {
+    rootCauses.push("paper_diary");
+  }
+  
+  if (s.vis < 50) priorityOrder.push("gmb_setup");
+  if (s.conv < 55) priorityOrder.push("reply_speed");
+  if (s.op < 50) priorityOrder.push("followup_system");
+  if (s.tr < 50) priorityOrder.push("review_engine");
+  
+  const vir = {
+    venue_id: vName.toLowerCase().replace(/[^a-z0-9]+/g, '_'),
+    venue_name: vName,
+    area: document.getElementById('v_loc').value.trim(),
+    type: document.getElementById('v_type').value,
+    dimensions: {
+      visibility: { score: s.vis, status: s.vis < 50 ? "critical" : (s.vis < 75 ? "needs_improvement" : "good") },
+      trust: { score: s.tr, status: s.tr < 50 ? "critical" : (s.tr < 75 ? "needs_improvement" : "good") },
+      conversion: { score: s.conv, status: s.conv < 55 ? "critical" : (s.conv < 75 ? "needs_improvement" : "good") },
+      operations: { score: s.op, status: s.op < 50 ? "critical" : (s.op < 75 ? "needs_improvement" : "good") },
+      revenue: { score: s.rev, status: s.rev < 50 ? "critical" : (s.rev < 75 ? "needs_improvement" : "good") },
+      leadership: { score: lead.ld, status: lead.ld < 50 ? "critical" : (lead.ld < 75 ? "needs_improvement" : "good") }
+    },
+    objections: document.getElementById('ld_objections') ? document.getElementById('ld_objections').value.split(',').map(s=>s.trim()).filter(Boolean) : [],
+    root_causes: rootCauses,
+    priority_order: priorityOrder,
+    smartos_fit: s.op < 50 || s.sos > 60 ? "high" : "low",
+    digistories_fit: s.vis < 50 || s.tr < 50 ? "critical" : "medium"
+  };
+
+  const intake={
+    business:{name:vName,owner:document.getElementById('v_owner').value.trim(),phone:document.getElementById('v_phone').value.trim(),city:document.getElementById('v_loc').value.trim(),area:document.getElementById('v_loc').value.trim(),type:document.getElementById('v_type').value,capacityMin:parseInt(document.getElementById('v_cap_min').value)||300,capacityMax:parseInt(document.getElementById('v_cap_max').value)||800,email:document.getElementById('v_email').value.trim()},
+    online:{website:document.getElementById('v_website').value.trim(),instagram:document.getElementById('v_instagram').value.trim(),inquiries:document.getElementById('v_inq').value},
+    pricing:{cateringFrom:document.getElementById('v_catering').value.trim()},
+    competitor:{name:document.getElementById('c_name1').value.trim(),name2:document.getElementById('c_name2').value.trim()},
+    scores:{visibility:s.vis,trust:s.tr,conversion:s.conv,operations:s.op,smartosReadiness:s.sos,revenue:s.rev,competitive:s.comp,maturity:s.maturity},
+    revenue:{rangeLow:s.revData.lo,rangeHigh:s.revData.hi,offSeason:s.revData.offOpp},
+    recommendation:r,
+    plan:{tier:selectedTier.name,fee:selectedTier.fee,smartosPilot:pilotOn},
+    leadership:{score:lead.ld,closeProbability:document.getElementById('close_band').textContent,interest:document.getElementById('ld_interest').value,objections:document.getElementById('ld_objections').value.trim()},
+    founderNotes:document.querySelector('.fn-textarea').value.trim(),
+    venue_intelligence_report: vir
+  };
+
+  localStorage.setItem('dvb-temp-intake', JSON.stringify(intake));
+  window.open('venue-health-report.html', '_blank');
+}
+
 function exportIntakeJSON(){
   const vName=document.getElementById('v_name').value.trim();
   if(!vName){alert('Enter a Venue Name in Step 1 before exporting.');goToStep(0);return;}
@@ -884,6 +949,7 @@ function toggleNotes(){const n=document.getElementById('founderNotes');n.classLi
 
 /* LIVE INTEL pipeline pull */
 function initIntel(){
+  if(!ENABLE_DEFERRED_INTELLIGENCE)return;
   const sel=document.getElementById('intel_select');if(!sel)return;
   if(typeof window.PANELS!=='object'||!window.PANELS)return;
   Object.keys(window.PANELS).sort((a,b)=>(window.PANELS[a].dmi_score||0)-(window.PANELS[b].dmi_score||0)).forEach(n=>{const o=document.createElement('option');o.value=n;const v=window.PANELS[n];o.textContent=`${n} — ${v.suburb||''} (DMI ${v.dmi_score})`;sel.appendChild(o);});

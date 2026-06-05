@@ -1,0 +1,292 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://digivenue.in/schemas/vir.schema.json",
+  "title": "Venue Intelligence Record (VIR)",
+  "description": "Evidence-based record for a single venue. Raw observed facts (with provenance) are captured separately from derived pillar scores, so every score is traceable to the evidence that produced it.",
+  "type": "object",
+
+  "$defs": {
+    "source": {
+      "type": "string",
+      "description": "Where this observation came from.",
+      "enum": [
+        "google_places_api",
+        "google_business_manual",
+        "instagram_api",
+        "instagram_scrape",
+        "website_crawl",
+        "manual_consultant",
+        "pipeline_estimate",
+        "crm",
+        "owner_reported",
+        "unknown"
+      ]
+    },
+    "evNumber": {
+      "type": "object",
+      "description": "A measured numeric fact with provenance.",
+      "properties": {
+        "value": { "type": ["number", "null"] },
+        "unit": { "type": "string" },
+        "source": { "$ref": "#/$defs/source" },
+        "observed_at": { "type": "string", "format": "date-time" },
+        "confidence": { "type": "number", "minimum": 0, "maximum": 1, "description": "How reliable this observation is (1 = verified API, lower = estimate/recall)." }
+      },
+      "required": ["value", "source"],
+      "additionalProperties": false
+    },
+    "evBool": {
+      "type": "object",
+      "description": "A measured boolean fact with provenance.",
+      "properties": {
+        "value": { "type": ["boolean", "null"] },
+        "source": { "$ref": "#/$defs/source" },
+        "observed_at": { "type": "string", "format": "date-time" },
+        "confidence": { "type": "number", "minimum": 0, "maximum": 1 }
+      },
+      "required": ["value", "source"],
+      "additionalProperties": false
+    },
+    "evString": {
+      "type": "object",
+      "description": "A measured text/enum fact with provenance.",
+      "properties": {
+        "value": { "type": ["string", "null"] },
+        "source": { "$ref": "#/$defs/source" },
+        "observed_at": { "type": "string", "format": "date-time" },
+        "confidence": { "type": "number", "minimum": 0, "maximum": 1 }
+      },
+      "required": ["value", "source"],
+      "additionalProperties": false
+    },
+    "evDate": {
+      "type": "object",
+      "description": "A measured date fact with provenance (e.g. last photo upload).",
+      "properties": {
+        "value": { "type": ["string", "null"], "format": "date" },
+        "source": { "$ref": "#/$defs/source" },
+        "observed_at": { "type": "string", "format": "date-time" },
+        "confidence": { "type": "number", "minimum": 0, "maximum": 1 }
+      },
+      "required": ["value", "source"],
+      "additionalProperties": false
+    },
+    "dimensionScore": {
+      "type": "object",
+      "description": "A derived pillar score. NOT raw data — computed from evidence by a named, versioned method.",
+      "properties": {
+        "score": { "type": ["number", "null"], "minimum": 0, "maximum": 100 },
+        "band": { "type": "string", "enum": ["red", "amber", "yellow", "strong", "unknown"] },
+        "method": { "type": "string", "description": "Scoring method id, e.g. 'rule_v3', 'manual_override', 'model_v1'." },
+        "confidence": { "type": "number", "minimum": 0, "maximum": 1, "description": "Confidence in the score, driven by completeness of the underlying evidence." },
+        "evidence_refs": {
+          "type": "array",
+          "description": "JSON-pointer paths to the raw fields that produced this score (e.g. '/google_business/total_reviews').",
+          "items": { "type": "string" }
+        },
+        "computed_at": { "type": "string", "format": "date-time" },
+        "override_reason": { "type": "string", "description": "If a consultant overrode the computed score, why." }
+      },
+      "required": ["score", "method"],
+      "additionalProperties": false
+    }
+  },
+
+  "properties": {
+
+    "schema_version": { "type": "string", "const": "1.0", "description": "VIR schema version. Bump on breaking changes." },
+    "vir_id": { "type": "string", "description": "Unique record id, e.g. 'swayambhu_ganesh_sabhagruh'." },
+    "generated_at": { "type": "string", "format": "date-time" },
+    "collection_mode": { "type": "string", "enum": ["live", "mixed", "manual", "estimate"], "description": "How most of this record was collected." },
+    "data_completeness": { "type": "number", "minimum": 0, "maximum": 1, "description": "Fraction of expected evidence fields that are populated. Drives score confidence." },
+
+    "venue": {
+      "type": "object",
+      "description": "SECTION 1 — Venue identity.",
+      "properties": {
+        "name": { "type": "string" },
+        "type": { "type": "string", "enum": ["banquet", "sabhagruh", "lawn", "hotel_banquet", "catering", "decoration", "planner", "resort", "multiple", "other"] },
+        "city": { "type": "string" },
+        "area": { "type": "string" },
+        "capacity_min": { "type": "integer", "minimum": 0 },
+        "capacity_max": { "type": "integer", "minimum": 0 },
+        "price_range": {
+          "type": "object",
+          "properties": {
+            "catering_from": { "type": "number", "description": "Per-plate, INR." },
+            "avg_event_value": { "type": "number", "description": "Gross event value incl. catering, INR." },
+            "currency": { "type": "string", "default": "INR" }
+          },
+          "additionalProperties": false
+        },
+        "contact": {
+          "type": "object",
+          "properties": {
+            "owner": { "type": "string" },
+            "phone": { "type": "string" },
+            "whatsapp": { "type": "string" },
+            "email": { "type": "string", "format": "email" }
+          },
+          "additionalProperties": false
+        },
+        "geo": {
+          "type": "object",
+          "properties": {
+            "lat": { "type": "number" },
+            "lng": { "type": "number" },
+            "google_place_id": { "type": "string" }
+          },
+          "additionalProperties": false
+        }
+      },
+      "required": ["name", "type", "city"],
+      "additionalProperties": false
+    },
+
+    "google_business": {
+      "type": "object",
+      "description": "SECTION 2 — Google Business Profile evidence.",
+      "properties": {
+        "claimed": { "$ref": "#/$defs/evBool" },
+        "rating": { "$ref": "#/$defs/evNumber" },
+        "total_reviews": { "$ref": "#/$defs/evNumber" },
+        "review_velocity": { "$ref": "#/$defs/evNumber", "description": "New reviews per month (recent trailing window)." },
+        "review_response_rate": { "$ref": "#/$defs/evNumber", "description": "0-1 fraction of reviews the owner replied to." },
+        "total_photos": { "$ref": "#/$defs/evNumber" },
+        "last_photo_upload": { "$ref": "#/$defs/evDate" },
+        "posts_published": { "$ref": "#/$defs/evNumber", "description": "Google Posts in trailing 90 days." },
+        "qa_activity": { "$ref": "#/$defs/evNumber", "description": "Answered Q&A entries." }
+      },
+      "additionalProperties": false
+    },
+
+    "instagram": {
+      "type": "object",
+      "description": "SECTION 3 — Instagram evidence.",
+      "properties": {
+        "followers": { "$ref": "#/$defs/evNumber" },
+        "following": { "$ref": "#/$defs/evNumber" },
+        "total_posts": { "$ref": "#/$defs/evNumber" },
+        "reels_count": { "$ref": "#/$defs/evNumber" },
+        "avg_engagement": { "$ref": "#/$defs/evNumber", "description": "Avg (likes+comments)/followers, 0-1." },
+        "posting_frequency": { "$ref": "#/$defs/evNumber", "description": "Posts per week (trailing 8 weeks)." },
+        "last_post_date": { "$ref": "#/$defs/evDate" },
+        "bio_optimization_score": { "$ref": "#/$defs/evNumber", "description": "0-100 heuristic: location, capacity, CTA, link." },
+        "link_present": { "$ref": "#/$defs/evBool" },
+        "whatsapp_cta": { "$ref": "#/$defs/evBool" }
+      },
+      "additionalProperties": false
+    },
+
+    "website": {
+      "type": "object",
+      "description": "SECTION 4 — Website evidence.",
+      "properties": {
+        "exists": { "$ref": "#/$defs/evBool" },
+        "url": { "type": "string" },
+        "mobile_friendly": { "$ref": "#/$defs/evBool" },
+        "whatsapp_button": { "$ref": "#/$defs/evBool" },
+        "inquiry_form": { "$ref": "#/$defs/evBool" },
+        "loading_speed_sec": { "$ref": "#/$defs/evNumber", "description": "Mobile load time in seconds." },
+        "seo_score": { "$ref": "#/$defs/evNumber", "description": "0-100." }
+      },
+      "additionalProperties": false
+    },
+
+    "trust_signals": {
+      "type": "object",
+      "description": "SECTION 5 — Trust evidence.",
+      "properties": {
+        "testimonials": { "$ref": "#/$defs/evNumber", "description": "Published written testimonials." },
+        "video_testimonials": { "$ref": "#/$defs/evNumber" },
+        "wedding_albums": { "$ref": "#/$defs/evNumber", "description": "Real-function albums published." },
+        "media_mentions": { "$ref": "#/$defs/evNumber" },
+        "influencer_mentions": { "$ref": "#/$defs/evNumber" }
+      },
+      "additionalProperties": false
+    },
+
+    "conversion_systems": {
+      "type": "object",
+      "description": "SECTION 6 — Conversion tooling evidence.",
+      "properties": {
+        "whatsapp_automation": { "$ref": "#/$defs/evBool" },
+        "lead_form": { "$ref": "#/$defs/evBool" },
+        "crm": { "$ref": "#/$defs/evString", "description": "CRM in use, or null/'none'." },
+        "follow_up_system": { "$ref": "#/$defs/evString", "description": "none|owner_memory|staff|spreadsheet|crm_automated." },
+        "inquiry_tracking": { "$ref": "#/$defs/evString", "description": "memory|paper|diary|excel|gsheet|crm." }
+      },
+      "additionalProperties": false
+    },
+
+    "operations": {
+      "type": "object",
+      "description": "SECTION 7 — Operations evidence.",
+      "properties": {
+        "smartos_usage": { "$ref": "#/$defs/evBool" },
+        "calendar_management": { "$ref": "#/$defs/evString", "description": "diary|wall|excel|gcal|software." },
+        "inquiry_logging": { "$ref": "#/$defs/evString" },
+        "booking_tracking": { "$ref": "#/$defs/evString" },
+        "reporting": { "$ref": "#/$defs/evNumber", "description": "Count of live metrics the owner can instantly see (0-7)." }
+      },
+      "additionalProperties": false
+    },
+
+    "revenue": {
+      "type": "object",
+      "description": "SECTION 8 — Revenue intelligence evidence.",
+      "properties": {
+        "booking_volume_monthly": { "$ref": "#/$defs/evNumber" },
+        "inquiry_volume_monthly": { "$ref": "#/$defs/evNumber" },
+        "conversion_rate": { "$ref": "#/$defs/evNumber", "description": "bookings/inquiries, 0-1." },
+        "avg_booking_value": { "$ref": "#/$defs/evNumber", "description": "INR." },
+        "peak_occupancy": { "$ref": "#/$defs/evNumber", "description": "0-100 %." },
+        "off_season_occupancy": { "$ref": "#/$defs/evNumber", "description": "0-100 %." }
+      },
+      "additionalProperties": false
+    },
+
+    "dimensions": {
+      "type": "object",
+      "description": "DERIVED — six pillar scores, each traceable to evidence_refs. Backward-compatible with the legacy VIR dimensions block.",
+      "properties": {
+        "visibility":  { "$ref": "#/$defs/dimensionScore" },
+        "trust":       { "$ref": "#/$defs/dimensionScore" },
+        "conversion":  { "$ref": "#/$defs/dimensionScore" },
+        "operations":  { "$ref": "#/$defs/dimensionScore" },
+        "revenue":     { "$ref": "#/$defs/dimensionScore" },
+        "leadership":  { "$ref": "#/$defs/dimensionScore", "description": "Internal only — never shown to customer." }
+      },
+      "additionalProperties": false
+    },
+
+    "recommendation": {
+      "type": "object",
+      "description": "DERIVED — product fit and path.",
+      "properties": {
+        "digistories_fit": { "type": "string", "enum": ["none", "beneficial", "critical"] },
+        "smartos_fit": { "type": "string", "enum": ["none", "beneficial", "critical"] },
+        "recommended_path": { "type": "string", "enum": ["DigiStories", "SmartOS", "Both", "Neither"] },
+        "why": { "type": "string" },
+        "confidence": { "type": "number", "minimum": 0, "maximum": 1 },
+        "maturity_score": { "type": "number", "minimum": 0, "maximum": 100 },
+        "priority_order": { "type": "array", "items": { "type": "string" } }
+      },
+      "additionalProperties": false
+    },
+
+    "lifecycle": {
+      "type": "object",
+      "description": "Pipeline state for the Command Center.",
+      "properties": {
+        "status": { "type": "string", "enum": ["Audited", "Proposal Sent", "Active Pilot", "Completed", "Archived"] },
+        "days_to_close": { "type": "integer" },
+        "close_probability": { "type": "string", "enum": ["Low", "Medium", "High"] }
+      },
+      "additionalProperties": false
+    }
+  },
+
+  "required": ["schema_version", "vir_id", "venue"],
+  "additionalProperties": false
+}

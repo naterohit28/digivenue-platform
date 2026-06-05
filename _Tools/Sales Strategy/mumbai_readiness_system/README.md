@@ -4,7 +4,7 @@ Production-ready modular pipeline for DigiVenue intelligence, scoring, outreach 
 
 ## Quick Start
 
-1. `cd "C:\Users\rohit\Downloads\DigiStories\Sales Strategy\mumbai_readiness_system"`
+1. `cd "C:\Users\rohit\Downloads\DigiStories\_Tools\Sales Strategy\mumbai_readiness_system"`
 2. `python -m venv .venv`
 3. `.\.venv\Scripts\activate`
 4. `pip install -r requirements.txt`
@@ -12,12 +12,31 @@ Production-ready modular pipeline for DigiVenue intelligence, scoring, outreach 
 
 ## Outputs
 
+Primary persistence now lives in:
+
+- `database/mumbai_readiness.db`
+
+The CSV/JSON files below are compatibility exports for sharing, dashboard loading, and manual review. They should not be treated as the system of record.
+
 - `exports/bcda_extracted_leads.json`
 - `exports/bcda_extracted_leads.csv`
 - `exports/bcda_maturity_index_tracker.json`
 - `exports/leads_audit_tracker.json`
 - `exports/bcda_statistics.json`
 - `exports/daily_outreach_queue.csv`
+
+## Central Database Tables
+
+- `ingestion_runs`: every pipeline execution with status, mode, counts, and config snapshot.
+- `processed_snapshots`: full scored business profile for every business in every run.
+- `vir_snapshots`: Venue Intelligence Record payloads by run and business.
+- `dmi_history`: time-series DMI and dimension scores.
+- `competitor_benchmarks`: cohort and 3km radius competitor intelligence.
+- `recommendations`: engine recommendations and daily outreach queue scripts.
+- `outcome_summaries`: aggregated reply, meeting, and win rates.
+- `outcome_events`: raw outreach outcomes imported from feedback CSVs.
+
+This keeps history queryable without passing JSON files between engines.
 
 ## Scheduler
 
@@ -33,7 +52,7 @@ Production-ready modular pipeline for DigiVenue intelligence, scoring, outreach 
 ## Notes
 
 - Raw and processed datasets are stored separately (`raw/`, `processed/`).
-- Historical snapshots are append-only (`historical/`).
+- Historical intelligence is append-only in SQLite. JSON files in `historical/` are retained only as human-readable audit mirrors.
 - Current collectors are mock-safe and structured for swapping in real API/browser collectors.
 
 ## Live Collector Mode

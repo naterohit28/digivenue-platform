@@ -103,7 +103,18 @@
     "data_quality_score": 0.47,
     "data_quality_grade": "C",
     "conversion_likelihood_score": 28.2,
-    "conversion_likelihood_band": "Low"
+    "conversion_likelihood_band": "Low",
+    "intelligence": {
+      "dmi": 7.3,
+      "dmi_band": "red",
+      "maturity_stage": "Traditional",
+      "competitive_position": "Laggard",
+      "opportunity_range": [
+        432000,
+        864000
+      ],
+      "top_action": "Add WhatsApp CTA everywhere"
+    }
   },
   {
     "external_id": "real-002",
@@ -134,8 +145,8 @@
     "following": 250,
     "post_count": 111,
     "reel_count": 15,
-    "last_post_date": "2026-05-04",
-    "last_reel_date": "2026-05-04",
+    "last_post_date": "2026-05-10",
+    "last_reel_date": "2026-05-10",
     "avg_views": 550,
     "avg_engagement": 2.05,
     "highlight_count": 3,
@@ -209,7 +220,18 @@
     "data_quality_score": 0.5,
     "data_quality_grade": "B",
     "conversion_likelihood_score": 12.45,
-    "conversion_likelihood_band": "Low"
+    "conversion_likelihood_band": "Low",
+    "intelligence": {
+      "dmi": 36.8,
+      "dmi_band": "red",
+      "maturity_stage": "Traditional",
+      "competitive_position": "Leader",
+      "opportunity_range": [
+        540000,
+        1080000
+      ],
+      "top_action": "Add WhatsApp CTA everywhere"
+    }
   },
   {
     "external_id": "real-003",
@@ -240,8 +262,8 @@
     "following": 250,
     "post_count": 24,
     "reel_count": 2,
-    "last_post_date": "2026-02-10",
-    "last_reel_date": "2026-02-10",
+    "last_post_date": "2026-02-16",
+    "last_reel_date": "2026-02-16",
     "avg_views": 600,
     "avg_engagement": 2.2,
     "highlight_count": 0,
@@ -315,7 +337,18 @@
     "data_quality_score": 0.5,
     "data_quality_grade": "B",
     "conversion_likelihood_score": 25.2,
-    "conversion_likelihood_band": "Low"
+    "conversion_likelihood_band": "Low",
+    "intelligence": {
+      "dmi": 17.8,
+      "dmi_band": "red",
+      "maturity_stage": "Traditional",
+      "competitive_position": "Weak",
+      "opportunity_range": [
+        378000,
+        756000
+      ],
+      "top_action": "Add WhatsApp CTA everywhere"
+    }
   },
   {
     "external_id": "real-004",
@@ -346,8 +379,8 @@
     "following": 250,
     "post_count": 8,
     "reel_count": 0,
-    "last_post_date": "2026-04-15",
-    "last_reel_date": "2026-04-15",
+    "last_post_date": "2026-04-21",
+    "last_reel_date": "2026-04-21",
     "avg_views": 200,
     "avg_engagement": 1.0,
     "highlight_count": 0,
@@ -407,11 +440,11 @@
       "no_structured_follow_up": 1,
       "inconsistent_response_pattern": 1
     },
-    "digital_silence_index": 50,
-    "digital_silence_label": "At Risk",
+    "digital_silence_index": 75,
+    "digital_silence_label": "Severe Silence",
     "digital_silence_breakdown": {
       "no_post_60_plus_days": 0,
-      "no_recent_google_reviews": 0,
+      "no_recent_google_reviews": 1,
       "no_recent_google_photos_signal": 1,
       "outdated_branding_signal": 1,
       "dead_website_signal": 1
@@ -421,7 +454,18 @@
     "data_quality_score": 0.5,
     "data_quality_grade": "B",
     "conversion_likelihood_score": 25.2,
-    "conversion_likelihood_band": "Low"
+    "conversion_likelihood_band": "Low",
+    "intelligence": {
+      "dmi": 12.0,
+      "dmi_band": "red",
+      "maturity_stage": "Traditional",
+      "competitive_position": "Laggard",
+      "opportunity_range": [
+        432000,
+        864000
+      ],
+      "top_action": "Add WhatsApp CTA everywhere"
+    }
   },
   {
     "external_id": "real-005",
@@ -452,8 +496,8 @@
     "following": 250,
     "post_count": 10,
     "reel_count": 0,
-    "last_post_date": "2026-02-09",
-    "last_reel_date": "2026-02-09",
+    "last_post_date": "2026-02-15",
+    "last_reel_date": "2026-02-15",
     "avg_views": 500,
     "avg_engagement": 1.9,
     "highlight_count": 2,
@@ -527,7 +571,18 @@
     "data_quality_score": 0.5,
     "data_quality_grade": "B",
     "conversion_likelihood_score": 26.7,
-    "conversion_likelihood_band": "Low"
+    "conversion_likelihood_band": "Low",
+    "intelligence": {
+      "dmi": 11.2,
+      "dmi_band": "red",
+      "maturity_stage": "Traditional",
+      "competitive_position": "Weak",
+      "opportunity_range": [
+        540000,
+        1080000
+      ],
+      "top_action": "Add WhatsApp CTA everywhere"
+    }
   },
   {
     "external_id": "real-006",
@@ -558,8 +613,8 @@
     "following": 250,
     "post_count": 79,
     "reel_count": 11,
-    "last_post_date": "2026-05-16",
-    "last_reel_date": "2026-05-16",
+    "last_post_date": "2026-05-22",
+    "last_reel_date": "2026-05-22",
     "avg_views": 350,
     "avg_engagement": 1.45,
     "highlight_count": 3,
@@ -633,7 +688,18 @@
     "data_quality_score": 0.5,
     "data_quality_grade": "B",
     "conversion_likelihood_score": 14.7,
-    "conversion_likelihood_band": "Low"
+    "conversion_likelihood_band": "Low",
+    "intelligence": {
+      "dmi": 33.0,
+      "dmi_band": "red",
+      "maturity_stage": "Traditional",
+      "competitive_position": "Strong",
+      "opportunity_range": [
+        72000,
+        144000
+      ],
+      "top_action": "Add WhatsApp CTA everywhere"
+    }
   },
   {
     "external_id": "real-007",
@@ -664,8 +730,8 @@
     "following": 250,
     "post_count": 79,
     "reel_count": 11,
-    "last_post_date": "2026-05-16",
-    "last_reel_date": "2026-05-16",
+    "last_post_date": "2026-05-22",
+    "last_reel_date": "2026-05-22",
     "avg_views": 350,
     "avg_engagement": 1.45,
     "highlight_count": 3,
@@ -739,7 +805,18 @@
     "data_quality_score": 0.5,
     "data_quality_grade": "B",
     "conversion_likelihood_score": 15.45,
-    "conversion_likelihood_band": "Low"
+    "conversion_likelihood_band": "Low",
+    "intelligence": {
+      "dmi": 28.0,
+      "dmi_band": "red",
+      "maturity_stage": "Traditional",
+      "competitive_position": "Strong",
+      "opportunity_range": [
+        180000,
+        360000
+      ],
+      "top_action": "Add WhatsApp CTA everywhere"
+    }
   },
   {
     "external_id": "real-008",
@@ -770,8 +847,8 @@
     "following": 250,
     "post_count": 22,
     "reel_count": 1,
-    "last_post_date": "2026-02-18",
-    "last_reel_date": "2026-02-18",
+    "last_post_date": "2026-02-24",
+    "last_reel_date": "2026-02-24",
     "avg_views": 550,
     "avg_engagement": 2.05,
     "highlight_count": 3,
@@ -845,7 +922,18 @@
     "data_quality_score": 0.5,
     "data_quality_grade": "B",
     "conversion_likelihood_score": 21.45,
-    "conversion_likelihood_band": "Low"
+    "conversion_likelihood_band": "Low",
+    "intelligence": {
+      "dmi": 22.0,
+      "dmi_band": "red",
+      "maturity_stage": "Traditional",
+      "competitive_position": "Average",
+      "opportunity_range": [
+        432000,
+        864000
+      ],
+      "top_action": "Add WhatsApp CTA everywhere"
+    }
   },
   {
     "external_id": "real-009",
@@ -876,8 +964,8 @@
     "following": 250,
     "post_count": 16,
     "reel_count": 1,
-    "last_post_date": "2026-03-14",
-    "last_reel_date": "2026-03-14",
+    "last_post_date": "2026-03-20",
+    "last_reel_date": "2026-03-20",
     "avg_views": 400,
     "avg_engagement": 1.6,
     "highlight_count": 0,
@@ -951,7 +1039,18 @@
     "data_quality_score": 0.5,
     "data_quality_grade": "B",
     "conversion_likelihood_score": 25.2,
-    "conversion_likelihood_band": "Low"
+    "conversion_likelihood_band": "Low",
+    "intelligence": {
+      "dmi": 20.5,
+      "dmi_band": "red",
+      "maturity_stage": "Traditional",
+      "competitive_position": "Weak",
+      "opportunity_range": [
+        180000,
+        360000
+      ],
+      "top_action": "Add WhatsApp CTA everywhere"
+    }
   },
   {
     "external_id": "real-010",
@@ -982,8 +1081,8 @@
     "following": 250,
     "post_count": 63,
     "reel_count": 9,
-    "last_post_date": "2026-05-22",
-    "last_reel_date": "2026-05-22",
+    "last_post_date": "2026-05-28",
+    "last_reel_date": "2026-05-28",
     "avg_views": 250,
     "avg_engagement": 1.15,
     "highlight_count": 1,
@@ -1057,7 +1156,18 @@
     "data_quality_score": 0.5,
     "data_quality_grade": "B",
     "conversion_likelihood_score": 14.7,
-    "conversion_likelihood_band": "Low"
+    "conversion_likelihood_band": "Low",
+    "intelligence": {
+      "dmi": 28.4,
+      "dmi_band": "red",
+      "maturity_stage": "Traditional",
+      "competitive_position": "Strong",
+      "opportunity_range": [
+        540000,
+        1080000
+      ],
+      "top_action": "Add WhatsApp CTA everywhere"
+    }
   },
   {
     "external_id": "real-011",
@@ -1088,8 +1198,8 @@
     "following": 250,
     "post_count": 127,
     "reel_count": 17,
-    "last_post_date": "2026-04-28",
-    "last_reel_date": "2026-04-28",
+    "last_post_date": "2026-05-04",
+    "last_reel_date": "2026-05-04",
     "avg_views": 650,
     "avg_engagement": 2.35,
     "highlight_count": 1,
@@ -1163,7 +1273,18 @@
     "data_quality_score": 0.5,
     "data_quality_grade": "B",
     "conversion_likelihood_score": 15.45,
-    "conversion_likelihood_band": "Low"
+    "conversion_likelihood_band": "Low",
+    "intelligence": {
+      "dmi": 27.2,
+      "dmi_band": "red",
+      "maturity_stage": "Traditional",
+      "competitive_position": "Average",
+      "opportunity_range": [
+        72000,
+        144000
+      ],
+      "top_action": "Add WhatsApp CTA everywhere"
+    }
   },
   {
     "external_id": "real-012",
@@ -1194,8 +1315,8 @@
     "following": 250,
     "post_count": 103,
     "reel_count": 14,
-    "last_post_date": "2026-05-07",
-    "last_reel_date": "2026-05-07",
+    "last_post_date": "2026-05-13",
+    "last_reel_date": "2026-05-13",
     "avg_views": 500,
     "avg_engagement": 1.9,
     "highlight_count": 2,
@@ -1268,7 +1389,18 @@
     "data_quality_score": 0.5,
     "data_quality_grade": "B",
     "conversion_likelihood_score": 11.7,
-    "conversion_likelihood_band": "Low"
+    "conversion_likelihood_band": "Low",
+    "intelligence": {
+      "dmi": 35.9,
+      "dmi_band": "red",
+      "maturity_stage": "Traditional",
+      "competitive_position": "Strong",
+      "opportunity_range": [
+        180000,
+        360000
+      ],
+      "top_action": "Add WhatsApp CTA everywhere"
+    }
   },
   {
     "external_id": "real-013",
@@ -1299,8 +1431,8 @@
     "following": 250,
     "post_count": 55,
     "reel_count": 8,
-    "last_post_date": "2026-05-25",
-    "last_reel_date": "2026-05-25",
+    "last_post_date": "2026-05-31",
+    "last_reel_date": "2026-05-31",
     "avg_views": 200,
     "avg_engagement": 1.0,
     "highlight_count": 0,
@@ -1374,7 +1506,18 @@
     "data_quality_score": 0.5,
     "data_quality_grade": "B",
     "conversion_likelihood_score": 18.45,
-    "conversion_likelihood_band": "Low"
+    "conversion_likelihood_band": "Low",
+    "intelligence": {
+      "dmi": 27.7,
+      "dmi_band": "red",
+      "maturity_stage": "Traditional",
+      "competitive_position": "Strong",
+      "opportunity_range": [
+        864000,
+        1728000
+      ],
+      "top_action": "Add WhatsApp CTA everywhere"
+    }
   },
   {
     "external_id": "real-014",
@@ -1405,8 +1548,8 @@
     "following": 250,
     "post_count": 79,
     "reel_count": 11,
-    "last_post_date": "2026-05-16",
-    "last_reel_date": "2026-05-16",
+    "last_post_date": "2026-05-22",
+    "last_reel_date": "2026-05-22",
     "avg_views": 350,
     "avg_engagement": 1.45,
     "highlight_count": 3,
@@ -1480,7 +1623,18 @@
     "data_quality_score": 0.5,
     "data_quality_grade": "B",
     "conversion_likelihood_score": 16.95,
-    "conversion_likelihood_band": "Low"
+    "conversion_likelihood_band": "Low",
+    "intelligence": {
+      "dmi": 27.5,
+      "dmi_band": "red",
+      "maturity_stage": "Traditional",
+      "competitive_position": "Strong",
+      "opportunity_range": [
+        72000,
+        144000
+      ],
+      "top_action": "Add WhatsApp CTA everywhere"
+    }
   },
   {
     "external_id": "real-015",
@@ -1511,8 +1665,8 @@
     "following": 250,
     "post_count": 20,
     "reel_count": 0,
-    "last_post_date": "2026-02-26",
-    "last_reel_date": "2026-02-26",
+    "last_post_date": "2026-03-04",
+    "last_reel_date": "2026-03-04",
     "avg_views": 500,
     "avg_engagement": 1.9,
     "highlight_count": 2,
@@ -1586,7 +1740,18 @@
     "data_quality_score": 0.5,
     "data_quality_grade": "B",
     "conversion_likelihood_score": 25.2,
-    "conversion_likelihood_band": "Low"
+    "conversion_likelihood_band": "Low",
+    "intelligence": {
+      "dmi": 19.1,
+      "dmi_band": "red",
+      "maturity_stage": "Traditional",
+      "competitive_position": "Weak",
+      "opportunity_range": [
+        216000,
+        432000
+      ],
+      "top_action": "Add WhatsApp CTA everywhere"
+    }
   },
   {
     "external_id": "real-016",
@@ -1617,8 +1782,8 @@
     "following": 250,
     "post_count": 12,
     "reel_count": 2,
-    "last_post_date": "2026-03-30",
-    "last_reel_date": "2026-03-30",
+    "last_post_date": "2026-04-05",
+    "last_reel_date": "2026-04-05",
     "avg_views": 300,
     "avg_engagement": 1.3,
     "highlight_count": 2,
@@ -1692,7 +1857,18 @@
     "data_quality_score": 0.5,
     "data_quality_grade": "B",
     "conversion_likelihood_score": 26.7,
-    "conversion_likelihood_band": "Low"
+    "conversion_likelihood_band": "Low",
+    "intelligence": {
+      "dmi": 20.9,
+      "dmi_band": "red",
+      "maturity_stage": "Traditional",
+      "competitive_position": "Average",
+      "opportunity_range": [
+        4050000,
+        8100000
+      ],
+      "top_action": "Add WhatsApp CTA everywhere"
+    }
   },
   {
     "external_id": "real-017",
@@ -1723,8 +1899,8 @@
     "following": 250,
     "post_count": 26,
     "reel_count": 0,
-    "last_post_date": "2026-02-02",
-    "last_reel_date": "2026-02-02",
+    "last_post_date": "2026-02-08",
+    "last_reel_date": "2026-02-08",
     "avg_views": 650,
     "avg_engagement": 2.35,
     "highlight_count": 1,
@@ -1784,11 +1960,11 @@
       "no_structured_follow_up": 1,
       "inconsistent_response_pattern": 1
     },
-    "digital_silence_index": 60,
-    "digital_silence_label": "At Risk",
+    "digital_silence_index": 85,
+    "digital_silence_label": "Severe Silence",
     "digital_silence_breakdown": {
       "no_post_60_plus_days": 1,
-      "no_recent_google_reviews": 0,
+      "no_recent_google_reviews": 1,
       "no_recent_google_photos_signal": 0,
       "outdated_branding_signal": 1,
       "dead_website_signal": 1
@@ -1798,7 +1974,18 @@
     "data_quality_score": 0.5,
     "data_quality_grade": "B",
     "conversion_likelihood_score": 26.7,
-    "conversion_likelihood_band": "Low"
+    "conversion_likelihood_band": "Low",
+    "intelligence": {
+      "dmi": 13.1,
+      "dmi_band": "red",
+      "maturity_stage": "Traditional",
+      "competitive_position": "Weak",
+      "opportunity_range": [
+        2520000,
+        5040000
+      ],
+      "top_action": "Add WhatsApp CTA everywhere"
+    }
   },
   {
     "external_id": "real-018",
@@ -1829,8 +2016,8 @@
     "following": 250,
     "post_count": 71,
     "reel_count": 10,
-    "last_post_date": "2026-05-19",
-    "last_reel_date": "2026-05-19",
+    "last_post_date": "2026-05-25",
+    "last_reel_date": "2026-05-25",
     "avg_views": 300,
     "avg_engagement": 1.3,
     "highlight_count": 2,
@@ -1903,7 +2090,18 @@
     "data_quality_score": 0.5,
     "data_quality_grade": "B",
     "conversion_likelihood_score": 9.45,
-    "conversion_likelihood_band": "Low"
+    "conversion_likelihood_band": "Low",
+    "intelligence": {
+      "dmi": 38.1,
+      "dmi_band": "red",
+      "maturity_stage": "Traditional",
+      "competitive_position": "Leader",
+      "opportunity_range": [
+        174084,
+        360000
+      ],
+      "top_action": "Add WhatsApp CTA everywhere"
+    }
   },
   {
     "external_id": "real-019",
@@ -1934,8 +2132,8 @@
     "following": 250,
     "post_count": 22,
     "reel_count": 1,
-    "last_post_date": "2026-02-18",
-    "last_reel_date": "2026-02-18",
+    "last_post_date": "2026-02-24",
+    "last_reel_date": "2026-02-24",
     "avg_views": 550,
     "avg_engagement": 2.05,
     "highlight_count": 3,
@@ -2009,7 +2207,18 @@
     "data_quality_score": 0.5,
     "data_quality_grade": "B",
     "conversion_likelihood_score": 21.45,
-    "conversion_likelihood_band": "Low"
+    "conversion_likelihood_band": "Low",
+    "intelligence": {
+      "dmi": 20.7,
+      "dmi_band": "red",
+      "maturity_stage": "Traditional",
+      "competitive_position": "Average",
+      "opportunity_range": [
+        540000,
+        1080000
+      ],
+      "top_action": "Add WhatsApp CTA everywhere"
+    }
   },
   {
     "external_id": "real-020",
@@ -2115,7 +2324,18 @@
     "data_quality_score": 0.47,
     "data_quality_grade": "C",
     "conversion_likelihood_score": 28.2,
-    "conversion_likelihood_band": "Low"
+    "conversion_likelihood_band": "Low",
+    "intelligence": {
+      "dmi": 8.8,
+      "dmi_band": "red",
+      "maturity_stage": "Traditional",
+      "competitive_position": "Laggard",
+      "opportunity_range": [
+        1350000,
+        2700000
+      ],
+      "top_action": "Add WhatsApp CTA everywhere"
+    }
   },
   {
     "external_id": "real-021",
@@ -2146,8 +2366,8 @@
     "following": 250,
     "post_count": 111,
     "reel_count": 15,
-    "last_post_date": "2026-05-04",
-    "last_reel_date": "2026-05-04",
+    "last_post_date": "2026-05-10",
+    "last_reel_date": "2026-05-10",
     "avg_views": 550,
     "avg_engagement": 2.05,
     "highlight_count": 3,
@@ -2221,7 +2441,18 @@
     "data_quality_score": 0.5,
     "data_quality_grade": "B",
     "conversion_likelihood_score": 13.2,
-    "conversion_likelihood_band": "Low"
+    "conversion_likelihood_band": "Low",
+    "intelligence": {
+      "dmi": 28.0,
+      "dmi_band": "red",
+      "maturity_stage": "Traditional",
+      "competitive_position": "Strong",
+      "opportunity_range": [
+        216000,
+        432000
+      ],
+      "top_action": "Add WhatsApp CTA everywhere"
+    }
   },
   {
     "external_id": "real-022",
@@ -2252,8 +2483,8 @@
     "following": 250,
     "post_count": 10,
     "reel_count": 1,
-    "last_post_date": "2026-04-07",
-    "last_reel_date": "2026-04-07",
+    "last_post_date": "2026-04-13",
+    "last_reel_date": "2026-04-13",
     "avg_views": 250,
     "avg_engagement": 1.15,
     "highlight_count": 1,
@@ -2327,7 +2558,18 @@
     "data_quality_score": 0.5,
     "data_quality_grade": "B",
     "conversion_likelihood_score": 25.2,
-    "conversion_likelihood_band": "Low"
+    "conversion_likelihood_band": "Low",
+    "intelligence": {
+      "dmi": 20.9,
+      "dmi_band": "red",
+      "maturity_stage": "Traditional",
+      "competitive_position": "Weak",
+      "opportunity_range": [
+        540000,
+        1080000
+      ],
+      "top_action": "Add WhatsApp CTA everywhere"
+    }
   },
   {
     "external_id": "real-023",
@@ -2358,8 +2600,8 @@
     "following": 250,
     "post_count": 13,
     "reel_count": 0,
-    "last_post_date": "2026-01-25",
-    "last_reel_date": "2026-01-25",
+    "last_post_date": "2026-01-31",
+    "last_reel_date": "2026-01-31",
     "avg_views": 650,
     "avg_engagement": 2.35,
     "highlight_count": 1,
@@ -2433,7 +2675,18 @@
     "data_quality_score": 0.5,
     "data_quality_grade": "B",
     "conversion_likelihood_score": 25.2,
-    "conversion_likelihood_band": "Low"
+    "conversion_likelihood_band": "Low",
+    "intelligence": {
+      "dmi": 12.4,
+      "dmi_band": "red",
+      "maturity_stage": "Traditional",
+      "competitive_position": "Weak",
+      "opportunity_range": [
+        216000,
+        432000
+      ],
+      "top_action": "Add WhatsApp CTA everywhere"
+    }
   },
   {
     "external_id": "real-024",
@@ -2464,8 +2717,8 @@
     "following": 250,
     "post_count": 111,
     "reel_count": 15,
-    "last_post_date": "2026-05-04",
-    "last_reel_date": "2026-05-04",
+    "last_post_date": "2026-05-10",
+    "last_reel_date": "2026-05-10",
     "avg_views": 550,
     "avg_engagement": 2.05,
     "highlight_count": 3,
@@ -2539,7 +2792,18 @@
     "data_quality_score": 0.5,
     "data_quality_grade": "B",
     "conversion_likelihood_score": 13.2,
-    "conversion_likelihood_band": "Low"
+    "conversion_likelihood_band": "Low",
+    "intelligence": {
+      "dmi": 28.6,
+      "dmi_band": "red",
+      "maturity_stage": "Traditional",
+      "competitive_position": "Strong",
+      "opportunity_range": [
+        432000,
+        864000
+      ],
+      "top_action": "Add WhatsApp CTA everywhere"
+    }
   },
   {
     "external_id": "real-025",
@@ -2570,8 +2834,8 @@
     "following": 250,
     "post_count": 10,
     "reel_count": 0,
-    "last_post_date": "2026-02-09",
-    "last_reel_date": "2026-02-09",
+    "last_post_date": "2026-02-15",
+    "last_reel_date": "2026-02-15",
     "avg_views": 500,
     "avg_engagement": 1.9,
     "highlight_count": 2,
@@ -2645,7 +2909,18 @@
     "data_quality_score": 0.5,
     "data_quality_grade": "B",
     "conversion_likelihood_score": 26.7,
-    "conversion_likelihood_band": "Low"
+    "conversion_likelihood_band": "Low",
+    "intelligence": {
+      "dmi": 11.2,
+      "dmi_band": "red",
+      "maturity_stage": "Traditional",
+      "competitive_position": "Weak",
+      "opportunity_range": [
+        4050000,
+        8100000
+      ],
+      "top_action": "Add WhatsApp CTA everywhere"
+    }
   },
   {
     "external_id": "real-026",
@@ -2676,8 +2951,8 @@
     "following": 250,
     "post_count": 103,
     "reel_count": 14,
-    "last_post_date": "2026-05-07",
-    "last_reel_date": "2026-05-07",
+    "last_post_date": "2026-05-13",
+    "last_reel_date": "2026-05-13",
     "avg_views": 500,
     "avg_engagement": 1.9,
     "highlight_count": 2,
@@ -2750,7 +3025,18 @@
     "data_quality_score": 0.5,
     "data_quality_grade": "B",
     "conversion_likelihood_score": 10.2,
-    "conversion_likelihood_band": "Low"
+    "conversion_likelihood_band": "Low",
+    "intelligence": {
+      "dmi": 33.3,
+      "dmi_band": "red",
+      "maturity_stage": "Traditional",
+      "competitive_position": "Strong",
+      "opportunity_range": [
+        1350000,
+        2700000
+      ],
+      "top_action": "Add WhatsApp CTA everywhere"
+    }
   },
   {
     "external_id": "real-027",
@@ -2781,8 +3067,8 @@
     "following": 250,
     "post_count": 111,
     "reel_count": 15,
-    "last_post_date": "2026-05-04",
-    "last_reel_date": "2026-05-04",
+    "last_post_date": "2026-05-10",
+    "last_reel_date": "2026-05-10",
     "avg_views": 550,
     "avg_engagement": 2.05,
     "highlight_count": 3,
@@ -2856,7 +3142,18 @@
     "data_quality_score": 0.5,
     "data_quality_grade": "B",
     "conversion_likelihood_score": 13.2,
-    "conversion_likelihood_band": "Low"
+    "conversion_likelihood_band": "Low",
+    "intelligence": {
+      "dmi": 29.1,
+      "dmi_band": "red",
+      "maturity_stage": "Traditional",
+      "competitive_position": "Strong",
+      "opportunity_range": [
+        216000,
+        432000
+      ],
+      "top_action": "Add WhatsApp CTA everywhere"
+    }
   },
   {
     "external_id": "real-028",
@@ -2887,8 +3184,8 @@
     "following": 250,
     "post_count": 87,
     "reel_count": 12,
-    "last_post_date": "2026-05-13",
-    "last_reel_date": "2026-05-13",
+    "last_post_date": "2026-05-19",
+    "last_reel_date": "2026-05-19",
     "avg_views": 400,
     "avg_engagement": 1.6,
     "highlight_count": 0,
@@ -2961,7 +3258,18 @@
     "data_quality_score": 0.5,
     "data_quality_grade": "B",
     "conversion_likelihood_score": 13.95,
-    "conversion_likelihood_band": "Low"
+    "conversion_likelihood_band": "Low",
+    "intelligence": {
+      "dmi": 37.9,
+      "dmi_band": "red",
+      "maturity_stage": "Traditional",
+      "competitive_position": "Leader",
+      "opportunity_range": [
+        72000,
+        144000
+      ],
+      "top_action": "Add WhatsApp CTA everywhere"
+    }
   },
   {
     "external_id": "real-029",
@@ -2992,8 +3300,8 @@
     "following": 250,
     "post_count": 79,
     "reel_count": 11,
-    "last_post_date": "2026-05-16",
-    "last_reel_date": "2026-05-16",
+    "last_post_date": "2026-05-22",
+    "last_reel_date": "2026-05-22",
     "avg_views": 350,
     "avg_engagement": 1.45,
     "highlight_count": 3,
@@ -3067,7 +3375,18 @@
     "data_quality_score": 0.5,
     "data_quality_grade": "B",
     "conversion_likelihood_score": 13.2,
-    "conversion_likelihood_band": "Low"
+    "conversion_likelihood_band": "Low",
+    "intelligence": {
+      "dmi": 35.4,
+      "dmi_band": "red",
+      "maturity_stage": "Traditional",
+      "competitive_position": "Strong",
+      "opportunity_range": [
+        432000,
+        864000
+      ],
+      "top_action": "Add WhatsApp CTA everywhere"
+    }
   },
   {
     "external_id": "real-030",
@@ -3098,8 +3417,8 @@
     "following": 250,
     "post_count": 16,
     "reel_count": 1,
-    "last_post_date": "2026-03-14",
-    "last_reel_date": "2026-03-14",
+    "last_post_date": "2026-03-20",
+    "last_reel_date": "2026-03-20",
     "avg_views": 400,
     "avg_engagement": 1.6,
     "highlight_count": 0,
@@ -3173,7 +3492,18 @@
     "data_quality_score": 0.5,
     "data_quality_grade": "B",
     "conversion_likelihood_score": 25.2,
-    "conversion_likelihood_band": "Low"
+    "conversion_likelihood_band": "Low",
+    "intelligence": {
+      "dmi": 16.0,
+      "dmi_band": "red",
+      "maturity_stage": "Traditional",
+      "competitive_position": "Weak",
+      "opportunity_range": [
+        540000,
+        1080000
+      ],
+      "top_action": "Add WhatsApp CTA everywhere"
+    }
   },
   {
     "external_id": "real-031",
@@ -3204,8 +3534,8 @@
     "following": 250,
     "post_count": 63,
     "reel_count": 9,
-    "last_post_date": "2026-05-22",
-    "last_reel_date": "2026-05-22",
+    "last_post_date": "2026-05-28",
+    "last_reel_date": "2026-05-28",
     "avg_views": 250,
     "avg_engagement": 1.15,
     "highlight_count": 1,
@@ -3279,7 +3609,18 @@
     "data_quality_score": 0.5,
     "data_quality_grade": "B",
     "conversion_likelihood_score": 14.7,
-    "conversion_likelihood_band": "Low"
+    "conversion_likelihood_band": "Low",
+    "intelligence": {
+      "dmi": 26.8,
+      "dmi_band": "red",
+      "maturity_stage": "Traditional",
+      "competitive_position": "Average",
+      "opportunity_range": [
+        180000,
+        360000
+      ],
+      "top_action": "Add WhatsApp CTA everywhere"
+    }
   },
   {
     "external_id": "real-032",
@@ -3310,8 +3651,8 @@
     "following": 250,
     "post_count": 16,
     "reel_count": 1,
-    "last_post_date": "2026-03-14",
-    "last_reel_date": "2026-03-14",
+    "last_post_date": "2026-03-20",
+    "last_reel_date": "2026-03-20",
     "avg_views": 400,
     "avg_engagement": 1.6,
     "highlight_count": 0,
@@ -3385,7 +3726,18 @@
     "data_quality_score": 0.5,
     "data_quality_grade": "B",
     "conversion_likelihood_score": 26.7,
-    "conversion_likelihood_band": "Low"
+    "conversion_likelihood_band": "Low",
+    "intelligence": {
+      "dmi": 21.0,
+      "dmi_band": "red",
+      "maturity_stage": "Traditional",
+      "competitive_position": "Average",
+      "opportunity_range": [
+        180000,
+        360000
+      ],
+      "top_action": "Add WhatsApp CTA everywhere"
+    }
   },
   {
     "external_id": "real-033",
@@ -3416,8 +3768,8 @@
     "following": 250,
     "post_count": 10,
     "reel_count": 0,
-    "last_post_date": "2026-02-09",
-    "last_reel_date": "2026-02-09",
+    "last_post_date": "2026-02-15",
+    "last_reel_date": "2026-02-15",
     "avg_views": 500,
     "avg_engagement": 1.9,
     "highlight_count": 2,
@@ -3491,7 +3843,18 @@
     "data_quality_score": 0.5,
     "data_quality_grade": "B",
     "conversion_likelihood_score": 25.2,
-    "conversion_likelihood_band": "Low"
+    "conversion_likelihood_band": "Low",
+    "intelligence": {
+      "dmi": 9.6,
+      "dmi_band": "red",
+      "maturity_stage": "Traditional",
+      "competitive_position": "Laggard",
+      "opportunity_range": [
+        216000,
+        432000
+      ],
+      "top_action": "Add WhatsApp CTA everywhere"
+    }
   },
   {
     "external_id": "real-034",
@@ -3522,8 +3885,8 @@
     "following": 250,
     "post_count": 95,
     "reel_count": 13,
-    "last_post_date": "2026-05-10",
-    "last_reel_date": "2026-05-10",
+    "last_post_date": "2026-05-16",
+    "last_reel_date": "2026-05-16",
     "avg_views": 450,
     "avg_engagement": 1.75,
     "highlight_count": 1,
@@ -3597,7 +3960,18 @@
     "data_quality_score": 0.5,
     "data_quality_grade": "B",
     "conversion_likelihood_score": 13.2,
-    "conversion_likelihood_band": "Low"
+    "conversion_likelihood_band": "Low",
+    "intelligence": {
+      "dmi": 28.0,
+      "dmi_band": "red",
+      "maturity_stage": "Traditional",
+      "competitive_position": "Strong",
+      "opportunity_range": [
+        180000,
+        360000
+      ],
+      "top_action": "Add WhatsApp CTA everywhere"
+    }
   },
   {
     "external_id": "real-035",
@@ -3628,8 +4002,8 @@
     "following": 250,
     "post_count": 8,
     "reel_count": 0,
-    "last_post_date": "2026-04-15",
-    "last_reel_date": "2026-04-15",
+    "last_post_date": "2026-04-21",
+    "last_reel_date": "2026-04-21",
     "avg_views": 200,
     "avg_engagement": 1.0,
     "highlight_count": 0,
@@ -3703,7 +4077,18 @@
     "data_quality_score": 0.5,
     "data_quality_grade": "B",
     "conversion_likelihood_score": 26.7,
-    "conversion_likelihood_band": "Low"
+    "conversion_likelihood_band": "Low",
+    "intelligence": {
+      "dmi": 18.8,
+      "dmi_band": "red",
+      "maturity_stage": "Traditional",
+      "competitive_position": "Weak",
+      "opportunity_range": [
+        432000,
+        864000
+      ],
+      "top_action": "Add WhatsApp CTA everywhere"
+    }
   },
   {
     "external_id": "real-036",
@@ -3734,8 +4119,8 @@
     "following": 250,
     "post_count": 87,
     "reel_count": 12,
-    "last_post_date": "2026-05-13",
-    "last_reel_date": "2026-05-13",
+    "last_post_date": "2026-05-19",
+    "last_reel_date": "2026-05-19",
     "avg_views": 400,
     "avg_engagement": 1.6,
     "highlight_count": 0,
@@ -3808,7 +4193,18 @@
     "data_quality_score": 0.5,
     "data_quality_grade": "B",
     "conversion_likelihood_score": 15.45,
-    "conversion_likelihood_band": "Low"
+    "conversion_likelihood_band": "Low",
+    "intelligence": {
+      "dmi": 33.2,
+      "dmi_band": "red",
+      "maturity_stage": "Traditional",
+      "competitive_position": "Strong",
+      "opportunity_range": [
+        162000,
+        324000
+      ],
+      "top_action": "Add WhatsApp CTA everywhere"
+    }
   },
   {
     "external_id": "real-037",
@@ -3839,8 +4235,8 @@
     "following": 250,
     "post_count": 8,
     "reel_count": 0,
-    "last_post_date": "2026-04-15",
-    "last_reel_date": "2026-04-15",
+    "last_post_date": "2026-04-21",
+    "last_reel_date": "2026-04-21",
     "avg_views": 200,
     "avg_engagement": 1.0,
     "highlight_count": 0,
@@ -3900,11 +4296,11 @@
       "no_structured_follow_up": 1,
       "inconsistent_response_pattern": 1
     },
-    "digital_silence_index": 35,
-    "digital_silence_label": "Active Pulse",
+    "digital_silence_index": 60,
+    "digital_silence_label": "At Risk",
     "digital_silence_breakdown": {
       "no_post_60_plus_days": 0,
-      "no_recent_google_reviews": 0,
+      "no_recent_google_reviews": 1,
       "no_recent_google_photos_signal": 0,
       "outdated_branding_signal": 1,
       "dead_website_signal": 1
@@ -3914,7 +4310,18 @@
     "data_quality_score": 0.5,
     "data_quality_grade": "B",
     "conversion_likelihood_score": 25.2,
-    "conversion_likelihood_band": "Low"
+    "conversion_likelihood_band": "Low",
+    "intelligence": {
+      "dmi": 12.7,
+      "dmi_band": "red",
+      "maturity_stage": "Traditional",
+      "competitive_position": "Laggard",
+      "opportunity_range": [
+        180000,
+        360000
+      ],
+      "top_action": "Add WhatsApp CTA everywhere"
+    }
   },
   {
     "external_id": "real-038",
@@ -3945,8 +4352,8 @@
     "following": 250,
     "post_count": 79,
     "reel_count": 11,
-    "last_post_date": "2026-05-16",
-    "last_reel_date": "2026-05-16",
+    "last_post_date": "2026-05-22",
+    "last_reel_date": "2026-05-22",
     "avg_views": 350,
     "avg_engagement": 1.45,
     "highlight_count": 3,
@@ -4020,7 +4427,18 @@
     "data_quality_score": 0.5,
     "data_quality_grade": "B",
     "conversion_likelihood_score": 14.7,
-    "conversion_likelihood_band": "Low"
+    "conversion_likelihood_band": "Low",
+    "intelligence": {
+      "dmi": 37.8,
+      "dmi_band": "red",
+      "maturity_stage": "Traditional",
+      "competitive_position": "Leader",
+      "opportunity_range": [
+        216000,
+        432000
+      ],
+      "top_action": "Add WhatsApp CTA everywhere"
+    }
   },
   {
     "external_id": "real-039",
@@ -4051,8 +4469,8 @@
     "following": 250,
     "post_count": 18,
     "reel_count": 2,
-    "last_post_date": "2026-03-06",
-    "last_reel_date": "2026-03-06",
+    "last_post_date": "2026-03-12",
+    "last_reel_date": "2026-03-12",
     "avg_views": 450,
     "avg_engagement": 1.75,
     "highlight_count": 1,
@@ -4126,7 +4544,18 @@
     "data_quality_score": 0.5,
     "data_quality_grade": "B",
     "conversion_likelihood_score": 25.2,
-    "conversion_likelihood_band": "Low"
+    "conversion_likelihood_band": "Low",
+    "intelligence": {
+      "dmi": 21.6,
+      "dmi_band": "red",
+      "maturity_stage": "Traditional",
+      "competitive_position": "Average",
+      "opportunity_range": [
+        540000,
+        1080000
+      ],
+      "top_action": "Add WhatsApp CTA everywhere"
+    }
   },
   {
     "external_id": "real-040",
@@ -4157,8 +4586,8 @@
     "following": 250,
     "post_count": 79,
     "reel_count": 11,
-    "last_post_date": "2026-05-16",
-    "last_reel_date": "2026-05-16",
+    "last_post_date": "2026-05-22",
+    "last_reel_date": "2026-05-22",
     "avg_views": 350,
     "avg_engagement": 1.45,
     "highlight_count": 3,
@@ -4232,7 +4661,18 @@
     "data_quality_score": 0.5,
     "data_quality_grade": "B",
     "conversion_likelihood_score": 15.45,
-    "conversion_likelihood_band": "Low"
+    "conversion_likelihood_band": "Low",
+    "intelligence": {
+      "dmi": 28.5,
+      "dmi_band": "red",
+      "maturity_stage": "Traditional",
+      "competitive_position": "Strong",
+      "opportunity_range": [
+        216000,
+        432000
+      ],
+      "top_action": "Add WhatsApp CTA everywhere"
+    }
   },
   {
     "external_id": "real-041",
@@ -4263,8 +4703,8 @@
     "following": 250,
     "post_count": 87,
     "reel_count": 12,
-    "last_post_date": "2026-05-13",
-    "last_reel_date": "2026-05-13",
+    "last_post_date": "2026-05-19",
+    "last_reel_date": "2026-05-19",
     "avg_views": 400,
     "avg_engagement": 1.6,
     "highlight_count": 0,
@@ -4338,7 +4778,18 @@
     "data_quality_score": 0.5,
     "data_quality_grade": "B",
     "conversion_likelihood_score": 17.7,
-    "conversion_likelihood_band": "Low"
+    "conversion_likelihood_band": "Low",
+    "intelligence": {
+      "dmi": 27.1,
+      "dmi_band": "red",
+      "maturity_stage": "Traditional",
+      "competitive_position": "Average",
+      "opportunity_range": [
+        180000,
+        360000
+      ],
+      "top_action": "Add WhatsApp CTA everywhere"
+    }
   },
   {
     "external_id": "real-042",
@@ -4369,8 +4820,8 @@
     "following": 250,
     "post_count": 111,
     "reel_count": 15,
-    "last_post_date": "2026-05-04",
-    "last_reel_date": "2026-05-04",
+    "last_post_date": "2026-05-10",
+    "last_reel_date": "2026-05-10",
     "avg_views": 550,
     "avg_engagement": 2.05,
     "highlight_count": 3,
@@ -4444,7 +4895,18 @@
     "data_quality_score": 0.5,
     "data_quality_grade": "B",
     "conversion_likelihood_score": 10.95,
-    "conversion_likelihood_band": "Low"
+    "conversion_likelihood_band": "Low",
+    "intelligence": {
+      "dmi": 36.8,
+      "dmi_band": "red",
+      "maturity_stage": "Traditional",
+      "competitive_position": "Leader",
+      "opportunity_range": [
+        216000,
+        432000
+      ],
+      "top_action": "Add WhatsApp CTA everywhere"
+    }
   },
   {
     "external_id": "real-043",
@@ -4475,8 +4937,8 @@
     "following": 250,
     "post_count": 10,
     "reel_count": 1,
-    "last_post_date": "2026-04-07",
-    "last_reel_date": "2026-04-07",
+    "last_post_date": "2026-04-13",
+    "last_reel_date": "2026-04-13",
     "avg_views": 250,
     "avg_engagement": 1.15,
     "highlight_count": 1,
@@ -4550,7 +5012,18 @@
     "data_quality_score": 0.5,
     "data_quality_grade": "B",
     "conversion_likelihood_score": 25.2,
-    "conversion_likelihood_band": "Low"
+    "conversion_likelihood_band": "Low",
+    "intelligence": {
+      "dmi": 16.4,
+      "dmi_band": "red",
+      "maturity_stage": "Traditional",
+      "competitive_position": "Weak",
+      "opportunity_range": [
+        2520000,
+        5040000
+      ],
+      "top_action": "Add WhatsApp CTA everywhere"
+    }
   },
   {
     "external_id": "real-044",
@@ -4581,8 +5054,8 @@
     "following": 250,
     "post_count": 8,
     "reel_count": 0,
-    "last_post_date": "2026-04-15",
-    "last_reel_date": "2026-04-15",
+    "last_post_date": "2026-04-21",
+    "last_reel_date": "2026-04-21",
     "avg_views": 200,
     "avg_engagement": 1.0,
     "highlight_count": 0,
@@ -4642,11 +5115,11 @@
       "no_structured_follow_up": 1,
       "inconsistent_response_pattern": 1
     },
-    "digital_silence_index": 50,
-    "digital_silence_label": "At Risk",
+    "digital_silence_index": 75,
+    "digital_silence_label": "Severe Silence",
     "digital_silence_breakdown": {
       "no_post_60_plus_days": 0,
-      "no_recent_google_reviews": 0,
+      "no_recent_google_reviews": 1,
       "no_recent_google_photos_signal": 1,
       "outdated_branding_signal": 1,
       "dead_website_signal": 1
@@ -4656,7 +5129,18 @@
     "data_quality_score": 0.5,
     "data_quality_grade": "B",
     "conversion_likelihood_score": 25.2,
-    "conversion_likelihood_band": "Low"
+    "conversion_likelihood_band": "Low",
+    "intelligence": {
+      "dmi": 12.0,
+      "dmi_band": "red",
+      "maturity_stage": "Traditional",
+      "competitive_position": "Laggard",
+      "opportunity_range": [
+        216000,
+        432000
+      ],
+      "top_action": "Add WhatsApp CTA everywhere"
+    }
   },
   {
     "external_id": "real-045",
@@ -4687,8 +5171,8 @@
     "following": 250,
     "post_count": 71,
     "reel_count": 10,
-    "last_post_date": "2026-05-19",
-    "last_reel_date": "2026-05-19",
+    "last_post_date": "2026-05-25",
+    "last_reel_date": "2026-05-25",
     "avg_views": 300,
     "avg_engagement": 1.3,
     "highlight_count": 2,
@@ -4761,7 +5245,18 @@
     "data_quality_score": 0.5,
     "data_quality_grade": "B",
     "conversion_likelihood_score": 7.95,
-    "conversion_likelihood_band": "Low"
+    "conversion_likelihood_band": "Low",
+    "intelligence": {
+      "dmi": 36.2,
+      "dmi_band": "red",
+      "maturity_stage": "Traditional",
+      "competitive_position": "Leader",
+      "opportunity_range": [
+        432000,
+        864000
+      ],
+      "top_action": "Add WhatsApp CTA everywhere"
+    }
   },
   {
     "external_id": "real-046",
@@ -4792,8 +5287,8 @@
     "following": 250,
     "post_count": 26,
     "reel_count": 0,
-    "last_post_date": "2026-02-02",
-    "last_reel_date": "2026-02-02",
+    "last_post_date": "2026-02-08",
+    "last_reel_date": "2026-02-08",
     "avg_views": 650,
     "avg_engagement": 2.35,
     "highlight_count": 1,
@@ -4867,7 +5362,18 @@
     "data_quality_score": 0.5,
     "data_quality_grade": "B",
     "conversion_likelihood_score": 26.7,
-    "conversion_likelihood_band": "Low"
+    "conversion_likelihood_band": "Low",
+    "intelligence": {
+      "dmi": 17.8,
+      "dmi_band": "red",
+      "maturity_stage": "Traditional",
+      "competitive_position": "Weak",
+      "opportunity_range": [
+        5940000,
+        11880000
+      ],
+      "top_action": "Add WhatsApp CTA everywhere"
+    }
   },
   {
     "external_id": "real-047",
@@ -4898,8 +5404,8 @@
     "following": 250,
     "post_count": 10,
     "reel_count": 0,
-    "last_post_date": "2026-02-09",
-    "last_reel_date": "2026-02-09",
+    "last_post_date": "2026-02-15",
+    "last_reel_date": "2026-02-15",
     "avg_views": 500,
     "avg_engagement": 1.9,
     "highlight_count": 2,
@@ -4973,7 +5479,18 @@
     "data_quality_score": 0.5,
     "data_quality_grade": "B",
     "conversion_likelihood_score": 26.7,
-    "conversion_likelihood_band": "Low"
+    "conversion_likelihood_band": "Low",
+    "intelligence": {
+      "dmi": 8.7,
+      "dmi_band": "red",
+      "maturity_stage": "Traditional",
+      "competitive_position": "Laggard",
+      "opportunity_range": [
+        4050000,
+        8100000
+      ],
+      "top_action": "Add WhatsApp CTA everywhere"
+    }
   },
   {
     "external_id": "real-048",
@@ -5004,8 +5521,8 @@
     "following": 250,
     "post_count": 18,
     "reel_count": 2,
-    "last_post_date": "2026-03-06",
-    "last_reel_date": "2026-03-06",
+    "last_post_date": "2026-03-12",
+    "last_reel_date": "2026-03-12",
     "avg_views": 450,
     "avg_engagement": 1.75,
     "highlight_count": 1,
@@ -5079,7 +5596,18 @@
     "data_quality_score": 0.5,
     "data_quality_grade": "B",
     "conversion_likelihood_score": 25.2,
-    "conversion_likelihood_band": "Low"
+    "conversion_likelihood_band": "Low",
+    "intelligence": {
+      "dmi": 22.9,
+      "dmi_band": "red",
+      "maturity_stage": "Traditional",
+      "competitive_position": "Strong",
+      "opportunity_range": [
+        1350000,
+        2700000
+      ],
+      "top_action": "Add WhatsApp CTA everywhere"
+    }
   },
   {
     "external_id": "real-049",
@@ -5110,8 +5638,8 @@
     "following": 250,
     "post_count": 9,
     "reel_count": 0,
-    "last_post_date": "2026-02-14",
-    "last_reel_date": "2026-02-14",
+    "last_post_date": "2026-02-20",
+    "last_reel_date": "2026-02-20",
     "avg_views": 450,
     "avg_engagement": 1.75,
     "highlight_count": 1,
@@ -5185,7 +5713,18 @@
     "data_quality_score": 0.5,
     "data_quality_grade": "B",
     "conversion_likelihood_score": 25.2,
-    "conversion_likelihood_band": "Low"
+    "conversion_likelihood_band": "Low",
+    "intelligence": {
+      "dmi": 13.1,
+      "dmi_band": "red",
+      "maturity_stage": "Traditional",
+      "competitive_position": "Weak",
+      "opportunity_range": [
+        540000,
+        1080000
+      ],
+      "top_action": "Add WhatsApp CTA everywhere"
+    }
   },
   {
     "external_id": "real-050",
@@ -5216,8 +5755,8 @@
     "following": 250,
     "post_count": 18,
     "reel_count": 2,
-    "last_post_date": "2026-03-06",
-    "last_reel_date": "2026-03-06",
+    "last_post_date": "2026-03-12",
+    "last_reel_date": "2026-03-12",
     "avg_views": 450,
     "avg_engagement": 1.75,
     "highlight_count": 1,
@@ -5291,7 +5830,18 @@
     "data_quality_score": 0.5,
     "data_quality_grade": "B",
     "conversion_likelihood_score": 26.7,
-    "conversion_likelihood_band": "Low"
+    "conversion_likelihood_band": "Low",
+    "intelligence": {
+      "dmi": 17.0,
+      "dmi_band": "red",
+      "maturity_stage": "Traditional",
+      "competitive_position": "Average",
+      "opportunity_range": [
+        864000,
+        1728000
+      ],
+      "top_action": "Add WhatsApp CTA everywhere"
+    }
   },
   {
     "external_id": "real-051",
@@ -5322,8 +5872,8 @@
     "following": 250,
     "post_count": 26,
     "reel_count": 0,
-    "last_post_date": "2026-02-02",
-    "last_reel_date": "2026-02-02",
+    "last_post_date": "2026-02-08",
+    "last_reel_date": "2026-02-08",
     "avg_views": 650,
     "avg_engagement": 2.35,
     "highlight_count": 1,
@@ -5397,7 +5947,18 @@
     "data_quality_score": 0.5,
     "data_quality_grade": "B",
     "conversion_likelihood_score": 26.7,
-    "conversion_likelihood_band": "Low"
+    "conversion_likelihood_band": "Low",
+    "intelligence": {
+      "dmi": 11.6,
+      "dmi_band": "red",
+      "maturity_stage": "Traditional",
+      "competitive_position": "Weak",
+      "opportunity_range": [
+        180000,
+        360000
+      ],
+      "top_action": "Add WhatsApp CTA everywhere"
+    }
   },
   {
     "external_id": "real-052",
@@ -5428,8 +5989,8 @@
     "following": 250,
     "post_count": 10,
     "reel_count": 1,
-    "last_post_date": "2026-04-07",
-    "last_reel_date": "2026-04-07",
+    "last_post_date": "2026-04-13",
+    "last_reel_date": "2026-04-13",
     "avg_views": 250,
     "avg_engagement": 1.15,
     "highlight_count": 1,
@@ -5503,7 +6064,18 @@
     "data_quality_score": 0.5,
     "data_quality_grade": "B",
     "conversion_likelihood_score": 26.7,
-    "conversion_likelihood_band": "Low"
+    "conversion_likelihood_band": "Low",
+    "intelligence": {
+      "dmi": 20.9,
+      "dmi_band": "red",
+      "maturity_stage": "Traditional",
+      "competitive_position": "Average",
+      "opportunity_range": [
+        432000,
+        864000
+      ],
+      "top_action": "Add WhatsApp CTA everywhere"
+    }
   },
   {
     "external_id": "real-053",
@@ -5534,8 +6106,8 @@
     "following": 250,
     "post_count": 18,
     "reel_count": 2,
-    "last_post_date": "2026-03-06",
-    "last_reel_date": "2026-03-06",
+    "last_post_date": "2026-03-12",
+    "last_reel_date": "2026-03-12",
     "avg_views": 450,
     "avg_engagement": 1.75,
     "highlight_count": 1,
@@ -5609,7 +6181,18 @@
     "data_quality_score": 0.5,
     "data_quality_grade": "B",
     "conversion_likelihood_score": 26.7,
-    "conversion_likelihood_band": "Low"
+    "conversion_likelihood_band": "Low",
+    "intelligence": {
+      "dmi": 17.6,
+      "dmi_band": "red",
+      "maturity_stage": "Traditional",
+      "competitive_position": "Average",
+      "opportunity_range": [
+        432000,
+        864000
+      ],
+      "top_action": "Add WhatsApp CTA everywhere"
+    }
   },
   {
     "external_id": "real-054",
@@ -5640,8 +6223,8 @@
     "following": 250,
     "post_count": 26,
     "reel_count": 0,
-    "last_post_date": "2026-02-02",
-    "last_reel_date": "2026-02-02",
+    "last_post_date": "2026-02-08",
+    "last_reel_date": "2026-02-08",
     "avg_views": 650,
     "avg_engagement": 2.35,
     "highlight_count": 1,
@@ -5701,11 +6284,11 @@
       "no_structured_follow_up": 1,
       "inconsistent_response_pattern": 1
     },
-    "digital_silence_index": 75,
+    "digital_silence_index": 100,
     "digital_silence_label": "Severe Silence",
     "digital_silence_breakdown": {
       "no_post_60_plus_days": 1,
-      "no_recent_google_reviews": 0,
+      "no_recent_google_reviews": 1,
       "no_recent_google_photos_signal": 1,
       "outdated_branding_signal": 1,
       "dead_website_signal": 1
@@ -5715,7 +6298,18 @@
     "data_quality_score": 0.5,
     "data_quality_grade": "B",
     "conversion_likelihood_score": 26.7,
-    "conversion_likelihood_band": "Low"
+    "conversion_likelihood_band": "Low",
+    "intelligence": {
+      "dmi": 12.4,
+      "dmi_band": "red",
+      "maturity_stage": "Traditional",
+      "competitive_position": "Weak",
+      "opportunity_range": [
+        216000,
+        432000
+      ],
+      "top_action": "Add WhatsApp CTA everywhere"
+    }
   },
   {
     "external_id": "real-055",
@@ -5746,8 +6340,8 @@
     "following": 250,
     "post_count": 79,
     "reel_count": 11,
-    "last_post_date": "2026-05-16",
-    "last_reel_date": "2026-05-16",
+    "last_post_date": "2026-05-22",
+    "last_reel_date": "2026-05-22",
     "avg_views": 350,
     "avg_engagement": 1.45,
     "highlight_count": 3,
@@ -5821,7 +6415,18 @@
     "data_quality_score": 0.5,
     "data_quality_grade": "B",
     "conversion_likelihood_score": 13.2,
-    "conversion_likelihood_band": "Low"
+    "conversion_likelihood_band": "Low",
+    "intelligence": {
+      "dmi": 35.9,
+      "dmi_band": "red",
+      "maturity_stage": "Traditional",
+      "competitive_position": "Leader",
+      "opportunity_range": [
+        174084,
+        360000
+      ],
+      "top_action": "Add WhatsApp CTA everywhere"
+    }
   },
   {
     "external_id": "real-056",
@@ -5852,8 +6457,8 @@
     "following": 250,
     "post_count": 95,
     "reel_count": 13,
-    "last_post_date": "2026-05-10",
-    "last_reel_date": "2026-05-10",
+    "last_post_date": "2026-05-16",
+    "last_reel_date": "2026-05-16",
     "avg_views": 450,
     "avg_engagement": 1.75,
     "highlight_count": 1,
@@ -5927,7 +6532,18 @@
     "data_quality_score": 0.5,
     "data_quality_grade": "B",
     "conversion_likelihood_score": 12.45,
-    "conversion_likelihood_band": "Low"
+    "conversion_likelihood_band": "Low",
+    "intelligence": {
+      "dmi": 33.6,
+      "dmi_band": "red",
+      "maturity_stage": "Traditional",
+      "competitive_position": "Leader",
+      "opportunity_range": [
+        432000,
+        864000
+      ],
+      "top_action": "Add WhatsApp CTA everywhere"
+    }
   },
   {
     "external_id": "real-057",
@@ -6033,7 +6649,18 @@
     "data_quality_score": 0.47,
     "data_quality_grade": "C",
     "conversion_likelihood_score": 28.2,
-    "conversion_likelihood_band": "Low"
+    "conversion_likelihood_band": "Low",
+    "intelligence": {
+      "dmi": 8.4,
+      "dmi_band": "red",
+      "maturity_stage": "Traditional",
+      "competitive_position": "Laggard",
+      "opportunity_range": [
+        540000,
+        1080000
+      ],
+      "top_action": "Add WhatsApp CTA everywhere"
+    }
   },
   {
     "external_id": "real-058",
@@ -6064,8 +6691,8 @@
     "following": 250,
     "post_count": 55,
     "reel_count": 8,
-    "last_post_date": "2026-05-25",
-    "last_reel_date": "2026-05-25",
+    "last_post_date": "2026-05-31",
+    "last_reel_date": "2026-05-31",
     "avg_views": 200,
     "avg_engagement": 1.0,
     "highlight_count": 0,
@@ -6138,7 +6765,18 @@
     "data_quality_score": 0.5,
     "data_quality_grade": "B",
     "conversion_likelihood_score": 16.2,
-    "conversion_likelihood_band": "Low"
+    "conversion_likelihood_band": "Low",
+    "intelligence": {
+      "dmi": 36.6,
+      "dmi_band": "red",
+      "maturity_stage": "Traditional",
+      "competitive_position": "Strong",
+      "opportunity_range": [
+        1350000,
+        2700000
+      ],
+      "top_action": "Add WhatsApp CTA everywhere"
+    }
   },
   {
     "external_id": "real-059",
@@ -6169,8 +6807,8 @@
     "following": 250,
     "post_count": 71,
     "reel_count": 10,
-    "last_post_date": "2026-05-19",
-    "last_reel_date": "2026-05-19",
+    "last_post_date": "2026-05-25",
+    "last_reel_date": "2026-05-25",
     "avg_views": 300,
     "avg_engagement": 1.3,
     "highlight_count": 2,
@@ -6243,7 +6881,18 @@
     "data_quality_score": 0.5,
     "data_quality_grade": "B",
     "conversion_likelihood_score": 9.45,
-    "conversion_likelihood_band": "Low"
+    "conversion_likelihood_band": "Low",
+    "intelligence": {
+      "dmi": 35.7,
+      "dmi_band": "red",
+      "maturity_stage": "Traditional",
+      "competitive_position": "Strong",
+      "opportunity_range": [
+        216000,
+        432000
+      ],
+      "top_action": "Add WhatsApp CTA everywhere"
+    }
   },
   {
     "external_id": "real-060",
@@ -6274,8 +6923,8 @@
     "following": 250,
     "post_count": 12,
     "reel_count": 2,
-    "last_post_date": "2026-03-30",
-    "last_reel_date": "2026-03-30",
+    "last_post_date": "2026-04-05",
+    "last_reel_date": "2026-04-05",
     "avg_views": 300,
     "avg_engagement": 1.3,
     "highlight_count": 2,
@@ -6349,7 +6998,18 @@
     "data_quality_score": 0.5,
     "data_quality_grade": "B",
     "conversion_likelihood_score": 25.2,
-    "conversion_likelihood_band": "Low"
+    "conversion_likelihood_band": "Low",
+    "intelligence": {
+      "dmi": 16.9,
+      "dmi_band": "red",
+      "maturity_stage": "Traditional",
+      "competitive_position": "Average",
+      "opportunity_range": [
+        2520000,
+        5040000
+      ],
+      "top_action": "Add WhatsApp CTA everywhere"
+    }
   },
   {
     "external_id": "real-061",
@@ -6380,8 +7040,8 @@
     "following": 250,
     "post_count": 18,
     "reel_count": 2,
-    "last_post_date": "2026-03-06",
-    "last_reel_date": "2026-03-06",
+    "last_post_date": "2026-03-12",
+    "last_reel_date": "2026-03-12",
     "avg_views": 450,
     "avg_engagement": 1.75,
     "highlight_count": 1,
@@ -6455,7 +7115,18 @@
     "data_quality_score": 0.5,
     "data_quality_grade": "B",
     "conversion_likelihood_score": 26.7,
-    "conversion_likelihood_band": "Low"
+    "conversion_likelihood_band": "Low",
+    "intelligence": {
+      "dmi": 14.9,
+      "dmi_band": "red",
+      "maturity_stage": "Traditional",
+      "competitive_position": "Weak",
+      "opportunity_range": [
+        432000,
+        864000
+      ],
+      "top_action": "Add WhatsApp CTA everywhere"
+    }
   },
   {
     "external_id": "real-062",
@@ -6486,8 +7157,8 @@
     "following": 250,
     "post_count": 119,
     "reel_count": 16,
-    "last_post_date": "2026-05-01",
-    "last_reel_date": "2026-05-01",
+    "last_post_date": "2026-05-07",
+    "last_reel_date": "2026-05-07",
     "avg_views": 600,
     "avg_engagement": 2.2,
     "highlight_count": 0,
@@ -6560,7 +7231,18 @@
     "data_quality_score": 0.5,
     "data_quality_grade": "B",
     "conversion_likelihood_score": 13.95,
-    "conversion_likelihood_band": "Low"
+    "conversion_likelihood_band": "Low",
+    "intelligence": {
+      "dmi": 36.3,
+      "dmi_band": "red",
+      "maturity_stage": "Traditional",
+      "competitive_position": "Strong",
+      "opportunity_range": [
+        180000,
+        360000
+      ],
+      "top_action": "Add WhatsApp CTA everywhere"
+    }
   },
   {
     "external_id": "real-063",
@@ -6591,8 +7273,8 @@
     "following": 250,
     "post_count": 63,
     "reel_count": 9,
-    "last_post_date": "2026-05-22",
-    "last_reel_date": "2026-05-22",
+    "last_post_date": "2026-05-28",
+    "last_reel_date": "2026-05-28",
     "avg_views": 250,
     "avg_engagement": 1.15,
     "highlight_count": 1,
@@ -6666,7 +7348,18 @@
     "data_quality_score": 0.5,
     "data_quality_grade": "B",
     "conversion_likelihood_score": 14.7,
-    "conversion_likelihood_band": "Low"
+    "conversion_likelihood_band": "Low",
+    "intelligence": {
+      "dmi": 28.8,
+      "dmi_band": "red",
+      "maturity_stage": "Traditional",
+      "competitive_position": "Strong",
+      "opportunity_range": [
+        216000,
+        432000
+      ],
+      "top_action": "Add WhatsApp CTA everywhere"
+    }
   },
   {
     "external_id": "real-064",
@@ -6697,8 +7390,8 @@
     "following": 250,
     "post_count": 24,
     "reel_count": 2,
-    "last_post_date": "2026-02-10",
-    "last_reel_date": "2026-02-10",
+    "last_post_date": "2026-02-16",
+    "last_reel_date": "2026-02-16",
     "avg_views": 600,
     "avg_engagement": 2.2,
     "highlight_count": 0,
@@ -6758,11 +7451,11 @@
       "no_structured_follow_up": 1,
       "inconsistent_response_pattern": 1
     },
-    "digital_silence_index": 75,
+    "digital_silence_index": 100,
     "digital_silence_label": "Severe Silence",
     "digital_silence_breakdown": {
       "no_post_60_plus_days": 1,
-      "no_recent_google_reviews": 0,
+      "no_recent_google_reviews": 1,
       "no_recent_google_photos_signal": 1,
       "outdated_branding_signal": 1,
       "dead_website_signal": 1
@@ -6772,7 +7465,18 @@
     "data_quality_score": 0.5,
     "data_quality_grade": "B",
     "conversion_likelihood_score": 25.2,
-    "conversion_likelihood_band": "Low"
+    "conversion_likelihood_band": "Low",
+    "intelligence": {
+      "dmi": 15.8,
+      "dmi_band": "red",
+      "maturity_stage": "Traditional",
+      "competitive_position": "Weak",
+      "opportunity_range": [
+        1350000,
+        2700000
+      ],
+      "top_action": "Add WhatsApp CTA everywhere"
+    }
   },
   {
     "external_id": "real-065",
@@ -6803,8 +7507,8 @@
     "following": 250,
     "post_count": 111,
     "reel_count": 15,
-    "last_post_date": "2026-05-04",
-    "last_reel_date": "2026-05-04",
+    "last_post_date": "2026-05-10",
+    "last_reel_date": "2026-05-10",
     "avg_views": 550,
     "avg_engagement": 2.05,
     "highlight_count": 3,
@@ -6878,7 +7582,18 @@
     "data_quality_score": 0.5,
     "data_quality_grade": "B",
     "conversion_likelihood_score": 10.95,
-    "conversion_likelihood_band": "Low"
+    "conversion_likelihood_band": "Low",
+    "intelligence": {
+      "dmi": 37.0,
+      "dmi_band": "red",
+      "maturity_stage": "Traditional",
+      "competitive_position": "Leader",
+      "opportunity_range": [
+        216000,
+        432000
+      ],
+      "top_action": "Add WhatsApp CTA everywhere"
+    }
   },
   {
     "external_id": "real-066",
@@ -6909,8 +7624,8 @@
     "following": 250,
     "post_count": 111,
     "reel_count": 15,
-    "last_post_date": "2026-05-04",
-    "last_reel_date": "2026-05-04",
+    "last_post_date": "2026-05-10",
+    "last_reel_date": "2026-05-10",
     "avg_views": 550,
     "avg_engagement": 2.05,
     "highlight_count": 3,
@@ -6984,7 +7699,18 @@
     "data_quality_score": 0.5,
     "data_quality_grade": "B",
     "conversion_likelihood_score": 12.45,
-    "conversion_likelihood_band": "Low"
+    "conversion_likelihood_band": "Low",
+    "intelligence": {
+      "dmi": 34.1,
+      "dmi_band": "red",
+      "maturity_stage": "Traditional",
+      "competitive_position": "Strong",
+      "opportunity_range": [
+        432000,
+        864000
+      ],
+      "top_action": "Add WhatsApp CTA everywhere"
+    }
   },
   {
     "external_id": "real-067",
@@ -7015,8 +7741,8 @@
     "following": 250,
     "post_count": 12,
     "reel_count": 2,
-    "last_post_date": "2026-03-30",
-    "last_reel_date": "2026-03-30",
+    "last_post_date": "2026-04-05",
+    "last_reel_date": "2026-04-05",
     "avg_views": 300,
     "avg_engagement": 1.3,
     "highlight_count": 2,
@@ -7076,11 +7802,11 @@
       "no_structured_follow_up": 1,
       "inconsistent_response_pattern": 1
     },
-    "digital_silence_index": 60,
-    "digital_silence_label": "At Risk",
+    "digital_silence_index": 85,
+    "digital_silence_label": "Severe Silence",
     "digital_silence_breakdown": {
       "no_post_60_plus_days": 1,
-      "no_recent_google_reviews": 0,
+      "no_recent_google_reviews": 1,
       "no_recent_google_photos_signal": 0,
       "outdated_branding_signal": 1,
       "dead_website_signal": 1
@@ -7090,7 +7816,18 @@
     "data_quality_score": 0.5,
     "data_quality_grade": "B",
     "conversion_likelihood_score": 25.2,
-    "conversion_likelihood_band": "Low"
+    "conversion_likelihood_band": "Low",
+    "intelligence": {
+      "dmi": 16.2,
+      "dmi_band": "red",
+      "maturity_stage": "Traditional",
+      "competitive_position": "Weak",
+      "opportunity_range": [
+        864000,
+        1728000
+      ],
+      "top_action": "Add WhatsApp CTA everywhere"
+    }
   },
   {
     "external_id": "real-068",
@@ -7121,8 +7858,8 @@
     "following": 250,
     "post_count": 22,
     "reel_count": 1,
-    "last_post_date": "2026-02-18",
-    "last_reel_date": "2026-02-18",
+    "last_post_date": "2026-02-24",
+    "last_reel_date": "2026-02-24",
     "avg_views": 550,
     "avg_engagement": 2.05,
     "highlight_count": 3,
@@ -7196,7 +7933,18 @@
     "data_quality_score": 0.5,
     "data_quality_grade": "B",
     "conversion_likelihood_score": 22.95,
-    "conversion_likelihood_band": "Low"
+    "conversion_likelihood_band": "Low",
+    "intelligence": {
+      "dmi": 22.0,
+      "dmi_band": "red",
+      "maturity_stage": "Traditional",
+      "competitive_position": "Average",
+      "opportunity_range": [
+        540000,
+        1080000
+      ],
+      "top_action": "Add WhatsApp CTA everywhere"
+    }
   },
   {
     "external_id": "real-069",
@@ -7227,8 +7975,8 @@
     "following": 250,
     "post_count": 103,
     "reel_count": 14,
-    "last_post_date": "2026-05-07",
-    "last_reel_date": "2026-05-07",
+    "last_post_date": "2026-05-13",
+    "last_reel_date": "2026-05-13",
     "avg_views": 500,
     "avg_engagement": 1.9,
     "highlight_count": 2,
@@ -7301,7 +8049,18 @@
     "data_quality_score": 0.5,
     "data_quality_grade": "B",
     "conversion_likelihood_score": 10.2,
-    "conversion_likelihood_band": "Low"
+    "conversion_likelihood_band": "Low",
+    "intelligence": {
+      "dmi": 35.6,
+      "dmi_band": "red",
+      "maturity_stage": "Traditional",
+      "competitive_position": "Strong",
+      "opportunity_range": [
+        432000,
+        864000
+      ],
+      "top_action": "Add WhatsApp CTA everywhere"
+    }
   },
   {
     "external_id": "real-070",
@@ -7332,8 +8091,8 @@
     "following": 250,
     "post_count": 16,
     "reel_count": 1,
-    "last_post_date": "2026-03-14",
-    "last_reel_date": "2026-03-14",
+    "last_post_date": "2026-03-20",
+    "last_reel_date": "2026-03-20",
     "avg_views": 400,
     "avg_engagement": 1.6,
     "highlight_count": 0,
@@ -7407,7 +8166,18 @@
     "data_quality_score": 0.5,
     "data_quality_grade": "B",
     "conversion_likelihood_score": 25.2,
-    "conversion_likelihood_band": "Low"
+    "conversion_likelihood_band": "Low",
+    "intelligence": {
+      "dmi": 16.0,
+      "dmi_band": "red",
+      "maturity_stage": "Traditional",
+      "competitive_position": "Weak",
+      "opportunity_range": [
+        2520000,
+        5040000
+      ],
+      "top_action": "Add WhatsApp CTA everywhere"
+    }
   },
   {
     "external_id": "real-071",
@@ -7438,8 +8208,8 @@
     "following": 250,
     "post_count": 111,
     "reel_count": 15,
-    "last_post_date": "2026-05-04",
-    "last_reel_date": "2026-05-04",
+    "last_post_date": "2026-05-10",
+    "last_reel_date": "2026-05-10",
     "avg_views": 550,
     "avg_engagement": 2.05,
     "highlight_count": 3,
@@ -7513,7 +8283,18 @@
     "data_quality_score": 0.5,
     "data_quality_grade": "B",
     "conversion_likelihood_score": 14.7,
-    "conversion_likelihood_band": "Low"
+    "conversion_likelihood_band": "Low",
+    "intelligence": {
+      "dmi": 28.0,
+      "dmi_band": "red",
+      "maturity_stage": "Traditional",
+      "competitive_position": "Strong",
+      "opportunity_range": [
+        216000,
+        432000
+      ],
+      "top_action": "Add WhatsApp CTA everywhere"
+    }
   },
   {
     "external_id": "real-072",
@@ -7544,8 +8325,8 @@
     "following": 250,
     "post_count": 14,
     "reel_count": 0,
-    "last_post_date": "2026-03-22",
-    "last_reel_date": "2026-03-22",
+    "last_post_date": "2026-03-28",
+    "last_reel_date": "2026-03-28",
     "avg_views": 350,
     "avg_engagement": 1.45,
     "highlight_count": 3,
@@ -7619,7 +8400,18 @@
     "data_quality_score": 0.5,
     "data_quality_grade": "B",
     "conversion_likelihood_score": 22.95,
-    "conversion_likelihood_band": "Low"
+    "conversion_likelihood_band": "Low",
+    "intelligence": {
+      "dmi": 18.5,
+      "dmi_band": "red",
+      "maturity_stage": "Traditional",
+      "competitive_position": "Weak",
+      "opportunity_range": [
+        180000,
+        360000
+      ],
+      "top_action": "Add WhatsApp CTA everywhere"
+    }
   },
   {
     "external_id": "real-073",
@@ -7650,8 +8442,8 @@
     "following": 250,
     "post_count": 127,
     "reel_count": 17,
-    "last_post_date": "2026-04-28",
-    "last_reel_date": "2026-04-28",
+    "last_post_date": "2026-05-04",
+    "last_reel_date": "2026-05-04",
     "avg_views": 650,
     "avg_engagement": 2.35,
     "highlight_count": 1,
@@ -7725,7 +8517,18 @@
     "data_quality_score": 0.5,
     "data_quality_grade": "B",
     "conversion_likelihood_score": 16.95,
-    "conversion_likelihood_band": "Low"
+    "conversion_likelihood_band": "Low",
+    "intelligence": {
+      "dmi": 29.2,
+      "dmi_band": "red",
+      "maturity_stage": "Traditional",
+      "competitive_position": "Strong",
+      "opportunity_range": [
+        432000,
+        864000
+      ],
+      "top_action": "Add WhatsApp CTA everywhere"
+    }
   },
   {
     "external_id": "real-074",
@@ -7831,7 +8634,18 @@
     "data_quality_score": 0.47,
     "data_quality_grade": "C",
     "conversion_likelihood_score": 28.2,
-    "conversion_likelihood_band": "Low"
+    "conversion_likelihood_band": "Low",
+    "intelligence": {
+      "dmi": 7.8,
+      "dmi_band": "red",
+      "maturity_stage": "Traditional",
+      "competitive_position": "Laggard",
+      "opportunity_range": [
+        540000,
+        1080000
+      ],
+      "top_action": "Add WhatsApp CTA everywhere"
+    }
   },
   {
     "external_id": "real-075",
@@ -7862,8 +8676,8 @@
     "following": 250,
     "post_count": 24,
     "reel_count": 2,
-    "last_post_date": "2026-02-10",
-    "last_reel_date": "2026-02-10",
+    "last_post_date": "2026-02-16",
+    "last_reel_date": "2026-02-16",
     "avg_views": 600,
     "avg_engagement": 2.2,
     "highlight_count": 0,
@@ -7937,7 +8751,18 @@
     "data_quality_score": 0.5,
     "data_quality_grade": "B",
     "conversion_likelihood_score": 25.2,
-    "conversion_likelihood_band": "Low"
+    "conversion_likelihood_band": "Low",
+    "intelligence": {
+      "dmi": 22.6,
+      "dmi_band": "red",
+      "maturity_stage": "Traditional",
+      "competitive_position": "Average",
+      "opportunity_range": [
+        216000,
+        432000
+      ],
+      "top_action": "Add WhatsApp CTA everywhere"
+    }
   },
   {
     "external_id": "real-076",
@@ -7968,8 +8793,8 @@
     "following": 250,
     "post_count": 87,
     "reel_count": 12,
-    "last_post_date": "2026-05-13",
-    "last_reel_date": "2026-05-13",
+    "last_post_date": "2026-05-19",
+    "last_reel_date": "2026-05-19",
     "avg_views": 400,
     "avg_engagement": 1.6,
     "highlight_count": 0,
@@ -8042,7 +8867,18 @@
     "data_quality_score": 0.5,
     "data_quality_grade": "B",
     "conversion_likelihood_score": 15.45,
-    "conversion_likelihood_band": "Low"
+    "conversion_likelihood_band": "Low",
+    "intelligence": {
+      "dmi": 33.2,
+      "dmi_band": "red",
+      "maturity_stage": "Traditional",
+      "competitive_position": "Strong",
+      "opportunity_range": [
+        180000,
+        360000
+      ],
+      "top_action": "Add WhatsApp CTA everywhere"
+    }
   },
   {
     "external_id": "real-077",
@@ -8073,8 +8909,8 @@
     "following": 250,
     "post_count": 12,
     "reel_count": 2,
-    "last_post_date": "2026-03-30",
-    "last_reel_date": "2026-03-30",
+    "last_post_date": "2026-04-05",
+    "last_reel_date": "2026-04-05",
     "avg_views": 300,
     "avg_engagement": 1.3,
     "highlight_count": 2,
@@ -8134,11 +8970,11 @@
       "no_structured_follow_up": 1,
       "inconsistent_response_pattern": 1
     },
-    "digital_silence_index": 60,
-    "digital_silence_label": "At Risk",
+    "digital_silence_index": 85,
+    "digital_silence_label": "Severe Silence",
     "digital_silence_breakdown": {
       "no_post_60_plus_days": 1,
-      "no_recent_google_reviews": 0,
+      "no_recent_google_reviews": 1,
       "no_recent_google_photos_signal": 0,
       "outdated_branding_signal": 1,
       "dead_website_signal": 1
@@ -8148,7 +8984,18 @@
     "data_quality_score": 0.5,
     "data_quality_grade": "B",
     "conversion_likelihood_score": 25.2,
-    "conversion_likelihood_band": "Low"
+    "conversion_likelihood_band": "Low",
+    "intelligence": {
+      "dmi": 16.2,
+      "dmi_band": "red",
+      "maturity_stage": "Traditional",
+      "competitive_position": "Weak",
+      "opportunity_range": [
+        864000,
+        1728000
+      ],
+      "top_action": "Add WhatsApp CTA everywhere"
+    }
   },
   {
     "external_id": "real-078",
@@ -8179,8 +9026,8 @@
     "following": 250,
     "post_count": 87,
     "reel_count": 12,
-    "last_post_date": "2026-05-13",
-    "last_reel_date": "2026-05-13",
+    "last_post_date": "2026-05-19",
+    "last_reel_date": "2026-05-19",
     "avg_views": 400,
     "avg_engagement": 1.6,
     "highlight_count": 0,
@@ -8253,7 +9100,18 @@
     "data_quality_score": 0.5,
     "data_quality_grade": "B",
     "conversion_likelihood_score": 15.45,
-    "conversion_likelihood_band": "Low"
+    "conversion_likelihood_band": "Low",
+    "intelligence": {
+      "dmi": 37.9,
+      "dmi_band": "red",
+      "maturity_stage": "Traditional",
+      "competitive_position": "Leader",
+      "opportunity_range": [
+        216000,
+        432000
+      ],
+      "top_action": "Add WhatsApp CTA everywhere"
+    }
   },
   {
     "external_id": "real-079",
@@ -8284,8 +9142,8 @@
     "following": 250,
     "post_count": 16,
     "reel_count": 1,
-    "last_post_date": "2026-03-14",
-    "last_reel_date": "2026-03-14",
+    "last_post_date": "2026-03-20",
+    "last_reel_date": "2026-03-20",
     "avg_views": 400,
     "avg_engagement": 1.6,
     "highlight_count": 0,
@@ -8359,7 +9217,18 @@
     "data_quality_score": 0.5,
     "data_quality_grade": "B",
     "conversion_likelihood_score": 26.7,
-    "conversion_likelihood_band": "Low"
+    "conversion_likelihood_band": "Low",
+    "intelligence": {
+      "dmi": 20.5,
+      "dmi_band": "red",
+      "maturity_stage": "Traditional",
+      "competitive_position": "Weak",
+      "opportunity_range": [
+        180000,
+        360000
+      ],
+      "top_action": "Add WhatsApp CTA everywhere"
+    }
   },
   {
     "external_id": "real-080",
@@ -8390,8 +9259,8 @@
     "following": 250,
     "post_count": 71,
     "reel_count": 10,
-    "last_post_date": "2026-05-19",
-    "last_reel_date": "2026-05-19",
+    "last_post_date": "2026-05-25",
+    "last_reel_date": "2026-05-25",
     "avg_views": 300,
     "avg_engagement": 1.3,
     "highlight_count": 2,
@@ -8465,7 +9334,18 @@
     "data_quality_score": 0.5,
     "data_quality_grade": "B",
     "conversion_likelihood_score": 10.2,
-    "conversion_likelihood_band": "Low"
+    "conversion_likelihood_band": "Low",
+    "intelligence": {
+      "dmi": 28.8,
+      "dmi_band": "red",
+      "maturity_stage": "Traditional",
+      "competitive_position": "Strong",
+      "opportunity_range": [
+        216000,
+        432000
+      ],
+      "top_action": "Add WhatsApp CTA everywhere"
+    }
   },
   {
     "external_id": "real-081",
@@ -8496,8 +9376,8 @@
     "following": 250,
     "post_count": 103,
     "reel_count": 14,
-    "last_post_date": "2026-05-07",
-    "last_reel_date": "2026-05-07",
+    "last_post_date": "2026-05-13",
+    "last_reel_date": "2026-05-13",
     "avg_views": 500,
     "avg_engagement": 1.9,
     "highlight_count": 2,
@@ -8571,7 +9451,18 @@
     "data_quality_score": 0.5,
     "data_quality_grade": "B",
     "conversion_likelihood_score": 12.45,
-    "conversion_likelihood_band": "Low"
+    "conversion_likelihood_band": "Low",
+    "intelligence": {
+      "dmi": 27.1,
+      "dmi_band": "red",
+      "maturity_stage": "Traditional",
+      "competitive_position": "Average",
+      "opportunity_range": [
+        180000,
+        360000
+      ],
+      "top_action": "Add WhatsApp CTA everywhere"
+    }
   },
   {
     "external_id": "real-082",
@@ -8602,8 +9493,8 @@
     "following": 250,
     "post_count": 111,
     "reel_count": 15,
-    "last_post_date": "2026-05-04",
-    "last_reel_date": "2026-05-04",
+    "last_post_date": "2026-05-10",
+    "last_reel_date": "2026-05-10",
     "avg_views": 550,
     "avg_engagement": 2.05,
     "highlight_count": 3,
@@ -8677,7 +9568,18 @@
     "data_quality_score": 0.5,
     "data_quality_grade": "B",
     "conversion_likelihood_score": 12.45,
-    "conversion_likelihood_band": "Low"
+    "conversion_likelihood_band": "Low",
+    "intelligence": {
+      "dmi": 36.8,
+      "dmi_band": "red",
+      "maturity_stage": "Traditional",
+      "competitive_position": "Leader",
+      "opportunity_range": [
+        216000,
+        432000
+      ],
+      "top_action": "Add WhatsApp CTA everywhere"
+    }
   },
   {
     "external_id": "real-083",
@@ -8708,8 +9610,8 @@
     "following": 250,
     "post_count": 127,
     "reel_count": 17,
-    "last_post_date": "2026-04-28",
-    "last_reel_date": "2026-04-28",
+    "last_post_date": "2026-05-04",
+    "last_reel_date": "2026-05-04",
     "avg_views": 650,
     "avg_engagement": 2.35,
     "highlight_count": 1,
@@ -8783,7 +9685,18 @@
     "data_quality_score": 0.5,
     "data_quality_grade": "B",
     "conversion_likelihood_score": 16.95,
-    "conversion_likelihood_band": "Low"
+    "conversion_likelihood_band": "Low",
+    "intelligence": {
+      "dmi": 29.2,
+      "dmi_band": "red",
+      "maturity_stage": "Traditional",
+      "competitive_position": "Strong",
+      "opportunity_range": [
+        432000,
+        864000
+      ],
+      "top_action": "Add WhatsApp CTA everywhere"
+    }
   },
   {
     "external_id": "real-084",
@@ -8814,8 +9727,8 @@
     "following": 250,
     "post_count": 16,
     "reel_count": 1,
-    "last_post_date": "2026-03-14",
-    "last_reel_date": "2026-03-14",
+    "last_post_date": "2026-03-20",
+    "last_reel_date": "2026-03-20",
     "avg_views": 400,
     "avg_engagement": 1.6,
     "highlight_count": 0,
@@ -8875,11 +9788,11 @@
       "no_structured_follow_up": 1,
       "inconsistent_response_pattern": 1
     },
-    "digital_silence_index": 75,
+    "digital_silence_index": 100,
     "digital_silence_label": "Severe Silence",
     "digital_silence_breakdown": {
       "no_post_60_plus_days": 1,
-      "no_recent_google_reviews": 0,
+      "no_recent_google_reviews": 1,
       "no_recent_google_photos_signal": 1,
       "outdated_branding_signal": 1,
       "dead_website_signal": 1
@@ -8889,7 +9802,18 @@
     "data_quality_score": 0.5,
     "data_quality_grade": "B",
     "conversion_likelihood_score": 26.7,
-    "conversion_likelihood_band": "Low"
+    "conversion_likelihood_band": "Low",
+    "intelligence": {
+      "dmi": 14.6,
+      "dmi_band": "red",
+      "maturity_stage": "Traditional",
+      "competitive_position": "Weak",
+      "opportunity_range": [
+        432000,
+        864000
+      ],
+      "top_action": "Add WhatsApp CTA everywhere"
+    }
   },
   {
     "external_id": "real-085",
@@ -8920,8 +9844,8 @@
     "following": 250,
     "post_count": 55,
     "reel_count": 8,
-    "last_post_date": "2026-05-25",
-    "last_reel_date": "2026-05-25",
+    "last_post_date": "2026-05-31",
+    "last_reel_date": "2026-05-31",
     "avg_views": 200,
     "avg_engagement": 1.0,
     "highlight_count": 0,
@@ -8994,7 +9918,18 @@
     "data_quality_score": 0.5,
     "data_quality_grade": "B",
     "conversion_likelihood_score": 17.7,
-    "conversion_likelihood_band": "Low"
+    "conversion_likelihood_band": "Low",
+    "intelligence": {
+      "dmi": 34.8,
+      "dmi_band": "red",
+      "maturity_stage": "Traditional",
+      "competitive_position": "Strong",
+      "opportunity_range": [
+        432000,
+        864000
+      ],
+      "top_action": "Add WhatsApp CTA everywhere"
+    }
   },
   {
     "external_id": "real-086",
@@ -9025,8 +9960,8 @@
     "following": 250,
     "post_count": 71,
     "reel_count": 10,
-    "last_post_date": "2026-05-19",
-    "last_reel_date": "2026-05-19",
+    "last_post_date": "2026-05-25",
+    "last_reel_date": "2026-05-25",
     "avg_views": 300,
     "avg_engagement": 1.3,
     "highlight_count": 2,
@@ -9099,7 +10034,18 @@
     "data_quality_score": 0.5,
     "data_quality_grade": "B",
     "conversion_likelihood_score": 7.95,
-    "conversion_likelihood_band": "Low"
+    "conversion_likelihood_band": "Low",
+    "intelligence": {
+      "dmi": 33.3,
+      "dmi_band": "red",
+      "maturity_stage": "Traditional",
+      "competitive_position": "Strong",
+      "opportunity_range": [
+        864000,
+        1728000
+      ],
+      "top_action": "Add WhatsApp CTA everywhere"
+    }
   },
   {
     "external_id": "real-087",
@@ -9130,8 +10076,8 @@
     "following": 250,
     "post_count": 87,
     "reel_count": 12,
-    "last_post_date": "2026-05-13",
-    "last_reel_date": "2026-05-13",
+    "last_post_date": "2026-05-19",
+    "last_reel_date": "2026-05-19",
     "avg_views": 400,
     "avg_engagement": 1.6,
     "highlight_count": 0,
@@ -9205,7 +10151,18 @@
     "data_quality_score": 0.5,
     "data_quality_grade": "B",
     "conversion_likelihood_score": 16.2,
-    "conversion_likelihood_band": "Low"
+    "conversion_likelihood_band": "Low",
+    "intelligence": {
+      "dmi": 28.2,
+      "dmi_band": "red",
+      "maturity_stage": "Traditional",
+      "competitive_position": "Strong",
+      "opportunity_range": [
+        1350000,
+        2700000
+      ],
+      "top_action": "Add WhatsApp CTA everywhere"
+    }
   },
   {
     "external_id": "real-088",
@@ -9311,7 +10268,18 @@
     "data_quality_score": 0.47,
     "data_quality_grade": "C",
     "conversion_likelihood_score": 28.2,
-    "conversion_likelihood_band": "Low"
+    "conversion_likelihood_band": "Low",
+    "intelligence": {
+      "dmi": 14.2,
+      "dmi_band": "red",
+      "maturity_stage": "Traditional",
+      "competitive_position": "Weak",
+      "opportunity_range": [
+        2520000,
+        5040000
+      ],
+      "top_action": "Add WhatsApp CTA everywhere"
+    }
   },
   {
     "external_id": "real-089",
@@ -9342,8 +10310,8 @@
     "following": 250,
     "post_count": 14,
     "reel_count": 0,
-    "last_post_date": "2026-03-22",
-    "last_reel_date": "2026-03-22",
+    "last_post_date": "2026-03-28",
+    "last_reel_date": "2026-03-28",
     "avg_views": 350,
     "avg_engagement": 1.45,
     "highlight_count": 3,
@@ -9417,7 +10385,18 @@
     "data_quality_score": 0.5,
     "data_quality_grade": "B",
     "conversion_likelihood_score": 21.45,
-    "conversion_likelihood_band": "Low"
+    "conversion_likelihood_band": "Low",
+    "intelligence": {
+      "dmi": 18.1,
+      "dmi_band": "red",
+      "maturity_stage": "Traditional",
+      "competitive_position": "Weak",
+      "opportunity_range": [
+        216000,
+        432000
+      ],
+      "top_action": "Add WhatsApp CTA everywhere"
+    }
   },
   {
     "external_id": "real-090",
@@ -9448,8 +10427,8 @@
     "following": 250,
     "post_count": 95,
     "reel_count": 13,
-    "last_post_date": "2026-05-10",
-    "last_reel_date": "2026-05-10",
+    "last_post_date": "2026-05-16",
+    "last_reel_date": "2026-05-16",
     "avg_views": 450,
     "avg_engagement": 1.75,
     "highlight_count": 1,
@@ -9523,7 +10502,18 @@
     "data_quality_score": 0.5,
     "data_quality_grade": "B",
     "conversion_likelihood_score": 14.7,
-    "conversion_likelihood_band": "Low"
+    "conversion_likelihood_band": "Low",
+    "intelligence": {
+      "dmi": 29.1,
+      "dmi_band": "red",
+      "maturity_stage": "Traditional",
+      "competitive_position": "Strong",
+      "opportunity_range": [
+        180000,
+        360000
+      ],
+      "top_action": "Add WhatsApp CTA everywhere"
+    }
   },
   {
     "external_id": "real-091",
@@ -9554,8 +10544,8 @@
     "following": 250,
     "post_count": 20,
     "reel_count": 0,
-    "last_post_date": "2026-02-26",
-    "last_reel_date": "2026-02-26",
+    "last_post_date": "2026-03-04",
+    "last_reel_date": "2026-03-04",
     "avg_views": 500,
     "avg_engagement": 1.9,
     "highlight_count": 2,
@@ -9629,7 +10619,18 @@
     "data_quality_score": 0.5,
     "data_quality_grade": "B",
     "conversion_likelihood_score": 25.2,
-    "conversion_likelihood_band": "Low"
+    "conversion_likelihood_band": "Low",
+    "intelligence": {
+      "dmi": 11.5,
+      "dmi_band": "red",
+      "maturity_stage": "Traditional",
+      "competitive_position": "Laggard",
+      "opportunity_range": [
+        1350000,
+        2700000
+      ],
+      "top_action": "Add WhatsApp CTA everywhere"
+    }
   },
   {
     "external_id": "real-092",
@@ -9660,8 +10661,8 @@
     "following": 250,
     "post_count": 16,
     "reel_count": 1,
-    "last_post_date": "2026-03-14",
-    "last_reel_date": "2026-03-14",
+    "last_post_date": "2026-03-20",
+    "last_reel_date": "2026-03-20",
     "avg_views": 400,
     "avg_engagement": 1.6,
     "highlight_count": 0,
@@ -9735,7 +10736,18 @@
     "data_quality_score": 0.5,
     "data_quality_grade": "B",
     "conversion_likelihood_score": 26.7,
-    "conversion_likelihood_band": "Low"
+    "conversion_likelihood_band": "Low",
+    "intelligence": {
+      "dmi": 21.0,
+      "dmi_band": "red",
+      "maturity_stage": "Traditional",
+      "competitive_position": "Average",
+      "opportunity_range": [
+        2520000,
+        5040000
+      ],
+      "top_action": "Add WhatsApp CTA everywhere"
+    }
   },
   {
     "external_id": "real-093",
@@ -9766,8 +10778,8 @@
     "following": 250,
     "post_count": 111,
     "reel_count": 15,
-    "last_post_date": "2026-05-04",
-    "last_reel_date": "2026-05-04",
+    "last_post_date": "2026-05-10",
+    "last_reel_date": "2026-05-10",
     "avg_views": 550,
     "avg_engagement": 2.05,
     "highlight_count": 3,
@@ -9841,7 +10853,18 @@
     "data_quality_score": 0.5,
     "data_quality_grade": "B",
     "conversion_likelihood_score": 14.7,
-    "conversion_likelihood_band": "Low"
+    "conversion_likelihood_band": "Low",
+    "intelligence": {
+      "dmi": 30.0,
+      "dmi_band": "red",
+      "maturity_stage": "Traditional",
+      "competitive_position": "Strong",
+      "opportunity_range": [
+        864000,
+        1728000
+      ],
+      "top_action": "Add WhatsApp CTA everywhere"
+    }
   },
   {
     "external_id": "real-094",
@@ -9872,8 +10895,8 @@
     "following": 250,
     "post_count": 16,
     "reel_count": 1,
-    "last_post_date": "2026-03-14",
-    "last_reel_date": "2026-03-14",
+    "last_post_date": "2026-03-20",
+    "last_reel_date": "2026-03-20",
     "avg_views": 400,
     "avg_engagement": 1.6,
     "highlight_count": 0,
@@ -9933,11 +10956,11 @@
       "no_structured_follow_up": 1,
       "inconsistent_response_pattern": 1
     },
-    "digital_silence_index": 75,
+    "digital_silence_index": 100,
     "digital_silence_label": "Severe Silence",
     "digital_silence_breakdown": {
       "no_post_60_plus_days": 1,
-      "no_recent_google_reviews": 0,
+      "no_recent_google_reviews": 1,
       "no_recent_google_photos_signal": 1,
       "outdated_branding_signal": 1,
       "dead_website_signal": 1
@@ -9947,7 +10970,18 @@
     "data_quality_score": 0.5,
     "data_quality_grade": "B",
     "conversion_likelihood_score": 26.7,
-    "conversion_likelihood_band": "Low"
+    "conversion_likelihood_band": "Low",
+    "intelligence": {
+      "dmi": 14.6,
+      "dmi_band": "red",
+      "maturity_stage": "Traditional",
+      "competitive_position": "Weak",
+      "opportunity_range": [
+        5940000,
+        11880000
+      ],
+      "top_action": "Add WhatsApp CTA everywhere"
+    }
   },
   {
     "external_id": "real-095",
@@ -9978,8 +11012,8 @@
     "following": 250,
     "post_count": 24,
     "reel_count": 2,
-    "last_post_date": "2026-02-10",
-    "last_reel_date": "2026-02-10",
+    "last_post_date": "2026-02-16",
+    "last_reel_date": "2026-02-16",
     "avg_views": 600,
     "avg_engagement": 2.2,
     "highlight_count": 0,
@@ -10053,7 +11087,18 @@
     "data_quality_score": 0.5,
     "data_quality_grade": "B",
     "conversion_likelihood_score": 25.2,
-    "conversion_likelihood_band": "Low"
+    "conversion_likelihood_band": "Low",
+    "intelligence": {
+      "dmi": 22.6,
+      "dmi_band": "red",
+      "maturity_stage": "Traditional",
+      "competitive_position": "Average",
+      "opportunity_range": [
+        1350000,
+        2700000
+      ],
+      "top_action": "Add WhatsApp CTA everywhere"
+    }
   },
   {
     "external_id": "real-096",
@@ -10084,8 +11129,8 @@
     "following": 250,
     "post_count": 63,
     "reel_count": 9,
-    "last_post_date": "2026-05-22",
-    "last_reel_date": "2026-05-22",
+    "last_post_date": "2026-05-28",
+    "last_reel_date": "2026-05-28",
     "avg_views": 250,
     "avg_engagement": 1.15,
     "highlight_count": 1,
@@ -10159,7 +11204,18 @@
     "data_quality_score": 0.5,
     "data_quality_grade": "B",
     "conversion_likelihood_score": 10.95,
-    "conversion_likelihood_band": "Low"
+    "conversion_likelihood_band": "Low",
+    "intelligence": {
+      "dmi": 33.0,
+      "dmi_band": "red",
+      "maturity_stage": "Traditional",
+      "competitive_position": "Strong",
+      "opportunity_range": [
+        216000,
+        432000
+      ],
+      "top_action": "Add WhatsApp CTA everywhere"
+    }
   },
   {
     "external_id": "real-097",
@@ -10190,8 +11246,8 @@
     "following": 250,
     "post_count": 79,
     "reel_count": 11,
-    "last_post_date": "2026-05-16",
-    "last_reel_date": "2026-05-16",
+    "last_post_date": "2026-05-22",
+    "last_reel_date": "2026-05-22",
     "avg_views": 350,
     "avg_engagement": 1.45,
     "highlight_count": 3,
@@ -10265,7 +11321,18 @@
     "data_quality_score": 0.5,
     "data_quality_grade": "B",
     "conversion_likelihood_score": 15.45,
-    "conversion_likelihood_band": "Low"
+    "conversion_likelihood_band": "Low",
+    "intelligence": {
+      "dmi": 28.0,
+      "dmi_band": "red",
+      "maturity_stage": "Traditional",
+      "competitive_position": "Strong",
+      "opportunity_range": [
+        180000,
+        360000
+      ],
+      "top_action": "Add WhatsApp CTA everywhere"
+    }
   },
   {
     "external_id": "real-098",
@@ -10296,8 +11363,8 @@
     "following": 250,
     "post_count": 22,
     "reel_count": 1,
-    "last_post_date": "2026-02-18",
-    "last_reel_date": "2026-02-18",
+    "last_post_date": "2026-02-24",
+    "last_reel_date": "2026-02-24",
     "avg_views": 550,
     "avg_engagement": 2.05,
     "highlight_count": 3,
@@ -10371,7 +11438,18 @@
     "data_quality_score": 0.5,
     "data_quality_grade": "B",
     "conversion_likelihood_score": 22.95,
-    "conversion_likelihood_band": "Low"
+    "conversion_likelihood_band": "Low",
+    "intelligence": {
+      "dmi": 22.0,
+      "dmi_band": "red",
+      "maturity_stage": "Traditional",
+      "competitive_position": "Average",
+      "opportunity_range": [
+        864000,
+        1728000
+      ],
+      "top_action": "Add WhatsApp CTA everywhere"
+    }
   },
   {
     "external_id": "real-099",
@@ -10402,8 +11480,8 @@
     "following": 250,
     "post_count": 24,
     "reel_count": 2,
-    "last_post_date": "2026-02-10",
-    "last_reel_date": "2026-02-10",
+    "last_post_date": "2026-02-16",
+    "last_reel_date": "2026-02-16",
     "avg_views": 600,
     "avg_engagement": 2.2,
     "highlight_count": 0,
@@ -10477,7 +11555,18 @@
     "data_quality_score": 0.5,
     "data_quality_grade": "B",
     "conversion_likelihood_score": 25.2,
-    "conversion_likelihood_band": "Low"
+    "conversion_likelihood_band": "Low",
+    "intelligence": {
+      "dmi": 21.7,
+      "dmi_band": "red",
+      "maturity_stage": "Traditional",
+      "competitive_position": "Average",
+      "opportunity_range": [
+        1350000,
+        2700000
+      ],
+      "top_action": "Add WhatsApp CTA everywhere"
+    }
   },
   {
     "external_id": "real-100",
@@ -10508,8 +11597,8 @@
     "following": 250,
     "post_count": 20,
     "reel_count": 0,
-    "last_post_date": "2026-02-26",
-    "last_reel_date": "2026-02-26",
+    "last_post_date": "2026-03-04",
+    "last_reel_date": "2026-03-04",
     "avg_views": 500,
     "avg_engagement": 1.9,
     "highlight_count": 2,
@@ -10583,7 +11672,18 @@
     "data_quality_score": 0.5,
     "data_quality_grade": "B",
     "conversion_likelihood_score": 25.2,
-    "conversion_likelihood_band": "Low"
+    "conversion_likelihood_band": "Low",
+    "intelligence": {
+      "dmi": 13.7,
+      "dmi_band": "red",
+      "maturity_stage": "Traditional",
+      "competitive_position": "Weak",
+      "opportunity_range": [
+        7260000,
+        14520000
+      ],
+      "top_action": "Add WhatsApp CTA everywhere"
+    }
   },
   {
     "external_id": "real-101",
@@ -10614,8 +11714,8 @@
     "following": 250,
     "post_count": 111,
     "reel_count": 15,
-    "last_post_date": "2026-05-04",
-    "last_reel_date": "2026-05-04",
+    "last_post_date": "2026-05-10",
+    "last_reel_date": "2026-05-10",
     "avg_views": 550,
     "avg_engagement": 2.05,
     "highlight_count": 3,
@@ -10689,7 +11789,18 @@
     "data_quality_score": 0.5,
     "data_quality_grade": "B",
     "conversion_likelihood_score": 14.7,
-    "conversion_likelihood_band": "Low"
+    "conversion_likelihood_band": "Low",
+    "intelligence": {
+      "dmi": 28.0,
+      "dmi_band": "red",
+      "maturity_stage": "Traditional",
+      "competitive_position": "Strong",
+      "opportunity_range": [
+        864000,
+        1728000
+      ],
+      "top_action": "Add WhatsApp CTA everywhere"
+    }
   },
   {
     "external_id": "real-102",
@@ -10720,8 +11831,8 @@
     "following": 250,
     "post_count": 103,
     "reel_count": 14,
-    "last_post_date": "2026-05-07",
-    "last_reel_date": "2026-05-07",
+    "last_post_date": "2026-05-13",
+    "last_reel_date": "2026-05-13",
     "avg_views": 500,
     "avg_engagement": 1.9,
     "highlight_count": 2,
@@ -10794,7 +11905,18 @@
     "data_quality_score": 0.5,
     "data_quality_grade": "B",
     "conversion_likelihood_score": 10.2,
-    "conversion_likelihood_band": "Low"
+    "conversion_likelihood_band": "Low",
+    "intelligence": {
+      "dmi": 35.9,
+      "dmi_band": "red",
+      "maturity_stage": "Traditional",
+      "competitive_position": "Strong",
+      "opportunity_range": [
+        216000,
+        432000
+      ],
+      "top_action": "Add WhatsApp CTA everywhere"
+    }
   },
   {
     "external_id": "real-103",
@@ -10825,8 +11947,8 @@
     "following": 250,
     "post_count": 79,
     "reel_count": 11,
-    "last_post_date": "2026-05-16",
-    "last_reel_date": "2026-05-16",
+    "last_post_date": "2026-05-22",
+    "last_reel_date": "2026-05-22",
     "avg_views": 350,
     "avg_engagement": 1.45,
     "highlight_count": 3,
@@ -10900,7 +12022,18 @@
     "data_quality_score": 0.5,
     "data_quality_grade": "B",
     "conversion_likelihood_score": 16.95,
-    "conversion_likelihood_band": "Low"
+    "conversion_likelihood_band": "Low",
+    "intelligence": {
+      "dmi": 28.9,
+      "dmi_band": "red",
+      "maturity_stage": "Traditional",
+      "competitive_position": "Strong",
+      "opportunity_range": [
+        2520000,
+        5040000
+      ],
+      "top_action": "Add WhatsApp CTA everywhere"
+    }
   },
   {
     "external_id": "real-104",
@@ -10931,8 +12064,8 @@
     "following": 250,
     "post_count": 20,
     "reel_count": 0,
-    "last_post_date": "2026-02-26",
-    "last_reel_date": "2026-02-26",
+    "last_post_date": "2026-03-04",
+    "last_reel_date": "2026-03-04",
     "avg_views": 500,
     "avg_engagement": 1.9,
     "highlight_count": 2,
@@ -10992,11 +12125,11 @@
       "no_structured_follow_up": 1,
       "inconsistent_response_pattern": 1
     },
-    "digital_silence_index": 75,
+    "digital_silence_index": 100,
     "digital_silence_label": "Severe Silence",
     "digital_silence_breakdown": {
       "no_post_60_plus_days": 1,
-      "no_recent_google_reviews": 0,
+      "no_recent_google_reviews": 1,
       "no_recent_google_photos_signal": 1,
       "outdated_branding_signal": 1,
       "dead_website_signal": 1
@@ -11006,7 +12139,18 @@
     "data_quality_score": 0.5,
     "data_quality_grade": "B",
     "conversion_likelihood_score": 26.7,
-    "conversion_likelihood_band": "Low"
+    "conversion_likelihood_band": "Low",
+    "intelligence": {
+      "dmi": 12.3,
+      "dmi_band": "red",
+      "maturity_stage": "Traditional",
+      "competitive_position": "Weak",
+      "opportunity_range": [
+        432000,
+        864000
+      ],
+      "top_action": "Add WhatsApp CTA everywhere"
+    }
   },
   {
     "external_id": "real-105",
@@ -11037,8 +12181,8 @@
     "following": 250,
     "post_count": 9,
     "reel_count": 0,
-    "last_post_date": "2026-02-14",
-    "last_reel_date": "2026-02-14",
+    "last_post_date": "2026-02-20",
+    "last_reel_date": "2026-02-20",
     "avg_views": 450,
     "avg_engagement": 1.75,
     "highlight_count": 1,
@@ -11112,7 +12256,18 @@
     "data_quality_score": 0.5,
     "data_quality_grade": "B",
     "conversion_likelihood_score": 25.2,
-    "conversion_likelihood_band": "Low"
+    "conversion_likelihood_band": "Low",
+    "intelligence": {
+      "dmi": 13.9,
+      "dmi_band": "red",
+      "maturity_stage": "Traditional",
+      "competitive_position": "Weak",
+      "opportunity_range": [
+        540000,
+        1080000
+      ],
+      "top_action": "Add WhatsApp CTA everywhere"
+    }
   },
   {
     "external_id": "real-106",
@@ -11143,8 +12298,8 @@
     "following": 250,
     "post_count": 111,
     "reel_count": 15,
-    "last_post_date": "2026-05-04",
-    "last_reel_date": "2026-05-04",
+    "last_post_date": "2026-05-10",
+    "last_reel_date": "2026-05-10",
     "avg_views": 550,
     "avg_engagement": 2.05,
     "highlight_count": 3,
@@ -11218,6 +12373,17 @@
     "data_quality_score": 0.5,
     "data_quality_grade": "B",
     "conversion_likelihood_score": 12.45,
-    "conversion_likelihood_band": "Low"
+    "conversion_likelihood_band": "Low",
+    "intelligence": {
+      "dmi": 34.1,
+      "dmi_band": "red",
+      "maturity_stage": "Traditional",
+      "competitive_position": "Strong",
+      "opportunity_range": [
+        2520000,
+        5040000
+      ],
+      "top_action": "Add WhatsApp CTA everywhere"
+    }
   }
 ]
